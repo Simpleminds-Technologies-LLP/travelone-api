@@ -1,5 +1,7 @@
 <?php
 
+echo "<pre>"; print_r('Called'); echo "</pre>"; die;
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
