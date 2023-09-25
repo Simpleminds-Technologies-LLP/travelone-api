@@ -16,6 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-// forgot password
-Route::get('/viator', 'App\Http\Controllers\ViatorController@index')->name('viator');

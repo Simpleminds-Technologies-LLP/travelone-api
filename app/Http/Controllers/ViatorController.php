@@ -1,59 +1,166 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use ViatorHelper;
+use DB;
 
 class ViatorController extends Controller
 {
     /**
-     * index
+     * product list
      */
-    public function index()
+    public function product_list(Request $request)
     {
-        // fetch product search
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/products/search',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING       => '',
-            CURLOPT_MAXREDIRS      => 10,
-            CURLOPT_TIMEOUT        => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST  => 'POST',
-            CURLOPT_POSTFIELDS     => '{
-                "filtering": {
-                    "destination": 732,
-                    "flags": [
-                        "SPECIAL_OFFER"
-                    ],
-                    "includeAutomaticTranslations": true,
-                    "confirmationType": "INSTANT",
-                    "rating": {
-                        "from": 1,
-                        "to": 5
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // get requested data
+            $filter_data = $request->filter_data;
+
+            // fetch product list
+            $product_list = ViatorHelper::fetch_product_list($filter_data);
+
+            // check product is valid
+            if(is_array($product_list) && count($product_list)) {
+                // fetch products
+                foreach ($product_list['products'] as $product) {
+                    // get product data
+                    $productCode = $product['productCode'];
+
+                    // fetch single product
+                    $single_product = ViatorHelper::fetch_single_product($productCode);
+
+                    // check is valid response
+                    if(is_array($single_product) && !empty($single_product)) {
+                        // get single product data
+                        $title                       = $single_product['title'];
+                        $description                 = (!empty($single_product['description'])) ? $single_product['description'] : null;
+                        $productUrl                  = (!empty($single_product['productUrl'])) ? $single_product['productUrl'] : null;
+                        $ticketInfo                  = (!empty($single_product['ticketInfo'])) ? $single_product['ticketInfo'] : null;
+                        $pricingInfo                 = (!empty($single_product['pricingInfo'])) ? $single_product['pricingInfo'] : null;
+                        $logistics                   = (!empty($single_product['logistics'])) ? $single_product['logistics'] : null;
+                        $timeZone                    = (!empty($single_product['timeZone'])) ? $single_product['timeZone'] : null;
+                        $inclusions                  = (!empty($single_product['inclusions'])) ? $single_product['inclusions'] : null;
+                        $exclusions                  = (!empty($single_product['exclusions'])) ? $single_product['exclusions'] : null;
+                        $additionalInfo              = (!empty($single_product['additionalInfo'])) ? $single_product['additionalInfo'] : null;
+                        $cancellationPolicy          = (!empty($single_product['cancellationPolicy'])) ? $single_product['cancellationPolicy'] : null;
+                        $bookingConfirmationSettings = (!empty($single_product['bookingConfirmationSettings'])) ? $single_product['bookingConfirmationSettings'] : null;
+                        $bookingRequirements         = (!empty($single_product['bookingRequirements'])) ? $single_product['bookingRequirements'] : null;
+                        $languageGuides              = (!empty($single_product['languageGuides'])) ? $single_product['languageGuides'] : null;
+                        $bookingQuestions            = (!empty($single_product['bookingQuestions'])) ? $single_product['bookingQuestions'] : null;
+                        $destinations                = (!empty($single_product['destinations'])) ? $single_product['destinations'] : null;
+                        $itinerary                   = (!empty($single_product['itinerary'])) ? $single_product['itinerary'] : null;
+                        $productOptions              = (!empty($single_product['productOptions'])) ? $single_product['productOptions'] : null;
+                        $supplier                    = (!empty($single_product['supplier'])) ? $single_product['supplier'] : null;
+                        $productUrl                  = (!empty($single_product['productUrl'])) ? $single_product['productUrl'] : null;
+                        $reviews                     = (!empty($single_product['reviews'])) ? $single_product['reviews'] : null;
+                        $status                      = (!empty($single_product['status'])) ? $single_product['status'] : null;
+                        $createdAt                   = (!empty($single_product['createdAt'])) ? $single_product['createdAt'] : null;
+                        $lastUpdatedAt               = (!empty($single_product['lastUpdatedAt'])) ? $single_product['lastUpdatedAt'] : null;
+
+                        // find destination list
+                        $filter_destination = ViatorHelper::find_destination_details($destinations);
+
+                        // filter product image
+                        $filter_product_images = ViatorHelper::filter_product_images($single_product['images']);
+
+                        // filter inclusions
+                        $filter_inclusions = ViatorHelper::filter_product_inclusions($inclusions);
+
+                        // filter exclusions
+                        $filter_exclusions = ViatorHelper::filter_product_exclusions($exclusions);
+
+                        // filter additional info
+                        $filter_additional_info = ViatorHelper::filter_product_additional_info($additionalInfo);
+
+                        // push other json data
+                        $extra_json_data = [
+                            'productCode'                 => $productCode,
+                            'filter_destination'          => $filter_destination,
+                            'productUrl'                  => $productUrl,
+                            'ticketInfo'                  => $ticketInfo,
+                            'pricingInfo'                 => $pricingInfo,
+                            'logistics'                   => $logistics,
+                            'timeZone'                    => $timeZone,
+                            'cancellationPolicy'          => $cancellationPolicy,
+                            'bookingConfirmationSettings' => $bookingConfirmationSettings,
+                            'bookingRequirements'         => $bookingRequirements,
+                            'languageGuides'              => $languageGuides,
+                            'productOptions'              => $productOptions,
+                            'supplier'                    => $supplier,
+                            'reviews'                     => $reviews,
+                            'createdAt'                   => $createdAt,
+                            'lastUpdatedAt'               => $lastUpdatedAt,
+                        ];
+
+                        // check sightseeing is exist
+                        $is_exist = DB::table('to_tour_product')->select('id')->where('slug', ViatorHelper::str_slug($title))->get()->toArray();
+
+                        // check item is exist
+                        if(!count($is_exist)) {
+                            // push data in table
+                            $is_created_query = DB::table('to_tour_product')->insert([
+                                'user_id'         => 1,
+                                'slug'            => ViatorHelper::str_slug($title),
+                                'sku'             => 'viator_api',
+                                'tour_name'       => $title,
+                                'listing_type'    => 'Instant Booking',
+                                'media_type'      => 'reference',
+                                'featured_image'  => $filter_product_images['cover_image'],
+                                'media_gallery'   => serialize($filter_product_images['related_images']),
+                                'seo_title'       => $title,
+                                'tour_sync_type'  => 'viator',
+                                'extra_json_data' => serialize($extra_json_data),
+                                'status'          => 0,
+                            ]);
+
+                            // get last inserted ID
+                            $is_created_tour = DB::getPdo()->lastInsertId();
+
+                            // check tour is created
+                            if(!empty($is_created_tour)) {
+                                // insert terms data
+                                DB::table('to_tour_terms')->insert([
+                                    'tour_id'              => $is_created_tour,
+                                    'what_is_included'     => serialize($filter_inclusions),
+                                    'what_is_not_included' => serialize($filter_exclusions),
+                                    'important_notes'      => serialize($filter_additional_info),
+                                ]);
+                            }
+
+                            // push response in array
+                            $return_arr['data'][] = [
+                                'action'     => 'created',
+                                'created_id' => $is_created_tour
+                            ];
+                        } else {
+                            // push response in array
+                            $return_arr['data'][] = [
+                                'action'     => 'exist',
+                                'created_id' => $is_exist[0]->id
+                            ];
+                        }
                     }
-                },
-                "sorting": {
-                    "sort": "TRAVELER_RATING",
-                    "order": "DESCENDING"
-                },
-                "pagination": {
-                    "start": 1,
-                    "count": 50
-                },
-                "currency": "USD"
-            }',
-            CURLOPT_HTTPHEADER => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
-                'Accept-Language: en-US',
-                'Accept: application/json;version=2.0',
-                'Content-Type: application/json'
-            ),
-        ));
-        $response = curl_exec($curl);
-        curl_close($curl);
-        echo "<pre>"; print_r($response); echo "</pre>"; die;
+                }
+            } else {
+                // set response
+                $return_arr['status']  = 404;
+                $return_arr['message'] = 'Products is found';
+            }
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is not valid';
+        }
+
+        // return response
+        return response()->json($return_arr);
     }
 }
