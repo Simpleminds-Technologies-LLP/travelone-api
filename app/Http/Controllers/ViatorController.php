@@ -32,7 +32,8 @@ class ViatorController extends Controller
                 // fetch products
                 foreach ($product_list['products'] as $product) {
                     // get product data
-                    $productCode = $product['productCode'];
+                    $productCode  = $product['productCode'];
+                    $productflags = $product['flags'];
 
                     // fetch single product
                     $single_product = ViatorHelper::fetch_single_product($productCode);
@@ -94,6 +95,7 @@ class ViatorController extends Controller
                             'bookingRequirements'         => $bookingRequirements,
                             'languageGuides'              => $languageGuides,
                             'productOptions'              => $productOptions,
+                            'productflags'                => $productflags,
                             'supplier'                    => $supplier,
                             'reviews'                     => $reviews,
                             'createdAt'                   => $createdAt,
@@ -126,6 +128,48 @@ class ViatorController extends Controller
 
                             // check tour is created
                             if(!empty($is_created_tour)) {
+                                // check and insert destination
+                                foreach ($filter_destination as $tour_dest) {
+                                    // find city data
+                                    $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $tour_dest['data']['destinationName'] . '%')->get()->first();
+
+                                    // check city data is valid
+                                    if(!empty($city_data)) {
+                                        // get first data
+                                        $city_nights    = $city_data->nights;
+                                        $city_id        = $city_data->id;
+                                        $destination_id = $city_data->destination_id;
+                                        $country_id     = $city_data->country_id;
+                                        $state_id       = $city_data->state_id;
+
+                                        // insert destination data
+                                        if($destination_id) {
+                                            DB::table('to_tour_destination')->insert([
+                                                'tour_id'        => $is_created_tour,
+                                                'destination_id' => $destination_id,
+                                            ]);
+                                        }
+
+                                        // insert city night
+                                        if($city_id && $city_nights) {
+                                            DB::table('to_tour_city_night')->insert([
+                                                'tour_id' => $is_created_tour,
+                                                'city_id' => $city_id,
+                                                'night'   => $city_nights,
+                                            ]);
+                                        }
+
+                                        // insert location data
+                                        DB::table('to_tour_location')->insert([
+                                            'tour_id'        => $is_created_tour,
+                                            'destination_id' => $destination_id,
+                                            'country_id'     => $country_id,
+                                            'state_id'       => $state_id,
+                                            'city_id'        => $city_id,
+                                        ]);
+                                    }
+                                }
+
                                 // insert terms data
                                 DB::table('to_tour_terms')->insert([
                                     'tour_id'              => $is_created_tour,
@@ -143,7 +187,7 @@ class ViatorController extends Controller
                         } else {
                             // push response in array
                             $return_arr['data'][] = [
-                                'action'     => 'exist',
+                                'action'     => 'updated',
                                 'created_id' => $is_exist[0]->id
                             ];
                         }
@@ -152,7 +196,7 @@ class ViatorController extends Controller
             } else {
                 // set response
                 $return_arr['status']  = 404;
-                $return_arr['message'] = 'Products is found';
+                $return_arr['message'] = 'Product list is not found';
             }
         } else {
             // set response
