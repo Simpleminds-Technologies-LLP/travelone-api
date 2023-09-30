@@ -32,8 +32,10 @@ class ViatorController extends Controller
                 // fetch products
                 foreach ($product_list['products'] as $product) {
                     // get product data
-                    $productCode  = $product['productCode'];
-                    $productflags = $product['flags'];
+                    $productCode    = $product['productCode'];
+                    $productflags   = $product['flags'];
+                    $duration       = $product['duration'];
+                    $pricingSummary = $product['pricing'];
 
                     // fetch single product
                     $single_product = ViatorHelper::fetch_single_product($productCode);
@@ -41,7 +43,7 @@ class ViatorController extends Controller
                     // check is valid response
                     if(is_array($single_product) && !empty($single_product)) {
                         // get single product data
-                        $title                       = $single_product['title'];
+                        $title                       = ucwords(strtolower($single_product['title']));
                         $description                 = (!empty($single_product['description'])) ? $single_product['description'] : null;
                         $productUrl                  = (!empty($single_product['productUrl'])) ? $single_product['productUrl'] : null;
                         $ticketInfo                  = (!empty($single_product['ticketInfo'])) ? $single_product['ticketInfo'] : null;
@@ -84,9 +86,12 @@ class ViatorController extends Controller
                         // push other json data
                         $extra_json_data = [
                             'productCode'                 => $productCode,
+                            'description'                 => $description,
+                            'durationActivityTime'        => $duration,
                             'filter_destination'          => $filter_destination,
                             'productUrl'                  => $productUrl,
                             'ticketInfo'                  => $ticketInfo,
+                            'pricingSummary'              => $pricingSummary,
                             'pricingInfo'                 => $pricingInfo,
                             'logistics'                   => $logistics,
                             'timeZone'                    => $timeZone,
@@ -185,10 +190,27 @@ class ViatorController extends Controller
                                 'created_id' => $is_created_tour
                             ];
                         } else {
+                            // get exist tour ID
+                            $exist_tour_id = $is_exist[0]->id;
+
+                            // push data in table
+                            $is_updated_tour = DB::table('to_tour_product')
+                                ->where('id', $exist_tour_id)
+                                ->update([
+                                    'tour_name'       => $title,
+                                    'featured_image'  => $filter_product_images['cover_image'],
+                                    'media_gallery'   => serialize($filter_product_images['related_images']),
+                                    'seo_title'       => $title,
+                                    'extra_json_data' => serialize($extra_json_data),
+                                    'updated_at'      => date('Y-m-d h:i:s'),
+                                ]
+                            );
+
                             // push response in array
                             $return_arr['data'][] = [
-                                'action'     => 'updated',
-                                'created_id' => $is_exist[0]->id
+                                'action'        => 'updated',
+                                'exist_tour_id' => $exist_tour_id,
+                                'is_updated'    => ($is_updated_tour) ? true : false,
                             ];
                         }
                     }
