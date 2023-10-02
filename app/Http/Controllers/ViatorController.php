@@ -125,7 +125,7 @@ class ViatorController extends Controller
                                 'seo_title'       => $title,
                                 'tour_sync_type'  => 'viator',
                                 'extra_json_data' => serialize($extra_json_data),
-                                'status'          => 0,
+                                'status'          => 1,
                             ]);
 
                             // get last inserted ID
