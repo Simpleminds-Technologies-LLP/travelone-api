@@ -193,6 +193,12 @@ class ViatorController extends Controller
                             // get exist tour ID
                             $exist_tour_id = $is_exist[0]->id;
 
+                            // remove location data
+                            DB::table('to_tour_destination')->where('tour_id', $exist_tour_id)->delete();
+                            DB::table('to_tour_location')->where('tour_id', $exist_tour_id)->delete();
+                            DB::table('to_tour_city_night')->where('tour_id', $exist_tour_id)->delete();
+                            DB::table('to_tour_terms')->where('tour_id', $exist_tour_id)->delete();
+
                             // push data in table
                             $is_updated_tour = DB::table('to_tour_product')
                                 ->where('id', $exist_tour_id)
@@ -205,6 +211,56 @@ class ViatorController extends Controller
                                     'updated_at'      => date('Y-m-d h:i:s'),
                                 ]
                             );
+
+                            // check and insert destination
+                            foreach ($filter_destination as $tour_dest) {
+                                // find city data
+                                $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $tour_dest['data']['destinationName'] . '%')->get()->first();
+
+                                // check city data is valid
+                                if(!empty($city_data)) {
+                                    // get first data
+                                    $city_nights    = $city_data->nights;
+                                    $city_id        = $city_data->id;
+                                    $destination_id = $city_data->destination_id;
+                                    $country_id     = $city_data->country_id;
+                                    $state_id       = $city_data->state_id;
+
+                                    // insert destination data
+                                    if($destination_id) {
+                                        DB::table('to_tour_destination')->insert([
+                                            'tour_id'        => $exist_tour_id,
+                                            'destination_id' => $destination_id,
+                                        ]);
+                                    }
+
+                                    // insert city night
+                                    if($city_id && $city_nights) {
+                                        DB::table('to_tour_city_night')->insert([
+                                            'tour_id' => $exist_tour_id,
+                                            'city_id' => $city_id,
+                                            'night'   => $city_nights,
+                                        ]);
+                                    }
+
+                                    // insert location data
+                                    DB::table('to_tour_location')->insert([
+                                        'tour_id'        => $exist_tour_id,
+                                        'destination_id' => $destination_id,
+                                        'country_id'     => $country_id,
+                                        'state_id'       => $state_id,
+                                        'city_id'        => $city_id,
+                                    ]);
+                                }
+                            }
+
+                            // insert terms data
+                            DB::table('to_tour_terms')->insert([
+                                'tour_id'              => $exist_tour_id,
+                                'what_is_included'     => serialize($filter_inclusions),
+                                'what_is_not_included' => serialize($filter_exclusions),
+                                'important_notes'      => serialize($filter_additional_info),
+                            ]);
 
                             // push response in array
                             $return_arr['data'][] = [
