@@ -62,7 +62,6 @@ class ViatorController extends Controller
                         $itinerary                   = (!empty($single_product['itinerary'])) ? $single_product['itinerary'] : null;
                         $productOptions              = (!empty($single_product['productOptions'])) ? $single_product['productOptions'] : null;
                         $supplier                    = (!empty($single_product['supplier'])) ? $single_product['supplier'] : null;
-                        $productUrl                  = (!empty($single_product['productUrl'])) ? $single_product['productUrl'] : null;
                         $reviews                     = (!empty($single_product['reviews'])) ? $single_product['reviews'] : null;
                         $status                      = (!empty($single_product['status'])) ? $single_product['status'] : null;
                         $createdAt                   = (!empty($single_product['createdAt'])) ? $single_product['createdAt'] : null;
@@ -86,6 +85,7 @@ class ViatorController extends Controller
                         // push other json data
                         $extra_json_data = [
                             'productCode'                 => $productCode,
+                            'status'                      => $status,
                             'description'                 => $description,
                             'durationActivityTime'        => $duration,
                             'filter_destination'          => $filter_destination,
@@ -94,8 +94,13 @@ class ViatorController extends Controller
                             'pricingSummary'              => $pricingSummary,
                             'pricingInfo'                 => $pricingInfo,
                             'logistics'                   => $logistics,
+                            'itinerary'                   => $itinerary,
                             'timeZone'                    => $timeZone,
+                            'inclusions'                  => $inclusions,
+                            'exclusions'                  => $exclusions,
+                            'additionalInfo'              => $additionalInfo,
                             'cancellationPolicy'          => $cancellationPolicy,
+                            'bookingQuestions'            => $bookingQuestions,
                             'bookingConfirmationSettings' => $bookingConfirmationSettings,
                             'bookingRequirements'         => $bookingRequirements,
                             'languageGuides'              => $languageGuides,
@@ -135,8 +140,11 @@ class ViatorController extends Controller
                             if(!empty($is_created_tour)) {
                                 // check and insert destination
                                 foreach ($filter_destination as $tour_dest) {
+                                    // filter destination name
+                                    $destination_name = trim(str_replace(['city'], '', $tour_dest['data']['destinationName']));
+
                                     // find city data
-                                    $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $tour_dest['data']['destinationName'] . '%')->get()->first();
+                                    $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $destination_name . '%')->get()->first();
 
                                     // check city data is valid
                                     if(!empty($city_data)) {
@@ -214,8 +222,11 @@ class ViatorController extends Controller
 
                             // check and insert destination
                             foreach ($filter_destination as $tour_dest) {
+                                // filter destination name
+                                $destination_name = trim(str_replace(['city'], '', $tour_dest['data']['destinationName']));
+
                                 // find city data
-                                $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $tour_dest['data']['destinationName'] . '%')->get()->first();
+                                $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $destination_name . '%')->get()->first();
 
                                 // check city data is valid
                                 if(!empty($city_data)) {
