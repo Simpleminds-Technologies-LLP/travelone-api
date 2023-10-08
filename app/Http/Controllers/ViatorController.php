@@ -296,4 +296,36 @@ class ViatorController extends Controller
         // return response
         return response()->json($return_arr);
     }
+
+    /**
+     * availability check
+     */
+    public function availability_check(Request $request)
+    {
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // get requested data
+            $filter_data = $request->filter_data;
+
+            // fetch product list
+            $check_availability = ViatorHelper::availability_check($filter_data);
+
+            // set response
+            $return_arr = $check_availability;
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is not valid';
+        }
+
+        // return response
+        return response()->json($return_arr);
+    }
 }
