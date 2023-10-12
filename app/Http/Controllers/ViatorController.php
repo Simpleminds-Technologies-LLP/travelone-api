@@ -86,7 +86,6 @@ class ViatorController extends Controller
                         $extra_json_data = [
                             'productCode'                 => $productCode,
                             'status'                      => $status,
-                            'description'                 => $description,
                             'durationActivityTime'        => $duration,
                             'filter_destination'          => $filter_destination,
                             'productUrl'                  => $productUrl,
@@ -125,6 +124,7 @@ class ViatorController extends Controller
                                 'tour_name'       => $title,
                                 'listing_type'    => 'Instant Booking',
                                 'media_type'      => 'reference',
+                                'description'     => $description,
                                 'featured_image'  => $filter_product_images['cover_image'],
                                 'media_gallery'   => serialize($filter_product_images['related_images']),
                                 'seo_title'       => $title,
@@ -212,6 +212,7 @@ class ViatorController extends Controller
                                 ->where('id', $exist_tour_id)
                                 ->update([
                                     'tour_name'       => $title,
+                                    'description'     => $description,
                                     'featured_image'  => $filter_product_images['cover_image'],
                                     'media_gallery'   => serialize($filter_product_images['related_images']),
                                     'seo_title'       => $title,
