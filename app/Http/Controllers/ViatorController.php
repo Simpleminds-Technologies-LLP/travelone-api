@@ -28,7 +28,7 @@ class ViatorController extends Controller
             $product_list = ViatorHelper::fetch_product_list($filter_data);
 
             // check product is valid
-            if(is_array($product_list) && count($product_list)) {
+            if(is_array($product_list) && count($product_list) && is_array($product_list['products'])) {
                 // fetch products
                 foreach ($product_list['products'] as $product) {
                     // get product data
