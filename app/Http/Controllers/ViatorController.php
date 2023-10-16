@@ -58,6 +58,7 @@ class ViatorController extends Controller
                         $bookingRequirements         = (!empty($single_product['bookingRequirements'])) ? $single_product['bookingRequirements'] : null;
                         $languageGuides              = (!empty($single_product['languageGuides'])) ? $single_product['languageGuides'] : null;
                         $bookingQuestions            = (!empty($single_product['bookingQuestions'])) ? $single_product['bookingQuestions'] : null;
+                        $tags                        = (!empty($single_product['tags'])) ? $single_product['tags'] : null;
                         $destinations                = (!empty($single_product['destinations'])) ? $single_product['destinations'] : null;
                         $itinerary                   = (!empty($single_product['itinerary'])) ? $single_product['itinerary'] : null;
                         $productOptions              = (!empty($single_product['productOptions'])) ? $single_product['productOptions'] : null;
@@ -82,31 +83,51 @@ class ViatorController extends Controller
                         // filter additional info
                         $filter_additional_info = ViatorHelper::filter_product_additional_info($additionalInfo);
 
+                        // filter booking question
+                        $booking_questions = ViatorHelper::filter_booking_questions($bookingQuestions);
+
+                        // filter product tags
+                        $product_tags = ViatorHelper::filter_product_tags($tags);
+
+                        // filter logistics
+                        $filter_logistics = ViatorHelper::filter_product_logistics($logistics);
+
+                        // filter itinerary
+                        $filter_itinerary = ViatorHelper::filter_product_itinerary($itinerary);
+
+                        // filter product reviews
+                        $filter_reiews = ViatorHelper::filter_product_reviews($productCode);
+
+                        // filter travelers photos
+                        $filter_travelers_photos = ViatorHelper::filter_product_travelers_photos($filter_reiews);
+
                         // push other json data
                         $extra_json_data = [
                             'productCode'                 => $productCode,
                             'status'                      => $status,
                             'durationActivityTime'        => $duration,
                             'filter_destination'          => $filter_destination,
-                            'productUrl'                  => $productUrl,
                             'ticketInfo'                  => $ticketInfo,
                             'pricingSummary'              => $pricingSummary,
                             'pricingInfo'                 => $pricingInfo,
-                            'logistics'                   => $logistics,
-                            'itinerary'                   => $itinerary,
+                            'logistics'                   => $filter_logistics,
+                            'itinerary'                   => $filter_itinerary,
                             'timeZone'                    => $timeZone,
                             'inclusions'                  => $inclusions,
                             'exclusions'                  => $exclusions,
                             'additionalInfo'              => $additionalInfo,
                             'cancellationPolicy'          => $cancellationPolicy,
-                            'bookingQuestions'            => $bookingQuestions,
+                            'bookingQuestions'            => $booking_questions,
                             'bookingConfirmationSettings' => $bookingConfirmationSettings,
                             'bookingRequirements'         => $bookingRequirements,
+                            'product_tags'                => $product_tags,
                             'languageGuides'              => $languageGuides,
                             'productOptions'              => $productOptions,
                             'productflags'                => $productflags,
                             'supplier'                    => $supplier,
                             'reviews'                     => $reviews,
+                            // 'all_reviews'                 => $filter_reiews,
+                            'filter_travelers_photos'     => $filter_travelers_photos,
                             'createdAt'                   => $createdAt,
                             'lastUpdatedAt'               => $lastUpdatedAt,
                         ];
@@ -183,6 +204,17 @@ class ViatorController extends Controller
                                     }
                                 }
 
+                                // insert viator tags
+                                if(count($product_tags)) {
+                                    // fetch product tags
+                                    foreach ($product_tags as $tag) {
+                                        DB::table('to_tour_viator_tag')->insert([
+                                            'tour_id'  => $is_created_tour,
+                                            'tag_name' => $tag['tag_name'],
+                                        ]);
+                                    }
+                                }
+
                                 // insert terms data
                                 DB::table('to_tour_terms')->insert([
                                     'tour_id'              => $is_created_tour,
@@ -202,6 +234,7 @@ class ViatorController extends Controller
                             $exist_tour_id = $is_exist[0]->id;
 
                             // remove location data
+                            DB::table('to_tour_viator_tag')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_destination')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_location')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_city_night')->where('tour_id', $exist_tour_id)->delete();
@@ -262,6 +295,17 @@ class ViatorController extends Controller
                                         'country_id'     => $country_id,
                                         'state_id'       => $state_id,
                                         'city_id'        => $city_id,
+                                    ]);
+                                }
+                            }
+
+                            // insert viator tags
+                            if(count($product_tags)) {
+                                // fetch product tags
+                                foreach ($product_tags as $tag) {
+                                    DB::table('to_tour_viator_tag')->insert([
+                                        'tour_id'  => $exist_tour_id,
+                                        'tag_name' => $tag['tag_name'],
                                     ]);
                                 }
                             }
