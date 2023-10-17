@@ -279,6 +279,27 @@ class ViatorHelper
     }
 
     /**
+     * fetch google map location data
+     */
+    public static function find_google_map_location_data($place_id)
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL            => 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' . $place_id . '&key=AIzaSyA8BejM71PdF4k_7uSk585MW0MDtHHCW1c',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING       => '',
+            CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_TIMEOUT        => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST  => 'GET',
+        ));
+        $response = curl_exec($curl);
+        curl_close($curl);
+        return json_decode($response, true);
+    }
+
+    /**
      * find destination details by ID
      */
     public static function find_destination_details($destination_ids = [])
@@ -486,9 +507,26 @@ class ViatorHelper
                 if(!empty($start_row['location']['ref'])) {
                     // find location data
                     $location_list = ViatorHelper::viator_single_location_data($start_row['location']['ref']);
+                    $location_list = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
 
-                    // push data in array
-                    $logistics['start'][$start_row_key]['location'] = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
+                    // check provider name
+                    if($location_list['provider'] == 'GOOGLE') {
+                        // get place ID
+                        $google_place_id = $location_list['providerReference'];
+
+                        // fetch google api data
+                        $google_location = self::find_google_map_location_data($google_place_id);
+                        $google_location = ($google_location['status'] == 'OK') ? $google_location['result'] : [];
+
+                        // filter google location
+                        $filter_google_location = self::filter_google_location_data($google_location);
+
+                        // push data in array
+                        $logistics['start'][$start_row_key]['location'] = $filter_google_location;
+                    } else {
+                        // push data in array
+                        $logistics['start'][$start_row_key]['location'] = $location_list;
+                    }
                 }
             }
         }
@@ -501,9 +539,26 @@ class ViatorHelper
                 if(!empty($end_row['location']['ref'])) {
                     // find location data
                     $location_list = ViatorHelper::viator_single_location_data($end_row['location']['ref']);
+                    $location_list = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
 
-                    // push data in array
-                    $logistics['end'][$end_row_key]['location'] = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
+                    // check provider name
+                    if($location_list['provider'] == 'GOOGLE') {
+                        // get place ID
+                        $google_place_id = $location_list['providerReference'];
+
+                        // fetch google api data
+                        $google_location = self::find_google_map_location_data($google_place_id);
+                        $google_location = ($google_location['status'] == 'OK') ? $google_location['result'] : [];
+
+                        // filter google location
+                        $filter_google_location = self::filter_google_location_data($google_location);
+
+                        // push data in array
+                        $logistics['end'][$end_row_key]['location'] = $filter_google_location;
+                    } else {
+                        // push data in array
+                        $logistics['end'][$end_row_key]['location'] = $location_list;
+                    }
                 }
             }
         }
@@ -525,9 +580,26 @@ class ViatorHelper
                 if(!empty($itinerary_row['pointOfInterestLocation']['location']['ref'])) {
                     // find location data
                     $location_list = ViatorHelper::viator_single_location_data($itinerary_row['pointOfInterestLocation']['location']['ref']);
+                    $location_list = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
 
-                    // push data in array
-                    $itinerary_arr['itineraryItems'][$itinerary_key]['pointOfInterestLocation'] = $location_list['locations'][0];
+                    // check provider name
+                    if(!empty($location_list['provider']) && $location_list['provider'] == 'GOOGLE') {
+                        // get place ID
+                        $google_place_id = $location_list['providerReference'];
+
+                        // fetch google api data
+                        $google_location = self::find_google_map_location_data($google_place_id);
+                        $google_location = ($google_location['status'] == 'OK') ? $google_location['result'] : [];
+
+                        // filter google location
+                        $filter_google_location = self::filter_google_location_data($google_location);
+
+                        // push data in array
+                        $itinerary_arr['itineraryItems'][$itinerary_key]['pointOfInterestLocation'] = $filter_google_location;
+                    } else {
+                        // push data in array
+                        $itinerary_arr['itineraryItems'][$itinerary_key]['pointOfInterestLocation'] = $location_list;
+                    }
                 }
             }
         }
@@ -600,5 +672,26 @@ class ViatorHelper
 
         // return response
         return $travelers_photos;
+    }
+
+    /**
+     * filter google location data
+     */
+    public static function filter_google_location_data($google_location = [])
+    {
+        // define array
+        $return_location = [];
+
+        // count reviews
+        $return_location['provider'] = 'GOOGLE';
+        $return_location['name']     = $google_location['name'];
+        $return_location['address']  = explode(', ', $google_location['formatted_address']);
+        $return_location['center']   = [
+            'latitude'  => $google_location['geometry']['location']['lat'],
+            'longitude' => $google_location['geometry']['location']['lng'],
+        ];
+
+        // return response
+        return $return_location;
     }
 }
