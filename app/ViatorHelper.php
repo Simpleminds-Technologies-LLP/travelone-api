@@ -324,6 +324,27 @@ class ViatorHelper
     }
 
     /**
+     * filter activity duration
+     */
+    public static function filter_activity_duration($duration = [])
+    {
+        // define array
+        $return_duration = 0;
+
+        // check duration
+        if(!empty($duration['fixedDurationInMinutes'])) {
+            $return_duration = $duration['fixedDurationInMinutes'];
+        } else if(!empty($duration['unstructuredDuration'])) {
+            $return_duration = $duration['unstructuredDuration'];
+        } else if(!empty($duration['variableDurationToMinutes'])) {
+            $return_duration = $duration['variableDurationToMinutes'];
+        }
+
+        // return response
+        return $return_duration;
+    }
+
+    /**
      * filter product images
      */
     public static function filter_product_images($product_images = [])
