@@ -68,6 +68,9 @@ class ViatorController extends Controller
                         $createdAt                   = (!empty($single_product['createdAt'])) ? $single_product['createdAt'] : null;
                         $lastUpdatedAt               = (!empty($single_product['lastUpdatedAt'])) ? $single_product['lastUpdatedAt'] : null;
 
+                        // filter time duration
+                        $filter_duration = ViatorHelper::filter_activity_duration($duration);
+
                         // find destination list
                         $filter_destination = ViatorHelper::find_destination_details($destinations);
 
@@ -215,6 +218,15 @@ class ViatorController extends Controller
                                     }
                                 }
 
+                                // insert viator extra data
+                                DB::table('to_tour_viator_extra_data')->insert([
+                                    'tour_id'        => $is_created_tour,
+                                    'selling_price'  => $pricingSummary['summary']['fromPriceBeforeDiscount'],
+                                    'discount_price' => $pricingSummary['summary']['fromPrice'],
+                                    'time_duration'  => $filter_duration,
+                                    'reviews'        => $reviews['combinedAverageRating'],
+                                ]);
+
                                 // insert terms data
                                 DB::table('to_tour_terms')->insert([
                                     'tour_id'              => $is_created_tour,
@@ -239,6 +251,7 @@ class ViatorController extends Controller
                             DB::table('to_tour_location')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_city_night')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_terms')->where('tour_id', $exist_tour_id)->delete();
+                            DB::table('to_tour_viator_extra_data')->where('tour_id', $exist_tour_id)->delete();
 
                             // push data in table
                             $is_updated_tour = DB::table('to_tour_product')
@@ -316,6 +329,15 @@ class ViatorController extends Controller
                                 'what_is_included'     => serialize($filter_inclusions),
                                 'what_is_not_included' => serialize($filter_exclusions),
                                 'important_notes'      => serialize($filter_additional_info),
+                            ]);
+
+                            // insert viator extra data
+                            DB::table('to_tour_viator_extra_data')->insert([
+                                'tour_id'        => $exist_tour_id,
+                                'selling_price'  => $pricingSummary['summary']['fromPriceBeforeDiscount'],
+                                'discount_price' => $pricingSummary['summary']['fromPrice'],
+                                'time_duration'  => $filter_duration,
+                                'reviews'        => $reviews['combinedAverageRating'],
                             ]);
 
                             // push response in array
