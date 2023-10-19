@@ -705,7 +705,7 @@ class ViatorHelper
 
         // count reviews
         $return_location['provider'] = 'GOOGLE';
-        $return_location['name']     = $google_location['name'];
+        $return_location['name']     = (!empty($google_location['name'])) ? $google_location['name'] : 'N/A';
         $return_location['address']  = explode(', ', $google_location['formatted_address']);
         $return_location['center']   = [
             'latitude'  => $google_location['geometry']['location']['lat'],
