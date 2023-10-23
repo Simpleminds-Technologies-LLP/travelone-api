@@ -336,8 +336,8 @@ class ViatorHelper
             $return_duration = $duration['fixedDurationInMinutes'];
         } else if(!empty($duration['unstructuredDuration'])) {
             $return_duration = $duration['unstructuredDuration'];
-        } else if(!empty($duration['variableDurationToMinutes'])) {
-            $return_duration = $duration['variableDurationToMinutes'];
+        } else if(!empty($duration['variableDurationFromMinutes'])) {
+            $return_duration = $duration['variableDurationFromMinutes'];
         }
 
         // return response
