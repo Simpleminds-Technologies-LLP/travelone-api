@@ -704,13 +704,15 @@ class ViatorHelper
         $return_location = [];
 
         // count reviews
-        $return_location['provider'] = 'GOOGLE';
-        $return_location['name']     = (!empty($google_location['name'])) ? $google_location['name'] : 'N/A';
-        $return_location['address']  = explode(', ', $google_location['formatted_address']);
-        $return_location['center']   = [
-            'latitude'  => $google_location['geometry']['location']['lat'],
-            'longitude' => $google_location['geometry']['location']['lng'],
-        ];
+        if(count($google_location)) {
+            $return_location['provider'] = 'GOOGLE';
+            $return_location['name']     = (!empty($google_location['name'])) ? $google_location['name'] : 'N/A';
+            $return_location['address']  = explode(', ', $google_location['formatted_address']);
+            $return_location['center']   = [
+                'latitude'  => $google_location['geometry']['location']['lat'],
+                'longitude' => $google_location['geometry']['location']['lng'],
+            ];
+        }
 
         // return response
         return $return_location;
