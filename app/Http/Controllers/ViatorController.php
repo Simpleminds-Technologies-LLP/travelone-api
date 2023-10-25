@@ -68,6 +68,9 @@ class ViatorController extends Controller
                         $createdAt                   = (!empty($single_product['createdAt'])) ? $single_product['createdAt'] : null;
                         $lastUpdatedAt               = (!empty($single_product['lastUpdatedAt'])) ? $single_product['lastUpdatedAt'] : null;
 
+                        // filter status
+                        $is_status = ($status == 'ACTIVE') ? 1 : 0;
+
                         // filter special tags
                         $filter_speical_badge = ViatorHelper::filter_activity_special_badge($productflags);
 
@@ -157,7 +160,7 @@ class ViatorController extends Controller
                                 'seo_title'       => $title,
                                 'tour_sync_type'  => 'viator',
                                 'extra_json_data' => serialize($extra_json_data),
-                                'status'          => 1,
+                                'status'          => $is_status,
                             ]);
 
                             // get last inserted ID
@@ -254,7 +257,8 @@ class ViatorController extends Controller
                             // push response in array
                             $return_arr['data'][] = [
                                 'action'     => 'created',
-                                'created_id' => $is_created_tour
+                                'created_id' => $is_created_tour,
+                                'is_status'  => $is_status,
                             ];
                         } else {
                             // get exist tour ID
@@ -279,6 +283,7 @@ class ViatorController extends Controller
                                     'media_gallery'   => serialize($filter_product_images['related_images']),
                                     'seo_title'       => $title,
                                     'extra_json_data' => serialize($extra_json_data),
+                                    'status'          => $is_status,
                                     'updated_at'      => date('Y-m-d h:i:s'),
                                 ]
                             );
@@ -372,6 +377,7 @@ class ViatorController extends Controller
                             $return_arr['data'][] = [
                                 'action'        => 'updated',
                                 'exist_tour_id' => $exist_tour_id,
+                                'is_status'     => $is_status,
                                 'is_updated'    => ($is_updated_tour) ? true : false,
                             ];
                         }
