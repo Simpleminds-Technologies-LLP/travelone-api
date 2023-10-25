@@ -715,4 +715,31 @@ class ViatorHelper
         // return response
         return $return_location;
     }
+
+    /**
+     * filter activity special badge
+     */
+    public static function filter_activity_special_badge($product_flags = [])
+    {
+        // define array
+        $filter_badge = [];
+
+        // fetch loop
+        foreach ($product_flags as $badge_name) {
+            // check condition
+            if($badge_name == 'NEW_ON_VIATOR') {
+                // set flag name
+                $filter_flag_name = 'New On TravelOne';
+            } else {
+                // filter flag name
+                $filter_flag_name = ucwords(strtolower(str_replace('_', ' ', $badge_name)));
+            }
+
+            // push data in array
+            $filter_badge[] = $filter_flag_name;
+        }
+
+        // return response
+        return $filter_badge;
+    }
 }
