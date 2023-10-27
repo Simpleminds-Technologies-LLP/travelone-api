@@ -231,6 +231,7 @@ class ViatorHelper
             CURLOPT_POSTFIELDS     => json_encode($filter_data),
             CURLOPT_HTTPHEADER     => array(
                 'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'Accept-Language: en',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json'
             ),
