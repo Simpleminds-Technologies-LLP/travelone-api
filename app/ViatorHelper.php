@@ -216,7 +216,7 @@ class ViatorHelper
     /**
      * bookings cart hold
      */
-    public static function bookings_cart_hold($filter_data)
+    public static function bookings_cart_hold($body_request)
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -228,7 +228,7 @@ class ViatorHelper
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'POST',
-            CURLOPT_POSTFIELDS     => json_encode($filter_data),
+            CURLOPT_POSTFIELDS     => json_encode($body_request),
             CURLOPT_HTTPHEADER     => array(
                 'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
                 'Accept-Language: en',
