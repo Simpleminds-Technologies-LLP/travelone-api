@@ -445,10 +445,10 @@ class ViatorController extends Controller
         // check authorization token is valid
         if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
             // get requested data
-            $filter_data = $request->filter_data;
+            $body_payload = $request->body_payload;
 
             // fetch product list
-            $hold_cart_items = ViatorHelper::bookings_cart_hold($filter_data);
+            $hold_cart_items = ViatorHelper::bookings_cart_hold($body_payload);
 
             // set response
             $return_arr = $hold_cart_items;
