@@ -429,4 +429,36 @@ class ViatorController extends Controller
         // return response
         return response()->json($return_arr);
     }
+
+    /**
+     * bookings cart hold
+     */
+    public function bookings_cart_hold(Request $request)
+    {
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // get requested data
+            $filter_data = $request->filter_data;
+
+            // fetch product list
+            $hold_cart_items = ViatorHelper::bookings_cart_hold($filter_data);
+
+            // set response
+            $return_arr = $hold_cart_items;
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is not valid';
+        }
+
+        // return response
+        return response()->json($return_arr);
+    }
 }
