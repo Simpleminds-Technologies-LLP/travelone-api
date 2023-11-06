@@ -534,7 +534,7 @@ class ViatorHelper
         $original_list = ViatorHelper::fetch_product_booking_questions();
 
         // check is valid count
-        if(!empty($find_questions) && count($find_questions) && count($original_list['bookingQuestions'])) {
+        if(!empty($find_questions) && count($find_questions) && !empty($original_list['bookingQuestions']) && count($original_list['bookingQuestions'])) {
             // fetch original question list
             foreach ($original_list['bookingQuestions'] as $row_question) {
                 // match with original question
