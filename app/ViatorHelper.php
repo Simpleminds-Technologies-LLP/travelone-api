@@ -328,6 +328,43 @@ class ViatorHelper
     }
 
     /**
+     * fetch single product reviews
+     */
+    public static function fetch_single_product_reviews($product_code)
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/reviews/product',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING       => '',
+            CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_TIMEOUT        => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST  => 'POST',
+            CURLOPT_POSTFIELDS     => '{
+                "productCode": "' . $product_code . '",
+                "provider": "ALL",
+                "count": 500,
+                "start": 1,
+                "showMachineTranslated": true,
+                "reviewsForNonPrimaryLocale": true,
+                "ratings": [1, 2, 3, 4, 5],
+                "sortBy": "MOST_RECENT_PER_LOCALE"
+            }',
+            CURLOPT_HTTPHEADER => array(
+                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'Accept-Language: en-US',
+                'Accept: application/json;version=2.0',
+                'Content-Type: application/json'
+            ),
+        ));
+        $response = curl_exec($curl);
+        curl_close($curl);
+        return json_decode($response, true);
+    }
+
+    /**
      * find destination details by ID
      */
     public static function find_destination_details($destination_ids = [])
