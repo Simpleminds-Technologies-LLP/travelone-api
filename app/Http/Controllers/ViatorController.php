@@ -110,6 +110,9 @@ class ViatorController extends Controller
                         // filter travelers photos
                         $filter_travelers_photos = ViatorHelper::filter_product_travelers_photos($filter_reiews);
 
+                        // fetch product reviews
+                        $all_product_reviews = ViatorHelper::fetch_single_product_reviews($productCode);
+
                         // push other json data
                         $extra_json_data = [
                             'productCode'                 => $productCode,
@@ -135,7 +138,6 @@ class ViatorController extends Controller
                             'productflags'                => $productflags,
                             'supplier'                    => $supplier,
                             'reviews'                     => $reviews,
-                            // 'all_reviews'                 => $filter_reiews,
                             'filter_travelers_photos'     => $filter_travelers_photos,
                             'createdAt'                   => $createdAt,
                             'lastUpdatedAt'               => $lastUpdatedAt,
@@ -143,6 +145,9 @@ class ViatorController extends Controller
 
                         // check sightseeing is exist
                         $is_exist = DB::table('to_tour_product')->select('id')->where('slug', ViatorHelper::str_slug($title))->get()->toArray();
+
+                        // define combile tour ID
+                        $is_common_tour_id = '';
 
                         // check item is exist
                         if(!count($is_exist)) {
@@ -156,10 +161,10 @@ class ViatorController extends Controller
                                 'media_type'      => 'reference',
                                 'description'     => $description,
                                 'featured_image'  => $filter_product_images['cover_image'],
-                                'media_gallery'   => serialize($filter_product_images['related_images']),
+                                'media_gallery'   => json_encode($filter_product_images['related_images']),
                                 'seo_title'       => $title,
                                 'tour_sync_type'  => 'viator',
-                                'extra_json_data' => serialize($extra_json_data),
+                                'extra_json_data' => json_encode($extra_json_data),
                                 'status'          => $is_status,
                             ]);
 
@@ -239,6 +244,7 @@ class ViatorController extends Controller
                                 // insert viator extra data
                                 DB::table('to_tour_viator_extra_data')->insert([
                                     'tour_id'        => $is_created_tour,
+                                    'product_code'   => $productCode,
                                     'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
                                     'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
                                     'time_duration'  => $filter_duration,
@@ -248,21 +254,27 @@ class ViatorController extends Controller
                                 // insert terms data
                                 DB::table('to_tour_terms')->insert([
                                     'tour_id'              => $is_created_tour,
-                                    'what_is_included'     => serialize($filter_inclusions),
-                                    'what_is_not_included' => serialize($filter_exclusions),
-                                    'important_notes'      => serialize($filter_additional_info),
+                                    'what_is_included'     => json_encode($filter_inclusions),
+                                    'what_is_not_included' => json_encode($filter_exclusions),
+                                    'important_notes'      => json_encode($filter_additional_info),
                                 ]);
-                            }
 
-                            // push response in array
-                            $return_arr['data'][] = [
-                                'action'     => 'created',
-                                'created_id' => $is_created_tour,
-                                'is_status'  => $is_status,
-                            ];
+                                // push response in array
+                                $return_arr['data'][] = [
+                                    'action'     => 'created',
+                                    'created_id' => $is_created_tour,
+                                    'is_status'  => $is_status,
+                                ];
+
+                                // update common tour ID
+                                $is_common_tour_id = $is_created_tour;
+                            }
                         } else {
                             // get exist tour ID
                             $exist_tour_id = $is_exist[0]->id;
+
+                            // update common tour ID
+                            $is_common_tour_id = $exist_tour_id;
 
                             // remove location data
                             DB::table('to_tour_viator_tag')->where('tour_id', $exist_tour_id)->delete();
@@ -280,9 +292,9 @@ class ViatorController extends Controller
                                     'tour_name'       => $title,
                                     'description'     => $description,
                                     'featured_image'  => $filter_product_images['cover_image'],
-                                    'media_gallery'   => serialize($filter_product_images['related_images']),
+                                    'media_gallery'   => json_encode($filter_product_images['related_images']),
                                     'seo_title'       => $title,
-                                    'extra_json_data' => serialize($extra_json_data),
+                                    'extra_json_data' => json_encode($extra_json_data),
                                     'status'          => $is_status,
                                     'updated_at'      => date('Y-m-d h:i:s'),
                                 ]
@@ -359,14 +371,15 @@ class ViatorController extends Controller
                             // insert terms data
                             DB::table('to_tour_terms')->insert([
                                 'tour_id'              => $exist_tour_id,
-                                'what_is_included'     => serialize($filter_inclusions),
-                                'what_is_not_included' => serialize($filter_exclusions),
-                                'important_notes'      => serialize($filter_additional_info),
+                                'what_is_included'     => json_encode($filter_inclusions),
+                                'what_is_not_included' => json_encode($filter_exclusions),
+                                'important_notes'      => json_encode($filter_additional_info),
                             ]);
 
                             // insert viator extra data
                             DB::table('to_tour_viator_extra_data')->insert([
                                 'tour_id'        => $exist_tour_id,
+                                'product_code'   => $productCode,
                                 'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
                                 'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
                                 'time_duration'  => (int) $filter_duration,
@@ -380,6 +393,45 @@ class ViatorController extends Controller
                                 'is_status'     => $is_status,
                                 'is_updated'    => ($is_updated_tour) ? true : false,
                             ];
+                        }
+
+                        // check common tour ID is valid
+                        if(!empty($is_common_tour_id) && !empty($all_product_reviews['filteredReviewsSummary']['totalReviews'])) {
+                            // fetch reviews
+                            foreach ($all_product_reviews['reviews'] as $review) {
+                                // get single review data
+                                $reviewReference = $review['reviewReference'];
+                                $userName        = $review['userName'];
+                                $rating          = $review['rating'];
+                                $text            = $review['text'];
+                                $title           = $review['title'];
+                                $provider        = $review['provider'];
+                                $helpfulVotes    = $review['helpfulVotes'];
+                                $photosInfo      = (!empty($review['photosInfo'])) ? $review['photosInfo'] : [];
+                                $publishedDate   = $review['publishedDate'];
+
+                                // check sightseeing is exist
+                                $is_exist_review = DB::table('to_tour_viator_reviews')->select('id')->where('tour_id', $is_common_tour_id)->where('product_code', $productCode)->where('review_reference', $reviewReference)->get()->toArray();
+
+                                // check is exist
+                                if(empty($is_exist_review)) {
+                                    // insert terms data
+                                    DB::table('to_tour_viator_reviews')->insert([
+                                        'tour_id'          => $is_common_tour_id,
+                                        'product_code'     => $productCode,
+                                        'review_reference' => $reviewReference,
+                                        'username'         => $userName,
+                                        'title'            => $title,
+                                        'rating'           => $rating,
+                                        'review_text'      => $text,
+                                        'provider'         => $provider,
+                                        'helpful_votes'    => $helpfulVotes,
+                                        'photos_info'      => json_encode($photosInfo),
+                                        'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
+                                        'synced_date'      => date('Y-m-d h:i:s'),
+                                    ]);
+                                }
+                            }
                         }
                     }
                 }
