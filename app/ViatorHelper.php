@@ -625,7 +625,7 @@ class ViatorHelper
                 if(!empty($end_row['location']['ref'])) {
                     // find location data
                     $location_list = ViatorHelper::viator_single_location_data($end_row['location']['ref']);
-                    $location_list = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
+                    $location_list = (!empty($location_list['locations']) && count($location_list['locations'])) ? $location_list['locations'][0] : [];
 
                     // check provider name
                     if($location_list['provider'] == 'GOOGLE') {
