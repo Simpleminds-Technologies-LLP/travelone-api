@@ -593,10 +593,10 @@ class ViatorHelper
                 if(!empty($start_row['location']['ref'])) {
                     // find location data
                     $location_list = ViatorHelper::viator_single_location_data($start_row['location']['ref']);
-                    $location_list = (count($location_list['locations'])) ? $location_list['locations'][0] : [];
+                    $location_list = (is_array($location_list) && !empty($location_list['locations']) && count($location_list['locations'])) ? $location_list['locations'][0] : [];
 
                     // check provider name
-                    if($location_list['provider'] == 'GOOGLE') {
+                    if(!empty($location_list) && !empty($location_list['provider']) && $location_list['provider'] == 'GOOGLE') {
                         // get place ID
                         $google_place_id = $location_list['providerReference'];
 
