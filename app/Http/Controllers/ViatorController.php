@@ -728,7 +728,7 @@ class ViatorController extends Controller
                                         'review_text'      => $text,
                                         'provider'         => $provider,
                                         'helpful_votes'    => $helpfulVotes,
-                                        'photos_info'      => json_encode($photosInfo),
+                                        // 'photos_info'      => json_encode($photosInfo),
                                         'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
                                         'synced_date'      => date('Y-m-d h:i:s'),
                                     ]);
