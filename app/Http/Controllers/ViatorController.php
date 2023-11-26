@@ -549,7 +549,7 @@ class ViatorController extends Controller
                                     'product_code'   => $productCode,
                                     'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
                                     'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
-                                    'time_duration'  => $filter_duration,
+                                    'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
                                     'reviews'        => $reviews['combinedAverageRating'],
                                 ]);
 
