@@ -725,7 +725,7 @@ class ViatorController extends Controller
                                         'username'         => $userName,
                                         'title'            => $title,
                                         'rating'           => $rating,
-                                        'review_text'      => $text,
+                                        'review_text'      => iconv(mb_detect_encoding($text, mb_detect_order(), true), "UTF-8", $text),
                                         'provider'         => $provider,
                                         'helpful_votes'    => $helpfulVotes,
                                         // 'photos_info'      => json_encode($photosInfo),
