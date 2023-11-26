@@ -717,21 +717,25 @@ class ViatorController extends Controller
 
                                 // check is exist
                                 if(empty($is_exist_review)) {
-                                    // insert terms data
-                                    DB::table('to_tour_viator_reviews')->insert([
-                                        'tour_id'          => $is_common_tour_id,
-                                        'product_code'     => $productCode,
-                                        'review_reference' => $reviewReference,
-                                        'username'         => $userName,
-                                        'title'            => $title,
-                                        'rating'           => $rating,
-                                        'review_text'      => json_encode($text),
-                                        'provider'         => $provider,
-                                        'helpful_votes'    => $helpfulVotes,
-                                        // 'photos_info'      => json_encode($photosInfo),
-                                        'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
-                                        'synced_date'      => date('Y-m-d h:i:s'),
-                                    ]);
+                                    try {
+                                        // insert terms data
+                                        DB::table('to_tour_viator_reviews')->insert([
+                                            'tour_id'          => $is_common_tour_id,
+                                            'product_code'     => $productCode,
+                                            'review_reference' => $reviewReference,
+                                            'username'         => $userName,
+                                            'title'            => $title,
+                                            'rating'           => $rating,
+                                            'review_text'      => $text,
+                                            'provider'         => $provider,
+                                            'helpful_votes'    => $helpfulVotes,
+                                            'photos_info'      => json_encode($photosInfo),
+                                            'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
+                                            'synced_date'      => date('Y-m-d h:i:s'),
+                                        ]);
+                                    } catch (Exception $error) {
+                                        
+                                    }
                                 }
                             }
                         }
