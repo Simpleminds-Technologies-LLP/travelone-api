@@ -734,7 +734,7 @@ class ViatorController extends Controller
                                             'synced_date'      => date('Y-m-d h:i:s'),
                                         ]);
                                     } catch (Exception $error) {
-                                        
+
                                     }
                                 }
                             }
