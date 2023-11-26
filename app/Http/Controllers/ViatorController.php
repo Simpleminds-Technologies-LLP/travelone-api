@@ -8,9 +8,310 @@ use DB;
 class ViatorController extends Controller
 {
     /**
-     * product list
+     * last modified since product
      */
-    public function product_list(Request $request)
+    public function last_modified_since_product(Request $request)
+    {
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // get requested data
+            $modified_since = $request->modified_since;
+            $count          = $request->count;
+
+            // fetch product list
+            $last_modified = ViatorHelper::last_modified_since_product([
+                'modified_since' => $modified_since,
+                'count'          => 10,
+            ]);
+
+            // check api response is valid
+            if(is_array($last_modified['products']) && count($last_modified['products'])) {
+                // define array
+                $modified_products = [];
+
+                // define next cursor
+                $next_cursor = (!empty($last_modified['nextCursor'])) ? $last_modified['nextCursor'] : null;
+
+                // fetch api data
+                foreach ($last_modified['products'] as $product) {
+                    // push data in array
+                    $modified_products[] = [
+                        'product_code' => $product['productCode'],
+                        'status'       => $product['status'],
+                    ];
+                }
+
+                // fetch pagination callback
+                while ($next_cursor != null) {
+                    // fetch product list
+                    $last_modified_call = ViatorHelper::last_modified_since_product([
+                        'modified_since' => $modified_since,
+                        'cursor'         => $next_cursor,
+                        'count'          => 10,
+                    ]);
+
+                    // fetch api data
+                    foreach ($last_modified_call['products'] as $product) {
+                        // push data in array
+                        $modified_products[] = [
+                            'product_code' => $product['productCode'],
+                            'status'       => $product['status'],
+                        ];
+                    }
+
+                    // define next cursor
+                    $next_cursor = (!empty($last_modified_call['nextCursor'])) ? $last_modified_call['nextCursor'] : null;
+                }
+
+                // set response
+                $return_arr['status'] = 200;
+                $return_arr['data']   = $modified_products;
+            } else {
+                // set response
+                $return_arr['status']  = 404;
+                $return_arr['message'] = 'Authorization token is not valid';
+            }
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is not valid';
+        }
+
+        // return response
+        return response()->json($return_arr);
+    }
+
+    /**
+     * last modified availability schedules
+     */
+    public function last_modified_availability_schedules(Request $request)
+    {
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // get requested data
+            $modified_since = $request->modified_since;
+            $count          = $request->count;
+
+            // fetch product list
+            $last_modified = ViatorHelper::last_modified_since_availability([
+                'modified_since' => $modified_since,
+                'count'          => 5,
+            ]);
+
+            // check api response is valid
+            if(is_array($last_modified['availabilitySchedules']) && count($last_modified['availabilitySchedules'])) {
+                // define array
+                $modified_items = [];
+
+                // define next cursor
+                $next_cursor = (!empty($last_modified['nextCursor'])) ? $last_modified['nextCursor'] : null;
+
+                // fetch api data
+                foreach ($last_modified['availabilitySchedules'] as $product) {
+                    // define array
+                    $pricing_details = $timed_entries = [];
+
+                    // fetch pricing details
+                    if(!empty($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['pricingDetails']) && count($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['pricingDetails'])) {
+                        foreach ($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['pricingDetails'] as $row) {
+                            // push data in array
+                            if(count($row)) {
+                                $pricing_details[$row['ageBand']] = $row['price']['original']['recommendedRetailPrice'];
+                            }
+                        }
+                    }
+
+                    // fetch pricing details
+                    if(!empty($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['timedEntries']) && count($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['timedEntries'])) {
+                        foreach ($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['timedEntries'] as $row) {
+                            // push data in array
+                            if(count($row)) {
+                                $timed_entries[] = $row['startTime'];
+                            }
+                        }
+                    }
+
+                    // sort by array
+                    ksort($pricing_details);
+
+                    // push data in array
+                    $modified_items[] = [
+                        'product_code'    => $product['productCode'],
+                        'option_code'     => (!empty($product['bookableItems'][0]['productOptionCode'])) ? $product['bookableItems'][0]['productOptionCode'] : null,
+                        'start_date'      => (!empty($product['bookableItems'][0]['seasons'][0]['startDate'])) ? $product['bookableItems'][0]['seasons'][0]['startDate'] : null,
+                        'end_date'        => (!empty($product['bookableItems'][0]['seasons'][0]['endDate'])) ? $product['bookableItems'][0]['seasons'][0]['endDate'] : null,
+                        'days_of_week'    => (!empty($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['daysOfWeek'])) ? $product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['daysOfWeek'] : [],
+                        'pricing_details' => $pricing_details,
+                        'timed_entries'   => $timed_entries,
+                    ];
+                }
+
+                // fetch pagination callback
+                while ($next_cursor != null) {
+                    // fetch product list
+                    $last_modified_call = ViatorHelper::last_modified_since_availability([
+                        'modified_since' => $modified_since,
+                        'cursor'         => $next_cursor,
+                        'count'          => 10,
+                    ]);
+
+                    // fetch api data
+                    foreach ($last_modified_call['availabilitySchedules'] as $product) {
+                        // define array
+                        $pricing_details = $timed_entries = [];
+
+                        // fetch pricing details
+                        if(!empty($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['pricingDetails']) && count($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['pricingDetails'])) {
+                            foreach ($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['pricingDetails'] as $row) {
+                                // push data in array
+                                if(count($row)) {
+                                    $pricing_details[$row['ageBand']] = $row['price']['original']['recommendedRetailPrice'];
+                                }
+                            }
+                        }
+
+                        // fetch pricing details
+                        if(!empty($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['timedEntries']) && count($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['timedEntries'])) {
+                            foreach ($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['timedEntries'] as $row) {
+                                // push data in array
+                                if(count($row)) {
+                                    $timed_entries[] = $row['startTime'];
+                                }
+                            }
+                        }
+
+                        // sort by array
+                        ksort($pricing_details);
+
+                        // push data in array
+                        $modified_items[] = [
+                            'product_code'    => $product['productCode'],
+                            'option_code'     => (!empty($product['bookableItems'][0]['productOptionCode'])) ? $product['bookableItems'][0]['productOptionCode'] : null,
+                            'start_date'      => (!empty($product['bookableItems'][0]['seasons'][0]['startDate'])) ? $product['bookableItems'][0]['seasons'][0]['startDate'] : null,
+                            'end_date'        => (!empty($product['bookableItems'][0]['seasons'][0]['endDate'])) ? $product['bookableItems'][0]['seasons'][0]['endDate'] : null,
+                            'days_of_week'    => (!empty($product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['daysOfWeek'])) ? $product['bookableItems'][0]['seasons'][0]['pricingRecords'][0]['daysOfWeek'] : [],
+                            'pricing_details' => $pricing_details,
+                            'timed_entries'   => $timed_entries,
+                        ];
+                    }
+
+                    // define next cursor
+                    $next_cursor = (!empty($last_modified_call['nextCursor'])) ? $last_modified_call['nextCursor'] : null;
+                }
+
+                // set response
+                $return_arr['status'] = 200;
+                $return_arr['data']   = $modified_items;
+            } else {
+                // set response
+                $return_arr['status']  = 404;
+                $return_arr['message'] = 'Oops! Modified products are not found in viator from requested date.';
+            }
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is invalid.';
+        }
+
+        // return response
+        return response()->json($return_arr);
+    }
+
+    /**
+     * single product availability schedules
+     */
+    public function single_product_availability_schedules(Request $request)
+    {
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // define array
+            $schedule_data = [];
+
+            // get requested data
+            $product_code = $request->product_code;
+
+            // fetch availability schedule
+            $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
+
+            // fetch bookable items
+            if(count($availability_data['bookableItems'])) {
+                foreach ($availability_data['bookableItems'] as $item) {
+                    // define array
+                    $pricing_details = $timed_entries = [];
+
+                    // fetch pricing details
+                    if(!empty($item['seasons'][0]['pricingRecords'][0]['pricingDetails']) && count($item['seasons'][0]['pricingRecords'][0]['pricingDetails'])) {
+                        foreach ($item['seasons'][0]['pricingRecords'][0]['pricingDetails'] as $row) {
+                            // push data in array
+                            if(count($row)) {
+                                $pricing_details[$row['ageBand']] = $row['price']['original']['recommendedRetailPrice'];
+                            }
+                        }
+                    }
+
+                    // fetch pricing details
+                    if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'])) {
+                        foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'] as $row) {
+                            // push data in array
+                            if(count($row)) {
+                                $timed_entries[] = $row['startTime'];
+                            }
+                        }
+                    }
+
+                    // sort by array
+                    ksort($pricing_details);
+
+                    // get product option code
+                    $schedule_data[] = [
+                        'option_code'     => (!empty($item['productOptionCode'])) ? $item['productOptionCode'] : null,
+                        'start_date'      => (!empty($item['seasons'][0]['startDate'])) ? $item['seasons'][0]['startDate'] : null,
+                        'end_date'        => (!empty($item['seasons'][0]['endDate'])) ? $item['seasons'][0]['endDate'] : null,
+                        'days_of_week'    => (!empty($item['seasons'][0]['pricingRecords'][0]['daysOfWeek'])) ? $item['seasons'][0]['pricingRecords'][0]['daysOfWeek'] : [],
+                        'pricing_details' => $pricing_details,
+                        'timed_entries'   => $timed_entries,
+                    ];
+                }
+            }
+            
+            // set response
+            $return_arr['status'] = 200;
+            $return_arr['data']   = $schedule_data;
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is not valid';
+        }
+
+        // return response
+        return response()->json($return_arr);
+    }
+
+    /**
+     * fetch and sync product list
+     */
+    public function fetch_product_list(Request $request)
     {
         // define array
         $return_arr = [];
@@ -36,6 +337,7 @@ class ViatorController extends Controller
                     $productflags   = $product['flags'];
                     $duration       = $product['duration'];
                     $pricingSummary = $product['pricing'];
+                    $productOptions = (!empty($product['productOptions'])) ? $product['productOptions'] : [];
 
                     // fetch single product
                     $single_product = ViatorHelper::fetch_single_product($productCode);
