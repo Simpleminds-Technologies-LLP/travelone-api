@@ -246,7 +246,7 @@ class ViatorController extends Controller
         // check authorization token is valid
         if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
             // define array
-            $schedule_data = [];
+            $unavailable_dates = [];
 
             // get requested data
             $product_code = $request->product_code;
@@ -280,24 +280,32 @@ class ViatorController extends Controller
                         }
                     }
 
-                    // sort by array
-                    ksort($pricing_details);
-
-                    // get product option code
-                    $schedule_data[] = [
-                        'option_code'     => (!empty($item['productOptionCode'])) ? $item['productOptionCode'] : null,
-                        'start_date'      => (!empty($item['seasons'][0]['startDate'])) ? $item['seasons'][0]['startDate'] : null,
-                        'end_date'        => (!empty($item['seasons'][0]['endDate'])) ? $item['seasons'][0]['endDate'] : null,
-                        'days_of_week'    => (!empty($item['seasons'][0]['pricingRecords'][0]['daysOfWeek'])) ? $item['seasons'][0]['pricingRecords'][0]['daysOfWeek'] : [],
-                        'pricing_details' => $pricing_details,
-                        'timed_entries'   => $timed_entries,
-                    ];
+                    // fetch unavailable dates
+                    if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
+                        foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
+                            // push data in array
+                            if(!in_array($row['date'], $unavailable_dates) && strtotime($row['date']) >= time()) {
+                                $unavailable_dates[] = $row['date'];
+                            }
+                        }
+                    }
                 }
             }
+
+            // sort array
+            sort($unavailable_dates);
+
+            // update activity values
+            DB::table('to_tour_viator_extra_data')
+                ->where('product_code', $product_code)
+                ->update([
+                    'unavailable_dates' => (count($unavailable_dates)) ? implode(', ', $unavailable_dates) : null
+                ]
+            );
             
             // set response
             $return_arr['status'] = 200;
-            $return_arr['data']   = $schedule_data;
+            $return_arr['data']   = $unavailable_dates;
         } else {
             // set response
             $return_arr['status']  = 500;
@@ -306,6 +314,59 @@ class ViatorController extends Controller
 
         // return response
         return response()->json($return_arr);
+    }
+
+    /**
+     * update activity availability schedules
+     */
+    public function update_activity_availability_schedules()
+    {
+        // define array
+        $return_arr = [];
+
+        // get viator products list
+        $product_list = DB::table('to_tour_viator_extra_data')->select('product_code')->get()->toArray();
+
+        // fetch products list
+        foreach ($product_list as $product) {
+            // define array
+            $unavailable_dates = [];
+
+            // get requested data
+            $product_code = $product->product_code;
+
+            // fetch availability schedule
+            $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
+
+            // fetch bookable items
+            if(!empty($availability_data['bookableItems']) && count($availability_data['bookableItems'])) {
+                foreach ($availability_data['bookableItems'] as $item) {
+                    // fetch unavailable dates
+                    if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
+                        foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
+                            // push data in array
+                            if(!in_array($row['date'], $unavailable_dates) && strtotime($row['date']) >= time()) {
+                                $unavailable_dates[] = $row['date'];
+                            }
+                        }
+                    }
+                }
+            }
+
+            // sort array
+            sort($unavailable_dates);
+
+            // update activity values
+            DB::table('to_tour_viator_extra_data')
+                ->where('product_code', $product_code)
+                ->update([
+                    'unavailable_dates' => (count($unavailable_dates)) ? implode(', ', $unavailable_dates) : null
+                ]
+            );
+        }
+
+        // return response
+        return response()->json(['status' => true]);
     }
 
     /**
