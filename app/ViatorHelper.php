@@ -27,6 +27,42 @@ class ViatorHelper
     }
 
     /**
+     * generate between two dates
+     */
+    public static function generate_dates($start_date, $end_date)
+    {
+        // define array
+        $dates = [];
+
+        // convert date to string
+        $current = strtotime($start_date);
+        $last    = strtotime($end_date);
+
+        // generate dates
+        while($current <= $last) {
+            $dates[] = date('Y-m-d', $current);
+            $current = strtotime('+1 day', $current);
+        }
+
+        // unset first and end element
+        unset($dates[array_search($start_date, $dates)]);
+        unset($dates[array_search($end_date, $dates)]);
+
+        // return response
+        return $dates;
+    }
+
+    /**
+     * is emoji exist in string
+     */
+    public static function is_emoji_exist($string)
+    {
+        $encstr   = rawurlencode($string);
+        $is_emoji = (strpos($encstr,"%F0") !== false) ? true : false;
+        return $is_emoji;
+    }
+
+    /**
      * fetch product list
      */
     public static function fetch_product_list($filter_data)

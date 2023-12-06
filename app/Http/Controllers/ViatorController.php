@@ -246,7 +246,7 @@ class ViatorController extends Controller
         // check authorization token is valid
         if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
             // define array
-            $unavailable_dates = [];
+            $unavailable_dates = $package_seasons_dates = [];
 
             // get requested data
             $product_code = $request->product_code;
@@ -254,11 +254,21 @@ class ViatorController extends Controller
             // fetch availability schedule
             $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
 
-            // fetch bookable items
+            // check is valid array
             if(count($availability_data['bookableItems'])) {
+                // fetch bookable items
                 foreach ($availability_data['bookableItems'] as $item) {
                     // define array
                     $pricing_details = $timed_entries = [];
+
+                    // get start and end date
+                    $package_start_date = (!empty($item['seasons'][0]['startDate'])) ? $item['seasons'][0]['startDate'] : '';
+                    $package_end_date   = (!empty($item['seasons'][0]['endDate'])) ? $item['seasons'][0]['endDate'] : '';
+
+                    // check date is exist in array
+                    if(!empty($package_start_date) && !empty($package_end_date) && !in_array($package_start_date . '@' . $package_end_date, $package_seasons_dates)) {
+                        $package_seasons_dates[] = $package_start_date . '@' . $package_end_date;
+                    }
 
                     // fetch pricing details
                     if(!empty($item['seasons'][0]['pricingRecords'][0]['pricingDetails']) && count($item['seasons'][0]['pricingRecords'][0]['pricingDetails'])) {
@@ -292,8 +302,34 @@ class ViatorController extends Controller
                 }
             }
 
+            // check start date is exist
+            if(count($package_seasons_dates)) {
+                // define start and end date
+                $year_start_date = date('Y-m-d', time());
+                $year_end_date   = date('Y-m-d', strtotime('+1 year'));
+
+                // fetch dates
+                foreach ($package_seasons_dates as $row) {
+                    // explode dates
+                    $explode_dates = explode('@', $row);
+
+                    // set start and end date
+                    $start_date = $explode_dates[0];
+                    $end_date   = $explode_dates[1];
+
+                    // generate dates
+                    $start_generated_dates = ViatorHelper::generate_dates($year_start_date, $start_date);
+                    $end_generated_dates   = ViatorHelper::generate_dates($end_date, $year_end_date);
+
+                    // marge array
+                    $unavailable_dates = array_merge($unavailable_dates, $start_generated_dates);
+                    $unavailable_dates = array_merge($unavailable_dates, $end_generated_dates);
+                }
+            }
+
             // sort array
             sort($unavailable_dates);
+            array_unique($unavailable_dates);
 
             // update activity values
             DB::table('to_tour_viator_extra_data')
@@ -330,7 +366,7 @@ class ViatorController extends Controller
         // fetch products list
         foreach ($product_list as $product) {
             // define array
-            $unavailable_dates = [];
+            $unavailable_dates = $seasons_dates = [];
 
             // get requested data
             $product_code = $product->product_code;
@@ -340,7 +376,13 @@ class ViatorController extends Controller
 
             // fetch bookable items
             if(!empty($availability_data['bookableItems']) && count($availability_data['bookableItems'])) {
+                // fetch items
                 foreach ($availability_data['bookableItems'] as $item) {
+                    // check date is exist in array
+                    if(!in_array($item['seasons'][0]['startDate'], $seasons_dates)) {
+                        $seasons_dates[] = $item['seasons'][0]['startDate'];
+                    }
+
                     // fetch unavailable dates
                     if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
                         foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
@@ -776,27 +818,27 @@ class ViatorController extends Controller
                                 // check sightseeing is exist
                                 $is_exist_review = DB::table('to_tour_viator_reviews')->select('id')->where('tour_id', $is_common_tour_id)->where('product_code', $productCode)->where('review_reference', $reviewReference)->get()->toArray();
 
-                                // check is exist
-                                if(empty($is_exist_review)) {
-                                    try {
-                                        // insert terms data
-                                        DB::table('to_tour_viator_reviews')->insert([
-                                            'tour_id'          => $is_common_tour_id,
-                                            'product_code'     => $productCode,
-                                            'review_reference' => $reviewReference,
-                                            'username'         => $userName,
-                                            'title'            => $title,
-                                            'rating'           => $rating,
-                                            'review_text'      => $text,
-                                            'provider'         => $provider,
-                                            'helpful_votes'    => $helpfulVotes,
-                                            // 'photos_info'      => json_encode($photosInfo),
-                                            'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
-                                            'synced_date'      => date('Y-m-d h:i:s'),
-                                        ]);
-                                    } catch (Exception $error) {
+                                // check emoji is exist in review
+                                $is_emoji_title = ViatorHelper::is_emoji_exist($title);
+                                $is_emoji_text  = ViatorHelper::is_emoji_exist($text);
 
-                                    }
+                                // check is exist
+                                if(empty($is_exist_review) && $is_emoji_title === false && $is_emoji_text === false) {
+                                    // insert terms data
+                                    DB::table('to_tour_viator_reviews')->insert([
+                                        'tour_id'          => $is_common_tour_id,
+                                        'product_code'     => $productCode,
+                                        'review_reference' => $reviewReference,
+                                        'username'         => $userName,
+                                        'title'            => $title,
+                                        'rating'           => (int) $rating,
+                                        'review_text'      => $text,
+                                        'provider'         => $provider,
+                                        'helpful_votes'    => $helpfulVotes,
+                                        // 'photos_info'      => json_encode($photosInfo),
+                                        'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
+                                        'synced_date'      => date('Y-m-d h:i:s'),
+                                    ]);
                                 }
                             }
                         }
