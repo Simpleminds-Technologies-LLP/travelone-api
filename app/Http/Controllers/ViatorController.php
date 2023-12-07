@@ -294,9 +294,7 @@ class ViatorController extends Controller
                     if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
                         foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
                             // push data in array
-                            if(!in_array($row['date'], $unavailable_dates) && strtotime($row['date']) >= time()) {
-                                $unavailable_dates[] = $row['date'];
-                            }
+                            $unavailable_dates[] = $row['date'];
                         }
                     }
                 }
@@ -387,9 +385,7 @@ class ViatorController extends Controller
                     if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
                         foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
                             // push data in array
-                            if(!in_array($row['date'], $unavailable_dates) && strtotime($row['date']) >= time()) {
-                                $unavailable_dates[] = $row['date'];
-                            }
+                            $unavailable_dates[] = $row['date'];
                         }
                     }
                 }
@@ -397,6 +393,7 @@ class ViatorController extends Controller
 
             // sort array
             sort($unavailable_dates);
+            array_unique($unavailable_dates);
 
             // update activity values
             DB::table('to_tour_viator_extra_data')
