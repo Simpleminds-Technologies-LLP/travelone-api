@@ -482,6 +482,33 @@ class ViatorHelper
     }
 
     /**
+     * fetch viator destinations
+     */
+    public static function viator_destinations()
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/v1/taxonomy/destinations',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING       => '',
+            CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_TIMEOUT        => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST  => 'GET',
+            CURLOPT_HTTPHEADER     => array(
+                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'Accept-Language: en',
+                'Content-Type: application/json',
+                'Accept: application/json;version=2.0',
+            ),
+        ));
+        $response = json_decode(curl_exec($curl), true);
+        curl_close($curl);
+        return $response;
+    }
+
+    /**
      * find destination details by ID
      */
     public static function find_destination_details($destination_ids = [])
@@ -925,5 +952,27 @@ class ViatorHelper
 
         // return response
         return $filter_badge;
+    }
+
+    /**
+     * mapping viator and travelone city
+     */
+    public static function mapping_viator_and_system_city()
+    {
+        // define array
+        $return_arr = [
+            'Europe' => 35, // 'Europe',
+            // '' => 37, // 'Polar Regions',
+            'America' => 38, // 'US & Canada',
+            // '' => 40, // 'Latin America',
+            // '' => 41, // 'Mexico & The Caribbean',
+            'Asia' => 42, // 'Asia',
+            // '' => 43, // 'Australia & Pacific',
+            // '' => 44, // 'Egypt & Middle East',
+            // '' => 46, // 'Africa',
+        ];
+
+        // return response
+        return $return_arr;
     }
 }
