@@ -27,7 +27,8 @@ Route::post('/viator/availability/check', 'App\Http\Controllers\ViatorController
 // bookings cart hold
 Route::post('/viator/bookings/cart_hold', 'App\Http\Controllers\ViatorController@bookings_cart_hold');
 
-/**
- * set cron job
- */
+// viator destinations
+Route::post('/viator/destinations', 'App\Http\Controllers\ViatorController@viator_destinations');
+
+// set daily cron job
 Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers\ViatorController@update_activity_availability_schedules');
