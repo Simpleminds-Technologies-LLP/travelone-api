@@ -417,8 +417,7 @@ class ViatorController extends Controller
         $return_arr = [];
 
         // get request header
-        $headers             = $request->header();
-        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+        $authorization_token = $request->header('authorization');
 
         // check authorization token is valid
         if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
@@ -429,15 +428,15 @@ class ViatorController extends Controller
             $product_list = ViatorHelper::fetch_product_list($filter_data);
 
             // check product is valid
-            if(is_array($product_list) && count($product_list) && !empty($product_list['products']) && is_array($product_list['products'])) {
+            if (is_array($product_list) && !empty($product_list['products']) && is_array($product_list['products'])) {
                 // fetch products
                 foreach ($product_list['products'] as $product) {
                     // get product data
-                    $productCode    = $product['productCode'];
-                    $productflags   = $product['flags'];
-                    $duration       = $product['duration'];
-                    $pricingSummary = $product['pricing'];
-                    $productOptions = (!empty($product['productOptions'])) ? $product['productOptions'] : [];
+                    $productCode    = $product['productCode'] ?? null;
+                    $productflags   = $product['flags'] ?? null;
+                    $duration       = $product['duration'] ?? null;
+                    $pricingSummary = $product['pricing'] ?? null;
+                    $productOptions = $product['productOptions'] ?? [];
 
                     // fetch single product
                     $single_product = ViatorHelper::fetch_single_product($productCode);
@@ -445,33 +444,33 @@ class ViatorController extends Controller
                     // check is valid response
                     if(is_array($single_product) && !empty($single_product)) {
                         // get single product data
-                        $title                       = ucwords(strtolower($single_product['title']));
-                        $description                 = (!empty($single_product['description'])) ? $single_product['description'] : null;
-                        $productUrl                  = (!empty($single_product['productUrl'])) ? $single_product['productUrl'] : null;
-                        $ticketInfo                  = (!empty($single_product['ticketInfo'])) ? $single_product['ticketInfo'] : null;
-                        $pricingInfo                 = (!empty($single_product['pricingInfo'])) ? $single_product['pricingInfo'] : null;
-                        $logistics                   = (!empty($single_product['logistics'])) ? $single_product['logistics'] : null;
-                        $timeZone                    = (!empty($single_product['timeZone'])) ? $single_product['timeZone'] : null;
-                        $inclusions                  = (!empty($single_product['inclusions'])) ? $single_product['inclusions'] : null;
-                        $exclusions                  = (!empty($single_product['exclusions'])) ? $single_product['exclusions'] : null;
-                        $additionalInfo              = (!empty($single_product['additionalInfo'])) ? $single_product['additionalInfo'] : null;
-                        $cancellationPolicy          = (!empty($single_product['cancellationPolicy'])) ? $single_product['cancellationPolicy'] : null;
-                        $bookingConfirmationSettings = (!empty($single_product['bookingConfirmationSettings'])) ? $single_product['bookingConfirmationSettings'] : null;
-                        $bookingRequirements         = (!empty($single_product['bookingRequirements'])) ? $single_product['bookingRequirements'] : null;
-                        $languageGuides              = (!empty($single_product['languageGuides'])) ? $single_product['languageGuides'] : null;
-                        $bookingQuestions            = (!empty($single_product['bookingQuestions'])) ? $single_product['bookingQuestions'] : null;
-                        $tags                        = (!empty($single_product['tags'])) ? $single_product['tags'] : null;
-                        $destinations                = (!empty($single_product['destinations'])) ? $single_product['destinations'] : null;
-                        $itinerary                   = (!empty($single_product['itinerary'])) ? $single_product['itinerary'] : null;
-                        $productOptions              = (!empty($single_product['productOptions'])) ? $single_product['productOptions'] : null;
-                        $supplier                    = (!empty($single_product['supplier'])) ? $single_product['supplier'] : null;
-                        $reviews                     = (!empty($single_product['reviews'])) ? $single_product['reviews'] : null;
-                        $status                      = (!empty($single_product['status'])) ? $single_product['status'] : null;
-                        $createdAt                   = (!empty($single_product['createdAt'])) ? $single_product['createdAt'] : null;
-                        $lastUpdatedAt               = (!empty($single_product['lastUpdatedAt'])) ? $single_product['lastUpdatedAt'] : null;
+                        $title                       = ucwords(strtolower($single_product['title'] ?? ''));
+                        $description                 = $single_product['description'] ?? null;
+                        $productUrl                  = $single_product['productUrl'] ?? null;
+                        $ticketInfo                  = $single_product['ticketInfo'] ?? null;
+                        $pricingInfo                 = $single_product['pricingInfo'] ?? null;
+                        $logistics                   = $single_product['logistics'] ?? null;
+                        $timeZone                    = $single_product['timeZone'] ?? null;
+                        $inclusions                  = $single_product['inclusions'] ?? null;
+                        $exclusions                  = $single_product['exclusions'] ?? null;
+                        $additionalInfo              = $single_product['additionalInfo'] ?? null;
+                        $cancellationPolicy          = $single_product['cancellationPolicy'] ?? null;
+                        $bookingConfirmationSettings = $single_product['bookingConfirmationSettings'] ?? null;
+                        $bookingRequirements         = $single_product['bookingRequirements'] ?? null;
+                        $languageGuides              = $single_product['languageGuides'] ?? null;
+                        $bookingQuestions            = $single_product['bookingQuestions'] ?? null;
+                        $tags                        = $single_product['tags'] ?? null;
+                        $destinations                = $single_product['destinations'] ?? null;
+                        $itinerary                   = $single_product['itinerary'] ?? null;
+                        $productOptions              = $single_product['productOptions'] ?? null;
+                        $supplier                    = $single_product['supplier'] ?? null;
+                        $reviews                     = $single_product['reviews'] ?? null;
+                        $status                      = $single_product['status'] ?? null;
+                        $createdAt                   = $single_product['createdAt'] ?? null;
+                        $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
                         // filter status
-                        $is_status = ($status == 'ACTIVE') ? 1 : 0;
+                        $is_status = ($status === 'ACTIVE') ? 1 : 0;
 
                         // filter special tags
                         $filter_speical_badge = ViatorHelper::filter_activity_special_badge($productflags);
@@ -545,7 +544,7 @@ class ViatorController extends Controller
                             'lastUpdatedAt'               => $lastUpdatedAt,
                         ];
 
-                        // check sightseeing is exist
+                        // Check if sightseeing exists
                         $is_exist = DB::table('to_tour_product')->select('id')->where('slug', ViatorHelper::str_slug($title))->get()->toArray();
 
                         // define combile tour ID
@@ -553,8 +552,8 @@ class ViatorController extends Controller
 
                         // check item is exist
                         if(!count($is_exist)) {
-                            // push data in table
-                            $is_created_query = DB::table('to_tour_product')->insert([
+                            // Prepare data for insertion
+                            $insertData = [
                                 'user_id'         => 1,
                                 'slug'            => ViatorHelper::str_slug($title),
                                 'sku'             => 'viator_api',
@@ -568,10 +567,10 @@ class ViatorController extends Controller
                                 'tour_sync_type'  => 'viator',
                                 'extra_json_data' => json_encode($extra_json_data),
                                 'status'          => $is_status,
-                            ]);
+                            ];
 
-                            // get last inserted ID
-                            $is_created_tour = DB::getPdo()->lastInsertId();
+                            // Insert data into the table and get the last inserted ID
+                            $is_created_tour = DB::table('to_tour_product')->insertGetId($insertData);
 
                             // check tour is created
                             if(!empty($is_created_tour)) {
@@ -809,7 +808,7 @@ class ViatorController extends Controller
                                 $title           = $review['title'];
                                 $provider        = $review['provider'];
                                 $helpfulVotes    = $review['helpfulVotes'];
-                                $photosInfo      = (!empty($review['photosInfo'])) ? $review['photosInfo'] : [];
+                                $photosInfo      = $review['photosInfo'] ?? [];
                                 $publishedDate   = $review['publishedDate'];
 
                                 // check sightseeing is exist
@@ -820,7 +819,7 @@ class ViatorController extends Controller
                                 $is_emoji_text  = ViatorHelper::is_emoji_exist($text);
 
                                 // check is exist
-                                if(empty($is_exist_review) && $is_emoji_title === false && $is_emoji_text === false) {
+                                if(empty($is_exist_review) && !$is_emoji_title && !$is_emoji_text) {
                                     // insert terms data
                                     DB::table('to_tour_viator_reviews')->insert([
                                         'tour_id'          => $is_common_tour_id,
