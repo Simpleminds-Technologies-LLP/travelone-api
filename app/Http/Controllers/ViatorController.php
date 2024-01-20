@@ -919,4 +919,89 @@ class ViatorController extends Controller
         // return response
         return response()->json($return_arr);
     }
+
+    /**
+     * viator destinations
+     */
+    public function viator_destinations(Request $request)
+    {
+        // define array
+        $return_arr = [];
+
+        // get request header
+        $headers             = $request->header();
+        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+
+        // check authorization token is valid
+        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
+            // get requested data
+            $body_payload = $request->body_payload;
+
+            // define array
+            $return_arr = [];
+
+            // fetch product list
+            $destination_list = ViatorHelper::viator_destinations();
+
+            // mapping system cities
+            $system_cities = ViatorHelper::mapping_viator_and_system_city();
+
+            // fetch destination
+            foreach ($destination_list['data'] as $row_key => $row) {
+                // check type
+                if($row['destinationType'] == 'CITY' && !empty($row['timeZone'])) {
+                    // get city name
+                    $viator_city_name = $row['destinationName'];
+                    $viator_timezone = explode('/', $row['timeZone']);
+                    $viator_timezone = $viator_timezone[0];
+
+                    // match original destination
+                    $original_destination_id = (!empty($system_cities[$viator_timezone])) ? $system_cities[$viator_timezone] : null;
+
+                    // check city is exist in our system
+                    $is_city_exist = (array) DB::table('location_cities')->select('id AS city_id', 'name AS city_name', 'destination_id', 'country_id', 'state_id')->orWhere('name', 'like', $viator_city_name)->where('status', 1)->get()->first();
+
+                    // check is valid count
+                    if(count($is_city_exist)) {
+                        // check destination ID is valid
+                        if(!$is_city_exist['destination_id'] && $original_destination_id) {
+                            // update destination ID
+                            DB::table('location_cities')
+                                ->where('id', $is_city_exist['city_id'])
+                                ->update([
+                                    'destination_id' => $original_destination_id
+                                ]
+                            );
+                        }
+
+                        // push data in array
+                        $return_arr[] = [
+                            'viator' => [
+                                'city_id'   => $row['destinationId'],
+                                'city_name' => $row['destinationName'],
+                                'timezone'  => $viator_timezone,
+                            ],
+                            'system' => [
+                                'city_id'        => $is_city_exist['city_id'],
+                                'city_name'      => $is_city_exist['city_name'],
+                                'destination_id' => (!empty($is_city_exist['destination_id'])) ? $is_city_exist['destination_id'] : $original_destination_id,
+                                'country_id'     => $is_city_exist['country_id'],
+                                'state_id'       => $is_city_exist['state_id'],
+                            ]
+                        ];
+                    }
+                }
+            }
+
+            // set response
+            $return_arr = $return_arr;
+        } else {
+            // set response
+            $return_arr['status']  = 500;
+            $return_arr['message'] = 'Authorization token is not valid';
+        }
+
+        // return response
+        return response()->json($return_arr);
+    }
 }
