@@ -444,7 +444,7 @@ class ViatorController extends Controller
                     // check is valid response
                     if(is_array($single_product) && !empty($single_product)) {
                         // get single product data
-                        $title                       = ucwords(strtolower($single_product['title'] ?? ''));
+                        $title                       = trim($single_product['title'] ?? '');
                         $description                 = $single_product['description'] ?? null;
                         $productUrl                  = $single_product['productUrl'] ?? null;
                         $ticketInfo                  = $single_product['ticketInfo'] ?? null;
