@@ -21,6 +21,9 @@ Route::post('/viator/single_availability_schedules', 'App\Http\Controllers\Viato
 // product search
 Route::post('/viator/product_search', 'App\Http\Controllers\ViatorController@fetch_product_list');
 
+// single product sync
+Route::post('/viator/single_product_search', 'App\Http\Controllers\ViatorController@single_fetch_product');
+
 // product availability check
 Route::post('/viator/availability/check', 'App\Http\Controllers\ViatorController@availability_check');
 
