@@ -662,9 +662,10 @@ class ViatorController extends Controller
 
                                 // push response in array
                                 $return_arr['data'][] = [
-                                    'action'     => 'created',
-                                    'created_id' => $is_created_tour,
-                                    'is_status'  => $is_status,
+                                    'action'       => 'created',
+                                    'created_id'   => $is_created_tour,
+                                    'product_code' => $productCode,
+                                    'is_status'    => $is_status,
                                 ];
 
                                 // update common tour ID
@@ -791,6 +792,7 @@ class ViatorController extends Controller
                             $return_arr['data'][] = [
                                 'action'        => 'updated',
                                 'exist_tour_id' => $exist_tour_id,
+                                'product_code'  => $productCode,
                                 'is_status'     => $is_status,
                                 'is_updated'    => ($is_updated_tour) ? true : false,
                             ];
