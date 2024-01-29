@@ -359,12 +359,20 @@ class ViatorController extends Controller
         $return_arr = [];
 
         // get viator products list
-        $product_list = DB::table('to_tour_viator_extra_data')->select('product_code')->get()->toArray();
+        $product_list = DB::table('to_tour_viator_extra_data')->select('product_code')->orderBy('id', 'DESC')->get()->toArray();
 
         // fetch products list
         foreach ($product_list as $product) {
-            // define array
-            $unavailable_dates = $seasons_dates = [];
+            // define arrays
+            $allowed_dates = $unavailable_dates = $seasons_dates = $allowed_days = [];
+
+            // Get today's date
+            $today = new \DateTime();
+
+            // Get one year later date from today
+            $oneYearLater = clone $today;
+            $oneYearLater->modify('+1 year');
+            $currentDate = clone $today;
 
             // get requested data
             $product_code = $product->product_code;
@@ -373,35 +381,47 @@ class ViatorController extends Controller
             $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
 
             // fetch bookable items
-            if(!empty($availability_data['bookableItems']) && count($availability_data['bookableItems'])) {
-                // fetch items
-                foreach ($availability_data['bookableItems'] as $item) {
-                    // check date is exist in array
-                    if(!in_array($item['seasons'][0]['startDate'], $seasons_dates)) {
-                        $seasons_dates[] = $item['seasons'][0]['startDate'];
-                    }
+            foreach ($availability_data['bookableItems'] as $item) {
+                // get allowed days
+                $activity_allowed_days = $item['seasons'][0]['pricingRecords'][0]['daysOfWeek'];
 
-                    // fetch unavailable dates
-                    if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
-                        foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
-                            // push data in array
-                            $unavailable_dates[] = $row['date'];
-                        }
-                    }
+                // check if it's a valid array
+                if (is_array($activity_allowed_days) && count($activity_allowed_days)) {
+                    $allowed_days = array_map(function ($day) {
+                        return date('N', strtotime($day));
+                    }, $activity_allowed_days);
+                }
+
+                // collect unique start dates
+                $seasons_dates[] = $item['seasons'][0]['startDate'];
+
+                // fetch unavailable dates
+                if (!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
+                    $unavailable_dates = array_merge($unavailable_dates, array_column($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'], 'date'));
                 }
             }
 
-            // sort array
+            // sort and make the array unique
+            $unavailable_dates = array_unique($unavailable_dates);
             sort($unavailable_dates);
-            array_unique($unavailable_dates);
+
+            // filter out unavailable dates
+            $allowedDates = array_filter(iterator_to_array(new \DatePeriod($currentDate, new \DateInterval('P1D'), $oneYearLater)), function ($date) use ($unavailable_dates, $allowed_days) {
+                $currentDateString = $date->format('Y-m-d');
+                return !in_array($currentDateString, $unavailable_dates) && !in_array($date->format('N'), $allowed_days);
+            });
+
+            // convert allowed dates to strings
+            $allowedDates = array_map(function ($date) {
+                return $date->format('Y-m-d');
+            }, $allowedDates);
 
             // update activity values
             DB::table('to_tour_viator_extra_data')
                 ->where('product_code', $product_code)
                 ->update([
-                    'unavailable_dates' => (count($unavailable_dates)) ? implode(', ', $unavailable_dates) : null
-                ]
-            );
+                    'unavailable_dates' => implode(', ', $allowedDates),
+                ]);
         }
 
         // return response
@@ -649,7 +669,7 @@ class ViatorController extends Controller
                                     'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
                                     'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
                                     'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
-                                    'reviews'        => $reviews['combinedAverageRating'],
+                                    'reviews'        => $reviews['combinedAverageRating'] ?? 0,
                                 ]);
 
                                 // insert terms data
@@ -785,7 +805,7 @@ class ViatorController extends Controller
                                 'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
                                 'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
                                 'time_duration'  => (int) $filter_duration,
-                                'reviews'        => (int) $reviews['combinedAverageRating'],
+                                'reviews'        => (int) $reviews['combinedAverageRating'] ?? 0,
                             ]);
 
                             // push response in array
@@ -1088,7 +1108,7 @@ class ViatorController extends Controller
                             'selling_price'  => 0,
                             'discount_price' => 0,
                             'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
-                            'reviews'        => $reviews['combinedAverageRating'],
+                            'reviews'        => $reviews['combinedAverageRating'] ?? 0,
                         ]);
 
                         // insert terms data
@@ -1224,7 +1244,7 @@ class ViatorController extends Controller
                         'selling_price'  => 0,
                         'discount_price' => 0,
                         'time_duration'  => (int) $filter_duration,
-                        'reviews'        => (int) $reviews['combinedAverageRating'],
+                        'reviews'        => (int) (!empty($reviews['combinedAverageRating'])) ? $reviews['combinedAverageRating'] : 0,
                     ]);
 
                     // push response in array
