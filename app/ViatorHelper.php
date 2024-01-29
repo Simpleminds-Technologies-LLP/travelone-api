@@ -716,9 +716,11 @@ class ViatorHelper
 
                         // Update location in logistics data
                         $logisticsData[$rowKey]['location'] = $filterGoogleLocation;
+                        $logisticsData[$rowKey]['referenceNumber'] = $rowData['location']['ref'];
                     } else {
                         // Update location in logistics data
                         $logisticsData[$rowKey]['location'] = $locationList;
+                        $logisticsData[$rowKey]['referenceNumber'] = $rowData['location']['ref'];
                     }
                 }
             }
