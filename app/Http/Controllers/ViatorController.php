@@ -923,7 +923,7 @@ class ViatorController extends Controller
                 $filter_speical_badge = ViatorHelper::filter_activity_special_badge($productflags);
 
                 // filter time duration
-                $filter_duration = ViatorHelper::filter_activity_duration($itinerary['duration']);
+                $filter_duration = (!empty($itinerary['duration'])) ? ViatorHelper::filter_activity_duration($itinerary['duration']) : 0;
 
                 // find destination list
                 $filter_destination = ViatorHelper::find_destination_details($destinations);
