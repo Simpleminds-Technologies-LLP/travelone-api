@@ -742,11 +742,10 @@ class ViatorHelper
                         unset($logistics[$locationType][$row_key]['location']);
 
                         $logistics[$locationType][$row_key] = [
-                            'ref'         => $location_ref,
-                            'name'        => $googleLocation['result']['name'],
-                            'address'     => $googleLocation['result']['formatted_address'],
-                            'url'         => $googleLocation['result']['url'],
-                            'description' => $row['description'],
+                            'ref'     => $location_ref,
+                            'name'    => $googleLocation['result']['name'],
+                            'address' => $googleLocation['result']['formatted_address'],
+                            'url'     => $googleLocation['result']['url'],
                         ];
                     }
                 }
