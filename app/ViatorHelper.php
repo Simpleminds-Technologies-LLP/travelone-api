@@ -732,21 +732,23 @@ class ViatorHelper
     public static function filter_product_logistics($logistics = [])
     {
         foreach (['start', 'end'] as $locationType) {
-            foreach ($logistics[$locationType] as $row_key => $row) {
-                $location_ref = $row['location']['ref'];
-                $google_place_id = ViatorHelper::find_google_place_id_from_ref_number($location_ref, true);
+            if(!empty($logistics[$locationType]) && count($logistics[$locationType])) {
+                foreach ($logistics[$locationType] as $row_key => $row) {
+                    $location_ref = $row['location']['ref'];
+                    $google_place_id = ViatorHelper::find_google_place_id_from_ref_number($location_ref, true);
 
-                if (!empty($google_place_id) && $google_place_id['provider'] == 'GOOGLE') {
-                    $googleLocation = self::find_google_map_location_data($google_place_id['providerReference']);
-                    unset($logistics[$locationType][$row_key]['location']);
+                    if (!empty($google_place_id) && $google_place_id['provider'] == 'GOOGLE') {
+                        $googleLocation = self::find_google_map_location_data($google_place_id['providerReference']);
+                        unset($logistics[$locationType][$row_key]['location']);
 
-                    $logistics[$locationType][$row_key] = [
-                        'ref'         => $location_ref,
-                        'name'        => $googleLocation['result']['name'],
-                        'address'     => $googleLocation['result']['formatted_address'],
-                        'url'         => $googleLocation['result']['url'],
-                        'description' => $row['description'],
-                    ];
+                        $logistics[$locationType][$row_key] = [
+                            'ref'         => $location_ref,
+                            'name'        => $googleLocation['result']['name'],
+                            'address'     => $googleLocation['result']['formatted_address'],
+                            'url'         => $googleLocation['result']['url'],
+                            'description' => $row['description'],
+                        ];
+                    }
                 }
             }
         }
