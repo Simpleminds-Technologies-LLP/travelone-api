@@ -556,11 +556,13 @@ class ViatorHelper
         }
 
         // fetch details for provided IDs
-        foreach ($destination_ids as &$destination) {
-            $destination_id = $destination['ref'];
+        if(is_array($destination_ids) && count($destination_ids)) {
+            foreach ($destination_ids as &$destination) {
+                $destination_id = $destination['ref'];
 
-            // find destination details using the mapped array
-            $destination['data'] = $mapped_destinations[$destination_id] ?? [];
+                // find destination details using the mapped array
+                $destination['data'] = $mapped_destinations[$destination_id] ?? [];
+            }
         }
 
         // return response
