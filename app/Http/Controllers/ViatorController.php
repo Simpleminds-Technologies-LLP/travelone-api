@@ -373,23 +373,25 @@ class ViatorController extends Controller
             $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
 
             // fetch bookable items
-            foreach ($availability_data['bookableItems'] as $item) {
-                // get allowed days
-                $activity_allowed_days = $item['seasons'][0]['pricingRecords'][0]['daysOfWeek'];
+            if(!empty($availability_data['bookableItems']) && count($availability_data['bookableItems'])) {
+                foreach ($availability_data['bookableItems'] as $item) {
+                    // get allowed days
+                    $activity_allowed_days = $item['seasons'][0]['pricingRecords'][0]['daysOfWeek'];
 
-                // check if it's a valid array
-                if (is_array($activity_allowed_days) && count($activity_allowed_days)) {
-                    $allowed_days = array_map(function ($day) {
-                        return date('N', strtotime($day));
-                    }, $activity_allowed_days);
-                }
+                    // check if it's a valid array
+                    if (is_array($activity_allowed_days) && count($activity_allowed_days)) {
+                        $allowed_days = array_map(function ($day) {
+                            return date('N', strtotime($day));
+                        }, $activity_allowed_days);
+                    }
 
-                // collect unique start dates
-                $seasons_dates[] = $item['seasons'][0]['startDate'];
+                    // collect unique start dates
+                    $seasons_dates[] = $item['seasons'][0]['startDate'];
 
-                // fetch unavailable dates
-                if (!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
-                    $unavailable_dates = array_merge($unavailable_dates, array_column($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'], 'date'));
+                    // fetch unavailable dates
+                    if (!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
+                        $unavailable_dates = array_merge($unavailable_dates, array_column($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'], 'date'));
+                    }
                 }
             }
 
