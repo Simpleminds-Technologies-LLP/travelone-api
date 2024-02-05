@@ -509,6 +509,39 @@ class ViatorHelper
     }
 
     /**
+     * find google place id from ref number
+     */
+    public static function find_google_place_id_from_ref_number($location_ref, $is_single = false)
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/locations/bulk',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING       => '',
+            CURLOPT_MAXREDIRS      => 10,
+            CURLOPT_TIMEOUT        => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST  => 'POST',
+            CURLOPT_POSTFIELDS     => ($is_single) ? '{"locations": ["' . $location_ref . '"]}' : json_encode($location_ref),
+            CURLOPT_HTTPHEADER => array(
+                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'Accept-Language: en',
+                'Content-Type: application/json',
+                'Accept: application/json;version=2.0'
+            )
+        ));
+        $response = curl_exec($curl);
+        curl_close($curl);
+        $response = json_decode($response, true);
+        if($is_single) {
+            return (!empty($response) && !empty($response['locations']) && count($response['locations'])) ? $response['locations'][0] : [];
+        } else {
+            return (!empty($response) && !empty($response['locations']) && count($response['locations'])) ? $response['locations'] : [];
+        }
+    }
+
+    /**
      * find destination details by ID
      */
     public static function find_destination_details($destination_ids = [])
@@ -671,6 +704,11 @@ class ViatorHelper
         // fetch product product tags
         $original_list = ViatorHelper::fetch_product_tags();
 
+        // check array length
+        if(!count($original_list['tags'])) {
+            return [];
+        }
+
         // use array_filter to keep only the tags with matching tagId
         $filtered_tags = array_filter($original_list['tags'], function ($row_tag) use ($find_tags) {
             return in_array($row_tag['tagId'], $find_tags);
@@ -691,53 +729,64 @@ class ViatorHelper
      */
     public static function filter_product_logistics($logistics = [])
     {
-        // Fetch location details
-        $fetchLocationDetails = function ($locationRef) {
-            $locationList = ViatorHelper::viator_single_location_data($locationRef);
-            return (!empty($locationList['locations'])) ? $locationList['locations'][0] : [];
-        };
+        foreach (['start', 'end'] as $locationType) {
+            foreach ($logistics[$locationType] as $row_key => $row) {
+                $location_ref = $row['location']['ref'];
+                $google_place_id = ViatorHelper::find_google_place_id_from_ref_number($location_ref, true);
 
-        // Process logistics data (start and end)
-        $processLogistics = function ($logisticsData) use ($fetchLocationDetails) {
-            foreach ($logisticsData as $rowKey => $rowData) {
-                // Check if ref location is set
-                if (!empty($rowData['location']['ref'])) {
-                    // Fetch location data
-                    $locationList = $fetchLocationDetails($rowData['location']['ref']);
+                if (!empty($google_place_id) && $google_place_id['provider'] == 'GOOGLE') {
+                    $googleLocation = self::find_google_map_location_data($google_place_id['providerReference']);
+                    unset($logistics[$locationType][$row_key]['location']);
 
-                    // Check provider name
-                    if (!empty($locationList) && !empty($locationList['provider']) && $locationList['provider'] == 'GOOGLE') {
-                        // Get place ID
-                        $googlePlaceId = $locationList['providerReference'];
+                    $logistics[$locationType][$row_key] = [
+                        'ref'         => $location_ref,
+                        'name'        => $googleLocation['result']['name'],
+                        'address'     => $googleLocation['result']['formatted_address'],
+                        'url'         => $googleLocation['result']['url'],
+                        'description' => $row['description'],
+                    ];
+                }
+            }
+        }
 
-                        // Fetch Google API data
-                        $googleLocation = self::find_google_map_location_data($googlePlaceId);
-                        $filterGoogleLocation = ($googleLocation['status'] == 'OK') ? self::filter_google_location_data($googleLocation['result']) : [];
+        // fetch pickup locations
+        if (is_array($logistics['travelerPickup']['locations'])) {
+            // define array
+            $viator_pickup_location = [];
 
-                        // Update location in logistics data
-                        $logisticsData[$rowKey]['location'] = $filterGoogleLocation;
-                        $logisticsData[$rowKey]['referenceNumber'] = $rowData['location']['ref'];
-                    } else {
-                        // Update location in logistics data
-                        $logisticsData[$rowKey]['location'] = $locationList;
-                        $logisticsData[$rowKey]['referenceNumber'] = $rowData['location']['ref'];
+            // fetch location ids
+            $location_ids = array_map(function ($location) {
+                return $location['location']['ref'];
+            }, $logistics['travelerPickup']['locations']);
+
+            // chunk array
+            $chunk_location = array_chunk($location_ids, 500);
+
+            if(count($chunk_location)) {
+                foreach ($chunk_location as $bulk_location) {
+                    // fetch viator place data
+                    $viator_place_data = ViatorHelper::find_google_place_id_from_ref_number(['locations' => $bulk_location]);
+
+                    // fetch chunk locations
+                    if(count($viator_place_data)) {
+                        foreach ($viator_place_data as $row) {
+                            if($row['reference'] != 'MEET_AT_DEPARTURE_POINT' || $row['reference'] != 'CONTACT_SUPPLIER_LATER') {
+                                $viator_pickup_location[] = [
+                                    'provider' => $row['provider'],
+                                    'ref'      => $row['reference'] ?? null,
+                                    'name'     => $row['name'] ?? null,
+                                    'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                                ];
+                            }
+                        }
                     }
                 }
             }
-            return $logisticsData;
-        };
 
-        // Process start logistics if not empty
-        if (!empty($logistics['start'])) {
-            $logistics['start'] = $processLogistics($logistics['start']);
+            // update values in array
+            $logistics['travelerPickup']['locations'] = $viator_pickup_location;
         }
 
-        // Process end logistics if not empty
-        if (!empty($logistics['end'])) {
-            $logistics['end'] = $processLogistics($logistics['end']);
-        }
-
-        // Return the processed logistics data
         return $logistics;
     }
 
