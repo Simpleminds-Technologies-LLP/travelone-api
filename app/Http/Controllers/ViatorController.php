@@ -7,9 +7,7 @@ use DB;
 
 class ViatorController extends Controller
 {
-    /**
-     * last modified since product
-     */
+    // last modified since product
     public function last_modified_since_product(Request $request)
     {
         // define array
@@ -88,9 +86,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * last modified availability schedules
-     */
+    // last modified availability schedules
     public function last_modified_availability_schedules(Request $request)
     {
         // define array
@@ -231,9 +227,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * single product availability schedules
-     */
+    // single product availability schedules
     public function single_product_availability_schedules(Request $request)
     {
         // define array
@@ -350,9 +344,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * update activity availability schedules
-     */
+    // update activity availability schedules
     public function update_activity_availability_schedules()
     {
         // define array
@@ -428,9 +420,7 @@ class ViatorController extends Controller
         return response()->json(['status' => true]);
     }
 
-    /**
-     * fetch and sync product list
-     */
+    // fetch and sync product list
     public function fetch_product_list(Request $request)
     {
         // define array
@@ -877,9 +867,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * single fetch product
-     */
+    // fetch single product
     public function single_fetch_product(Request $request)
     {
         // define array
