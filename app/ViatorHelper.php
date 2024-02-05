@@ -752,7 +752,7 @@ class ViatorHelper
         }
 
         // fetch pickup locations
-        if (is_array($logistics['travelerPickup']['locations']) && count($logistics['travelerPickup']['locations'])) {
+        if (!empty($logistics['travelerPickup']['locations']) && count($logistics['travelerPickup']['locations'])) {
             // define array
             $viator_pickup_location = [];
 
