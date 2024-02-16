@@ -794,10 +794,10 @@ class ViatorController extends Controller
                             DB::table('to_tour_viator_extra_data')->insert([
                                 'tour_id'        => $exist_tour_id,
                                 'product_code'   => $productCode,
-                                'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
-                                'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
-                                'time_duration'  => (int) $filter_duration,
-                                'reviews'        => (int) $reviews['combinedAverageRating'] ?? 0,
+                                'selling_price'  => (!empty($pricingSummary['summary']['fromPriceBeforeDiscount'])) ? $pricingSummary['summary']['fromPriceBeforeDiscount'] : 0,
+                                'discount_price' => (!empty($pricingSummary['summary']['fromPrice'])) ? $pricingSummary['summary']['fromPrice'] : 0,
+                                'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
+                                'reviews'        => (!empty($reviews['combinedAverageRating'])) ? $reviews['combinedAverageRating'] : 0,
                             ]);
 
                             // push response in array
