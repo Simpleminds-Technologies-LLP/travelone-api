@@ -919,6 +919,64 @@ class ViatorHelper
         return $filter_badge;
     }
 
+    // filter activity attraction
+    public static function filter_activity_attraction($itinerary = [])
+    {
+        // define array
+        $attraction_ids = $attraction_list = [];
+
+        // fetch loop
+        if(!empty($itinerary['itineraryItems']) && is_array($itinerary['itineraryItems']) && count($itinerary['itineraryItems'])) {
+            foreach ($itinerary['itineraryItems'] as $item) {
+                // get attraction id
+                $attraction_id = (!empty($item['pointOfInterestLocation']['attractionId'])) ? $item['pointOfInterestLocation']['attractionId'] : '';
+
+                // push data in array
+                if(!empty($attraction_id)) {
+                    $attraction_ids[] = $attraction_id;
+                }
+            }
+
+            // unique array item
+            $array_unique = array_unique($attraction_ids);
+
+            // check attraction ids
+            if(count($array_unique)) {
+                foreach ($array_unique as $att_id) {
+                    // fetch single attraction data
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                        CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/v1/attraction?seoId=' . $att_id,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_ENCODING       => '',
+                        CURLOPT_MAXREDIRS      => 10,
+                        CURLOPT_TIMEOUT        => 0,
+                        CURLOPT_FOLLOWLOCATION => true,
+                        CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST  => 'GET',
+                        CURLOPT_HTTPHEADER     => array(
+                            'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                            'Accept-Language: en',
+                            'Content-Type: application/json',
+                            'Accept: application/json;version=2.0',
+                        )
+                    ));
+                    $response = json_decode(curl_exec($curl), true);
+                    curl_close($curl);
+
+                    // check is valid
+                    if(!empty($response['data']['pageTitle'])) {
+                        // push data in array
+                        $attraction_list[] = $response['data']['pageTitle'];
+                    }
+                }
+            }
+        }
+
+        // return response
+        return $attraction_list;
+    }
+
     /**
      * mapping viator and travelone city
      */
