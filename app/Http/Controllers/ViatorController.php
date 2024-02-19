@@ -487,6 +487,9 @@ class ViatorController extends Controller
                         // filter special tags
                         $filter_speical_badge = ViatorHelper::filter_activity_special_badge($productflags);
 
+                        // filter attraction
+                        $filter_attraction = ViatorHelper::filter_activity_attraction($itinerary);
+
                         // filter time duration
                         $filter_duration = ViatorHelper::filter_activity_duration($duration);
 
@@ -654,6 +657,18 @@ class ViatorController extends Controller
                                     }
                                 }
 
+                                // count attraction data
+                                if(count($filter_attraction)) {
+                                    // fetch attractions
+                                    foreach ($filter_attraction as $attraction_name) {
+                                        // insert attraction data
+                                        DB::table('to_tour_viator_attraction')->insert([
+                                            'tour_id'         => $is_created_tour,
+                                            'attraction_name' => $attraction_name,
+                                        ]);
+                                    }
+                                }
+
                                 // insert viator extra data
                                 DB::table('to_tour_viator_extra_data')->insert([
                                     'tour_id'        => $is_created_tour,
@@ -698,6 +713,7 @@ class ViatorController extends Controller
                             DB::table('to_tour_terms')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_viator_extra_data')->where('tour_id', $exist_tour_id)->delete();
                             DB::table('to_tour_viator_special_badge')->where('tour_id', $exist_tour_id)->delete();
+                            DB::table('to_tour_viator_attraction')->where('tour_id', $exist_tour_id)->delete();
 
                             // push data in table
                             $is_updated_tour = DB::table('to_tour_product')
@@ -778,6 +794,18 @@ class ViatorController extends Controller
                                     DB::table('to_tour_viator_special_badge')->insert([
                                         'tour_id'    => $exist_tour_id,
                                         'badge_name' => $badge_name,
+                                    ]);
+                                }
+                            }
+
+                            // count attraction data
+                            if(count($filter_attraction)) {
+                                // fetch attractions
+                                foreach ($filter_attraction as $attraction_name) {
+                                    // insert attraction data
+                                    DB::table('to_tour_viator_attraction')->insert([
+                                        'tour_id'         => $exist_tour_id,
+                                        'attraction_name' => $attraction_name,
                                     ]);
                                 }
                             }
@@ -1091,6 +1119,18 @@ class ViatorController extends Controller
                             }
                         }
 
+                        // count attraction data
+                        if(count($filter_attraction)) {
+                            // fetch attractions
+                            foreach ($filter_attraction as $attraction_name) {
+                                // insert attraction data
+                                DB::table('to_tour_viator_attraction')->insert([
+                                    'tour_id'         => $is_created_tour,
+                                    'attraction_name' => $attraction_name,
+                                ]);
+                            }
+                        }
+
                         // insert viator extra data
                         DB::table('to_tour_viator_extra_data')->insert([
                             'tour_id'        => $is_created_tour,
@@ -1135,6 +1175,7 @@ class ViatorController extends Controller
                     DB::table('to_tour_terms')->where('tour_id', $exist_tour_id)->delete();
                     DB::table('to_tour_viator_extra_data')->where('tour_id', $exist_tour_id)->delete();
                     DB::table('to_tour_viator_special_badge')->where('tour_id', $exist_tour_id)->delete();
+                    DB::table('to_tour_viator_attraction')->where('tour_id', $exist_tour_id)->delete();
 
                     // push data in table
                     $is_updated_tour = DB::table('to_tour_product')
@@ -1215,6 +1256,18 @@ class ViatorController extends Controller
                             DB::table('to_tour_viator_special_badge')->insert([
                                 'tour_id'    => $exist_tour_id,
                                 'badge_name' => $badge_name,
+                            ]);
+                        }
+                    }
+
+                    // count attraction data
+                    if(count($filter_attraction)) {
+                        // fetch attractions
+                        foreach ($filter_attraction as $attraction_name) {
+                            // insert attraction data
+                            DB::table('to_tour_viator_attraction')->insert([
+                                'tour_id'         => $exist_tour_id,
+                                'attraction_name' => $attraction_name,
                             ]);
                         }
                     }
