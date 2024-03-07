@@ -8,37 +8,54 @@ use DB;
 class ViatorController extends Controller
 {
     // last modified since product
-    public function last_modified_since_product(Request $request)
+    public function last_modified_since_product()
     {
         // define array
         $return_arr = [];
 
-        // get request header
-        $headers             = $request->header();
-        $authorization_token = (count($headers['authorization'])) ? $headers['authorization'][0] : null;
+        // Get today's date
+        $today = new \DateTime();
 
-        // check authorization token is valid
-        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
-            // get requested data
-            $modified_since = $request->modified_since;
-            $count          = $request->count;
+        // Subtract 30 days from today's date
+        $thirtyDaysAgo = $today->sub(new \DateInterval('P30D'));
 
-            // fetch product list
-            $last_modified = ViatorHelper::last_modified_since_product([
-                'modified_since' => $modified_since,
-                'count'          => 10,
-            ]);
+        // get requested data
+        $modified_since = $thirtyDaysAgo->format('Y-m-d') . "T12:00:00.000000Z";
 
-            // check api response is valid
-            if(is_array($last_modified['products']) && count($last_modified['products'])) {
-                // define array
-                $modified_products = [];
+        // fetch product list
+        $last_modified = ViatorHelper::last_modified_since_product([
+            'modified_since' => $modified_since,
+            'count'          => 10,
+        ]);
 
-                // define next cursor
-                $next_cursor = (!empty($last_modified['nextCursor'])) ? $last_modified['nextCursor'] : null;
+        // check api response is valid
+        if(is_array($last_modified['products']) && count($last_modified['products'])) {
+            // define array
+            $modified_products = [];
+
+            // define next cursor
+            $next_cursor = (!empty($last_modified['nextCursor'])) ? $last_modified['nextCursor'] : null;
+
+            // fetch api data
+            foreach ($last_modified['products'] as $product) {
+                // push data in array
+                $modified_products[] = [
+                    'product_code' => $product['productCode'],
+                    'status'       => $product['status'],
+                ];
+            }
+
+            // fetch pagination callback
+            while ($next_cursor != null) {
+                // fetch product list
+                $last_modified_call = ViatorHelper::last_modified_since_product([
+                    'modified_since' => $modified_since,
+                    'cursor'         => $next_cursor,
+                    'count'          => 10,
+                ]);
 
                 // fetch api data
-                foreach ($last_modified['products'] as $product) {
+                foreach ($last_modified_call['products'] as $product) {
                     // push data in array
                     $modified_products[] = [
                         'product_code' => $product['productCode'],
@@ -46,39 +63,16 @@ class ViatorController extends Controller
                     ];
                 }
 
-                // fetch pagination callback
-                while ($next_cursor != null) {
-                    // fetch product list
-                    $last_modified_call = ViatorHelper::last_modified_since_product([
-                        'modified_since' => $modified_since,
-                        'cursor'         => $next_cursor,
-                        'count'          => 10,
-                    ]);
-
-                    // fetch api data
-                    foreach ($last_modified_call['products'] as $product) {
-                        // push data in array
-                        $modified_products[] = [
-                            'product_code' => $product['productCode'],
-                            'status'       => $product['status'],
-                        ];
-                    }
-
-                    // define next cursor
-                    $next_cursor = (!empty($last_modified_call['nextCursor'])) ? $last_modified_call['nextCursor'] : null;
-                }
-
-                // set response
-                $return_arr['status'] = 200;
-                $return_arr['data']   = $modified_products;
-            } else {
-                // set response
-                $return_arr['status']  = 404;
-                $return_arr['message'] = 'Authorization token is not valid';
+                // define next cursor
+                $next_cursor = (!empty($last_modified_call['nextCursor'])) ? $last_modified_call['nextCursor'] : null;
             }
+
+            // set response
+            $return_arr['status'] = 200;
+            $return_arr['data']   = $modified_products;
         } else {
             // set response
-            $return_arr['status']  = 500;
+            $return_arr['status']  = 404;
             $return_arr['message'] = 'Authorization token is not valid';
         }
 
