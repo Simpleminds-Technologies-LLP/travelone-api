@@ -707,7 +707,7 @@ class ViatorHelper
         $original_list = ViatorHelper::fetch_product_tags();
 
         // check array length
-        if(!count($original_list['tags'])) {
+        if(!empty($original_list['tags']) && !count($original_list['tags'])) {
             return [];
         }
 
@@ -757,30 +757,87 @@ class ViatorHelper
             // define array
             $viator_pickup_location = [];
 
-            // fetch location ids
-            $location_ids = array_map(function ($location) {
-                return $location['location']['ref'];
+            // fetch hotel location ids
+            $hotel_location_ids = array_map(function ($location) {
+                if ($location['pickupType'] === 'HOTEL') {
+                    return $location['location']['ref'];
+                }
+            }, $logistics['travelerPickup']['locations']);
+
+            // fetch airport location ids
+            $airport_location_ids = array_map(function ($location) {
+                if ($location['pickupType'] === 'AIRPORT') {
+                    return $location['location']['ref'];
+                }
+            }, $logistics['travelerPickup']['locations']);
+
+            // fetch port location ids
+            $port_location_ids = array_map(function ($location) {
+                if ($location['pickupType'] === 'PORT') {
+                    return $location['location']['ref'];
+                }
             }, $logistics['travelerPickup']['locations']);
 
             // chunk array
-            $chunk_location = array_chunk($location_ids, 500);
+            $chunk_hotel_location = array_chunk($hotel_location_ids, 500);
+            $chunk_airport_location = array_chunk($airport_location_ids, 500);
+            $chunk_port_location = array_chunk($port_location_ids, 500);
 
-            if(count($chunk_location)) {
-                foreach ($chunk_location as $bulk_location) {
+            // Fetch hotel locations
+            if(count($chunk_hotel_location)) {
+                foreach ($chunk_hotel_location as $bulk_location) {
                     // fetch viator place data
                     $viator_place_data = ViatorHelper::find_google_place_id_from_ref_number(['locations' => $bulk_location]);
 
                     // fetch chunk locations
                     if(count($viator_place_data)) {
                         foreach ($viator_place_data as $row) {
-                            if($row['reference'] != 'MEET_AT_DEPARTURE_POINT' || $row['reference'] != 'CONTACT_SUPPLIER_LATER') {
-                                $viator_pickup_location[] = [
-                                    'provider' => $row['provider'],
-                                    'ref'      => $row['reference'] ?? null,
-                                    'name'     => $row['name'] ?? null,
-                                    'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
-                                ];
-                            }
+                            $viator_pickup_location['hotel'][] = [
+                                'provider' => $row['provider'],
+                                'ref'      => $row['reference'] ?? null,
+                                'name'     => $row['name'] ?? null,
+                                'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                            ];
+                        }
+                    }
+                }
+            }
+
+            // Fetch airport locations
+            if(count($chunk_airport_location)) {
+                foreach ($chunk_airport_location as $bulk_location) {
+                    // fetch viator place data
+                    $viator_place_data = ViatorHelper::find_google_place_id_from_ref_number(['locations' => $bulk_location]);
+
+                    // fetch chunk locations
+                    if(count($viator_place_data)) {
+                        foreach ($viator_place_data as $row) {
+                            $viator_pickup_location['airport'][] = [
+                                'provider' => $row['provider'],
+                                'ref'      => $row['reference'] ?? null,
+                                'name'     => $row['name'] ?? null,
+                                'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                            ];
+                        }
+                    }
+                }
+            }
+
+            // Fetch port locations
+            if(count($chunk_port_location)) {
+                foreach ($chunk_port_location as $bulk_location) {
+                    // fetch viator place data
+                    $viator_place_data = ViatorHelper::find_google_place_id_from_ref_number(['locations' => $bulk_location]);
+
+                    // fetch chunk locations
+                    if(count($viator_place_data)) {
+                        foreach ($viator_place_data as $row) {
+                            $viator_pickup_location['port'][] = [
+                                'provider' => $row['provider'],
+                                'ref'      => $row['reference'] ?? null,
+                                'name'     => $row['name'] ?? null,
+                                'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                            ];
                         }
                     }
                 }
