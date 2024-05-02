@@ -1,0 +1,146 @@
+.tabPackageSec .tabsContainer {
+    padding: 30px 0;
+}
+
+.tabInnerSec .tabsContainer {
+    padding: 0px;
+    background: #dfffde;
+}
+
+.tabPackageSec .tabs-list li {
+    padding-right: 50px;
+}
+
+.tabPackageSec .tabInnerSec .tabs-list li {
+    padding: 10px 50px 10px 15px;
+}
+
+.tabPackageSec .tabInnerSec li:hover {
+    background: #d3f1d2;
+}
+
+.tabPackageSec .tabInnerSec .tab {
+    font-size: 15px;
+    line-height: inherit;
+    text-transform: inherit;
+    text-align: left;
+    color: #004963;
+    font-weight: 500;
+}
+
+.tabInnerSec {
+    border: 1px solid #d3f1d2;
+    border-radius: 10px;
+}
+
+.tabPackageSec .hydrated {
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+@media (max-width: 62em) {
+    .tabPackageSec .tabs-list-container {
+        width: 90%;
+    }
+}
+
+.tabPackageSec .tabs-list {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.tabPackageSec .tabs-list li {
+    width: auto;
+}
+
+@media (max-width: 48em) {
+    .tabPackageSec .tabs-list li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 62em) {
+    .tabPackageSec .tabs-list {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 48em) {
+    .tabPackageSec .tabs-list {
+        flex-direction: column;
+        height: 65px;
+        overflow: hidden;
+    }
+
+    .tabPackageSec .tabs-list li {
+        height: 65px;
+        flex: 0 0 auto;
+    }
+
+    .tabPackageSec .tabs-list li.-active {
+        -webkit-box-ordinal-group: -1;
+        order: -1;
+    }
+
+    .tabPackageSec .tabs-list li.-active>a:after {
+        position: relative;
+        right: 30px;
+        top: 0;
+        content: \f078;
+        font-size: 24px;
+        color: crimson;
+        display: inline-block;
+    }
+
+    .tabPackageSec .tabs-list.-is-open {
+        height: auto;
+    }
+
+    .tabPackageSec .tabs-list.-is-open li.-active>a:after {
+        content: \f077;
+    }
+}
+
+.tabPackageSec .tab {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+    color: #004963;
+    font-weight: 600;
+}
+
+@media (max-width: 62em) {
+    .tabPackageSec .tab {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 48em) {
+    .tabPackageSec .tab {
+        padding: 20px 0 20px 5%;
+        text-align: left;
+        font-size: 16px;
+    }
+}
+
+.tabPackageSec .tab.-active {
+    color: #ff4c46;
+}
+
+@media (max-width: 48em) {
+    .tabPackageSec .tab.-active {
+        background: transparent;
+    }
+}
+
+.tabPackageSec .panels-container {
+    padding: 0;
+}

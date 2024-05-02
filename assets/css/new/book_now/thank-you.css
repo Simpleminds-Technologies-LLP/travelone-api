@@ -1,0 +1,539 @@
+.thankyoupageSec .booking_name {
+    color: #004963;
+}
+
+.thankyoupageSec .booking_name_numner {
+    color: #ff4c46;
+    font-weight: 600;
+}
+
+.thankyoupageSec .booking_name,
+.thankyoupageSec .booking_name_numner {
+    font-weight: 600;
+    letter-spacing: 0.25px;
+}
+
+.thankyoupageSec .booking_thanku {
+    display: flex;
+}
+
+.thankyoupageSec .itenerary_img_title {
+    background: #ff4c46;
+    color: #FFF;
+    padding: 6px 15px;
+    border-radius: 10px;
+    margin-top: 0px;
+    display: block;
+    text-align: center;
+}
+
+.thankyoupageSec p,
+.thankyoupageSec .booking_name,
+.thankyoupageSec .booking_name_numner {
+    font-size: 15px;
+}
+
+.thankyoupageSec p {
+    color: #004963;
+    padding-bottom: 5px;
+}
+
+.thankyoupageSec .Cancellation_fees {
+    font-weight: 600;
+}
+
+.thankyoupageSec .light_text {
+    font-weight: normal;
+}
+
+.thankyoupageSec .cart_imges img {
+    border-radius: 15px;
+}
+
+.thankyoupageSec .img_itenerarydflex {
+    display: flex;
+    flex-direction: column;
+}
+
+.thankyoupageSec .thankyouDflex_cols {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.thankyoupageSec .thankyou_hightlight {
+    position: relative;
+}
+
+.thankyoupageSec .booking_thanku {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.thankyoupageSec .iconsTraveldate img,
+.thankyoupageSec .cart_historyimg img {
+    width: 16px;
+}
+
+.thankyoupageSec .CartTraveldate,
+.thankyoupageSec .Cartadchinfact,
+.thankyoupageSec .cart_participant a {
+    align-items: flex-start;
+}
+
+.thankyoupageSec .cart_cancelhistory {
+    margin-top: 0;
+}
+
+.thankyoupageSec .block_thanks {
+    flex: 3;
+    margin-top: 15px;
+}
+
+.thankyoupageSec .img_itenerarydflex {
+    flex: 1;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.thankyoupageSec .thankyou_hightlight {
+    border: 1px solid #004963;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.thankyoupageSec .thankyou_hightlight {
+    margin-bottom: 20px;
+}
+
+.thankyoupageSec .cart_title_bold {
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.thankyoupageSec ul.cartdaysUL {
+    padding-bottom: 5px;
+}
+
+.thankyoupageSec .button_bottom {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.thankyoupageSec .button_bottom a {
+    width: 250px;
+    border: 1px solid #004963;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+}
+
+.thankyoupageSec .button_bottom a img {
+    margin-right: 5px;
+}
+
+.thankyoupageSec .button_bottom a:hover {
+    color: #004963;
+    text-decoration: underline;
+}
+
+.thankyoupageSec .download_itenerary_block img {
+    margin-right: 5px;
+}
+
+.thankyoupageSec .thanks_bg {
+    background: #e0ffdf;
+    color: #004963;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.thankyoupageSec .thanyou_message {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.thankyoupageSec .thankyou_contnt {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+
+.thankyoupageSec .thankyou_contnt a {
+    font-weight: 600;
+    text-decoration: underline;
+    transition: 0.5s all ease-in-out;
+}
+
+.thankyoupageSec .apps_img_content {
+    font-size: 20px;
+    font-weight: 600;
+    color: #004963;
+    text-align: center;
+    padding: 30px 0;
+    line-height: 28px;
+}
+
+.thankyoupageSec .apps_img_content.apps_img_contentred {
+    color: #ff4c46;
+    padding-top: 0;
+}
+
+.thankyoupageSec .apps_android_iphone {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    width: 100%;
+}
+
+.thankyoupageSec .android_iphone {
+    width: 145px;
+}
+
+.thankyoupageSec .phone_block_thanku {
+    position: relative;
+}
+
+.thankyoupageSec .apps_content_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 100%;
+}
+
+.thankyoupageSec .apps_img {
+    padding-top: 135px;
+}
+
+.thankyoupageSec .download_apps img {
+    height: 100%;
+}
+
+.thanksblock2Sec {
+    padding-bottom: 60px;
+}
+
+
+.booking_pay_now_page .thankyoupageSec .thankyouDflex_cols {
+    display: grid;
+    grid-template-columns: 185px 1fr;
+    justify-content: flex-start;
+}
+
+.booking_pay_now_page .CartTraveldate,
+.booking_pay_now_page .Cartadchinfact,
+.booking_pay_now_page .cart_participant,
+.booking_pay_now_page .cart_cancelhistory,
+.booking_pay_now_page .cart_participant a {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    justify-content: flex-start;
+}
+
+.booking_pay_now_page .paycardsTabView ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-start;
+}
+
+.booking_pay_now_page .tab_content_bank_transfer td,
+.booking_pay_now_page .tab_content_bank_transfer th {
+    font-size: 13.5px;
+}
+
+.booking_pay_now_page .hotelsTabView .tab-active img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+@media screen and (max-width:1199px) {
+    .thankyoupageSec .download_itenerary_block img {
+        width: 12px;
+    }
+
+    .thankyoupageSec .itenerary_img_title {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    .thankyoupageSec p,
+    .thankyoupageSec .booking_name,
+    .thankyoupageSec .booking_name_numner {
+        font-size: 13px;
+    }
+
+    .thankyoupageSec .cart_title_bold {
+        font-size: 15px;
+    }
+
+    .thankyoupageSec .apps_img {
+        padding-top: 90px;
+        width: 130px;
+    }
+
+    .thankyoupageSec .apps_img_content {
+        font-size: 18px;
+        line-height: inherit;
+    }
+
+    
+    .booking_pay_now_page .para,
+    .booking_pay_now_page .card_para {
+        font-size: 12px !important;
+    }
+
+    .booking_pay_now_page .thankyoupageSec .thankyouDflex_cols {
+        grid-template-columns: 146px 1fr;
+    }
+
+    .booking_pay_now_page .tab_content_bank_transfer td,
+    .booking_pay_now_page .tab_content_bank_transfer th {
+        padding: 10px 7px;
+    }
+
+    
+}
+
+@media screen and (max-width:991px) {
+    .thankyoupageSec .thankyouDflex_cols {
+        flex-direction: column;
+    }
+
+    .thankyoupageSec .block_thanks {
+        margin-top: 0;
+    }
+
+    .thankyoupageSec .itenerary_img_title {
+        display: inline-block;
+    }
+
+    .thankyoupageSec .img_itenerarydflex {
+        margin-top: 25px;
+    }
+
+
+    .thankyoupageSec .img_itenerarydflex {
+        align-items: flex-start;
+    }
+
+    .thankyoupageSec .iconsTraveldate {
+        display: flex;
+        padding-bottom: 5px;
+        margin-top: 3px;
+    }
+
+    .thankyoupageSec .apps_img {
+        padding-top: 70px;
+        width: 95px;
+    }
+
+    .thankyoupageSec .apps_img_content {
+        font-size: 13px;
+        padding: 20px 0;
+    }
+
+    .thankyoupageSec .thnk_img {
+        flex: 1 1 0%;
+    }
+
+    .thankyoupageSec .thankyou_contnt {
+        flex: 26 1 0%;
+    }
+
+    
+    .booking_pay_now_page .para,
+    .booking_pay_now_page .card_para {
+        font-size: 10px !important;
+    }
+
+    .booking_pay_now_page .thankyoupageSec .img_itenerarydflex {
+        margin-top: 0px;
+    }
+
+    .booking_pay_now_page .cart_dflex_right {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .booking_pay_now_page .cart_dflex_right:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .booking_pay_now_page .tab_content_bank_transfer table {
+        width: 100%;
+    }
+
+    .booking_pay_now_page .paycardsTabView.hotelsTabView ul li a {
+        height: 35px;
+    }
+
+    .booking_pay_now_page .tab_content_bank_transfer td,
+    .booking_pay_now_page .tab_content_bank_transfer th {
+        font-size: 12.5px;
+    }
+
+    
+}
+
+@media screen and (max-width:767px) {
+    .thankyoupageSec .button_bottom {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .thankyoupageSec .button_bottom a {
+        width: 100%;
+    }
+
+    .thankyoupageSec .thankyou_contnt {
+        font-size: 14px;
+    }
+
+    .thankyoupageSec .thanks_bg {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .thankyoupageSec .thnk_img {
+        flex: 1;
+    }
+
+    .thankyoupageSec .thankyou_contnt {
+        flex: 26;
+    }
+
+    .thankyoupageSec .phone_block_thanku {
+        text-align: center;
+    }
+
+    .thankyoupageSec .apps_img {
+        padding-top: 130px;
+        width: 160px;
+    }
+
+    .thankyoupageSec .apps_img_content {
+        font-size: 20px;
+        padding: 45px 0;
+    }
+
+    .thankyoupageSec .apps_android_iphone {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thankyoupageSec .android_iphone {
+        width: auto;
+    }
+
+    .thankyoupageSec .thankyou_hightlight {
+        margin-top: 30px;
+    }
+
+    
+    .booking_pay_now_page .paycardsTabView .priceTitle {
+        font-size: 12px;
+    }
+
+    .booking_pay_now_page .paycardsTabView .priceBig {
+        font-size: 30px;
+    }
+
+    .booking_pay_now_page .paycardsTabView .smallTitle {
+        font-size: 11px;
+    }
+
+    .booking_pay_now_page .cart_right_border:not(:last-child) {
+        margin-top: 30px;
+    }
+
+    .booking_pay_now_page .thankyoupageSec .thankyouDflex_cols {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .booking_pay_now_page .cart_dflex_right {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .booking_pay_now_page .cart_dflex_right:not(:last-child) {
+        margin-bottom: 3px;
+    }
+
+    .booking_pay_now_page .hotelsTabView .tab_content_paypal.tab-active {
+        text-align: center;
+    }
+
+    
+
+}
+
+@media screen and (max-width:575px) {
+    .thankyoupageSec .apps_img {
+        padding-top: 100px;
+        width: 125px;
+    }
+
+    .thankyoupageSec .apps_img_content {
+        font-size: 14px;
+        padding: 25px 0;
+    }
+
+    .thankyoupageSec .download_apps {
+        height: 595px;
+    }
+
+    .thankyoupageSec .apps_android_iphone {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+
+    
+    .booking_pay_now_page .paycardsTabView ul {
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+@media screen and (max-width:300px) {
+    .thankyoupageSec .apps_img {
+        padding-top: 70px;
+        width: 95px;
+    }
+
+    .thankyoupageSec .apps_img_content {
+        font-size: 14px;
+        padding: 25px 0;
+    }
+
+    .thankyoupageSec .download_apps {
+        height: 535px;
+    }
+
+    
+    .booking_pay_now_page .paycardsTabView ul {
+        grid-template-columns: 1fr;
+    }
+}

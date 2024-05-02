@@ -1,0 +1,77 @@
+.booking_vendor_mainSec  .bg-primary1.bg-primary {
+    background-color: #007bff!important; color: #FFF;
+}
+
+.booking_vendor_mainSec .stepimgTitle_booking{
+    color: #004963;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top:20px;
+}
+
+.booking_vendor_mainSec .scrollItineryDetilsSec, .scrollPackDetilsSec {
+    overflow: hidden;
+}
+
+.booking_vendor_steps_mainSec .step6form .form-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: inherit;   
+    color: #004963;
+    letter-spacing: 0.1px;
+}
+
+.booking_vendor_steps_mainSec .stepimgUL {
+    flex-wrap: nowrap;
+}
+
+.booking_vendor_steps_mainSec .secTitle h2 {
+    font-size:18px;
+}
+
+.booking_vendor_steps_mainSec h2.create_acc_heading.margin-top {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.booking_vendor_steps_mainSec .listingTypedc, .booking_vendor_steps_mainSec .fixCheckboxsc {
+    margin-left: 0;
+}
+
+.booking_vendor_steps_mainSec .plan_trip_nationality {
+    margin-bottom: 0;
+}
+
+.booking_vendor_steps_mainSec .counterIncrementDecremnet {
+    margin-bottom: 15px;
+}
+
+.booking_vendor_steps_mainSec .Step3Form h1 {
+    margin-top: 15px;   margin-bottom: 15px;
+}
+
+.booking_vendor_steps_mainSec .scrollItineryDetilsSec, .booking_vendor_steps_mainSec .scrollPackDetilsSec {
+    overflow: hidden;
+}
+
+.booking_vendor_steps_mainSec .Step3Form  label {
+    padding-bottom: 5px;
+}
+
+.booking_vendor_steps_mainSec .ulmeals {
+    justify-content: space-around;     display: flex;
+    padding: 10px 10px 15px
+}
+
+.booking_vendor_steps_mainSec .pack3steps {
+    margin-bottom: 14px;
+}
+
+.booking_vendor_steps_mainSec .Step4From .secTitle  h2.create_acc_heading.margin-top {
+    margin-bottom: 0;
+}
+
+.booking_vendor_steps_mainSec .Step4From  form .listingTypeSec .stepTitle {
+    margin-bottom: 10px;
+    margin-top: 15px; font-size: 18px;
+}

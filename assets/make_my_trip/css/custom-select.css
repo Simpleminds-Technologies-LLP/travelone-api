@@ -1,0 +1,76 @@
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.custom-select .select-selected {
+  background-color: #fff;
+}
+
+/*style the arrow inside the select element:*/
+.custom-select .select-selected:after {
+  position: absolute;
+content: "";
+top: 29px;
+right: 20px;
+width: 0;
+height: 0;
+border: 5px solid transparent;
+border-color: #000 transparent transparent transparent;
+}
+
+
+
+/*style the items (options), including the selected item:*/
+.custom-select .select-selected {  
+  padding: 0 0 0 15px; 
+  transition: 0.5s all ease-in-out; 
+  font-size: 18px;
+  font-family: var(--opensans) !important;
+  font-weight: var(--font-regular);
+  color: var(--black);
+  letter-spacing: 0.4px;
+  background: transparent;
+  border: 1px solid #005e33;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: start;
+  vertical-align: middle;
+  height: 60px;
+  margin-bottom: 0px;
+  line-height: 57px;
+}
+
+.custom-select .select-items div, 
+.custom-select .select-selected.select-arrow-active {padding:20px 15px; position: relative; cursor: pointer;     border-radius: 4px 4px 0px 0px; }
+
+.custom-select .select-selected.select-arrow-active {
+  padding: 0 0 0 15px;
+}
+
+/*style items (options):*/
+.custom-select .select-items {
+  position: absolute;
+  background-color: #fffaf5;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border: 1px solid #005e33;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; font-weight: 500;
+  color: #243044;
+}
+
+/*hide the items when the select box is closed:*/
+.custom-select  .select-hide {
+  display: none;
+}
+
+.custom-select .select-items div:hover, .custom-select .same-as-selected {
+  background-color: rgb(36 48 68 / 5%); color: #243044;
+}

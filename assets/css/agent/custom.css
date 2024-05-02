@@ -1,0 +1,6561 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+    --shadowSupport1: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+    --shadowSupport: 0px 20px 20px 0px rgb(36 48 68 / 24%);
+    --white: #fff;
+    --black: #000000;
+    --dark-gray-color: #373737;
+    --blue: #243044;
+    --font-size-31: 31.25px;
+    --font-size-16: 16.58px;
+    --font-size-16-67: 16.67px;
+    --font-size-18-75: 18.75px;
+    --font-size-14: 14.58px;
+    --font-size-12: 12px;
+    --line-height-62: 62px;
+    --line-height-54: 62px;
+    --line-height-42: 42px;
+    --line-height-37: 37px;
+    --font-semi-bold: 600;
+    --font-regualr: 400;
+    --font-medium: 500;
+    --letter-spacing-10: 1px;
+    --nav-icons-bg: #f6f6f7;
+    --border-green: #ddd;
+    --border-green1: #20c593;
+    --font-size-13: 13px;
+    --input-border-color: #cecfcc;
+    --body-bg-color: #f6f6f7;
+    --helper: #efefef;
+    --helper1: #ddd;
+    --width300: 215px;
+    --width65: 65px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: var(--font-size-14);
+    line-height: inherit;
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.main-sidebar .sidebar-menu li a i {
+    margin-left: 0px;
+}
+
+.sidebar-mini .main-sidebar .sidebar-menu li a i {
+    margin: auto;
+}
+
+.main-sidebar .sidebar-menu li a:focus,
+.main-sidebar .sidebar-menu li a:visited {
+    font-weight: bold;
+}
+
+
+.bottom-fix-admin-details .admin-details {
+    display: block;
+}
+
+.bottom-fix-admin-details .sidebar-footer-img {
+    float: left;
+    width: 71%;
+}
+
+.bottom-fix-admin-details nav.nav-bootom {
+    float: right;
+    width: 23%;
+}
+
+.table button {
+    background: transparent;
+}
+
+.table button .hydrated {
+    font-size: 14.5px;
+}
+
+.tcontent-title {
+    font-size: var(--font-size-14);
+    letter-spacing: 0.2px;
+    font-weight: var(--font-medium);
+    line-height: inherit;
+}
+
+.para {
+    font-weight: var(--font-regualr);
+    color: var(--gray);
+    font-size: var(--font-size-13);
+    line-height: inherit;
+}
+
+.circle-gray {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    display: inline-grid;
+    vertical-align: middle;
+}
+
+.circle-gray::before {
+    content: '';
+    position: absolute;
+    background: var(--nav-icons-bg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 2rem;
+}
+
+.go-holiday-sec .logo-text::before {
+    border-radius: 10px;
+}
+
+.logo-text {
+    line-height: 35px;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.edit-icon-circle::before {
+    border-radius: 4px;
+}
+
+.edit-icon-circle {
+    width: 50px;
+    height: 20px;
+}
+
+.circle-center-block {
+    margin: auto;
+}
+
+
+.admin-name-detail {
+    font-weight: var(--font-medium);
+    font-size: var(--font-size-13);
+    line-height: inherit;
+    color: var(--black);
+    letter-spacing: var(--letter-spacing-10);
+}
+
+.admin-name-detail {
+    padding-left: 0;
+}
+
+.admin-details .admin-down-arrow {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.bottom_ad_detail {
+    padding-left: 16px;
+}
+
+nav.nav-bootom {
+    background: #20c593;
+    padding: 0px 7px;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.admin-details .admin-down-arrow {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transition: 0.5s all ease-in-out;
+}
+
+.sidebar-mini .admin-details .admin-down-arrow {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.main-sidebar {
+    width: var(--width300);
+    border-right: 1px solid #20c593;
+}
+
+.fix_btm_admin_bar {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    width: var(--width300);
+}
+
+.logo-text {
+    display: block;
+}
+
+
+
+
+aside {
+    display: block;
+}
+
+.offcanvas-slidebar-menu {
+    display: none;
+}
+
+.sidebar-mini .offcanvas-slidebar-menu {
+    display: block;
+}
+
+.sidebar-mini .bottom-top-block,
+.sidebar-mini .admin-details,
+.sidebar-mini .sidebar-footer-img {
+    display: inline-block;
+    justify-content: start;
+    align-items: start;
+    text-align: center;
+}
+
+.sidebar-mini .logo-text {
+    display: block;
+    background: var(--nav-icons-bg);
+    border-radius: 10px;
+    margin-right: 0;
+}
+
+.sidebar-mini .bottom_ad_detail {
+    padding-left: 0;
+    width: 100%;
+}
+
+.sidebar-mini .bottom-fix-admin-details,
+.sidebar-mini .bottom_ad_detail {
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-mini nav.nav-bootom {
+    padding: 0 15px;
+    margin-top: 20px;
+}
+
+.main-sidebar .sidebar-menu li a:hover,
+.main-sidebar .sidebar-menu li a:focus,
+.main-sidebar .sidebar-menu li a:visited {
+    background-color: #e0ffdf;
+    font-weight: 500;
+}
+
+
+
+.sidebar-mini .main-sidebar .sidebar-brand {
+    text-align: center;
+    padding-left: 0;
+}
+
+.sidebar-mini nav.nav-bootom {
+    text-align: center;
+    margin-right: 6px;
+    margin-left: 5px;
+    padding: 0 8px;
+}
+
+.sidebar-mini .bottom-top-block,
+.sidebar-mini .admin-details,
+.sidebar-mini .sidebar-footer-img {
+    padding-left: 0px;
+    width: 100%;
+}
+
+
+.nav-link.has-dropdown:before {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    right: 20px;
+    height: 6px;
+    width: 6px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+}
+
+.sidebar-mini .nav-link.has-dropdown:before,
+.sidebar-mini .nav-link.has-dropdown:after {
+    display: none;
+}
+
+.dropdown-menu.dropdown-menu-right.show {
+    border: 1px solid #ddd;
+}
+
+.admin-footer a {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 0.1rem solid #979797;
+}
+
+.admin-footer a,
+.admin-footer p {
+    font-weight: var(--font-medium);
+    font-size: var(--font-size-13);
+    color: var(--dark-gray-color);
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    transition: 0.2s all ease-in-out;
+}
+
+.admin-footer .f-right a {
+    border-right: 0;
+    padding-right: 0;
+}
+
+.admin-footer a:hover {
+    color: var(--black);
+}
+
+.admin-footer .a_link_copy-right {
+    padding-left: 0.5rem;
+}
+
+.admin-details .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    content: "";
+    border-top: 0.25rem solid;
+    border-right: 0.25rem solid transparent;
+    border-bottom: 0;
+    border-left: 0.25rem solid transparent;
+    vertical-align: middle;
+    transition: 0.5s all ease-in-out;
+    color: var(--black);
+    position: absolute;
+    right: 6px;
+    left: auto;
+    top: 45%;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+
+}
+
+.sidebar-mini .admin-details .dropdown-toggle::after {
+    border-top: 0.2rem solid;
+    border-right: 0.2rem solid transparent;
+    border-left: 0.2rem solid transparent;
+    right: 10px;
+    top: 50%;
+}
+
+
+.admin-details .dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.main-sidebar .sidebar-menu li a span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bottom_ad_detail {
+    margin-bottom: 5px;
+}
+
+.dropdown-menu a {
+    font-size: var(--font-size-13);
+    line-height: 17px;
+}
+
+.sidebar-mini .offcanvas-slidebar-menu,
+body.sidebar-mini .main-sidebar {
+    width: var(--width65);
+}
+
+.sidebar-mini .form-inline.mr-auto {
+    display: block;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-brand-sm {
+    line-height: 40px;
+}
+
+body.sidebar-mini .main-sidebar .sidebar-brand a {
+    padding-top: 0;
+    margin: auto;
+}
+
+.buttonsSec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.btn-custom {
+    text-decoration: none;
+    background: var(--white);
+    border: 1px solid var(--blue);
+    outline: none;
+    cursor: pointer;
+    font-size: var(--font-size-16);
+    color: var(--blue);
+    font-weight: var(--font-medium);
+    letter-spacing: var(--letter-spacing-10);
+    border-radius: 10px;
+    padding: 7px 40px;
+    transition: 0.5s all ease-in-out;
+}
+
+.btn-create {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn-back {
+    margin-right: 20px;
+}
+
+.btn-custom:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn-create:hover {
+    background: transparent;
+    color: var(--blue);
+}
+
+.section-header {
+    font-size: var(--font-size-31);
+    font-weight: var(--font-medium);
+    line-height: inherit;
+    color: var(--black);
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: inherit;
+}
+
+.form-group .control-label,
+.form-group>label {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-medium);
+    color: var(--black);
+    display: block;
+    line-height: var(--line-height-42);
+}
+
+.input-group-text,
+select.form-control:not([size]):not([multiple]),
+.form-control:not(.form-control-sm):not(.form-control-lg) {
+    font-weight: var(--font-medium);
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    transition: 0.5s all ease-in-out;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    color: var(--black);
+}
+
+.selectric .label {
+    color: var(--black);
+    font-weight: var(--font-medium);
+    font-size: 14px;
+    line-height: 37px;
+    margin: 0;
+}
+
+.selectric-items {
+    box-shadow: none;
+    border: 1px solid var(--input-border-color);
+    border-radius: 0px;
+}
+
+.input-group input.form-control.datepicker {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group>.input-group-append>.btn,
+.input-group>.input-group-append>.input-group-text,
+.input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+.input-group>.input-group-prepend:not(:first-child)>.btn,
+.input-group>.input-group-prepend:not(:first-child)>.input-group-text {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.form-control:not(.form-control-sm):not(.form-control-lg),
+.selectric .label {
+    height: 37px;
+}
+
+.sidebar-footer-img .navbar-nav .nav-link {
+    outline: none;
+}
+
+.calendar-table {
+    box-shadow: var(--shadowSupport);
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.custom-modal .modal-header {
+    padding: 20px;
+    align-items: center;
+}
+
+.modal-header .modal-title {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.modal-body {
+    color: var(--black);
+    font-size: 14px;
+}
+
+.modal-footer button.btn.btn-secondary {
+    background: white !important;
+    color: black !important;
+    border: 1px solid var(--helper) !important;
+    transition: 0.5s all ease-in-out;
+}
+
+.modal-footer button.btn-secondary:hover {
+    background: var(--blue) !important;
+    color: var(--white) !important;
+}
+
+.logo-icon-mobile,
+.mobile-nav-logoSec img.top_logo_travel {
+    display: none;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+/* system master page css start */
+.system-master-section .custom-white-block-border {
+    border-radius: 10px;
+    border: 1px solid var(--helper);
+    box-shadow: none !important;
+    border-radius: 30px 0 30px 0;
+    border-radius: 0;
+}
+
+.system-master-section .card-header:first-child {
+    border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0px 0px;
+    border-radius: inherit;
+}
+
+.system-master-section .admin-sub-page .card-header:first-child {
+    border-radius: inherit;
+    border-bottom: 1px solid var(--helper);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.system-master-section .tableTitleSec {
+    font-weight: 500;
+    color: var(--black);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-37);
+    font-size: 14px;
+    line-height: inherit;
+}
+
+.system-master-section .addnewBtn {
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.system-master-section .card-header {
+    padding: 7px 10px;
+}
+
+.system-master-section .addnewBtnanch {
+    border-radius: 4px;
+    padding: 4px 5px;
+    font-size: var(--font-size-14);
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.system-master-section div.dataTables_wrapper div.dataTables_length label,
+.system-master-section div.dataTables_wrapper div.dataTables_filter label,
+.system-master-section div.dataTables_wrapper div.dataTables_length label .custom-select,
+.system-master-section div.dataTables_wrapper div.dataTables_filter input,
+.system-master-section .dataTables_info {
+    color: var(--black);
+    font-weight: var(--font-regualr);
+    font-size: var(--font-size-13);
+}
+
+.system-master-section div.dataTables_wrapper div.dataTables_length label .custom-select:focus,
+.system-master-section div.dataTables_wrapper div.dataTables_filter input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--black);
+}
+
+.system-master-section .table .thead-light th {
+    color: var(--black);
+    background-color: transparent;
+    border-color: #efefef;
+    font-size: var(--font-size-14);
+    font-weight: var(--font-medium);
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
+.system-master-section .tabelmarginpadding {
+    padding: 1rem;
+}
+
+.system-master-section .card .table {
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.system-master-section .table td {
+    color: var(--black);
+    font-weight: 500;
+    font-size: var(--font-size-14);
+    font-size: 12.5px;
+}
+
+.system-master-section .table tr,
+.system-master-section .table td,
+.system-master-section .table th {
+    border: 1px solid #efefef;
+}
+
+.system-master-section .icons-admin {
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+}
+
+.system-master-section .table tr.text-muted td {
+    color: #969696;
+}
+
+.system-master-section th.table-thtd-border-right.sorting_asc,
+.system-master-section .table .table-thtd-border-right {
+    border-right: 1px solid #efefef;
+}
+
+.system-master-section .page-item.active .page-link {
+    color: var(--white);
+    background-color: var(--blue);
+    border-color: var(--blue);
+    font-weight: var(--font-medium);
+    margin: 0;
+    border-radius: 0;
+}
+
+.system-master-section .page-item .page-link {
+    color: var(--black);
+    font-weight: normal;
+    font-size: var(--font-size-13);
+}
+
+.system-master-section .dataTables_wrapper .table td,
+.system-master-section .dataTables_wrapper .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #e3e6f0;
+}
+
+.system-master-section .dataTables_wrapper .table-hover tbody tr:hover {
+    background-color: transparent;
+}
+
+.system-master-section div.dataTables_wrapper div.dataTables_length select {
+    width: auto;
+    display: inline-block;
+    height: auto !important;
+    padding: 5px 25px 5px 10px !important;
+}
+
+.system-master-section .dataTables_paginate .page-item.disabled .page-link {
+    color: #000;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dddfeb;
+    margin: 0;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.system-master-section .dataTables_paginate .pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.35rem;
+}
+
+.system-master-section .page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0.35rem;
+    border-bottom-left-radius: 0.35rem;
+    border-radius: 0;
+}
+
+.system-master-section .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #6777ef;
+    background-color: #fff;
+    border: 1px solid #dddfeb;
+    -webkit-box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2) !important;
+    box-shadow: 0 .125rem .25rem 0 rgba(58, 59, 69, .2) !important;
+}
+
+.system-master-section .dataTables_wrapper .dataTables_paginate .paginate_button {
+    cursor: pointer;
+}
+
+.system-master-section .dataTables_wrapper .table th:first-child,
+.dataTables_wrapper .table td:first-child {
+    text-align: center;
+}
+
+/* End system master page css */
+
+/* left arrow css */
+.sidebar-menu .md.hydrated {
+    font-size: 12.5px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    padding-right: 7px;
+    padding-top: 4px;
+}
+
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a {
+    padding-left: 43px !important;
+}
+
+.sidebar-mini .md.hydrated {
+    padding-right: 0;
+}
+
+/* left arrow css */
+
+.sidebar-mini .bottom-fix-admin-details nav.nav-bootom {
+    float: left;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: -safari-available;
+}
+
+
+/*  css */
+.mobile-nav-logoSec {
+    display: none;
+}
+
+.mobile-nav-logoSec .hydrated {
+    font-size: 40px;
+}
+
+.paginationSec .pagination {
+    justify-content: end;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+    display: none;
+}
+
+/*  css */
+/* 30-9-22 */
+.SlugSec {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 5px;
+    grid-gap: 5px;
+}
+
+.SlugSec .seoSecBox {
+    flex: 5;
+    display: inline-flex;
+}
+
+.SlugSec .SlugURL {
+    flex: 1;
+    margin-bottom: 0;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em;
+}
+
+.PrivateDropDown {
+    width: 30%;
+}
+
+.private-transpoSec .selectlableradioSec {
+    gap: 10px;
+    grid-gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.closeTermsIcon {
+    margin-bottom: 0;
+}
+
+.TermsMain_tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TermsMain_tab .termssubheading {
+    width: 100%;
+}
+
+/* 30-9-22 */
+/* 01-10-2022*/
+.DaysItenarySec .trnsporcontent1 {
+    width: 100%;
+}
+
+.itinerary_days_hotel {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    justify-content: space-between;
+}
+
+.itinerary_days_hotel .styactdetalblock {
+    flex: 1;
+}
+
+.itinerary_days_hotel li:first-child {
+    align-items: center;
+}
+
+.itinenary_dayviseSec .hotel_stay_select a,
+.itinerary_transportation a.popup_itinenaryBtnAnchor,
+.transportation_popups a.popup_itinenaryBtnAnchor {
+    font-size: 14px;
+    color: #ff4c46;
+    letter-spacing: 0.10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hotel_stay_content_inner,
+.hotel_stay_select_details {
+    display: flex;
+    align-items: center;
+}
+
+.hotel_stay_content,
+.hotel_stay_select_details {
+    justify-content: space-between;
+}
+
+.itinerary_sight_activity .hotel_stay_content,
+.itinerary_transportation .hotel_stay_content,
+.itinerary_meals .hotel_stay_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.deleteIcSec ion-icon {
+    font-size: 18px;
+    line-height: inherit;
+    color: #004963;
+}
+
+.hotel_stay_select,
+.hotel_stay_content_inner {
+    width: 100%;
+    border: 1px solid rgb(0 73 99 / 53%);
+    padding: 0 5px;
+}
+
+.transportation_popups a {
+    width: 100%;
+    border: 1px solid rgb(0 73 99 / 53%);
+    padding: 0 8.9px;
+}
+
+
+.hotel_stay_select a,
+.hotel_stay_content_inner a {
+    display: inline-flex;
+}
+
+.itinerary_Stay {
+    margin-bottom: 10px;
+}
+
+.itinerary_Stay {
+    gap: 0px;
+    grid-gap: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel_stay_select_details .deleteIcSec {
+    margin-left: 5px;
+}
+
+.stay_inner_content_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.hotel_stay_content_inner {
+    display: inline-flex;
+}
+
+.itinerary_sight_activity,
+.itinerary_transportation,
+.itinerary_meals {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+.itinerary_transportation,
+.itinerary_sight_activity,
+.itinerary_meals {
+    margin-bottom: 30px;
+}
+
+.meals_innersec {
+    flex-direction: column;
+    gap: 10px;
+    grid-gap: 10px;
+    display: inline-flex;
+}
+
+.hotel_stay_select_details .deleteIcSec {
+    display: inline-flex;
+}
+
+.itinerary_Stay .hotel_stay_content {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-gap: 10px;
+    flex: 1;
+}
+
+.hotel_stay_select_details.open {
+    display: none;
+}
+
+.itinerySpace {
+    height: 30px;
+    overflow: hidden;
+}
+
+
+/* 01-10-2022*/
+/* 03-10-2022*/
+.FormStep1Div .pack3stepsDetails .packTitle span {
+    text-transform: uppercase;
+}
+
+.termsContentSec p {
+    color: #004963;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.customize_tours_stay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customize_tours_stay a {
+    text-align: center;
+    color: #fa4c46;
+    border: 1px solid #fa4c46;
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 7px 21px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.termsRemoveblock.active {
+    display: none;
+}
+
+.transportation_popups {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    grid-gap: 0px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.itinerary_transportation .transportation_popups a {
+    text-align: center;
+}
+
+.Step5From .ulmeals {
+    justify-content: space-around;
+}
+
+.Step5From .ulmeals ul {
+    margin-right: 0;
+}
+
+.MealsFix.MealsdetailsFix .ulmeals ul li {
+    text-align: center;
+}
+
+.headerRightpopupinner .ratingPopup {
+    display: flex;
+    align-items: center;
+}
+
+.headerRightpopupinner {
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.headerRightpopupinner .searchboxDv {
+    width: 55%;
+}
+
+.modal-body.togglePopupSec {
+    padding: 30px 15px 15px 15px;
+}
+
+.headerRightpopupinner .pricecardftSelect a {
+    background: #004963;
+    color: #fff;
+    padding: 7px 40px;
+}
+
+.sortByName_video {
+    font-weight: 600;
+    color: #004963;
+}
+
+.headerRightpopupinner .ratingPopup ul {
+    padding-left: 2px;
+}
+
+.cardFooter1 {
+    margin-top: 10px;
+}
+
+.cardFooter1 .pricecardftSelect a:hover,
+.headerRightpopupinner .pricecardftSelect a:hover {
+    border-color: rgb(255, 76, 70);
+    background: rgb(255, 76, 70);
+    color: rgb(255, 255, 255);
+}
+
+.cardFooter1 .pricecardftSelect a.active {
+    background: #ff4c46;
+    border-color: #ff4c46;
+}
+
+.headLeftPop .popupHotelTitle {
+    flex: 1;
+}
+
+.transpo_select_sightseeing,
+.guide_select_sightseeing,
+.meals_select_sightseeing {
+    position: relative;
+    padding: 10px 10px 10px 0;
+}
+
+.transpo_select_sightseeing::after,
+.guide_select_sightseeing::after,
+.meals_select_sightseeing::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0 73 99 / 55%);
+    width: 100%;
+    height: 1px;
+}
+
+.meals_select_sightseeing::before {
+    position: absolute;
+    content: '';
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0 73 99 / 55%);
+    width: 100%;
+    height: 1px;
+}
+
+.transpo_select_heading {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #004963;
+    font-weight: 500;
+    letter-spacing: 0.10px;
+    margin-bottom: 10px;
+}
+
+.transpo_select_details {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    grid-gap: 0px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.transpo_select_details label.form-check-label {
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sightSeeingcardsSec .guideselectsighseeing label.form-check-label {
+    text-transform: capitalize;
+}
+
+.transpo_select_details .form-check-input {
+    cursor: pointer;
+}
+
+.sightSeeingcardsSec .card::after {
+    display: none;
+}
+
+.meals_select_sightseeing {
+    height: 72px;
+}
+
+.meals_select_sightseeing2::after {
+    display: none;
+}
+
+.Transportation_pointsPopup .titlePopups,
+.headerRightpopupinner1 {
+    flex: 1;
+}
+
+.Transportation_pointsPopup .modal-body.togglePopupSec {
+    padding: 50px;
+    padding-top: 0px;
+}
+
+.Transportation_pointsPopup .form-check-input[type=radio] {
+    appearance: none;
+    background-image: url('../../img/radio-popup.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    cursor: pointer;
+    background-size: 75%;
+}
+
+.Transportation_pointsPopup .form-check-input:checked[type=radio] {
+    background-image: url('../../img/radio-popup-checked.png');
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.Transportation_pointsPopup .form-check {
+    flex: 1;
+}
+
+.Transportation_pointsPopup .form-check:first-child {
+    padding-left: 0;
+}
+
+.Transportation_pointsPopup .transpo_select_details label.form-check-label {
+    padding-left: 30px;
+}
+
+.points_popupSec {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.pointspopupblock2 {
+    display: flex;
+    align-items: center;
+}
+
+
+.pointsFormDiv {
+    flex-direction: column;
+}
+
+.pointsFormDiv .d-flex {
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Transportation_pointsPopup .seoSecBox {
+    flex: 7;
+}
+
+.popup-form-label-title {
+    flex: 1;
+    color: #004963;
+    font-weight: 500;
+    padding-right: 15px;
+}
+
+.Transportation_pointsPopup .form-control:not(.form-control-sm):not(.form-control-lg),
+.Transportation_pointsPopup .selectric .label {
+    background: #FFF;
+    font-weight: 400;
+    border-color: rgb(0 73 99 / 53%);
+}
+
+.Transportation_pointsPopup input::placeholder {
+    color: rgb(0 73 99 / 63%);
+}
+
+.Transportation_pointsPopup .transpo_select_details {
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+.pointspopupblock2 {
+    margin: 0px 0 30px;
+    width: 100%;
+}
+
+.Transportation_pointsPopup .nextBtnPopup {
+    width: auto;
+}
+
+.myModal_meals .stepimgUL input[type="radio"]:checked+.plan-content {
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+    border: 2px solid #ff4d47;
+    border-radius: 50px 50px 0 0;
+    outline: none;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 47%);
+}
+
+.myModal_meals .stepimgUL li a {
+    transition: 0.5s all ease-in-out;
+    border: 2px solid transparent;
+    border-radius: 50px 50px 0 0;
+}
+
+.mealsSelectPopup {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+/* 24-03-23 */
+.itinerary_meal_modal .mediaSec.mealsSelectPopup ul {
+    margin-bottom: 20px;
+}
+
+/* 24-03-23 */
+
+.poup-msg-error {
+    color: #ff4c46;
+    font-size: 12px;
+    flex-basis: 100%;
+    font-weight: 500;
+}
+
+.mealsSelectPopup.mediaSec ul {
+    row-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.guide_border {
+    border: 1px solid #004963;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.guide_border .popup-form-label-title {
+    color: #004963;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.guide_borderflex {
+    margin-bottom: 30px;
+}
+
+.guiderow2 label.form-check-label {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif !important;
+    padding-left: 30px;
+    color: #004963;
+    cursor: pointer;
+}
+
+.guiderow2 .form-check:not(:last-child) {
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+.guiderow2 .form-check {
+    padding-left: 0;
+}
+
+.guide_border {
+    padding: 15px 15px 20px;
+}
+
+.guide_borderflex input::placeholder {
+    color: #004963;
+}
+
+.guide_borderflex input.form-control:not(.form-control-sm):not(.form-control-lg) {
+    color: #004963;
+    border-color: rgb(0 73 99 / 63%);
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.myModal_guide .nextBtnPopup {
+    width: auto;
+    margin-top: 20px;
+}
+
+.myModal_guide .modal-body.togglePopupSec {
+    padding: 40px;
+}
+
+.guiderow2 .form-check-input:checked[type=radio] {
+    background-image: url(../../img/radio-popup-checked.png);
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.guiderow2 .form-check-input[type=radio] {
+    appearance: none;
+    background-image: url(../../img/radio-popup.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    cursor: pointer;
+    background-size: 75%;
+}
+
+.transpo_guide_mealssec .form-check-input:checked[type=radio] {
+    background-image: url('../../img/radio-popup-checked.png');
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.transpo_guide_mealssec .form-check-input[type=radio] {
+    appearance: none;
+    background-image: url('../../img/radio-popup.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    cursor: pointer;
+    background-size: 60%;
+}
+
+.guide_select_sightseeing .form-check-input:checked[type=checkbox],
+.meals_select_sightseeing .form-check-input:checked[type=checkbox] {
+    background-image: url('../../img/popup-checkbox-checked.png');
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+.guide_select_sightseeing .form-check-input[type=checkbox],
+.meals_select_sightseeing .form-check-input[type=checkbox] {
+    appearance: none;
+    background-image: url('../../img/popup-checkbox.png');
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    cursor: pointer;
+    background-size: 100%;
+}
+
+/* 27-3-23 */
+.sightseeing_models .guide_select_sightseeing .form-check-input[type=checkbox],
+.sightseeing_models .meals_select_sightseeing .form-check-input[type=checkbox] {
+    margin-top: 2px;
+}
+
+/* 27-3-23 */
+
+.guide_select_sightseeing,
+.meals_select_sightseeing {
+    display: flex;
+    flex-direction: column;
+}
+
+.guide_select_sightseeing .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.transpo_guide_mealssec .form-check,
+.guide_select_sightseeing .form-check {
+    padding-left: 0;
+}
+
+.transpo_guide_mealssec .form-check-label,
+.guide_select_sightseeing .form-check-label {
+    padding-left: 25px;
+}
+
+.transpo_guide_mealssec .transpo_select_details,
+.guide_select_sightseeing .transpo_select_details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* 03-10-2022*/
+/* 4-10-22*/
+.sightSeeingPopupSec .checkboxSec {
+    align-items: flex-start;
+}
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+    color: #004963;
+}
+
+.packagesdetailPricinig .inputPrice .input-group {
+    flex-wrap: nowrap;
+}
+
+.packagesdetailStayActivity span {
+    display: flex;
+}
+
+.packTitle,
+.packTitleDetails p {
+    line-height: 23px;
+}
+
+.selectSightSeeingPopup .slideshow-container {
+    flex: 1;
+    position: relative;
+}
+
+.selectSightSeeingPopup .popdetailsMain {
+    flex: 2;
+}
+
+.selectSightSeeingPopup .slideshow {
+    position: relative;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+/* slideshow item */
+.selectSightSeeingPopup .slideshow--item {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.selectSightSeeingPopup .slideshow--item img {
+    width: 100%;
+    height: auto;
+
+}
+
+.selectSightSeeingPopup .slideshow--bullet:checked+.slideshow--item {
+    visibility: visible;
+}
+
+.selectSightSeeingPopup .slideshow[data-transition="fade"] .slideshow--item {
+    visibility: visible;
+    opacity: 0;
+    transition: .3s ease-out opacity;
+}
+
+.selectSightSeeingPopup .slideshow[data-transition="fade"] .slideshow--bullet:checked+.slideshow--item {
+    opacity: 1;
+}
+
+/* slideshow navigation */
+.selectSightSeeingPopup .slideshow--nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    display: none;
+    z-index: 88;
+    cursor: pointer;
+    color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0;
+}
+
+.selectSightSeeingPopup .slideshow--nav:after {
+    display: block;
+    content: '\25B6';
+    color: #fff;
+    position: absolute;
+    padding-right: 40px;
+    padding-top: 25px;
+    padding-left: 10px;
+    border-radius: 50%;
+    margin-top: -1.5em;
+    transition: all 0.5s ease;
+    top: 45%;
+    left: auto;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    background-size: 50%;
+    z-index: 9;
+    cursor: pointer;
+    background-image: url(../../img/slick-next-white.png);
+    left: auto;
+}
+
+.selectSightSeeingPopup .slideshow--nav:hover:after {
+    background-color: transparent;
+}
+
+.selectSightSeeingPopup .slideshow--nav-previous {
+    left: 0px;
+    display: block;
+}
+
+.selectSightSeeingPopup .slideshow--nav-previous:after {
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+    right: auto;
+    left: 0px;
+}
+
+.selectSightSeeingPopup .slideshow--nav-next {
+    left: 50%;
+    display: block;
+}
+
+/* Radiobuttons to control the slideshow */
+.selectSightSeeingPopup .slideshow--bullet {
+    font-size: .75em;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    position: relative;
+    margin: 8px 8px -120px;
+    z-index: 99;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #8d8d8d;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.selectSightSeeingPopup .slideshow--bullet:checked {
+    background: #333;
+    outline: none;
+}
+
+.selectSightSeeingPopup .button-container {
+    padding: 20px;
+}
+
+.selectSightSeeingPopup .folio-button {
+    margin: 0 auto;
+    padding: 5px 10px;
+    background-color: #91B0A5;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.selectSightSeeingPopup .folio-button:hover {
+    background-color: #B0D6C9;
+}
+
+.selectSightSeeingPopup .slideshow--bullet {
+    display: none;
+}
+
+@media only screen and (max-width: 980px) {
+    .selectSightSeeingPopup .slideshow {
+        width: 100%;
+        height: 200px;
+    }
+
+    .selectSightSeeingPopup .slideshow--bullet {
+        margin: 8px 8px -110px;
+    }
+
+    .selectSightSeeingPopup .button-container {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 402px) {
+    .selectSightSeeingPopup .slideshow {
+        width: 100%;
+        height: 150px;
+    }
+
+    .selectSightSeeingPopup .slideshow--bullet {
+        margin: 8px 8px -100px;
+    }
+
+    .selectSightSeeingPopup .button-container {
+        margin-top: 120px;
+    }
+}
+
+/* 4-10-22*/
+/* 8-10-22*/
+.details-copy-staybtn {
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+.details-copy-staybtn .copyStaybtn {
+    color: #004963;
+    border-color: #004963;
+    margin-left: 10px;
+}
+
+.tabs-to-dropdown .detail-packagestab-rightbtn .save-btns {
+    padding: 5px 20px;
+    background: #004963;
+    color: #FFF;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.10px;
+    text-align: center;
+}
+
+/* 8-10-22*/
+/* 11-10-22*/
+.durationSelectDropdown select#exampleFormControlSelect1 {
+    height: 37px;
+    padding: 5px;
+    color: #004963;
+}
+
+.durationSelectDropdown select#exampleFormControlSelect1 {
+    background: url('../../img/duration-arrow.png') no-repeat right transparent;
+    background-size: auto;
+    -webkit-appearance: none;
+    appearance: none;
+    background-position: right 1rem center;
+}
+
+.durationFormsTabView.tab {
+    display: none;
+}
+
+.durationFormsTabView.tab-active {
+    display: block;
+}
+
+/* profile dropdown */
+.dropdown-menu.dropdown-menu-right.show {
+    box-shadow: 0 0 5px rgb(86 96 117 / 20%);
+    border-radius: 0 0 3px 3px;
+    min-width: 202px;
+}
+
+.adminLogoSec .dropdown-menu a {
+    color: #777;
+    padding: 3px 20px;
+    border-radius: 3px;
+    line-height: 25px;
+    margin: 4px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.adminLogoSec .dropdown-menu a:hover,
+.adminLogoSec .dropdown-menu a:focus {
+    background-color: #f1f1f1;
+    color: #333;
+    width: 96%;
+}
+
+.adminLogoSec .hydrated {
+    vertical-align: middle;
+    width: 16px;
+    text-align: center;
+    margin-right: 3px;
+}
+
+.logoutBtnAdmin {
+    border-top: 1px solid #e5e5e5;
+    margin: 9px 4px 0px;
+}
+
+/* profile dropdown */
+/* 11-10-22*/
+/* 18-10-22*/
+.shopopning-pagination {
+    justify-content: end;
+}
+
+.admin-theme-style .hydrated.fileicon-shop-req {
+    color: #004963;
+    font-size: 20px;
+}
+
+.shop-opning-requestSec .li-mt {
+    display: block !important;
+}
+
+.shop-opning-requestSec span {
+    color: #004963;
+    font-weight: 500;
+}
+
+.shop-opning-requestSec strong {
+    color: #6c757d;
+    font-weight: 700;
+}
+
+.shop-opning-requestSec .table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #e0ffdf;
+}
+
+.admin-theme-style .hydrated.check-shop-opning,
+.admin-theme-style .hydrated.close-shop-opning {
+    color: #004963;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.shop-opning-requestSec .btn-list-button {
+    color: #004963;
+}
+
+.shop-opning-requestSec .options-dropdown li button:hover {
+    background-color: #d3f5d2;
+    color: #004963;
+    cursor: pointer;
+}
+
+.shop-opning-requestSec p,
+.shop-opning-requestSec td {
+    color: #6c757d;
+}
+
+.shop-opning-requestSec .bg-green,
+.shop-opning-requestSec .callout.callout-success,
+.shop-opning-requestSec .alert-success,
+.shop-opning-requestSec .label-success,
+.shop-opning-requestSec .modal-success .modal-body {
+    background-color: #00a65a !important;
+}
+
+/* listing searchbar css*/
+.listingSearchbar .bg-theme {
+    background: #d7fad6;
+    border: 1px solid #004963;
+}
+
+.listingSearchbar .hydrated {
+    font-size: 20px;
+    color: #004963;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.listingSearchbar .roundedtheme {
+    border-radius: 0.25rem;
+    margin-top: 15px;
+}
+
+.listingSearchbar .roundedtheme .btn-link:hover {
+    background-color: transparent;
+}
+
+.listingSearchbar .roundedtheme .btn-link:hover .hydrated {
+    color: #000;
+}
+
+.listingSearchbar .form-control:not(.form-control-sm):not(.form-control-lg),
+.listingSearchbar .selectric .label {
+    color: #004963;
+    border-radius: 0.25rem;
+}
+
+/* listing searchbar css*/
+/* 18-10-22*/
+/* 20-3-23 */
+.bottom_ad_detail .bottom-fix-admin-details form.form-inline.mr-auto {
+    justify-content: center;
+}
+
+/* 20-3-23 */
+
+/* 24-3-23 */
+.Transportation_pointsPopup .form-check {
+    margin-right: 15px;
+}
+
+/* 24-3-23 */
+
+/* 27-3-23 */
+.sightseeing_models .form-check {
+    margin-right: 8px;
+}
+
+.sightseeing_models .guideselectsighseeing .form-check {
+    margin-right: 0;
+}
+
+.sightseeing_models .guideselectsighseeing .form-check:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sightseeing_models .pricecardftSelect a {
+    border: 0;
+}
+
+/* 27-3-23 */
+
+/* 28-3-23 */
+.hotel_popup_model .card .time_cancel_sec1 .timecard span {
+    margin-right: 5px;
+}
+
+.hotel_popup_model .HotelPopupScreen.togglePopupSec .timecard {
+    min-height: 65px;
+    display: flow-root;
+}
+
+.hotel_popup_model .card .time_cancel_sec1 .timecard span:nth-child(3) {
+    border-left: 1px solid #b2c8d0;
+    padding-left: 5px;
+}
+
+.hotel_popup_model .card .time_cancel_sec1 .timecard span:nth-child(2) {
+    border-left: 0;
+    padding-left: 0px;
+}
+
+.hotel_popup_model .modal_select_hotel_room_btn:hover {
+    border: 1px solid #ff4c46 !important;
+}
+
+.hotel_popup_model .togglePopupSec .table:not(.table-sm) thead th {
+    border-bottom: 0px solid transparent;
+}
+
+.hotel_popup_model .ViewDealDetailsec td:last-child,
+.hotel_popup_model .ViewDealDetailsec th:last-child {
+    border-right: 0;
+}
+
+.hotel_popup_model .table>thead>tr>th,
+.hotel_popup_model .table>tbody>tr>th,
+.hotel_popup_model .table>tfoot>tr>th,
+.hotel_popup_model .table>thead>tr>td,
+.hotel_popup_model .table>tbody>tr>td,
+.hotel_popup_model .table>tfoot>tr>td {
+    border-top: 0;
+    border-bottom: 1px solid rgb(201 236 203);
+}
+
+.hotel_popup_model .table>thead>tr:last-child>th,
+.hotel_popup_model .table>tbody>tr:last-child>th,
+.hotel_popup_model .table>tfoot>tr:last-child>th,
+.hotel_popup_model .table>thead>tr:last-child>td,
+.hotel_popup_model .table>tbody>tr:last-child>td,
+.hotel_popup_model .table>tfoot>tr:last-child>td {
+    border-bottom: 0;
+}
+
+.hotel_popup_model .card .headLeftPop .ratingpopup2 {
+    margin-top: 5px;
+}
+
+.hotel_popup_model .timecard .bed_basic_studio {
+    vertical-align: text-top;
+}
+
+.hotel_popup_model.StepSModal .slick-dots li {
+    margin: 0 3px;
+    width: 8px;
+    height: 8px;
+}
+
+/* 28-3-23 */
+
+/* 04-04-23 sales page  */
+.main-sidebar .sidebar-menu li.active .nav-link.has-dropdown {
+    position: relative;
+}
+
+.main-sidebar .sidebar-menu li.active .nav-link.has-dropdown:before {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    right: 20px;
+    left: auto;
+    height: 6px;
+    width: 6px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    background-color: transparent;
+}
+
+.dash_sales_page .box-body .table-filter-container .form-control,
+.dash_sales_page .table-filter-container .btn {
+    height: 40px !important;
+}
+
+.dash_sales_page .table-filter-container .btn {
+    margin-top: 2px;
+}
+
+.dash_sales_page select.form-control.custom-select {
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #004963 50%), linear-gradient(135deg, #004963 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 15px) calc(1em + 3px), calc(100% - 10px) calc(1em + 3px), 100% 0;
+    background-size: 8px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+    padding: 8px;
+}
+
+.dash_sales_page p.text-center {
+    font-size: 14px;
+    color: #004963;
+}
+
+/* 04-04-23 sales page  */
+
+/* 06-04-2023 payout page css */
+.box .box-body .btn-success,
+.box .box-body .btn-success.disabled {
+    box-shadow: 0 2px 6px #004963;
+    background-color: #004963;
+    border-color: #004963;
+}
+
+.box .box-body .btn-success:hover,
+.box .box-body .btn-success:focus,
+.box .box-body .btn-success:active,
+.box .box-body .btn-success.disabled:hover,
+.box .box-body .btn-success.disabled:focus,
+.box .box-body .btn-success.disabled:active {
+    opacity: 0.9;
+    box-shadow: none !important;
+    background-color: #004963 !important;
+    border-color: #004963 !important;
+}
+
+.withdrawMoney_page label {
+    margin-bottom: 3px !important;
+}
+
+.withdrawMoney_page .input-group .input-group-addon {
+    padding: 9px 15px;
+}
+
+.withdrawMoney_page .form-control:not(.form-control-sm):not(.form-control-lg),
+.withdrawMoney_page .selectric .label,
+.set_payout_acc_page .form-control:not(.form-control-sm):not(.form-control-lg),
+.set_payout_acc_page .selectric .label,
+.set_payout_acc_page .btn-success,
+.set_payout_acc_page .btn-success.disabled {
+    height: 42px;
+}
+
+
+.withdrawMoney_page .minimum-payout-container .title,
+.withdrawMoney_page .minimum-payout-container p {
+    color: #004963;
+}
+
+.withdrawMoney_page .minimum-payout-container p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.withdrawMoney_page .alert.alert-danger.alert-dismissable.d-block {
+    background-color: #e0ffdf !important;
+    box-shadow: 1px 5px 25px #00000038;
+}
+
+.withdrawMoney_page .alert h4 {
+    color: #004963;
+    font-weight: 600;
+}
+
+.withdrawMoney_page .alert .close {
+    color: #004963;
+}
+
+.print_alert_msg_withdrowmoney {
+    width: 100%;
+    margin-right: 15px;
+}
+
+.withdrawMoney_page .alert h4 {
+    display: inline;
+}
+
+
+.set_payout_acc_page .nav-payout-accounts {
+    display: inline-flex !important;
+    margin: 5px 0 10px
+}
+
+.set_payout_acc_page .nav-payout-accounts a {
+    background-color: #e0ffdf !important;
+    color: #004963 !important;
+    border: 1px solid #004963 !important;
+    padding: 8px 44px !important;
+}
+
+.set_payout_acc_page .nav-payout-accounts .active a,
+.set_payout_acc_page .nav-payout-accounts a.active.show {
+    background-color: rgb(32 197 147) !important;
+    color: #fff !important;
+    border: 1px solid rgb(32 197 147) !important;
+}
+
+.set_payout_acc_page .nav-payout-accounts li {
+    display: flex;
+}
+
+.set_payout_acc_page label {
+    margin-bottom: 3px !important;
+}
+
+.set_payout_acc_page .form-control:not(.form-control-sm):not(.form-control-lg),
+.set_payout_acc_page .selectric .label {
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.set_payout_acc_page select.form-control.custom-select {
+    background-position: calc(100% - 15px) calc(1em + 5px), calc(100% - 10px) calc(1em + 5px), 100% 0;
+}
+
+.refund_request_page .ticket-container,
+.refund_request_page .ticket-content .media .media-body {
+    background: transparent !important;
+}
+
+.refund_request_page .box .box-header,
+.refund_request_page .box .box-body {
+    width: 100%;
+    float: left;
+}
+
+.refund_request_page .ticket-container .ticket-header p {
+    color: #004963;
+}
+
+.refund_request_page .row-ticket-details {
+    border-color: #d7fad6;
+}
+
+/* 06-04-2023 payout page css */
+
+/* 07-04-2023 refund request page css */
+.refund_request_page .box {
+    float: left;
+}
+
+.refund_request_page .table-responsive.row-ticket-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.refund_request_page .refund-product-details-cols {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.02);
+    min-width: fit-content;
+}
+
+.refund_request_page .table-responsive.row-ticket-details strong {
+    background: #004963;
+    padding: 15px 20px;
+    color: #FFF;
+    margin-bottom: 0;
+}
+
+.refund_request_page .refund-product-details-cols .cols_spacing {
+    margin: 10px 20px 10px;
+    display: inline-flex;
+}
+
+.refund_request_page .ticket-content .media {
+    margin-top: 0px;
+    background-color: #e0ffdf;
+    box-shadow: 1px 1px 40px rgb(201 236 203);
+    padding: 20px;
+}
+
+.refund_request_page .ticket-content .media .media-body {
+    padding: 0px;
+    border: 0;
+}
+
+.refund_request_page .ticket-content .media .title a {
+    color: #004963 !important;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.refund_request_page .ticket-content .media .right .media-body .message {
+    font-size: 13.5px !important;
+    color: #004963;
+}
+
+.refund_request_page .ticket-content .media .date {
+    top: 2px;
+    right: 0;
+    font-size: 13px;
+    color: #004963;
+    font-weight: 600;
+}
+
+.dash_shop_setting_page_rows {
+    padding: 30px 15px;
+    float: left;
+    width: 100%;
+}
+
+.dash_shop_setting_page {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+}
+
+.dash_shop_setting_page .form-control:not(.form-control-sm):not(.form-control-lg),
+.dash_shop_setting_page .selectric .label,
+.dash_shop_setting_page .text-right .btn {
+    height: 42px;
+}
+
+.dash_shop_setting_page .text-right .btn {
+    background: #004963;
+    color: #FFF;
+}
+
+.dash_shop_setting_page .text-right .btn:active,
+.dash_shop_setting_page .text-right .btn:focus,
+.dash_shop_setting_page .text-right .btn:hover {
+    opacity: 0.9;
+}
+
+.dash_shop_setting_page .form-group {
+    float: left;
+    width: 100%;
+}
+
+.dash_shop_setting_page .form-group label {
+    margin-bottom: 3px;
+}
+
+.dash_shop_setting_page .col-custom-option {
+    margin-bottom: 0px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.dash_shop_setting_page .custom-control-label::before {
+    background-color: transparent;
+}
+
+.dash_shop_setting_page .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 29px;
+    min-height: auto;
+    padding: 0;
+    color: #004963;
+}
+
+.dash_shop_setting_page .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: -4px !important;
+    margin-top: -2px !important;
+    border-color: #004963 transparent
+}
+
+.dash_shop_setting_page .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: auto;
+    top: 0;
+    right: 0px;
+    width: 42px;
+    min-height: 42px;
+    line-height: inherit;
+}
+
+.dash_shop_setting_page .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #004963 transparent;
+}
+
+.dash_shop_setting_page .select2-container.select2-container--open .select2-selection--single {
+    background-color: transparent;
+}
+
+.dash_shop_setting_page .select2-container--default .select2-selection--single,
+.dash_shop_setting_page .select2-container.select2-container--focus .select2-selection--multiple,
+.dash_shop_setting_page .select2-container.select2-container--focus .select2-selection--single {
+    border-radius: 4px !important;
+}
+
+.dash_shop_setting_page .box-body .alert.alert-info.alert-large {
+    float: left;
+    width: 100%;
+    background-color: #e0ffdf !important;
+    border: 0 !important;
+    box-shadow: 1px 1px 40px rgb(201 236 203);
+    color: #004963 !important;
+    font-weight: 500;
+}
+
+/* 07-04-2023 refund request page css */
+
+
+/* Responsive  media query start */
+@media (min-width: 1025px) and (max-width: 1462px) {
+    .social-media-section .cols_Width_none {
+        display: none !important;
+    }
+
+    .social-media-section .cols_Width {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .sidebar-mini .social-media-section .cols_Width_none {
+        display: none !important;
+    }
+
+    .sidebar-mini .social-media-section .cols_Width {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .valid-padding {
+        text-align: right;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1199px) {
+    .DaysItenarySec {
+        margin: 0 5px;
+        margin-bottom: 15px;
+    }
+
+    .nextBtnPopup {
+        width: 100%;
+    }
+
+    /* 24-3-23 */
+    .agent_terms_tab_step5 .listingTypeSec .form-check-input[type=radio],
+    .agent_terms_tab_step5 .listingTypeSec .form-check-input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec label.form-check-label {
+        padding-left: 30px;
+    }
+
+    .agent_terms_tab_step5 .RefundableTermsCondition.listingTypeSec .form-check:first-child {
+        margin-right: 10px;
+    }
+
+    .agent_terms_tab_step5 .termsAddbtn {
+        font-size: 14px;
+    }
+
+    /* 24-3-23 */
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .main-content {
+        padding-left: 250px;
+    }
+
+    .main-sidebar,
+    .fix_btm_admin_bar {
+        width: 250px;
+    }
+
+
+    .admin-name-detail,
+    .dropdown-menu a {
+        font-size: var(--font-size-13);
+    }
+
+    .section-header {
+        font-size: 28px;
+    }
+
+    .form-group .control-label,
+    .form-group>label {
+        font-size: var(--font-size-14);
+        line-height: 44px;
+    }
+
+    .valid-padding {
+        text-align: right;
+    }
+
+    /* 30-9-22*/
+    .SlugSec .seoSecBox {
+        flex: 1;
+        width: 100%;
+    }
+
+    .SlugSec {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 30-9-22*/
+
+    /* 22-3-23 */
+    /* .listingTypeSec.tourQualitySec label.form-check-label { padding-left: 37px; } */
+    .listingTypeSec.tourQualitySec {
+        margin-bottom: 22px;
+    }
+
+    /* 22-3-23 */
+    /* 24-3-23 */
+    .agent_terms_tab_step5 .paycancelpolicyUL span.input-group-text {
+        padding: 10px 15px;
+    }
+
+    /* 24-3-23 */
+
+
+}
+
+
+@media (max-width:1024px) {
+    body.sidebar-gone .main-sidebar {
+        left: -215px;
+    }
+
+    nav.mobile-navbar-icons-d-block {
+        width: 55px;
+        display: block !important;
+        margin: 0;
+        margin-bottom: 0px;
+        padding: 5px 8px 0;
+        text-align: center;
+        border-radius: 4px;
+        background: transparent;
+    }
+
+    nav.mobile-navbar-icons-d-block a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fas {
+        margin-left: 0;
+        line-height: inherit;
+        vertical-align: middle;
+        font-size: 25px;
+    }
+
+    nav.mobile-navbar-icons-d-block .navbar-nav .nav-link {
+        padding: 0;
+    }
+
+    nav.mobile-navbar-icons-d-block .navbar-nav .nav-link:hover {
+        color: var(--black);
+    }
+
+    .main-content {
+        padding-top: 5px;
+    }
+
+    .sidebar-footer-img {
+        justify-content: flex-start;
+    }
+
+    .sidebar-show .navbar-nav .nav-link {
+        display: flex;
+    }
+
+    .admin-name-detail {
+        padding-left: 5px;
+    }
+
+    .sidebar-show nav.nav-bootom {
+        padding: 0px 15px;
+        margin-left: 2px;
+    }
+
+    .bottom_ad_detail {
+        margin-bottom: 12px;
+    }
+
+    .bottom_ad_detail,
+    .main-sidebar .sidebar-menu li a,
+    .main-sidebar .sidebar-brand {
+        padding-left: 15px;
+    }
+
+    .main-sidebar .sidebar-menu li a span {
+        line-height: inherit;
+    }
+
+    .main-sidebar .sidebar-menu img {
+        max-width: 60%;
+    }
+
+
+    .admin-name-detail {
+        font-size: var(--font-size-13);
+        line-height: inherit;
+        display: block !important;
+    }
+
+    /*.fix_btm_admin_bar {   position: relative;  top: 25px;} */
+    .main-sidebar .sidebar-menu li ul.dropdown-menu li a {
+        height: auto;
+        padding-left: 38px;
+    }
+
+    .dropdown-menu a {
+        font-size: var(--font-size-13);
+        line-height: inherit;
+    }
+
+    .main-footer .footer-right {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        width: 55px;
+        display: block;
+    }
+
+    .main-sidebar .sidebar-brand a {
+        width: 50%;
+        padding-top: 5px;
+    }
+
+    .section>*:first-child {
+        margin-top: 0;
+    }
+
+    .section-header {
+        line-height: inherit;
+        text-align: center;
+    }
+
+    .form-group .control-label,
+    .form-group>label {
+        font-size: var(--font-size-14);
+        line-height: 44px;
+    }
+
+    .main-footer {
+        margin-top: 30px;
+    }
+
+    .mobile-nav-logoSec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .logo-icon-mobile {
+        display: inline-flex;
+    }
+
+    .logo-icon-mobile a {
+        width: 150px;
+    }
+
+    .mobile-nav-logoSec {
+        display: flex;
+        padding: 0 30px;
+    }
+
+    .mobile-nav-logoSec img.top_logo_travel {
+        display: block;
+    }
+
+    .paginationSec .pagination {
+        justify-content: center;
+    }
+
+    div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child,
+    div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* 30-9-22*/
+    .SlugSec .seoSecBox {
+        flex: 1;
+        width: 100%;
+    }
+
+    .SlugSec {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 30-9-22*/
+    /* 22-3-23 */
+    .listingTypeSec.tourQualitySec {
+        margin-bottom: 15px;
+    }
+
+    /* 22-3-23 */
+    /* 23-3-23 */
+    .agent_terms_tab_step5 .paycancelPolicyNew .title-pay-cancel-new h6 {
+        margin-bottom: 15px;
+    }
+
+    /* 23-3-23 */
+
+}
+
+@media (min-width: 992px) and (max-width: 1145px) {
+    .sightseeing_models .cardpara p {
+        min-height: 105px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .social-media-section .cols_Width_none {
+        display: none !important;
+    }
+
+    .social-media-section .cols_Width {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .valid-padding {
+        padding: 0 15px !important;
+        text-align: right;
+    }
+
+    .sidebar-mini .social-media-section .cols_Width_none {
+        display: none !important;
+    }
+
+    .sidebar-mini .social-media-section .cols_Width {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .sidebar-mini .valid-padding {
+        text-align: left;
+    }
+
+    .section-header {
+        font-size: 27px;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .sidebar-mini .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 914px) {
+    .system-master-section .Deleteanch {
+        margin-left: 0 !important;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .form-group>label.valid-padding {
+        padding-right: 5px !important;
+        text-align: right;
+    }
+
+    .section-header {
+        font-size: 25px;
+    }
+
+    .system-master-section .table td {
+        font-size: 13.5px;
+    }
+
+    .ViewDealDetailsec.open {
+        overflow: auto scroll;
+    }
+
+    .ViewDealDetailsec .table:not(.table-sm):not(.table-md):not(.dataTable) td,
+    .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        flex-wrap: wrap;
+    }
+
+    .ViewDealDetailsec .table:not(.table-sm) thead th,
+    .standard {
+        font-size: 17px;
+    }
+
+    .headerRightpopupinner .pricecardftSelect a {
+        padding: 7px 20px;
+    }
+
+    .Transportation_pointsPopup .modal-body.togglePopupSec {
+        padding: 30px;
+        padding-top: 30px;
+    }
+
+    .myModal_meals .nextBtnPopup {
+        margin-top: 10px;
+    }
+
+    .selectSightSeeingPopup .slideshow--nav:after {
+        top: 37%;
+    }
+
+    /* 22-3-23 */
+    .listingTypeSec.tourQualitySec label.form-check-label {
+        padding-left: 37px;
+    }
+
+    .listingTypeSec.tourQualitySec .form-check {
+        margin-right: 24px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec.tourQualitySec .form-check {
+        margin-right: 0px;
+    }
+
+    /* 22-3-23 */
+
+    /* 28-3-23 */
+    .hotel_popup_model .ViewDealDetailsec .table:not(.table-sm):not(.table-md):not(.dataTable) td,
+    .hotel_popup_model .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    /* 28-3-23 */
+
+
+}
+
+@media (max-width: 768px) {
+
+    /* 04-04-23 */
+    .dash_sales_page .table-filter-container {
+        padding: 0;
+    }
+
+    /* 04-04-23 */
+
+
+}
+
+
+
+@media (max-width:767px) {
+    .admin-footer .f-right a {
+        border-right: 0.1rem solid #979797;
+    }
+
+    .admin-footer .f-right a:last-child {
+        border-right: 0;
+    }
+
+    .btn-back {
+        margin-right: 5px;
+    }
+
+    .btn-custom {
+        padding: 5px 25px;
+    }
+
+    .form-group .control-label,
+    .form-group>label {
+        line-height: 42px;
+    }
+
+    .form-group>label.valid-padding {
+        padding: 0 15px !important;
+    }
+
+    .valid-padding {
+        text-align: left;
+    }
+
+    .section-header {
+        font-size: 23px;
+    }
+
+    .admin-footer .f-right a {
+        padding-right: 16px;
+    }
+
+    .admin-footer .f-right a:last-child {
+        padding-right: 0;
+    }
+
+    /* system master css start */
+    .system-master-section .admin-sub-page .card-header:first-child {
+        flex-direction: column !important;
+    }
+
+    .system-master-section .tableTitleSec {
+        line-height: inherit;
+        margin-bottom: 10px !important;
+    }
+
+    .system-master-section .addnewBtnanch {
+        font-size: var(--font-size-13);
+    }
+
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .system-master-section .table td {
+        font-size: 13.5px;
+    }
+
+    .system-master-section .Deleteanch {
+        margin-left: 0 !important;
+        padding-left: 7px;
+    }
+
+    /* system master css end*/
+    .ViewDealDetailsec .table:not(.table-sm):not(.table-md):not(.dataTable) td,
+    .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        flex-wrap: wrap;
+    }
+
+    .ViewDealDetailsec.open {
+        overflow: auto scroll;
+    }
+
+    .ViewDealDetailsec .table:not(.table-sm) thead th,
+    .standard {
+        font-size: 17px;
+    }
+
+    .Transportation_pointsPopup .headerRightpopupinner .pricecardftSelect a {
+        padding: 7px 20px;
+    }
+
+    .Transportation_pointsPopup .modal-body.togglePopupSec {
+        padding: 30px;
+        padding-top: 30px;
+    }
+
+    .Transportation_pointsPopup .sightSeeingHeaderPopup {
+        flex-direction: column;
+    }
+
+    .Transportation_pointsPopup .headerRightpopupinner {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .headerRightpopupinner.headerRightpopupinner1 {
+        margin: 0;
+    }
+
+    .popup-form-label-title {
+        flex: 2;
+    }
+
+    .Transportation_pointsPopup .seoSecBox {
+        flex: 6;
+    }
+
+    .Transportation_pointsPopup .nextBtnPopup {
+        width: 100%;
+    }
+
+    .myModal_meals .nextBtnPopup {
+        margin-top: 20px;
+    }
+
+    .guide_border {
+        margin-bottom: 25px;
+    }
+
+    .myModal_guide .sightSeeingHeaderPopup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .myModal_guide .headerRightpopupinner {
+        justify-content: center;
+    }
+
+    .myModal_guide .modal-body.togglePopupSec {
+        padding: 0 25px 25px;
+    }
+
+    .myModal_guide .titlePopups {
+        margin-bottom: 20px;
+    }
+
+    .myModal_guide.toggleOn .titlePopups,
+    .myModal_guide.toggleOff .titlePopups {
+        margin-bottom: 0;
+    }
+
+
+    .selectSightSeeingPopup .slideshow--nav:after {
+        top: 37%;
+    }
+
+    /*08-10-22*/
+    .detail-packagestab-rightbtn {
+        display: flex;
+        align-items: center;
+    }
+
+    .tabs-to-dropdown .nav-wrapper.d-flex.align-items-center.justify-content-between {
+        width: auto;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .tabs-to-dropdown .detail-packagestab-rightbtn .save-btns {
+        padding: 0;
+        font-size: 11px;
+        margin: 5px;
+        line-height: 25px;
+        width: 110px;
+    }
+
+    /*08-10-22*/
+    /*15-10-22*/
+    aside {
+        height: auto;
+    }
+
+    /*15-10-22*/
+    /* 23-3-23 */
+    .agent_terms_tab_step5 .termsAddbtn {
+        margin-right: 0;
+    }
+
+    /* 23-3-23 */
+
+    /* 27-3-23 */
+    .transport_point_to_points_models .pointspopupblock2 {
+        flex-wrap: wrap;
+    }
+
+    .transport_point_to_points_models .transpo_select_details .form-check {
+        margin-bottom: 15px !important;
+    }
+
+    .transport_point_to_points_models .pointspopupblock2 {
+        margin-bottom: 15px !important;
+    }
+
+    .transport_point_to_points_models .popup-form-label-title {
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+
+    .StepSModal .togglePopupSec .nextBtnPopup {
+        font-size: 14px;
+    }
+
+    .sightseeing_models .guideselectsighseeing .form-check {
+        margin-right: 10px;
+    }
+
+    /* 27-3-23 */
+
+}
+
+
+
+@media (max-width:575px) {
+    .buttonsSec {
+        justify-content: center;
+    }
+
+    /* 3-10-22*/
+    .sightSeeingHeaderPopup {
+        flex-direction: column;
+    }
+
+    .headerRightpopupinner {
+        flex-wrap: wrap;
+        gap: 12px;
+        grid-gap: 12px;
+    }
+
+    .titlePopups {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .headerRightpopupinner .searchboxDv {
+        width: 100%;
+    }
+
+    .ViewDealDetailsec .table:not(.table-sm):not(.table-md):not(.dataTable) td,
+    .table:not(.table-sm):not(.table-md):not(.dataTable) th {
+        flex-wrap: wrap;
+    }
+
+    .ViewDealDetailsec .table:not(.table-sm) thead th,
+    .standard {
+        font-size: 17px;
+    }
+
+    .free_cancel_room,
+    .non_refund_room,
+    .roomLeft {
+        font-size: 15px;
+    }
+
+    .HotelPopupScreen .card::after {
+        bottom: 135px;
+    }
+
+    .nextBtnPopup:hover {
+        width: 100%;
+    }
+
+    .modal-body.togglePopupSec {
+        padding: 15px;
+    }
+
+    .StepSModal button.close {
+        width: 30px;
+        height: 30px;
+        font-size: 23px;
+    }
+
+    .cardFooter1 {
+        flex-direction: column;
+        gap: 10px;
+        grid-gap: 10px;
+    }
+
+    .nextBtnPopup {
+        width: 100%;
+    }
+
+    /* 3-10-22*/
+    /* 4-10-22*/
+    .pack3steps {
+        width: 100px;
+    }
+
+    .scrollPackDetilsSec {
+        width: calc(100% - 100px);
+        left: 110px;
+    }
+
+    .packTitle,
+    .packTitleDetails p {
+        overflow-wrap: anywhere;
+    }
+
+    .pack3stepsDetails {
+        width: auto;
+    }
+
+    .popupSecDetails {
+        flex-direction: column-reverse;
+        gap: 20px;
+        grid-gap: 20px;
+    }
+
+    .selectSightSeeingPopup .slideshow--nav:after {
+        top: 45%;
+    }
+
+    .popupdetailsSec {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .popdetailsMain {
+        margin-left: 0;
+    }
+
+    /* 4-10-22*/
+
+    /* 22-3-23 */
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .styactdetalblock p,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .ulmeals li.counterMeal span,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .lastSecpackagesdetails .pricedetilsul .input-group-text,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .input-group-text,
+    .dash-add-product-step5 select.form-control:not([size]):not([multiple]),
+    .dash-add-product-step5 .form-control:not(.form-control-sm):not(.form-control-lg),
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .wrapper-toggle .option span {
+        font-size: 11px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .agent_terms_tab_step5 .styactdetalblock p,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .agent_terms_tab_step5 .ulmeals li.counterMeal span,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .agent_terms_tab_step5 .lastSecpackagesdetails .pricedetilsul .input-group-text,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .agent_terms_tab_step5 .input-group-text,
+    .dash-add-product-step5 .agent_terms_tab_step5 select.form-control:not([size]):not([multiple]),
+    .dash-add-product-step5 .agent_terms_tab_step5 .form-control:not(.form-control-sm):not(.form-control-lg),
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .agent_terms_tab_step5 .wrapper-toggle .option span {
+        font-size: 13px;
+    }
+
+    /* 22-3-23 */
+    /* 28-3-23 */
+    .itinerarySec.listingitinerarySec {
+        padding: 0px 22px;
+    }
+
+    /* 28-3-23 */
+    /* 04-04-23 */
+    .dash_sales_page .item-table-filter {
+        width: 100% !important;
+        min-width: 100%;
+    }
+
+    .dash_sales_page .box-body .table-filter-container .form-control,
+    .dash_sales_page .table-filter-container .btn {
+        width: 100%;
+    }
+
+    .dash_sales_page .table-filter-container .btn {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    /* 04-04-23 */
+    /* 06-04-23 */
+    .box .box-body .btn-success,
+    .box .box-body .btn-success.disabled {
+        width: 100%;
+    }
+
+    .set_payout_acc_page .nav-payout-accounts a {
+        padding: 6px 44px !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .set_payout_acc_page .nav-payout-accounts li:not(:last-child) a {
+        margin-bottom: 10px;
+    }
+
+    .set_payout_acc_page .nav-payout-accounts {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .set_payout_acc_page .nav-payout-accounts a {
+        margin-right: 0px !important;
+    }
+
+    /* 06-04-23 */
+
+}
+
+
+@media (max-width:300px) {
+    .main-sidebar {
+        width: 75%;
+    }
+
+    .fix_btm_admin_bar {
+        width: 100%;
+    }
+
+    .admin-name-detail {
+        padding-left: 1px;
+    }
+
+
+    .sidebar-show nav.nav-bootom {
+        padding: 0px 10px;
+    }
+
+    .bottom_ad_detail,
+    .main-sidebar .sidebar-menu li a,
+    .main-sidebar .sidebar-brand {
+        padding-left: 12px;
+    }
+
+    .main-sidebar .sidebar-menu li a span,
+    .admin-name-detail {
+        font-size: var(--font-size-13);
+    }
+
+    .main-sidebar .sidebar-menu img {
+        max-width: 55%;
+    }
+
+    .nav-link.has-dropdown:before {
+        height: 5.5px;
+        width: 5.5px;
+    }
+
+    .dropdown-menu a {
+        font-size: var(--font-size-12);
+        line-height: inherit;
+    }
+
+    .main-sidebar .sidebar-menu li ul.dropdown-menu li a {
+        padding-left: 40px;
+    }
+
+    .copy-right {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form-group .control-label,
+    .form-group>label {
+        font-size: var(--font-size-13);
+        line-height: inherit;
+    }
+
+    .btn-back {
+        margin-right: 5px;
+    }
+
+    .btn-custom {
+        padding: 5px 25px;
+    }
+}
+
+.custom_price_copy_button {
+    display: flex;
+    justify-content: end;
+    margin-top: 25px;
+}
+
+.custom_price_copy_button a {
+    background: #e0ffdf;
+    color: #004963;
+    border: 1px solid #004963;
+    border-radius: 4px;
+    padding: 3px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 15px;
+    width: 190px;
+}
+
+.custompricing_title {
+    color: #004963;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 600;
+    letter-spacing: 0.10px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.Price_close_button:hover {
+    opacity: 1;
+}
+
+.Price_close_button:before,
+.Price_close_button:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: #004963;
+    top: 12px;
+    left: auto;
+    right: -20px;
+}
+
+.Price_close_button:before {
+    transform: rotate(45deg);
+}
+
+.Price_close_button:after {
+    transform: rotate(-45deg);
+}
+
+.pricing_flex_custom {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.pricing_title {
+    color: #004963;
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 500;
+    letter-spacing: 0.10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.pricing_date_picker input,
+.pricing_input_boxes input {
+    background: #e0ffdf;
+    outline: none;
+    box-shadow: none;
+    padding: 5px 15px;
+    border: 1px solid #0049638f !important;
+    border-radius: 0 !important;
+    color: #004963 !important;
+    font-weight: 500;
+    height: 37px;
+}
+
+.pricing_flexbox_common .input-group-text {
+    background: #cff6cd;
+    border-radius: 0 !important;
+    border: 1px solid #0049638f !important;
+    border-left: 0 !important;
+    height: 37px;
+    color: #004963;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.mb-20cstm {
+    margin-bottom: 15px;
+}
+
+.relative_pos_pricing {
+    position: relative;
+}
+
+.duplicate_row_pricing {
+    position: relative;
+}
+
+.add_button_pricing_cus {
+    display: flex;
+    color: #004963;
+    justify-content: end;
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.add_button_pricing_cus:hover {
+    color: #004963;
+}
+
+.pricing_custom_save_btn {
+    width: 100% !important;
+    display: flex !important;
+    margin-top: 45px !important;
+    justify-content: center;
+}
+
+.payCancellationTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paycancelpolicyUL input.form-control {
+    background: transparent;
+}
+
+.paycancelpolicyUL input.form-control,
+.paycancelpolicyUL span.input-group-text {
+    border: 1px solid #004963 !important;
+}
+
+.paycancelpolicyUL span.input-group-text {
+    background: #cff6cd;
+    padding: 10px 20px;
+    z-index: 9;
+    border-radius: 8px;
+}
+
+.dflexPercentage,
+.dflexBeforeDays {
+    flex-direction: column;
+}
+
+.paycancelPolicyNew .title {
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 400;
+    color: #004963;
+    letter-spacing: 0.10px;
+    margin-bottom: 10px;
+}
+
+.paycancelPolicyNew {
+    padding: 0px 15px 0px;
+}
+
+.paycancelPolicyNew .paycPolicyFlex .d-flex {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.paycPolicyFlex,
+.paycPolicyFlex2 {
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+.agent_terms_tab_step5 .termsContentSec .dflexPercentage {
+    margin-right: 50px;
+}
+
+.paycPolicyFlex2 {
+    margin-bottom: 15px;
+}
+
+.paycPolicyFlex2 .d-flex {
+    flex: 1;
+}
+
+.paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+.paycancelPolicyNew .selectric .label {
+    text-align: center;
+}
+
+.paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+.paycancelPolicyNew .selectric .label,
+.paycancelpolicyUL span.input-group-text {
+    height: 47px;
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: normal;
+    color: #004963;
+    letter-spacing: 0.10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.paycancelPolicyNew .dflexPercentage input.form-control {
+    margin-right: -10px;
+    margin-bottom: 0;
+}
+
+
+.paycanPolicy_button {
+    margin-right: 0px;
+}
+
+.payCancellationTitle h6 {
+    margin-bottom: 0;
+}
+
+.title-pay-cancel-new h6,
+.payCancellationTitle {
+    margin-bottom: 15px;
+}
+
+.agent_terms_tab_step5 .title-pay-cancel-new h6,
+.agent_terms_tab_step5 .payCancellationTitle {
+    margin-top: 5px;
+}
+
+.myModal_pricing .pricing_flex_custom {
+    margin-bottom: 10px;
+}
+
+.myModal_pricing .custompricing_title {
+    margin-bottom: 0;
+}
+
+.custompricing_tabView ul {
+    display: flex;
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+.custompricing_tabView ul li {
+    margin-right: 30px;
+}
+
+.custompricing_tabView .tab,
+.myModal_quote .tabg2,
+.myModal_quote .tabg3 {
+    display: none;
+}
+
+.custompricing_tabView .tab-active,
+.myModal_quote .tab-activeg2,
+.myModal_quote .tab-activeg3 {
+    display: block;
+}
+
+.myModal_pricing .sightSeeingHeaderPopup {
+    margin: 0 0 23px;
+}
+
+.custompricing_tabView ul li a {
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 600;
+    color: #004963;
+}
+
+.custompricing_tabView ul li:not(:last-child) a {
+    padding-right: 30px;
+    border-right: 1px solid #004963;
+}
+
+.custompricing_tabView ul li a:hover,
+.custompricing_tabView ul li a:focus,
+.custompricing_tabView ul li a.active-a {
+    color: #ff4c46;
+}
+
+.myModal_pricing .priceUsd_addbtn {
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.myModal_pricing .title_portion {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.myModal_pricing .title_portion .custompricing_title:last-child,
+.myModal_pricing .pricing_title {
+    font-weight: 400;
+}
+
+.myModal_pricing .add_button_pricing_cus {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.myModal_pricing .tab-menu {
+    margin-bottom: 10px;
+}
+
+.myModal_pricing .sightSeeingcardsSec {
+    border: 1px solid #004963;
+    padding: 20px 40px 20px 20px;
+    border-radius: 10px;
+}
+
+.myModal_pricing .pricing-btntopborder,
+.myModal_pricing .btn_copy_american {
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 600;
+    color: #004963;
+    border: 1px solid #004963;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    margin-top: -40px;
+    background: #FFF;
+    margin-bottom: 10px;
+}
+
+.myModal_pricing .copyAmericanprice {
+    display: flex;
+    justify-content: end;
+}
+
+.myModal_pricing .btn_copy_american {
+    margin-top: 0;
+}
+
+.B2Cpricingmain {
+    margin-top: 80px;
+}
+
+.QuoteViewDeals {
+    display: flex;
+    justify-content: end;
+}
+
+.quote_button_itenary {
+    background: #004963;
+    padding: 7px 15px;
+    color: #FFF;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #004963;
+}
+
+.quote_button_itenary:hover {
+    background: transparent;
+    color: #004963 !important;
+}
+
+.QuoteViewDeals::before {
+    border-top: 1px solid #bbced5;
+    content: '';
+    position: absolute;
+    top: auto;
+    bottom: 67px;
+    left: 0;
+    right: 0;
+}
+
+.quotesButtonAfter.card-trading-deals::after {
+    opacity: 0;
+}
+
+.myModal_quote .tabPackageSec .multiple-items button.slick-prev.slick-arrow {
+    background-image: url('../img/slick-prev.png');
+}
+
+.myModal_quote .tabPackageSec .multiple-items button.slick-next.slick-arrow {
+    background-image: url('../img/slick-next.png');
+}
+
+.myModal_quote .tabPackageSec .tabPackageSecrow .slick-slide .cityBreakup img.packStyleIcons {
+    margin-top: 9px !important;
+}
+
+.myModal_quote .dflex-quotesbtn {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.myModal_quote .dflex-quotesbtn a {
+    flex: 1;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+}
+
+.myModal_quote .dflex-quotesbtn a:last-child {
+    background: #ff4c47;
+    color: #FFF;
+    border: 1px solid #ff4c47;
+}
+
+.myModal_quote .dflex-quotesbtn a:last-child:hover {
+    background: #FFF;
+    color: #ff4c47;
+}
+
+.myModal_quote .lastItemTab {
+    margin: 20px 0 10px;
+}
+
+.myModal_quote .myquoteTitle {
+    padding-left: 40px;
+}
+
+.myModal_quote .tabPackageSec .tablinks:not(:last-child) {
+    border-right: 1px solid #004963;
+}
+
+.myModal_quote .tabPackageSec .tablinks {
+    padding: 0 !important;
+    padding-right: 20px !important;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.myModal_quote .tab-nav {
+    padding: 0 40px 25px;
+}
+
+.myModal_quote .packItineryTitle ul li a {
+    font-size: inherit;
+    font-weight: 600;
+}
+
+.myModal_quote .packItineryTitle ul li a:hover {
+    color: #004963
+}
+
+.myModal_quote .ItineraytabSec .packgesSecListView img.plainIconsHeight {
+    margin-top: 5px;
+}
+
+.myModal_quote .ItineraytabSec .packgesSecListView img.packStyleIcons {
+    margin-top: 6px;
+}
+
+.myModal_quote .ItineraytabSec .packgesSecListView img.packStyleIconsdinner {
+    margin-top: 7px;
+}
+
+.myModal_quote .ItineraytabSec .packStyleIconsboat,
+.myModal_quote .ItineraytabSec .packgesSecListView img.packStyleIcons1,
+.myModal_quote .ItineraytabSec .packgesSecListView img.packStyleIconsCancel {
+    margin-top: 10px;
+}
+
+.myModal_quote .custompricing_tabView ul li .active-a,
+.myModal_quote .custompricing_tabView ul li .active-ag3 {
+    background: #004963;
+    color: #FFF;
+}
+
+.myModal_quote .custompricing_tabView ul li a {
+    background: #FFF;
+    color: #004963;
+    border: 1px solid #004963;
+    padding: 10px 15px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.myModal_quote .custompricing_tabView ul {
+    gap: 5px;
+    grid-gap: 5px;
+    justify-content: space-between;
+}
+
+.myModal_quote .custompricing_tabView ul li {
+    flex: 1;
+}
+
+.myModal_quote .custompricing_tabView .tab-active {
+    overflow: visible;
+}
+
+.myModal_quote .myModal_pricing .tab-menu {
+    margin-bottom: 50px;
+}
+
+.myModal_quote .pricing_flex_custom {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 40px;
+    grid-gap: 40px;
+}
+
+.myModal_quote .pricing_flexbox_common,
+.myModal_quote .pricing_flexbox_common2,
+.myModal_quote .pricing_date_picker input,
+.myModal_quote .pricing_input_boxes input {
+    flex: 1;
+    width: 100%;
+}
+
+.myModal_quote .btn_copy_american {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.myModal_quote .tabPackageSec .tab {
+    background-color: transparent;
+}
+
+.itinerarySec .itineraryBoxes label {
+    width: 100%;
+}
+
+.itineraryblock2 .multiselect-container>li {
+    display: block;
+}
+
+.itineraryblock2 .card-trading-deals {
+    margin-bottom: 60px;
+}
+
+.myModal_quote .tabPackageSec .tabPackageSecrow .slick-slide .stayItemTab img.packStyleIcons {
+    margin-top: 6px;
+}
+
+.myModal_quote .tabPackageSec .tabPackageSecrow img.packStyleIconsdinner {
+    margin-top: 7px;
+}
+
+.myModal_quote .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIcons1 {
+    margin-top: 9px;
+}
+
+.myModal_quote .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsCancel {
+    margin-top: 8px;
+}
+
+.myModal_quote .nextBtnPopup {
+    font-weight: 600;
+}
+
+.myModal_quote .nextBtnPopup:hover {
+    color: #004963;
+    background: #20c593;
+    border-color: #20c593;
+}
+
+@media screen and (max-width:1558px) {
+    .sightseeing_models .form-check {
+        margin-bottom: 10px;
+    }
+
+    .sightseeing_models .transpo_select_sightseeing,
+    .sightseeing_models .guide_select_sightseeing,
+    .sightseeing_models .meals_select_sightseeing {
+        padding-right: 0;
+        padding-bottom: 0px;
+    }
+}
+
+
+
+@media screen and (min-width: 1400px) and (max-width:1499px) {
+    .transport_point_to_points_models .modal-dialog {
+        max-width: 75%;
+    }
+
+    .listing-page-WhiteBoxs .dealsHeading,
+    .listing-page-WhiteBoxs .dealsHeading a {
+        min-height: 68px;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width:1490px) {
+    .sightseeing_models .cardpara p {
+        min-height: 105px;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1447px) {
+
+    .listing-page-WhiteBoxs .tour_listing_page .mobile-wd-half {
+        padding: 0 12px;
+    }
+
+    .listingitinerarySec .itineraryblock2 .listing-page-WhiteBoxs .card-trading-deals {
+        margin-bottom: 24px !important;
+    }
+
+    .listing-page-WhiteBoxs .dealsHeading,
+    .listing-page-WhiteBoxs .dealsHeading a {
+        font-size: 14.5px;
+    }
+}
+
+
+@media screen and (min-width: 1300px) and (max-width:1399px) {
+    .transport_point_to_points_models .modal-dialog {
+        max-width: 82%;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) and (max-width:1299px) {
+    .transport_point_to_points_models .modal-dialog {
+        max-width: 87%;
+    }
+
+    .hotel_popup_model .ViewDealDetailsec .table:not(.table-sm) thead th,
+    .hotel_popup_model .standard {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width:1245px) {
+    .sightseeing_models .meals_select_sightseeing {
+        height: 105px;
+    }
+}
+
+
+
+@media screen and (min-width: 1025px) and (max-width:1199px) {
+    .transport_point_to_points_models .modal-dialog {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .transport_point_to_points_models .modal-dialog {
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width:1399px) {
+
+    .paycancelPolicyNew .paycPolicyFlex,
+    .paycancelPolicyNew .paycPolicyFlex2 {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .paycancelPolicyNew .paycancelpolicyUL span.input-group-text {
+        padding: 10px 16px;
+    }
+
+    .paycancelPolicyNew .title,
+    .paycancelPolicyNew h6,
+    .paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+    .paycancelPolicyNew .selectric .label,
+    .paycancelpolicyUL span.input-group-text {
+        font-size: 14.1px;
+    }
+
+    .paycancelPolicyNew .FormStep1Div label,
+    .paycancelPolicyNew .stepimgTitle,
+    .paycancelPolicyNew .form-check-label {
+        font-size: 12px;
+    }
+
+    .terms3steps .nav-link {
+        font-size: 14px;
+    }
+
+    .myModal_quote .dflex-quotesbtn a {
+        font-size: 14px;
+    }
+
+    .agent_terms_tab_step5 .termsContentSec .dflexPercentage {
+        margin-right: 15px;
+    }
+
+    .agent_terms_tab_step5 .paycancelPolicyNew {
+        padding: 0px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec .form-check-input[type=radio],
+    .agent_terms_tab_step5 .listingTypeSec .form-check-input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec label.form-check-label {
+        padding-left: 30px;
+    }
+
+    .agent_terms_tab_step5 .RefundableTermsCondition.listingTypeSec .form-check:first-child {
+        margin-right: 10px;
+    }
+
+    .agent_terms_tab_step5 .termsAddbtn {
+        font-size: 14px;
+    }
+
+    .sightseeing_models .cardpara p {
+        min-height: 105px;
+    }
+
+    .listing-page-WhiteBoxs .dealsHeading,
+    .listing-page-WhiteBoxs .dealsHeading a {
+        font-size: 14px;
+    }
+
+    .dash_shop_setting_page_rows {
+        padding: 30px 25px;
+    }
+
+    .dash_shop_setting_page {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+
+    .paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+    .paycancelPolicyNew .selectric .label,
+    .paycancelPolicyNew .paycancelpolicyUL span.input-group-text,
+    .paycancelPolicyNew .title-pay-cancel-new h6,
+    .paycancelPolicyNew .payCancellationTitle h6,
+    .paycancelPolicyNew .title {
+        font-size: 14.5px;
+    }
+
+    .paycancelPolicyNew .FormStep1Div label,
+    .paycancelPolicyNew .stepimgTitle,
+    .paycancelPolicyNew .form-check-label {
+        font-size: 12px;
+    }
+
+    .paycancelPolicyNew .paycPolicyFlex,
+    .paycancelPolicyNew .paycPolicyFlex2 {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .paycancelPolicyNew .payCancellationTitle {
+        flex-wrap: wrap;
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .paycancelPolicyNew .payCancellationTitle {
+        margin-bottom: 0px;
+    }
+
+    .paycancelPolicyNew .title-pay-cancel-new h6 {
+        margin-bottom: 53px;
+    }
+
+    .paycancelPolicyNew .dflexPercentage input.form-control {
+        margin-right: -15px;
+    }
+
+    .terms3steps .nav-link {
+        font-size: 13px;
+    }
+
+    .myModal_pricing .pricing_title,
+    .pricing_date_picker input,
+    .pricing_input_boxes input {
+        font-size: 12px;
+    }
+
+    .myModal_pricing .pricing_title {
+        font-size: 14px;
+    }
+
+    .myModal_pricing.custom_b2c_pricing_modal .modal-dialog {
+        max-width: 95%;
+    }
+
+    .custompricing_title,
+    .myModal_pricing .pricing-btntopborder,
+    .myModal_pricing .btn_copy_american {
+        font-size: 14px;
+    }
+
+    .myModal_pricing .pricing_flex_custom {
+        flex-wrap: wrap;
+    }
+
+    .pricing_flex_custom>.pricing_flexbox_common,
+    .pricing_flex_custom>.pricing_flexbox_common2 {
+        flex: 49%;
+    }
+
+    .pricing_date_picker input,
+    .pricing_input_boxes input,
+    .pricing_input_boxes .inputPrice {
+        width: 100%;
+    }
+
+    .Price_close_button:before,
+    .Price_close_button:after {
+        top: auto;
+        bottom: 12px;
+    }
+
+    .myModal_quote .dflex-quotesbtn a {
+        font-size: 14px;
+    }
+
+    .myModal_quote .transportationTab.itemsTabContentCommon,
+    .myModal_quote .transportationTab {
+        overflow: inherit;
+    }
+
+    .myModal_quote .packButtonTripSec {
+        justify-content: flex-start !important;
+    }
+
+    .myModal_quote .pricing_flex_custom>.pricing_flexbox_common,
+    .myModal_quote .pricing_flex_custom>.pricing_flexbox_common2 {
+        flex: 45%;
+    }
+
+    .myModal_quote .pricing_flex_custom {
+        gap: 15px;
+        grid-gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .small-box-dashboard {
+        border-top: 1px solid #c9eccb;
+    }
+
+    .agent_terms_tab_step5 .termsContentSec .dflexPercentage {
+        margin-right: 15px;
+    }
+
+    .listing-page-WhiteBoxs .dealsHeading,
+    .listing-page-WhiteBoxs .dealsHeading a {
+        min-height: 63px;
+    }
+
+    .listing-page-WhiteBoxs .card-trading-deals .wishlist_commentBlock a i.fa.fa-trash {
+        margin-left: 4px !important;
+    }
+
+    .dash_shop_setting_page {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .myModal_quote .itinerary_tab_Bg2 .rightFlexProperty {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width:991px) {
+
+    .paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+    .paycancelPolicyNew .selectric .label,
+    .paycancelpolicyUL span.input-group-text,
+    .paycancelPolicyNew .title-pay-cancel-new h6,
+    .paycancelPolicyNew .payCancellationTitle h6,
+    .paycancelPolicyNew .title {
+        font-size: 14px;
+    }
+
+    .paycancelPolicyNew .FormStep1Div label,
+    .paycancelPolicyNew .stepimgTitle,
+    .paycancelPolicyNew .form-check-label {
+        font-size: 11.5px;
+    }
+
+    .paycancelPolicyNew .terms3steps .nav-link {
+        font-size: 12.5px;
+        padding: 9px 10px;
+    }
+
+    .paycancelPolicyNew .listingTypeSec .form-check-input[type=radio] {
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        margin-top: 0px;
+    }
+
+    .paycancelPolicyNew .listingTypeSec label.form-check-label {
+        padding-left: 25px;
+    }
+
+    .paycancelPolicyNew .RefundableTermsCondition.listingTypeSec .form-check:first-child {
+        margin-right: 10px;
+    }
+
+    .paycancelPolicyNew .payCancellationTitle {
+        gap: 0px;
+        grid-gap: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .paycancelPolicyNew .payCancellationTitle {
+        margin-bottom: 0px;
+    }
+
+    .paycancelPolicyNew .title-pay-cancel-new h6 {
+        margin-bottom: 45px;
+    }
+
+    .paycancelPolicyNew .paycancelpolicyUL span.input-group-text {
+        padding: 10px 16px;
+    }
+
+    .pricing_flex_custom {
+        flex-direction: column;
+    }
+
+    .pricing_flexbox_common,
+    .pricing_flexbox_common2,
+    .pricing_flexbox_common input,
+    .pricing_flexbox_common2 input {
+        width: 100%;
+    }
+
+    .custompricing_tabView ul li {
+        width: 100%;
+    }
+
+    .custompricing_tabView .tab-menu ul {
+        width: max-content;
+    }
+
+    .custompricing_tabView ul li:not(:last-child) a {
+        padding-right: 40px;
+    }
+
+    .Price_close_button:before,
+    .Price_close_button:after {
+        top: auto;
+        bottom: 26px;
+    }
+
+    .add_button_pricing_cus {
+        margin-top: 0px;
+    }
+
+    .myModal_pricing .pricing-btntopborder,
+    .myModal_pricing .btn_copy_american {
+        width: max-content;
+        padding: 7px 15px;
+    }
+
+    .myModal_quote .dflex-quotesbtn a {
+        font-size: 12.5px;
+    }
+
+    .myModal_quote .pricing_flex_custom {
+        flex-direction: row;
+    }
+
+    .myModal_quote .Price_close_button:before,
+    .myModal_quote .Price_close_button:after {
+        bottom: 10px;
+    }
+
+    .myModal_quote .custompricing_tabView .tab-menu ul {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .myModal_quote .tab-nav {
+        padding: 0px 15px 15px;
+    }
+
+    .myModal_quote .myquoteTitle {
+        padding-left: 15px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .paycancelPolicyNew .title-pay-cancel-new h6 {
+        margin-bottom: 5px;
+    }
+
+    .paycancelPolicyNew {
+        padding: 0;
+    }
+
+    .paycancelPolicyNew .paycPolicyFlex,
+    .paycancelPolicyNew .paycPolicyFlex2 {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .paycanPolicy_button {
+        margin-bottom: 25px;
+    }
+
+    .paycancelPolicyNew .paycPolicyFlex .d-flex,
+    .paycancelPolicyNew .paycPolicyFlex2 {
+        margin-bottom: 5px;
+    }
+
+    .terms-paymentStep5 .terms3steps .nav-link {
+        font-size: 12px;
+        padding: 9px 5px;
+    }
+
+    .custompricing_tabView .tab-menu ul {
+        margin: auto;
+    }
+
+    .custompricing_tabView ul li:not(:last-child) a {
+        padding-right: 10px;
+    }
+
+    .Price_close_button:before,
+    .Price_close_button:after {
+        right: -12px;
+    }
+
+    .myModal_pricing .copyAmericanprice {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    .custompricing_title {
+        font-size: 13px;
+    }
+
+    .myModal_pricing .sightSeeingHeaderPopup {
+        margin: 0;
+    }
+
+    .myModal_pricing .tab-menu {
+        margin-bottom: 30px;
+    }
+
+    .myModal_pricing .priceUsd_addbtn {
+        flex-direction: row;
+    }
+
+    .Price_close_button:before,
+    .Price_close_button:after {
+        bottom: 11px;
+    }
+
+
+    .myModal_pricing .title_portion {
+        flex-direction: column;
+    }
+
+
+
+
+    .myModal_quote .dflex-quotesbtn a {
+        font-size: 9.5px;
+    }
+
+    .myModal_quote .dflex-quotesbtn {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+
+    .tabPackageSec .packgesSecListView ul li,
+    .tabPackageSec .packgesSecListView ul li a {
+        align-items: flex-start;
+    }
+
+    .tabPackageSec .select:after {
+        background-image: none;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 7px solid #555;
+    }
+
+    .myModal_quote .ItineraytabSec .taBItinerayCols.ItineraytabSecWidth {
+        margin: 0 5px 20px;
+    }
+
+    .myModal_quote .itinerary_tab_Bg2 .tabs-container nav ul li {
+        padding: 4px 10px;
+    }
+
+    .myModal_quote .itinerary_tab_Bg2 .tabs-container nav ul li.active:after {
+        border: 6px solid transparent;
+        border-top: 6px solid #555;
+        top: 17.5px;
+        right: 10px;
+    }
+
+    .myModal_quote .packItineryTitle ul li {
+        font-size: 13.5px;
+    }
+
+    .myModal_quote .itemsTabContentCommon {
+        font-size: 9.5px;
+    }
+
+    .myModal_quote .taBItinerayrows .taBItinerayCols {
+        width: 200px;
+        min-width: 200px;
+    }
+
+    .myModal_quote .pricing_flex_custom {
+        flex-direction: column;
+    }
+
+    .myModal_quote .pricing_flex_custom>.pricing_flexbox_common,
+    .myModal_quote .pricing_flex_custom>.pricing_flexbox_common2 {
+        flex: auto;
+    }
+
+    .myModal_quote .myModal_pricing .priceUsd_addbtn {
+        flex-direction: row;
+    }
+
+    .myModal_quote .add_button_pricing_cus {
+        font-size: 10px;
+    }
+
+    .myModal_quote .custompricing_title {
+        font-size: 12px;
+    }
+
+    .myModal_quote .myModal_pricing .pricing_title,
+    .myModal_quote .pricing_date_picker input,
+    .myModal_quote .pricing_input_boxes input {
+        font-size: 11px;
+    }
+
+    .myModal_quote .custompricing_title,
+    .myModal_quote .myModal_pricing .pricing-btntopborder,
+    .myModal_quote .myModal_pricing .btn_copy_american {
+        font-size: 13px;
+    }
+
+
+    .set_payout_acc_page .lable_margin {
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+
+    .paycancelPolicyNew .paycPolicyFlex,
+    .paycancelPolicyNew .paycPolicyFlex2 {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .paycancelPolicyNew .paycPolicyFlex .d-flex,
+    .paycancelPolicyNew .paycPolicyFlex2 {
+        margin-bottom: 0px;
+    }
+
+    .paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+    .paycancelPolicyNew .selectric .label,
+    .paycancelpolicyUL span.input-group-text {
+        height: 35px;
+    }
+
+    .paycancelPolicyNew .termsAddbtn {
+        font-size: 8px;
+        padding: 0px 20px;
+    }
+
+    .paycancelPolicyNew .FormStep1Div label,
+    .paycancelPolicyNew .stepimgTitle,
+    .paycancelPolicyNew .form-check-label {
+        font-size: 7.5px;
+    }
+
+    .paycancelPolicyNew .listingTypeSec .form-check-input[type=radio] {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    .terms-paymentStep5 .terms3steps .nav-link {
+        font-size: 10px;
+    }
+
+    .paycancelPolicyNew .tourQualitySec .listingTypedc {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+
+
+    .myModal_quote .titlePopups {
+        margin-bottom: 0;
+    }
+
+    .myModal_quote .taBItinerayrows .taBItinerayCols {
+        width: 135px;
+        min-width: 135px;
+    }
+
+    .myModal_quote .custompricing_title {
+        font-size: 11px;
+    }
+
+    .myModal_quote .myModal_pricing .pricing_title,
+    .myModal_quote .pricing_date_picker input,
+    .myModal_quote .pricing_input_boxes input {
+        font-size: 10px;
+    }
+
+    .agent_terms_tab_step5 .termsContentSec .dflexPercentage {
+        margin-right: 10px;
+    }
+
+    .agent_package_tab_content .termsContentSec h6 {
+        font-size: 13px;
+    }
+
+    .paycancelPolicyNew .termsAddbtn {
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec.tourQualitySec .listingTypedc .form-check {
+        margin-bottom: 0px;
+    }
+
+    .paycancelPolicyNew .listingTypeSec .form-check-input[type=radio] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec.tourQualitySec {
+        margin-bottom: 15px !important;
+    }
+
+    .dash_shop_setting_page_rows {
+        padding: 30px 0px;
+    }
+}
+
+@media screen and (max-width:380px) {
+
+    .paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+    .paycancelPolicyNew .selectric .label,
+    .paycancelPolicyNew .paycancelpolicyUL span.input-group-text,
+    .paycancelPolicyNew .title-pay-cancel-new h6,
+    .paycancelPolicyNew .payCancellationTitle h6,
+    .paycancelPolicyNew .title {
+        font-size: 13px;
+    }
+
+    .paycancelPolicyNew .paycancelpolicyUL span.input-group-text {
+        padding: 8px;
+        margin-bottom: 5px;
+    }
+
+    .paycancelPolicyNew .form-control:not(.form-control-sm):not(.form-control-lg),
+    .paycancelPolicyNew .selectric .label,
+    .paycancelpolicyUL span.input-group-text {
+        height: 27px;
+        margin-bottom: 5px;
+    }
+
+    .paycancelPolicyNew .title {
+        margin-bottom: 0px;
+    }
+
+    .paycanPolicy_button {
+        margin-bottom: 5px;
+    }
+
+    .paycancelPolicyNew .FormStep1Div label,
+    .paycancelPolicyNew .stepimgTitle,
+    .paycancelPolicyNew .form-check-label {
+        font-size: 5.5px;
+    }
+
+    .paycancelPolicyNew .listingTypeSec label.form-check-label {
+        padding-left: 25px;
+    }
+
+    .terms-paymentStep5 .terms3steps .nav-link {
+        font-size: 8.5px;
+    }
+
+    .agent_terms_tab_step5 .termsContentSec .dflexPercentage {
+        margin-right: 5px;
+    }
+
+    .agent_package_tab_content .termsContentSec h6 {
+        font-size: 13px;
+    }
+
+    .paycancelPolicyNew .termsAddbtn {
+        font-size: 12px;
+        padding: 0px 10px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec.tourQualitySec .listingTypedc .form-check {
+        margin-bottom: 0px;
+    }
+
+    .paycancelPolicyNew .listingTypeSec .form-check-input[type=radio] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .agent_terms_tab_step5 .listingTypeSec.tourQualitySec {
+        margin-bottom: 15px !important;
+    }
+
+    .agent_terms_tab_step5 .paycancelPolicyNew .dflexPercentage input.form-control {
+        margin-right: -13px;
+    }
+}
+
+.myModal_pricing .extra_block_margin_top {
+    margin-top: 25px;
+}
+
+.myModal_pricing .extra_block_margin_top .pricing_flex_custom {
+    display: block;
+}
+
+.myModal_pricing .extra_block_margin_top .priceUsd_addbtn {
+    justify-content: end;
+}
+
+.myModal_pricing .extra_block_margin_top .custompricing_title:first-child {
+    font-weight: 600;
+}
+
+.myModal_pricing .extra_block_margin_top input::placeholder {
+    color: #004963;
+}
+
+.MultiStepSec .StepsFormSecMain .stepimgUL {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.MultiStepSec .StepsFormSecMain .stepimgUL li a img {
+    max-width: 108px;
+}
+
+.MultiStepSec .StepsFormSecMain .imgHeadingstep {
+    line-height: 20px;
+}
+
+.MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check {
+    max-width: 100%;
+}
+
+.MultiStepSec .StepsFormSecMain .lableCityNightSelect1 .closeIconStep {
+    line-height: 0;
+    margin-top: 0;
+}
+
+.MultiStepSec .StepsFormSecMain .inputyoutubeSecFirstChild {
+    margin-top: 0;
+}
+
+.MultiStepSec .StepsFormSecMain .lableCityNightSelect1 {
+    margin-bottom: 10px;
+}
+
+.MultiStepSec .StepsFormSecMain .addButtonVideoSec .addSectionSec {
+    margin-right: 0;
+}
+
+.MultiStepSec .StepsFormSecMain .addButtonVideoSec {
+    width: 740px !important;
+    margin-right: 0;
+}
+
+.MultiStepSec .StepsFormSecMain .video_link_fix {
+    margin-bottom: 0;
+}
+
+.MultiStepSec .StepsFormSecMain .example.example_markup .tag {
+    background-color: #cff6cd !important;
+    color: #000 !important;
+}
+
+.MultiStepSec .StepsFormSecMain .tagsBlock1 .addInputSec .input-group .form-control {
+    border-color: #004963 !important;
+}
+
+.listingitinerarySec .itineraryblock2 .listing-page-WhiteBoxs .card-trading-deals {
+    margin-bottom: 30px;
+}
+
+.listingitinerarySec .itineraryblock2 .listing-page-WhiteBoxs .imgSliderSec .card-img-top {
+    width: auto;
+    margin: 0 auto;
+}
+
+.transport_point_to_points_models .pointspopupblock2 {
+    margin: 0px 0 0px;
+}
+
+.transport_point_to_points_models .transpo_select_details .form-check {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    .stepTitle {
+        margin-top: 25px;
+    }
+
+    .listing-page-WhiteBoxs .badge {
+        padding: 6px 7px;
+    }
+
+    .listing-page-WhiteBoxs span.boldTextPrice {
+        font-size: 12.5px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .MultiStepSec .StepsFormSecMain .stepimgUL {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .MultiStepSec .StepsFormSecMain .stepimgUL li {
+        width: auto;
+    }
+
+    .MultiStepSec .StepsFormSecMain .addButtonVideoSec {
+        width: 100% !important;
+        padding-right: 25px;
+    }
+
+    .MultiStepSec .Step4From .mediaSec {
+        width: 100% !important;
+    }
+
+    .MultiStepSec .Step4From .stepTitle {
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and (max-width:991px) {
+
+    .StepsFormSecMain .dragDropSec .item.row .country,
+    .StepsFormSecMain .dragDropSec .item.row .city,
+    .StepsFormSecMain .dragDropSec .item.row .night {
+        max-width: 33.33%;
+    }
+
+    .agent_terms_tab_step5 .paycancelPolicyNew .title-pay-cancel-new h6 {
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (min-width:773px) and (max-width:991px) {
+
+
+    .listing-page-WhiteBoxs .tour_listing_page .mobile-wd-half {
+        padding: 0 10px;
+    }
+
+    .listingitinerarySec .itineraryblock2 .listing-page-WhiteBoxs .card-trading-deals {
+        margin-bottom: 20px !important;
+    }
+
+
+}
+
+@media screen and (max-width:767px) {
+
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec label,
+    .MultiStepSec .StepsFormSecMain .FormStep1Div label,
+    .MultiStepSec .StepsFormSecMain .stepimgTitle,
+    .MultiStepSec .StepsFormSecMain .form-check-label {
+        font-size: 12px;
+    }
+
+    .MultiStepSec .StepstagsSec .para br {
+        display: none;
+    }
+
+    .MultiStepSec .StepstagsSec .tagsBlock1 .thumbnailRight .para,
+    .MultiStepSec .StepstagsSec .thumbnailRight h5,
+    .MultiStepSec .StepstagsSec .thumbnailRight {
+        width: 100%;
+    }
+
+    .MultiStepSec .StepstagsSec .addInputSec p {
+        font-size: 12px;
+        text-align: right;
+        width: 100%;
+    }
+
+    .MultiStepSec .listingTypeSec .mediaSec ul li {
+        flex: 47%;
+    }
+
+    .MultiStepSec .mediaSec ul li a .lableinputsc {
+        text-align: center;
+    }
+
+
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check {
+        margin-right: 10px;
+    }
+
+    .guestnationalitySec .form-check {
+        width: 120px;
+    }
+
+    .guestnationalitySec .form-check-input[type=checkbox] {
+        left: 45px;
+    }
+
+
+
+
+    .agent_terms_tab_step5 .paycancelPolicyNew .title-pay-cancel-new h6 {
+        margin-bottom: 10px;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width:575px) {
+
+
+    .StepsFormSecMain .dragDropSec .item.row .country,
+    .StepsFormSecMain .dragDropSec .item.row .city,
+    .StepsFormSecMain .dragDropSec .item.row .night {
+        max-width: 33.33%;
+    }
+
+
+
+    .guestnationalitySec .form-check {
+        width: 90px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check {
+        margin-right: 6px;
+    }
+
+    .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding-top: 12px !important;
+        padding: 7px 15px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 544px) {
+    .listingitinerarySec .itineraryblock2 .listing-page-WhiteBoxs .card-trading-deals {
+        margin-bottom: 15px;
+    }
+
+
+    .listing-page-WhiteBoxs .dealsHeading,
+    .listing-page-WhiteBoxs .dealsHeading a {
+        min-height: auto;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:409px) {
+
+
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check:nth-child(1),
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check:nth-child(3) {
+        margin-right: 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check:nth-child(3),
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check:nth-child(4) {
+        margin-top: 25px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .guestnationalitySec .form-check {
+        margin-right: 0px;
+    }
+
+    .guestnationalitySec .form-check {
+        width: 120px;
+    }
+
+    .guestnationalitySec .form-check-input[type=checkbox] {
+        left: 46px !important;
+    }
+
+    .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding-top: 12px !important;
+    }
+
+    .listingTypeSec .form-check {
+        margin-right: 8px;
+    }
+
+
+}
+
+
+
+
+.listingitinerarySec .StepimgSec .form-control {
+    border-color: rgb(0 73 99 / 50%);
+    color: #004963;
+}
+
+.listingitinerarySec .itineraryblock2 .totalCols {
+    flex: auto !important;
+    max-width: calc(100% - 16.666667%) !important;
+}
+
+.MultiStepSec .StepsFormSecMain .tagsBlock1 .addInputSec .input-group-append .input-group-text {
+    border-color: #004963 !important;
+    color: #004963 !important;
+}
+
+.MultiStepSec .StepsFormSecMain .hotel_stay_content_inner {
+    align-items: flex-start;
+}
+
+.MultiStepSec .StepsFormSecMain .hotel_stay_content_inner img.img-fluid {
+    margin-top: 6px;
+    max-width: 16px;
+}
+
+.MultiStepSec .StepsFormSecMain .Step5From .scrollItineryDetilsSec .DaysItenarySec.itinenary_dayviseSec {
+    flex: 0 0 31%;
+}
+
+.HotelPopupScreen .ratingPopup ul li a img {
+    border-radius: 20px;
+}
+
+.togglePopupSec .searchboxDv button[type="button"] {
+    width: 25px;
+    top: 6px;
+    background-size: 100%;
+}
+
+.StepSModal .modal-header button.close {
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+.StepSModal .modal-header {
+    padding: 30px;
+}
+
+.HotelPopupScreen.togglePopupSec .locCard a {
+    min-height: 35px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.HotelPopupScreen .cardTitle {
+    min-height: 48px;
+}
+
+.HotelPopupScreen.togglePopupSec .locCard a .locatille,
+.HotelPopupScreen .timecard .bed_basic_studio {
+    margin-top: 3px;
+}
+
+.HotelPopupScreen.togglePopupSec .timecard {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 42px;
+}
+
+.StepSModal .slick-dots li {
+    margin: 0 5px;
+}
+
+.StepSModal .itinerary_hotel_city_list,
+.StepSModal .itinerary_sightseeing_city_list {
+    border-right: 1px solid rgb(0 73 99 / 52%);
+    outline: none;
+    border-radius: 10px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.StepSModal .headerRightpopupinner .searchboxDv {
+    padding: 0 !important;
+}
+
+.togglePopupSec .timecard {
+    align-items: center;
+}
+
+.togglePopupSec .timecard .bed_basic_studio {
+    margin-top: 3px;
+}
+
+.togglePopupSec .table:not(.table-sm) thead th {
+    border-bottom: 1px solid transparent;
+}
+
+.sightseeing_detail_modal .popupSecDetails .slideshow--item img {
+    height: auto !important;
+    max-width: 300px;
+}
+
+
+
+
+@media screen and (max-width: 1199px) {
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 8px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .listingitinerarySec .itineraryblock2 .totalCols {
+        max-width: calc(100% - 25%) !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .Step5From .scrollItineryDetilsSec .DaysItenarySec.itinenary_dayviseSec {
+        flex: 0 0 48%;
+    }
+
+    /* 28-3-23 */
+    .hotel_popup_model .ViewDealDetailsec .table:not(.table-sm) thead th,
+    .hotel_popup_model .standard {
+        font-size: 16px;
+    }
+
+
+
+}
+
+
+@media (max-width: 1024px) {
+    .mobile-nav-logoSec nav.mobile-navbar-icons-d-block {
+        padding-right: 0;
+        margin-right: -12px;
+    }
+
+}
+
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+
+
+    .listingitinerarySec .itineraryblock2 .totalCols {
+        max-width: calc(100% - 34%) !important;
+    }
+
+
+
+    .MultiStepSec .StepsFormSecMain .Step5From .scrollItineryDetilsSec .DaysItenarySec.itinenary_dayviseSec {
+        flex: 0 0 47%;
+    }
+
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 7px;
+    }
+
+    .HotelPopupScreen .itinerary_hotel_city_list,
+    .HotelPopupScreen .itinerary_sightseeing_city_list {
+        width: 100px;
+    }
+
+    .StepSModal .headerRightpopupinner .ratingPopup ul {
+        padding-right: 0;
+    }
+
+    .StepSModal .modal-header button.close {
+        margin-right: 5px;
+    }
+
+    .StepSModal .cancelpolicyHeading {
+        margin-left: 0;
+    }
+
+    .StepSModal .sightSeeingPopupSec .titlePopups {
+        text-align: left;
+        flex: 1;
+    }
+
+    .StepSModal .sightSeeingPopupSec .headerRightpopupinner .searchboxDv {
+        flex: 1;
+    }
+
+    .StepSModal .sightSeeingPopupSec .headerRightpopupinner {
+        flex: 1;
+    }
+
+
+    .hotel_popup_model .ViewDealDetailsec.open {
+        overflow: hidden;
+    }
+
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:772px) {}
+
+
+@media screen and (max-width: 835px) {
+
+
+    .custompricing_tabView ul li:not(:last-child) a {
+        padding-right: 25px;
+    }
+
+    .custompricing_tabView ul li {
+        margin-right: 25px;
+    }
+
+    .myModal_pricing .custompricing_title {
+        font-size: 14px;
+    }
+
+    .myModal_guide.myModal_pricing.custom_b2c_pricing_modal .modal-body.togglePopupSec {
+        padding: 20px;
+    }
+
+    .myModal_pricing .pricing_title {
+        font-size: 12.9px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-wrapper.d-flex.align-items-center.justify-content-between {
+        justify-content: end !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills .nav-item::after {
+        top: 15px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills .nav-item .nav-link {
+        font-size: 10px;
+        padding: 5px !important;
+    }
+
+
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .tabs-to-dropdown .nav-pills .nav-item .nav-link {
+        font-size: 13px;
+    }
+
+
+
+    .MultiStepSec .StepsFormSecMain .agent_package_tab {
+        display: inline-flex !important;
+    }
+
+    .sidebar-show .main-sidebar.sidebar-style-2 {
+        transform: none;
+    }
+
+    .MultiStepSec .StepsFormSecMain .Step5From .scrollItineryDetilsSec .DaysItenarySec.itinenary_dayviseSec {
+        flex: 0 0 97%;
+    }
+
+    .StepSModal .titlePopups {
+        font-size: 18px;
+    }
+
+    .StepSModal .slick-dots li {
+        margin: 0 4px;
+    }
+
+    .StepSModal .headerRightpopupinner .ratingPopup ul {
+        padding-right: 0;
+    }
+
+    .StepSModal .modal-header button.close {
+        margin-right: 5px;
+    }
+
+    .StepSModal .cancelpolicyHeading {
+        margin-left: 0;
+    }
+
+    .StepSModal .sightSeeingPopupSec .titlePopups {
+        text-align: left;
+        flex: 1;
+    }
+
+    .StepSModal .sightSeeingPopupSec .headerRightpopupinner .searchboxDv {
+        flex: 1;
+    }
+
+    .StepSModal .sightSeeingPopupSec .headerRightpopupinner {
+        flex: 1;
+    }
+
+    .sightseeing_detail_modal .popupSecDetails .slideshow--item img {
+        height: auto;
+        max-width: 125px;
+    }
+
+    .sightseeing_detail_modal {
+        padding: 10px;
+    }
+
+
+    .myModal_pricing.custom_b2c_pricing_modal .table tbody {
+        display: flex;
+    }
+
+    .myModal_pricing.custom_b2c_pricing_modal .table tbody tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .myModal_pricing.custom_b2c_pricing_modal .modal-dialog {
+        max-width: 70%;
+        margin: 1.75rem auto;
+    }
+
+    .modal-open .myModal_pricing.custom_b2c_pricing_modal.modal {
+        padding-right: 0 !important;
+    }
+
+    .myModal_pricing .custompricing_title,
+    .myModal_pricing .add_button_pricing_cus {
+        font-size: 13px;
+    }
+
+
+
+}
+
+@media screen and (min-width:576px) and (max-width: 767px) {
+    .listingitinerarySec .itineraryblock2 .totalCols {
+        max-width: 100% !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .pack3stepsDetails {
+        width: 100%;
+    }
+
+    .MultiStepSec .StepsFormSecMain .wrapper-toggle .option span {
+        font-size: 12px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .styactdetalblock li {
+        padding: 0px 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .ulmeals li.counterMeal {
+        width: 80px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .Step5From .ulmeals,
+    .MultiStepSec .StepsFormSecMain .pricedetilsul {
+        justify-content: space-between;
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails .pricedetilsul .form-control:not(.form-control-sm):not(.form-control-lg) {
+        width: inherit;
+    }
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails span {
+        padding: 0 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .custom_price_copy_button a {
+        padding: 3px 15px;
+        font-size: 14px;
+    }
+
+    .HotelPopupScreen .itinerary_hotel_city_list,
+    .HotelPopupScreen .itinerary_sightseeing_city_list {
+        width: 100px;
+    }
+
+    .StepSModal select.itinerary_sightseeing_city_list {
+        width: 95px;
+    }
+
+
+    .dash-add-product-step5 .ulmeals li,
+    .dash-add-product-step5 .pricedetilsul ul li {
+        font-size: 13px;
+    }
+
+
+
+    .paycancelPolicyNew .payCancellationTitle {
+        flex-direction: row;
+    }
+
+
+
+}
+
+@media screen and (max-width:575px) {
+    .listingitinerarySec .itineraryblock2 .totalCols {
+        max-width: 100% !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .pack3stepsDetails {
+        width: 100%;
+    }
+
+    .MultiStepSec .StepsFormSecMain .packFix .packTitle,
+    .MultiStepSec .StepsFormSecMain .ItinaeryTitle {
+        font-size: 12px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .styactdetalblock li {
+        padding: 0px 10px;
+        font-size: 11px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .ulmeals li.counterMeal {
+        width: 72px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .Step5From .ulmeals,
+    .MultiStepSec .StepsFormSecMain .pricedetilsul {
+        justify-content: space-between;
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails .pricedetilsul .form-control:not(.form-control-sm):not(.form-control-lg) {
+        width: inherit;
+    }
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails span {
+        padding: 0 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .custom_price_copy_button a {
+        padding: 3px 20px;
+        font-size: 11px;
+        width: auto;
+    }
+
+    .MultiStepSec .StepsFormSecMain .styactdetalblock p,
+    .MultiStepSec .StepsFormSecMain .ulmeals li.counterMeal span,
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails .pricedetilsul .input-group-text,
+    .MultiStepSec .StepsFormSecMain .input-group-text,
+    select.form-control:not([size]):not([multiple]),
+    .form-control:not(.form-control-sm):not(.form-control-lg),
+    .MultiStepSec .StepsFormSecMain .wrapper-toggle .option span {
+        font-size: 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .customize_tours_stay a,
+    .MultiStepSec .StepsFormSecMain .ulmeals li,
+    .MultiStepSec .StepsFormSecMain .pricedetilsul ul li,
+    .MultiStepSec .StepsFormSecMain .packTitle,
+    .packTitleDetails p,
+    .MultiStepSec .StepsFormSecMain .Itinerydetails_Title,
+    .MultiStepSec .StepsFormSecMain .ItinaeryTitle {
+        font-size: 11px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .pack3steps {
+        width: 85px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .scrollPackDetilsSec {
+        width: calc(100% - 85px);
+        left: 85px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .itinenary_dayviseSec .hotel_stay_select a,
+    .itinerary_transportation a.popup_itinenaryBtnAnchor,
+    .transportation_popups a.popup_itinenaryBtnAnchor {
+        font-size: 11px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .trnsporcontent .daysDetailTitle,
+    .daysDetailTitle {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .hotel_stay_content_inner img.img-fluid {
+        margin-top: 4px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .hotel_stay_content_inner img.img-fluid {
+        max-width: 9px;
+    }
+
+    .StepSModal .slick-dots li {
+        margin: 0 3px;
+    }
+
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 5px;
+        width: 20px;
+    }
+
+    .StepSModal .searchboxDv input[type="search"] {
+        font-size: 10px;
+    }
+
+    .StepSModal .headerRightpopupinner {
+        justify-content: center;
+    }
+
+    .StepSModal select.itinerary_sightseeing_city_list {
+        width: 95px;
+    }
+
+
+    .MultiStepSec .wizard>.content>.body {
+        padding: 0 0px;
+    }
+
+    .MultiStepSec .wizard>.actions {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+
+    .myModal_pricing.custom_b2c_pricing_modal .modal-dialog {
+        max-width: 95%;
+    }
+
+
+
+}
+
+
+@media screen and (max-width:480px) {
+
+    .MultiStepSec .StepsFormSecMain .packFix,
+    .MultiStepSec .StepsFormSecMain .lastSecpackages,
+    .MultiStepSec .StepsFormSecMain .middlepackSec,
+    .MultiStepSec .StepsFormSecMain .StayActivityFix,
+    .MultiStepSec .StepsFormSecMain .packagesdetailTranspo,
+    .MultiStepSec .StepsFormSecMain .packagesdetailMeals,
+    .MultiStepSec .StepsFormSecMain .cityBreakupFix {
+        padding: 5px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .packFix .packTitle,
+    .MultiStepSec .StepsFormSecMain .ItinaeryTitle {
+        font-size: 11px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .customize_tours_stay a,
+    .MultiStepSec .StepsFormSecMain .ulmeals li,
+    .MultiStepSec .StepsFormSecMain .pricedetilsul ul li,
+    .MultiStepSec .StepsFormSecMain .packTitle,
+    .packTitleDetails p,
+    .MultiStepSec .StepsFormSecMain .Itinerydetails_Title,
+    .MultiStepSec .StepsFormSecMain .ItinaeryTitle {
+        font-size: 9.1px;
+        line-height: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .styactdetalblock p,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .ulmeals li.counterMeal span,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .lastSecpackagesdetails .pricedetilsul .input-group-text,
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .input-group-text,
+    .dash-add-product-step5 select.form-control:not([size]):not([multiple]),
+    .dash-add-product-step5 .form-control:not(.form-control-sm):not(.form-control-lg),
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .wrapper-toggle .option span {
+        font-size: 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackages span {
+        font-size: 9px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .MultiStepSec .StepsFormSecMain .details-OnoffButton,
+    .MultiStepSec .StepsFormSecMain .pack3steps .packFix.packagesdetailTitle {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .wrapper-toggle {
+        right: 0;
+        top: 1.5px;
+        position: relative;
+    }
+
+    .MultiStepSec .StepsFormSecMain .wrapper-toggle .option span {
+        padding: 2px 7px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .wrapper-toggle .option {
+        line-height: 13px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .packagesSecDetails .packTitle {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .packagesSecDetails .StayActivityFix .packTitle {
+        text-align: center;
+    }
+
+    .MultiStepSec .StepsFormSecMain .ulmeals li.counterMeal {
+        width: auto;
+    }
+
+    .MultiStepSec .StepsFormSecMain .ulmeals li.counterMeal span {
+        padding: 2px 5px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails .pricedetilsul .form-control:not(.form-control-sm):not(.form-control-lg),
+    .MultiStepSec .StepsFormSecMain .lastSecpackages span {
+        height: 23px;
+    }
+
+
+    .MultiStepSec .content .dash-add-product-step5 .input-group-text,
+    .MultiStepSec .content .dash-add-product-step5 select.form-control:not([size]):not([multiple]),
+    .MultiStepSec .content .dash-add-product-step5 .form-control:not(.form-control-sm):not(.form-control-lg) {
+        height: 30px !important;
+    }
+
+
+
+    .MultiStepSec .StepsFormSecMain .lastSecpackages .pricedetilsul ul,
+    .MultiStepSec .StepsFormSecMain .Step5From .ulmeals ul {
+        flex: 100%;
+        margin-bottom: 5px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .details-copy-staybtn {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+
+    .MultiStepSec .StepsFormSecMain .pack3stepsDetails {
+        width: 535px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .customize_tours_stay a {
+        margin-top: 5px
+    }
+
+    .MultiStepSec .StepsFormSecMain .custom_price_copy_button a {
+        padding: 3px 7px;
+        font-size: 9px;
+        line-height: 17px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .styactdetalblock li {
+        padding: 3px 5px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .detail-packagestab-rightbtn .save-btns {
+        width: 85px;
+        font-size: 10px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills li:not(:last-child) {
+        padding: 0 0px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills .nav-item .nav-link {
+        font-size: 7px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .styactdetalblock p,
+    .MultiStepSec .StepsFormSecMain .ulmeals li.counterMeal span,
+    .MultiStepSec .StepsFormSecMain .lastSecpackagesdetails .pricedetilsul .input-group-text,
+    .MultiStepSec .StepsFormSecMain .input-group-text,
+    select.form-control:not([size]):not([multiple]),
+    .form-control:not(.form-control-sm):not(.form-control-lg),
+    .MultiStepSec .StepsFormSecMain .wrapper-toggle .option span {
+        font-size: 8px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .optionsSec.mediaSec ul li a {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .optionsSec.mediaSec ul li {
+        margin-right: 0;
+    }
+
+    .MultiStepSec .StepsFormSecMain .mediaSec.optionsSec ul {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .optionsSec .stepTitle {
+        font-size: 12px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .stepTitle {
+        font-size: 14px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .itinenary_dayviseSec .hotel_stay_select a,
+    .itinerary_transportation a.popup_itinenaryBtnAnchor,
+    .transportation_popups a.popup_itinenaryBtnAnchor {
+        font-size: 9px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .trnsporcontent .daysDetailTitle,
+    .daysDetailTitle {
+        font-size: 8px;
+        line-height: 13px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .hotel_stay_content_inner {
+        padding: 3px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .hotel_stay_content_inner img.img-fluid {
+        margin-top: 3px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .middleItinerySec,
+    .MultiStepSec .StepsFormSecMain .ItineryFix,
+    .MultiStepSec .StepsFormSecMain .middleItineryDetailsSec {
+        padding: 5px;
+    }
+
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 6px;
+    }
+
+    .StepSModal .meals_select_sightseeing {
+        height: 103px;
+    }
+
+    .StepSModal .transpo_guide_mealssec .transpo_select_details,
+    .StepSModal .guide_select_sightseeing .transpo_select_details {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .StepSModal select.itinerary_sightseeing_city_list {
+        width: 95px;
+    }
+
+
+    .myModal_pricing .sightSeeingcardsSec {
+        padding: 10px;
+    }
+
+    .custompricing_tabView ul li:not(:last-child) a {
+        padding-right: 10px;
+    }
+
+    .custompricing_tabView ul li {
+        margin-right: 10px;
+    }
+
+    .custompricing_tabView ul li a {
+        font-size: 13.5px;
+    }
+
+    .myModal_pricing .sightSeeingcardsSec {
+        padding: 20px 10px !important;
+    }
+
+    .custompricing_tabView {
+        padding: 5px !important;
+    }
+
+    .custompricing_tabView .table-sm th {
+        padding-left: 0 !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .agent_package_tab_itinerary_content .itineryleftSec {
+        width: 70px;
+    }
+
+    .agent_package_tab_itinerary_content .scrollItineryDetilsSec {
+        width: calc(100% - 70px);
+        left: 75px;
+    }
+
+
+    .MultiStepSec .content .dash-add-product-step5 .agent_terms_tab_step5 .input-group-text,
+    .MultiStepSec .content .dash-add-product-step5 .agent_terms_tab_step5 select.form-control:not([size]):not([multiple]),
+    .MultiStepSec .content .dash-add-product-step5 .agent_terms_tab_step5 .form-control:not(.form-control-sm):not(.form-control-lg) {
+        height: 37px !important;
+    }
+
+
+    .refund_request_page .ticket-content .media {
+        padding: 10px;
+    }
+
+    .refund_request_page .ticket-content .media .date {
+        right: 0;
+    }
+
+    .refund_request_page .ticket-content .media .img-profile {
+        margin-right: 10px;
+    }
+
+    .refund_request_page .ticket-content .media .title a {
+        font-size: 14px;
+    }
+
+    .refund_request_page .ticket-content .media .right .media-body .message {
+        font-size: 12.5px !important;
+    }
+
+    .refund_request_page .ticket-content .media .date {
+        font-size: 12px;
+    }
+}
+
+
+.StepSModal .hotel_media_gallery .card-img-top,
+.StepSModal .sightseeing_media_gallery .card-img-top {
+    width: auto;
+    margin: auto;
+}
+
+.Transportation_pointsPopup .pointspopupblock2 {
+    display: flex;
+    gap: 0px;
+    grid-gap: 0px;
+}
+
+.Transportation_pointsPopup .form-check {
+    flex: 1 !important;
+    padding-left: 0;
+}
+
+.agent_package_tab_content .terms3steps .nav-link:first-child {
+    border-top-left-radius: 5px;
+}
+
+.agent_package_tab_content .termsLeftContent {
+    width: 251px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills .nav-item::after {
+    top: 18px;
+}
+
+.MultiStepSec .StepsFormSecMain .form-check-input {
+    outline: 0;
+}
+
+
+.itineraryblock2 .selectPriceDrop .selectric .label {
+    display: flex;
+    align-items: center;
+}
+
+.quotesButtonAfter .quote_button_itenary {
+    padding: 7px 15px !important;
+    font-size: 14px !important;
+}
+
+.itineraryblock2 .slick-slide img {
+    width: auto;
+    margin: 0 auto;
+}
+
+.selectCityDrop .btn-group button,
+.selectCityDrop .btn-group button.multiselect:hover {
+    font-weight: normal;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .itinerary_meal_modal .mediaSec ul li a .lableinputsc {
+        font-size: 12.5px;
+    }
+
+    .quotesButtonAfter .dealsHeading,
+    .quotesButtonAfter .dealsHeading a {
+        font-size: 12.5px
+    }
+
+    .quotesButtonAfter .card-trnd-loc-days .DealsheadingRed,
+    .quotesButtonAfter .locationHeading,
+    .quotesButtonAfter .pActivitys,
+    .quotesButtonAfter .pPlaces {
+        font-size: 11px;
+    }
+
+    .quotesButtonAfter .quote_button_itenary {
+        padding: 6px 15px !important;
+        font-size: 12px !important;
+    }
+
+    .QuoteViewDeals::before {
+        bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    .StepSModal .searchboxDv input::placeholder,
+    .StepSModal .itinerary_hotel_city_list,
+    .StepSModal .itinerary_sightseeing_city_list {
+        font-size: 12px;
+    }
+
+    .StepSModal .headerRightpopupinner .searchboxDv {
+        width: 100%;
+    }
+
+
+    .StepSModal.hotel_popup_model .headerRightpopupinner .searchboxDv {
+        width: 55%;
+    }
+
+    .hotel_popup_model .headerRightpopupinner {
+        gap: 0;
+        grid-gap: 0;
+    }
+
+    .hotel_popup_model .searchboxDv {
+        margin-right: 20px;
+    }
+
+    .StepSModal .titlePopups,
+    .StepSModal .headerRightpopupinner {
+        flex: auto;
+    }
+
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 7px;
+    }
+
+    .StepSModal .searchboxDv input[type="search"] {
+        height: 32.5px;
+    }
+
+    .StepSModal .transpo_select_details label.form-check-label {
+        font-size: 12px;
+    }
+
+    .StepSModal.sightseeing_models .transpo_select_details label.form-check-label {
+        font-size: 13.5px;
+    }
+
+    .Transportation_pointsPopup .pointspopupblock2 .form-check {
+        flex: 31.33% !important;
+    }
+
+    .transport_point_to_points_models .pointspopupblock2 .form-check {
+        flex: 1 !important;
+    }
+
+    .Transportation_pointsPopup .pointspopupblock2 {
+        margin: 0px 0 45px;
+        align-items: flex-start;
+    }
+
+    .transport_point_to_points_models .pointspopupblock2 {
+        margin: 0px 0 0px;
+    }
+
+    .itinerary_meal_modal .mediaSec ul li a .lableinputsc {
+        font-size: 12px;
+    }
+
+    .itinerary_meal_modal .mealsSelectPopup {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .quotesButtonAfter .dealsHeading,
+    .quotesButtonAfter .dealsHeading a {
+        font-size: 12.5px
+    }
+
+    .quotesButtonAfter .card-trnd-loc-days .DealsheadingRed,
+    .quotesButtonAfter .locationHeading,
+    .quotesButtonAfter .pActivitys,
+    .quotesButtonAfter .pPlaces {
+        font-size: 11px;
+    }
+
+    .quotesButtonAfter .quote_button_itenary {
+        padding: 6px 15px !important;
+        font-size: 12px !important;
+        margin-top: 10px;
+    }
+
+    .QuoteViewDeals::before {
+        bottom: 52px;
+    }
+
+    .quotesButtonAfter .dealsHeading {
+        min-height: 55px;
+    }
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .StepSModal .sightSeeingPopupSec .headerRightpopupinner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .StepSModal .searchboxDv input[type="search"] {
+        padding: 8px 5px;
+    }
+
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 6px;
+    }
+
+    .StepSModal .sightSeeingPopupSec .titlePopups {
+        padding-left: 0 !important;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .StepSModal .sightSeeingHeaderPopup {
+        flex-direction: column;
+    }
+
+    .headerRightpopupinner .searchboxDv {
+        width: 100%;
+    }
+
+    .StepSModal .hotel_items_content,
+    .StepSModal .sightseeing_items_content {
+        padding: 0 !important;
+    }
+
+    .HotelPopupScreen .itinerary_hotel_city_list,
+    .HotelPopupScreen .itinerary_sightseeing_city_list {
+        width: auto;
+    }
+
+    .Transportation_pointsPopup .pointspopupblock2 .form-check {
+        flex: 25% !important;
+    }
+
+
+
+    .StepSModal.Transportation_pointsPopup .sightSeeingPopupSec .titlePopups {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .itinerary_meal_modal .mediaSec ul li {
+        flex: none;
+    }
+
+    .itinerary_meal_modal .mediaSec ul li label {
+        width: 100%;
+    }
+
+    .QuoteViewDeals::before {
+        bottom: 55px;
+    }
+
+
+    .StepSModal.hotel_popup_model .headerRightpopupinner .searchboxDv {
+        width: 100%;
+    }
+
+    .StepSModal.hotel_popup_model .sightSeeingPopupSec .headerRightpopupinner {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .StepSModal.hotel_popup_model .sightSeeingPopupSec .headerRightpopupinner {
+        flex: inherit;
+    }
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+
+    .transport_point_to_points_models .pointspopupblock2 .form-check {
+        flex: auto !important;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .togglePopupSec .searchboxDv button[type="button"] {
+        top: 8px;
+    }
+
+    .Transportation_pointsPopup .pointsFormDiv .d-flex {
+        flex-direction: column;
+    }
+
+    .Transportation_pointsPopup .seoSecBox,
+    .Transportation_pointsPopup .popup-form-label-title {
+        flex: auto;
+        width: 100%;
+    }
+
+    .Transportation_pointsPopup .popup-form-label-title br {
+        display: none;
+    }
+
+    .Transportation_pointsPopup.itinerary_meal_modal .nextBtnPopup,
+    .Transportation_pointsPopup.itinerary_meal_modal .nextBtnPopup:hover {
+        width: auto;
+    }
+
+    .agent_package_tab_content input.terms_input {
+        margin-bottom: 10px;
+    }
+
+    .agent_package_tab_content .TermsMain_tab input.terms_input {
+        margin-bottom: 0px;
+    }
+
+    .agent_package_tab_content .closeTermsIcon {
+        margin-top: 5px !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills .nav-item::after {
+        top: 15px;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-wrapper.d-flex.align-items-center.justify-content-between {
+        justify-content: space-between !important;
+    }
+
+    .agent_package_tab_content .termsLeftContent {
+        width: 170px;
+    }
+
+    .agent_package_tab_content .termsRightContent {
+        height: auto;
+    }
+
+    .MultiStepSec .StepsFormSecMain .RefundableTermsCondition .listingTypedc {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+
+    .agent_package_tab_content .termsContentSec h6 {
+        font-size: 14px;
+    }
+
+    .QuoteViewDeals::before {
+        bottom: 56px;
+    }
+
+    .itineraryblock2 .stepimgTitleDp {
+        text-align: left;
+    }
+
+    .hotel_popup_model .HotelPopupScreen.togglePopupSec .timecard {
+        min-height: auto;
+    }
+
+    .hotel_popup_model .ratingPopup ul li {
+        width: 15px;
+    }
+
+    .hotel_popup_model .togglePopupSec .card {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Transportation_pointsPopup .pointspopupblock2 .form-check {
+        flex: 48% !important;
+    }
+
+    .transport_point_to_points_models .pointspopupblock2 .form-check {
+        flex: inherit !important;
+    }
+
+    .StepSModal.Transportation_pointsPopup .sightSeeingPopupSec .titlePopups {
+        text-align: center;
+    }
+
+    .itinerary_meal_modal .mediaSec ul li {
+        flex: 100%;
+    }
+
+    .Transportation_pointsPopup.itinerary_meal_modal .nextBtnPopup,
+    .Transportation_pointsPopup.itinerary_meal_modal .nextBtnPopup:hover {
+        width: 100%;
+    }
+
+    .Transportation_pointsPopup.itinerary_meal_modal #modal_add_meal_btn {
+        margin-bottom: 10px;
+    }
+
+    .itinerary_meal_modal #modal_reset_meal_btn {
+        margin-right: 0px !important;
+    }
+
+    .MultiStepSec .StepsFormSecMain .tabs-to-dropdown .nav-pills li {
+        padding: 0;
+    }
+
+    .agent_package_tab_content .terms3steps .nav-link {
+        padding: 9px 5px;
+    }
+
+    .agent_package_tab_content .termsLeftContent {
+        margin-right: 5px;
+    }
+
+    .agent_package_tab_content .termsRightContent {
+        height: auto;
+    }
+
+    .myModal_quote .dflex-quotesbtn {
+        flex-direction: column;
+    }
+
+    .tabPackageSec .packgesSecListView ul li,
+    .tabPackageSec .packgesSecListView ul li a {
+        font-size: 11px;
+    }
+
+
+    .Step5From .ulmeals ul {
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+
+
+    .Transportation_pointsPopup .modal-body.togglePopupSec {
+        padding: 15px;
+    }
+
+    .itinerary_meal_modal .nextBtnPopup {
+        font-size: 13.5px;
+    }
+
+    .Transportation_pointsPopup .modal-dialog,
+    .myModal_guide .modal-dialog {
+        max-width: 100%;
+    }
+
+    .Transportation_pointsPopup .pointsFormDiv .d-flex {
+        margin-bottom: 25px;
+    }
+
+    .StepSModal.hotel_popup_model .sightSeeingPopupSec .headerRightpopupinner {
+        flex-direction: column;
+    }
+
+    .StepSModal.hotel_popup_model .headerRightpopupinner .searchboxDv {
+        margin-right: 0;
+    }
+
+    .hotel_popup_model .headerRightpopupinner .ratingPopup {
+        margin-top: 15px;
+    }
+
+    .hotel_popup_model .cardFooter1 {
+        flex-direction: row;
+        gap: 0;
+        grid-gap: 0;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .StepSModal select.itinerary_hotel_city_list {
+        width: auto;
+        padding: 0;
+    }
+
+    .StepSModal .sightSeeingPopupSec .titlePopups {
+        text-align: center;
+        padding-left: 0 !important;
+    }
+
+    .StepSModal .togglePopupSec .searchboxDv button[type="button"] {
+        top: 9px;
+    }
+
+    .Transportation_pointsPopup .pointspopupblock2 .form-check {
+        flex: 100% !important;
+    }
+
+
+    .MultiStepSec .StepsFormSecMain .dash-add-product-step5 .tabs-to-dropdown .nav-pills .nav-item .nav-link {
+        font-size: 11.2px;
+    }
+
+    .transport_point_to_points_models .pointspopupblock2 {
+        margin-bottom: 20px !important;
+    }
+
+}
+
+.pricing_date_picker {
+    position: relative;
+    background-color: #e0ffdf;
+}
+
+
+.pricing_date_picker::after {
+    content: '';
+    background: url('../../img/calendar-date.png') no-repeat center center;
+    background-size: 45% auto;
+    content: "";
+    pointer-events: none;
+    height: auto;
+    left: auto;
+    right: 1px;
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    width: 1.5em;
+    background-color: #cff6cd;
+    border-left: 1px solid #0049638f !important;
+    padding: 10px 19px !important;
+}
+
+
+
+.datepicker .day,
+.datepicker .dow,
+.datepicker .prev,
+.datepicker .datepicker-switch,
+.datepicker .next {
+    letter-spacing: 0.50px;
+}
+
+.datepicker {
+    width: auto;
+}
+
+.datepicker:not(.gj-picker-bootstrap) table tr td.today:hover:hover,
+.datepicker:not(.gj-picker-bootstrap) table tr td.today.day {
+    background: #004963;
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+.datepicker table tr td.day.focused,
+.datepicker table tr td.day:hover {
+    background: #004963;
+    color: #e0ffdf;
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+    background: #004963;
+    color: #FFF;
+}
+
+.datepicker:not(.gj-picker-bootstrap) table tr td.today,
+.datepicker:not(.gj-picker-bootstrap) table tr td.today.disabled,
+.datepicker:not(.gj-picker-bootstrap) table tr td.today.disabled:hover,
+.datepicker:not(.gj-picker-bootstrap) table tr td.today:hover {
+    color: #fff !important;
+    background-color: #204d74;
+    border-color: #122b40;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.datepicker .prev,
+.datepicker tfoot tr th {
+    font-size: 13px;
+}
+
+.datepicker td,
+.datepicker th {
+    padding: 5px;
+}
+
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active.disabled:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover {
+    background-color: #004963;
+    background-image: none;
+    font-weight: bold;
+}
+
+.datepicker-dropdown.datepicker-orient-top:before {
+    border-top: 7px solid #004963;
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+    border-top: 6px solid #e0ffdf;
+}
+
+.datepicker-dropdown:after {
+    border-bottom: 6px solid #e0ffdf;
+}
+
+.datepicker-dropdown:before {
+    border-bottom: 7px solid #004963;
+}
+
+.myModal_quote .cityBreakup {
+    align-items: flex-start;
+}
+
+.myModal_quote .modal-header {
+    padding-bottom: 5px;
+}
+
+.myModal_quote .tabPackageSec .tabPackageSecrow img.packStyleIconsdinner {
+    margin-top: 7px !important;
+}
+
+.myModal_quote .ItineraytabSec .packStyleIconsboat,
+.myModal_quote .ItineraytabSec .packgesSecListView img.packStyleIcons1,
+.myModal_quote .ItineraytabSec .packgesSecListView img.packStyleIconsCancel {
+    margin-top: 7px !important;
+}
+
+.myModal_pricing .sightSeeingcardsSec {
+    padding: 20px 20px 20px 20px;
+}
+
+@media screen and (max-width:991px) {
+    .myModal_quote .itinerary_tab_Bg2 .tabs-container nav ul li {
+        margin: 0 10px;
+    }
+
+    .hotel_popup_model .ViewDealDetailsec.open {
+        overflow: auto scroll;
+        overflow-y: hidden;
+    }
+
+    .hotel_popup_model .ViewDealDetailsec .table:not(.table-sm) thead th,
+    .hotel_popup_model .standard,
+    .hotel_popup_model .ViewDealDetailsec td,
+    .hotel_popup_model .ViewDealDetailsec tr,
+    .hotel_popup_model .selectAnchtd {
+        font-size: 14px;
+    }
+
+    .hotel_popup_model .free_cancel_room,
+    .hotel_popup_model .non_refund_room,
+    .hotel_popup_model .roomLeft {
+        font-size: 13.5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .myModal_quote .tabPackageSec .select:after {
+        background-image: none;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 7px solid #555;
+    }
+
+    .myModal_quote .itinerary_tab_Bg2 .itenrywdFullMobile {
+        padding: 5px;
+    }
+
+    .myModal_quote .itinerary_tab_Bg2 .tabs-container nav ul li {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+
+    .mobile-nav-logoSec {
+        padding: 0 15px;
+    }
+
+    .adminLogoSec {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .listingTypeSec label.form-check-label {
+        padding-left: 35px;
+    }
+
+    .listingTypeSec .form-check-input[type=radio],
+    .listingTypeSec .form-check-input[type=checkbox] {
+        width: 28px;
+        height: 28px;
+    }
+
+    .guestnationalitySec .form-check-input[type=checkbox] {
+        width: 28px;
+        height: 28px;
+    }
+
+    .guestnationalitySec .form-check-input[type=checkbox] {
+        left: 31px;
+    }
+
+    .drgdropDv .lableCityNight .form-label,
+    .drgdropDv .selectLabel {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .drgdropDv .closeIconStep {
+        margin-left: 5px;
+    }
+
+    .drgdropDv .closeIconStep .CloseIcon {
+        font-size: 15px;
+    }
+
+    .drgdropDv select.form-control.selectric.arrow-image {
+        font-size: 11.5px;
+        padding: 5px;
+    }
+
+    .drgdropDv .arrow-image {
+        background-position: calc(100% - 5px) center !important;
+        background-size: 8px !important;
+    }
+
+    .drgdropDv img.selectLabelimg {
+        width: 9px;
+    }
+
+    .drgdropDv .selectLabelDv {
+        margin-right: 7px;
+    }
+
+    .StepsFormSecMain .dragDropSec .drgdropDv .item.row .country,
+    .StepsFormSecMain .dragDropSec .drgdropDv .item.row .city,
+    .StepsFormSecMain .dragDropSec .drgdropDv .item.row .night {
+        padding: 0 5px;
+    }
+
+    .MultiStepSec .content .drgdropDv .input-group-text,
+    .MultiStepSec .content .drgdropDv select.form-control:not([size]):not([multiple]),
+    .MultiStepSec .content .drgdropDv .form-control:not(.form-control-sm):not(.form-control-lg) {
+        height: 37px;
+    }
+
+    .drgdropDv .lableCityNight {
+        margin-left: 10px;
+    }
+
+    .drgdropDv .addSectionSec {
+        margin-right: 10px;
+    }
+
+    .countInputTitle.package_title_count {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width:380px) {
+
+    .myModal_pricing.custom_b2c_pricing_modal .table tbody tr {
+        flex: 1;
+    }
+}
+
+
+@media screen and (max-width:350px) {
+
+    .camaraSecUL li {
+        width: 118px;
+    }
+}
+
+
+@media screen and (max-width:301px) {
+
+    .myModal_pricing .custompricing_tabView {
+        padding: 5px;
+    }
+
+    .myModal_pricing .pricing_title {
+        font-size: 12.8px;
+    }
+}
+
+
+@media screen and (max-width:290px) {
+    .small-box-dashboard svg {
+        right: 20px;
+    }
+
+    .listingTypedc {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .listingTypedc .form-check:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+.dash_shop_setting_page .box-body .form-group.text-center a {
+    background: #004963;
+    color: #FFF;
+}
+
+.dash_shop_setting_page .box-body .form-group.text-center a:active,
+.dash_shop_setting_page .box-body .form-group.text-center a:focus,
+.dash_shop_setting_page .box-body .form-group.text-center a:hover {
+    opacity: 0.9;
+}
+
+.dash_shop_setting_page .box-body .form-group p.text-success {
+    color: #19bb9b !important;
+    padding: 3px 8px !important;
+    font-weight: normal !important;
+    border-radius: 4px !important;
+    font-size: 11px !important;
+    color: #fff !important;
+    background-color: #19bb9b !important;
+    box-shadow: none !important;
+}

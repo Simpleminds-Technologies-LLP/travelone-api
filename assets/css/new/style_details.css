@@ -1,0 +1,666 @@
+.tourHeadingPrice {
+    font-size: 15px;
+}
+.tourboxesBtn1,
+.tourboxesBtn2 {
+    line-height: 36px;
+    padding: 3px 10px;
+    width: 140px;
+}
+.tabPackageSec ul.CheckmarkUL li a {
+    font-weight: 500;
+    text-decoration: underline;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+.vdeoleftSecbk {
+    padding-right: 30px;
+}
+.vdeoleftSecbk .para {
+    text-align: left;
+    hyphens: auto;
+}
+.vdeoleftSecbk .titleSec {
+    font-size: 40px;
+    line-height: 55px;
+    margin-bottom: 25px;
+    margin-top: 45px;
+}
+.vdeoleftSecbk .videoanchorr {
+    margin-top: 30px;
+}
+.videoanchorr a {
+    font-size: 16px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    padding: 15px 55px;
+    border: 1px solid #004963;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+}
+.videoanchorr a:hover,
+.plnTripBtn a:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    border-color: var(--anchorHoverBg);
+}
+.videoRightBlock {
+    position: relative;
+    height: 505px;
+}
+.videoRightBlock a {
+    display: block;
+    height: 100%;
+}
+.videoRightBlock::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../../img/video-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    background-color: #FFF;
+    z-index: -9;
+}
+.Videoblockrows .videoRightBlock iframe {
+    width: 100%;
+    display: block;
+    top: 52px;
+    margin: 0px auto;
+    height: 346px;
+    padding: 0px 31px;
+    position: relative;
+}
+.Videoblockrows {
+    display: flex;
+    align-items: center;
+}
+.travelstoryBlock a {
+    display: flex;
+    transition: 0.5s all ease-in-out;
+}
+.travelstoryBlock .imgStroyBlock,
+.travelstoryBlock .storycontentBlock {
+    flex: 1;
+}
+.travelstoryBlock .storycontentBlock {
+    border: 1px solid #004963;
+    border-radius: 0 10px 10px 0;
+    padding: 20px;
+    border-left: 0;
+}
+.travelstoryBlock,
+.trvelstoryTitle {
+    margin-bottom: 30px;
+}
+.TravelStorySec {
+    padding-bottom: 10px;
+}
+.storycontentBlock .titleStory {
+    font-size: 19px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.storycontentBlock .authorStory {
+    font-size: 15px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.storycontentBlock .authorStory ion-icon {
+    margin-right: 5px;
+    color: #004963;
+    font-weight: 500;
+}
+.storycontentBlock .para {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    font-size: 14px;
+}
+.travelstoryBlock a:hover,
+.travelstoryBlock a:visited {
+    box-shadow: 3px 3px 15px rgb(32 197 147 / 52%);
+    border-radius: 10px;
+}
+.travelstoryBlock a:hover .storycontentBlock {
+    border-color: transparent;
+    background: #e0ffdf;
+}
+.agentTravelsRows,
+.agentTravelLeft,
+.starTravel_agent {
+    display: flex;
+    align-items: center;
+}
+.travelagewnt,
+.travelagentDetails {
+    flex: 1;
+}
+.agentTitle,
+.aboutTravel_card_heading {
+    font-size: 21px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.starTravel_agent a {
+    padding-right: 7px;
+}
+.stars_details span,
+.stars_details strong {
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 600;
+}
+.stars_details span {
+    color: #ffc107;
+}
+.stars_details strong {
+    color: #004963;
+}
+.plnTripBtn a {
+    font-size: 16px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    padding: 5px 35px;
+    border: 1px solid rgb(0 73 99 / 68%);
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+}
+.plnTripBtn {
+    margin-top: 25px;
+}
+.travelagewnt {
+    width: 215px;
+    height: 215px;
+    flex: none;
+    background: transparent;
+    border-radius: 50%;
+}
+.starTravel_agent a img {
+    width: 25px;
+}
+.travelagentDetails {
+    padding-left: 15px;
+}
+.agentTravelTitle {
+    font-size: 16px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.agentTravelsRows .para,
+.aboutTravel_card .fromTitle {
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 400;
+    color: #004963;
+}
+.aboutTravel_card .fromTitle {
+    font-size: 17px;
+}
+.agentTravelsRows .para p {
+    margin-bottom: 15px;
+    color: #004963;
+}
+.listing-detail-page .agentTravelsRows .para p:last-child {
+    margin-bottom: 0px;
+}
+.aboutTravel_card {
+    padding: 30px;
+    border: 1px solid rgb(0 73 99 / 68%);
+    border-radius: 5px;
+    transition: 0.5s all ease-in-out;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.aboutTravel_card_heading {
+    margin-bottom: 0;
+}
+.aboutTravel_card:hover {
+    box-shadow: 3px 3px 15px rgb(32 197 147 / 52%);
+    border-radius: 5px;
+}
+.agentTravelsRows {
+    margin-bottom: 30px;
+}
+.tabcontentBg1 .packTabSec {
+    background: #dfffde;
+    margin-bottom: 5px;
+}
+.tabcontentBg1 .tabitemsContent {
+    padding-top: 0;
+}
+.tabcontentBg1 .sliderSpaceBlnk {
+    margin-bottom: 0;
+}
+.tabcontentBg1 .lastItemTab {
+    min-height: auto;
+}
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1190px;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1287px) {}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    .vdeoleftSecbk .titleSec,
+    .agentTitle {
+        font-size: 25px;
+        line-height: inherit;
+        margin-top: 0;
+    }
+    .agentTitle,
+    .aboutTravel_card_heading {
+        font-size: 20px;
+    }
+    .videoRightBlock {
+        height: 483px;
+    }
+    .storycontentBlock .titleStory {
+        font-size: 17px;
+    }
+    .TravelStorySec.Section_common_padding {
+        padding-bottom: 10px;
+    }
+    .aboutTravel_card {
+        padding: 25px;
+    }
+    .Videoblockrows .videoRightBlock iframe {
+        top: 50px;
+        height: 332px;
+        padding: 0px 29px;
+    }
+    .mobile-wd-half:last-child {
+        margin: 0 auto;
+    }
+    .listing-page .mobile-wd-half:last-child {
+        margin: 0;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .vdeoleftSecbk .titleSec {
+        font-size: 23px;
+        line-height: inherit;
+        margin-bottom: 15px;
+    }
+    .vdeoleftSecbk .titleSec br {
+        display: none;
+    }
+    .vdeoleftSecbk .videoanchorr {
+        margin-top: 20px;
+    }
+    .videoanchorr a {
+        font-size: 15px;
+        line-height: inherit;
+        padding: 10px 35px;
+    }
+    .storycontentBlock .titleStory {
+        font-size: 15px;
+        margin-bottom: 10px;
+        height: 45px;
+        overflow: hidden;
+    }
+    .storycontentBlock .para,
+    .storycontentBlock .authorStory,
+    .agentTravelsRows .para,
+    .aboutTravel_card .fromTitle,
+    .plnTripBtn a,
+    .stars_details span,
+    .stars_details strong {
+        font-size: 14px;
+    }
+    .travelstoryBlock,
+    .trvelstoryTitle {
+        margin-bottom: 15px;
+    }
+    .TravelStorySec.Section_common_padding {
+        padding-bottom: 10px;
+    }
+    .agentTitle,
+    .aboutTravel_card_heading {
+        font-size: 20px;
+    }
+    .agentTitle {
+        margin-bottom: 5px;
+    }
+    .plnTripBtn {
+        margin-top: 15px;
+    }
+    .starTravel_agent a img {
+        width: 15px;
+    }
+    .travelagewnt {
+        width: 150px;
+        height: 150px;
+    }
+    .agentTravelLeft {
+        margin-bottom: 15px;
+    }
+    .agentTravelsRows .para p,
+    .agentTravelTitle {
+        margin-bottom: 10px;
+    }
+    .agentTravelsRows,
+    .aboutTravel_card {
+        margin-bottom: 15px;
+    }
+    .aboutTravel_card {
+        padding: 10px;
+    }
+    .aboutTravelAgentSec.Section_common_padding {
+        padding-bottom: 10px;
+    }
+    .plnTripBtn a {
+        padding: 5px 30px;
+    }
+    .tourHeadingPrice span {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:1199px) {
+    .megamenuSec.header .menu>ul>li>a,
+    .megamenuSec.header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item .title {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .videoRightBlock {
+        height: 403px;
+    }
+    .Videoblockrows .videoRightBlock iframe {
+        top: 41px;
+        height: 268px;
+        padding: 0px 24px;
+    }
+}
+@media screen and (max-width:991px) {
+    .bannerRightTourHighlights {
+        padding: 15px 0px;
+    }
+}
+@media screen and (max-width:880px) {}
+@media screen and (min-width:768px) and (max-width:991px) {
+    .vdeoleftSecbk {
+        padding-right: 0;
+    }
+    .storycontentBlock .titleStory {
+        height: 45px;
+        overflow: hidden;
+    }
+    .travelstoryBlock a {
+        flex-direction: column;
+    }
+    .imgStroyBlock {
+        margin: auto;
+    }
+    .travelstoryBlock {
+        border: 1px solid rgb(0 73 99 / 52%);
+        border-radius: 10px;
+    }
+    .imgStroyBlock .img-fluid {
+        border-radius: 10px;
+    }
+    .travelstoryBlock {
+        padding: 10px;
+    }
+    .travelstoryBlock .storycontentBlock {
+        border: 0;
+    }
+    .travelstoryBlock .storycontentBlock {
+        padding: 10px 0 0;
+    }
+    .storycontentBlock .para {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+    .videoRightBlock {
+        height: 300px;
+    }
+    .Videoblockrows .videoRightBlock iframe {
+        top: 30px;
+        height: 196px;
+        padding: 0px 18px;
+    }
+    .vdeoleftSecbk .titleSec {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:767px) {
+    .tabPackageSec select {
+        padding: 10px;
+    }
+    .VideoblockSec.Section_common_padding {
+        padding: 20px 0 20px;
+    }
+    .vdeoleftSecbk .titleSec {
+        font-size: 20px;
+        line-height: inherit;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .vdeoleftSecbk .titleSec br {
+        display: none;
+    }
+    .vdeoleftSecbk .para,
+    .trvelstoryTitle {
+        text-align: center;
+    }
+    .vdeoleftSecbk .videoanchorr {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .videoanchorr a {
+        font-size: 13.5px;
+        line-height: inherit;
+        padding: 10px 35px;
+        margin-bottom: 15px;
+    }
+    .storycontentBlock .titleStory {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .storycontentBlock .para,
+    .storycontentBlock .authorStory,
+    .agentTravelsRows .para,
+    .aboutTravel_card .fromTitle,
+    .plnTripBtn a,
+    .stars_details span,
+    .stars_details strong {
+        font-size: 13.5px;
+    }
+    .travelstoryBlock .storycontentBlock {
+        padding: 25px;
+    }
+    .travelstoryBlock,
+    .trvelstoryTitle {
+        margin-bottom: 15px;
+    }
+    .TravelStorySec.Section_common_padding {
+        padding-bottom: 10px;
+    }
+    .agentTitle,
+    .aboutTravel_card_heading {
+        font-size: 20px;
+    }
+    .agentTitle {
+        margin-bottom: 5px;
+    }
+    .plnTripBtn {
+        margin-top: 15px;
+    }
+    .starTravel_agent a img {
+        width: 17px;
+    }
+    .travelagewnt {
+        width: 150px;
+        height: 150px;
+    }
+    .agentTravelLeft {
+        margin-bottom: 15px;
+    }
+    .agentTravelTitle,
+    .agentTravelsRows .para,
+    .aboutTravel_card .fromTitle {
+        text-align: center;
+    }
+    .agentTravelsRows .para p,
+    .agentTravelTitle {
+        margin-bottom: 10px;
+    }
+    .agentTravelsRows,
+    .aboutTravel_card {
+        margin-bottom: 15px;
+    }
+    .aboutTravel_card {
+        padding: 10px;
+    }
+    .aboutTravelAgentSec.Section_common_padding {
+        padding-bottom: 10px;
+    }
+    .agentTravelLeft {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .agentTitle {
+        text-align: center;
+    }
+    .vdeoleftSecbk {
+        padding-right: 0;
+        margin-bottom: 15px;
+    }
+    .explorer-details-slider-right .detail-explorer-block2 li:not(:last-child)::after,
+    .explorer-details-slider-right .detail-explorer-block1 li:not(:last-child)::after {
+        right: 0;
+    }
+    .explorer-details-slider-right .detail-explorer-block2 li,
+    .explorer-details-slider-right .detail-explorer-block1 li {
+        padding-right: 15px;
+    }
+    .SliderBannerSec .detail-explorer-block2,
+    .SliderBannerSec .detail-explorer-block1 {
+        gap: 5px;
+        grid-gap: 5px;
+        flex-wrap: wrap;
+        row-gap: 0;
+        grid-row-gap: 0;
+    }
+    .explorer-details-slider-right .detail-explorer-block1 li:not(:last-child)::after {
+        width: 11px;
+        height: 12px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width:767px) {
+    .Videoblockrows .videoRightBlock iframe {
+        top: 39px;
+        height: 251px;
+        padding: 0px 23px;
+    }
+    .videoRightBlock {
+        height: 390px;
+    }
+}
+@media screen and (max-width:575px) {
+    .videoRightBlock::before {
+        display: none;
+    }
+    .videoRightBlock {
+        height: 310px;
+    }
+    .Videoblockrows .videoRightBlock iframe {
+        top: 0px;
+        padding: 0;
+        height: 100%;
+    }
+}
+@media screen and (max-width:499px) {
+    .storycontentBlock .titleStory {
+        font-size: 14px;
+    }
+    .travelstoryBlock .storycontentBlock {
+        padding: 10px 0 0;
+    }
+    .imgStroyBlock {
+        margin: auto;
+    }
+    .travelstoryBlock {
+        border: 1px solid rgb(0 73 99 / 52%);
+        border-radius: 10px;
+    }
+    .travelstoryBlock .storycontentBlock {
+        border: 0;
+    }
+    .travelstoryBlock {
+        padding: 10px;
+    }
+    .travelstoryBlock a {
+        flex-direction: column;
+    }
+    .imgStroyBlock .img-fluid {
+        border-radius: 10px;
+    }
+    .travelstoryBlock .storycontentBlock,
+    .storycontentBlock .para,
+    .authorStory {
+        text-align: center;
+    }
+    .authorStory {
+        justify-content: center;
+    }
+    .storycontentBlock .authorStory {
+        margin-top: 10px;
+    }
+    .TourboxsLeftSec {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+    .tourMain {
+        width: 100%;
+        min-height: auto;
+    }
+    .tab-nav {
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:439px) {
+    .explorerBlock {
+        flex-direction: column;
+    }
+    .videoRightBlock {
+        height: auto;
+    }
+}
+@media screen and (min-width: 281px) and (max-width: 370px) {
+    .sortbyGreece .select-box {
+        width: 145px !important;
+    }
+}

@@ -1,0 +1,157 @@
+.rooms_category_tabBlock .roomTabs.tab {
+    display: flex;
+    gap: 25px;    
+}
+.rooms_category_tabBlock #room2 {
+    display: block !important;
+}
+
+.rooms_category_tabBlock .roomTabs  .titleRoom {
+    border-right: 1px solid #004963;
+    padding-right: 20px;
+}
+.rooms_category_tabBlock .roomTabs  .room3borderzero.titleRoom  {
+    border-right: 0;
+    padding-right: 0px;
+}
+
+.rooms_category_tabBlock .titleRoom.active {
+    color: #ff4c46;
+}
+
+.rooms_category_tabBlock .room_divblock1 {
+    display: flex;
+    gap: 20px; 
+}
+
+
+.plan_trip_nationality.Othersnationality .form-check-input:checked, 
+.plan_trip_nationality.Othersnationality .form-check-input:checked {
+    background-image: url(../../../img/checked.png);
+    background-repeat: no-repeat;
+    outline: none;
+    border: 0;
+}
+
+.plan_trip_nationality.Othersnationality .form-check-input {
+    position: absolute;
+    top: -18px;
+    cursor: pointer;
+    left: 44px;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    bottom: auto;
+    background: transparent;
+    appearance: none;
+    background-image: url(../../../img/check.png);
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    border: 0;
+}
+
+
+.Othersnationality .OthersnationalitySec {margin-top: 25px;}
+.Othersnationality .OthersnationalitySec label {  margin-bottom: 8px; }
+.Othersnationality .OthersnationalitySec input.form-control {  background: transparent;  border-color: #004963;  color: #004963; font-weight: normal; font-size: 14px;}
+
+.Othersnationality .OthersnationalitySec .form-control:focus {box-shadow: none;}
+
+
+
+@media screen and (max-width: 1499px) {
+    .MymodalBooknowPoup .step-btn.stepssubTitle.nextfooterbtn, .MymodalBooknowPoup .wizardForm .step-footer>.step-btn.submitfooterbtn {
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 1199px) {
+    .plan_trip_nationality.Othersnationality .fixCheckboxsc {
+        column-gap: 10px;
+        row-gap: 34px;     flex-wrap: wrap;
+    }
+    .Othersnationality .OthersnationalitySec input.form-control {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .MymodalBooknowPoup .plan_trip_nationality .form-check {
+        min-width: 103px;
+        width: auto;
+    }
+    .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 38px;
+        width: 31px;
+        height: 31px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .Othersnationality .OthersnationalitySec input.form-control {
+        font-size: 9px;
+    }
+    .plan_trip_nationality.Othersnationality .fixCheckboxsc {
+        row-gap: 25px;  
+    }
+
+    .plan_trip_nationality.Othersnationality .fixCheckboxsc {
+        column-gap: 20px;
+    }
+    .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 64px;
+    }
+    .plan_trip_nationality .form-check-label {   font-size: 12px; }
+    .travelers-room-new .stepTemparateUL li .plan-content {   height: 47px;    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .rooms_category_tabBlock .roomTabs .titleRoom {
+        text-align: center;
+    }
+    .plan_trip_nationality.Othersnationality .fixCheckboxsc {
+        row-gap: 25px;  
+    }
+   
+}
+
+
+@media screen and (max-width:575px) {
+    .rooms_category_tabBlock .roomTabs.tab {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .MymodalBooknowPoup .plan_trip_nationality .form-check {
+        min-width: 100%;
+    }
+    .plan_trip_nationality.Othersnationality .form-check-input {  left: 47%; }
+}
+
+
+@media screen and (max-width:500px) {
+    .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 46.5%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 45%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 44%;
+    }
+    .rooms_category_tabBlock .room_divblock1 {
+        gap: 5px;
+    }
+}

@@ -1,0 +1,119 @@
+.shopAboutSec .swiper-container {
+  overflow: hidden;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 480px) {
+  .shopAboutSec .swiper-container {
+    min-height: 320px;
+  }
+}
+.shopAboutSec  .swiper-container-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  height:407px;
+}
+@media (min-width: 480px) {
+  .shopAboutSec .swiper-container-wrapper {
+    flex-flow: row nowrap;
+  }
+}
+
+.shopAboutSec .swiper-button-next, .shopAboutSec .swiper-button-prev {
+  color: #000;
+}
+
+.shopAboutSec .swiper-slide {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-color: #FFF;
+  /* Center slide text vertically */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* Slide content */
+}
+.shopAboutSec .swiper-slide .description,
+.shopAboutSec .swiper-slide .title {
+  display: block;
+  opacity: 0;
+  transition: 0.5s ease 0.5s;
+}
+.shopAboutSec .swiper-slide-active .description,
+.shopAboutSec .swiper-slide-active .title {
+  opacity: 1;
+}
+.shopAboutSec .swiper-slide-active .title {
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+  color: #000;
+  transition: opacity 0.5s ease 0.5s;
+}
+.shopAboutSec .swiper-slide-active .description {
+  font-size: 16px;
+  color: #777;
+  transition: opacity 0.5s ease 0.75s;
+}
+
+.shopAboutSec .gallery-top {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 480px) {
+  .shopAboutSec .gallery-top {
+    width: 80%;
+    height: 100%;
+    margin-right: 10px;
+  }
+}
+
+.shopAboutSec .gallery-thumbs {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+}
+@media (min-width: 480px) {
+  .shopAboutSec .gallery-thumbs {
+    width: 20%;
+    height: 100%;
+    padding: 0;
+  }
+}
+.shopAboutSec .gallery-thumbs .swiper-wrapper {
+  flex-direction: row;
+}
+@media (min-width: 480px) {
+  .shopAboutSec .gallery-thumbs .swiper-wrapper {
+    flex-direction: column;     gap: 30px;
+  }
+}
+.shopAboutSec .gallery-thumbs .swiper-slide {
+  width: 25%;
+  flex-flow: row nowrap;
+  height: 100%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+@media (min-width: 480px) {
+  .shopAboutSec .gallery-thumbs .swiper-slide {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}
+.shopAboutSec .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.shopAboutSec .swiper-button-next, .shopAboutSec  .swiper-button-prev {
+    display: none;
+}
+
+@media (max-width:1399px) {
+    .shopAboutSec .swiper-container-wrapper {      
+        height: 400px;
+    }
+}

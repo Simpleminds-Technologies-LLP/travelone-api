@@ -1,0 +1,947 @@
+.update-profile-settings .editicon-setting {
+    height: 40px;
+    width: 40px;
+    background: #e0ffdf;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbd5ba;
+}
+
+.update-profile-settings .active .editicon-setting {
+    background: #004963;
+    border-color: #004963;
+}
+
+.blogPage.update-profile-settings .profile-tabs .nav .active .nav-link {
+    background-color: transparent;
+}
+
+.blogPage.update-profile-settings .profile-tabs .nav .active .nav-link span {
+    color: #004963;
+}
+
+.blogPage.update-profile-settings .profile-tabs .nav .nav-link span {
+    letter-spacing: 0.10px;
+    color: #959595;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.update-profile-settings .editicon-setting img {
+    width: 40%;
+}
+
+.blogPage.update-profile-settings .profile-tabs .nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    grid-gap: 15px;
+    justify-content: end;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.blogPage.update-profile-settings .breadcrumb .active,
+.blogPage.update-profile-settings .breadcrumb a,
+.blogPage.update-profile-settings .breadcrumb-item+.breadcrumb-item::before {
+    color: #004963;
+    z-index: 1;
+    font-weight: 500;
+}
+
+
+.blogPage.update-profile-settings .form-group.avtar-profile {
+    display: flex;
+    align-items: end;
+    gap: 40px;
+    grid-gap: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+}
+
+
+.avtar-profile .btn-file-upload {
+    background: #e0ffdf;
+    color: #004963 !important;
+    border: 1px solid #004963;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 15px !important;
+    padding: 6px 30px !important;
+}
+
+.blogPage.update-profile-settings .form-control {
+    font-size: .875rem;
+    background-color: transparent;
+    border-color: rgb(0 73 99 / 54%);
+    border-radius: 8px;
+    color: #004963;
+    height: 40px;
+}
+
+.blogPage.update-profile-settings .form-group .control-label {
+    color: #004963;
+    padding-bottom: 5px;
+}
+
+.d-flex-setting {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.setting_social_media_page .d-flex-setting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+}
+
+.grid_2cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+}
+
+.grid_3cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-start;
+}
+
+.d-flex-setting .form-group {
+    flex: 1;
+}
+
+.blogPage.update-profile-settings {
+    background: #e0ffdf;
+}
+
+.blogPage.update-profile-settings .profile-tab-content {
+    padding: 15px 35px 40px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 70%);
+    border-radius: 0 60px 0 60px;
+    background: #e0ffdf;
+}
+
+.blogPage.update-profile-settings .darkbg-left {
+    position: relative;
+}
+
+.blogPage.update-profile-settings .darkbg-left::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    width: 600px;
+    height: 100%;
+    background: #cfecce;
+}
+
+.blogPage.update-profile-settings .darkbg-left {
+    padding-bottom: 30px;
+}
+
+.blogPage.update-profile-settings .page-title {
+    text-align: center;
+    border-bottom: 3px solid #d0eccf;
+    color: #004963;
+    padding-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.blogPage.update-profile-settings .btn-custom {
+    color: #e0ffdf !important;
+    border-radius: 8px;
+    padding: 7px 20px;
+    margin-top: 7px;
+}
+
+.blogPage.update-profile-settings .form-check-input {
+    background-color: transparent;
+    border: 1px solid #004963;
+    margin-right: 5px;
+}
+
+.blogPage.update-profile-settings .form-check-input:checked {
+    background-color: #004963;
+    border-color: #004963;
+}
+
+
+
+.blogPage.update-profile-settings .form-check-input:focus {
+    border-color: #004963;
+    box-shadow: none;
+}
+
+.blogPage.update-profile-settings .form-check-input:checked[type=radio] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+.blogPage.update-profile-settings .custom-control .custom-control-label {
+    color: #004963;
+    font-weight: 500;
+}
+
+.blogPage.update-profile-settings .profile-tabs .nav .nav-link:hover {
+    background-color: transparent;
+}
+
+.blogPage.update-profile-settings .breadcrumb {
+    justify-content: end;
+}
+
+.update-profile-col3 {
+    padding-right: 0;
+    z-index: 9;
+}
+
+.update-profile-col9 {
+    margin-top: 45px;
+    padding-left: 0;
+}
+
+.update-profile-col3 .row-custom {
+    margin-top: 75px;
+}
+
+.update-profile-col3 .profile-tabs {
+    margin-right: -20px;
+}
+
+
+.cover-image-border {
+    border: 2px solid #004963;
+}
+
+.avtar-profile1 .btn-file-upload {
+    background: #e0ffdf;
+    color: #004963 !important;
+    border: 1px solid #004963;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 14px !important;
+    padding: 5px 30px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 0.10px;
+}
+
+.change-pass-setting-page .btn-custom {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.blogPage.update-profile-settings.change-pass-setting-page .form-control::placeholder {
+    color: #004963 !important;
+}
+
+/* health and safety about setting page css */
+.health-safetySec .tox .tox-toolbar__primary,
+.health-safetySec .tox .tox-edit-area__iframe,
+.health-safetySec .tox .tox-statusbar {
+    background-color: #e0ffdf;
+}
+
+.health-safetySec .tox-statusbar {
+    display: none !important;
+}
+
+.health-safetySec .tox-tinymce {
+    border-color: #004963;
+}
+
+.health-safetySec .image-uploader {
+    border: 1px dashed #004963;
+}
+
+.health-safetySec .profile-tab-content {
+    min-height: 1165px;
+}
+
+.setting_health_safety_page .profile-tab-content {
+    min-height: 1305px;
+}
+
+.health-safetySec .upload-text span {
+    font-size: 13px;
+    color: #004963;
+    font-weight: 500;
+}
+
+.health-safetySec .uploaded-image:hover img {
+    opacity: 0.5;
+}
+
+.health-safetySec .image-uploader .uploaded .uploaded-image .delete-image i {
+    color: #004963;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.health-safetySec .image-uploader .uploaded .uploaded-image .delete-image {
+    background-color: transparent;
+    border: 2px solid #004963;
+    padding: 0.075rem;
+}
+
+.health-safetySec .form-group .control-label {
+    margin-bottom: 5px;
+}
+
+.health-safetySec .image-uploader {
+    min-height: 13rem;
+}
+
+.blogPage.health-safetySec .form-group {
+    margin-bottom: 1rem;
+}
+
+.blogPage.health-safetySec #health_and_safety_form .form-group {
+    margin-bottom: 2rem;
+}
+
+/* scorllbar css*/
+/* health and safety about setting page css */
+/* 30-10-22 */
+.seting-pages .profile-upload-text {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    grid-gap: 10px;
+}
+
+.settings_page .avtar-profile .profile-upload-text {
+    gap: 0px;
+    grid-gap: 0;
+}
+
+.blogPage.seting-pages .profile-upload-text .badge {
+    background: #9ce5c8;
+    color: #004963;
+    border: 1px solid #004963;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 15px;
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.blogPage.seting-pages .avtar-profile .btn-file-upload.button-spaces {
+    padding: 6px 40px !important;
+    margin-right: 0;
+}
+
+#error-delete-setting {
+    display: none;
+}
+
+#error-delete-setting.active {
+    display: block;
+}
+
+/* 30-10-22 */
+/* 31-10-22 */
+.health-safetySec .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.health-safetySec .btn-success {
+    border: 1px solid #c5dbec;
+    background: #d0e5f5;
+    font-weight: bold;
+    color: #2e6e9e;
+}
+
+.health-safetySec .fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.health-safetySec .fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: "alpha(opacity=0)";
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.health-safetySec .thumb {
+    height: 80px;
+    width: 110px;
+    border: 1px solid #000;
+}
+
+.health-safetySec ul.thumb-Images li {
+    width: 120px;
+    display: inline-block;
+    vertical-align: top;
+    height: 90px;
+}
+
+.health-safetySec .img-wrap {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+}
+
+.health-safetySec .img-wrap .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+    padding: 6px 4px;
+    color: rgb(0, 73, 99);
+    cursor: pointer;
+    opacity: 0;
+    font-size: 18px;
+    line-height: 5px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 73, 99);
+    background: transparent;
+    text-shadow: none;
+    font-weight: 600;
+}
+
+.health-safetySec .img-wrap:hover .close {
+    opacity: 1;
+}
+
+.health-safetySec .img-wrap:hover img {
+    opacity: 0.5;
+}
+
+.health-safetySec .FileNameCaptionStyle {
+    font-size: 12px;
+}
+
+.blogPage.update-profile-settings.health-safetySec .form-group .control-label {
+    font-size: 14px;
+}
+
+.health-safetySec .upload-icons-heading {
+    text-align: center;
+    color: #004963;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.health-safetySec .upload-icons-heading .hydrated {
+    font-size: 30px;
+}
+
+.health-safetySec .btn.fileinput-button {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #004963;
+    line-height: 24px;
+    text-decoration: underline;
+    letter-spacing: 0.10px;
+}
+
+.health-safetySec output {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.health-safetySec .FileNameCaptionStyle {
+    display: none;
+}
+
+/* 31-10-22 */
+/* 15-03-23 */
+.blogPage.update-profile-settings .avtar-profile1 .badge {
+    font-weight: 600;
+    background: #9ce5c8;
+    color: #004963;
+    border: 1px solid #004963;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 15px;
+}
+
+/* 15-03-23 */
+/* 07-04-23 */
+.settings_page .update_logo_profiles .form-control {
+    position: relative;
+}
+
+.settings_page .update_logo_profiles .form-control::before {
+    position: absolute;
+    content: '';
+    width: 110px;
+    height: 40px;
+    background: #004963;
+    top: -1px;
+    left: 0;
+    content: 'Choose file';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.settings_page .update_logo_profiles img {
+    margin-bottom: 25px;
+    margin-top: 7px;
+    max-width: 30%;
+    height: auto;
+}
+
+.settings_page .update_logo_profiles {
+    margin: 15px 0 50px;
+}
+
+/* 07-04-23 */
+
+/* Responsive CSS */
+@media screen and (min-width:6000px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 46.5%;
+    }
+}
+
+@media screen and (min-width:5000px) and (max-width:5999px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width:4000px) and (max-width:4999px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 41%;
+    }
+}
+
+@media screen and (min-width:3000px) and (max-width:3999px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 42.5%;
+    }
+}
+
+@media screen and (min-width:2000px) and (max-width:2999px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width:1900px) and (max-width:1999px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 38%;
+    }
+}
+
+@media screen and (min-width:1800px) and (max-width:1899px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 37%;
+    }
+}
+
+@media screen and (min-width:1720px) and (max-width:1799px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 36%;
+    }
+}
+
+@media screen and (min-width:1500px) and (max-width:1599px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 34.5%;
+    }
+}
+
+
+@media screen and (min-width:1400px) and (max-width:1499px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 33.5%;
+    }
+}
+
+@media screen and (min-width:1300px) and (max-width:1399px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 32.5%;
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width:1299px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 31.5%;
+    }
+}
+
+
+/* media 1199 */
+@media screen and (max-width:1199px) {
+    .blogPage.update-profile-settings .profile-tabs .nav .nav-link span {
+        font-size: 14px;
+    }
+
+    .update-profile-settings .editicon-setting {
+        height: 35px;
+        width: 35px;
+    }
+
+    .blogPage.update-profile-settings .page-title {
+        font-size: 17px;
+    }
+
+    .blogPage.update-profile-settings .form-group .control-label,
+    .blogPage.update-profile-settings .btn-custom,
+    .blogPage.update-profile-settings .form-control,
+    .blogPage.update-profile-settings .custom-control .custom-control-label {
+        font-size: 13px;
+    }
+
+    .blogPage.update-profile-settings.health-safetySec .form-group .control-label,
+    .health-safetySec .upload-icons-heading,
+    .health-safetySec .btn.fileinput-button {
+        font-size: 13px;
+    }
+
+    .avtar-profile .btn-file-upload {
+        font-size: 13px !important;
+    }
+
+    .blogPage.update-profile-settings .form-input {
+        padding: 10px 15px;
+    }
+
+    .avtar-profile1 .btn-file-upload {
+        font-size: 14px !important;
+    }
+
+    .blogPage.update-profile-settings .form-group.avtar-profile {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+
+    .health-safetySec .img-wrap .close {
+        padding: 4px 3px;
+        font-size: 13px;
+    }
+
+    /* 07-04-23 */
+    .settings_page .update_logo_profiles .form-control::before {
+        width: 97px;
+    }
+
+    /* 07-04-23 */
+
+}
+
+/* media 1199 */
+
+
+@media screen and (min-width:1025px) and (max-width:1199px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 33.5%;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1024px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 31%;
+    }
+
+    .blogPage.update-profile-settings #wrapper {
+        min-height: auto;
+        padding-bottom: 35px;
+    }
+
+    .update-profile-col3 .row-custom {
+        margin-top: 57px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .blogPage.update-profile-settings #wrapper {
+        min-height: auto;
+        padding-bottom: 35px;
+    }
+
+    .change-pass-setting-page .btn-custom {
+        margin-bottom: 25px;
+    }
+
+    .update-profile-col3 .row-custom {
+        margin-top: 50px;
+    }
+
+    .seting-pages .show-email-add-phone-location.d-flex-setting {
+        gap: 0;
+        grid-gap: 0;
+        flex-wrap: wrap;
+    }
+
+    .seting-pages .show-email-add-phone-location.d-flex-setting .form-group {
+        flex: auto;
+    }
+
+    .seting-pages .show-email-add-phone-location.d-flex-setting .form-group {
+        margin-bottom: 0;
+    }
+
+    /* 15-03-23 setting update profile page */
+    .blogPage.update-profile-settings .form-group.avtar-profile {
+        gap: 10px;
+        grid-gap: 10px;
+        grid-template-columns: auto;
+    }
+
+    .settings_page .d-flex-setting.show-email-add-phone-location.grid_3cols {
+        grid-template-columns: auto;
+    }
+
+    .settings_page .d-flex-setting.show-email-add-phone-location.grid_3cols .custom-control {
+        line-height: 20px;
+    }
+
+    .blogPage.update-profile-settings .settings_page .btn-custom {
+        margin-top: 15px;
+    }
+
+    /* 15-03-23 setting update profile page */
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .blogPage.update-profile-settings .darkbg-left::before {
+        width: 42.5%;
+    }
+
+    .blogPage.update-profile-settings .form-input {
+        padding: 10px 10px;
+    }
+}
+
+.profile-tabs-dropdown {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .blogPage.update-profile-settings .breadcrumb {
+        justify-content: flex-start;
+    }
+
+    .blogPage.update-profile-settings .profile-tabs .nav .nav-link {
+        justify-content: space-between;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .blogPage.update-profile-settings .darkbg-left::before {
+        height: auto;
+        width: 100%;
+    }
+
+    .update-profile-col3 .row-custom {
+        margin-top: 0;
+    }
+
+    .update-profile-col9 {
+        margin-top: 15px;
+    }
+
+    .change-pass-setting-page .btn-custom {
+        margin-bottom: 0px;
+    }
+
+    .blogPage.update-profile-settings .profile-tab-content {
+        padding: 15px 25px 30px;
+    }
+
+    .update-profile-col3 .profile-tabs {
+        margin-right: 0;
+    }
+
+    .update-profile-col9,
+    .update-profile-col3 {
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+
+    .blogPage.update-profile-settings .darkbg-left {
+        padding-bottom: 20px;
+    }
+
+    .health-safetySec .img-wrap .close {
+        padding: 2px 2px;
+        font-size: 9px;
+    }
+
+    .profile-tabs {
+        display: none;
+    }
+
+    .profile-tabs-dropdown {
+        display: block !important;
+    }
+
+    /* 15-03-23 setting update profile css */
+    .blogPage.update-profile-settings select {
+        background-image: linear-gradient(45deg, transparent 50%, #004963 50%), linear-gradient(135deg, #004963 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+        background-position: calc(100% - 15px) calc(1em + 3px), calc(100% - 10px) calc(1em + 3px), 100% 0;
+        background-size: 8px 5px, 5px 5px, 2.5em 2.5em;
+        background-repeat: no-repeat;
+    }
+
+    .blogPage.update-profile-settings .form-control {
+        line-height: 25px;
+    }
+
+    /* 15-03-23 setting update profile css */
+    /* 15-03-23 setting social media css */
+    .setting_social_media_page .d-flex-setting {
+        grid-template-columns: 1fr;
+    }
+
+    .setting_health_safety_page .image-uploader .uploaded .uploaded-image {
+        width: calc(25% - 1rem);
+        padding-bottom: calc(25% - 1rem);
+    }
+
+    /* 15-03-23 setting social media css */
+    /* 07-04-23 */
+    .settings_page .update_logo_profiles .form-control {
+        line-height: 19px;
+    }
+
+    /* 07-04-23 */
+
+}
+
+
+@media screen and (max-width:575px) {
+    .d-flex-setting {
+        flex-direction: column;
+    }
+
+    .d-flex-setting .form-group {
+        width: 100%;
+    }
+
+    .blogPage.update-profile-settings .form-group.avtar-profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* setting page update profile css */
+    .settings_page .grid_3cols,
+    .settings_page .grid_2cols {
+        grid-template-columns: 1fr;
+    }
+
+    .blogPage.update-profile-settings .settings_page .btn-custom {
+        margin-top: 30px;
+    }
+
+    .settings_page .profile-tab-content p {
+        text-align: center;
+    }
+
+    /* setting page update profile css */
+    /* 07-04-23 */
+    .settings_page .update_logo_profiles img {
+        max-width: 35%;
+    }
+
+    /* 07-04-23 */
+
+
+}
+
+@media screen and (max-width:480px) {
+
+    /* 07-04-23 */
+    .settings_page .update_logo_profiles img {
+        max-width: 45%;
+    }
+
+    /* 07-04-23 */
+}
+
+@media screen and (max-width:360px) {
+
+    /* 15-3-23 setting page update profile css */
+    .avtar-profile1 .btn-file-upload {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .setting_health_safety_page .image-uploader .uploaded .uploaded-image {
+        width: calc(50% - 1rem);
+        padding-bottom: calc(50% - 1rem);
+    }
+
+    /* 15-3-23 setting page update profile css */
+    /* 15-3-23 setting page cover images css */
+    .blogPage.seting-pages .profile-upload-text .badge {
+        font-size: 11px;
+    }
+
+    .blogPage.update-profile-settings .avtar-profile1 .badge {
+        font-size: 11px;
+        margin-top: 10px;
+    }
+
+    /* 15-3-23 setting page cover images css */
+    /* 07-04-23 */
+    .settings_page .update_logo_profiles img {
+        max-width: 70%;
+    }
+
+    /* 07-04-23 */
+}
+
+@media screen and (max-width:330px) {
+
+    /* 15-3-23 setting page cover images css */
+    .blogPage.update-profile-settings .avtar-profile1 .badge,
+    .blogPage.seting-pages .profile-upload-text .badge {
+        font-size: 9px;
+    }
+
+    /* 15-3-23 setting page cover images css */
+
+}

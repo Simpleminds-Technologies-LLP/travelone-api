@@ -1,0 +1,12 @@
+ [data-match-height] {
+	 background-color: white;
+	 padding: 20px;
+	 display: inline-block;
+	 width: 30%;
+	 margin: 0 1%;
+	 vertical-align: top;
+	 text-align: left;
+	 border-radius: 3px;
+	 line-height: 22px;
+}
+ 

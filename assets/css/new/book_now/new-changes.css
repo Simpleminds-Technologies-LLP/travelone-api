@@ -1,0 +1,1121 @@
+:root {
+    --bg-light-green: #dfffde;
+    --white: #FFF;
+    --black: #000;
+    --text-color: #004963;
+    --red: #ff4c46;
+    --titleSecfonts: 30px;
+    --letterSpacing: 0.25px;
+    --anchorBg: #243144;
+    --anchorHoverBg: #90e9bd;
+}
+
+a {
+    color: var(--text-color);
+    transition: 0.5s all ease-in-out;
+}
+
+.plan_trip_nationality .fixCheckboxsc {
+    display: flex;
+    gap: 20px;
+    grid-gap: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: flex-start;
+}
+
+.plan_trip_nationality .form-check {
+    border: 1px solid #004963;
+    position: relative;
+    border-radius: 4px;
+    margin: 0;
+    height: 51px;
+    width: 118px;
+}
+
+.plan_trip_nationality .form-check-input:checked[type=checkbox],
+.plan_trip_nationality .form-check-input:checked[type=radio] {
+    background-image: url('../../../img/checked.png');
+    background-repeat: no-repeat;
+    outline: none;
+    border: 0;
+}
+
+.plan_trip_nationality .form-check-input[type=checkbox] {
+    position: absolute;
+    top: -18px;
+    cursor: pointer;
+    left: 44px;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    bottom: auto;
+    background: transparent;
+    appearance: none;
+    background-image: url('../../../img/check.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    border: 0;
+}
+
+.plan_trip_nationality .form-check-label {
+    color: #004963;
+    font-size: 13px;
+    line-height: inherit;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.plan_trip_nationality {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.plan_trip_nationality .step-footer {
+    gap: 10px;
+    grid-gap: 10px;
+    margin-top: 40px;
+}
+
+/* card design book now popup */
+.booknow_popupCard {
+    margin-top: 70px;
+    width: 100%;
+    position: relative;
+}
+
+.booknow_popupCard .plan-content {
+    position: relative;
+    cursor: pointer;
+}
+
+.booknow_popupCard .card-trading-deals {
+    margin-bottom: 30px;
+    position: relative;
+    background: #FFF;
+    padding: 15px;
+    border: 0px solid #ddd;
+    box-shadow: 3px 0 8px rgb(0 0 0 / 35%);
+    box-shadow: 3px 0 8px rgb(0 73 99 / 40%);
+    border-radius: 0px;
+    transition: 0.5s all ease-in-out;
+}
+
+.booknow_popupCard .card-trnd-loc-days,
+.booknow_popupCard .actplace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.booknow_popupCard .card_agnt_block1 {
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .card-an-trnd-deal {
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .rateTrandHome {
+    padding-left: 5px;
+}
+
+.booknow_popupCard .locationHeading {
+    font-size: 13px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+
+.booknow_popupCard .country_days_agnt {
+    flex-direction: column;
+    display: flex;
+    align-items: end;
+}
+
+.booknow_popupCard .DealsheadingRed {
+    color: #ff4c46;
+    font-size: 13px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.booknow_popupCard .iconWrap {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .countryFlag_Tooltip .img-fluid {
+    width: 22px;
+}
+
+.booknow_popupCard .iconWrap.countryFlag_Tooltip .tooltip {
+    left: -10px;
+    width: fit-content;
+    top: 24px;
+}
+
+.booknow_popupCard .iconWrap .tooltip {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    font-size: 15px;
+    color: #004963;
+    background-color: #FFF;
+    border-radius: 4px;
+    transform: translateX(-0.325rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+    padding: 15px 15px 0;
+    font-weight: 500;
+    width: max-content;
+    box-shadow: 1px 5px 8px rgb(0 0 0 / 28%);
+}
+
+.booknow_popupCard .iconWrap.countryFlag_Tooltip .tooltip::before {
+    left: 15px;
+}
+
+.booknow_popupCard .iconWrap .tooltip::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    left: 75px;
+    top: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 1px;
+}
+
+.booknow_popupCard .iconWrap .tooltip p {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.booknow_popupCard .slider_label_bestsellar {
+    position: absolute;
+    top: 68px;
+    left: 15px;
+    right: 15px;
+    bottom: auto;
+    z-index: 9;
+}
+
+.booknow_popupCard .BstSellerDeals,
+.booknow_popupCard .RefundableTour {
+    font-size: 11px;
+    width: auto;
+    display: inline-block;
+    padding: 3px 10px;
+    color: #FFF;
+    letter-spacing: 0.25px;
+    position: absolute;
+    top: 7px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.booknow_popupCard .BstSellerDeals {
+    background: #ff4c46;
+}
+
+.booknow_popupCard .RefundableTour {
+    background: #20c593;
+    right: 0;
+}
+
+.booknow_popupCard .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.booknow_popupCard .dealsHeading,
+.booknow_popupCard .dealsHeading a {
+    font-size: 14px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    min-height: 45px;
+    margin-top: 10px;
+}
+
+.booknow_popupCard .card-trading-deals .actplace {
+    justify-content: flex-start;
+}
+
+.booknow_popupCard .actplace {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.booknow_popupCard .dealsActivity,
+.booknow_popupCard .dealsPlaces,
+.booknow_popupCard .priceViewDeals {
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .dealsActivity .img-fluid,
+.booknow_popupCard .dealsPlaces .img-fluid {
+    width: 13px;
+}
+
+.booknow_popupCard .pActivitys,
+.booknow_popupCard .pPlaces {
+    font-size: 12px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 400;
+    color: var(--text-color);
+    padding-left: 5px;
+}
+
+.booknow_popupCard .iconWrap {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .card-trading-deals .dealsPlaces {
+    padding-left: 10px;
+}
+
+.booknow_popupCard .dealsActivity,
+.booknow_popupCard .dealsPlaces,
+.priceViewDeals {
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .iconWrap .tooltip {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    font-size: 15px;
+    color: #004963;
+    background-color: #FFF;
+    border-radius: 4px;
+    transform: translateX(-0.325rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+    padding: 15px 15px 0;
+    font-weight: 500;
+    width: 135px;
+    box-shadow: 1px 5px 8px rgb(0 0 0 / 28%);
+}
+
+.booknow_popupCard .iconWrap .tooltip::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    left: 75px;
+    top: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 1px;
+}
+
+.booknow_popupCard .iconWrap .tooltip p {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.booknow_popupCard .DealsRating {
+    display: block;
+}
+
+.booknow_popupCard .DealsRating .pActivitys {
+    padding-left: 0;
+    padding-bottom: 25px;
+}
+
+.booknow_popupCard .priceViewDeals {
+    justify-content: space-between;
+}
+
+.booknow_popupCard .dealsActivity,
+.booknow_popupCard .dealsPlaces,
+.booknow_popupCard .priceViewDeals {
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .wishlist_commentBlock {
+    display: flex;
+    align-items: center;
+}
+
+.booknow_popupCard .wishlist_commentBlock a {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+    font-weight: normal;
+}
+
+.booknow_popupCard .badge.badge-success {
+    background-color: #20c593;
+}
+
+.booknow_popupCard .badge {
+    letter-spacing: 0;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.booknow_popupCard .badge.badge-success {
+    background-color: #63ed7a;
+}
+
+.booknow_popupCard .card-trading-deals .priceDeals {
+    display: flex;
+}
+
+.booknow_popupCard .card-trading-deals .priceDeals {
+    color: #004963;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 23px;
+    position: relative;
+}
+
+.booknow_popupCard span.boldTextPrice {
+    font-size: 16px;
+    color: #004963;
+}
+
+.booknow_popupCard .adByDelas,
+.booknow_popupCard .boldTextPrice {
+    font-weight: 600;
+}
+
+.booknow_popupCard .card-trading-deals::after {
+    position: absolute;
+    content: '';
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    border-top: 1px solid #bbced5;
+}
+
+.booknow_popupCard .wsh-list-agnt {
+    font-size: 21px;
+    line-height: inherit;
+    vertical-align: middle;
+    color: var(--text-color);
+    padding-right: 5px;
+}
+
+.booknow_popupCard .priceViewDeals .iconWrapPrice .hydrated {
+    position: absolute;
+    top: -8px;
+    left: auto;
+    right: -93px;
+    font-size: 14px;
+}
+
+.booknow_popupCard .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+    left: 10px;
+    top: 25px;
+    bottom: auto;
+    top: -120px;
+    width: 135px;
+    position: absolute;
+}
+
+.booknow_popupCard .iconWrap .tooltip {
+    padding: 10px 7px;
+}
+
+.booknow_popupCard .hydrated {
+    font-size: 18px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+.booknow_popupCard .priceViewDeals .iconWrap .tooltip::before {
+    top: auto;
+    bottom: -8px;
+}
+
+.booknow_popupCard .iconWrap .tooltip::before {
+    width: 10px;
+    height: 10px;
+}
+
+.booknow_popupCard .wishlist_commentBlock .icondisplaynone {
+    display: none;
+    transition: 0.5s all ease-in-out;
+    color: var(--text-color);
+}
+
+.booknow_popupCard .dealsPlaces a:hover .pPlaces,
+.booknow_popupCard .dealsActivity a:hover .pActivitys,
+.booknow_popupCard .card-trading-deals .dealsHeading a:hover,
+.booknow_popupCard .rateTrandHome a:hover .locationHeading,
+.booknow_popupCard .card-trading-deals a:hover {
+    color: #fd4c44;
+}
+
+.booknow_popupCard .wishlist_commentBlock a:hover .icondisplayblock,
+.booknow_popupCard .wishlist_commentBlock a:focus .icondisplayblock {
+    display: none;
+}
+
+.booknow_popupCard .wishlist_commentBlock a:hover .icondisplaynone,
+.booknow_popupCard .wishlist_commentBlock a:focus .icondisplaynone {
+    display: block;
+    color: #fd4c44;
+}
+
+.booknow_popupCard .iconWrap:hover .tooltip,
+.booknow_popupCard .iconWrap:visited .tooltip,
+.booknow_popupCard .iconWrap:focus .tooltip,
+.booknow_popupCard .iconWrap:focus-within .tooltip {
+    transform: translateX(0.325rem);
+    opacity: 1;
+    transition: 0.5s all ease-in-out;
+}
+
+.booknow_popupCard .ads_agnt_travel {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.booknow_popupCard .rateTrandHome .ads_agnt_travel .card-an-trnd-deal span {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.booknow_popupCard .rate_Heading {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.booknow_popupCard .ads_agnt_travel .img-fluid {
+    width: 10px;
+    margin-top: -2px;
+}
+
+.booknow_popupCard .ads_agnt_travel span.rate_Heading {
+    padding-left: 5px;
+}
+
+.booknow_popupCard .travel_agent_details {
+    position: relative;
+}
+
+.booknow_popupCard .travel_agent_details::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #20c593;
+    border-radius: 50px;
+    top: 2px;
+    bottom: 0;
+    left: auto;
+    right: 2px
+}
+
+.booknowPopupPage .wizSec .ulWizard {
+    height: auto;
+}
+
+.MymodalBooknowPoup.offcanvas-bottom {
+    height: 100vh;
+}
+
+.MymodalBooknowPoup.offcanvas {
+    background-color: #e0ffdf;
+}
+
+.MymodalBooknowPoup .btn-close {
+    background-image: url('../../../img/cross.png');
+    background-size: 100%;
+    margin-right: 0 !important;
+}
+
+.booknowButton {
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.MymodalBooknowPoup.offcanvas {
+    transition: 0.8s all ease-in-out;
+}
+
+.MymodalBooknowPoup .offcanvas-title {
+    width: 175px;
+}
+
+.MymodalBooknowPoup .offcanvas-title .logo {
+    width: 100%;
+}
+
+.MymodalBooknowPoup .offcanvas-header {
+    padding: 1rem 0rem;
+}
+
+.MymodalBooknowPoup .form-check-input:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.MymodalBooknowPoup .booknow_popupCard .card-img-top {
+    width: auto;
+    margin: auto;
+}
+
+.MymodalBooknowPoup.offcanvas.show {
+    z-index: 9999;
+}
+
+.MymodalBooknowPoup .plan_trip_nationality .form-check {
+    min-width: 118px;
+}
+
+.MymodalBooknowPoup .counterIncDec1 .formInput {
+    font-size: 15px;
+}
+
+/* card design book now popup */
+
+/* 02-03-23 book now model */
+.list-details-booknow .rooms_category_tabBlock .roomTabs .tab:last-child .titleRoom {
+    border-right: 0;
+}
+
+.list-details-booknow .calendar-box {
+    margin-bottom: 25px;
+}
+
+.list-details-booknow.MymodalBooknowPoup .threeStepCounter .calendar-box span {
+    font-weight: 700;
+}
+
+.list-details-booknow.MymodalBooknowPoup .form-control {
+    line-height: inherit !important;
+}
+
+/* 02-03-23 book now model */
+
+/* 09-03-23 book now model dropdown arrow */
+.list-details-booknow.MymodalBooknowPoup .OthersnationalitySec .form-control {
+    background-image: linear-gradient(45deg, transparent 50%, #004963 50%), linear-gradient(135deg, #004963 50%, transparent 50%), linear-gradient(to right, transparent, transparent);
+    background-position: calc(100% - 15px) calc(1em + 3px), calc(100% - 10px) calc(1em + 3px), 100% 0;
+    background-size: 8px 5px, 5px 5px, 2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+/* 09-03-23 book now model dropdown arrow */
+
+
+
+/*Responsive media query start*/
+@media screen and (min-width:992px) and (max-width: 1499px) {
+
+    /* 03-03-23 book now model */
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-footer>.step-btn {
+        padding: 11.5px 23px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-footer>.step-btn.backBtn.prevfooterbtn {
+        padding: 10.5px 23px;
+    }
+
+    /* 03-03-23 book now model */
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .MymodalBooknowPoup .mobile-wd-half:last-child {
+        margin: 0;
+    }
+
+    .MymodalBooknowPoup .priceViewDeals .wsh-list-agnt {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .plan_trip_nationality .fixCheckboxsc {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+
+    .booknowPopupPage {
+        margin-top: 15px;
+    }
+
+    .booknow_popupCard .card-img-top {
+        width: auto;
+    }
+
+    .booknow_popupCard .trnd-img {
+        text-align: center;
+    }
+
+    .booknowPopupPage .step-steps {
+        margin-top: 15px;
+    }
+
+    .booknow_popupCard {
+        margin-top: 55px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .locationHeading,
+    .MymodalBooknowPoup .booknow_popupCard .card-trading-deals .priceDeals {
+        font-size: 10px;
+    }
+
+    .MymodalBooknowPoup .card-trnd-loc-days .DealsheadingRed,
+    .MymodalBooknowPoup .booknow_popupCard .BstSellerDeals,
+    .MymodalBooknowPoup .booknow_popupCard .RefundableTour,
+    .MymodalBooknowPoup .booknow_popupCard .pActivitys,
+    .MymodalBooknowPoup .booknow_popupCard .pPlaces,
+    .MymodalBooknowPoup .booknow_popupCard .rate_Heading {
+        font-size: 8px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .ads_agnt_travel .img-fluid {
+        width: 8px;
+        margin-top: -4px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .countryFlag_Tooltip .img-fluid {
+        width: 15px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .dealsHeading,
+    .MymodalBooknowPoup .booknow_popupCard .dealsHeading a {
+        font-size: 11.5px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard span.boldTextPrice {
+        font-size: 12px;
+    }
+
+    .MymodalBooknowPoup .priceViewDeals .wsh-list-agnt {
+        margin-right: 0px;
+        font-size: 16px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .priceViewDeals {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .priceViewDeals .iconWrapPrice .hydrated {
+        top: -2px;
+        right: -73px;
+        font-size: 10px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .iconWrap .tooltip p {
+        font-size: 9.5px;
+        margin-bottom: 5px;
+
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        left: -15px;
+        top: 25px;
+        top: -100px;
+        width: 115px;
+    }
+
+    .MymodalBooknowPoup .dealsHeading {
+        min-height: 35px;
+    }
+
+    .MymodalBooknowPoup .booknow_popupCard .mobile-wd-half {
+        padding: 0 5px;
+    }
+
+    .MymodalBooknowPoup .stepSoloUL .plan-content {
+        width: 160px;
+        min-width: 160px
+    }
+
+    .MymodalBooknowPoup .stepSoloUL .plan-content img {
+        left: 64px;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+
+    /* 03-03-23 book now model */
+    .list-details-booknow .wizSec .stepWizard,
+    .list-details-booknow .wizSec .MymodalBooknowPoup .desktop-progressbar {
+        width: 100%;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .secTitle h2 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .list-details-booknow .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 44px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-footer>.step-btn {
+        font-size: 13px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .desktop-progressbar {
+        width: 100%;
+        padding: 50px 12px;
+        margin-left: 0;
+        flex: inherit;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .process_heading {
+        font-size: 16px;
+        margin-bottom: 17px;
+        text-align: left;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .icon-bella {
+        margin: 0;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .bella-d-flex {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .bella-d-flex .destination-expertCall {
+        width: auto;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .bella-d-flex .callChatANch {
+        justify-content: flex-start;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-steps>li span {
+        font-size: 14px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .titleCounter {
+        font-size: 14px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .subheadingCounter {
+        font-size: 13px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .counterIncDec input[type="text"],
+    .list-details-booknow.MymodalBooknowPoup .threeStepCounter span {
+        font-size: 15px;
+    }
+
+    .list-details-booknow .travelers-room-new .titleRoom {
+        font-size: 17px !important;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .counterIncDec input[type="text"] {
+        width: 30px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .counterIncDec button {
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-footer>.step-btn {
+        padding: 10.5px 23px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-footer>.step-btn.backBtn.prevfooterbtn {
+        padding: 9.5px 23px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .counterIncrementDecremnet {
+        padding: 10px 20px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .form-label {
+        font-size: 15px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .form-control,
+    .MymodalBooknowPoup .otherinputfiled .form-control {
+        height: 37px !important;
+    }
+
+    /* 03-03-23 book now model */
+    /* 18-3-23 */
+    #book_now_modal.list-details-booknow .wizSec .ulWizard {
+        height: auto;
+    }
+
+    /* 18-3-23 */
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .MymodalBooknowPoup .stepSoloUL .plan-content {
+        width: 120px;
+        min-width: 120px
+    }
+
+    .MymodalBooknowPoup .stepSoloUL .plan-content img {
+        left: 46px;
+    }
+
+    .MymodalBooknowPoup .counterIncDec1 .formInput {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .booknowPopupPage .step-footer {
+        align-items: flex-start;
+    }
+
+    .booknowPopupPage .mobile-wd-half {
+        width: 50%;
+    }
+
+    .MymodalBooknowPoup .plan_trip_nationality .form-check {
+        min-width: 118px;
+    }
+
+    .MymodalBooknowPoup .offcanvas-title {
+        width: 150px;
+    }
+
+    /* 03-03-23 book now model */
+    .list-details-booknow.MymodalBooknowPoup .wizSec .ulWizard {
+        padding: 0;
+    }
+
+    .list-details-booknow .travelers-room-new .titleRoom {
+        font-size: 15.5px !important;
+    }
+
+    /* 03-03-23 booknow now model */
+
+
+
+}
+
+@media screen and (max-width:575px) {
+    .booknowPopupPage .mobile-wd-half {
+        width: 100%;
+    }
+
+    /* 03-03-23 book now popup */
+    .list-details-booknow .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 33px;
+        top: -18px;
+        width: 31px;
+        height: 31px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .plan_trip_nationality .form-check {
+        min-width: 96px;
+    }
+
+    .list-details-booknow .rooms_category_tabBlock .roomTabs.tab {
+        padding-bottom: 10px;
+        flex-direction: row;
+    }
+
+    .list-details-booknow .travelers-room-new .room-one-new img.deleteRoom {
+        margin-bottom: 0;
+    }
+
+    /* 03-03-23 book now popup */
+
+}
+
+@media screen and (max-width:480px) {
+    .MymodalBooknowPoup .plan_trip_nationality .fixCheckboxsc {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .MymodalBooknowPoup .plan_trip_nationality .form-check:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    /* 03-03-23 book now popup */
+    .list-details-booknow .calendar-box {
+        width: 75%;
+        margin: auto;
+    }
+
+    .list-details-booknow .calendar-box .day span,
+    .list-details-booknow .week .day.selected span {
+        width: 21px;
+        height: 21px;
+        line-height: 21px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .secTitle h2 {
+        text-align: center;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .process_heading {
+        text-align: center;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .bella-d-flex {
+        flex-direction: column;
+    }
+
+    .list-details-booknow .calender-step3_blk.booking_calender {
+        margin-bottom: 25px;
+    }
+
+    .list-details-booknow .rooms_category_tabBlock .roomTabs.tab {
+        flex-direction: column;
+    }
+
+    .list-details-booknow .rooms_category_tabBlock .room_divblock1 {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+
+    .list-details-booknow .rooms_category_tabBlock .roomTabs .titleRoom {
+        padding-right: 10px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .step-footer>.step-btn.backBtn.prevfooterbtn {
+        padding: 9.5px 10px;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .wizardForm .form-label {
+        text-align: center;
+    }
+
+    /* 03-03-23 book now popup */
+    /* 11-03-23 book now popup */
+    .list-details-booknow .travelers-room-new .titleRoom {
+        font-size: 13.5px !important;
+    }
+
+    .list-details-booknow .plan_trip_nationality .fixCheckboxsc {
+        grid-template-columns: auto auto;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .bella-d-flex {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .list-details-booknow.MymodalBooknowPoup .icon-bella {
+        margin: auto;
+    }
+
+    .list-details-booknow .travelers-room-new .stepTemparateUL {
+        grid-template-columns: auto;
+    }
+
+    .list-details-booknow .rooms_category_tabBlock .room_divblock1 {
+        grid-template-columns: 61px 61px 61px 61px 61px;
+    }
+
+    .list-details-booknow .rooms_category_tabBlock .roomTabs.tab {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .list-details-booknow .travelers-room-new .room-one-new {
+        text-align: center;
+    }
+
+    /* 11-03-23 book now popup */
+    /* 18-03-23 book now popup */
+    #book_now_modal.list-details-booknow .bella-d-flex {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    /* 18-03-23 book now popup */
+
+}
+
+@media screen and (max-width: 439px) {
+
+    /* 03-03-23 book now popup */
+    .list-details-booknow .calendar-box {
+        width: auto;
+    }
+
+    /* 03-03-23 book now popup */
+    /* 11-03-23 book now popup */
+    .list-details-booknow .rooms_category_tabBlock .room_divblock1 {
+        grid-template-columns: auto auto;
+    }
+
+    /* 11-03-23 book now popup */
+
+}
+
+@media screen and (max-width:416px) {
+    .plan_trip_nationality .fixCheckboxsc {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .plan_trip_nationality .form-check:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media screen and (max-width:370px) {
+    .list-details-booknow .booknowPopupPage .step-footer {
+        flex-direction: column;
+    }
+
+    .list-details-booknow .booknowPopupPage button.upate_book_item_submit_btn {
+        margin-top: 10px !important;
+    }
+}

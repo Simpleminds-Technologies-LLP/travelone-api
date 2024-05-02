@@ -1,0 +1,198 @@
+.VideoblockSec .tabs-container nav ul li {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 25px;    
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    transition: 0.3s all ease-in-out;
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: middle;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+.VideoblockSec .tabs-container nav ul li:hover {
+    color: #3e4b58;
+}
+.VideoblockSec .tabs-container nav ul li.active {
+    color: #3e4b58;
+    border-top: none;
+}
+.VideoblockSec .tabs-container {
+    position: relative;
+    height: auto;
+}
+.VideoblockSec .tabs-container nav {
+    position: absolute;
+    width: auto;
+    top: 10px;
+}
+.VideoblockSec .tabs-container nav ul li {
+    order: 1;
+    border-bottom: 0px solid #ff4c46;
+}
+.VideoblockSec .tabs-container nav ul li.active {
+    order: 0;
+}
+.VideoblockSec .tabs-container nav ul li.active:after {
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-top: 5px solid #555;
+    content: '';
+    position: absolute;
+    right: 1.5em;
+    top: 1.4em;
+    z-index: 9999;
+}
+.VideoblockSec .tabs-container nav ul li:not(.active) {
+    position: absolute;
+    top: -999em;
+}
+.VideoblockSec .tabs-container nav ul.expanded li.active:after {
+    border-top-color: transparent;
+    border-bottom-color: #555;
+    top: 1em;
+}
+.VideoblockSec .tabs-container nav ul.expanded li:not(.active) {
+    position: relative;
+    top: auto;
+}
+@media all and (min-width: 42em) {
+  
+   .VideoblockSec .tabs-container nav ul li.active {
+        
+        border: 1px solid #ff4c46;
+        color: #ff4c46; 
+   }
+   .VideoblockSec .tabs-container nav ul {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        border: none;
+        padding: 0;
+   }
+   .VideoblockSec .tabs-container nav ul li {
+        display: inline-block;
+        margin: 0 1rem 0 1rem;
+        border: none;
+   }
+   .VideoblockSec .tabs-container nav ul li:not(.active) {
+        position: relative;
+        top: auto;     border-bottom: 1px solid #004963;
+   }
+   .VideoblockSec .tabs-container nav ul li.active {
+        order: 1;
+   }
+   .VideoblockSec .tabs-container nav ul li.active:after {
+        display: none;
+   }
+}
+.VideoblockSec .tab-content {
+    display: none;
+    padding: 15px;
+}
+.VideoblockSec .tab-content.current {
+    display: inherit;
+}
+@media screen and (min-width:672px) and (max-width:1399px){
+    .VideoblockSec .tabs-container nav ul li.active {
+        box-shadow: none;
+        border-bottom: 3px solid #ff4c46;
+    }
+    .VideoblockSec .tabs-container nav ul li {
+        margin: 0 5px;
+    }
+}
+@media screen and (min-width:672px) and (max-width:1199px){
+    .VideoblockSec .tabs-container nav ul li {
+        padding: 10px 20px;
+    }
+}
+@media screen and (min-width:672px) and (max-width:991px){
+    .VideoblockSec .tabs-container {
+        height: 4rem;
+    }
+    .VideoblockSec .tabs-container nav {
+        top: 0; width: 100%;
+    }
+    .VideoblockSec .tabs-container nav ul {
+        justify-content: center;
+    }
+    .VideoblockSec .tabs-container nav ul li {font-size: 18px; }
+}
+@media screen and (max-width:671px){
+    .VideoblockSec .tabs-container nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .VideoblockSec .tabs-container nav ul.expanded li:not(.active) {
+        position: relative;
+        top: auto;
+    }
+    .VideoblockSec .tabs-container nav ul li {
+        padding: 0.75rem;
+        cursor: pointer;
+        color: #A7A7A7;
+        border-top: 1px solid #eee;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 25px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .VideoblockSec .tabs-container nav ul.expanded li.active:after {
+        border-top-color: transparent;
+        border-bottom-color: #555;
+        top: 1em;
+    }
+    .VideoblockSec  .tabs-container nav ul li.active:after {
+        width: 1px;
+        height: 1px;
+        border: 5px solid transparent;
+        border-top: 5px solid #555;
+        content: "";
+        position: absolute;
+        right: 1.5em;
+        top: 20px;
+        z-index: 9999;
+    }
+    .VideoblockSec .tabs-container nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #004963;
+        padding: 0 10px;
+        border-radius: 4px;
+        background: #dfffde;
+    }
+    .VideoblockSec .tabs-container nav {
+        position: relative;
+        width: 100%;
+    }
+    .VideoblockSec .tabs-container nav {
+        margin: 0 auto;
+        background: #fff;
+    }
+    .VideoblockSec .tabs-container nav ul li.active {
+        border-bottom: 0px;
+    }
+   
+    .VideoblockSec .tabs-container nav {
+        width: 100%;
+    }
+    .VideoblockSec .tabs-container nav {
+        top: 0;
+    }
+    .Videoblockrows {
+        flex-direction: column-reverse;
+    }
+    .VideoblockSec .tab-content {
+        padding: 15px 0 0;
+    }
+}

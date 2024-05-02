@@ -1,0 +1,5124 @@
+.SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+    position: absolute;
+    top: -20px;
+    cursor: pointer;
+    left: 43%;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    bottom: auto;
+    background: transparent;
+    appearance: none;
+    background-image: url('../../img/check.png');
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    border: 0;
+}
+.SliderBannerSec .tourHeadingPrice span {
+    font-weight: 700;
+}
+.SliderBannerSec .guestnationalitySec .form-check-input:checked[type=radio] {
+    background-image: url('../../img/detail-checked.png');
+    background-repeat: no-repeat;
+    outline: none;
+}
+.SliderBannerSec .FormStep1Div label,
+.SliderBannerSec .form-check-label {
+    color: #004963;
+    font-size: 13px;
+    line-height: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+.SliderBannerSec .MultiStepSec label {
+    display: block;
+}
+.SliderBannerSec .form-check {
+    position: relative;
+}
+.SliderBannerSec .form-check-input:checked {
+    background-color: transparent;
+    border-color: transparent;
+}
+.SliderBannerSec .form-check-input:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+.SliderBannerSec .form-check-input:active {
+    filter: none;
+}
+.SliderBannerSec .tourHeadingPrice {
+    padding-right: 0;
+    margin-left: 0px;
+    line-height: 30px;
+    font-size: 17px;
+}
+.SliderBannerSec .tourHeadingPrice span {
+    font-size: 29px;
+    line-height: 45px;
+}
+.SliderBannerSec .guestnationalitySec .form-check:not(:last-child) {
+    margin-right: 12px;
+}
+.SliderBannerSec .tourboxesBtn3 {
+    font-size: 13.5px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: var(--letterSpacing);
+    padding: 4px 5px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+    width: 115px;
+    text-align: center;
+    margin-bottom: 7px;
+    letter-spacing: 0.25px;
+    line-height: 36px;
+    padding: 3px 10px;
+    width: 140px;
+    border: 1px solid #004963;
+    text-decoration: none;
+}
+.SliderBannerSec .tourboxesBtn3:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    border-color: var(--anchorHoverBg);
+}
+.SliderBannerSec .tourboxesButtons1 {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    grid-gap: 10px;
+}
+.listing-detail-page .SliderBannerSec .tourboxesButtons1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.listing-detail-page .SliderBannerSec .detail-explorer-block1,
+.listing-detail-page .SliderBannerSec .detail-explorer-block2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    justify-content: flex-start;
+}
+.SliderBannerSec .details-para-title .para {
+    font-size: 11px;
+    line-height: inherit;
+    font-weight: 500;
+    text-align: right;
+}
+.SliderBannerSec .details-para-title {
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.SliderBannerSec .tourHeadingPrice span {
+    display: inline-block;
+    vertical-align: top;
+}
+.SliderBannerSec .detail-explorer-title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    padding: 0;
+}
+.SliderBannerSec .bg-dark-banner-rightBlock {
+    padding: 10px 15px 10px 25px;
+    margin-left: -12px;
+}
+.SliderBannerSec .Desktop-breadcrums ul.bannerSecUl {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.SliderBannerSec .tourboxesBtn1,
+.SliderBannerSec .tourboxesBtn2 {
+    box-shadow: 0 3px 8px rgb(0 73 99 / 50%);
+}
+.details_tabPackageSec.tabPackageSec .tab button {
+    padding: 25px 16px;
+}
+.details_tabPackageSec .ItineraytabSec .packTabSec .tabitemTitle {
+    padding: 15px;
+}
+.details_tabPackageSec .ItineraytabSec .packgesSecListView {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.SliderBannerSec .bannerTourHighlightsUl li {
+    display: flex;
+}
+.listing-detail-page .SliderBannerSec .bannerTourHighlightsUl li {
+    display: grid;
+}
+.greenLightBg .itemsTabContentCommon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabcontentBg2 .packTabContentDv {
+    background: #FFF;
+    border-radius: 0 0 50px;
+}
+.tabcontentBg2 .packgesSecListView {
+    background: transparent;
+}
+.itinerary_tab_Bg2 .tabs-container nav {
+    margin: 0 auto;
+    background: transparent;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(0 73 99 / 64%);
+    border-radius: 4px;
+    padding: 0 10px;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li {
+    padding: 1rem;
+    cursor: pointer;
+    color: rgb(0 73 98 / 76%);
+    border-top: 1px solid rgb(0 73 98 / 16%);
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 25px;
+    font-weight: 600;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li:hover {
+    color: #3e4b58;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li.active {
+    color: #004962;
+    border-top: none;
+}
+.itinerary_tab_Bg2 .tabs-container {
+    position: relative;
+    height: auto;
+}
+.itinerary_tab_Bg2 .tabs-container nav {
+    width: 100%;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul {
+    display: flex;
+    flex-direction: column;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li {
+    order: 1;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li.active {
+    order: 0;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li.active:after {
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-top: 5px solid #555;
+    content: '';
+    position: absolute;
+    right: 1.5em;
+    top: 1.4em;
+    z-index: 9999;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul li:not(.active) {
+    position: absolute;
+    top: -999em;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul.expanded li.active:after {
+    border-top-color: transparent;
+    border-bottom-color: #555;
+    top: 1em;
+}
+.itinerary_tab_Bg2 .tabs-container nav ul.expanded li:not(.active) {
+    position: relative;
+    top: auto;
+}
+@media all and (min-width: 42em) {
+    .itinerary_tab_Bg2 nav {
+        background: transparent;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li.active {
+        box-shadow: inset 0 -3px 0 #004962;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        border: none;
+        padding: 0;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li {
+        display: inline-block;
+        margin: 0 1rem 0 1rem;
+        padding: 0 0 0.2rem 0;
+        border: none;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li:not(.active) {
+        position: relative;
+        top: auto;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li.active {
+        order: 1;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li.active:after {
+        display: none;
+    }
+}
+.itinerary_tab_Bg2 .tab-content {
+    display: none;
+    padding: 0px;
+}
+.itinerary_tab_Bg2 .tab-content.current {
+    display: inherit;
+}
+.titleMarginPackIti {
+    display: flex;
+}
+#wrapper,
+.blogPage#wrapper {
+    width: 100%;
+    display: block;
+    position: relative;
+    min-height: 600px;
+    padding-top: 30px;
+}
+.blogPage .media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.blogPage .media-body {
+    -ms-flex: 1;
+    flex: 1;
+}
+.shop_wishlistPage .Section_common_padding,
+.shop_main_toursSec .Section_common_padding {
+    padding-top: 0;
+}
+.shop_main_toursSec .sortbyGreece .select-box {
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    padding: 9px 11px;
+    width: 245px;
+}
+.shop_main_toursSec .sortbyGreece .select-box__input-text {
+    font-weight: normal;
+}
+.shop_main_toursSec .sortbyGreece .select-box__icon {
+    top: 56%;
+    width: 10px;
+    height: 10px;
+}
+.shop_main_toursSec .sortbyGreece .select-box__list {
+    background: rgb(255 255 255);
+}
+.shop_main_toursSec .sortbyGreece .select-box__option {
+    padding: 10px;
+}
+.shop_main_toursSec .customerReviewsShopRight .simple-pagination ul {
+    text-align: right;
+}
+.about-result-orientdSec .contactTitle {
+    text-align: left;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.about-result-orientdSec {
+    position: relative;
+}
+.result-orientLeft::before {
+    position: absolute;
+    content: '';
+    background: #ffbfbf;
+    width: 49.5%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.aboutresultUL span {
+    color: #014962;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+}
+.aboutresultUL {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    grid-gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aboutresultUL li {
+    display: inline-flex;
+    gap: 10px;
+    grid-gap: 10px;
+    align-items: flex-start;
+    flex-basis: 40%;
+    display: grid;
+    grid-template-columns: 20px auto;
+}
+.about-result-orientdSec {
+    display: flex;
+    gap: 15px;
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.result-orientLeft {
+    flex-direction: column;
+    padding: 20px 20px 20px 28%;
+}
+.result-orientLeft .travelOneSec_travel.cardTitle {
+    letter-spacing: 0.25px;
+}
+.result-orientLeft .para {
+    margin-bottom: 50px;
+    text-align: left;
+}
+.result-orientLeft .img-fluid {
+    width: 20px;
+}
+.someofinvest-main {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 15px;
+    grid-row-gap: 50px;
+    grid-column-gap: 15px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card-someinvest {
+    flex-basis: 24%;
+    padding: 5px 20px 0;
+}
+.card-someinvest .cardpara {
+    font-size: 16px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: normal;
+    color: #014962;
+}
+.card-someinvest .cardTitle {
+    margin-bottom: 5px;
+}
+.card-someinvest .imgSomeInvest {
+    margin-bottom: 10px;
+}
+.OurTeam_about .card-someinvest .imgSomeInvest {
+    margin-bottom: 0px;
+}
+.OurTeam_about .someofinvest-main {
+    justify-content: space-between;
+    column-gap: 30px;
+    grid-column-gap: 30px;
+}
+.OurTeam_about .card-someinvest {
+    flex-basis: 31.33%;
+    gap: 10px;
+    grid-gap: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+}
+.OurTeam_about .card-details {
+    text-align: center;
+}
+.travel_agency-page .OurvaluesbeliefsSec {
+    background: #d1f8f8;
+}
+.OurvaluesbeliefsSec .contactTitle {
+    text-align: left;
+}
+.OurvaluesbeliefsSec .ecosystem_border {
+    border-color: #004963;
+    border-style: solid;
+    box-shadow: 1.5px 0 5px rgb(1 73 98 / 35%);
+    transition: 0.5s all ease-in-out;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 30px;
+    padding: 35px;
+}
+.OurvaluesbeliefsSec .ecosystem_border:hover {
+    box-shadow: 3px 0 10px rgb(1 73 98 / 35%);
+}
+.OurvaluesbeliefsSec .subheading-beliesec {
+    text-align: left;
+}
+.heading-beliesec {
+    margin-top: 15px;
+    font-weight: 500;
+}
+.realTimeSupportSec {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.realTimeSupportLeft,
+.realTimeSupportRight {
+    flex: 1;
+}
+.realTimeSupportSec .contactTitle {
+    text-align: left;
+}
+.realTimeSupportRight {
+    padding-left: 30px;
+}
+.realTimeSupportUl.aboutresultUL li {
+    align-items: flex-start;
+    flex-basis: auto;
+    flex: 1;
+}
+.realTimeSupportUl.aboutresultUL {
+    flex-wrap: nowrap;
+    gap: 110px;
+    grid-gap: 110px;
+    align-items: start;
+}
+.about-page .contactTitle {
+    line-height: 55px;
+}
+.howTravelWorkSec .boxborderSec {
+    position: relative;
+    padding: 5px 5px 15px;
+    border: 1px solid rgb(1 73 98);
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.howTravelWorkSec .boxborderSec:hover {
+    box-shadow: 3px 0 15px rgb(0 73 99 / 40%);
+    transition: 0.5s all ease-in-out;
+}
+.howTravelWorkSec .para.text-center {
+    margin-bottom: 30px;
+}
+.howTravelWorkSec .contactTitle {
+    margin-bottom: 25px;
+}
+.howTravelWorkSec .subheading-beliesec.para {
+    text-align: left;
+    padding-left: 15px;
+}
+.howTravelWorkSec .heading-beliesec {
+    text-align: left;
+    font-size: 19px;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+.howTravelWorkSec .itsSimpleCols {
+    padding: 0 13px;
+}
+.empowerworldSec {
+    background: #fff1c0;
+}
+.empowerworldSec .Videoblockrows .para,
+.empowerworldSec .contactTitle {
+    text-align: left;
+}
+.empowerworldSec iframe {
+    width: 100%;
+    height: 100%;
+}
+.empowerworldSec .vdeoleftSecbk {
+    padding-right: 50px;
+}
+.empowerworldSec .videoRightBlock {
+    position: relative;
+    height: 500px;
+}
+.empowerworldSec .videoRightBlock::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../../img/about-empower.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.empowerworldSec .videoRightBlock a {
+    display: block;
+    height: 100%;
+}
+.empowerworldSec iframe {
+    width: 92.8%;
+    display: block;
+    top: 34px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    margin: 0px auto;
+    height: 425px;
+    padding: 0;
+    position: relative;
+}
+.whyDevelopSecLeft {
+    display: inline-flex;
+    padding: 30px 15px 30px 0;
+    background: #ff8a84;
+    flex: 1;
+}
+.whyDevelopSec .aboutresultUL {
+    gap: 15px;
+    grid-gap: 15px;
+    margin-top: 55px;
+    justify-content: start;
+    row-gap: 25px;
+    grid-row-gap: 25px;
+}
+.whyDevelopSec .travelOneSec_travel.cardTitle {
+    font-weight: 500;
+}
+.whyDevelopSec .realTimeSupportRight {
+    padding-left: 10px;
+}
+.whatTraveloneSec .contactTitle {
+    text-align: left;
+}
+.whatTraveloneFlex {
+    display: flex;
+}
+.whatTraveloneLeft,
+.whatTraveloneRight {
+    flex: 1;
+}
+.whatTraveloneRight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.whatTraveloneCard {
+    border: 2px solid #004963;
+    flex-basis: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.whatBorder1 {
+    border-radius: 0 50px;
+}
+.whatBorder2 {
+    border-radius: 50px 0;
+}
+.whatBorder3 {
+    border-radius: 50px 0;
+}
+.whatBorder4 {
+    border-radius: 0 50px;
+}
+.whatTraveloneSec .bigTitle.contactTitle {
+    margin-bottom: 0;
+}
+.whatTraveloneSec .para {
+    text-align: left;
+}
+.whatTraveloneCard .para {
+    text-align: center;
+}
+.whatTraveloneLeft {
+    padding-right: 30px;
+}
+.visualcollaborationSec {
+    background: #ffc8c2;
+}
+.travel_agency-page .visualcollaborationSec {
+    background: #dffede;
+}
+.whyDevelopSecLeft {
+    background: #ffc8c2;
+}
+.travel_agency-page .whyDevelopSecLeft {
+    background: #d6f3d5;
+}
+.megamenuSec.header .menu>ul>li.btn-link {
+    text-decoration: none;
+}
+.megamenuSec.header .menu>ul>li.btn-link a {
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 8px 15px;
+    text-decoration: none !important;
+}
+.about-slider-buttons {
+    text-align: center;
+}
+.left_blocks_text {
+    margin-top: 50px;
+}
+.about-slider-buttons,
+.real_time_right_blocks_text,
+.empower_left_blocks_text {
+    margin-top: 35px;
+}
+.open_travels_btn {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+    background: transparent;
+    border: 1px solid #004963;
+    border-radius: 10px;
+    padding: 10px 35px;
+    display: inline-block;
+    cursor: pointer;
+}
+.megamenuSec.header .menu>ul>li.btn-link:hover a {
+    text-decoration: underline !important;
+}
+.customerTraveloneSec {
+    background: #d1f8f8;
+}
+.chooseCard,
+.choosecardinner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.choosecardinner {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+}
+.customerTraveloneSec .contactTitle {
+    margin-bottom: 30px;
+}
+.choosecardinner .heading {
+    font-size: 18px;
+    color: #004963;
+    font-weight: 600;
+    line-height: inherit;
+    margin-bottom: 5px;
+}
+.customerTraveloneSec .choosecardinner .para {
+    text-align: left;
+    line-height: inherit;
+}
+.customerTraveloneSec .para.customerPara {
+    text-align: center;
+    line-height: inherit;
+    margin-bottom: 45px;
+}
+.customerTraveloneSec .slick-initialized .slick-slide {
+    display: flex;
+}
+.customerTraveloneSec .slick-track,
+.customerTraveloneSec .slick-list {
+    display: flex;
+}
+.customerTraveloneSec .slick-track {
+    gap: 15px;
+    grid-gap: 15px;
+}
+.customerTraveloneSec button.slick-prev.slick-arrow {
+    background-image: url('../../img/about-prev.png');
+    right: auto;
+    left: -30px;
+}
+.customerTraveloneSec button.slick-next.slick-arrow {
+    background-image: url('../../img/about-next.png');
+    left: auto;
+    right: -30px;
+}
+.customerTraveloneSec .slick-slider .slick-arrow {
+    width: 16px;
+    height: 30px;
+    top: 60px;
+}
+.customerCornerSec .cornercustomerflex {
+    display: flex;
+    align-items: flex-start;
+    gap: 55px;
+    grid-gap: 55px;
+}
+.customerCornerSec .testimonalauthor {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    grid-gap: 20px;
+}
+.customerCornerSec .authorInf {
+    display: flex;
+    flex-direction: column;
+}
+.customerCornerSec .rightcustcorner .contactTitle {
+    text-align: left;
+    color: #000;
+    font-weight: 600;
+}
+.customerCornerSec .testimonalauthor {
+    margin-top: 30px;
+}
+.customerCornerSec .rightcustcorner .para {
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+}
+.customerCornerSec {
+    position: relative;
+}
+.customerCornerSec .authortitle {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 0.10px;
+    line-height: inherit;
+    margin-bottom: 20px;
+}
+.about-banner-bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    grid-gap: 15px;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.planyrtrip-button {
+    text-align: center;
+}
+.travelOne_leadingTravelSec .bigtitle-banner {
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.travelOne_leadingTravelSec .planTRip-btn {
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: underline;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 30px 50px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+}
+.travelOne_leadingTravelSec .planTRip-btn::before {
+    position: absolute;
+    content: '';
+    border: 2px solid #004963;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+}
+.travelOne_leadingTravelSec .global-system-bnner {
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 400;
+    color: #FFF;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    padding: 15px 70px;
+}
+.travelOne_leadingTravelSec .global-system-bnner::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: -26px;
+    right: auto;
+    bottom: auto;
+    background-image: url('../../img/about-banner-cloud.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% 100%;
+    width: 360px;
+    height: 100px;
+    z-index: -1;
+}
+.travelOne_leadingTravelSec .about-travelonebnnr {
+    display: flex;
+    gap: 185px;
+    grid-gap: 185px;
+    justify-content: space-between;
+}
+.travelOne_leadingTravelSec {
+    position: relative;
+}
+.travelOne_leadingTravelSec::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../img/about-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.rightBanner-about,
+.rightBanner-about .imgright {
+    position: relative;
+}
+.aboutBannerRightpara {
+    position: absolute;
+    top: 25px;
+    bottom: auto;
+    left: 95px;
+    right: 100px;
+    padding: 0px;
+    background: transparent;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 27px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.rightBanner-about .imgright {
+    z-index: 9;
+}
+.about-travelonebnnr {
+    padding-top: 55px;
+    border: 2px solid #004963;
+    border-radius: 0 85px 85px 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+.about-banner-main .contactTitle.banner-about-title {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.about-banner-main {
+    position: relative;
+}
+.traveloneSpan {
+    font-size: 80px;
+    line-height: inherit;
+    font-weight: 600;
+    letter-spacing: 3px;
+    display: inline-flex;
+    position: absolute;
+    transform: rotate(270deg);
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 0;
+}
+.rightBanner-about {
+    right: -2px;
+}
+.detail-travelagent-btn {
+    display: flex;
+    gap: 5px;
+    grid-gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.listing-detail-page .detail-travelagent-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.plnTripBtn.detail-travelagent-btn a {
+    flex: 47%;
+    text-align: center;
+    padding: 7px 10px;
+}
+.about-vertical-title {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    display: inline-flex;
+    position: absolute;
+    transform: rotate(270deg);
+    left: auto;
+    top: 51%;
+    transform-origin: 0 0;
+    bottom: auto;
+    color: #004963;
+    margin: 0;
+}
+.leadingtravel.mobilee-d-nnone {
+    display: none;
+}
+.travelOne_leadingTravelSec .banner-about-title {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 25px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.travelOne_leadingTravelSec .leftBanner-about img:hover,
+.travelOne_leadingTravelSec .imgright img:hover {
+    filter: grayscale(100%);
+    transition: 0.5s all ease-in-out;
+}
+.top_dropdown_admin img {
+    border-radius: 50%;
+}
+.tabPackageSec .tabcontent.tabcontentBg3 {
+    padding-top: 0;
+}
+.tabcontentBg3 #v-pills-tabContent {
+    background: #FFF;
+    border-radius: 0 10px 10px 0;
+}
+.tabcontentBg3 .d-flex.align-items-start {
+    background: #dfffde;
+}
+.tabcontentBg3 #whatsincluded-tab {
+    border-radius: 5px 0 0 0;
+}
+.customerCornerSec .borderCirclegroup {
+    position: relative;
+}
+.customerCornerSec .border-center-logo {
+    width: 293px;
+    height: auto;
+    background: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+}
+.customerCornerSec .rightcustcorner {
+    flex: 40%;
+}
+.customerCornerSec .leftcustcorner {
+    flex: 60%;
+}
+.customerCornerSec .leftcustcorner,
+.customerCornerSec .indicator ul,
+.customerCornerSec .indicator {
+    height: 670px;
+    position: relative;
+}
+.customerCornerSec .indicator::before {
+    border: 2px solid #004963;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.customerCornerSec .indicator li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.customerCornerSec .indicator li:nth-child(1) {
+    left: 20px;
+    top: 65px;
+}
+.customerCornerSec .indicator li:nth-child(2) {
+    left: auto;
+    right: 160px;
+    top: -37px;
+}
+.customerCornerSec .indicator li:nth-child(3) {
+    left: auto;
+    top: auto;
+    right: 35%;
+    bottom: -43px;
+}
+.customerCornerSec .indicator li:nth-child(4) {
+    left: -10px;
+    bottom: 135px;
+    top: auto;
+}
+.customerCornerSec .leftcustcorner .authorcompname {
+    display: none;
+}
+.customerCornerSec {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.customerCornerSec .indicator.indicator2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.customerCornerSec .indicator.indicator2 ul,
+.indicator.indicator2 {
+    width: 500px;
+    height: 500px;
+}
+.customerCornerSec .indicator2 li:nth-child(1) {
+    left: 150px;
+    top: -40px;
+}
+.customerCornerSec .indicator2 li:nth-child(2) {
+    left: auto;
+    right: 0px;
+    top: 65px;
+}
+.customerCornerSec .indicator2 li:nth-child(3) {
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 45px;
+}
+.customerCornerSec .indicator2 li:nth-child(4) {
+    left: 85px;
+    bottom: -5px;
+    top: auto;
+}
+.customerCornerSec .indicator2 li:nth-child(5) {
+    left: -40px;
+    top: 195px;
+}
+.customerCornerSec .rightcustcorner .tab {
+    display: none;
+    transition: 0.5s all ease-in-out;
+}
+.customerCornerSec .rightcustcorner .tab-active {
+    display: block;
+}
+.customerCornerSec .rightcustcorner .authorcompname {
+    padding-left: 10px;
+}
+.customerCornerSec .authorimg img {
+    background: #ff6575;
+    border-radius: 50%;
+    outline: 3px solid #ff6575;
+}
+.customerCornerSec .authorimg {
+    width: 80px;
+    height: auto;
+}
+.customerCornerSec .contactTitle {
+    margin-bottom: 30px;
+}
+.customerCornerSec .tab-a {
+    cursor: pointer;
+}
+.customerCornerSec .indicator .client-img {
+    width: 113px;
+    height: auto;
+    text-align: center;
+}
+.customerCornerSec .indicator .client-img img {
+    border-radius: 50%;
+}
+.customerCornerSec .indicator.indicator2 .client-img {
+    width: 91px;
+    height: auto;
+}
+.customerCornerSec .leftcustcorner .indicator1 .tab-a.active-a .authorcompname {
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 105px;
+    z-index: 9;
+}
+.customerCornerSec .leftcustcorner .indicator21 .tab-a.active-a .authorcompname {
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 105px;
+    z-index: 9;
+}
+.customerCornerSec .leftcustcorner .tab-a.active-a .client-img img {
+    box-shadow: 3px 0px 50px rgb(255 101 117 / 35%);
+}
+.customerCornerSec .indicator1 li:nth-child(1) .tab-a.active-a .authorcompname {
+    top: 15px;
+    left: -135px;
+}
+.customerCornerSec .indicator1 li:nth-child(2) .tab-a.active-a .authorcompname {
+    top: 15px;
+    right: -135px;
+}
+.customerCornerSec .indicator1 li:nth-child(3) .tab-a.active-a .authorcompname {
+    top: 115px;
+    right: 0;
+}
+.customerCornerSec .indicator1 li:nth-child(4) .tab-a.active-a .authorcompname {
+    top: 30px;
+    left: -135px;
+}
+.customerCornerSec .indicator21 li:nth-child(1) .tab-a.active-a .authorcompname {
+    top: 105px;
+    left: -15px;
+    right: -15px;
+}
+.customerCornerSec .indicator21 li:nth-child(2) .tab-a.active-a .authorcompname {
+    top: 30px;
+    left: -130px;
+}
+.customerCornerSec .indicator21 li:nth-child(3) .tab-a.active-a .authorcompname {
+    top: 25px;
+    left: -130px;
+}
+.customerCornerSec .indicator21 li:nth-child(4) .tab-a.active-a .authorcompname {
+    top: -55px;
+    right: -20px;
+}
+.customerCornerSec .indicator21 li:nth-child(5) .tab-a.active-a .authorcompname {
+    top: -35px;
+    right: -85px;
+}
+.mobileTestimonialSec {
+    display: none;
+}
+.travelagnetCircleimg {
+    height: 170px;
+    font-size: 55px;
+    background: #004963;
+    border: 1px solid #004963;
+    border-radius: 50%;
+    width: 170px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.startSellingPlanOneSec .form-box-body label {
+    margin-bottom: 0.5rem;
+}
+.startSellingPlanOneSec .form-group .float-right {
+    float: right;
+}
+.startSellingPlanOneSec .select2 {
+    outline: none !important;
+    background: url('../../img/duration-arrow.png') no-repeat right transparent;
+    background-size: 3%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-position: right 1rem center;
+    padding: 9.5px 20px;
+}
+.startSellingPlanOneSec .btn-file-upload {
+    background: #004963;
+    border-color: #004963;
+    border-color: #004963;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+}
+.startSellingPlanOneSec #custom-button:hover {
+    background-color: #004963;
+}
+.startSellingPlanOneSec #custom-text {
+    margin-left: 10px;
+    color: #fff;
+    background-color: #6c757d;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin: 0;
+}
+.startSellingPlanOneSec #container_vendor_files {
+    margin-bottom: 32px;
+}
+.startSellingPlanOneSec input#terms_conditions {
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+}
+.startSellingPlanOneSec .custom-control .custom-control-label {
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.selectSearchBoot5 .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent;
+}
+.selectSearchBoot5 li {
+    display: block;
+    color: #004963;
+}
+.selectSearchBoot5 .btn {
+    background: #FFF;
+    line-height: 18px;
+    padding: 11px 20px;
+    border: 1px solid #dfe0e6;
+}
+.selectSearchBoot5 .btn:hover {
+    color: #004963;
+}
+.selectSearchBoot5 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 220px;
+    display: inline;
+}
+.selectSearchBoot5 .bootstrap-select>.dropdown-toggle:after {
+    margin-top: 2px;
+}
+.selectSearchBoot5 .bootstrap-select .dropdown-toggle:focus,
+.selectSearchBoot5 .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+.selectSearchBoot5 .dropdown-item.active,
+.selectSearchBoot5 .dropdown-item:active,
+.selectSearchBoot5 .dropdown-item:hover,
+.selectSearchBoot5 .dropdown-item:focus {
+    color: #004963 !important;
+}
+.selectSearchBoot5 .dropdown-item:hover {
+    background: #5897fb !important;
+    color: #FFF !important;
+}
+.custom-plan-checkbox input[type="checkbox"] {
+    display: none;
+}
+.custom-plan-checkbox label {
+    position: relative;
+    height: 1rem;
+    cursor: pointer;
+}
+.custom-plan-checkbox input[type="checkbox"]:checked~label:before {
+    background-color: #004963;
+    color: #FFF;
+    box-shadow: none;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    border-radius: 2px;
+}
+.custom-plan-checkbox label:before {
+    content: "\2713";
+    display: display;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 2px 6px 1px 6px;
+    width: 5rem;
+    margin-right: 10px;
+    border-radius: 2px;
+    color: transparent;
+    box-shadow: 0 0 0 2px #ccc inset;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    border: 1px solid #ccc;
+    width: 16px !important;
+    height: 16px !important;
+}
+.blogPage.messagePagesec .messages-content .messages-list .message-list-item .message-list-item-row-sent .user-message .message-text {
+    background-color: #004963;
+}
+.blogPage.messagePagesec .messages-sidebar {
+    overflow: hidden auto;
+}
+.blogPage.messagePagesec ::-webkit-scrollbar {
+    width: 4px;
+}
+.blogPage.messagePagesec ::-webkit-scrollbar-track {
+    background: #FFF;
+    box-shadow: none;
+    border-radius: 10px;
+}
+.blogPage.messagePagesec ::-webkit-scrollbar-thumb {
+    background: #004963;
+    border-radius: 10px;
+}
+.blogPage.messagePagesec ::-webkit-scrollbar-thumb:hover {
+    background: rgb(54, 56, 58);
+}
+.blogPage.messagePagesec .form-group.sendRightbtn {
+    text-align: right;
+}
+.messagedeletePopup .circleoutlineIoIcon {
+    font-size: 85px;
+    color: #004963;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+}
+.blogPage.messagedeletePopup .swal-text {
+    text-align: center;
+    padding: 0 10px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .64);
+    overflow-wrap: break-word;
+}
+.blogPage.messagedeletePopup .modal-footer {
+    border-top: 0px;
+}
+.blogPage.messagedeletePopup .btn-custom-ok {
+    background-color: #004963;
+    border-color: #004963;
+    color: #FFF;
+}
+.blogPage.messagedeletePopup .btn-custom-cancel {
+    background-color: #f6465d;
+    border-color: #f6465d;
+    color: #FFF;
+}
+.messagePagesec .badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+.admin-msg-text .span-message-count {
+    font-weight: 600 !important;
+}
+.megamenuSec.header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li.viewallbuttonhead>a {
+    font-weight: 700;
+}
+.top-wishlist .top_wishlist_span,
+.top-cart .cartTooltips .top_cart_span {
+    padding-left: 5px;
+    font-weight: 500;
+}
+.ulTopmneuNav {
+    gap: 15px;
+    grid-gap: 15px;
+}
+.top-wishlist {
+    margin: 0;
+}
+.topRight_iconss {
+    justify-content: space-between;
+}
+.topRight_iconss .top-cart a i,
+.topRight_iconss .top-wishlist a i {
+    font-size: 26px;
+}
+.ulTopmneuNav .btn.locationModal {
+    font-weight: 500;
+    color: #004963;
+}
+.top_drop_jumbo .select-box {
+    color: #004963;
+}
+.signinModalDialog {
+    display: flex;
+    justify-content: space-between;
+}
+.blogPage .auth-box .signinModalDialog .title {
+    font-size: 18px;
+}
+.blogPage .auth-box .signinModalDialog .title.register {
+    font-size: 14px;
+    border: 1px solid #004963;
+    border-radius: 50px;
+    padding: 7px 15px;
+}
+.blogPage .login-modal .auth-box {
+    padding-top: 40px;
+}
+.blogPage .login-modal .close {
+    top: 10px;
+    right: 5px;
+}
+.updateprofileSec {
+    display: flex;
+}
+.updateprofileSec .upload-fileSec input {
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+}
+.updateprofileSec .upload-fileSec input {
+    font-size: 13.5px;
+    border-radius: 10px;
+    background: none;
+    border: 2px solid rgb(0 73 99 / 40%);
+    line-height: inherit;
+    margin: 0;
+    padding: 5px 10px;
+    vertical-align: middle;
+    height: 45px;
+    width: 100%;
+}
+.updateprofileSec .upload-fileSec ::-webkit-file-upload-button {
+    background: #cfecce;
+    color: #004963;
+    border: 2px solid rgb(0 73 99 / 40%);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+.updateprofileSec .upload-fileSec input {
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+}
+.settingsPage .rightShadows {
+    flex: 2;
+    margin-left: -75px;
+    z-index: 1;
+}
+.settingsPage .rightUpdateprofile {
+    border: 0px solid #a1b7a0;
+    padding: 15px 50px 20px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 70%);
+    border-radius: 0 60px 0 60px;
+    background: #e0ffdf;
+}
+.settingsPage .page-title {
+    border-bottom: 3px solid #d0eccf;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.settingsPage {
+    background: #e0ffdf;
+    color: #004963;
+}
+.settingsPage .leftUpdateprofile {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+.settingsPage .leftUpdateprofile::before {
+    position: absolute;
+    content: '';
+    top: -46px;
+    right: 0px;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: #cfecce;
+    z-index: -1;
+}
+.blogPage .leftUpdateprofile .profile-tabs .nav .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+}
+.leftUpdateprofile {
+    padding: 0.5rem 1.5rem;
+    padding-left: 1.8rem;
+}
+.select_listing_page .titleSec {
+    font-size: 23px;
+}
+.select_listing_page .sortbyGreece .select-box {
+    width: 225px;
+}
+.select_listing_page .sortbyGreece .select-box__icon {
+    width: 10px;
+    right: 0px;
+}
+.select_listing_page .compare_button {
+    display: flex;
+}
+.select_listing_page .compare_button a {
+    border: 1px solid #004963;
+    border-radius: 10px;
+    padding: 10px;
+    width: 205px;
+    text-align: center;
+    margin-right: 15px;
+    background: #004963;
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+}
+.select_listing_page input:checked,
+.list_detailspacks_compare input:checked {
+    background-image: url('../../img/listing-checked.png');
+    background-repeat: no-repeat;
+}
+.select_listing_page input,
+.list_detailspacks_compare input {
+    position: absolute;
+    top: -23px;
+    left: 45%;
+    z-index: 1;
+    background-image: url('../../img/listing-check.png');
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    appearance: none;
+    cursor: pointer;
+    background-size: 100%;
+}
+.select_listing_page label.plan.basic-plan {
+    width: 100%;
+    position: relative;
+}
+.select_listing_page .slick-slide img {
+    width: auto;
+    max-width: 100%;
+}
+.select_listing_page .listing_cols_data {
+    margin-top: 60px;
+}
+.select_listing_page .listing_cols_data .card-trading-deals {
+    margin-bottom: 35px;
+}
+.listing_details_compare.tabPackageSec ul .orange_text {
+    color: #ff4c46;
+}
+.listing_details_compare .negoiate_button_right button {
+    border: 1px solid #004963;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: auto;
+    text-align: center;
+    margin-right: 15px;
+    background: #004963;
+    color: #FFF;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+}
+.listing_details_compare .listing_compare_negoiate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px !important;
+}
+.listing_details_compare .negoiate_button_right {
+    display: flex;
+}
+.listing_details_padding {
+    padding: 25px 0 15px;
+}
+.listing_details_padding .greecetourHeading_main {
+    margin-bottom: 0;
+}
+.listing_details_compare.details_tabPackageSec.tabPackageSec .tab button {
+    padding: 15px 16px;
+}
+.list_detailspacks_compare .plans {
+    position: relative;
+}
+.listing_details_compare.tabPackageSec .tabcontent {
+    padding: 0 40px;
+}
+.listing_details_compare .tabPackageSecrCols {
+    padding: 40px 0;
+}
+.list_detailspacks_compare input {
+    left: 50%;
+}
+.select_listing_page .filterGreece {
+    padding: 9px 15px;
+    width: max-content;
+}
+.select_listing_page .resetFiterGreece {
+    width: max-content;
+}
+.tabPackageSec .tabPackageSecrow .slick-slide .cityBreakup img.packStyleIcons {
+    margin-top: 5px;
+}
+.tabPackageSec .packgesSecListView ul li,
+.tabPackageSec .packgesSecListView ul li a {
+    align-items: flex-start !important;
+}
+.tabPackageSec .tabPackageSecrow .slick-slide .stayItemTab img.packStyleIcons {
+    margin-top: 2px !important;
+}
+.tabPackageSec .packgesSecListView ul.CheckmarkUL li,
+.tabPackageSec .packgesSecListView ul.CheckmarkUL li a {
+    display: inline-flex !important;
+    align-items: flex-start !important;
+}
+.tabPackageSec .tabPackageSecrow .CheckmarkUL img.img-fluid.packStyleIcons1,
+.tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsCancel {
+    width: auto !important;
+}
+.tabPackageSec .packgesSecListView ul li {
+    align-items: flex-start !important;
+}
+.ItineraytabSec .packStyleIconsboat,
+.ItineraytabSec .packgesSecListView img.packStyleIconsdinner,
+.ItineraytabSec .packgesSecListView img.packStyleIcons1,
+.ItineraytabSec .packgesSecListView img.packStyleIconsCancel {
+    margin-top: 2px !important;
+}
+.home-page .itsSimpleSec .btn-custom.cursor {
+    margin-top: 40px;
+}
+.home-page .WhyTravelOneSec .cardSec {
+    min-height: auto;
+    margin-bottom: 15px;
+}
+.home-page .WhyTravelOneSec .whyTravelCols .para {
+    min-height: auto;
+}
+.home-page .WhyTravelOneSec .whyTravelCols .para {
+    min-height: auto;
+}
+.home-page .WhyTravelOneSec .cardSec .cardTitle {
+    text-align: left;
+}
+.home-page .weCardSec_position_rel {
+    top: 20px;
+}
+.home-page .WeareDifferentSec .wecardbox {
+    margin-bottom: 15px;
+}
+.home-page .whyTravelCols:last-child .cardSec {
+    margin-bottom: 0px;
+}
+.home-page .weCardSec .wecardbox:last-child {
+    margin-bottom: 40px;
+}
+.about-page .howTravelWorkSec .itsSimpleCols:not(:last-child) {
+    margin-bottom: 15px !important;
+}
+.about-page .howTravelWorkSec .itsSimpleCols:last-child {
+    margin-bottom: 0px !important;
+}
+.wishlist_notification .otFlat.bottom.ot-wo-title .ot-sdk-columns .wishlist_popup_content {
+    font-size: 13px !important;
+    font-weight: bold !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #004963 !important;
+}
+.home-page .PlanTripSec video {
+    width: 100%;
+}
+.home-page .PlanTripSec .center-content-block .img_content .titleSec .titleSpan,
+.home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p {
+    font-size: 21px !important;
+    font-weight: 400;
+}
+.home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p {
+    line-height: 40px;
+    padding-left: 0;
+}
+.home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p::before {
+    display: none;
+}
+.result-orientLeft,
+.result-orientRight {
+    display: grid;
+}
+.about-page .realTimeSupportRight .aboutresultUL,
+.travel_agency-page .realTimeSupportRight .aboutresultUL {
+    display: grid;
+    grid-template-columns: auto;
+}
+.about-page .realTimeSupportRight .aboutresultUL li,
+.travel_agency-page .realTimeSupportRight .aboutresultUL li {
+    grid-template-columns: 1fr;
+}
+.travel_agency-page .aboutresultUL.realTimeSupportUl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.travel_agency-page .aboutresultUL.realTimeSupportUl span {
+    margin-top: -4px;
+}
+.travel_agency-page .resultOrintSec .aboutresultUL {
+    align-items: flex-start;
+}
+.travel_agency-page .whyDevelopSec .aboutresultUL {
+    margin-top: 40px;
+}
+.travel_agency-page .realTimeSupportSec .realTimeSupportRight .contactTitle {
+    margin-bottom: 30px;
+}
+.filterModal_Listing .form-control {
+    border-radius: 8px;
+}
+.listing-page .greece_themeSec {
+    padding-top: 25px;
+}
+.listing-detail-page .custom_height_pack_lastTab.btnpackages {
+    margin-top: 10px;
+}
+.listing-detail-page img.img-fluid.packStyleIconsdinner.ls-is-cached.lazyloaded {
+    margin-top: 2px;
+}
+.blog-content .page-text-content p {
+    overflow-wrap: anywhere;
+}
+.refund_request_page .refundBlock-button button {
+    float: right;
+    background-color: #004963;
+    color: #FFF;
+    font-size: 14px;
+    border: 0;
+}
+.refund_request_page .refundBlock-button button svg {
+    width: 14px;
+}
+.refund_request_page .btn-check:active+.btn-info:focus,
+.refund_request_page .btn-check:checked+.btn-info:focus,
+.refund_request_page .btn-info.active:focus,
+.btn-info:active:focus,
+.refund_request_page .show>.btn-info.dropdown-toggle:focus {
+    box-shadow: none;
+    outline: none;
+}
+.listing_details_compare .custom_height_pack_lastTab.btnpackages {
+    margin-top: 10px;
+}
+.listing_details_compare img.img-fluid.packStyleIconsdinner.ls-is-cached.lazyloaded {
+    margin-top: 2px;
+}
+.mybookingDetailsSec .SliderBannerSec .detail-explorer-block1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: flex-start;
+}
+.mybookingDetailsSec .rooms_category_tabBlock .roomTabs .titleRoom {
+    padding-left: 20px;
+}
+.mybookingDetailsSec .rooms_category_tabBlock .roomTabs .titleRoom:first-child {
+    padding-left: 0px;
+}
+.mybookingDetailsSec .rooms_category_tabBlock .roomTabs .titleRoom:last-child {
+    border-right: 0;
+}
+@media screen and (min-width: 1600px) and (max-width: 1661px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 179px;
+    }
+}
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
+    .SliderBannerSec .guestnationalitySec .form-check:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
+    .SliderBannerSec .tourHeadingPrice span {
+        line-height: 37px;
+    }
+    .SliderBannerSec .tourHeadingPrice {
+        line-height: 28px;
+    }
+}
+@media screen and (min-width: 1586px) and (max-width: 1599px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 179px;
+    }
+}
+@media screen and (min-width: 1578px) and (max-width: 1585px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 178px;
+    }
+}
+@media screen and (min-width: 1570px) and (max-width: 1577px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 177px;
+    }
+}
+@media screen and (min-width: 1562px) and (max-width: 1569px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 176px;
+    }
+}
+@media screen and (min-width: 1554px) and (max-width: 1561px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 175px;
+    }
+}
+@media screen and (min-width: 1546px) and (max-width: 1553px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 174px;
+    }
+}
+@media screen and (min-width: 1538px) and (max-width: 1545px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 171px;
+    }
+}
+@media screen and (min-width: 1530px) and (max-width: 1537px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 170px;
+    }
+}
+@media screen and (min-width: 1520px) and (max-width: 1529px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 169.7px;
+    }
+}
+@media screen and (min-width: 1506px) and (max-width: 1519px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 169px;
+    }
+}
+@media screen and (min-width: 1500px) and (max-width: 1505px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 168px;
+    }
+}
+@media screen and (min-width: 1498px) and (max-width: 1499px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 168px;
+    }
+}
+@media screen and (min-width: 1490px) and (max-width: 1497px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 167px;
+    }
+}
+@media screen and (min-width: 1480px) and (max-width: 1489px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 165px;
+    }
+}
+@media screen and (min-width: 1474px) and (max-width: 1479px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 165px;
+    }
+}
+@media screen and (min-width: 1466px) and (max-width: 1473px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 164px;
+    }
+}
+@media screen and (min-width: 1458px) and (max-width: 1465px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 163px;
+    }
+}
+@media screen and (min-width: 1400px) and (max-width: 1457px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding: 20px 15px 15px;
+    }
+}
+@media screen and (min-width: 1450px) and (max-width: 1457px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 162px;
+    }
+}
+@media screen and (min-width: 1442px) and (max-width: 1449px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 161px;
+    }
+}
+@media screen and (min-width: 1434px) and (max-width: 1441px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 160px;
+    }
+}
+@media screen and (min-width: 1426px) and (max-width: 1433px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 159px;
+    }
+}
+@media screen and (min-width: 1418px) and (max-width: 1425px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 158px;
+    }
+}
+@media screen and (min-width: 1410px) and (max-width: 1417px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 157px;
+    }
+}
+@media screen and (min-width: 1400px) and (max-width: 1409px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: 155px;
+    }
+}
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1190px;
+    }
+}
+@media (max-width: 1499px) {
+    .SliderBannerSec .sliderBanSec .carousel-item .w-100 {
+        width: auto !important;
+    }
+}
+@media (max-width: 1399px) {
+    .cartpageSec .cartTitle {
+        font-size: 20px;
+        margin: 12px 0;
+    }
+    .cartpageSec .spotTitle {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .cartTravelTitle,
+    .cartTravelTitle2,
+    .totalCartT,
+    .cartDateRangeTitle,
+    .cartpageSec .moreTourBtn a {
+        font-size: 15px;
+    }
+    .cartpageSec .moreTourBtn a {
+        padding: 8px 15px;
+        text-align: center;
+        font-size: 13.5px;
+    }
+    .cartpageSec .moreTourBtn button,
+    .cartDisCoupon .inputGroup input,
+    .cartpageSec .cartsec1 li a,
+    .cartpageSec .cartsec1 li {
+        font-size: 13.5px;
+    }
+    .cartSec4Inner .pActivitys,
+    .cartSec4Inner .pPlaces,
+    .cartSec4Inner .pActivitys2,
+    .cartRefundble,
+    .cartRefundbleDate,
+    .cartUlSec ul li a,
+    .fstCartTitleRight .pActivitys,
+    .cartRightSecondBlock .cartDateRangeTitle,
+    .cartpageSec span.DealsheadingRed.text-capitalize,
+    .cartRightDueSec .para {
+        font-size: 12.5px;
+    }
+    .cartRightDisountBlock .cartTravelTitle,
+    .cartRightDueSec .cartTravelTitle {
+        font-size: 16px;
+    }
+    .cartRightDueSec .cartTravelTitleRed {
+        font-size: 21px;
+    }
+    .closeiconCart .hydrated {
+        font-size: 20px;
+    }
+    .cartTravelTitle br {
+        display: none;
+    }
+    .cartDetailsSec .dealsActivity {
+        margin-right: 10px;
+    }
+    .cartBoxShadows,
+    .cartrightfstBlock,
+    .cartRightSecondBlock {
+        margin-bottom: 15px;
+    }
+    .checkoutUL {
+        margin-bottom: 25px;
+    }
+    .cartDisCoupon {
+        margin-bottom: 10px;
+    }
+    .cartRightCheckout {
+        padding: 10px 0 20px;
+    }
+    .cartPackRightsec {
+        padding: 0px 20px 13px;
+    }
+    .cartFormCoupon .form-row {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+    .cartDetailsSec .DealsRating .pActivitys {
+        padding-bottom: 15px;
+    }
+    .cartpageSec .moreTourBtn a {
+        padding: 10px 15px;
+    }
+    .debitHistory .form-control::placeholder {
+        font-size: 12.5px;
+    }
+    .checkoutpageSec .checkoutPaynowBtn.moreTourBtn a {
+        font-size: 15px;
+    }
+    .checkoutAccordian .fullwidthInnerblock {
+        margin-bottom: 30px;
+    }
+    .checkoutpageSec .checkoutPaynowBtn a {
+        padding: 0;
+    }
+    .shopBrochuresUL li {
+        max-width: 30.6%;
+    }
+    .top_drop_jumbo {
+        margin-right: 15px;
+    }
+    .about-page .resultOrintSec .about-result-orientdSec {
+        align-items: flex-end !important;
+        background: #fffbe8;
+        gap: 1px;
+        grid-gap: 1px;
+    }
+    .about-page .resultOrintSec .result-orientLeft {
+        background: #ffbfbf;
+    }
+    .about-page .resultOrintSec .result-orientLeft .para {
+        line-height: 30px;
+    }
+}
+@media screen and (min-width:1290px) and (max-width:1399px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        width: auto;
+    }
+    .SliderBannerSec .tourboxesButtons1 {
+        justify-content: start;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 {
+        justify-content: end;
+    }
+    .SliderBannerSec .details-para-title,
+    .SliderBannerSec .tourboxesButtons1 {
+        padding-left: 30px;
+    }
+    .SliderBannerSec .details-para-title .para {
+        text-align: left;
+    }
+    .listing-detail-page .SliderBannerSec .details-para-title .para {
+        text-align: right;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1289px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding: 20px 15px 15px;
+        width: 130px;
+    }
+    .SliderBannerSec .tourboxesButtons1 {
+        justify-content: start;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 {
+        justify-content: end;
+    }
+    .SliderBannerSec .details-para-title,
+    .SliderBannerSec .tourboxesButtons1 {
+        padding-left: 30px;
+    }
+    .SliderBannerSec .details-para-title .para {
+        text-align: left;
+    }
+    .listing-detail-page .SliderBannerSec .details-para-title .para {
+        text-align: right;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1132px) {
+    .travel_agency-page .resultOrintSec .result-orientLeft {
+        background: #ffbfbf;
+    }
+    .travel_agency-page .resultOrintSec .about-result-orientdSec {
+        background: #dffede;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1199px) {
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding: 20px 10px 15px;
+        width: 114px;
+    }
+    .SliderBannerSec .details-para-title,
+    .SliderBannerSec .tourboxesButtons1 {
+        padding-left: 30px;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li {
+        margin: 0 10px;
+    }
+    .customerTraveloneSec .slick-slider .slick-arrow {
+        top: 75px;
+        width: 16px;
+    }
+    .customerTraveloneSec button.slick-next.slick-arrow {
+        right: -15px;
+    }
+    .customerTraveloneSec button.slick-prev.slick-arrow {
+        left: -15px;
+    }
+    .customerTraveloneSec .slick-initialized .slick-slide {
+        align-items: center;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1287px) {}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    section.TourboxsSec {
+        margin-top: -35px;
+    }
+    .TourboxsRightSec {
+        padding-top: 15px;
+    }
+    .SliderBannerSec .carousel-indicators {
+        bottom: 45px;
+    }
+    .videoButtonSlider1 {
+        bottom: 54px;
+    }
+    .bannerRightSec {
+        padding-right: 0;
+        width: 100%;
+    }
+    .itsWorldMidSec::before {
+        top: 2px;
+        bottom: 0;
+        left: -110px;
+        background-size: 68%;
+    }
+    .itsWorldMidSec::after {
+        top: 73px;
+        bottom: 0;
+        left: 193px;
+        background-size: 65%;
+    }
+    .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        width: 130px;
+    }
+    .footerLogo {
+        margin-top: -5px;
+    }
+    .head_category,
+    .head_scndblock .form-control {
+        font-size: 13px;
+        padding: 6px 30px 6px 10px;
+    }
+    .head_scndblock .btn-custom {
+        font-size: 12px;
+    }
+    .megamenuSec.header .menu>ul>li {
+        padding-right: 17px;
+    }
+    .filterModal_Listing #fiterModalLabel {
+        font-size: 21px;
+    }
+    .filterModal_Listing .filterTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .filterModal_Listing .ShowMoreAnch a,
+    .filterModal_Listing label.form-check-label {
+        font-size: 13.5px;
+    }
+    .filterModal_Listing input.form-control {
+        font-size: 14px;
+    }
+    .filterModal_Listing .btn-close {
+        background-size: 65%;
+    }
+    .SliderSec1 {
+        padding: 0 10px;
+    }
+    .Section_common_padding {
+        padding: 30px 0;
+    }
+    .listing_cols_data {
+        margin-top: 20px;
+    }
+    .titleSec,
+    .travelOneSec {
+        font-size: 25px;
+        line-height: inherit;
+        margin-bottom: 5px;
+    }
+    .travelOneSec_travel.cardTitle {
+        margin-bottom: 5px;
+    }
+    .top_drop_jumbo .select-box__list {
+        width: 185px;
+    }
+    .title_subtitle {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .btn-custom {
+        padding: 4px 30px;
+        font-size: 15px;
+    }
+    .viewAllDeals a.btn-custom {
+        font-size: 15px;
+        padding: 6px 30px;
+    }
+    .tranding_dealsUL .card-link {
+        font-size: 16px;
+    }
+    .plan_img_relative {
+        top: 80px;
+    }
+    .cardSec {
+        min-height: 360px;
+    }
+    .cardTitle {
+        font-size: 19px;
+    }
+    .travelOneSec {
+        line-height: inherit;
+    }
+    .cardSec img {
+        width: auto;
+    }
+    .weCardSec .img-fluid {
+        width: 45px;
+    }
+    .WeareDifferent br {
+        display: none;
+    }
+    .title_ready_pay {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    .ready_para {
+        font-size: 16px;
+        line-height: inherit;
+        margin-bottom: 15px;
+    }
+    .slick-slider .slick-arrow {
+        top: -100px;
+        background-size: 75%;
+    }
+    button.slick-next.slick-arrow {
+        right: 10px;
+    }
+    .trandsrelative button.slick-prev.slick-arrow {
+        right: 50%;
+    }
+    .trandsrelative .slick-list.draggable {
+        margin-bottom: 15px;
+    }
+    .ecoSubcontent {
+        font-size: 26px;
+        line-height: inherit;
+    }
+    .head_scndblock .btn-custom {
+        padding: 8px 35px;
+        line-height: inherit;
+    }
+    .top_drop_jumbo .select-box__input-text {
+        font-size: 14px;
+    }
+    .top_drop_jumbo .select-box__option {
+        font-size: 13px;
+    }
+    .callIcons-link {
+        display: block;
+        border: 0;
+    }
+    .tranding_dealsUL li {
+        padding: 0 15px;
+    }
+    .tranding_dealsUL {
+        margin: 20px 0 25px;
+    }
+    span.boldTextPrice {
+        display: inline-block;
+        font-size: 16px;
+    }
+    .greece_themeSec .slick-slider .slick-arrow {
+        top: auto;
+        background-size: 60%;
+        bottom: -30px;
+    }
+    .greece_themeSec button.slick-prev.slick-arrow {
+        right: 45px;
+    }
+    .greece_themeSec {
+        padding-bottom: 20px;
+    }
+    .mobile-wd-half:last-child {
+        margin: 0;
+    }
+    .greecetourHeading_main .toursResultSpan {
+        font-size: 15px;
+        line-height: 31px;
+    }
+    .greecetourHeading_main {
+        margin-bottom: 10px;
+    }
+    .filterTourLeft {
+        justify-content: flex-start;
+    }
+    .filterTourLeft .img-fluid {
+        width: 17px;
+    }
+    .greeceReviewSec .titleSec {
+        margin-bottom: 15px;
+    }
+    .greece_themeSec .titleSec {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    .greeceTheme br {
+        display: none;
+    }
+    .greece_themeSec .para {
+        line-height: inherit;
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+    .para,
+    .card_para {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .card-trading-deals {
+        padding: 15px;
+    }
+    .card-trading-deals::after {
+        bottom: 50px;
+    }
+    .wishlist_commentBlock .img-fluid {
+        width: 16px;
+    }
+    .listing_cols_data .card-trading-deals {
+        margin-bottom: 25px;
+    }
+    .priceViewDeals .iconWrapPrice .hydrated {
+        right: -96px;
+        font-size: 13px;
+    }
+    .PlanTrip .title_subtitle {
+        font-size: 16px;
+        line-height: inherit;
+    }
+    .btn-Subscribe {
+        margin-top: 20px;
+    }
+    .PlanTrip .titleSec {
+        line-height: inherit;
+    }
+    .ecosystem_border {
+        min-height: 180px;
+        padding: 25px;
+    }
+    .bigText {
+        top: -5px;
+        font-size: 115px;
+    }
+    .ecoSubcontent {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .SliderSec p {
+        font-size: 15px;
+    }
+    .trndDestinationSec .trndDestination .para {
+        margin-bottom: 20px;
+    }
+    .weCardSec_position_rel {
+        top: 25px;
+    }
+    .megamenuSec.header .menu>ul>li .sub-menu.mega-menu-column-4 {
+        max-width: 1115px;
+    }
+    .itsWorldMidSec {
+        top: -20px;
+        width: 280px;
+    }
+    .titleSec_world br {
+        display: none;
+    }
+    .itsworldpara {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .itsdiscoverdflex {
+        justify-content: center;
+    }
+    .titleSec_world {
+        font-size: 25px;
+        line-height: inherit;
+    }
+    .itsWorldLeftSec .para {
+        margin-top: 15px;
+        line-height: 26px;
+    }
+    .itsworldanchor {
+        display: block;
+    }
+    .mobile-dflex-itsdiscover {
+        display: flex;
+        align-items: center;
+    }
+    .currencyConvertation .cartDateRangeTitle span,
+    .thanksBookingSec .thnkbookHeading {
+        font-size: 21px;
+    }
+    .checkoutAccTitle {
+        font-size: 17px;
+    }
+    .checkoutAccordian .accordion-button,
+    .checkoutAccordian .form-control,
+    .checkoutAccordian .form-select,
+    .debitHistory .form-control {
+        font-size: 13.5px;
+    }
+    .debitHistory .form-control::placeholder {
+        font-size: 12.5px;
+    }
+    .thanksBookingSec .paraLi {
+        font-size: 12.5px;
+    }
+    .thanksBookingSec .iconCheckmark .IoiconCheckmark {
+        font-size: 90px;
+    }
+    .debitHistory .removeDebitInfo .debitCloseIcon {
+        font-size: 33px;
+    }
+    .checkoutAccordian .accordion-button {
+        padding: 15px 10px 15px 0;
+    }
+    .checkoutAccordian .accordion-body {
+        padding: 0px 0px 20px;
+    }
+    .checkoutAgreebtn .termsHeading {
+        font-size: 15px;
+    }
+    .checkoutAgreebtn input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    .checkoutpageSec .checkoutAgreebtn .inputGroup {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .checkoutpageSec .checkoutAgreebtn {
+        margin: 30px 0;
+    }
+    .checkoutAccordian .commonInnerblock,
+    .fullwidthInnerblock {
+        margin-bottom: 15px;
+    }
+    .debitHistory {
+        margin: 15px 0 20px;
+    }
+    .checkoutAccordian .accordion-button::after {
+        top: 3px;
+        width: 15px;
+        height: 15px;
+        background-size: 100%;
+    }
+    .checkoutAccordian .form-control::placeholder,
+    .checkoutAccordian .sentMesg-email {
+        font-size: 13.5px;
+    }
+    .paypalDebitUL li a {
+        font-size: 15px;
+    }
+    .paypalButton img {
+        max-width: 33%;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check:not(:last-child) {
+        margin-right: 10px;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        top: -17px;
+        left: 43%;
+        width: 32px;
+        height: 32px;
+        background-size: 95%;
+    }
+    .SliderBannerSec .tourHeadingPrice {
+        font-size: 15px;
+    }
+    .SliderBannerSec .tourHeadingPrice span {
+        font-size: 25px;
+    }
+    .about-banner1 .about-vertical-title {
+        top: 43%;
+    }
+    .travelOne_leadingTravelSec .banner-about-title,
+    .about-vertical-title {
+        font-size: 50px;
+    }
+    .travelOne_leadingTravelSec .about-travelonebnnr {
+        padding-top: 50px;
+    }
+    .visualcollaborationSec .contactTitle,
+    .about-page .contactTitle {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .whatTraveloneSec .contactTitle,
+    .empowerworldSec .contactTitle {
+        margin-bottom: 30px;
+    }
+    .empowerworldSec iframe {
+        width: 92.8%;
+        top: 32px;
+        height: 410px;
+    }
+    .customerCornerSec .leftcustcorner,
+    .customerCornerSec .indicator ul,
+    .customerCornerSec .indicator.testimonal-main {
+        height: 637px;
+    }
+    .customerCornerSec .indicator.indicator2 ul,
+    .indicator.indicator2 {
+        width: 435px;
+        height: 435px;
+    }
+    .customerCornerSec .indicator li:nth-child(3) {
+        bottom: -36px;
+    }
+    .customerCornerSec .indicator li:nth-child(4) {
+        left: -10px;
+        bottom: 105px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(1) {
+        left: 125px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(2) {
+        top: 50px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(3) {
+        bottom: 65px;
+        right: -6px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(4) {
+        left: 45px;
+        bottom: 5px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(5) {
+        left: -41px;
+        top: 150px;
+    }
+    .customerCornerSec .indicator2 .authorcompname {
+        width: 80px;
+    }
+    .customerCornerSec .indicator1 .authorcompname {
+        width: 95px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(1) .tab-a.active-a .authorcompname {
+        top: -45px;
+        left: 0;
+        right: 0;
+    }
+    .customerCornerSec .indicator1 li:nth-child(2) .tab-a.active-a .authorcompname {
+        top: 25px;
+        right: -95px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(3) .tab-a.active-a .authorcompname {
+        top: 106px;
+        right: 0;
+        left: 10px;
+    }
+    .customerCornerSec {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(4) .tab-a.active-a .authorcompname {
+        top: 105px;
+        left: 3px;
+        right: 0;
+    }
+    .customerCornerSec .indicator21 li:nth-child(1) .tab-a.active-a .authorcompname {
+        top: 100px;
+        left: 6px;
+        right: 0;
+    }
+    .customerCornerSec .indicator21 li:nth-child(2) .tab-a.active-a .authorcompname {
+        top: 35px;
+        left: -85px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(3) .tab-a.active-a .authorcompname {
+        top: 30px;
+        left: -90px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(4) .tab-a.active-a .authorcompname {
+        top: -40px;
+        right: 0;
+    }
+    .customerCornerSec .indicator21 li:nth-child(5) .tab-a.active-a .authorcompname {
+        top: -24px;
+        right: -55px;
+        left: auto;
+    }
+    .customerCornerSec .border-center-logo {
+        width: 245px;
+    }
+    .afterLoginSec .top_drop_jumbo .select-box__icon {
+        right: -13px;
+    }
+    .result-orientLeft {
+        padding: 20px 20px 20px 9%;
+    }
+    .TrendingDeals_tabs button.card-link:not(:last-child) {
+        margin-right: 45px;
+    }
+    .travel_agency-page .howTravelWorkSec .boxborderSec .heading-beliesec {
+        min-height: 66px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .tabPackageSec .tab {
+        font-size: 16px;
+    }
+    .tabPackageSec .tabs-list {
+        justify-content: center;
+    }
+    .itsWorldMidSec {
+        top: -14px;
+        width: 280px;
+    }
+    .titleSec_world br {
+        display: none;
+    }
+    .itsWorldMidSec::before {
+        top: -2px;
+        bottom: 0;
+        left: -62px;
+        background-size: 54%;
+    }
+    .itsWorldMidSec::after {
+        top: 85px;
+        bottom: 0;
+        left: 158px;
+        background-size: 35%;
+    }
+    .ItsDiscoverSec .itsworldpara {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .itsdiscoverdflex {
+        justify-content: end;
+    }
+    .titleSec_world {
+        font-size: 25px;
+        line-height: inherit;
+    }
+    .itsWorldLeftSec .para {
+        margin-top: 15px;
+        line-height: 26px;
+    }
+    .itsworldanchor {
+        display: block;
+    }
+    .mobile-dflex-itsdiscover {
+        display: flex;
+        align-items: center;
+    }
+    .tourboxd-flex {
+        margin-top: 5px;
+    }
+    .tourHeadingPrice span {
+        font-size: 33px;
+        line-height: inherit;
+    }
+    .tourHeadingPrice {
+        font-size: 15px;
+        padding-right: 20px;
+        margin-left: 0px;
+    }
+    .tourMain {
+        min-height: 200px;
+    }
+    .bannerTourHighlightsUl li {
+        line-height: 1.5em;
+        height: auto;
+        overflow: hidden;
+        width: 100%;
+    }
+    .beforeloginHeading a.btn {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .beforeloginButton .btn-custom {
+        width: 150px;
+    }
+    .beforeLogin-header.header .menu>ul>li {
+        padding: 7px 10px 0 10px;
+    }
+    .SliderBannerSec .bg-dark-banner-rightBlock {
+        padding: 10px 15px 10px 15px;
+    }
+    .bannerRightSec .bannerRightTourHighlights {
+        padding: 10px 0px 5px 0px;
+    }
+    .SliderBannerSec .fixCheckboxsc {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check:not(:last-child) {
+        margin-right: 7px;
+    }
+    .SliderBannerSec .tourHeadingPrice {
+        font-size: 12.5px;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check {
+        padding: 0px;
+    }
+    .SliderBannerSec .tourHeadingPrice span {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check-input[type=checkbox] {
+        left: 43px;
+        background-size: 90%;
+        top: -16px;
+    }
+    .SliderBannerSec .detail-explorer-title {
+        font-size: 17px;
+    }
+    .SliderBannerSec .detail-explorer-block1 {
+        font-size: 13px;
+    }
+    .shop_main_toursSec .blogPage .btn-filter-products-mobile {
+        display: none;
+    }
+    .shop_main_toursSec .blogPage .product-filters {
+        display: block;
+    }
+    .plnTripBtn.detail-travelagent-btn a {
+        flex: auto;
+        padding: 5px 10px;
+    }
+    .about-banner2 .banner-about-title.contactTitle {
+        line-height: 30px;
+        margin-bottom: 0px;
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+    .about-vertical-title {
+        font-size: 50px;
+        line-height: 45px;
+        top: 44.5%;
+    }
+    .travelOne_leadingTravelSec .about-travelonebnnr {
+        gap: 45px;
+        grid-gap: 45px;
+    }
+    .aboutBannerRightpara {
+        left: 75px;
+        right: 70px;
+    }
+    .about-travelonebnnr {
+        padding-top: 30px;
+    }
+    .travelOne_leadingTravelSec .planTRip-btn {
+        padding: 40px 33px;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1199px) {
+    .Backto_topAroows button.back-to-top.show {
+        bottom: 30px;
+    }
+    .TourboxsRightSec {
+        padding-top: 0;
+    }
+    .locationModal {
+        padding: 0;
+        padding-right: 5px;
+    }
+    .customerCornerSec .cornercustomerflex {
+        gap: 50px;
+        grid-gap: 50px;
+        align-items: center;
+    }
+    .customerCornerSec .indicator2 {
+        height: auto
+    }
+    .customerCornerSec .indicator.indicator2 ul,
+    .indicator.indicator2 {
+        width: 385px;
+        height: 385px;
+    }
+    .customerCornerSec .testimonal-main,
+    .customerCornerSec .leftcustcorner,
+    .customerCornerSec .indicator ul {
+        height: 531px;
+    }
+    .customerCornerSec .indicator .client-img {
+        width: 65px;
+    }
+    .customerCornerSec .indicator.indicator2 .client-img {
+        width: 65px;
+    }
+    .customerCornerSec .border-center-logo {
+        width: 195px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(1) {
+        top: 75px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(1) .tab-a.active-a .authorcompname {
+        top: -50px;
+        right: -15px;
+        left: -15px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(2) {
+        top: -27px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(3) {
+        bottom: -23px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(3) .tab-a.active-a .authorcompname {
+        top: 75px;
+        right: -10px;
+        left: -10px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(4) {
+        left: 15px;
+        bottom: 80px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(4) .tab-a.active-a .authorcompname {
+        top: 75px;
+        left: -25px;
+        right: 5px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(2) .tab-a.active-a .authorcompname {
+        top: 5px;
+        right: -105px;
+        left: 75px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(1) {
+        top: -25px;
+        left: 105px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(1) .tab-a.active-a .authorcompname {
+        top: 70px;
+        left: 0px;
+        right: 0;
+    }
+    .customerCornerSec .indicator21 li:nth-child(2) .tab-a.active-a .authorcompname {
+        top: 18px;
+        left: -75px;
+        right: 0;
+        bottom: auto;
+    }
+    .customerCornerSec .indicator2 li:nth-child(3) {
+        bottom: 35px;
+    }
+    .customerCornerSec .indicator2 .authorcompname {
+        width: 70px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(3) .tab-a.active-a .authorcompname {
+        top: 20px;
+        left: -75px;
+        right: 0;
+    }
+    .customerCornerSec .indicator2 li:nth-child(4) {
+        bottom: -10px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(4) .tab-a.active-a .authorcompname {
+        top: -35px;
+        right: 0;
+        left: 0;
+    }
+    .customerCornerSec .indicator2 li:nth-child(5) {
+        left: -30px;
+        top: 160px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(5) .tab-a.active-a .authorcompname {
+        top: -22px;
+        right: -50px;
+        left: auto;
+    }
+    .customerCornerSec .rightcustcorner .para {
+        text-align: justify;
+    }
+    .customerCornerSec .authortitle {
+        margin-bottom: 10px;
+    }
+    .customerCornerSec {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width:1199px) {
+    .cartRightDueSec .totalDueSec {
+        align-items: center;
+    }
+    .taBItinerayrows {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .SliderBannerSec .carousel-indicators {
+        bottom: 10px;
+    }
+    .videoButtonSlider1 {
+        bottom: 17px;
+    }
+    .bannerTourHighlightsUl li {
+        font-size: 13px;
+    }
+    section.TourboxsSec {
+        margin-top: 25px;
+    }
+    .bannerRightSec {
+        width: 100%;
+    }
+    .explorerBlock {
+        padding: 6px 30px;
+    }
+    .bg-dark-banner-rightBlock {
+        padding: 17px;
+        font-size: 16px;
+        line-height: inherit;
+    }
+    .sliderBanSec .carousel-indicators [data-bs-target] {
+        width: 10px;
+        height: 10px;
+    }
+    .videoButtonSlider1 img {
+        width: 30px;
+    }
+    ul.bannerSecUl {
+        margin-top: 5px;
+        padding-left: 0;
+        margin-bottom: 5px;
+    }
+    ul.bannerSecUl li {
+        position: relative;
+        margin: 0 3px;
+    }
+    .bannerSecUl li a {
+        font-size: 13px;
+    }
+    ul.bannerSecUl li::after {
+        width: 3px;
+        height: 3px;
+        bottom: 8px;
+        right: -6px;
+    }
+    .bannerRightTourHighlights {
+        padding: 5px 0px 0 5px;
+    }
+    .sliderBanner button.slick-prev,
+    .sliderBanner button.slick-next {
+        top: 28%;
+    }
+    .SliderBannerSec .slick-slide img {
+        display: block;
+        margin: 0 auto;
+    }
+    .videoButtonSlider {
+        top: -67px;
+    }
+    .sliderBanner ul.slick-dots {
+        top: -45px;
+    }
+    .tourboxd-flex {
+        justify-content: center;
+    }
+    .iconWrap .tooltip {
+        width: auto;
+    }
+    .iconWrap .tooltip::before {
+        width: 8px;
+        height: 8px;
+        left: 70px;
+        top: 0;
+    }
+    .iconWrap .tooltip {
+        display: none;
+        width: auto;
+    }
+    .iconWrapPrice .tooltip {
+        display: block;
+    }
+    .iconWrap .tooltip {
+        padding: 15px;
+        width: 130px;
+    }
+    .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        left: 9px;
+        top: 10px;
+    }
+    .iconWrap .tooltip p {
+        font-size: 7px;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    .megamenuSec.header .menu>ul>li>a,
+    .megamenuSec.header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item .title,
+    .megamenuHeader li button {
+        font-size: 13px;
+    }
+    .megamenuSec.header .menu>ul>li .sub-menu.mega-menu>.list-item>ul>li>a {
+        font-size: 13px;
+    }
+    .megamenuSec.header .menu>ul>li {
+        padding-right: 11px;
+    }
+    .top_drop_jumbo .select-box__input-text {
+        font-size: 14px;
+    }
+    .top_drop_jumbo .select-box__option {
+        font-size: 13px;
+    }
+    .head_category,
+    .head_scndblock .form-control {
+        font-size: 13px;
+        padding: 6px 30px 6px 10px;
+    }
+    .head_scndblock .btn-custom {
+        font-size: 14px;
+    }
+    .ecoSubcontent {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .rate_Heading,
+    .iconWrap .tooltip p {
+        font-size: 11px;
+        line-height: inherit;
+    }
+    .filterModal_Listing #fiterModalLabel {
+        font-size: 21px;
+    }
+    .filterModal_Listing .filterTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .filterModal_Listing .ShowMoreAnch a,
+    .filterModal_Listing label.form-check-label {
+        font-size: 13.5px;
+    }
+    .filterModal_Listing input.form-control {
+        font-size: 14px;
+    }
+    .filterModal_Listing .btn-close {
+        background-size: 65%;
+    }
+    .top-cart .hydrated,
+    .top-wishlist .hydrated {
+        font-size: 25px;
+    }
+    .top_drop_jumbo .select-box__icon {
+        right: -25px;
+        width: 10px;
+    }
+    .top_drop_jumbo .select-box__list {
+        width: 185px;
+        top: 30px;
+    }
+    .head_scndblock .btn-custom {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+    .top_drop_jumbo {
+        margin-right: 26px;
+    }
+    .header-logo {
+        margin-top: -10px;
+    }
+    .travelOneSec_travel.cardTitle {
+        margin-bottom: 5px;
+    }
+    .PlanTrip .titleSec {
+        line-height: inherit;
+        margin-bottom: 10px;
+    }
+    .SliderSec p {
+        font-size: 18px;
+    }
+    .trndDestinationSec .titleSec,
+    .trndDestinationSec .para {
+        text-align: center;
+        line-height: inherit;
+    }
+    .titleSec {
+        font-size: 23px;
+        line-height: inherit;
+        margin-bottom: 5px;
+    }
+    .trndDestination br {
+        display: none;
+    }
+    .title_subtitle {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .PlanTrip .title_subtitle {
+        font-size: 19px;
+        line-height: 34px;
+        margin-bottom: 25px;
+    }
+    .btn-custom {
+        font-size: 17px;
+        line-height: inherit;
+        padding: 10px 45px;
+    }
+    .plan_img_relative {
+        top: 70px;
+    }
+    .socialPlanIcons a {
+        width: 35px;
+        height: 35px;
+    }
+    .WhyTravelOne br {
+        display: none;
+    }
+    .travelOneSec {
+        font-size: 23px;
+        line-height: inherit;
+        margin-bottom: 5px;
+    }
+    .WeareDifferent br {
+        display: none;
+    }
+    .cardTitle {
+        font-size: 21px;
+        line-height: inherit;
+        margin-bottom: 10px;
+    }
+    .cardSec {
+        min-height: 405px;
+    }
+    .cardSec .para {
+        line-height: inherit;
+    }
+    .para,
+    .card_para {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .whyTravelCols .para {
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .footerTitle {
+        font-size: 16px;
+    }
+    .footerInfo ul li a {
+        font-size: 15px;
+    }
+    .title_ready_pay {
+        font-size: 23px;
+        margin-bottom: 5px;
+    }
+    .ready_para {
+        font-size: 16px;
+        line-height: inherit;
+        margin-bottom: 15px;
+    }
+    .Section_common_padding {
+        padding: 25px 0;
+    }
+    .itsSimpleSec {
+        padding-top: 23px;
+    }
+    .trndDestination ul.slick-dots {
+        margin-top: 15px;
+    }
+    .form-control-input {
+        padding: 13px 20px;
+    }
+    .btn-Subscribe {
+        padding: 11px 15px;
+        margin-top: 15px;
+    }
+    .footerLogo {
+        margin-top: -5px;
+    }
+    .ecosystem_border {
+        min-height: 195px;
+    }
+    .bigText {
+        top: -15px;
+    }
+    .tranding_dealsUL li {
+        padding: 0 10px;
+    }
+    .tranding_dealsUL .card-link {
+        font-size: 15px;
+    }
+    .tranding_dealsUL {
+        margin: 20px 0 25px;
+    }
+    .greece_themeSec .titleSec {
+        font-size: 23px;
+        margin-bottom: 0;
+    }
+    .greece_themeSec .para br {
+        display: none;
+    }
+    .greece_themeSec .para {
+        margin-top: 2px;
+    }
+    .greece_themeSec .btn-custom {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+    .greece_themeSec {
+        padding-bottom: 20px;
+    }
+    .greece_themeSec .slick-arrow {
+        bottom: -30px;
+    }
+    .sortBy_togleSwtchSec label.form-check-label {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .sortBy_togleSwtchSec .form-switch {
+        align-items: center;
+        display: flex;
+        margin: 0 10px;
+    }
+    .sortBy_togleSwtchSec .form-switch .form-check-input {
+        width: 45px;
+    }
+    .currencyConvertation .cartDateRangeTitle span,
+    .thanksBookingSec .thnkbookHeading {
+        font-size: 21px;
+    }
+    .checkoutAccTitle {
+        font-size: 17px;
+    }
+    .checkoutAccordian .accordion-button,
+    .checkoutAccordian .form-control,
+    .checkoutAccordian .form-select,
+    .debitHistory .form-control {
+        font-size: 13.5px;
+    }
+    .thanksBookingSec .paraLi {
+        font-size: 12.5px;
+    }
+    .thanksBookingSec .iconCheckmark .IoiconCheckmark {
+        font-size: 90px;
+    }
+    .debitHistory .removeDebitInfo .debitCloseIcon {
+        font-size: 33px;
+    }
+    .checkoutAccordian .accordion-button {
+        padding: 15px 10px 15px 0;
+    }
+    .checkoutAccordian .accordion-body {
+        padding: 0px 0px 20px;
+    }
+    .checkoutAgreebtn .termsHeading {
+        font-size: 15px;
+    }
+    .checkoutAgreebtn input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    .checkoutpageSec .checkoutAgreebtn .inputGroup {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .checkoutpageSec .checkoutAgreebtn {
+        margin: 30px 0;
+    }
+    .checkoutAccordian .commonInnerblock,
+    .fullwidthInnerblock {
+        margin-bottom: 15px;
+    }
+    .debitHistory {
+        margin: 15px 0 20px;
+    }
+    .checkoutAccordian .accordion-button::after {
+        top: 3px;
+        width: 15px;
+        height: 15px;
+        background-size: 100%;
+    }
+    .checkoutAccordian .form-control::placeholder,
+    .checkoutAccordian .sentMesg-email {
+        font-size: 13.5px;
+    }
+    .paypalDebitUL li a {
+        font-size: 15px;
+    }
+    .paypalButton img {
+        max-width: 33%;
+    }
+    .shopMemberShipSec ul,
+    .shop_lastSeenSec ul,
+    .shopFolow_Anchor,
+    .reviewsCustomerSecCard .profilesFlex {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+    .shopFolow_Ask_Social {
+        gap: 25px;
+        grid-gap: 25px;
+    }
+    .shopMemberShipSec ul li:not(:last-child) a {
+        padding-right: 5px;
+    }
+    .shopMemberShipSec a,
+    .shopStarRatingsec ul a,
+    .coupondetailsShop span strong,
+    .shopallToursSec .allToursTitle {
+        font-size: 15px;
+    }
+    .shopMemberShipSec .hydrated {
+        font-size: 16px;
+    }
+    .shopMemberShipSec ul a {
+        gap: 0px;
+        grid-gap: 0px;
+    }
+    .shp_travelOneTitle {
+        font-size: 23px;
+    }
+    .shop_lastSeenSec li,
+    .shopCustomerReviewSec .customerName {
+        font-size: 14px;
+        line-height: inherit;
+    }
+    .shop_lastSeenSec li.Shopdeactive_dot {
+        width: 7px;
+        height: 7px;
+    }
+    .shopFolow_Ask_Social .ask_questions_btn {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+    .Social_shop_icons .img-fluid {
+        width: 15px;
+    }
+    .Social_shop_icons a {
+        width: 35px;
+        height: 35px;
+        line-height: 30px;
+    }
+    ul.shopNavMenuUL a,
+    .coupondetailsShop span,
+    .futureTravel_details p,
+    .protocolsRightsec p.paraTitle,
+    .readmore_anchor_btn,
+    .protocolsRightsec p,
+    .accordianShopmainSec .accordion-button:not(.collapsed),
+    .accordianShopmainSec .accordion-button,
+    .customerReviewsShopUL .custom_reviews_rate,
+    .shop_memberInfo {
+        font-size: 14px;
+    }
+    .accordianShopmainSec button.accordion-button {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .protocolsLeftsec {
+        font-size: 16px;
+    }
+    .shopdiscoutLeftSec p.para {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .futureTravel_details p.paraTitle {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .futureTravel_details p.paraTitle {
+        margin-bottom: 15px;
+    }
+    .futureTravel_details p {
+        margin-bottom: 10px;
+    }
+    .protocolsRightsec .paraTitle,
+    .readmore_anchor_btn {
+        margin-top: 15px;
+    }
+    .protocolsRightsec p.paraTitle,
+    .readmore_anchor_btn,
+    .protocolsRightsec p {
+        line-height: 24px;
+    }
+    .accordianShopmainSec ul li.para,
+    .accordianShopmainSec .para_accTitle {
+        font-size: 13px;
+    }
+    .accordianShopmainSec .accordion-button:not(.collapsed)::after,
+    .accordianShopmainSec .accordion-button::after {
+        background-size: 65%;
+    }
+    .allToursUL li a {
+        font-size: 13px;
+        line-height: 23px;
+    }
+    .shopallToursSec .allToursDflex {
+        margin-bottom: 15px;
+    }
+    .shopallToursSec .allToursTitle {
+        margin-bottom: 5px;
+    }
+    .customerReviewsShopUL .li_reviewsUl {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .reviewsCustomerSecCard {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .shopCustomerReviewSec .rate_name,
+    .shopCustomerReviewSec .cardTitle,
+    .shopCustomerReviewSec .cardBottomheading {
+        font-size: 13px;
+    }
+    .shopCustomerReviewSec .para {
+        font-size: 12.5px;
+        line-height: 22px;
+    }
+    .protocolsRightsec .brochures_para {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .aboutLeftfixedsec .members_numbers_info {
+        font-size: 20px;
+    }
+    .reviewsCustomerSecCard .cardProfile {
+        gap: 30px;
+        grid-gap: 30px;
+    }
+    .aboutOwnerInfo {
+        margin: 15px 0 15px;
+    }
+    .shopAboutSec .swiper-container-wrapper,
+    .aboutLeftfixedsec {
+        height: 322px;
+    }
+    .shopAboutSec .gallery-thumbs .swiper-wrapper {
+        gap: 25px;
+        grid-gap: 25px;
+    }
+    .aboutLeftfixedsec {
+        width: 185px;
+    }
+    .aboutRightFixedSec {
+        width: calc(100% - 185px);
+    }
+    .TrendingDeals_tabs .is-desktop {
+        gap: 30px;
+        grid-gap: 30px;
+        flex-wrap: wrap;
+    }
+    .TrendingDeals_tabs button.card-link {
+        font-size: 15px;
+    }
+    .tabcontent .titleMarginPackIti {
+        display: flex;
+        align-items: center;
+    }
+    .about-page .contactTitle {
+        line-height: inherit;
+        margin-bottom: 20px;
+    }
+    .whatTraveloneCard {
+        flex-basis: 46%;
+    }
+    .whatTraveloneLeft {
+        padding-right: 15px;
+    }
+    .whatTraveloneRight {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .realTimeSupportUl.aboutresultUL {
+        flex-wrap: wrap;
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .whyDevelopSec .aboutresultUL {
+        margin-top: 50px;
+        gap: 5px;
+        grid-gap: 5px;
+        row-gap: 15px;
+        grid-row-gap: 15px;
+    }
+    .about-page .cardTitle {
+        overflow-wrap: anywhere;
+    }
+    .empowerworldSec .vdeoleftSecbk {
+        padding-right: 15px;
+    }
+    .empowerworldSec .videoRightBlock {
+        height: 400px;
+    }
+    .empowerworldSec iframe {
+        width: 100%;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0px;
+        right: 0;
+        margin: 0px auto;
+        height: 395px;
+        padding: 0;
+        position: relative;
+        padding: 27px 21px;
+    }
+    .howTravelWorkSec .boxborderSec {
+        min-height: 340px;
+    }
+    .howTravelWorkSec .heading-beliesec {
+        font-size: 18px;
+    }
+    .about-page .contactTitle br {
+        display: none;
+    }
+    .visualcollaborationSec .whyDevelopSecLeft {
+        padding: 0;
+    }
+    .afterLoginSec .top_drop_jumbo .select-box__icon {
+        right: -25px;
+    }
+    .afterLoginSec .login-search {
+        width: 18%;
+    }
+    .afterLoginSec .login-menu-list {
+        width: 65.3%;
+    }
+    .home-page .WhyTravelOneSec .cardSec .cardTitle {
+        min-height: auto;
+    }
+    .home-page .WeareDifferentSec {
+        padding-top: 25px !important;
+    }
+    .home-page .weCardSec_position_rel {
+        top: 10px;
+    }
+    .home-page .weCardSec .wecardbox:last-child {
+        margin-bottom: 30px;
+    }
+    .about-page .resultOrintSec .result-orientLeft .para {
+        line-height: 26px;
+    }
+    .travel_agency-page .about-slider-buttons,
+    .travel_agency-page .real_time_right_blocks_text,
+    .travel_agency-page .empower_left_blocks_text {
+        margin-top: 25px;
+    }
+    .home-page .PlanTripSec .center-content-block .img_content .titleSec .titleSpan,
+    .home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p {
+        font-size: 18.5px !important;
+    }
+    .home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p {
+        padding-bottom: 10px !important;
+    }
+    .home-page .PlanTripSec .PlanTrip .title_subtitle {
+        margin-bottom: 20px !important;
+    }
+    .home-page .PlanTripSec .plan_img_relative {
+        position: relative;
+        top: -40px !important;
+    }
+    .result-orientLeft {
+        padding: 20px 40px 20px 30px;
+    }
+    .aboutresultUL {
+        gap: 30px;
+        grid-gap: 30px;
+    }
+    .TrendingDeals_tabs button.card-link:not(:last-child) {
+        margin-right: 35px;
+    }
+    .travel_agency-page .whyDevelopSec .aboutresultUL {
+        row-gap: 15px;
+        grid-row-gap: 15px;
+    }
+    .travel_agency-page .realTimeSupportUl.aboutresultUL {
+        gap: 31px;
+        grid-gap: 31px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .cartPackRightsec {
+        padding: 0px 15px 13px;
+    }
+    .cartpageSec .spotTitle {
+        padding: 13px 15px;
+    }
+    .listing-review .imgSliderSec .slick-slider {
+        height: 175px;
+    }
+    section.ItsDiscoverSec.sectionBgcolor.Section_common_padding {
+        padding: 35px 0px;
+    }
+    .priceViewDeals .iconWrapPrice .hydrated {
+        right: -97px;
+    }
+    .bigText {
+        top: -5px;
+        font-size: 115px;
+    }
+    .ecosystem_border {
+        min-height: 170px;
+        padding: 25px;
+    }
+    .ecoSubcontent {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .PlanTrip .title_subtitle {
+        font-size: 15px;
+        line-height: inherit;
+        margin-bottom: 15px;
+    }
+    .PlanTripSec .img_content {
+        padding-left: 5px;
+    }
+    .footerTitle {
+        margin-bottom: 15px;
+    }
+    .wecardbox .cardTitle {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .WeareDifferent .weAreimg_content .card_para {
+        font-size: 15px;
+    }
+    .wecardbox .card_para {
+        font-size: 14px;
+    }
+    .weCardSec_position_rel {
+        top: 20px;
+    }
+    .WeareDifferent .img_content {
+        padding-left: 5px;
+    }
+    .cardTitle {
+        font-size: 17px;
+    }
+    .cardSec img {
+        margin: 0 auto 15px;
+    }
+    .cardSec {
+        min-height: 341px;
+    }
+    .weCardSec .img-fluid {
+        width: 45px;
+    }
+    .slick-dots li {
+        width: 12px;
+        height: 12px;
+    }
+    .dealsHeading {
+        font-size: 15px;
+        min-height: 45px;
+    }
+    span.boldTextPrice {
+        font-size: 16px;
+    }
+    .wishlist_commentBlock .img-fluid {
+        width: 16px;
+    }
+    .itsimple_para_bottom {
+        margin-bottom: 20px;
+    }
+    .trndDestinationSec .trndDestination .para {
+        margin-bottom: 20px;
+    }
+    .trndDestination ul.slick-dots {
+        margin-top: 10px;
+    }
+    .SliderSec p {
+        font-size: 15px;
+    }
+    .viewAllDeals a.btn-custom {
+        font-size: 15px;
+        padding: 10px 27px;
+    }
+    .greece_themeSec .SliderSec p {
+        font-size: 13.5px;
+        padding: 0px 0;
+    }
+    .mobile-navbarlight {
+        display: none;
+    }
+    .btn-custom {
+        font-size: 15px;
+        line-height: inherit;
+        padding: 10px 30px;
+    }
+    .top-cart,
+    .top-cart a,
+    .top-wishlist,
+    .top-wishlist a {
+        justify-content: start;
+        margin-top: 0px;
+    }
+    .head_scndblock .anchorSec {
+        margin-top: 0px;
+    }
+    .header-logo {
+        width: auto;
+    }
+    .callIcons-link {
+        display: block;
+        border: 0;
+    }
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 7px;
+        padding-left: 6px;
+        font-size: 15px;
+    }
+    .mobile-wd-half:last-child {
+        margin: 0;
+    }
+    .greecetourHeading_main .toursResultSpan {
+        font-size: 15px;
+        line-height: 31px;
+    }
+    .greecetourHeading_main {
+        margin-bottom: 7px;
+    }
+    .listing_cols_data {
+        margin-top: 20px;
+    }
+    .filterTourLeft {
+        justify-content: flex-start;
+    }
+    .filterGreece {
+        padding: 4px 15px;
+    }
+    .filterTourLeft .img-fluid {
+        width: 17px;
+    }
+    .greecetourHeading_main .toursResultSpan,
+    .filterHeading {
+        font-size: 13.5px;
+        line-height: 30px;
+    }
+    .greeceReviewSec .titleSec {
+        margin-bottom: 15px;
+    }
+    .megamenuSec.header .menu>ul>li .sub-menu.mega-menu-column-4 {
+        max-width: 935px;
+    }
+    .greeceToursSec .btn-custom {
+        font-size: 15px;
+    }
+    section.TourboxsSec {
+        margin-top: -40px;
+    }
+    .videoButtonSlider1 {
+        bottom: 76px;
+    }
+    .SliderBannerSec .carousel-indicators {
+        bottom: 65px;
+    }
+    .bannerRightTourHighlights {
+        padding: 20px 0px 0 5px;
+    }
+    ul.bannerSecUl {
+        margin-top: 15px;
+    }
+    .mobile-fix-wd-dropdown.mobilee-d-nnone {
+        padding-left: 0;
+    }
+    .head_category,
+    .head_scndblock .form-control {
+        padding-top: 8.17px;
+    }
+    .support-HelpcenterSec .helpHeading {
+        font-size: 30px;
+    }
+    .support-HelpcenterSec .chat-help-center a {
+        padding: 13px 35px;
+        font-size: 15px;
+    }
+    .support-HelpcenterSec {
+        padding: 110px 0;
+    }
+    .contactTitle {
+        font-size: 30px;
+    }
+    .contactBannerSec .para {
+        font-size: 14px;
+        line-height: inherit;
+    }
+    .contactBannerSec .leftBannerContact .para br {
+        display: none;
+    }
+    .contact-anchortag::before {
+        background-size: 60%;
+    }
+    .contactBannerSec a {
+        font-size: 18px;
+    }
+    .contact-anchortag {
+        height: 195px;
+    }
+    .contact_absolute_form {
+        top: 295px;
+    }
+    .FormContactPage {
+        padding: 40px;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        top: -17px;
+        left: 43%;
+        width: 32px;
+        height: 32px;
+        background-size: 95%;
+    }
+    .contact-anchortag::after {
+        background-size: 50%;
+    }
+    .contactBannerSec {
+        padding: 40px 0 85px;
+    }
+    .OurTeam_about .someofinvest-main {
+        gap: 25px;
+        grid-gap: 25px;
+    }
+    .OurTeam_about .card-someinvest {
+        flex-basis: 30%;
+        justify-content: center;
+    }
+    .someofinvest-main {
+        row-gap: normal;
+        grid-row-gap: normal;
+        column-gap: normal;
+        grid-column-gap: normal;
+        justify-content: center;
+        align-items: start;
+    }
+    .card-someinvest {
+        padding: 10px;
+    }
+    .card-someinvest .cardpara {
+        font-size: 14px;
+    }
+    .someofinvest-main .cardTitle {
+        font-size: 16px;
+    }
+    .result-orientLeft::before {
+        width: 100%;
+    }
+    .result-orientLeft .para {
+        margin-bottom: 15px;
+    }
+    .customerTraveloneSec .para.customerPara {
+        margin-bottom: 30px;
+    }
+    .home-page .whyTravelOneBottom {
+        margin-bottom: 10px;
+    }
+    .about-page .howTravelWorkSec {
+        margin-bottom: 40px !important;
+    }
+    .listing-page .greece_themeSec {
+        padding-bottom: 35px !important;
+    }
+    .listing_details_padding .titleSec,
+    .listing_details_padding .travelOneSec,
+    .listing_details_padding .title_ready_pay {
+        font-size: 22px;
+    }
+    .listing_details_compare.details_tabPackageSec.tabPackageSec .tab button {
+        font-size: 17px;
+        margin-right: 0;
+        padding: 15px 30px 15px 0;
+    }
+    .listing_details_compare .negoiate_button_right a {
+        font-size: 13.5px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .itinerary_tab_Bg2 .itenrywdFullMobile {
+        width: 100%;
+    }
+    .itinerary_tab_Bg2 .rightFlexProperty {
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+    .itinerary_tab_Bg2 .packButtonTripSec,
+    .itinerary_tab_Bg2 .rightFlexProperty {
+        justify-content: center;
+    }
+    .about-page .resultOrintSec .result-orientLeft .para {
+        line-height: 23px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1024px) {
+    .sightseeingTab.itemsTabContentCommon,
+    .sightseeingTab {
+        min-height: 360px;
+    }
+    .multiple-items,
+    .taBItinerayrows {
+        /*left: 255px;*/
+        width: 100%;
+    }
+    .TourboxsRightSec {
+        padding-top: 0;
+    }
+    .Backto_topAroows button.back-to-top.show {
+        bottom: 30px;
+    }
+    .footerTitle {
+        margin-bottom: 15px;
+    }
+    .WeareDifferent .weAreimg_content .card_para {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .footerSocialIcon {
+        margin-bottom: 20px;
+    }
+    .titleSec,
+    .travelOneSec,
+    .title_ready_pay {
+        font-size: 23px;
+        line-height: inherit;
+    }
+    .PlanTrip .title_subtitle {
+        font-size: 15px;
+        line-height: inherit;
+        margin-bottom: 20px;
+    }
+    .ecoSubcontent {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .trandsrelative .slick-list.draggable {
+        margin-bottom: 15px;
+    }
+    .ecosystem_border {
+        min-height: 170px;
+        padding: 25px;
+    }
+    .bigText {
+        top: -5px;
+        font-size: 115px;
+    }
+    .head_scndblock .btn-custom {
+        font-size: 11px;
+        padding: 8px 15px;
+    }
+    .locationModal {
+        padding: 0;
+    }
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding: 20px 10px 15px;
+        width: 110px;
+    }
+    .customerTraveloneSec .slick-slider .slick-arrow {
+        top: 80px;
+        width: 13px;
+    }
+    .customerTraveloneSec button.slick-next.slick-arrow {
+        right: 15px;
+    }
+    .customerTraveloneSec button.slick-prev.slick-arrow {
+        left: 15px;
+        z-index: 9;
+    }
+    .customerTraveloneSec .slick-initialized .slick-slide {
+        align-items: center;
+    }
+    .about-result-orientdSec .aboutresultUL li {
+        align-items: center;
+    }
+    .customerCornerSec .cornercustomerflex {
+        gap: 50px;
+        align-items: center;
+        grid-gap: 50px;
+    }
+    .customerCornerSec .indicator2 {
+        height: auto
+    }
+    .customerCornerSec .indicator.indicator2 ul,
+    .indicator.indicator2 {
+        width: 385px;
+        height: 385px;
+    }
+    .customerCornerSec .testimonal-main,
+    .customerCornerSec .leftcustcorner,
+    .customerCornerSec .indicator ul {
+        height: 531px;
+    }
+    .customerCornerSec .indicator .client-img {
+        width: 65px;
+    }
+    .customerCornerSec .indicator.indicator2 .client-img {
+        width: 65px;
+    }
+    .customerCornerSec .border-center-logo {
+        width: 195px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(1) {
+        top: 75px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(1) .tab-a.active-a .authorcompname {
+        top: -50px;
+        right: -15px;
+        left: -15px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(2) {
+        top: -27px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(3) {
+        bottom: -23px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(3) .tab-a.active-a .authorcompname {
+        top: 75px;
+        right: -10px;
+        left: -10px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(4) {
+        left: 15px;
+        bottom: 80px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(4) .tab-a.active-a .authorcompname {
+        top: 75px;
+        left: -25px;
+        right: 5px;
+    }
+    .customerCornerSec .indicator1 li:nth-child(2) .tab-a.active-a .authorcompname {
+        top: 5px;
+        right: -105px;
+        left: 75px;
+    }
+    .customerCornerSec .indicator2 li:nth-child(1) {
+        top: -25px;
+        left: 105px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(1) .tab-a.active-a .authorcompname {
+        top: 70px;
+        left: 0px;
+        right: 0;
+    }
+    .customerCornerSec .indicator21 li:nth-child(2) .tab-a.active-a .authorcompname {
+        top: 18px;
+        left: -75px;
+        right: 0;
+        bottom: auto;
+    }
+    .customerCornerSec .indicator2 li:nth-child(3) {
+        bottom: 35px;
+    }
+    .customerCornerSec .indicator2 .authorcompname {
+        width: 70px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(3) .tab-a.active-a .authorcompname {
+        top: 20px;
+        left: -75px;
+        right: 0;
+    }
+    .customerCornerSec .indicator2 li:nth-child(4) {
+        bottom: -10px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(4) .tab-a.active-a .authorcompname {
+        top: -35px;
+        right: 0;
+        left: 0;
+    }
+    .customerCornerSec .indicator2 li:nth-child(5) {
+        left: -30px;
+        top: 160px;
+    }
+    .customerCornerSec .indicator21 li:nth-child(5) .tab-a.active-a .authorcompname {
+        top: -22px;
+        right: -50px;
+        left: auto;
+    }
+    .customerCornerSec .rightcustcorner .para {
+        text-align: justify;
+    }
+    .customerCornerSec .authortitle {
+        margin-bottom: 10px;
+    }
+    .customerCornerSec {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .travel_agency-page .resultOrintSec .result-orientLeft {
+        background: #ffbfbf;
+    }
+    .travel_agency-page .resultOrintSec .about-result-orientdSec {
+        background: #dffede;
+    }
+}
+@media screen and (max-width:991px) {
+    .tabPackageSec .multiple-items button.slick-next.slick-arrow {
+        left: auto;
+        right: 0;
+    }
+    .tabPackageSec .multiple-items button.slick-prev.slick-arrow {
+        left: auto;
+        right: 35px;
+    }
+    .multiple-items,
+    .taBItinerayrows {
+        /*left: 250px;*/
+        width: 100%;
+    }
+    .tabPackageSec .tabcontent {
+        padding-bottom: 55px;
+    }
+    .tabitemTitle {
+        font-size: 15px;
+    }
+    .itemsTabContentBold {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .listing-review .imgSliderSec .slick-slider {
+        height: 204px;
+    }
+    section.SliderBannerSec {
+        height: auto;
+        background: #dfffde;
+    }
+    .bannerRightSec {
+        width: 100%;
+    }
+    .SliderBannerSec .slick-slide img {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .sliderBanner button.slick-prev,
+    .sliderBanner button.slick-next {
+        top: 46%;
+    }
+    .sliderBanner ul.slick-dots {
+        top: -50px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .videoButtonSlider {
+        top: -74px;
+        left: auto;
+        right: 30px;
+        bottom: 0;
+    }
+    .sliderBanner button.slick-next {
+        right: 30px;
+    }
+    .sliderBanner button.slick-prev {
+        left: 30px;
+    }
+    .bg-dark-banner-rightBlock {
+        padding: 28px;
+    }
+    section.TourboxsSec {
+        margin-top: 0;
+    }
+    .bannerRightTourHighlights {
+        padding: 10px 0px;
+    }
+    section.TourboxsSec {
+        padding: 20px;
+    }
+    .tabPackageSec .tabsContainer {
+        padding: 20px 0 20px;
+    }
+    .tabPackageSec .tabs-list-container {
+        width: 100%;
+    }
+    .tabPackageSec .tabs-list {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .tabPackageSec .tab {
+        padding: 10px 0;
+    }
+    .explorerBlockCols {
+        padding-left: 12px;
+        margin-top: 10px;
+    }
+    .WeareDifferentSec.Section_common_padding {
+        padding: 15px 0 10px;
+    }
+    .weAreWidthMobile {
+        width: 50%;
+    }
+    .WeareDifferent .wecardbox {
+        padding: 10px;
+    }
+    .WeareDifferent .weareimg {
+        padding: 10px;
+    }
+    .WeareDifferent .img-fluid {
+        width: 35px;
+    }
+    .Backto_topAroows button.back-to-top {
+        display: none !important;
+    }
+    .wecardbox .cardTitle {
+        font-size: 15px;
+    }
+    .wecardbox .card_para {
+        font-size: 13px;
+        line-height: inherit;
+    }
+    .WeareDifferent .wecardbox {
+        margin-bottom: 15px;
+        min-height: 170px;
+    }
+    .resetFilterAnch,
+    .applyFilterbtnAnch {
+        font-size: 15px;
+    }
+    .RefundableTour {
+        right: -2px;
+    }
+    .slider_label_bestsellar {
+        left: 12px;
+    }
+    .dealsActivity .img-fluid,
+    .dealsPlaces .img-fluid {
+        width: 12px;
+    }
+    .wishlist_commentBlock .img-fluid {
+        width: 16px;
+    }
+    .mobilee-d-nnone {
+        display: none;
+    }
+    .top-cart .mobile-d-block-search {
+        display: flex;
+        position: absolute;
+        top: -9px;
+        left: auto;
+        right: 25px;
+    }
+    .top-cart .mobile-d-block-search .search-icons-head.md.hydrated {
+        font-size: 22px;
+        right: 15px;
+        font-size: 1.825rem;
+        color: #666;
+        top: 17px;
+    }
+    .header-logo {
+        width: 155px;
+        margin: 0;
+        margin-left: 15px;
+        margin-top: -4px;
+    }
+    .anchorSec.mob-header-hide {
+        display: none;
+    }
+    .head_scndblock {
+        margin: 15px 0;
+        margin: 0;
+        padding: 15px 0;
+    }
+    .btn-custom,
+    .viewAllDeals a.btn-custom {
+        font-size: 14px;
+        line-height: inherit;
+        padding: 10px 33px;
+    }
+    .header .nav-link,
+    .header .navbar-light .navbar-nav .nav-link {
+        font-size: 15px;
+        line-height: inherit;
+        padding: 5px 15px;
+    }
+    .navbar .navbar-nav {
+        justify-content: center;
+    }
+    .head_scndblock .btn-custom {
+        font-size: 12px;
+        padding: 7px 20px;
+        margin-top: 0px;
+    }
+    .head_category,
+    .head_scndblock .form-control {
+        font-size: 11px;
+        padding: 8px 25px 8px 10px;
+    }
+    .head_scndblock .search-icons-head.md.hydrated {
+        font-size: 18px;
+    }
+    .search-icons-head.md.hydrated {
+        font-size: 14px;
+    }
+    .topRight_iconss {
+        justify-content: end;
+    }
+    .top_drop_jumbo .select-box__list {
+        width: 150px;
+        top: 30px;
+        border-radius: 0;
+    }
+    .top_drop_jumbo .select-box__icon {
+        right: -15px;
+        width: 12px;
+    }
+    .tranding_dealsUL {
+        text-align: center;
+    }
+    .img_content {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .img_content.weAreimg_content {
+        padding-top: 0px;
+    }
+    .titleSpan {
+        display: inline;
+    }
+    .titleSec,
+    .title_subtitle {
+        margin-bottom: 20px;
+    }
+    .ul_just_space_between {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .ul_just_space_between li {
+        margin: 0 10px;
+    }
+    .weCardSec_position_rel {
+        top: 0;
+    }
+    .wecardbox_border1,
+    .wecardbox_border3 {
+        border-radius: 50px 50px 0 0;
+    }
+    .wecardbox_border2,
+    .wecardbox_border4 {
+        border-radius: 0 0 50px 50px;
+    }
+    .cardSec {
+        margin-bottom: 25px;
+        min-height: 255px;
+    }
+    .WhyTravelOneSec.Section_common_padding {
+        padding-bottom: 25px;
+    }
+    .whyTravelOneBottom .para,
+    .travelOneSec {
+        text-align: center;
+        line-height: inherit;
+    }
+    .wecardbox {
+        text-align: center;
+    }
+    .itsSimpleSec br {
+        display: none;
+    }
+    .ecosystem_border {
+        margin-bottom: 30px;
+    }
+    .itsSimpleSec.Section_common_padding {
+        padding-bottom: 0px;
+    }
+    .tranding_dealsUL li {
+        padding: 0 10px;
+    }
+    .tranding_dealsUL .card-link {
+        font-size: 14px;
+        line-height: inherit;
+    }
+    .PlanTrip .title_subtitle {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .rate_Heading,
+    .iconWrap .tooltip p {
+        font-size: 11px;
+        line-height: inherit;
+    }
+    .megamenuSec.header .menu>ul>li:first-child {
+        padding-left: 0px;
+    }
+    .megamenuSec.header .menu>ul>li .sub-menu.mega-menu-column-4>.list-item.list-item-cols4 .title {
+        padding-left: 0;
+    }
+    .megamenuSec.header .megamenu_imagesLi>li {
+        padding: 0 10px 0 0px;
+    }
+    .button-in-mobile-view .anchorSec.mob-header-hide {
+        width: 100%;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 15px 10px 10px 5px;
+    }
+    .button-in-mobile-view .anchorSec.mob-header-hide a {
+        width: 100%;
+        text-align: center;
+        border-radius: 2px;
+        padding: 15px 10px;
+    }
+    .megamenuSec.header .menu>ul>li.mobile_arrow_right>a i {
+        right: 8px;
+    }
+    .megamenuSec.header .menu>ul>li.mobile-dnone {
+        display: block;
+    }
+    .mobile-view-languages ul>li>a>label img {
+        width: 25px !important;
+        height: 15px;
+    }
+    .mobile-view-admins .hydrated {
+        vertical-align: middle;
+        padding-right: 3px;
+    }
+    .mobile-fix-wd-dropdown .topRight_iconss .top-wishlist,
+    .mobile-fix-wd-dropdown .topRight_iconss .top_drop_jumbo {
+        display: none;
+    }
+    .head_scndblock {
+        display: block;
+    }
+    .mobile-logo-sec {
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .mobile-menu-logo {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .megamenuHeader .mobile-menu-logo img {
+        width: 115px;
+    }
+    .mobile-menu-head.active .mobile-menu-logo {
+        display: none;
+    }
+    .tabPackageSec .multiple-items button.slick-next.slick-arrow,
+    .tabPackageSec .multiple-items button.slick-prev.slick-arrow {
+        top: auto;
+        bottom: -40px;
+    }
+    .tabPackageSecrCols.packagesSecWidth1 {
+        position: absolute;
+        left: 10px;
+    }
+    .tabPackageSecrCols {
+        margin: 0 4px;
+    }
+    .cartpageSec .cartTitle {
+        font-size: 17px;
+    }
+    .cartpageSec .spotTitle,
+    .cartRightDisountBlock .cartTravelTitle,
+    .cartRightDueSec .cartTravelTitle {
+        font-size: 15px;
+    }
+    .cartTravelTitle,
+    .cartTravelTitle2,
+    .totalCartT,
+    .cartDateRangeTitle {
+        font-size: 14px;
+    }
+    .cartRightDueSec .cartTravelTitleRed {
+        font-size: 18px;
+    }
+    .cartpageSec .moreTourBtn a,
+    .cartFormCoupon .moreTourBtn button {
+        font-size: 13px;
+    }
+    .cartsec4,
+    .cartSec5 {
+        flex-direction: column;
+    }
+    .cartsec4 .imgCart {
+        display: flex;
+        justify-content: center;
+    }
+    .cartBoxShadows {
+        padding: 15px 0;
+    }
+    .cartSec5 .cartUlSec {
+        margin-bottom: 10px;
+    }
+    .cartSec5 {
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 0;
+    }
+    .checkoutAccordian .accordion-body-inner {
+        padding-right: 0px;
+    }
+    .commonInnerblock2 {
+        width: 100%;
+        padding-right: 0;
+    }
+    .paypalDebitUL li a {
+        width: auto;
+    }
+    .paypalButton img {
+        max-width: 70%;
+    }
+    .paypalDebitUL li a {
+        font-size: 13px;
+    }
+    .debitHistory .removeDebitInfo .debitCloseIcon {
+        font-size: 25px;
+    }
+    .currencyConvertation .cartDateRangeTitle span,
+    .thanksBookingSec .thnkbookHeading {
+        font-size: 18px;
+    }
+    .checkoutAccordian .accordion-button,
+    .checkoutAccordian .form-control,
+    .checkoutAccordian .form-select,
+    .checkoutAccordian .form-select::placeholder,
+    .checkoutAccordian .form-control::placeholder {
+        font-size: 12.5px;
+        line-height: 24px;
+    }
+    .thanksBookingSec .iconCheckmark .IoiconCheckmark {
+        font-size: 60px;
+    }
+    .checkoutAccordian .sentMesg-email {
+        font-size: 12.5px;
+    }
+    .shopBrochuresUL li {
+        max-width: 29.6%;
+    }
+    .shopMemberShipSec ul,
+    ul.shopNavMenuUL {
+        flex-wrap: wrap;
+    }
+    .shopTravelOneContent .shopFolow_Ask_Social {
+        flex-wrap: wrap;
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    ul.shopNavMenuUL a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    .shopdiscoutLeftSec p.para {
+        text-align: left;
+    }
+    .shopdiscoutLeftSec p.para br {
+        display: none;
+    }
+    .discountTitleSec,
+    .discountCouponSec:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    ul.shopNavMenuUL a,
+    .coupondetailsShop span,
+    .futureTravel_details p,
+    .protocolsRightsec p.paraTitle,
+    .readmore_anchor_btn,
+    .protocolsRightsec p,
+    .accordianShopmainSec .accordion-button:not(.collapsed),
+    .accordianShopmainSec .accordion-button,
+    .customerReviewsShopUL .custom_reviews_rate,
+    .shop_memberInfo,
+    .shop_lastSeenSec li {
+        font-size: 13px;
+    }
+    .shp_travelOneTitle {
+        font-size: 20px;
+    }
+    .shopMemberShipSec a,
+    .shopStarRatingsec ul a,
+    .coupondetailsShop span strong,
+    .shopallToursSec .allToursTitle {
+        font-size: 14px;
+    }
+    .shopCustomerReviewSec .para,
+    .shopCustomerReviewSec .rate_name,
+    .shopCustomerReviewSec .cardTitle,
+    .shopCustomerReviewSec .cardBottomheading {
+        text-align: justify;
+        line-height: inherit;
+    }
+    .UL-reviewsCustomerSec {
+        gap: 40px;
+        grid-gap: 40px;
+    }
+    .reviewsCustomerSecCard .card {
+        padding: 15px 15px;
+    }
+    .reviewsCustomerSecCard .cardBoxMain {
+        flex: auto;
+        flex-basis: 48%;
+    }
+    .shopCustomerReviewSec .rate_name {
+        text-align: right;
+    }
+    .customerReviewsShopRight .simple-pagination ul {
+        margin: 15px 0 0;
+    }
+    .customerReviewsShopRight .simple-pagination li a,
+    .customerReviewsShopRight .simple-pagination li span {
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+    .customerReviewsShopRight .simple-pagination li .next,
+    .customerReviewsShopRight .simple-pagination li .prev {
+        font-size: 17px;
+    }
+    .VerticalSliderAbout {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .aboutRightFixedSec,
+    .aboutLeftfixedsec {
+        width: 100%;
+    }
+    .shopAboutSec .swiper-container-wrapper,
+    .aboutLeftfixedsec {
+        height: 305px;
+    }
+    .shopAboutSec .swiper-slide {
+        flex-flow: column wrap;
+        justify-content: stretch;
+        align-items: flex-start;
+    }
+    .aboutLeftfixedsec {
+        margin-bottom: 10px;
+        z-index: 9;
+        height: auto;
+        padding-bottom: 5px;
+    }
+    .VerticalSliderAbout {
+        padding-top: 20px;
+    }
+    .shopAboutSec .pack_memberInfoSec {
+        flex-direction: row;
+        gap: 25px;
+        grid-gap: 25px;
+        justify-content: space-between;
+    }
+    .futureTravel_details p.paraTitle {
+        font-size: 17px;
+    }
+    .protocolsLeftsec {
+        font-size: 15px;
+    }
+    .protocolsdflex {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .topRight_iconss.desktop-hide-cart-wish {
+        display: flex;
+    }
+    .Desktop-breadcrums {
+        display: none;
+    }
+    .mobile-breadcrums-hide {
+        display: block;
+    }
+    .bg-dark-banner-rightBlock {
+        margin-top: 10px;
+    }
+    .bannerSecUl li.linavlink {
+        font-size: 13px;
+    }
+    ul.bannerSecUl {
+        display: block;
+        margin: 0;
+        padding: 10px 10px 10px 0;
+    }
+    .bannerTourHighlightsUl li {
+        white-space: inherit;
+        max-width: 100%;
+        text-overflow: inherit;
+    }
+    .head_scndblock .input-group.mobileSearchDiv {
+        padding: 0;
+        margin: 15px auto 0;
+        width: 95%;
+    }
+    .mobile-d-block-search.active .search-icon-searchDiv {
+        display: none;
+    }
+    .mobile-d-block-search.active .search-icon-crossDiv {
+        display: block !important;
+        color: #000;
+    }
+    .packButtonTripSec {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .megamenuSec.header .menu>ul>li {
+        padding: 0;
+    }
+    .customize_tab4_sec .btn-custom {
+        margin: auto;
+        display: block;
+    }
+    .tabcontentBg3 .nav-pills {
+        flex: 1;
+    }
+    .tabcontentBg3 .tab-content {
+        flex: 6;
+    }
+    .SliderBannerSec .bannerTourHighlightsUl li {
+        white-space: normal;
+        max-width: inherit;
+    }
+    .head_scndblock .input-group.mobileSearchDiv {
+        display: flex;
+    }
+    .head_scndblock .form-control,
+    .head_scndblock .input-group {
+        border: 0px;
+    }
+    .head_scndblock .status_dropdown .status__btn {
+        border-radius: 5px 0 0 5px;
+    }
+    .mobileSearchDiv .main_header_search {
+        border-radius: 0 5px 5px 0 !important;
+    }
+    .head_scndblock .dropdown-menu {
+        transform: translate(0px, 34px) !important;
+    }
+    .head_scndblock .status_dropdown .status__btn {
+        min-width: 120px;
+    }
+    .beforeloginHeading,
+    .beforeloginButton {
+        display: none;
+    }
+    .beforeloginMegamenu nav.menu {
+        display: block;
+    }
+    .beforeLogin-header {
+        padding-bottom: 0;
+    }
+    .top-barNav {
+        display: none;
+    }
+    .SliderBannerSec .sliderBanSec .carousel-item .w-100 {
+        width: 100% !important;
+    }
+    .SliderBannerSec .bg-dark-banner-rightBlock {
+        margin-left: 0;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check-input[type=checkbox] {
+        left: 55px;
+    }
+    .SliderBannerSec .tourboxesButtons1 {
+        justify-content: flex-start;
+        gap: 5px;
+        grid-gap: 5px;
+    }
+    .SliderBannerSec .details-para-title .para {
+        text-align: left;
+    }
+    .details_tabPackageSec.tabPackageSec .tab button {
+        padding: 10px 16px;
+    }
+    .SliderBannerSec .bg-dark-banner-rightBlock {
+        padding: 10px 15px 10px 15px;
+    }
+    .SliderBannerSec .fixCheckboxsc {
+        margin-top: 15px;
+        padding-left: 0;
+    }
+    .SliderBannerSec .tourHeadingPrice {
+        font-size: 13.5px;
+    }
+    .SliderBannerSec .tourHeadingPrice span {
+        font-size: 21px;
+        line-height: 35px;
+    }
+    .contact-anchortag {
+        width: auto;
+        height: 50px;
+    }
+    .contact-anchortag::before {
+        background-size: 100%;
+    }
+    .RightBannerContact br {
+        display: none;
+    }
+    .contactBannerBkfrist {
+        flex-direction: column;
+    }
+    .leftBannerContact .contactTitle,
+    .contactBannerSec .para {
+        text-align: center;
+    }
+    .contactBannerSec {
+        padding: 30px 0 60px;
+    }
+    .RightBannerContact {
+        margin-top: 30px;
+        gap: 35px;
+        grid-gap: 35px;
+    }
+    .RightBannerContact .para {
+        margin-top: 10px;
+    }
+    .contact_absolute_form {
+        top: 260px;
+    }
+    .FormContactPage.contact_absolute_form {
+        width: 65%;
+        padding: 30px;
+    }
+    .contactTitle {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .joinusSocialSec .contactTitle {
+        line-height: 42px;
+    }
+    .joinusSocialSec ul {
+        width: 30%;
+    }
+    .contactBannerSec a {
+        font-size: 16px;
+    }
+    .joinusSocialSec ul li a {
+        font-size: 15px;
+    }
+    .callTitlebk {
+        font-size: 18px;
+    }
+    .contactAddressSec a,
+    .contactAddressSec address {
+        font-size: 14px;
+    }
+    .addressImgdv {
+        width: 25px;
+        margin-right: 25px;
+    }
+    .joinusSocialSec .contactTitle {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 25px;
+    }
+    .FormContactPage .title {
+        font-size: 22px;
+    }
+    .termsContactPage {
+        font-size: 15px;
+    }
+    .joinusSocialSec {
+        padding-top: 30px;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        top: -17px;
+        left: 43%;
+        width: 32px;
+        height: 32px;
+        background-size: 95%;
+    }
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding: 20px 15px 15px;
+        width: 165px;
+    }
+    .SliderBannerSec .tourHeadingPrice {
+        line-height: 25px;
+    }
+    .SliderBannerSec .tourHeadingPrice span {
+        line-height: 30px;
+    }
+    .contact-anchortag::after {
+        display: none;
+    }
+    .whatTraveloneCard {
+        flex-basis: 45%;
+    }
+    .howTravelWorkSec .boxborderSec {
+        min-height: 375px;
+    }
+    .howTravelWorkSec .heading-beliesec,
+    .howTravelWorkSec .subheading-beliesec.para {
+        padding-left: 10px;
+    }
+    .OurvaluesbeliefsSec .ecosystem_border {
+        padding: 14px;
+    }
+    .customerCornerSec .cornercustomerflex {
+        gap: 40px;
+        grid-gap: 40px;
+    }
+    .customerCornerSec .leftcustcorner,
+    .customerCornerSec .indicator ul,
+    .customerCornerSec .testimonal-main.indicator {
+        height: 394px;
+    }
+    .customerCornerSec {
+        display: none;
+    }
+    .mobileTestimonialSec .para {
+        font-weight: 500;
+        text-align: center;
+        color: #000;
+        margin-bottom: 30px;
+    }
+    .mobileTestimonialSec .contactTitle {
+        color: #000;
+        font-weight: 600;
+    }
+    .mobileTestimonialSec .authortitle {
+        font-size: 17px;
+        font-weight: 600;
+        color: #000;
+        letter-spacing: 0.10px;
+        line-height: inherit;
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .mobileTestimonialSec .slick-slide img {
+        margin: 0 auto;
+    }
+    .mobileTestimonialSec .slick-slider .slick-arrow {
+        top: 45%;
+    }
+    .mobileTestimonialSec button.slick-next.slick-arrow {
+        right: 0;
+    }
+    .mobileTestimonialSec button.slick-prev.slick-arrow {
+        left: 0;
+    }
+    .mobileTestimonialSec.Section_common_padding {
+        padding-bottom: 70px;
+    }
+    .mobileTestimonialSec {
+        display: block;
+    }
+    .home-page .PlanTripSec .planTrip_img {
+        display: none;
+    }
+    .home-page .travelOneSec_travel.cardTitle {
+        text-align: left;
+    }
+    .home-page .itsSimpleSec .btn-custom.cursor {
+        margin-top: 10px;
+    }
+    .home-page .whyTravelOneBottom {
+        margin-bottom: 10px;
+    }
+    .home-page .whyTravelCols:last-child .cardSec {
+        margin-bottom: 15px;
+    }
+    .megamenuSec #nav_main_category_463 {
+        line-height: 50px !important;
+        height: 50px;
+        padding: 0 50px 0 15px !important;
+        display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+        background: #dfffde !important;
+    }
+    .about-page .resultOrintSec .result-orientLeft .para {
+        line-height: 25px;
+    }
+    .about-page .howTravelWorkSec {
+        margin-bottom: 35px !important;
+    }
+    .travel_agency-page .OurvaluesbeliefsSec .itsSimpleCols:last-child {
+        margin-bottom: 10px !important;
+    }
+    .travel_agency-page .result-orientLeft .para {
+        margin-bottom: 25px !important;
+    }
+    .travel_agency-page .about-result-orientdSec .contactTitle {
+        margin-bottom: 15px !important;
+    }
+    .travel_agency-page .left_blocks_text {
+        margin-top: 25px !important;
+    }
+    .top-cart .mobile-d-block-search .search-icons-head.md.hydrated {
+        top: 15px;
+    }
+    .home-page .PlanTripSec .plan_img_relative {
+        display: none;
+    }
+    .megamenuSec.header .menu>ul>li.menu-item-has-children.active>a {
+        color: #21c593 !important;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec .toggleSwitchSec .form-switch:nth-child(1) {
+        display: none;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec .toggleSwitchSec .form-switch:nth-child(2) {
+        display: none;
+    }
+    .megamenuSec .top-cart .mobile-d-block-search {
+        top: -28px;
+        right: -10px;
+    }
+    .megamenuSec .top-cart a:first-child {
+        display: none;
+    }
+    .top-cart .mobile-d-block-search .search-icons-head.md.hydrated {
+        right: 10px;
+    }
+    .megamenuHeader ul.menu-main li.active .anchorSec a {
+        color: #FFF !important;
+    }
+    .megamenuHeader .menu-main .Social_shop_icons a {
+        line-height: 35px !important;
+    }
+    .megamenuSec .topRight_iconss.desktop-hide-cart-wish {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+    .megamenuSec .mobile-logo-sec {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .megamenuSec.header .list-item .megamenu_imagesLi>li {
+        flex: inherit !important;
+        width: 33.33% !important;
+    }
+    .about-result-orientdSec {
+        grid-template-columns: auto;
+    }
+    .aboutresultUL {
+        grid-template-columns: auto;
+    }
+    .aboutresultUL {
+        gap: 20px;
+        grid-gap: 20px;
+    }
+    .TrendingDeals_tabs button.card-link:not(:last-child) {
+        margin-right: 30px;
+    }
+    .about-page .resultOrintSec .result-orientRight {
+        padding: 0;
+        justify-content: center;
+    }
+    .about-page .resultOrintSec .result-orientLeft {
+        padding: 15px 30px;
+    }
+    .about-page .card-someinvest .card-details .cardTitle {
+        text-align: center;
+    }
+    .travel_agency-page .whyDevelopSec .aboutresultUL {
+        margin-top: 25px;
+    }
+    .travel_agency-page .whyDevelopSec .aboutresultUL {
+        row-gap: 12px;
+        grid-row-gap: 12px;
+    }
+    .travel_agency-page .realTimeSupportUl.aboutresultUL li span {
+        font-size: 12px;
+    }
+    .travel_agency-page .realTimeSupportUl.aboutresultUL {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .travel_agency-page .realTimeSupportSec .realTimeSupportRight .contactTitle {
+        margin-bottom: 20px;
+    }
+    .listing-detail-page .detail-travelagent-btn {
+        grid-template-columns: 1fr;
+    }
+    .listing-detail-page .agentTitle,
+    .listing-detail-page .aboutTravel_card_heading {
+        font-size: 17px;
+    }
+    .listing-page .greece_themeSec {
+        padding-top: 15px;
+    }
+    .profile_page .aboutLeftfixedsec {
+        height: auto;
+    }
+    .profile_page .shopAboutSec .pack_memberInfoSec {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .profile_page .aboutOwnerInfo {
+        grid-template-columns: auto auto;
+        justify-content: flex-start;
+    }
+}

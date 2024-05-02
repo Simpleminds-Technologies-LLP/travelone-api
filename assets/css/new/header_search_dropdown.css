@@ -1,0 +1,108 @@
+.head_scndblock .status_dropdown .status__btn {
+    border-radius: 0;
+}
+.inputSearchHeader .search-results-ajax {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    z-index: 9999;
+    box-shadow: 0 .5rem 1remrgba(0, 0, 0, .15) !important;
+    border-radius: 0 0 3px 3px;
+    display: block;
+}
+.inputSearchHeader .search-results-ajax .search-results-product {
+    max-height: 400px;
+}
+.inputSearchHeader .os-host-overflow {
+    overflow: hidden !important;
+}
+.inputSearchHeader .os-resize-observer.observed,
+.inputSearchHeader object.os-resize-observer {
+    box-sizing: border-box !important;
+}
+.inputSearchHeader .os-viewport {
+    direction: inherit !important;
+    box-sizing: inherit !important;
+    resize: none !important;
+    outline: 0 !important;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+}
+.inputSearchHeader .search-results-ajax ul {
+    padding: 0;
+    margin: 10px 0;
+}
+.inputSearchHeader .search-results-ajax ul li {
+    list-style: none;
+}
+.inputSearchHeader .search-results-ajax ul li a {
+    display: table;
+    width: 100%;
+    padding: 10px 20px;
+    color: #555 !important;
+}
+.inputSearchHeader .search-results-ajax ul li a .left {
+    display: table-cell;
+    vertical-align: top;
+    width: 40px;
+    padding-right: 15px;
+    min-width: 0;
+}
+.inputSearchHeader .search-results-ajax ul li a .left .search-image {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    overflow: hidden;
+}
+.inputSearchHeader .search-results-ajax ul li a .search-image img {
+    height: 50px;
+    margin: 0 auto;
+}
+.inputSearchHeader img {
+    text-indent: -9999px;
+    color: transparent;
+}
+.inputSearchHeader .search-results-ajax ul li a .search-product {
+    display: table-cell;
+    vertical-align: top;
+}
+.inputSearchHeader .search-results-ajax ul li a .search-product p {
+    color: #444;
+}
+.inputSearchHeader .search-results-ajax ul li a strong {
+    font-weight: 600;
+}
+.inputSearchHeader .search-results-ajax ul li a .search-product .price {
+    color: #555;
+    font-size: 13px;
+    font-weight: bold;
+}
+.inputSearchHeader .search-results-ajax ul li a .search-product .price {
+    color: #555;
+    font-size: 13px;
+    font-weight: bold;
+}
+.inputSearchHeader .search-results-ajax ul li {
+    list-style: none;
+}
+.inputSearchHeader .search-results-ajax ul li a:hover {
+    background-color: #f5f5f5;
+}
+.inputSearchHeader {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 79%;
+}

@@ -1,0 +1,5261 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Marck+Script&display=swap');
+@font-face {
+    font-family: 'Golden Plains Demo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../../font/Golden-Plains-Demo.woff) format('woff');
+}
+@font-face {
+    font-family: 'gothic';
+    src: url('../../font/gothic/gothic.eot');
+    src: local('gothic'), url('../../font/gothic/gothic.woff') format('woff'), url('../../font/gothic/gothic.ttf') format('truetype');
+}
+.ff-golden,
+.about-page .resultOrintSec .result-orientLeft .para.ff-golden {
+    font-family: 'Kalam', cursive;
+}
+* {
+    font-family: 'Open Sans', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+}
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+    display: inline-flex;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+a:hover {
+    color: #20c593;
+}
+:root {
+    --bg-light-green: #dfffde;
+    --white: #FFF;
+    --black: #000;
+    --text-color: #004963;
+    --red: #ff4c46;
+    --titleSecfonts: 30px;
+    --letterSpacing: 0.25px;
+    --anchorBg: #243144;
+    --anchorHoverBg: #90e9bd;
+}
+.bannerRightSec h1 {
+    margin: 0;
+}
+.sectionBgcolor {
+    background: var(--bg-light-green);
+    padding: 15px 0px;
+}
+.img_bottom {
+    margin-bottom: 15px;
+}
+.PlanTrip .titleSec {
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+.PlanTrip .title_subtitle {
+    font-size: 18px;
+    line-height: 30px;
+}
+.titleSec {
+    font-size: var(--titleSecfonts);
+    line-height: 32px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.titleSpan {
+    display: block;
+    color: var(--red);
+}
+.title_subtitle {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: normal;
+    letter-spacing: var(--letterSpacing);
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+.btn-custom {
+    font-size: 17px;
+    line-height: 36px;
+    font-weight: 500;
+    letter-spacing: var(--letterSpacing);
+    color: var(--white);
+    background: var(--anchorBg);
+    padding: 6px 30px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+}
+.btn-custom:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+}
+.center-content-block {
+    display: flex;
+    align-items: center;
+}
+.img_content {
+    padding-left: 15px;
+}
+.plan_img_relative {
+    position: relative;
+    top: 100px;
+}
+.socialPlanIcons {
+    margin-top: 15px;
+}
+.ul_just_space_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.socialPlanIcons a {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Section_common_padding {
+    padding: 40px 0;
+}
+.travelOneSec {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.para,
+.card_para {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: normal;
+    color: var(--text-color);
+    text-align: justify;
+}
+.whyTravelCols .cardTitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.whyTravelCols .para {
+    font-size: 15px;
+    line-height: 26px;
+}
+.whyTravelCols .cardSec img {
+    margin: 0 auto 10px;
+}
+.cardTitle {
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+.cardSec {
+    padding: 21px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    min-height: 335px;
+    box-shadow: 3px 0 15px rgb(0 73 99 / 40%);
+    transition: 0.5s all ease-in-out;
+}
+.cardSec:hover,
+.card-trading-deals:hover {
+    border-color: #20c593;
+    box-shadow: 3px 0 15px rgb(32 197 147 / 40%);
+}
+.cardSec .cardTitle {
+    text-align: center;
+}
+.cardSec img {
+    display: block;
+    margin: 0 auto 20px;
+    height: 60px;
+}
+.whyTravelOneBottom {
+    margin-bottom: 25px;
+}
+.wecardbox {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.wecardbox,
+.weareimg {
+    border: 2px solid rgb(0 73 99 / 40%);
+}
+.wecardbox_border1 {
+    border-radius: 50px 0 0 0;
+}
+.wecardbox_border2 {
+    border-radius: 0 0 0 50px;
+}
+.wecardbox_border3 {
+    border-radius: 0 50px 0 0;
+}
+.wecardbox_border4 {
+    border-radius: 0 0 50px 0;
+}
+.weareimg {
+    display: inline-block;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.WeareDifferent .center-content-block {
+    justify-content: center;
+}
+.weCardSec_position_rel {
+    position: relative;
+    top: 50px;
+}
+.WeareDifferentSec {
+    padding-bottom: 70px;
+}
+.wecardbox .cardTitle {
+    font-size: 18px;
+    line-height: inherit;
+    margin-bottom: 6px;
+}
+.wecardbox .card_para {
+    font-size: 15px;
+    line-height: 27px;
+    text-align: inherit;
+    hyphens: auto;
+    font-weight: 500;
+}
+.TravelreadyToPaySec {
+    background: var(--text-color);
+}
+.travelReadyBlock {
+    display: block;
+    text-align: center;
+}
+.title_ready_pay {
+    font-size: 30px;
+    line-height: inherit;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+.ready-pay-img {
+    margin-bottom: 25px;
+}
+.ready_para {
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: normal;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+.form-control-input,
+.btn-Subscribe {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: inherit;
+    color: var(--white);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 2px solid rgb(255 255 255 / 40%);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    outline: none;
+}
+.btn-Subscribe:hover {
+    background: var(--white);
+    color: var(--black);
+}
+.form-control-input {
+    display: inline-block;
+    width: 452px;
+    padding: 15px 20px;
+}
+input.form-control-input::placeholder {
+    color: #FFF;
+    font-weight: normal;
+}
+.btn-Subscribe {
+    width: 200px;
+    padding: 13px 10px;
+    margin-top: 25px;
+    font-weight: 600;
+    transition: 0.5s all ease-in-out;
+}
+.SliderSec {
+    padding: 0 15px;
+}
+.SliderSec p {
+    font-size: 15px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: inherit;
+    padding: 5px 0 0;
+    text-transform: capitalize;
+}
+.slick-slider .slick-arrow {
+    position: absolute;
+    top: -105px;
+    left: auto;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    background-size: 70%;
+}
+button.slick-prev.slick-arrow {
+    background-image: url('../../img/slick-prev.png');
+    right: 50px;
+}
+button.slick-next.slick-arrow {
+    background-image: url('../../img/slick-next.png');
+    right: 10px;
+}
+.trndDestination .para {
+    margin-bottom: 25px;
+}
+.ftPlayStore_icons {
+    display: flex;
+}
+.footerSec {
+    background: #fafafc;
+}
+.footerLogo {
+    margin-bottom: 15px;
+    width: 65%;
+    margin-top: -13px;
+}
+.flagLogo {
+    margin-top: 20px;
+}
+.footer address,
+.ftCallMail a {
+    font-size: 14px;
+    line-height: inherit;
+}
+.footer address {
+    margin-bottom: 5px;
+}
+.footer a {
+    color: var(--text-color);
+    transition: 0.5s all ease-in-out;
+}
+.callIcons-link {
+    border-left: 1px solid #004963;
+}
+.ftCallMail a {
+    padding-right: 10px;
+    padding-right: 5px;
+}
+.ftCallMail a:last-child {
+    padding-right: 0;
+    padding-left: 5px;
+}
+.footerTitle {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.footerTitle,
+.footerInfo ul li a {
+    font-size: 16px;
+    line-height: inherit;
+    color: var(--text-color);
+}
+.footerInfo ul li a {
+    font-weight: normal;
+    transition: 0.5s all ease-in-out;
+    font-size: 14px;
+}
+.footerInfo ul li a:hover,
+.footer a:hover {
+    color: #20c593;
+}
+.footer li {
+    display: block;
+    margin-bottom: 5px;
+}
+.ftPlayStore_icons a {
+    display: block;
+}
+.ftPlayStore_icons a:first-child {
+    margin-bottom: 15px;
+    padding-right: 8px;
+}
+.footerSocialIcon {
+    margin-bottom: 15px;
+}
+.footer .para {
+    text-align: left;
+    line-height: inherit;
+    font-size: 15px;
+}
+.copyrightTitle br {
+    display: none;
+}
+.copyRightSec {
+    padding: 15px;
+}
+.copyrightTitle {
+    color: #969696;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.copyrightTitle a {
+    color: #969696;
+    transition: 0.5s all ease-in-out;
+}
+.paymentCartSec {
+    display: flex;
+    justify-content: end;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.paymentCartSec a {
+    margin: 0 5px;
+}
+.copyrightTitle a:hover {
+    color: #20c593;
+}
+.itsimple_para_bottom {
+    margin-bottom: 35px;
+}
+.ecosystem_border {
+    position: relative;
+    padding: 20px;
+    border: 2px dashed rgb(248 118 105 / 60%);
+    text-align: center;
+    border-radius: 70px 0 70px 0px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bigText {
+    color: #90e9bd;
+    position: absolute;
+    content: '';
+    top: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 140px;
+    font-weight: 700;
+    opacity: 0.2;
+    line-height: inherit;
+}
+.ecoSubcontent {
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+}
+.topRight_iconss {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+    grid-gap: 15px;
+    
+    grid-template-columns: auto auto auto auto auto;
+}
+.top_dropdown_admin img {
+    margin-right: 0px;
+    width: 22px;
+}
+.header-logo {
+    width: 100%;
+    margin-top: -10px;
+}
+.header-logo a {
+    width: 100%;
+}
+.top_nav .nav-link {
+    padding: 8px 16px 8px 0;
+}
+.topbar_border_bottom {
+    border-bottom: 1px solid #f2f2f2;
+}
+.top_drop_jumbo {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-top: 0;
+    margin-right: 23px;
+}
+.header .nav-link,
+.header .navbar-light .navbar-nav .nav-link {
+    color: #243144;
+    font-weight: 500;
+}
+.header .nav-link:hover,
+.header .navbar-light .navbar-nav .nav-link:hover {
+    color: #20c593;
+}
+.head_scndblock {
+    margin: 0;
+    padding: 15px 0 0;
+}
+.head_scndblock .btn-custom {
+    font-size: 14px;
+    padding: 6px 17px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    background: #222;
+    line-height: 24px;
+    font-weight: 400;
+    color: #FFF;
+}
+.head_scndblock .btn-custom:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+.head_category,
+.head_scndblock .form-control {
+    color: #747474;
+    background: #f6f6f6;
+    font-size: 13px;
+    border: 1px solid #f6f6f6;
+    box-shadow: none;
+    padding: 8.02px 30px 8px 10px;
+    margin-left: 0;
+    text-align: left;
+    line-height: 20px;
+}
+.megamenuSec.header .menu>ul>li>a i.fa.fa-angle-down {
+    font-size: 11px !important;
+}
+.head_category {
+    border-right: 1px solid #e9e9e9;
+}
+.head_scndblock .form-control::placeholder {
+    color: #949494
+}
+.head_category:focus {
+    box-shadow: none;
+}
+.head_scndblock .input-group ul li {
+    display: block;
+}
+.head_scndblock ul a {
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 400;
+    padding: 6px 15px;
+    text-transform: capitalize;
+    color: #646464;
+}
+.head_scndblock .dropdown ul a:hover,
+.head_scndblock .dropdown ul a:active {
+    color: #333;
+    background-color: #f5f5f5;
+}
+.head_scndblock .dropdown-menu {
+    background: #FFF;
+    border-color: #e7e7e7;
+    border-radius: 0;
+
+}
+.search-icons-head.md.hydrated {
+    position: absolute;
+    top: 10px;
+    left: auto;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9;
+    color: #444;
+}
+.head_scndblock .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: 0px;
+}
+.head_scndblock .input-group {
+    border: 1px solid #efefef;
+    border-radius: 4px;
+}
+.head_scndblock .anchorSec {
+    display: flex;
+    justify-content: end;
+}
+.top-cart .hydrated,
+.top-wishlist .hydrated {
+    color: #20c593;
+    padding-right: 0px;
+    font-size: 25px;
+}
+.top-wishlist {
+    margin: 0 13px;
+}
+.top-cart,
+.top-cart a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-start;
+    transition: none;
+}
+.ulTopmneuNav .top_drop_jumbo p,
+.ulTopmneuNav .top-cart a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: inherit;
+    padding: 0;
+}
+.ulTopmneuNav .top-cart a:hover {
+    color: #666;
+}
+.wishlistCounter {
+    background: #f6465d;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    right: auto;
+    line-height: 15px;
+    font-weight: 600;
+}
+.cartCounter {
+    background: #f6465d;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    position: absolute;
+    top: -8px;
+    left: 17px;
+    right: auto;
+    line-height: 18px;
+    font-weight: 600;
+}
+.top-wishlist,
+.top-wishlist a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: end;
+}
+.dropdown-toggle::after {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    content: "";
+    background: url('../../img/down-arrow-topbar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    right: 10px;
+    top: 17px;
+    transition: all 0.4s;
+    background-size: 100%;
+}
+.navbar-light.mobile-navbarlight {
+    display: none;
+}
+.tranding_dealsUL {
+    margin: 20px 0 25px;
+}
+.tranding_dealsUL li {
+    padding: 0 25px;
+}
+.tranding_dealsUL .card-link {
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+}
+.tranding_dealsUL li:first-child {
+    padding-left: 0;
+}
+.tranding_dealsUL li a.active {
+    color: #ff4c46;
+    border-bottom: 1px solid #ff4c46;
+}
+.locationHeading {
+    font-size: 13px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+.card-trnd-loc-days .DealsheadingRed {
+    color: #ff4c46;
+    font-size: 13px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: inline-flex;
+    vertical-align: top;
+}
+.card-trnd-loc-days,
+.actplace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.card-an-trnd-deal {
+    display: flex;
+    align-items: center;
+}
+.actplace {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+.card-trading-deals {
+    background: #FFF;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 0 8px rgb(0 0 0 / 35%);
+    box-shadow: 3px 0 8px rgb(0 73 99 / 40%);
+    border-radius: 4px;
+    transition: 0.5s all ease-in-out;
+    margin-bottom: 5px;
+}
+.dealsHeading {
+    font-size: 15px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    min-height: 45px;
+    margin-top: 10px
+}
+.dealsActivity .img-fluid,
+.dealsPlaces .img-fluid {
+    width: 13px;
+}
+.dealsActivity,
+.dealsPlaces,
+.priceViewDeals {
+    display: flex;
+    align-items: center;
+}
+.pActivitys,
+.pPlaces {
+    font-size: 14px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: 400;
+    color: var(--text-color);
+    padding-left: 5px;
+}
+.DealsRating {
+    display: block;
+}
+.reviewsDeals .dealsActivity {
+    flex-direction: column;
+}
+.reviewsDeals .pActivitys {
+    padding-left: 0;
+    padding-top: 5px;
+}
+.reviewsDeals .pPlaces {
+    text-align: right;
+}
+.adByDelas,
+.boldTextPrice {
+    font-weight: 600;
+}
+.priceViewDeals {
+    justify-content: space-between;
+}
+.priceDeals {
+    color: #004963;
+    font-weight: 300;
+    font-size: 14px;
+}
+/*.priceViewDeals a {
+    border: 1px solid #004963;
+    padding: 7px 25px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+}*/
+.addTocartAnch {
+    color: #ff4c46;
+}
+span.boldTextPrice {
+    font-size: 17px;
+    color: #004963;
+}
+.priceViewDeals a:hover {
+    background: #004963;
+    color: #FFF;
+}
+.BstSellerDeals,
+.RefundableTour {
+    font-size: 11px;
+    width: auto;
+    display: inline-block;
+    padding: 3px 10px;
+    color: #FFF;
+    letter-spacing: 0.25px;
+    position: absolute;
+    top: 7px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.BstSellerDeals {
+    background: #ff4c46;
+}
+.RefundableTour {
+    background: #20c593;
+    right: 0;
+}
+.newsSellerDeals {
+    background: #ffc107;
+}
+.img_bestSellearSec {
+    position: relative;
+}
+.viewAllDeals a.btn-custom {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: var(--letterSpacing);
+    background: var(--anchorBg);
+    padding: 6px 30px;
+    background: #9ce5c8;
+}
+.viewAllDeals a.btn-custom:hover {
+    color: var(--white);
+    background: #004963;
+}
+.trandsrelative {
+    position: relative;
+}
+.viewAllDeals {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+}
+.trandsrelative button.slick-next.slick-arrow {
+    position: relative;
+    top: 0;
+    left: 50%;
+}
+.trandsrelative button.slick-prev.slick-arrow {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+}
+.SliderSec1 {
+    padding: 0 15px;
+}
+.slick-slider {
+    margin: 0 -15px;
+}
+.trandsrelative .slick-list.draggable {
+    margin-bottom: 15px;
+}
+ul.slick-dots {
+    text-align: center;
+}
+.slick-dots li {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #004963;
+    font-size: 0;
+    margin: 0 7px;
+    background: #FFF;
+    border-radius: 50px;
+}
+.slick-dots li button[type=button],
+.slick-dots li button[type=reset],
+.slick-dots li button[type=submit] {
+    width: 100%;
+    -webkit-appearance: button;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+.slick-dots li.slick-active {
+    background: #ff4c47;
+    border-color: #ff4c47;
+}
+.trandsrelative .para {
+    letter-spacing: 0.50px;
+}
+.top_header_navbar {
+    display: none;
+}
+.WeareDifferent .weAreimg_content .card_para {
+    font-size: 16px;
+}
+.navDrop select {
+    display: none;
+}
+.travelOneSec_travel.cardTitle {
+    margin-bottom: 8px;
+}
+.greece_themeSec .titleSec {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.greece_themeSec .para {
+    line-height: inherit;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.greece_themeSec .btn-custom {
+    font-size: 14px;
+    padding: 4px 20px;
+    font-weight: 600;
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+}
+.greece_themeSec .btn-custom:hover {
+    color: var(--white);
+    background: var(--text-color);
+}
+.greece_themeSec .SliderSec p {
+    font-size: 13.5px;
+    padding: 5px 0;
+    line-height: inherit;
+}
+.greece_themeSec .slick-arrow {
+    top: auto;
+    bottom: -45px;
+    background-size: 60%;
+}
+.greece_themeSec button.slick-prev.slick-arrow {
+    right: 45px;
+}
+.greece_themeSec {
+    padding-bottom: 15px;
+}
+.greeceToursCard .BstSellerDeals {
+    background: #ff4c46;
+}
+.BstSellerDeals.RefundableTour {
+    right: 0;
+    background: #20c593;
+}
+.filterTourLeft {
+    display: flex;
+    align-items: center;
+}
+.filterGreece {
+    padding: 6px 25px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.filterGreece img {
+    width: 15px;
+}
+.filterHeading {
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 500;
+    color: var(--text-color);
+    padding-left: 10px;
+    letter-spacing: 0.25px;
+}
+.resetFiterGreece {
+    align-items: center;
+    display: flex;
+    margin-left: 15px;
+}
+.resetFiterGreece .filterHeading {
+    padding-left: 2px;
+}
+.greecetourHeading_main {
+    display: flex;
+    align-items: end;
+    margin-bottom: 25px;
+}
+.greecetourHeading_main .titleSec {
+    margin-bottom: 0;
+}
+.greecetourHeading_main .toursResultSpan {
+    font-size: 15px;
+    line-height: inherit;
+    color: var(--text-color);
+    font-weight: 400;
+    padding-left: 5px;
+    letter-spacing: 0.25px;
+}
+.sortbyGreece .select-box {
+    margin: 0;
+}
+.resetFiterGreece {
+    cursor: pointer;
+}
+.sortbyGreece .select-box__input-text {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: inherit;
+    vertical-align: middle;
+    padding: 10px 15px;
+}
+.sortbyGreece .select-box__input-text span {
+    font-weight: 600;
+}
+.sortbyGreece .select-box__icon {
+    top: 55%;
+    width: 13px;
+    height: 12px;
+}
+.TrendingDeals .para br,
+.trndDestination .para br {
+    display: none;
+}
+.ads_agnt_travel {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.rate_Heading {
+    font-size: 10px;
+    font-weight: 500;
+}
+.countryFlag_Tooltip .img-fluid {
+    width: 22px;
+}
+.card_agnt_block1 {
+    display: flex;
+    align-items: center;
+}
+.country_days_agnt {
+    flex-direction: column;
+    display: flex;
+    align-items: end;
+}
+.DealsRating .pActivitys {
+    padding-left: 0;
+    padding-bottom: 25px;
+}
+.priceViewDeals .wsh-list-agnt {
+    margin-right: 10px;
+    font-size: 21px;
+    line-height: 21px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+.wishlist_commentBlock .img-fluid {
+    cursor: pointer;
+    width: 20px;
+}
+.card-trading-deals {
+    position: relative;
+}
+.card-trading-deals::after {
+    position: absolute;
+    content: '';
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 55px;
+    border-top: 1px solid #bbced5;
+}
+.card-trading-deals:hover {
+    border-color: transparent;
+}
+.wishlist_commentBlock {
+    display: flex;
+    align-items: center;
+}
+.card-trading-deals .actplace {
+    justify-content: flex-start;
+}
+.card-trading-deals .dealsPlaces {
+    padding-left: 10px;
+}
+.TrendingDealsSec .iconWrap.countryFlag_Tooltip .tooltip,
+.greeceReviewSec .iconWrap.countryFlag_Tooltip .tooltip {
+    top: -40px;
+    bottom: auto;
+    left: auto;
+    right: 0;
+}
+.TrendingDealsSec .iconWrap.countryFlag_Tooltip .tooltip::before,
+.greeceReviewSec .iconWrap.countryFlag_Tooltip .tooltip::before {
+    left: auto;
+    top: auto;
+    bottom: -10px;
+    right: 5px;
+}
+.TrendingDealsSec .iconWrap .tooltip p,
+.greeceReviewSec .iconWrap .tooltip p {
+    margin-bottom: 0;
+}
+.TrendingDealsSec .iconWrap .tooltip,
+.greeceReviewSec .iconWrap .tooltip {
+    padding: 10px 7px;
+}
+.TrendingDealsSec .iconWrap .tooltip::before,
+.greeceReviewSec .iconWrap .tooltip::before {
+    width: 10px;
+    height: 10px;
+}
+.TrendingDealsSec .priceViewDeals .iconWrapPrice.iconWrap .tooltip,
+.greeceReviewSec .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+    left: 10px;
+    top: 25px;
+    bottom: auto;
+    top: -120px;
+    width: 135px;
+}
+.TrendingDealsSec .priceViewDeals .iconWrap .tooltip::before,
+.greeceReviewSec .priceViewDeals .iconWrap .tooltip::before {
+    top: auto;
+    bottom: -8px;
+}
+.trndDestinationSec a:hover p {
+    color: #ff4c46;
+}
+.inputSearchHeader {
+    width: 100%;
+}
+.inputSearchHeader .search-results-ajax {
+    display: none;
+}
+.inputSearchHeader .search-results-ajax.open {
+    display: block;
+}
+.search-results-ajax ::-webkit-scrollbar {
+    width: 5px;
+}
+.search-results-ajax ::-webkit-scrollbar-track {
+    background: #FFF;
+    box-shadow: none;
+    border-radius: 10px;
+}
+.search-results-ajax ::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+    border-radius: 10px;
+}
+.inputSearchHeader .search-results-ajax ul li a .left .search-image {
+    border-radius: 30px 30px 0 0;
+}
+.head_scndblock .dropdown-menu {
+    z-index: 99999;
+}
+.head_scndblock .dropdown-menu {
+    transform: translate(0px, 40px) !important;
+}
+.TrendingDealsSec .actplace .iconWrap .tooltip,
+.greeceReviewSec .actplace .iconWrap .tooltip {
+    top: auto;
+    bottom: 20px;
+    width: 95px;
+}
+.TrendingDealsSec .actplace .iconWrap .tooltip::before,
+.greeceReviewSec .actplace .iconWrap .tooltip::before {
+    top: auto;
+    bottom: -10px;
+    left: 35px;
+}
+.greeceReviewSec .slick-dots li.slick-active {
+    background: #004963;
+    border-color: #004963;
+}
+.listing_cols_data {
+    margin-top: 30px;
+}
+.listing_cols_data .card-trading-deals {
+    margin-bottom: 20px;
+}
+.greeceToursSec .btn-custom {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 600;
+    letter-spacing: var(--letterSpacing);
+    padding: 12px 40px;
+}
+.greeceToursSec .btn-custom:hover {
+    color: var(--white);
+    background: var(--anchorBg);
+}
+.greeceReviewSec ul.slick-dots {
+    margin-top: 10px;
+}
+.toggleSwitchSec,
+.sortBy_togleSwtchSec,
+.sortBy_togleSwtchSec {
+    display: flex;
+    align-items: center;
+}
+.sortBy_togleSwtchSec {
+    justify-content: end;
+}
+.toggleSwitchSec {
+    justify-content: space-between;
+}
+.sortbyGreece .select-box {
+    border: 1px solid #243144;
+    border-radius: 6px;
+    background: transparent;
+    padding: 11px 11px;
+    width: 290px;
+}
+.sortbyGreece .select-box__input-text {
+    padding: 0;
+    width: auto;
+}
+.sortBy_togleSwtchSec label.form-check-label {
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 0.25px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.sortBy_togleSwtchSec .form-switch {
+    margin: 0 15px;
+}
+.sortbyGreece .select-box__option {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 15px;
+}
+.sortBy_togleSwtchSec .form-check-input:focus {
+    border-color: #ddd;
+    outline: none;
+    box-shadow: none;
+}
+.sortBy_togleSwtchSec .form-switch .form-check-input {
+    width: 38px;
+    height: 18px;
+}
+.sortBy_togleSwtchSec .form-check-input:checked {
+    background-color: #20c593;
+    border-color: #20c593;
+}
+.TrendingDealsSec .tranding_dealsUL a:hover {
+    color: #ff4c46;
+}
+.filterModal_Listing .filterbodyModal {
+    padding: 0px 30px 30px;
+}
+.filterModal_Listing .offcanvas-header {
+    padding-left: 45px;
+}
+.filterModal_Listing #fiterModalLabel {
+    font-size: 33px;
+    line-height: inherit;
+    color: var(--text-color);
+    letter-spacing: 0.25px;
+    font-weight: 600;
+}
+.filterModal_Listing .filterTitle {
+    font-size: 21px;
+    line-height: inherit;
+    color: var(--text-color);
+    letter-spacing: 0.25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.filterModal_Listing label.form-check-label {
+    font-size: 15px;
+    line-height: inherit;
+    color: var(--text-color);
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.filterModal_Listing .form-check {
+    margin-bottom: 8px;
+}
+.filterModal_Listing .commonFilterStyle .form-check-input:checked[type=checkbox] {
+    background-image: url('../../img/input-check.png');
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    border-color: #FFF;
+    width: 16px;
+    height: 13px;
+}
+.filterModal_Listing .form-check-input:focus {
+    box-shadow: none;
+}
+.filterModal_Listing .form-check-input[type=checkbox] {
+    width: 13px;
+    height: 13px;
+    border-radius: 4px;
+    margin-top: 7px;
+}
+.filterModal_Listing .commonFilterStyle {
+    margin-bottom: 30px;
+}
+.filterModal_Listing .ShowMoreAnch a {
+    color: #20c593;
+    font-weight: 500;
+    font-size: 15px;
+}
+.filterModal_Listing .ShowMoreAnch {
+    padding-left: 20px;
+}
+.filterModal_Listing .customtypePrice {
+    display: flex;
+    align-items: center;
+}
+.filterModal_Listing .customtypePrice .input-group {
+    padding-right: 15px;
+}
+.filterModal_Listing .customtypePrice .input-group input,
+.filterModal_Listing .customtypePrice .input-group .input-group-text {
+    border-color: var(--text-color);
+}
+.toPriceFilt {
+    padding-right: 15px;
+}
+.input-group input:focus {
+    box-shadow: none;
+    outline: none;
+}
+.commonFilterStyle .form-check .img-fluid {
+    width: 75%;
+}
+.resetFilterAnch,
+.applyFilterbtnAnch {
+    border: 1px solid rgb(188 188 188 / 58%);
+    padding: 8px 45px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.applyFilterbtnAnch,
+.resetFilterAnch:hover {
+    background: #20c593;
+    color: #fff;
+}
+.applyFilterbtnAnch:hover {
+    background: var(--text-color);
+    color: #FFF;
+}
+.btnFilteranchor {
+    display: flex;
+    justify-content: space-between;
+}
+.modal-backdrop {
+    background-color: #004963;
+}
+.filterModal_Listing .btn-close {
+    opacity: 1;
+    background-image: url('../../img/filtercross.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.filterModal_Listing .btn-close:focus {
+    box-shadow: none;
+}
+.rateTrandHome .ads_agnt_travel .card-an-trnd-deal span {
+    padding-left: 0;
+    padding-right: 5px;
+}
+.ads_agnt_travel span.rate_Heading {
+    padding-left: 5px;
+}
+.top_dropdown_lang .select-box__list .img-fluid,
+.top_dropdown_lang .select-box__value .select-box__input-text img {
+    width: 18px;
+}
+.top_drop_jumbo .select-box__option {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.top_drop_jumbo .select-box__option .hydrated {
+    padding-right: 8px;
+}
+.top-cart .mobile-d-block-search {
+    display: none;
+}
+.top_drop_jumbo .select-box__input:checked+.select-box__input-text {
+    display: block;
+    font-weight: 500;
+}
+.sortbyGreece .select-box__list {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 0 0 15px 0;
+    box-shadow: none;
+    top: 101%;
+    left: 0;
+}
+.sortbyGreece .select-box__option {
+    background-color: transparent;
+}
+.sortbyGreece .select-box__option {
+    padding: 15px 15px 0;
+    transition: 0.5s all ease-in-out;
+}
+.sortbyGreece .select-box__list li:hover label {
+    color: #000;
+}
+.show-hide-inputcheck {
+    display: none;
+    transition: 0.5s all ease-in-out;
+}
+.show-hide-inputcheck.active {
+    display: block;
+}
+.greeceReviewSec .iconWrap .tooltip,
+.greeceReviewSec .iconWrapPrice {
+    display: block;
+}
+.card-trading-deals .priceDeals {
+    display: flex;
+}
+.card-trading-deals .priceDeals {
+    color: #004963;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 23px;
+    position: relative;
+}
+.iconWrapPrice .hydrated {
+    font-size: 14px;
+    line-height: inherit;
+    vertical-align: middle;
+    padding-right: 3px;
+}
+.iconWrapPrice.iconWrap .tooltip {
+    left: -36px;
+}
+.priceViewDeals .iconWrapPrice .hydrated {
+    position: absolute;
+    top: -8px;
+    left: auto;
+    right: -100px;
+}
+.priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+}
+.filterModal_Listing ::-webkit-scrollbar {
+    width: 10px;
+}
+.filterModal_Listing ::-webkit-scrollbar-track {
+    background: #d2d2d2;
+    box-shadow: none;
+    border-radius: 10px;
+}
+.filterModal_Listing ::-webkit-scrollbar-thumb {
+    background: #21c593;
+    border-radius: 10px;
+}
+.filterModal_Listing ::-webkit-scrollbar-thumb:hover {
+    background: rgb(54, 56, 58);
+}
+.greeceToursSec .lightbox-zoom {
+    display: none;
+}
+.imgSliderSec .slick-track {
+    position: relative;
+}
+.imgSliderSec ul.slick-dots {
+    position: absolute;
+    top: auto;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+}
+.imgSliderSec .slick-dots li {
+    width: 8px;
+    height: 8px;
+    border-color: #fff;
+}
+.imgSliderSec .slick-dots li.slick-active {
+    border-color: #ff4c47;
+    background: #004963;
+    border-color: #004963;
+}
+.imgSliderSec .slick-slider {
+    margin: 0;
+}
+.wrapper {
+    display: block;
+}
+.greeceTheme br {
+    display: none;
+}
+.mobile-logo-sec {
+    display: flex;
+    align-items: center;
+}
+.megamenuSec .dropdown-item.active,
+.megamenuSec .dropdown-item:active {
+    color: #fff;
+    background-color: #004963;
+}
+.megamenuSec .select-box__list,
+.megamenuSec .top_drop_jumbo.country_drop_jumbo .select-box__list,
+.megamenuSec .currency_drop_jumbo.top_drop_jumbo .select-box__list {
+    padding: 0;
+}
+.top_header_fonts .header_icon_down_arrows {
+    font-size: 14px;
+    line-height: inherit;
+    color: #666;
+}
+.megamenuSec .top_drop_jumbo .select-box__list li a {
+    padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50em;
+    background: url('../../img/times-circle.svg') no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: 0.9;
+    pointer-events: all;
+}
+.imgSliderSec .slick-slider .slick-arrow {
+    top: 38%;
+    background-size: 50%;
+    z-index: 99;
+}
+.imgSliderSec button.slick-prev.slick-arrow {
+    left: 5px;
+}
+.imgSliderSec button.slick-next.slick-arrow {
+    right: 5px;
+}
+.sortBy_togleSwtchSec .select-box__current {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+}
+.sortByNamefix {
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: normal;
+    color: var(--text-color);
+    letter-spacing: 0.25px;
+    padding-right: 5px;
+}
+.sortbyGreece .select-box__input-text {
+    font-weight: 600;
+    letter-spacing: 0.25px;
+}
+.iconWrap.countryFlag_Tooltip .tooltip::before {
+    left: 15px;
+}
+.iconWrap.countryFlag_Tooltip .tooltip {
+    left: -10px;
+    width: fit-content;
+    top: 24px;
+}
+.ads_agnt_travel .img-fluid {
+    width: 10px;
+    margin-top: -2px;
+}
+.greeceToursSec button.slick-prev.slick-arrow,
+.greeceReviewSec button.slick-prev.slick-arrow,
+.responsive1 .imgSliderSec button.slick-prev.slick-arrow,
+.responsive1 .imgSliderSec button.slick-prev.slick-arrow {
+    background-image: url('../../img/slick-prev-white.png');
+}
+.greeceToursSec button.slick-next.slick-arrow,
+.greeceReviewSec button.slick-next.slick-arrow,
+.responsive1 .imgSliderSec button.slick-next.slick-arrow,
+.responsive1 .imgSliderSec button.slick-next.slick-arrow {
+    background-image: url('../../img/slick-next-white.png');
+}
+.responsive1 .imgSliderSec .slick-dots li.slick-active {
+    background: #ff4c47;
+    border-color: #ff4c47;
+}
+.greeceReviewSec .titleSec {
+    margin-bottom: 25px;
+}
+.trandsrelative .responsive1 .imgSliderSec button.slick-next.slick-arrow,
+.trandsrelative .responsive1 .imgSliderSec button.slick-prev.slick-arrow {
+    position: absolute;
+    top: 38%;
+}
+.trandsrelative .responsive1 .imgSliderSec button.slick-next.slick-arrow {
+    left: auto;
+    right: 0;
+}
+.trandsrelative .responsive1 .imgSliderSec button.slick-prev.slick-arrow {
+    bottom: 0;
+    right: 0;
+}
+.top-wishlist a .hydrated,
+.top-cart a .hydrated,
+.sortBy_togleSwtchSec label.form-check-label,
+.rateTrandHome a .locationHeading,
+.dealsActivity a .pActivitys,
+.dealsPlaces a .pPlaces {
+    transition: none;
+}
+.top-wishlist a:hover .hydrated,
+.top-cart a:hover .hydrated {
+    color: #20c593;
+}
+.sortBy_togleSwtchSec label.form-check-label:hover,
+.greece_themeSec .SliderSec:hover p {
+    color: #20c593;
+    transition: 0.5s all ease-in-out;
+}
+.dealsPlaces a:hover .pPlaces,
+.dealsActivity a:hover .pActivitys,
+.card-trading-deals .dealsHeading a:hover,
+.rateTrandHome a:hover .locationHeading,
+.card-trading-deals a:hover {
+    color: #fd4c44;
+}
+.slider_label_bestsellar {
+    position: absolute;
+    top: 68px;
+    left: 15px;
+    right: 15px;
+    bottom: auto;
+    z-index: 9;
+}
+.iconHoverChnage {
+    display: none;
+    transition: 0.5s all ease-in-out;
+}
+.top-wishlist a:hover .desktopHovernone,
+.top-wishlist a:focus .desktopHovernone,
+.top-cart a:hover .desktopHovernone,
+.top-cart a:focus .desktopHovernone {
+    display: none;
+}
+.top-wishlist a:hover .iconHoverChnage,
+.top-wishlist a:focus .iconHoverChnage,
+.top-cart a:hover .iconHoverChnage,
+.top-cart a:focus .iconHoverChnage {
+    display: block;
+    color: #20c593;
+}
+.wishlist_commentBlock a {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+    font-weight: normal;
+}
+.wishlist_commentBlock a:hover {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+    font-weight: normal;
+}
+.wishlist_commentBlock .icondisplaynone {
+    display: none;
+    transition: 0.5s all ease-in-out;
+}
+.wishlist_commentBlock a:hover .icondisplaynone,
+.wishlist_commentBlock a:focus .icondisplaynone {
+    display: block;
+    color: #fd4c44;
+}
+.wishlist_commentBlock a:hover .icondisplayblock,
+.wishlist_commentBlock a:focus .icondisplayblock {
+    display: none;
+}
+.offcanvas-start.filterModal_Listing {
+    z-index: 9999999;
+}
+.megamenuSec.header .menu>ul>li.mobile-dnone {
+    display: none;
+}
+.filterbodyModal .sortBy_togleSwtchSec {
+    display: none;
+}
+.UsdPersonCols {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.TourboxsLeftSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tourMain {
+    background: #dfffde;
+    box-shadow: 3px 0 8px rgb(0 73 99 / 40%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 7px;
+    min-height: 190px;
+    flex-basis: 33.33%;
+    padding: 20px;
+    border: 0;
+}
+.tourMain img {
+    width: 60px;
+}
+.tourHeading span {
+    display: block;
+}
+.tourHeading {
+    text-align: center;
+}
+.tourHeading {
+    font-size: 15px;
+    font-weight: 400;
+    color: #004963;
+    line-height: inherit;
+}
+.tourMain .img-tourmain {
+    width: 55px;
+}
+.TourboxsRightSec,
+.tourboxesButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tourHeadingPrice {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: 500;
+    text-align: center;
+    padding-right: 19px;
+    margin-left: 0px;
+}
+.tourHeadingPrice span {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: inherit;
+}
+.tourboxesButtons {
+    flex-direction: column;
+}
+.tourboxesBtn1,
+.tourboxesBtn2 {
+    font-size: 13.5px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: var(--letterSpacing);
+    padding: 4px 5px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+    color: var(--white);
+    width: 115px;
+    text-align: center;
+    margin-bottom: 7px;
+    letter-spacing: 0.25px;
+}
+.tourboxesBtn1 {
+    background: #ff4c46;
+}
+.tourboxesBtn2 {
+    background: #004963;
+}
+.tourboxesBtn3 {
+    font-size: 12px;
+    text-decoration: underline;
+    line-height: inherit;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+}
+.tourboxd-flex {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    letter-spacing: 0.25px;
+    padding-left: 0;
+}
+.titleSec_world {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #004963;
+    letter-spacing: 1px;
+}
+.titleSec_world span {
+    color: #20c593;
+}
+.itsWorldLeftSec .para {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 13.9px;
+    line-height: 28px;
+}
+.itsworldanchor {
+    text-decoration: underline;
+    font-weight: 500;
+}
+.itsworldpara {
+    font-family: 'Satisfy', cursive !important;
+    font-size: 30px;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 15px;
+}
+.itsWorldRightSec {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.itsdiscoverdflex {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.ItsDiscoverSec {
+    position: relative;
+}
+.itsWorldMidSec {
+    position: absolute;
+    top: -32px;
+    width: 410px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.ItsDiscoverSec {
+    padding: 85px 0;
+}
+.itsWorldMidSec::before {
+    position: absolute;
+    content: '';
+    top: 40px;
+    bottom: 0;
+    left: -180px;
+    right: 0;
+    background-image: url(../../img/Cloud-lg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 999;
+    height: 160px;
+    width: 100%;
+    background-size: 70%;
+}
+.itsWorldMidSec::after {
+    position: absolute;
+    content: '';
+    top: 135px;
+    bottom: 0;
+    left: 330px;
+    right: 0;
+    background-image: url(../../img/Cloud-sm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 999;
+    width: 212px;
+    height: 114px;
+    background-size: 95%;
+}
+.UsdPersonSec .para {
+    text-align: center;
+}
+.para.UsdPersonPara {
+    margin-bottom: 15px;
+}
+.UsdPersonBtnSec {
+    padding: 15px 0;
+}
+.UsdPersonBtn1 {
+    background: transparent;
+    color: #ff4c46;
+    border: 1px solid #243144;
+    margin-right: 10px;
+}
+.UsdPersonBtn2 {
+    color: var(--white);
+    background: var(--text-color);
+    border: 1px solid #243144;
+}
+.UsdPersonBtn1:hover,
+.UsdPersonBtn2:hover,
+.tourboxesBtn1:hover,
+.tourboxesBtn2:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    border-color: var(--anchorHoverBg);
+}
+.listingDetails-reviewsSec ul.slick-dots {
+    display: none;
+}
+.sliderBanner button.slick-prev,
+.sliderBanner button.slick-next {
+    top: 46%;
+    background-image: url('../../img/slick-green.png');
+    z-index: 9;
+}
+.sliderBanner button.slick-prev {
+    right: auto;
+    left: 15px;
+}
+.sliderBanner button.slick-next {
+    transform: rotate(-180deg);
+    right: 15px;
+}
+.sliderBanner .slick-dots li.slick-active {
+    background: #20c593;
+    border-color: #20c593;
+}
+.sliderBanner ul.slick-dots {
+    position: relative;
+    top: -95px;
+    left: auto;
+    right: 55px;
+    text-align: right;
+}
+.sliderBanner .slick-dots li {
+    border-color: #FFF;
+    background: transparent;
+}
+.bannerRightSecbg {
+    background: #dfffde;
+}
+.bannerRightSec {
+    padding-right: 0;
+    width: 100%;
+}
+.tourhightlightTitle,
+.bannerTourHighlightsUl li,
+.bannerSecUl li a {
+    color: var(--text-color);
+}
+.bannerSecUl li a {
+    font-size: 14px;
+    padding: 0;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.bannerSecUl li a:hover {
+    color: #20c593;
+}
+ul.bannerSecUl {
+    margin-top: 20px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+ul.bannerSecUl li {
+    position: relative;
+    margin: 0 9px;
+}
+ul.bannerSecUl li::after {
+    position: absolute;
+    content: '';
+    background: var(--text-color);
+    width: 4px;
+    height: 4px;
+    border-radius: 15px;
+    top: auto;
+    bottom: 7px;
+    left: auto;
+    right: -12px;
+}
+ul.bannerSecUl li:last-child:after {
+    display: none;
+}
+.explorerBlock,
+.bg-dark-banner-rightBlock {
+    background: var(--text-color);
+    color: #dfffde;
+    letter-spacing: 0.25px;
+}
+.bg-dark-banner-rightBlock {
+    padding: 15px;
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: 500;
+}
+.explorerBlock {
+    padding: 17px 30px;
+
+}
+.explorerTitle {
+    font-size: 11px;
+    line-height: inherit;
+    font-weight: 500;
+    padding-bottom: 10px;
+    padding-left: 12px;
+}
+.explorerTitle:last-child {
+    padding-bottom: 0;
+}
+.explorerBlockCols {
+    padding-left: 0;
+}
+.explorerTitle {
+    position: relative;
+}
+.explorerTitle::before {
+    position: absolute;
+    content: '';
+    background: #dfffde;
+    width: 4px;
+    height: 4px;
+    border-radius: 15px;
+    top: 7px;
+    bottom: 0px;
+    left: 0;
+    right: 0px
+}
+.explorerTitle::after {
+    position: absolute;
+    content: '';
+    background: hwb(118deg 87% 0% / 42%);
+    width: 1.9px;
+    height: 27px;
+    border-radius: 15px;
+    top: 7px;
+    bottom: 0px;
+    left: 1px;
+    right: 0px;
+}
+.explorerTitle:last-child:after {
+    display: none;
+}
+.tourhightlightTitle {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    margin-bottom: 5px;
+    line-height: inherit;
+}
+.bannerTourHighlightsUl li {
+    font-size: 14px;
+    line-height: inherit;
+    letter-spacing: var(--letterSpacing);
+    font-weight: normal;
+    padding-left: 15px;
+    position: relative;
+    padding-bottom: 5px;
+}
+.bannerTourHighlightsUl li::before {
+    position: absolute;
+    content: '';
+    background: var(--text-color);
+    width: 6px;
+    height: 6px;
+    border-radius: 15px;
+    top: 9px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.bannerRightTourHighlights {
+    padding: 15px 0px 0 15px;
+}
+section.SliderBannerSec {
+    position: relative;
+}
+section.TourboxsSec {
+    position: relative;
+    margin-top: -55px;
+    padding-bottom: 30px;
+}
+.tourboxesButtons {
+    margin-top: 20px;
+}
+.videoButtonSlider {
+    position: relative;
+    top: -118px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    float: right;
+}
+.VideoSec iframe {
+    width: 100%;
+}
+.videoSliderBannerPopup .modal-content {
+    background-color: transparent;
+    border: 0;
+}
+.videoSliderBannerPopup .modal-header {
+    border: 0;
+    margin-bottom: -18px;
+}
+.sliderLeftSec {
+    padding: 0;
+}
+.tab-content.tabInnerSec {
+    display: flex;
+}
+.tab-content.tabInnerSec .tabs-list {
+    flex-direction: column;
+    padding: 15px 0;
+}
+.tab-content.tabInnerSec .panels-container {
+    flex: 1;
+}
+.tabViewInnerSec.bannerRightTourHighlights {
+    padding: 25px 0px 0 30px;
+}
+.tabViewInnerSec .tourhightlightTitle {
+    margin-bottom: 15px;
+}
+.tabViewInnerSec .bannerTourHighlightsUl {
+    display: flex;
+    flex-direction: column;
+}
+.tabviewFlex {
+    display: flex;
+}
+.tabPackageSec .tabviewFlex .bannerTourHighlightsUl li:hover {
+    background: transparent;
+}
+.tabviewFlex .bannerTourHighlightsUl {
+    padding-right: 20px;
+}
+.tabviewFlex .bannerTourHighlightsUl li {
+    padding-bottom: 15px;
+}
+.tabInnerSec .bannerRightTourHighlights {
+    padding: 25px 0px 15px 30px;
+}
+.tabMainContainerSec {
+    padding: 0 30px;
+}
+.tabPackageSec .tabInnerSec .tab.-active {
+    color: var(--text-color);
+}
+.tabInnerSec .tabsContainer li.-active {
+    background: #d3f1d2;
+}
+.tabPackageSec .tabInnerSec li:hover {
+    background: #d3f1d2;
+}
+.tabPackageSec .tabInnerSec li:hover .tab {
+    color: var(--text-color);
+}
+.tabPackageSec {
+    position: relative;
+}
+.videoSliderBannerPopup .btn-close {
+    opacity: 1;
+    outline: none;
+}
+.videoSliderBannerPopup.modal {
+    background: rgb(223 255 222 / 68%);
+}
+.tabPAckageItem1 {
+    background: #dfffde;
+    border-radius: 10px;
+}
+.tabitemTitle {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: inherit;
+    text-align: center;
+    padding: 15px;
+    background: #d3f1d2;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 0.25px;
+}
+.tabitemsContent {
+    padding: 10px;
+}
+.itemsTabContentCommon {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: inherit;
+    padding: 5px 0;
+    letter-spacing: 0.25px;
+}
+.fixPackagesitem1 .tabitemsContent .border-BottomTab {
+    margin: 0;
+    padding: 0;
+}
+.ItineraytabSec .fixPackagesitem1 .tabitemsContent .border-BottomTab {
+    padding: 0;
+    border-color: #FFF;
+}
+.pricePersontab span {
+    font-size: 12px;
+    line-height: inherit;
+    color: var(--text-color);
+}
+.itemsTabContentBold {
+    font-size: 18px;
+    line-height: inherit;
+}
+.tabPackageSec .card-trading-deals::after {
+    border-top: 0;
+}
+.tabPackageSec .SliderSec1 {
+    padding: 0;
+}
+.tabPackageSec .card-trading-deals {
+    box-shadow: none;
+}
+.fixPackagesitem1 {
+    box-shadow: 0px 3px 8px rgb(0 0 0 / 35%);
+    border-radius: 10px;
+}
+.packTabSec {
+    box-shadow: 0px 3px 8px rgb(0 0 0 / 35%);
+    border-radius: 10px;
+}
+.tabPackageSec .card-trading-deals {
+    padding: 10px;
+    border: 0px solid rgb(221, 221, 221);
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.tabPackageSec button.slick-next.slick-arrow {
+    background-image: url(../../img/slick-next-white.png);
+}
+.tabPackageSec button.slick-prev.slick-arrow {
+    background-image: url(../../img/slick-prev-white.png);
+}
+.tabPackageSec .slick-dots li,
+.tabPackageSec .slick-dots li button {
+    font-size: 0;
+    outline: none;
+}
+.tabPackageSec .slick-dots li button:focus {
+    box-shadow: none;
+    outline: none;
+}
+.tabPackageSec .slick-dots li {
+    display: inline-block;
+}
+.tabPackageSec .imgSliderSec .slick-slider .slick-arrow {
+    top: 41%;
+}
+.tabPackageSec .slick-dots li.slick-active {
+    background: rgb(255, 76, 71);
+    border-color: rgb(255, 76, 71);
+    outline: none;
+}
+.cityBreakup {
+    display: flex;
+    align-items: flex-start;
+}
+.tabPackageSec .packgesSecListView ul li,
+.tabPackageSec .packgesSecListView ul li a {
+    font-size: 13.1px;
+    line-height: inherit;
+    color: var(--text-color);
+    vertical-align: middle;
+    cursor: text;
+    display: flex;
+    overflow-wrap: anywhere;
+
+}
+.tabPackageSec .packgesSecListView ul li {
+    display: flex;
+    padding-bottom: 0px;
+    align-items: center;
+}
+.tabPackageSec .packgesSecListView .cityBreakup ul li {
+    display: inline-flex;
+}
+.ItineraytabSec .packgesSecListView a.text-decoration-underline {
+    cursor: pointer;
+}
+.tabPackageSec .hydrated {
+    color: var(--text-color);
+    vertical-align: middle;
+    padding-right: 5px;
+    font-size: 20px;
+}
+.packgesSecListView .stayItemTab ul {
+    display: flex;
+    flex-direction: column;
+}
+.tabPackageSec .greaterSec {
+    color: rgb(255, 76, 71);
+}
+.packgesSecListView {
+    padding: 0px 10px 0px 10px;
+    background: #FFF;
+}
+.packgesSecListView .cityBreakup ul {
+    padding-bottom: 0px
+}
+.border-BottomTab {
+    border-bottom: 1px solid var(--text-color);
+    margin: 0 25px;
+}
+.packgesSecListView .stayItemTab {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.tabPackageSec .CheckmarkUL {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: self-start;
+}
+.tabPackageSec ul.CheckmarkUL li a {
+    font-weight: 600;
+    text-decoration: underline;
+    padding-bottom: 5px;
+    cursor: pointer;
+    display: contents;
+}
+.tabPackageSec ul.CheckmarkUL li .hydrated {
+    color: #20c593;
+}
+.tabPackageSec ul.CheckmarkUL li .hydrated.close_ionicon {
+    color: #fd4c44;
+    font-size: 20px;
+}
+.tabPackageSec ul.CheckmarkUL li .hydrated.car-ioicon {
+    color: var(--text-color);
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.tabPackageSec .SliderSec1 ul li.business-classLi {
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+.business-classLi {
+    position: relative;
+}
+.tabPackageSec .CheckmarkUL .business-classLi {
+    padding-left: 25px;
+}
+.ItineraytabSec .airPlaneTranfrom {
+    transform: rotate(45deg);
+}
+.ItineraytabSec .itineryTitle {
+    text-align: left;
+}
+.mealsTab ul {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+.greenLightBg.lastItemTab {
+    background: #dfffde;
+    padding: 0 10px;
+    border-radius: 0 0 10px 10px;
+}
+.listing_details_compare .greenLightBg.lastItemTab {
+    background: #FFF !important;
+    padding: 0 10px;
+    border-radius: 0 0 10px 10px;
+}
+.lastItemTab .border-bottom-none {
+    border-bottom: 0;
+}
+.greenLightBg .itemsTabContentBold {
+    text-align: center;
+}
+.btnpackages a {
+    text-align: center;
+    display: block;
+    padding: 11px;
+    background: #004963;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: inherit;
+    transition: 0.5s all ease-in-out;
+}
+.btnpackages a:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+}
+.packagereviewSlider .imgSliderSec ul.slick-dots {
+    bottom: 10px;
+}
+.lastItemTab .border-BottomTab {
+    margin: 0;
+}
+.sliderSpaceBlnk {
+    min-height: 256px;
+    margin-bottom: 10px;
+}
+.stayItemTab {
+    height: auto;
+}
+.cityBreakup {
+    height: auto;
+    padding: 5px 0;
+}
+.sightseeingTab {
+    height: auto;
+}
+.transportationTab {
+    height: auto;
+}
+.transportationTab.itemsTabContentCommon,
+.transportationTab {
+    height: auto;
+}
+.mealsTab {
+    height: auto;
+}
+.mealsTab.itemsTabContentCommon {
+    height: auto;
+}
+.guestNationalityTab {
+    height: auto;
+}
+.fixPackagesitem1 .itemsTabContentCommon.itemsTabContentBold {
+    padding: 5px 0px;
+}
+.tabitemsContent .lastItemTab .itemsTabContentBold {
+    font-size: 17px;
+    line-height: inherit;
+}
+.lastItemTab {
+    height: auto;
+}
+.greenLightBg .itemsTabContentCommon {
+    padding: 5px 0;
+}
+.tabPackageSec {
+    background: #FFF;
+}
+.tabPackageSec .carousel-control-next-icon,
+.tabPackageSec .carousel-control-prev-icon {
+    background-size: 70%;
+}
+.tabPackageSec .carousel-control-next,
+.carousel-control-prev {
+    opacity: 1;
+}
+.ItineraytabSec .sliderSpaceBlnk {
+    height: 140px;
+}
+.ItineraytabSec .fixPackagesitem1 .sliderSpaceBlnk {
+    height: auto;
+    min-height: 122px;
+}
+.ItineraytabSec .stayItemTab {
+    height: auto;
+
+}
+.ItineraytabSec .sightseeingTab,
+.ItineraytabSec .sightseeingTab.itemsTabContentCommon {
+    height: auto;
+}
+.ItineraytabSec .packgesSecListView .cityBreakup ul {
+    border-bottom: 0
+}
+.ItineraytabSec .cityBreakup {
+    align-items: self-start;
+}
+.ItineraytabSec .transportationTab,
+.ItineraytabSec .transportationTab.itemsTabContentCommon {
+    height: auto;
+}
+.ItineraytabSec .tabPackageSec .CheckmarkUL {
+    padding-top: 10px;
+}
+.ItineraytabSec .mealsTab.itemsTabContentCommon,
+.ItineraytabSec .mealsTab {
+    height: auto;
+}
+.ItineraytabSec .packgesSecListView .mealsTab ul::before {
+    bottom: -6px;
+}
+.guestNationalityTab {
+    border-bottom: 0;
+}
+.guestNationalityTab ul li,
+.guestNationalityTab .sightseeingTab ul li {
+    padding-left: 30px !important;
+}
+.packTabSec .packgesSecListView li {
+    align-items: flex-start;
+}
+.packTabSec .guestNationalityTab ul li,
+.packTabSec .guestNationalityTab .sightseeingTab ul li {
+    padding-left: 0px !important;
+}
+.ItineraytabSec .packTabContentDv .packgesSecListView {
+    border-radius: 0 0 35px;
+}
+.ItineraytabSec .guestNationalityTab.itemsTabContentCommon,
+.ItineraytabSec .guestNationalityTab {
+    height: auto;
+}
+.tabPackageSec .packgesSecListView ul li.citybreakpadleft {
+    padding-left: 30px;
+}
+.ItineraytabSec .tabitemTitle span {
+    font-weight: 400;
+    font-size: 14px;
+}
+.tabPackageSec ul.CheckmarkUL .hydrated.icon-blue-color {
+    color: var(--text-color);
+}
+.ItineraytabSec .packgesSecListView .cityBreakup ul.day3Ul {
+    padding-bottom: 0;
+}
+.ItineraytabSec .packgesSecListView .cityBreakup ul.day3Ul::after {
+    bottom: -10px;
+}
+.ItineraytabSec .packgesSecListView .btn-red-sightseeing {
+    color: #fd4c44;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+.packItineryTitle ul li {
+    font-size: 18px;
+    line-height: inherit;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.rightFlexProperty {
+    display: flex;
+    justify-content: end;
+}
+.packItineryTitle ul li {
+    margin-bottom: 0px;
+}
+.rightItiSecTitle .forpackLi {
+    display: block;
+    font-size: 13px;
+    line-height: inherit;
+    margin-bottom: 0;
+}
+.titleMarginPackIti {
+    margin-bottom: 20px;
+}
+.tabcontentBg3 {
+    background: #FFF;
+}
+.tabcontentBg3 .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.tabcontentBg3 .nav-link {
+    color: var(--text-color);
+    text-align: left;
+    font-size: 14px;
+    padding: 15px;
+    font-weight: 500;
+}
+.tabcontentBg3 .nav-pills {
+    background: #dfffde;
+    border-radius: 10px 0 0px 10px;
+    width: 300px;
+    padding: 0;
+}
+.tabcontentBg3 .nav-pills {
+    flex: 1;
+}
+.tabcontentBg3 .tab-content {
+    flex: 5;
+}
+.tabcontentBg3 .d-flex.align-items-start {
+    border: 1px solid #dfffde;
+    border-radius: 10px;
+}
+.tabcontentBg2_custom {
+    background-color: #e0ffdf;
+}
+.tabcontentBg2,
+.tabcontentBg4 {
+    background-image: linear-gradient(to right top, #20c593, #67d09e, #92dbac, #b4e6bd, #d3f1d2);
+}
+.tabPackageSec .tabcontentBg3 .nav-link.active,
+.tabPackageSec .tabcontentBg3 .nav-link:hover {
+    background: #d4f1d3;
+    font-weight: 600;
+    border-radius: 0;
+}
+.ItineraytabSec .fixPackagesitem1,
+.ItineraytabSec .tabPAckageItem1,
+.ItineraytabSec .tabPAckageItem1 .tabitemTitle,
+.ItineraytabSec .itemsTabContentCommon {
+    background: #004962;
+    color: #ffffff;
+    border-radius: 35px 0 35px 0;
+}
+.ItineraytabSec .packTabSec .tabitemTitle {
+    border-radius: 35px 0 0px 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+    background: #004962;
+    color: #FFF;
+}
+.ItineraytabSec .packTabSec {
+    background: transparent;
+    border-radius: 0;
+}
+.ItineraytabSec .packgesSecListView ul li.citybreakpadleft.busiLeftPadding {
+    padding-left: 25px !important;
+}
+.listing-review .imgSliderSec .slick-slider {
+    height: 157px;
+}
+.SliderBannerSec .carousel-indicators {
+    bottom: 65px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.sliderBanSec .carousel-control-next-icon {
+    background-image: url('../../img/slick-prev-white.png');
+    transform: rotate(-180deg);
+}
+.sliderBanSec .carousel-control-prev-icon {
+    background-image: url('../../img/slick-next-white.png');
+    transform: rotate(-180deg);
+}
+.sliderBanSec .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #FFF;
+    opacity: 1;
+}
+.sliderBanSec .carousel-indicators .active {
+    opacity: 1;
+    border-color: #ff4c46 !important;
+    background-color: #ff4c46 !important;
+}
+.SliderBannerSec .carousel-indicators {
+    left: auto;
+    right: 60px;
+}
+.sliderLeftSec {
+    position: relative;
+}
+.videoButtonSlider1 {
+    position: absolute;
+    left: auto;
+    right: 15px;
+    bottom: 72px;
+    z-index: 9;
+}
+.videoButtonSlider1 img {
+    width: 35px;
+}
+.SliderBannerSec .carousel {
+    max-height: 575px;
+    overflow: hidden;
+}
+.videoSliderBannerPopup .btn-close:focus {
+    box-shadow: none;
+}
+.TourboxsRightSec {
+    padding-top: 35px;
+}
+.tabcontentBg1 {
+    background: #ddd;
+}
+.tab-nav .hydrated {
+    padding-right: 3px;
+}
+.ItineraytabSec .carousel {
+    padding: 10px;
+}
+.ItineraytabSec .packTabSec {
+    background: #FFF;
+    border-radius: 40px;
+}
+#tab1 .imgSliderSec {
+    height: auto;
+}
+.ItineraytabSecWidth,
+.packagesSecWidth1 {
+    width: 250px;
+    min-width: 250px;
+}
+.ItineraytabSec .taBItinerayCols.ItineraytabSecWidth {
+    margin: 0 10px 20px;
+}
+.packagereviewSlider .slick-slide img {
+    height: 221px;
+}
+.tabPackageSecrCols.packagesSecWidth1 {
+    position: absolute;
+    left: 25px;
+}
+.multiple-items,
+.taBItinerayrows {
+    width: calc(100% - 250px);
+    position: relative;
+/*    left: 265px;*/
+}
+.tabitemsContent .lastItemTab .itemsTabContentBold {
+    font-size: 13px;
+    line-height: inherit;
+}
+.tabPackageSecrCols {
+    margin: 0 5px;
+}
+.tabcontentBg1 .packTabContentDv {
+    padding-bottom: 10px;
+    background: #dfffde;
+    border-radius: 0 0 50px 50px;
+}
+.listing_details_compare .tabcontentBg1 .packTabContentDv {
+    padding-bottom: 10px;
+    background: #FFF !important;
+    border-radius: 0 0 50px 50px;
+}
+.tabPackageSec .multiple-items button.slick-next.slick-arrow {
+    background-image: url('../../img/slick-next.png');
+    right: -40px;
+    top: 35px;
+}
+.tabPackageSec .multiple-items button.slick-prev.slick-arrow {
+    background-image: url('../../img/slick-prev.png');
+    left: auto;
+    top: 0px;
+    z-index: 99;
+    right: -40px;
+}
+.ItineraytabSec img.card-img-top.img-fluid,
+.ItineraytabSec .trnd-img {
+    height: 143px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.ItineraytabSec {
+    position: relative;
+}
+.ItineraytabSec .taBItinerayrows {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.taBItinerayfixCols {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.taBItinerayrows {
+    width: calc(100% - 250px);
+    position: relative;
+    left: 250px;
+    display: inline-flex;
+}
+.taBItinerayCols.ItineraytabSecWidth {
+    margin: 0 5px;
+}
+.ItineraytabSec ::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: transparent;
+}
+.ItineraytabSec ::-webkit-scrollbar-track {
+    background: #dfffde;
+    border-radius: 10px;
+}
+.ItineraytabSec ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.ItineraytabSec ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.ItineraytabSec ::-webkit-scrollbar-thumb:horizontal {
+    background: #004962;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tabPackageSec .tabPackageSecrow .slick-slide img.packStyleIcons {
+    width: 11px;
+    height: 16px;
+    margin: 0;
+    margin-right: 10px;
+}
+.tabPackageSec .tabPackageSecrow .slick-slide .stayItemTab img.packStyleIcons {
+    width: 16px;
+}
+.tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIcons1 {
+    width: 17px;
+    height: 12px;
+    margin-right: 10px;
+}
+.tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsCancel {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+.tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIcons2 {
+    width: 32px;
+    height: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsboat {
+    width: 33px;
+    height: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.tabPackageSec .tabPackageSecrow img.packStyleIconsdinner {
+    width: 16px;
+    height: 14px;
+    margin: 0;
+    margin-right: 10px;
+}
+.tabPackageSec .tabPackageSecrow img.packStyleIcons-bus {
+    width: 36px;
+    height: 19px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.ItineraytabSec .packgesSecListView img.plainIconsHeight {
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+}
+.ItineraytabSec .packgesSecListView img.packStyleIcons {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+.ItineraytabSec .packStyleIconsboat,
+.ItineraytabSec .packgesSecListView img.packStyleIconsdinner,
+.ItineraytabSec .packgesSecListView img.packStyleIcons1,
+.ItineraytabSec .packgesSecListView img.packStyleIconsCancel {
+    margin-right: 10px;
+}
+.ItineraytabSec .packgesSecListView .cityBreakup img.packStyleIcons {
+    width: 11px;
+}
+.ItineraytabSec .packgesSecListView .cityBreakup img.packStyleIcons2 {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.ItineraytabSec .packgesSecListView .cityBreakup img.packStyleIcons2 {
+    width: 32px;
+    height: 16px;
+}
+.ItineraytabSec .packStyleIconsboat {
+    width: 25px;
+}
+.linavlink {
+    font-size: 14px;
+}
+.cartpageSec {
+    border-top: 1px solid rgb(0 0 0 / 6%);
+    padding-top: 25px;
+}
+.cartpageSec .cartsec1 li a,
+.cartpageSec .cartsec1 li {
+    font-size: 15px;
+    line-height: inherit;
+    color: #004963;
+}
+.cartpageSec .cartsec1 li.dot {
+    background: #004963;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.cartpageSec .cartsec1 ul {
+    display: flex;
+    gap: 8px;
+    grid-gap: 8px;
+    align-items: baseline;
+}
+.cartpageSec .cartTitle {
+    font-size: 25px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    letter-spacing: 0.10px;
+    margin: 15px 0;
+}
+.cartpageSec .spotTitle {
+    background: #e0ffdf;
+    padding: 13px 20px;
+    font-size: 20px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 0.20px;
+}
+.cartSec4Inner {
+    padding: 8px 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cartTravelTitle,
+.cartTravelTitle2 {
+    font-size: 16px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+}
+.cartpageSec span.DealsheadingRed.text-capitalize {
+    color: #ff4c46;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: inherit;
+}
+.cartSec4Inner .pActivitys,
+.cartSec4Inner .pPlaces,
+.cartSec4Inner .pActivitys2,
+.cartRefundble,
+.cartRefundbleDate,
+.cartUlSec ul li a {
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: inherit;
+    color: #004963;
+}
+.cartSec4Innerdflex2,
+.cartSec4Innerdflex,
+.cartsec4,
+.cartsec5,
+.cartSec5 {
+    display: flex;
+    justify-content: space-between;
+}
+.cartSec4Innerdflex2 {
+    align-items: end;
+    justify-content: space-between;
+}
+.cartRefundble,
+.cartRefundbleDate {
+    color: #20c593;
+    font-weight: 500;
+    text-align: right;
+    letter-spacing: 0.20px;
+}
+.cartDetailsSec .actplace {
+    justify-content: start;
+}
+.cartBoxShadows {
+    box-shadow: 1px 0 10px rgb(0 0 0 / 21%);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+.cartsec4 .imgCart img {
+    border-radius: 4px 0 0 4px;
+}
+.totalCartT,
+.cartDateRangeTitle {
+    font-size: 16px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 500;
+}
+.cartTravelan {
+    text-decoration: underline;
+}
+.cartTravelTitle,
+.cartTravelTitle2 {
+    margin-bottom: 5px;
+}
+.cartDetailsSec .dealsActivity {
+    margin-right: 15px;
+}
+.cartDetailsSec2 .pActivitys2 {
+    padding-bottom: 3px;
+}
+.country_days_agnt,
+.cartRefundble {
+    padding-bottom: 5px;
+}
+.cartSec5 {
+    border-top: 1px solid #004963;
+    padding: 15px;
+}
+.cartUlSec ul {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+}
+.cartUlSec ul li:not(:last-child) a {
+    border-right: 1px solid rgb(0 73 99 / 51%);
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.cartUlSec ul li a .hydrated {
+    padding-right: 3px;
+}
+.cartpageSec .moreTourBtn a,
+.cartpageSec .moreTourBtn button {
+    background: #004963;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 500;
+    padding: 10px 30px;
+    transition: 0.5s all ease-in-out;
+    letter-spacing: 0.20px;
+}
+.cartpageSec .moreTourBtn {
+    display: flex;
+}
+.cartpageSec .moreTourBtn a:hover,
+.cartFormCoupon .moreTourBtn button:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    border-color: var(--anchorHoverBg);
+}
+.cartUlSec ul li a {
+    letter-spacing: 0.20px;
+    transition: 0.5s all ease-in-out;
+}
+.cartBoxShadows a:hover,
+.cartsec1 a:hover {
+    color: #20c593;
+}
+.cartpageSec .iconWrap {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.cartpageSec .iconWrap .tooltip {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: 15px;
+    color: #004963;
+    background-color: #FFF;
+    border-radius: 4px;
+    transform: translateX(-0.325rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+    padding: 15px 15px 0;
+    font-weight: 500;
+    width: max-content;
+    box-shadow: 1px 5px 8px rgb(0 0 0 / 28%);
+}
+.cartpageSec .iconWrap .tooltip::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    left: 75px;
+    top: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 1px;
+}
+.cartpageSec .iconWrap .tooltip p {
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.cartpageSec .iconWrap:hover .tooltip,
+.cartpageSec .iconWrap:visited .tooltip,
+.cartpageSec .iconWrap:focus .tooltip,
+.cartpageSec .iconWrap:focus-within .tooltip {
+    transform: translateX(0.325rem);
+    opacity: 1;
+}
+.cartsec6 .spotTitle {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.packTotalSec {
+    border: 1px solid #004963;
+}
+.cartPackRightsec {
+    padding: 13px 20px;
+}
+.cartrightfstBlock {
+    display: flex;
+    margin-bottom: 25px;
+}
+.cartrightfstBlock .dealsActivity .hydrated,
+.cartTravelTitleRed {
+    color: #ff4c46;
+}
+.fstCartTitleRight .pActivitys {
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: inherit;
+    color: #004963;
+}
+.closeiconCart .hydrated {
+    font-size: 25px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+.cartRightSecondBlock .country_days_agnt {
+    align-items: start;
+}
+.cartRightSecondBlock {
+    margin-bottom: 25px;
+}
+.cartRightSecondBlock span.DealsheadingRed.text-capitalize {
+    color: #004963;
+    font-weight: 400;
+    font-size: 14px;
+}
+.cartRightSecondBlock .cartDateRangeTitle {
+    font-weight: 400;
+    font-size: 14px;
+}
+.cartRightDisountBlock {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #004963;
+    border-bottom: 1px solid #004963;
+    padding: 10px 0;
+}
+.cartRightDueSec {
+    padding: 10px 0;
+}
+.cartDiscountsec,
+.totalDueSec {
+    display: flex;
+    justify-content: space-between;
+}
+.cartRightDueSec .para {
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+}
+.cartRightCheckout .moreTourBtn {
+    display: flex;
+}
+.cartRightCheckout .moreTourBtn a {
+    width: 100%;
+}
+.cartRightCheckout {
+    padding: 20px 0 25px;
+}
+.checkoutUL,
+.cartDisCoupon {
+    margin-bottom: 40px;
+}
+.checkoutUL ul {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.cartFormCoupon .form-row {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+.cartRightDisountBlock .cartTravelTitle,
+.cartRightDueSec .cartTravelTitle {
+    font-size: 17px;
+}
+.cartRightDueSec .cartTravelTitleRed {
+    font-size: 25px;
+    line-height: inherit;
+}
+.cartRightDueSec .totalDueSec {
+    align-items: baseline;
+}
+.cartFormCoupon .couponTitle {
+    font-weight: 400;
+}
+.cartFormCoupon .form-row .inputGroup {
+    width: 100%;
+}
+.cartFormCoupon .moreTourBtn button {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 6px 15px;
+    line-height: 24px;
+    border: 1px solid #004963;
+}
+.cartDisCoupon .inputGroup input {
+    border-color: rgb(0 73 99 / 70%);
+    color: #004963;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.cartDisCoupon .form-control:focus,
+.cartDisCoupon button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.cartBoxShadows,
+.packTotalSec,
+.ShowCartDiv1 {
+    transition: all 1s linear;
+    display: block;
+}
+.cartBoxShadows.hidden,
+.packTotalSec.hidden,
+.ShowCartDiv1.hidden {
+    display: none;
+}
+.paypalDebitUL li a {
+    background: #004963;
+    border-radius: 4px;
+    padding: 10px 15px;
+    transition: 0.5s all ease-in-out;
+    width: 260px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+.paypalDebitUL li a {
+    letter-spacing: 0.20px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 500;
+}
+.paypalDebitUL .paypalButton {
+    background: #ffc439;
+}
+.paypalButton img {
+    max-width: 35%;
+}
+.creditDebitButton img {
+    width: 20px;
+    margin-right: 5px;
+}
+.paypalDebitUL {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+}
+.debitHistory {
+    margin: 30px 0;
+}
+.debitHistory .form-control {
+    color: #004963;
+    font-size: 15px;
+    border-color: rgba(0, 73, 99, 0.5);
+    font-weight: 400;
+    line-height: 26px;
+    border-radius: 8px;
+}
+.debitHistory .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+.debitHistory .form-control::placeholder {
+    color: #004963;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+.currencyConvertation .totalDeSec {
+    display: flex;
+    flex-direction: column;
+}
+.currencyConvertation .cartDateRangeTitle span {
+    font-size: 25px;
+    color: #004963;
+    font-weight: 600;
+}
+.currencyConvertation .cartRightSecondBlock .cartDateRangeTitle {
+    padding-bottom: 10px;
+}
+.currencyConvertation .rateTitlecurrency {
+    padding-bottom: 12px;
+}
+.currencyConvertation .rateinputDiv {
+    display: flex;
+    align-items: center;
+}
+.currencyConvertation .rateinputDiv label {
+    margin: 0;
+    cursor: pointer;
+}
+.currencyConvertation .rateInput[type="radio"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.currencyConvertation .rateInput[type="radio"]:checked {
+    appearance: none;
+    background-image: url('../../img/rate-input.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.checkoutAccTitle {
+    color: #004963;
+    font-size: 18px;
+    font-weight: 600;
+}
+.checkoutAccordian .accordion-item {
+    border: 0;
+    border-top: 1px solid #004963;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.checkoutAccordian .accordion-item:last-child {
+    border-bottom: 1px solid #004963;
+}
+.checkoutAccordian .accordion-body-inner {
+    padding-right: 60px;
+}
+.checkoutAccordian .accordion-button:not(.collapsed) {
+    color: #004963;
+    background-color: #FFF;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.checkoutAccordian .accordion-button:not(.collapsed)::after,
+.checkoutAccordian .accordion-button::after {
+    background-image: url('../../img/accordian-checkout.png');
+    top: 5px;
+    position: relative;
+}
+.checkoutAccordian .accordion-button:focus,
+.checkoutAccordian .form-control:focus,
+.checkoutAccordian .form-select:focus {
+    box-shadow: none;
+    border-color: #004963;
+}
+.checkoutAccordian .accordion-button,
+.checkoutAccordian .form-control,
+.checkoutAccordian .form-select {
+    border-color: rgb(0 73 99 / 50%);
+    font-size: 15px;
+    font-weight: 400;
+    color: #004963;
+    line-height: 26px;
+    border-radius: 8px;
+}
+.checkoutAccordian .form-control::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: #004963;
+}
+.checkoutAccordian .sentMesg-email {
+    font-size: 14px;
+    font-weight: 400;
+    color: #004963;
+    letter-spacing: 0.10px;
+}
+.checkoutAccordian .accordion-body {
+    padding: 0px 0px 30px;
+}
+.checkoutAccordian .accordion-button {
+    padding: 20px 10px 20px 0;
+}
+.checkoutAccordian .accordion-button:not(.collapsed)::after {
+    position: relative;
+    top: -5px;
+}
+.checkoutAccordian .commonInnerblock {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+}
+.checkoutAccordian .commonInnerblock {
+    margin-bottom: 15px;
+}
+.checkoutAccordian .fullwidthInnerblock {
+    margin-bottom: 35px;
+}
+.checkoutAccordian .fullwidthInnerblock.dateofBirthSec {
+    margin-bottom: 0;
+}
+.checkoutAccordian .commonInnerblock .inputGroup,
+.checkoutAccordian .countrySelectdp,
+.checkoutAccordian .passgenderSelect,
+.checkoutAccordian .commonInnerblock2 .accCustomSelect {
+    flex: 1;
+}
+.commonInnerblock2 {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+.checkoutpageSec .checkoutAgreebtn {
+    margin: 40px 0;
+}
+.checkoutpageSec .checkoutAgreebtn .inputGroup {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.checkoutpageSec .checkoutPaynowBtn a {
+    width: 100%;
+    text-align: center;
+    padding: 13px 15px;
+    font-weight: 600;
+    font-size: 21px;
+    border-radius: 8px;
+}
+.checkoutAgreebtn .termsHeading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #004963;
+    letter-spacing: 0.10px;
+    cursor: pointer;
+}
+.checkoutAgreebtn .termsHeading a {
+    text-decoration: underline;
+}
+.checkoutAgreebtn input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    outline: none;
+}
+.checkoutAgreebtn input[type="checkbox"] {
+    accent-color: #004963;
+}
+.thanksBookingSec .thnksBookSec {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    grid-gap: 10px;
+}
+.thanksBookingSec .iconCheckmark .IoiconCheckmark {
+    font-size: 130px;
+    color: #004963;
+    vertical-align: middle;
+}
+.thanksBookingSec .thnksContent {
+    flex: 1;
+}
+.thanksBookingSec .thnkbookHeading {
+    font-size: 26px;
+    font-weight: 600;
+    color: #004963;
+    letter-spacing: 0.10px;
+    padding-left: 20px;
+}
+.thanksBookingSec .paraLi {
+    font-size: 13.4px;
+    font-weight: normal;
+    color: #004963;
+    letter-spacing: 0.10px;
+}
+.thanksBookingSec .thnksbookUl li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    grid-gap: 5px;
+}
+.debitHistory .removeDebitInfo {
+    display: flex;
+    justify-content: end;
+}
+.debitHistory .cartFormCoupon {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.debitHistory .removeDebitInfo .debitCloseIcon {
+    font-size: 40px;
+    cursor: pointer;
+    color: #004963;
+}
+.showhideDebitSec {
+    display: none;
+}
+.showhideDebitSec.open {
+    display: block;
+}
+.checkoutpageSec .dateofBirthSec {
+    padding-top: 15px;
+}
+.thanksBookingSec {
+    display: none;
+}
+.thanksBookingSec.active {
+    display: block;
+    transition: 0.5s all ease-in-out;
+}
+.feedbackagree_checkout {
+    width: 100%;
+}
+.checkoutpageSec .checkoutAgreebtn .inputGroup {
+    flex-wrap: wrap;
+}
+.checkoutpageSec .invalid-feedback {
+    font-size: 12px;
+}
+.checkoutpageSec .form-control.is-invalid,
+.checkoutpageSec .was-validated .form-control:invalid,
+.checkoutpageSec .was-validated .form-select:valid:not([multiple]):not([size]),
+.checkoutpageSec .was-validated .form-control:valid,
+.checkoutpageSec .form-control.is-valid {
+    background-image: none;
+}
+.checkoutpageSec .checkoutPaynowBtn a {
+    padding: 0;
+}
+.checkoutpageSec .checkoutPaynowBtn button {
+    background: #004963;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 500;
+    padding: 10px 30px;
+    transition: 0.5s all ease-in-out;
+    letter-spacing: 0.20px;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+.checkoutpageSec .checkoutPaynowBtn a:hover button {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    border-color: var(--anchorHoverBg);
+}
+.shoppageDflex {
+    display: flex;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.shopImgSec ul,
+.Social_shop_icons {
+    display: flex;
+    gap: 5px;
+    grid-gap: 5px;
+}
+.shopImgSec ul {
+    justify-content: center;
+}
+.shopImgSec ul li a {
+    transition: 0.5s all ease-in-out;
+}
+.Social_shop_icons .img-fluid {
+    width: 17px;
+}
+.shp_travelOneTitle {
+    font-size: 30px;
+    line-height: inherit;
+    font-weight: 600;
+}
+.shop_lastSeenSec li.Shopdeactive_dot {
+    background: #cfcfcf;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+.shop_lastSeenSec li.Shopdeactive_dot.active {
+    background: #20c593;
+}
+.shop_lastSeenSec li {
+    color: #888888;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: normal;
+    letter-spacing: 0.10px;
+}
+.shopMemberShipSec a,
+.shopStarRatingsec ul a {
+    color: #777777;
+    font-size: 16px;
+    line-height: inherit;
+}
+.shop_lastSeenSec ul {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+    align-items: center;
+}
+.shopMemberShipSec ul a {
+    display: flex;
+    gap: 5px;
+    grid-gap: 5px;
+    align-items: center;
+    transition: 0.5s all ease-in-out;
+}
+.shopMemberShipSec ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    grid-gap: 25px;
+}
+.shopMemberShipSec ul li:not(:last-child) a {
+    border-right: 1px solid #e1e3df;
+    padding-right: 25px;
+}
+.shopMemberShipSec .hydrated {
+    font-size: 20px;
+}
+.shop_lastSeenSec {
+    margin: 5px 0 10px;
+}
+.shopMemberShipSec .phone {
+    -ms-transform: rotate(-90deg);
+    
+    transform: rotate(-90deg);
+}
+.shopMemberShipSec {
+    margin-bottom: 2px;
+}
+.shopStarRatingsec {
+    margin-bottom: 15px;
+}
+.shopStarRatingsec ul a {
+    font-weight: 500;
+}
+.shopFolow_Ask_Social,
+.shopFolow_Anchor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.shopFolow_Ask_Social {
+    gap: 50px;
+    grid-gap: 50px;
+
+}
+.shopFolow_Ask_Social .ask_questions_btn {
+    color: #666666;
+    font-size: 15px;
+    line-height: inherit;
+    display: flex;
+    align-items: center;
+    transition: 0.5s all ease-in-out;
+    font-weight: normal;
+    letter-spacing: 0.10px;
+    padding: 8px 15px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    gap: 5px;
+    grid-gap: 5px;
+}
+.shopFolow_Ask_Social .hydrated {
+    transform: rotateY(180deg);
+}
+.shopFolow_Ask_Social .hydrated {
+    font-size: 16px;
+}
+.shopFolow_Ask_Social a:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+    border-color: var(--anchorHoverBg);
+}
+.Social_shop_icons a {
+    border: 1px solid #e4e4e4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 35px;
+}
+.Social_shop_icons a:hover {
+    border-color: #777777;
+    background: transparent;
+}
+.shopMemberShipSec ul a:hover,
+.shopStarRatingsec ul a:hover {
+    color: #20c593;
+}
+.shop_page_border {
+    border-top: 1px solid #004963;
+}
+.sp_border_bottom {
+    border-bottom: 1px solid #004963;
+}
+.shopProtocolsSec {
+    display: block;
+}
+.protocolsdflex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    grid-gap: 30px;
+}
+.profile_page .protocolsdflex {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.profile_page .protocolsLeftsec {
+    padding-right: 35px;
+}
+.profile_page .shopallToursSec .protocolsLeftsec {
+    padding-right: 65px;
+}
+.protocolsLeftsec {
+    font-size: 18px;
+    line-height: 23px;
+    color: #004963;
+    font-weight: 600;
+    letter-spacing: 0.10px;
+    flex: 1;
+}
+.protocolsRightsec {
+    flex: 5;
+}
+.protocolsRightsec p {
+    text-align: left;
+    font-weight: 400;
+}
+.protocolsRightsec p.paraTitle,
+.readmore_anchor_btn {
+    font-weight: 600;
+}
+.protocolsRightsec p.paraTitle,
+.readmore_anchor_btn,
+.protocolsRightsec p {
+    font-size: 15px;
+    line-height: 25px;
+}
+.protocolsRightsec .paraTitle,
+.readmore_anchor_btn {
+    margin-top: 20px;
+    display: block;
+}
+.shopProtocolsSec .read_more,
+.futureTravel_details .read_more_fature {
+    overflow: hidden;
+}
+.protocolsRightsec .brochures_para {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: inherit;
+    color: #004963;
+    text-align: center;
+    padding: 15px 0;
+}
+.shopBrochuresUL {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    row-gap: 0px;
+    grid-gap: 25px;
+    grid-row-gap: 0px;
+}
+.accordianShopmainSec .para.para_accTitle {
+    margin-bottom: 10px;
+}
+.shopBrochuresUL li {
+    max-width: 31.2%;
+}
+.accordianShopmainSec ul li.para,
+.accordianShopmainSec .para_accTitle {
+    font-size: 14px;
+    line-height: 25px;
+}
+.accordianShopmainSec .accordion-button:not(.collapsed),
+.accordianShopmainSec .accordion-button {
+    color: #004963;
+    background-color: #f0f0f0;
+    box-shadow: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+.accordianShopmainSec .accordion-item:first-of-type,
+.accordianShopmainSec .accordion-item:first-of-type .accordion-button {
+    border-radius: 6px;
+}
+.accordianShopmainSec .accordion-button:focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+.accordianShopmainSec button.accordion-button,
+.accordianShopmainSec .accordion-item:first-of-type .accordion-button {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.accordianShopmainSec .accordion-item:not(:first-of-type) {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 6px;
+}
+.accordianShopmainSec .accordion-button {
+    background-color: #f0f0f0;
+}
+.accordianShopmainSec .accordion-item {
+    margin-bottom: 15px;
+}
+.accordianShopmainSec .accordion-button:not(.collapsed)::after,
+.accordianShopmainSec .accordion-button::after {
+    background-image: url(../../img/accordian-checkout.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.shopallToursSec .allToursUL {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.shopallToursSec .allToursDflex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.profile_page .shopallToursSec .allToursDflex {
+    display: grid;
+}
+.shopallToursSec .allToursTitle {
+    color: #004963;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: inherit;
+    letter-spacing: 0.10px;
+    margin-bottom: 10px;
+}
+.allToursUL li a {
+    color: #0f97c7;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+    transition: 0.5s all ease-in-out;
+    text-decoration: none;
+}
+.allToursUL li a:hover {
+    text-decoration: underline;
+}
+.shopMenuSec {
+    padding-bottom: 20px;
+}
+ul.shopNavMenuUL {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+}
+ul.shopNavMenuUL li {
+    text-align: center;
+}
+ul.shopNavMenuUL a {
+    color: #666666;
+    font-size: 15px;
+    line-height: inherit;
+    transition: 0.5s all ease-in-out;
+    font-weight: normal;
+    letter-spacing: 0.10px;
+    padding: 8px 15px;
+    border: 1px solid #e4e4e4;
+    border-radius: 0px;
+}
+ul.shopNavMenuUL a.active {
+    color: #004963;
+    border-color: #004963;
+}
+.shopdiscoutLeftSec p.para {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 5px
+}
+.discountCouponSec {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    grid-gap: 10px;
+}
+.profile_page .discountCouponSec {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.coupondetailsShop {
+    display: flex;
+    flex-direction: column;
+}
+.coupondetailsShop span {
+    font-size: 15px;
+    color: #004963;
+    line-height: inherit;
+}
+.coupondetailsShop span strong {
+    font-weight: 600;
+    font-size: 16.5px;
+}
+.discountTitleSec,
+.discountCouponSec:not(:last-child) {
+    margin-bottom: 15px;
+}
+.VerticalSliderAbout {
+    padding-top: 35px;
+    display: flex;
+}
+.futureTravel_details p.paraTitle {
+    font-size: 23px;
+    line-height: inherit;
+    color: #004963;
+    font-weight: 600;
+    letter-spacing: 0.10px;
+}
+.futureTravel_details p {
+    margin-bottom: 25px;
+}
+.aboutLeftfixedsec {
+    background: #e0ffdf;
+    padding: 20px;
+    width: 210px;
+    border: 1px solid #004963;
+}
+.shop_memberInfo {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: inherit;
+    letter-spacing: 0.10px;
+    color: #004963;
+}
+.aboutOwnerInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    grid-gap: 10px;
+    margin: 15px 0 30px;
+}
+.profile_page .aboutOwnerInfo {
+    display: grid;
+}
+.aboutOwnerInfo ul {
+    display: flex;
+    flex-direction: column;
+}
+.aboutOwnerInfo ul li {
+    font-size: 15px;
+    line-height: inherit;
+    letter-spacing: 0.10px;
+    color: #004963;
+    font-weight: 500;
+}
+.aboutLeftfixedsec .members_numbers_info {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: inherit;
+    letter-spacing: 0.10px;
+    color: #004963;
+}
+.aboutRightFixedSec {
+    width: calc(100% - 210px);
+}
+.futureTravel_details {
+    margin-top: 30px;
+    padding-left: 220px;
+}
+.shopallToursSec .Section_common_padding,
+.shopAboutSec .shop_page_border {
+    padding-bottom: 10px;
+}
+.shopBrochuresSec .Section_common_padding {
+    padding-bottom: 25px;
+}
+.UL-reviewsCustomerSec {
+    display: flex;
+    gap: 80px;
+    grid-gap: 80px;
+}
+.customerReviewsShopUL .li_reviewsUl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.customerReviewsShopUL .custom_reviews_rate {
+    color: #004963;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: inherit;
+    letter-spacing: 0.10px;
+}
+.rateStar_custreviews.custom_reviews_rate {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    grid-gap: 5px;
+    flex: 0;
+}
+.reviewsCustomerSecCard {
+    display: flex;
+    gap: 15px;
+    grid-gap: 15px;
+    margin-top: 35px;
+}
+.reviewsCustomerSecCard .cardBoxMain {
+    flex: 1;
+}
+.cardBoxMain .card:not(:last-child) {
+    margin-bottom: 15px;
+}
+.reviewsCustomerSecCard .card {
+    padding: 15px 17px;
+    border-radius: 10px;
+}
+.reviewsCustomerSecCard .cardProfile {
+    justify-content: space-between;
+}
+.reviewsCustomerSecCard .cardProfile,
+.reviewsCustomerSecCard .profilesFlex {
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+}
+.shopCustomerReviewSec .customerName {
+    font-size: 16px;
+    line-height: 30px;
+    color: #004963;
+    font-weight: 500;
+    letter-spacing: 0.10px;
+}
+.reviewsCustomerSecCard .profilesFlex {
+    align-items: flex-start;
+}
+.shopCustomerReviewSec .rate_name {
+    text-align: right;
+    line-height: inherit;
+}
+.shopCustomerReviewSec .rate_name,
+.shopCustomerReviewSec .cardTitle,
+.shopCustomerReviewSec .cardBottomheading {
+    font-size: 14px;
+    line-height: 30px;
+    color: #004963;
+    font-weight: 600;
+    letter-spacing: 0.10px;
+}
+.shopCustomerReviewSec .cardTitle {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    line-height: inherit;
+}
+.shopCustomerReviewSec .para {
+    font-size: 14px;
+    line-height: 25px;
+    color: #004963;
+    font-weight: normal;
+    letter-spacing: 0.10px;
+    text-align: left;
+}
+.reviewsCustomerSecCard .cardBottomheading {
+    margin-top: 12px;
+}
+.aboutOwnerInfo img.img-fluid {
+    width: 60px;
+}
+.shopallToursSec .lengths_allTours .allToursUL {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.shopallToursSec .lengths_allTours .allToursUL li {
+    flex: 1;
+}
+.shopAboutSec .pack_memberInfoSec {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.desktop-hide-cart-wish {
+    display: none;
+}
+.TrendingDeals_tabs button.card-link {
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+    padding: 0;
+    margin: 0;
+}
+.TrendingDeals_tabs button.card-link:not(:last-child) {
+    margin-right: 60px;
+}
+.TrendingDeals_tabs .tab-nav {
+    padding: 0;
+}
+.TrendingDeals_tabs .is-desktop {
+    display: flex;
+    gap: 60px;
+    grid-gap: 60px;
+    display: block;
+}
+.TrendingDeals_tabs .tab button:hover,
+.TrendingDeals_tabs .tab button.active {
+    color: #ff4c46;
+    border-bottom: 1px solid #ff4c46;
+}
+.TrendingDeals_tabs .tabcontent {
+    padding: 0;
+    background: #FFF;
+}
+.TrendingDeals_tabs .card-trading-deals {
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgb(0 73 99 / 40%) 3px 0px 8px;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out 0s;
+    margin-bottom: 5px;
+}
+.TrendingDeals_tabs .SliderSec1 {
+    padding: 0 15px;
+}
+.TrendingDeals_tabs .hydrated {
+    font-size: 14px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+.TrendingDeals_tabs .wsh-list-agnt {
+    font-size: 21px;
+    line-height: inherit;
+    vertical-align: middle;
+}
+.TrendingDeals_tabs .cardSec:hover,
+.TrendingDeals_tabs .card-trading-deals:hover {
+    border-color: transparent;
+    box-shadow: 3px 0 15px rgb(32 197 147 / 40%);
+}
+.TrendingDeals_tabs button.slick-prev.slick-arrow {
+    background-image: url(../../img/slick-prev.png);
+}
+.TrendingDeals_tabs button.slick-next.slick-arrow {
+    background-image: url(../../img/slick-next.png);
+    right: 10px;
+}
+.TrendingDeals_tabs .card-trading-deals::after {
+    position: absolute;
+    content: '';
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    border-top: 1px solid #bbced5;
+}
+.SliderBannerSec .bannerTourHighlightsUl li {
+    overflow: hidden;
+    max-width: 70ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Desktop-breadcrums {
+    display: block;
+}
+.mobile-breadcrums-hide {
+    display: none;
+}
+.filterModal_Listing .filetrHeaderResetApplyBtn.commonFilterStyle {
+    margin-bottom: 0;
+    display: flex;
+    gap: 10px;
+    grid-gap: 10px;
+}
+.filterModal_Listing .filetrHeaderResetApplyBtn .resetFilterAnch,
+.filterModal_Listing .filetrHeaderResetApplyBtn .applyFilterbtnAnch {
+    padding: 4px 20px;
+    font-size: 15px;
+}
+.wishlist_commentBlock a ion-icon {
+    color: #fd4c44;
+}
+.tabcontentBg4 .tabitemTitle img {
+    padding-left: 10px;
+}
+.customize_tab4_sec img.Drag-Drop {
+    padding-left: 10px;
+    cursor: move;
+    width: 21px;
+}
+.customize_tab4_sec .ItineraytabSec .cityBreakup {
+    align-items: center;
+}
+.customize_tab4_sec .ItineraytabSec .stayItemTab,
+.customize_tab4_sec .sightseeingTab,
+.customize_tab4_sec .transportationTab,
+.customize_tab4_sec .mealsTab,
+.customize_tab4_sec .guestNationalityTab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customize_tab4_sec .ItineraytabSec .packgesSecListView .cityBreakup ul,
+
+.customize_tab4_sec .stayItemTab ul li button {
+    font-size: 13.1px;
+    line-height: inherit;
+    color: var(--text-color);
+    vertical-align: middle;
+}
+.customize_tab4_sec .stayItemTab ul li button:focus {
+    box-shadow: none;
+}
+.customize_tab4_sec .ItineraytabSec .stayItemTab {
+    min-height: 93px;
+}
+.customize_tab4_sec .ItineraytabSec .sightseeingTab,
+.customize_tab4_sec .ItineraytabSec .sightseeingTab.itemsTabContentCommon {
+    min-height: 155px;
+}
+.customize_tab4_sec .ItineraytabSec .guestNationalityTab.itemsTabContentCommon,
+.customize_tab4_sec .ItineraytabSec .guestNationalityTab {
+    min-height: 80px;
+}
+.customize_tab4_sec .packgesSecListView ul.CheckmarkUL li {
+    justify-content: space-between;
+    width: 100%;
+}
+.customize_tab4_sec .checkUl_custom {
+    display: flex;
+    flex: 1;
+}
+.customize_tab4_sec .packgesSecListView ul.CheckmarkUL li,
+.customize_tab4_sec .packgesSecListView ul.CheckmarkUL li a {
+    display: inline-flex;
+}
+.customize_tab4_sec .checkUl_custom_img {
+    width: 21px;
+}
+.customize_tab4_sec .packgesSecListView .stayItemTab ul {
+    flex: 1;
+}
+.customize_tab4_sec .checkUl_custom_Heading {
+    padding-left: 5px;
+    flex: 1;
+}
+.customize_tab4_sec .tabPackageSec .CheckmarkUL,
+.customize_tab4_sec ul {
+    width: 100%;
+}
+.btn:hover {
+    color: rgb(33, 37, 41);
+    color: rgb(32, 197, 147);
+}
+.head_category.btn:hover {
+    color: #212529;
+}
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: none;
+}
+.megamenuHeader li button:hover {
+    color: #20c593;
+}
+.mobileSocialMediaFix .Social_shop_icons {
+    flex-wrap: wrap;
+    gap: 5px;
+    grid-gap: 5px;
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    left: auto;
+    right: auto;
+    background: #FFF;
+    padding: 0;
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+.detilsPriceDropSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tourboxd-flex {
+    align-items: flex-end;
+}
+.dropdownselectDetails .form-select {
+    font-size: 12px;
+    font-weight: 500;
+    color: #004963;
+    border-color: rgb(0 73 99);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tourboxesButtons {
+    padding-left: 5px;
+}
+.dropdownselectDetails .form-select:focus {
+    border-color: rgb(0 73 99);
+    box-shadow: none;
+}
+.customize_tab4_sec .btn-custom {
+    border: 0;
+}
+.customize_tab4_sec .rightItiSecTitle.packItineryTitle {
+    display: flex;
+    align-items: center;
+}
+.UsdPersonSec .titleSec br {
+    display: none;
+}
+.paymentCartSec a {
+    max-width: 50px;
+}
+.packButtonTripSec {
+    display: flex;
+    gap: 15px;
+    grid-gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tabcontentBg2 .titleMarginPackIti {
+    display: flex;
+    align-items: center;
+}
+.customize_tab4_sec {
+    visibility: hidden;
+    opacity: 0;
+}
+.tabPackageSec .customize_tab4_sec.tabcontent {
+    padding: 15px 15px 15px;
+}
+.tabPackageSec button.active a,
+.tabPackageSec button.active a .hydrated {
+    background-color: transparent;
+    color: #ff4c46;
+}
+.tab4Customize a:hover,
+.tab4Customize a:hover .hydrated {
+    color: #ff4c46;
+}
+.modal.blogPage .btn-block:hover,
+.registerpageSec.blogPage .btn-block:hover,
+.forgotPasswordSec.blogPage .btn-block:hover,
+.helpCenterpage.blogPage .btn:hover {
+    opacity: .9;
+    background: #004963;
+}
+.registerpageSec.blogPage .auth-box {
+    margin-bottom: 30px;
+}
+.registerpageSec.blogPage .custom-checkbox {
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+.registerpageSec.blogPage .custom-control-input {
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+}
+.head_scndblock .input-group.mobileSearchDiv {
+    display: none;
+}
+.megamenuSec .dropdown-menu .dropdown-item:active {
+    color: #1e2125;
+    background-color: #e9ecef;
+}
+.head_scndblock .status_dropdown .status__btn {
+    min-width: 160px;
+}
+.head_scndblock .dropdown-menu {
+    min-width: 182px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-top: 0;
+}
+.beforeloginButton {
+    display: inline-block;
+}
+.beforeloginButton .btn-custom {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    letter-spacing: var(--letterSpacing);
+    color: var(--white);
+    background: var(--anchorBg);
+    padding: 7px 20px;
+    border-radius: 7px;
+    display: inline-block;
+    transition: 0.5s all ease-in-out;
+}
+.beforeloginButton .btn-custom:hover {
+    background: var(--anchorHoverBg);
+    color: var(--text-color);
+}
+.beforeloginMegamenu nav.menu,
+.beforeloginHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.beforeloginHeading a.btn {
+    font-size: 14px;
+    color: #243144;
+    font-weight: 500;
+    position: relative;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+.beforeloginHeading a.btn:hover {
+    color: rgb(32, 197, 147);
+}
+.beforeLogin-header {
+    padding-bottom: 10px;
+}
+.beforeLogin-header .topRight_iconss {
+    justify-content: end;
+}
+.top-barNav {
+    display: block;
+    border-bottom: 1px solid #ebebeb;
+    position: relative;
+    background-color: #fff;
+}
+.ulTopmneuNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.header .top-barNav ul li a {
+    font-size: 14px;
+    color: #666;
+    padding: 0;
+    font-weight: 400;
+}
+.top-barNav .col-left-navbar-nav {
+    text-decoration: underline;
+}
+.top-barNav .col-left-navbar-nav,
+.top-barNav .col-right-navbar-nav {
+    display: flex;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.top-barNav .col-right-navbar-nav {
+    gap: 15px;
+    grid-gap: 15px;
+}
+.head_scndblock .btn-custom.sellNowBtn {
+    background: #FFF;
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 4px;
+}
+.col-right-navbar-nav .top-cart svg.mds-svg-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.ulTopmneuNav .nav-item.login-registerMenu {
+    display: flex;
+    gap: 15px;
+    grid-gap: 15px;
+}
+.ulTopmneuNav .nav-item.login-registerMenu a {
+    padding: 0;
+    text-decoration: underline;
+    color: #243144;
+    font-weight: 500;
+}
+.ulTopmneuNav .nav-item.login-registerMenu a:hover {
+    color: #20c593;
+}
+.topRight_iconss .top-cart a i,
+.topRight_iconss .top-wishlist a i {
+    font-size: 1.825rem;
+    color: #666;
+}
+.iconWrap.topMenuIcon_Tooltip .tooltip {
+    background: #222222;
+    color: #FFF;
+    left: auto;
+    right: -27px;
+    padding: 10px 10px;
+    top: 40px;
+}
+.iconWrap.topMenuIcon_Tooltip .tooltip::before {
+    background: #222222;
+    color: #FFF;
+    left: 43px;
+    top: 10%;
+}
+.iconWrap.topMenuIcon_Tooltip .tooltip p {
+    margin-bottom: 0;
+}
+.iconWrap.cartTooltips .tooltip {
+    width: 87px;
+    display: block;
+}
+.iconWrap.wishlistTooltip .tooltip {
+    width: 77px;
+    right: -20px;
+    display: block;
+}
+.iconWrap.wishlistTooltip .tooltip::before {
+    left: 38px;
+}
+.iconWrap.topMenuIcon_Tooltip .tooltip p {
+    text-align: center;
+}
+.menu-item-has-children.active .sub-menu {
+    margin-top: 12px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    border-top: 1px solid rgb(0 73 99 / 17%) !important;
+}
+.loaderImage {
+    width: 150px;
+    margin-top: -130px;
+}
+.notLoaded {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    margin: 0px;
+}
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    overflow: visible;
+    background: #fff url(../../img/logo.png) no-repeat center center;
+    background-size: 220px;
+}
+.sliderLeftSec .heartIcon-Slider {
+    position: absolute;
+    left: auto;
+    right: 20px;
+    z-index: 9;
+    top: 20px;
+    bottom: auto;
+}
+.sliderLeftSec .heartIcon-Slider .wishlist_commentBlock a ion-icon {
+    color: #ff4c46;
+    font-size: 21px;
+    line-height: 21px;
+}
+.sliderLeftSec .heartIcon-Slider .wishlist_commentBlock a {
+    width: 35px;
+    height: 35px;
+    background: rgb(255 255 255 / 42%);
+    border-radius: 50px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.megamenuHeader ul.menu-main li.active a {
+    color: #20c593;
+}
+.PlanTripSec .plan-your-trip-bg1 {
+    background: url('../../img/plan_trip.png');
+    height: 404px;
+}
+.plan-your-trip-bg2 {
+    background: url('../../img/plan_trip2.png');
+    height: 189px;
+}
+.plan-your-trip-bg3 {
+    background: url('../../img/homepage_slider_img_1.jpg');
+    height: 363px;
+}
+.PlanTripSec .planTrip_img {
+    background-color: #dfffde;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+.PlanTripSec .planTrip_img a {
+    width: 100%;
+}
+.map_contactPage {
+    width: 100%;
+    display: flex;
+}
+.support-HelpcenterSec {
+    padding: 150px 0;
+    background: #ffbfbf;
+}
+.support-HelpcenterSec .helpHeading {
+    font-size: 40px;
+    line-height: 80px;
+    color: #014962;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+}
+.support-HelpcenterSec .healp-center-block-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.support-HelpcenterSec .chat-help-center {
+    display: inline-flex;
+}
+.support-HelpcenterSec .chat-help-center a {
+    background: #014962;
+    padding: 18px 50px;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 18px;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+    font-weight: normal;
+    text-align: center;
+}
+.support-HelpcenterSec .chat-help-center a:hover,
+.support-HelpcenterSec .chat-help-center a:focus,
+.support-HelpcenterSec .chat-help-center a:active {
+    opacity: .9;
+}
+.support-HelpcenterSec .chat-help-center a img {
+    margin-right: 15px;
+    max-width: 25px;
+}
+.contactTitle {
+    font-size: 45px;
+    color: #014962;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: inherit;
+    margin-bottom: 40px;
+}
+.ContactPage.accordianShopmainSec .accordion-button:not(.collapsed)::after,
+.ContactPage.accordianShopmainSec .accordion-button::after {
+    background-image: url('../../img/contact-accordian.png');
+    width: 31px;
+    height: 31px;
+}
+.ContactPage.accordianShopmainSec .accordion-button:not(.collapsed) {
+    background-color: #FFF;
+    border-radius: 10px 10px 0 0;
+}
+.ContactPage.accordianShopmainSec .accordion-item {
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+}
+.ContactPage .accordion-body {
+    padding-top: 0;
+}
+.contactAddressSec {
+    padding: 100px 0;
+}
+.joinusSocialSec {
+    padding-top: 100px;
+}
+.contactAddressSec .addressDetailssec {
+    display: flex;
+    align-items: center;
+}
+.joinusSocialSec ul li {
+    display: flex;
+}
+.joinusSocialSec ul {
+    width: 25%;
+}
+.joinusSocialSec ul li a {
+    font-size: 17px;
+    color: #014962;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    padding: 10px 15px;
+    background: #f3f3f3;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 7px;
+    border-radius: 7px;
+}
+.joinusSocialSec ul li a .img-fluid {
+    max-width: 35px;
+    margin-right: 15px;
+}
+.joinusSocialSec .contactTitle {
+    text-align: left;
+    line-height: 50px;
+}
+.callTitlebk {
+    font-size: 20px;
+    color: #014962;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+}
+.contactAddressSec a,
+.contactAddressSec address {
+    font-size: 16px;
+    color: #014962;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+    font-weight: normal;
+}
+.addressImgdv {
+    width: 30px;
+    margin-right: 30px;
+}
+.contactAddressSec .addressDetailssec:not(:last-child) {
+    margin-bottom: 50px;
+}
+.contactBannerSec {
+    background: #ff6575;
+    padding: 85px 0;
+}
+.leftBannerContact .contactTitle {
+    text-align: left;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+.leftBannerContact .para {
+    color: #FFF;
+}
+.contactBannerSec .para {
+    color: #FFF;
+}
+.contactBannerSec a {
+    color: #014962;
+    position: relative;
+    font-size: 20px;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+    font-weight: 600;
+}
+.contactBannerBkfrist,
+.RightBannerContact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-anchortag::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../../img/partner-with-us-border.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    background-size: 75%;
+}
+.contact-anchortag::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../img/partner-with-us.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: 80%;
+}
+.sales_partners.active .contact-anchortag::after {
+    background-image: url('../../img/contact-sales-border.png');
+    top: 40px;
+}
+.RightBannerContact a,
+.RightBannerContact .para {
+    text-align: center;
+}
+.contact-anchortag {
+    width: 354px;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+.contactBannerSec .para {
+    font-size: 15px;
+    line-height: inherit;
+}
+.FormContactPage {
+    background: #FFF;
+    padding: 56px;
+    border-radius: 4px;
+    box-shadow: 3px 0 35px rgb(1 73 98 / 35%);
+}
+.FormContactPage .title {
+    font-size: 23px;
+    color: #014962;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.contactDflex {
+    display: flex;
+    gap: 25px;
+    grid-gap: 25px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contactflex1 {
+    flex: 1;
+}
+.contactDflex label {
+    color: #014962;
+    font-weight: 500;
+}
+.contactDflex .form-control {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border-color: #014962;
+    box-shadow: none;
+}
+.contactDflex .form-select:focus {
+    box-shadow: none;
+    border-color: #014962;
+}
+.contactDflex .form-select {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border-color: #014962;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #014962;
+}
+.contactBannerSec .submit_contact {
+    background: #014962;
+    color: #FFF;
+    padding: 12px 60px;
+    border-radius: 10px;
+    display: inline-flex;
+}
+.termsContactPage {
+    color: #004963;
+    box-shadow: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: inherit;
+    letter-spacing: 0.25px;
+}
+.termsContactPage a {
+    color: #ff6575;
+    text-decoration: underline;
+}
+.contact-map-container {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+}
+.contact-map-container iframe {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 360px;
+}
+.contact_absolute_form {
+    position: absolute;
+    top: 390px;
+    left: auto;
+    right: 0px;
+}
+.FormContactPage.contact_absolute_form {
+    display: none;
+}
+.sales_partners.active .FormContactPage.contact_absolute_form {
+    display: block;
+}
+.sales_partners.active .contact-anchortag::before {
+    background-image: url('../../img/contact-sales.png');
+}
+.sales_partners.active .contact-anchortag {
+    text-decoration: underline;
+}
+.contact-relative {
+    position: relative;
+}
+.SliderBannerSec .detail-explorer-block1 {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    grid-gap: 30px;
+}
+.explorer-details-slider-right ul li {
+    position: relative;
+}
+.explorer-details-slider-right .detail-explorer-block1 li:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    background: transparent;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0;
+    top: 8px;
+    left: auto;
+    right: -23px;
+    bottom: auto;
+    background-position: center;
+}
+.explorer-details-slider-right .detail-explorer-block2 li:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    background: transparent;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0;
+    top: 7px;
+    left: auto;
+    right: -15px;
+    bottom: auto;
+    background-position: center;
+}
+.explorer-details-slider-right .detail-explorer-block1 li:not(:last-child)::after {
+    background-image: url('../../img/detail-arrow-lg.png');
+    width: 17px;
+    height: 12px;
+}
+.explorer-details-slider-right .detail-explorer-block2 li:not(:last-child)::after {
+    background-image: url('../../img/detail-arrow-sm.png');
+    width: 11px;
+    height: 8px;
+}
+.SliderBannerSec .detail-explorer-block2 {
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: flex-start;
+}
+.SliderBannerSec .fixCheckboxsc {
+    margin-top: 25px;
+    display: flex;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    grid-row-gap: 30px;
+}
+.SliderBannerSec .guestnationalitySec .form-check {
+    border: 1px solid #004963;
+    border-radius: 25px 0 25px 0;
+    text-align: center;
+    margin-right: 0px;
+    cursor: pointer;
+    padding: 0;
+}
+.SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+    padding: 20px 25px 15px;
+    width: 187px;
+}
+.SliderBannerSec .guestnationalitySec .form-check {
+    display: inline-block;
+}
+
+/* tour detail - new itinerary design */
+.single_itinerary_box {
+    padding: 0px 15px;
+}
+
+.DaysItenarySec {
+    width: calc(50% - 25px);
+    display: inline-block;
+}
+
+.DaysItenarySec {
+    margin-right: 20px;
+    border: 1px solid #004963;
+    border-radius: 5px;
+    display: initial;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.ItinerydetailsFix {
+    text-align: center;
+}
+
+.middleItinerySec, .ItineryFix, .middleItineryDetailsSec {
+    padding: 10px;
+}
+
+.ItineryFix {
+    border-bottom: 1px solid #004963;
+}
+
+.packFix .packTitle, .ItinaeryTitle {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.packTitle, .packTitleDetails p, .Itinerydetails_Title, .ItinaeryTitle {
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 500;
+    color: #004963;
+}
+
+.pl-4, .px-4 {
+    padding-left: 1.5rem!important;
+}
+
+.packFix .packTitle, .ItinaeryTitle {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.middleItinerySec {
+    padding: 10px 20px;
+    color: #004963;
+}
+
+.itinerary_ul li {
+    border-bottom: 1px solid #004963;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.itinerary_ul li:last-of-type a {
+  border-right: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .DaysItenarySec {
+        width: calc(100% - 0px) !important;
+    }
+
+    span.itinerary_day_line {
+        padding-left: 20px !important;
+        padding-right: 80px !important;
+    }
+}
+
+.item_city_wise_stay {
+    font-size: 14px;
+    color: #004966;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-bottom: 1px solid #004966;
+}
+
+.single_tour_view_this_itinerary {
+    border: 1px solid #004963 !important;
+    padding: 4px 10px !important;
+    border-radius: 7px !important;
+    color: #004963 !important;
+    background: #FFF !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+
+.single_tour_view_this_itinerary:hover {
+    color: #FFF !important;
+    background: #004963 !important;
+}
+
+.filterGreece {
+    padding: 10px 25px;
+    margin-right: 10px;
+}
+
+.filterGreece.active {
+    background: #90e9bd;
+    border: 1px solid #90e9bd;
+}
+
+.viator_tour_listing_page .sortbyGreece .select-box {
+    border-radius: 10px;
+}
+
+.viator_tour_listing_page .card-trading-deals .actplace {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+/*.viator_tour_listing_page .dealsActivity .img-fluid {
+    border: 1px solid #ff4c46;
+    border-radius: 100%;
+    padding: 2px;
+}*/
+
+.viator_tour_listing_page .DealsRating {
+    min-height: 1px;
+}
+
+.viator_tour_listing_page .DealsRating .pActivitys:last-child {
+    min-height: 70px;
+    padding-bottom: 0;
+    margin: 12px 0;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .viator_tour_listing_page .card-trading-deals::after {
+        bottom: 70px;
+    }
+}
+
+.viator_tour_listing_page .add_wishlist_tour {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid #000;
+    border-radius: 100%;*/
+}
+
+.viator_tour_listing_page .para_date {
+    max-width: 180px;
+}
+
+.viator_tour_listing_page .dtls-list li:before {
+    content: "";
+    width: 18px;
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 4px;
+}
+
+.viator_tour_listing_page .dtls-single-list li:before {
+    background: url('../../img/correct.png') no-repeat;
+    background-size: 10px;
+    background-position: center 7px;
+}
+
+.viator_tour_listing_page .dtls-double-list li:before {
+    background: url('../../img/correct.png') no-repeat;
+    background-size: 10px;
+    background-position: center 7px;
+}
+
+.viator_tour_listing_page .dtls-double-list li.cross:before {
+    background: url('../../img/cancel.png') no-repeat;
+    background-size: 10px;
+    background-position: center 7px;
+}
+
+.viator_tour_listing_page .dtls-card {
+    border: 1px solid #ddd;
+    box-shadow: 3px 0 8px rgb(0 0 0 / 35%);
+    box-shadow: 3px 0 8px rgb(0 73 99 / 40%);
+    border-radius: 10px;
+    transition: 0.5s all ease-in-out;
+}
+
+.viator_tour_listing_page .seeMore {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.viator_tour_listing_page .cursor-pointer {
+    cursor: pointer;
+}
+
+.single_blog_content a {
+    text-decoration: underline !important;
+}
+
+.single_blog_content li {
+    font-size: 16px;
+    color: #004963;
+    display: list-item !important;
+}
+
+.single_blog_content li.bullet {
+    list-style: disc !important;
+}
+
+.single_blog_content td {
+    padding: 0px 10px;
+    text-align: left;
+    font-size: 16px;
+    color: #004963;
+}

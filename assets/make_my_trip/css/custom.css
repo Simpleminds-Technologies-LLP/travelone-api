@@ -1,0 +1,871 @@
+* { margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+body {
+    background: var(--bg-color);
+}
+ul {
+    padding: 0; margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+strong,
+body,
+.form-label,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--montserrat) !important;
+}
+
+.wrapper {
+    padding: 50px 0;
+}
+/*  jquery step common css */
+.wizSec  .ulWizard {
+    width: 100%;
+    padding: 160px 0px;
+}
+.step-footer{
+    display: flex;
+    align-items: center;
+}
+
+.step-footer .stepssubTitle.backBtn{
+    margin-right: 0;
+    margin-top: 10px;
+}
+.plan-content {
+    cursor: pointer;
+}
+.divStep14  .stepPaddingbottom, .divStep15  .stepPaddingbottom {  
+    margin-bottom: 30px;
+}
+
+/*  Search Select drop down css */
+.search_selectDropDown {
+    width: 100%;
+  }
+.select2.select2-container,.select2-selection__rendered{
+    transition: 0.5s all ease-in-out;
+    font-size: 18px;
+    font-family: var(--opensans) !important;
+    font-weight: var(--font-regular);
+    color: var(--black);
+    letter-spacing: 0.4px;
+    background: transparent;
+    border: 1px solid #005e33;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: start;
+    vertical-align: middle;
+    height: 60px;
+    margin-bottom: 0px;
+    line-height: 57px;
+   width: 100%;
+}
+span.selection {
+    display: block;
+}
+
+.select2-selection__rendered {
+    padding: 0;   
+    border:0; position: relative;
+}
+
+.select2-selection__rendered::after {
+    padding: 0;
+    border: 0;
+    position: absolute;
+    content: "";
+    top: 28px;
+    left: auto;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-color: #000 transparent transparent transparent;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: transparent; outline: none;
+    border-radius: 4px;
+}
+
+.select2-container--below.select2-container--open {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 17px;
+    line-height: 60px;
+    font-family: var(--opensans) !important;
+    font-weight: var(--font-regular);
+    color: var(--black);
+
+}
+
+
+/*  Search Select drop down css */
+
+
+/*  jquery step1 css start */
+:root {
+    --bg-color: #e0ffdf;
+    --process-bg: #20c593;
+    --process-gray: #cbcbcb;
+    --light-color: #004963;
+    --black: #000;
+    --white: #FFF;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-32: 32px;
+    --font-30: 30px;
+    --font-28: 25px;
+    --font-20: 20px;
+    --font-19: 19px;
+    --font-22: 22px;
+    --opensans: 'Open Sans', sans-serif;
+    --montserrat: 'Montserrat', sans-serif !important;
+}
+
+.secTitle {
+    display: block;
+    position: relative;
+    margin-top: 0px;
+}
+
+.secTitle h2 {
+    font-size: var(--font-28);
+    font-weight: var(--font-semibold);
+    line-height: inherit;
+    color: #004963;
+    margin-top: 25px;
+}
+
+.secTitle p {
+    font-size: var(--font-19);
+    font-weight: var(--font-regular);
+    line-height: inherit;
+    color: var(--black);
+    margin-bottom: 50px;
+}
+
+.process_heading {
+    font-family: var(--opensans) !important;
+    font-size: var(--font-22);
+    font-weight: var(--font-semibold);
+    line-height: inherit;
+    color: #004963;
+    letter-spacing: 0.4px;
+    margin-bottom: 17px;
+}
+
+.form-check {
+    border: 1px solid #005e33;
+    padding: 0px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: start;
+    vertical-align: middle;
+    height: 60px;
+    margin-bottom: 15px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+
+.form-check:visited {
+    background: var(--light-color);
+}
+
+.container-custom {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.form_phsudoeffect, .ulWizardBgAfter {
+    position: relative;
+}
+
+.ulWizardBgAfter::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/bg-after.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.mobile-progessbar {
+    display: none;
+}
+
+.desktop-progressbar {
+    display: block;
+}
+
+/*  jquery step1 css end */
+
+
+/*  jquery step2 css start */
+
+.create_acc_heading {
+    margin-bottom: 15px;
+}
+
+.wizardForm .form-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: inherit;
+    color: #004963;
+    letter-spacing: 0.1px;
+}
+/*  jquery step2 css end */
+
+
+
+
+
+/* password icon css start*/
+.show-hideDiv {
+    position: relative;
+    cursor: pointer;
+}
+
+.show-hideDiv .pass_icons {
+    position: absolute;
+    top: 20px;
+    left: auto;
+    right: 15px;
+    font-size: 22px;
+}
+
+/* password icon css end*/
+
+
+
+
+.BPDetailiSec .form-check label.form-check-label {
+    padding-right: 10px;
+}
+
+
+
+/* form design css*/
+.stepimgTitle {
+    color: #004963;
+    font-size: 16px;
+    line-height: inherit;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.stepimgUL {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.stepimgUL li {
+    text-align: center;
+    list-style: none;
+    flex-basis: 13.66%;
+}
+
+.stepimgUL input[type="radio"], .mediaSec input[type="radio"], .stepplacesUL input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+.stepimgUL input[type="radio"]:checked + .plan-content img {
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+    border: 2px solid #ff4d47;
+    border-radius: 50px 50px 0 0;
+    outline: none;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 47%);
+}
+.stepimgUL a.img-link {
+    outline: none;
+}
+.stepimgUL img.img-fluid {
+    border-radius: 50px 50px 0 0;  border: 2px solid #e0ffdf;
+}
+.mediaSec input[type="radio"]:checked + .lableinputsc ,  .stepplacesUL input[type="radio"]:checked + .plan-content {
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+    border: 1px solid #ff4d47;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 47%);
+}
+.imgHeadingstep {
+    color: #004963;
+    font-size: 15px;
+    line-height: inherit;
+    letter-spacing: 0.10px;
+    font-weight: 500;
+    transition: 0.5s all ease-in-out;
+    padding: 10px 0 5px;
+}
+.mediaSec ul {
+    display: flex;
+    flex-flow: wrap;
+    gap: 12px;
+}
+.mediaSec ul li a .lableinputsc{
+    padding: 7px 10px;
+    border: 1px solid #004963;
+    border-radius: 5px;
+    color: #004963;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.stepSoloUL {
+    display: flex;
+    align-items: center;
+    gap: 10px; position: relative;
+    margin-top: 30px;     margin-bottom: 30px;
+}
+.stepSoloUL input[type="radio"], .stepTemparateUL input[type="radio"]{
+    position: absolute; opacity: 0;
+}
+
+.stepSoloUL input[type="radio"]:checked + .plan-content , .stepTemparateUL input[type="radio"]:checked + .plan-content {
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+    border: 1px solid #ff4d47;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 47%);
+}
+.stepSoloUL  .plan-content {
+    border: 1px solid #004963;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-align: center;     position: relative;
+    width: 160px;
+    cursor: pointer;
+}
+.stepSoloUL .plan-content img {
+    position: absolute;
+    top: -21px;
+    left: 65px;
+    right: 0;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+}
+.counterBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titleCounter , .subheadingCounter {
+    color: #004963;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 600;
+}
+.subheadingCounter {
+    font-weight: 400;
+}
+.counterIncDec button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid #004963;
+    background: var(--bg-color);
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #004963;
+    position: relative;
+}
+.counterIncDec input[type="text"] {
+    background: transparent;
+    border: 0;
+    text-align: center;
+    width: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #004963;
+}
+.counterIncDec {
+    display: flex;
+    align-items: center;
+}
+.counterIncrementDecremnet {
+    border: 1px solid #004963;
+    padding:10px 20px;
+    border-radius: 5px;
+    transition: 0.5s all ease-in-out;
+    display: none;
+}
+.counterIncrementDecremnet.open {
+    display: block;
+}
+.counterBox:not(:last-child) {
+    border-bottom: 1px solid #004963; 
+}
+.counterTitle {
+    padding: 10px 0;
+}
+.stepplacesUL, .stepTemparateUL {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.stepplacesUL li , .stepTemparateUL li {
+    text-align: center;
+}
+.stepplacesUL .plan-content {
+    border: 1px solid #004963;
+    padding: 15px;
+    border-radius: 15px 0;
+    width: 280px;
+    cursor: pointer;
+}
+.stepTemparateUL .plan-content {
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* form design css*/
+
+
+.logo {
+    width: 300px;
+}
+.headerSec {
+    margin-bottom: 25px;
+}
+
+.callChatANch {
+    background: var(--bg-color);
+    padding: 15px 20px;
+    border: 1px solid #004963;
+    border-radius: 25px 0;
+    color: #004963;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: 600;    
+    letter-spacing: 0.10px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+
+.callChatANch:hover {
+    color: #20c593; border-color:#20c593; 
+}
+.destination-expertCall {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.destination-expertCall .chatIcon , .destination-expertCall .callIcon  {
+    vertical-align: middle; font-size: 17px;
+}
+.step6form{
+    margin-bottom: 15px;
+}
+.step6form .textareaFld {
+    height:100px;
+}
+.locaiconsbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.locationIOIcon {
+    position: absolute;
+    content: '';
+    top: 15px;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    color: #004963;
+}
+.locaInputfld {
+    padding-left: 30px;
+}
+.step6form label, .step6form .separate-dial-code { 
+    width: 100%;
+}
+.step-footer {
+    flex-direction: column; margin-top: 55px;
+}
+
+.wizardForm .step-footer > button.step-btn.stepssubTitle1 {
+    background: transparent;
+    color: #004963;
+    width: auto;
+    display: block;
+}
+
+
+/* Responsive media query */
+
+@media screen and (max-width:1599px) {
+    .logo {
+        width: 230px;
+    }
+    .callChatANch {padding: 15px 10px; text-align: center; font-size: 14px; }
+    .destination-expertCall {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+
+}
+
+@media screen and (min-width:1281px) and (max-width:1353px) {
+    .BPDetailiSec .form-check label.form-check-label { font-size: 16.5px; }
+}
+
+@media screen and (min-width:992px) and (max-width:1280px) {
+
+    #formwizard .ulWizard,
+    #formwizard1 .ulWizardPayment {
+        padding: 100px 0px;
+    }
+
+    .container-custom {
+        width: 95%;
+    }
+
+
+
+    .secTitle h2 {
+        font-size: 24px;
+    }
+
+    .secTitle p {
+        font-size: 17.5px;
+        margin-bottom: 40px;
+    }
+
+    .form-check {
+        height: auto;
+        width: 100%;
+    }
+
+    .BPDetailiSec .form-check label.form-check-label {
+        font-size: 16px;
+        line-height: inherit;
+    }
+
+    .BPDetailiSec .form-check-input[type=radio] {
+        margin-bottom: 13px;
+        margin-top: 15px;
+    }
+
+    .BPDetailiSec .form-check-input:checked[type=radio] {
+        margin-top: 12px;
+    }
+
+    
+
+    .wizardForm .step-footer>.step-btn {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+
+   
+
+    .wizardForm .form-label {
+        font-size: 17px;
+    }
+
+   
+    .termConditionSubtext {
+        font-size: 17px;
+    }
+
+    .process_heading,
+    .wizardForm .step-footer>.step-btn {
+        font-size: 20px;
+    }
+    .wizardForm .step-footer>.step-btn {
+        font-size:18px;
+    }
+
+   
+    .show-hideDiv .pass_icons {
+        top: 15px;
+    }
+    .lightPinkColor .form-check-input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+        margin-top: 3px;
+    }
+    /* select css*/   
+    .chosen-container-multi .chosen-choices li.search-choice {  margin: 15px 10px 0px 0; }
+    ul.chosen-choices::after {   top: 23px; }
+    .chosen-container .chosen-results li{ font-size: 15px;     padding: 10px 15px; }
+    .chosen-container-multi .chosen-choices li.search-field input[type="text"]{   height: auto; line-height: 48px;    line-height: inherit;        font-size: 16px;    }      
+    .custom-select .select-selected::after {   top: 25px !important;  }    
+    .chosen-container-multi .chosen-choices,
+    .select2.select2-container,  .form-control , .custom-select .select-selected, 
+    .chosen-container-multi .chosen-choices li.search-field, 
+    .select2-selection__rendered, .select2-container--default .select2-selection--single .select2-selection__rendered
+    { font-size: 15px;  line-height: 50px !important;     height: 50px !important;    }
+
+    .step6form .textareaFld {
+        height: 100px  !important;
+    }
+
+
+    .select2-selection__rendered::after{   top:23px;  }  
+    .file-upload-wrapper , .file-upload-wrapper::before, .file-upload-wrapper::after { height: 50px;    }
+    .file-upload-wrapper::after {line-height: 50px;}
+    .file-upload-wrapper::before{  padding: 14px 15px; }
+    .divStep7 .stepPaddingbottom:last-child, .divStep8 .stepPaddingbottom:last-child {
+        padding-bottom: 30px;
+    }
+    .form_phsudoeffect::before {
+        top: -45px;
+        right: 30px;
+        height: 95%;
+    }
+   
+
+
+}
+
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .wrapper {
+     padding: 15px 0;
+    }
+    .create_acc_heading {
+        margin-bottom: 20px;
+    }
+    
+    .destination-expertCall {
+        flex-wrap: wrap;
+    }
+    .form_phsudoeffect::before {
+        top: 0px;
+    right: 40px;
+    height: 85%;
+    }
+   
+}
+
+@media screen and (min-width:992px) and (max-width:1024px) { 
+    .form_phsudoeffect::before {
+        top: 0;
+        right: 30px;
+        height: 85%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .form_phsudoeffect::before {
+        display: none;
+    }
+    .destination-expertCall {
+        flex-wrap: wrap; justify-content: center;
+    }
+    .stepimgTitle {
+        text-align: center;
+    }
+
+    .container-custom {
+        width: 95%;
+    }
+
+    .wrapper {
+        padding: 30px 0;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .secTitle {
+        text-align: center;
+    }
+
+    .secTitle h2 {
+        font-size: 20px;
+    }
+
+    .secTitle p {
+        font-size: 17px;
+        margin-top: 7px;
+        margin-bottom: 25px;
+    }
+
+    .form-check {
+        height: auto;
+        width: 100%;
+    }
+
+    .BPDetailiSec .form-check label.form-check-label {
+        font-size: 15px;
+        line-height:inherit;
+    }
+
+    .BPDetailiSec .form-check-input[type=radio] {
+        margin-bottom: 13px;
+        margin-top: 15px;
+    }
+
+    .BPDetailiSec .form-check-input:checked[type=radio] {
+        margin-top: 12px;
+    }
+
+    .step-footer {
+        margin-top: 22px;
+    }
+
+    .wizardForm .step-footer>.step-btn {
+        margin-top: 0px; margin-bottom: 10px;
+    }
+
+    #formwizard .ulWizard,
+    #formwizard1 .ulWizardPayment {
+        padding: 50px 0px;
+    }
+    
+
+    .wizardForm .form-label {
+        font-size: 17px;
+    }
+
+    
+
+    .termConditionSubtext {
+        font-size: 17px;
+    }
+
+    .process_heading,
+    .wizardForm .step-footer>.step-btn{       
+            font-size: 16px;
+            line-height: inherit;        
+    }
+    .show-hideDiv .pass_icons {
+        top: 15px;
+    }
+    .lightPinkColor .form-check-input[type=checkbox] {
+        width: 25px;
+        height: 25px;
+        margin-top: 2px;
+    }
+     /* select css*/   
+     .chosen-container-multi .chosen-choices li.search-choice {  margin: 15px 10px 0px 0; }
+     ul.chosen-choices::after {   top: 23px; }
+     .chosen-container .chosen-results li{ font-size: 15px;     padding: 10px 15px; }
+     .chosen-container-multi .chosen-choices li.search-field input[type="text"]{   height: auto; line-height: 48px;    line-height: inherit;        font-size: 16px;    }      
+     .custom-select .select-selected::after {   top: 25px !important;  }    
+     .chosen-container-multi .chosen-choices,
+     .select2.select2-container,  .form-control , .custom-select .select-selected, 
+     .chosen-container-multi .chosen-choices li.search-field, 
+     .select2-selection__rendered, .select2-container--default .select2-selection--single .select2-selection__rendered
+     { font-size: 15px;  line-height: 50px !important;     height: 50px !important;    }
+     .select2-selection__rendered::after{   top:23px;  }  
+     .file-upload-wrapper , .file-upload-wrapper::before, .file-upload-wrapper::after { height: 50px;    }
+     .file-upload-wrapper::after {line-height:50px;  padding-left: 140px;    font-size: 14px;}
+     .file-upload-wrapper::before{  padding: 15px 15px; }
+
+     .file-upload-wrapper::before {   font-size: 15px;   overflow-wrap: anywhere;    padding: 15px 5px; }
+     .custom-select .select-selected {font-size: 15px !important; }
+     
+    .process_heading {
+        text-align: center;
+    }
+    .stepSoloUL {
+        justify-content: center;
+    }
+    .stepplacesUL, .stepTemparateUL {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .stepplacesUL, .stepTemparateUL {
+        margin-top: 15px;
+    }
+   
+    .step6form .textareaFld {
+        height: 100px  !important;
+    }
+   
+
+}
+
+
+
+
+
+@media screen and (max-width:767px) {
+    header#header {
+        margin-bottom: 25px;
+    }
+
+    .wizardForm .step-footer>.step-btn {
+        width: 100%;
+    }
+    .stepimgUL li {
+        flex-basis: 22%;
+    }
+    .stepplacesUL .plan-content {
+        width: auto;
+    }
+    .mobile_lastName { margin-top: 15px;}
+
+
+}
+
+@media screen and (max-width:613px) {
+    .lightPinkColor .form-check-input[type=checkbox] {
+        margin-right: 10px;
+    }
+
+    .termConditionSubtext {
+        display: inline;
+    }
+    .stepimgUL li {
+        flex-basis:30.5%;
+    }
+
+    .stepSoloUL {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,919 @@
+.booking_vendor_mainSec  .bg-primary1.bg-primary {
+    background-color: #007bff!important; color: #FFF;
+}
+
+.booking_vendor_mainSec .stepimgTitle_booking{
+    color: #004963;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top:20px;
+}
+
+.booking_vendor_mainSec .scrollItineryDetilsSec, .scrollPackDetilsSec {
+    overflow: hidden;
+}
+
+.booking_vendor_steps_mainSec .step6form .form-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: inherit;   
+    color: #004963;
+    letter-spacing: 0.1px;
+}
+
+.booking_vendor_steps_mainSec .stepimgUL {
+    flex-wrap: nowrap;
+}
+
+.booking_vendor_steps_mainSec .secTitle h2 {
+    font-size:18px;
+}
+
+.booking_vendor_steps_mainSec h2.create_acc_heading.margin-top {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.booking_vendor_steps_mainSec .listingTypedc, .booking_vendor_steps_mainSec .fixCheckboxsc {
+    margin-left: 0;
+}
+
+.booking_vendor_steps_mainSec .plan_trip_nationality {
+    margin-bottom: 0;
+}
+
+.booking_vendor_steps_mainSec .counterIncrementDecremnet {
+    margin-bottom: 15px;
+}
+
+.booking_vendor_steps_mainSec .Step3Form h1 {
+    margin-top: 15px;   margin-bottom: 15px;
+}
+
+.booking_vendor_steps_mainSec .scrollItineryDetilsSec, .booking_vendor_steps_mainSec .scrollPackDetilsSec {
+    overflow: hidden;
+}
+
+.booking_vendor_steps_mainSec .Step3Form  label {
+    padding-bottom: 5px;
+}
+
+.booking_vendor_steps_mainSec .ulmeals {
+    justify-content: space-around;     display: flex;
+    padding: 10px 10px 15px
+}
+
+.booking_vendor_steps_mainSec .pack3steps {
+    margin-bottom: 14px;
+}
+
+.booking_vendor_steps_mainSec .Step4From .secTitle  h2.create_acc_heading.margin-top {
+    margin-bottom: 0;
+}
+
+.booking_vendor_steps_mainSec .Step4From  form .listingTypeSec .stepTitle {
+    margin-bottom: 10px;
+    margin-top: 15px; font-size: 18px;
+}
+
+/*booking steps css*/
+.booking_vendor_steps_mainSec .paymnetsTabSec .multiple-items1 .tabPackageSecrCols {
+    flex: 1;
+}
+.booking_vendor_steps_mainSec  .border-BottomTab {
+    border-bottom: 1px solid var(--text-color);
+    margin: 0 25px;
+}
+.booking_vendor_steps_mainSec  .multiple-items1 {
+    display: flex;
+}
+
+.booking_vendor_steps_mainSec  .services_vendor_btn_boxes {
+    display: flex; gap: 10px;
+}
+
+.table_service_voucherSec {
+     border: 1px solid #004963; border-radius: 5px; border-right: 0;
+}
+
+.table_service_voucherSec .tabitemTitle {
+    font-weight: 600;
+    color: #004963;
+    font-size: 15px;
+    border-bottom: 1px solid #004963;
+}
+
+
+.table_service_voucherSec .tabitemTitle , 
+.table_service_voucherSec .packgesSecListView {
+    padding: 10px;  border-right: 1px solid #004963;
+}
+
+
+.table_service_voucherSec p ,
+.table_service_voucherSec .email_button_anch {
+    font-weight:500;
+    color: #004963;
+    font-size: 13.5px;
+}
+
+.table_service_voucherSec .form-control:disabled, 
+.table_service_voucherSec .form-control[readonly] {
+    background-color: transparent;
+    border: 1px solid #004963 !important; 
+}
+
+.table_service_voucherSec .form-control:focus {
+    background-color: #FFF;
+}
+
+.services_vendor_btn_boxes .file_upload ,
+.services_vendor_btn_boxes .email_button {
+    flex:1;   width: 100%;
+
+}
+.booking_vendor_steps_mainSec .voucher_last_tabs  {
+    flex: 2 !important;
+}
+
+.table_service_voucherSec .voucher_last_tabs .email_button_anch {
+    font-size: 12.5px;
+    background: #004963;
+    color: #FFF;
+    padding: 9.5px 15px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: inherit;
+    cursor: pointer !important;
+}
+
+.table_service_voucherSec .voucher_last_tabs .email_button_anch:hover {
+    text-decoration: underline;
+}
+
+.table_service_voucherSec .cityBreakup {
+    padding-bottom: 10px;
+}
+
+.table_service_voucherSec .stayItemTab,
+.table_service_voucherSec .sightseeingTab,
+.table_service_voucherSec .transportationTab,
+.table_service_voucherSec .mealsTab ,
+.table_service_voucherSec .guestNationalityTab  {
+    padding: 10px 0;
+}
+
+
+.booking_vendor_steps_mainSec .table_service_voucherSec .border-BottomTab {
+    margin: 0px 0px;
+}
+
+.booking_vendor_steps_mainSec .services_vendor_btn_boxes {
+    flex-direction: column;     gap: 5px;
+}
+.booking_vendor_steps_mainSec  .upload_cols{
+    gap: 10px;
+}
+
+.booking_vendor_steps_mainSec  .email-chatCols {
+    display: flex; gap: 10px;
+}
+
+.booking_vendor_steps_mainSec .upload_cols a.email_button_anch {
+    background: #17a2b8;
+    color: #FFF;     cursor: pointer !important;
+}
+/*booking steps css*/
+
+/*custom upload css*/
+.services_vendor_buttons .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    width: 100%;
+  }
+  
+  .services_vendor_buttons .btn {
+    border: 1px solid #004963;
+    color: #004963;
+    background-color: #e0ffdf;
+    padding: 5.5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  .services_vendor_buttons .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  .table_service_voucherSec .voucher_last_tabs .email_button_chat {
+    background: #20c593; 
+  }
+
+  .booking_vendor_steps_mainSec .packagesSecWidth  .packTabSec a {
+    cursor: default;
+  }
+  .booking_vendor_steps_mainSec .file_upload_red {
+    font-size: 12px; color: #ff4c46;    
+  }
+  
+  .booking_vendor_steps_mainSec h2.create_acc_heading.margin-top {
+        text-transform: inherit;
+    }
+/*custom upload css*/
+
+.booking_vendor_steps_mainSec .Step5From  .listingSearchbar .roundedtheme {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.booking_vendor_mainSec .ads_agnt_travel span.rate_Heading {
+    padding-left: 0;
+}
+
+/*25-01-23*/
+.booking_vendor_mainSec .card-img-top {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.booking_vendor_mainSec  .bg-info {
+    background-color: rgb(58, 186, 244) !important;
+    color: #FFF !important;
+}
+.booking_vendor_mainSec .priceViewDeals .wsh-list-agnt {
+    color: rgb(253, 76, 68);
+}
+.booking_vendor_mainSec .card-trnd-loc-days, 
+.booking_vendor_mainSec .actplace {
+    align-items: flex-start;
+}
+.booking_vendor_steps_mainSec .plan_trip_nationality .form-check {
+    min-width: 118px;
+}
+
+.booking_vendor_steps_mainSec .ulmeals li.counterMeal span,
+.booking_vendor_steps_mainSec .lastSecpackagesdetails .pricedetilsul .form-control:not(.form-control-sm):not(.form-control-lg)  {
+    height: 30px !important;
+}
+.booking_vendor_steps_mainSec .scrollItineryDetilsSec {
+    overflow: scroll hidden;
+}
+.booking_vendor_steps_mainSec .Step5From  .tabPackageSecrow {
+    overflow: hidden;
+}
+.booking_vendor_steps_mainSec  .hotel_stay_content_inner {
+    align-items: flex-start;
+}
+
+.booking_vendor_steps_mainSec .hotel_stay_content_inner img {
+    margin-top: 8px;
+}
+.booking_vendor_steps_mainSec .termsContentSec .termssubheading {
+    font-size: 13px; padding: 5px 5px;
+}
+/*25-01-23*/
+/* 01-04-23 booking vendor details page  */
+.bookitinerary_Detailsteps  .plan_trip_nationality .fixCheckboxsc ,
+.bookitinerary_Detailsteps .rooms_category_tabBlock .room_divblock1,
+.bookitinerary_Detailsteps .travelers-room-new .stepTemparateUL,
+.bookitinerary_Detailsteps .travelers-room-new .stepTemparateUL li .plan-content ,
+.bookitinerary_Detailsteps .travelers-room-new .f-flex-img  { gap: 0; }
+
+.bookitinerary_Detailsteps  .plan_trip_nationality .form-check ,
+.bookitinerary_Detailsteps  .rooms_category_tabBlock .roomTabs .tab {  margin-right: 20px; }
+
+.bookitinerary_Detailsteps .count_step3_blk {   display: block;  margin-top: 30px; }
+
+.bookitinerary_Detailsteps  .rooms_category_tabBlock .roomTabs .tab:last-child .titleRoom { border-right: 0; }
+.bookitinerary_Detailsteps .travelers-room-new ul li:first-child { margin-right:12px;}
+
+.bookitinerary_Detailsteps .plan-content .titleCounter { margin-left: 15px;} 
+
+.bookitinerary_Detailsteps .travelers-room-new .f-flex-img img:first-child {  margin-right: 5px; }
+
+.bookitinerary_Detailsteps .travelers-room-new .room-one-new {  padding: 5px 0 10px; }
+
+.bookitinerary_Detailsteps  .travelers-room-new .stepTemparateUL { padding-bottom: 10px; }
+
+.bookitinerary_Detailsteps .StepimgSec .stepimgUL.destination_selection { row-gap: 0;}
+.bookitinerary_Detailsteps .StepimgSec  .stepimgUL li:first-child {  padding-left: 6px; }
+/* 01-04-23 booking vendor details page  */
+/* 03-04-23 booking vendor details page  */
+.dash-add-product-step5 .tabs-to-dropdown .nav-wrapper { padding: 0;}
+.bookitinerary_Detailsteps .pricedetilsul ul { margin-right: 5px;  margin-left: 5px;}
+.dash-add-product-step5 .scrollItineryDetilsSec, .dash-add-product-step5 .scrollPackDetilsSec {  overflow: scroll hidden;}
+.dash-add-product-step5.book_details_packStep5  .pack3steps {   margin-bottom: 22px;}
+.bookitinerary_Detailsteps  .agent_package_tab_itinerary_content  .DaysItenarySec { flex: 0 0 23%;}
+.bookitinerary_Detailsteps .agent_terms_tab_step5 .termsContentSec h6 {
+    margin-bottom: 10px;
+}
+ .book_details_packStep5 .book_details_terms  .RefundableTermsCondition.listingTypeSec .listingTypedc .form-check {
+    border: 0;
+    width: auto; 
+    height: auto;
+}
+/* 03-04-23 booking vendor details page  */
+/* 04-04-23 booking vendor details page  */
+.bookDetails_serviceVouchers  .upload_cols,
+.bookDetails_serviceVouchers .email-chatCols {  gap: 0; }
+.bookDetails_serviceVouchers .services_vendor_btn_boxes .file_upload, 
+.bookDetails_serviceVouchers .services_vendor_btn_boxes .email_button {    margin-left: 5px;  margin-right: 5px;}
+.bookDetails_serviceVouchers .tabcontentBg1 .packTabSec {  background: transparent; }
+.bookDetails_serviceVouchers .table_service_voucherSec {  border: 0px;     border-right: 0; }
+.bookDetails_serviceVouchers .multiple-items1 {     border-top: 1px solid #004963;   border-radius: 0;    border-right: 0;    border-bottom: 0;}
+
+.bookDetails_serviceVouchers .services_vendor_btn_boxes {     gap: 0;}
+.bookDetails_serviceVouchers .file_upload_red {  margin-left: 5px;  margin-top: 5px; }
+
+.bookDetails_serviceVouchers .table_service_voucherSec .tabitemTitle, 
+.bookDetails_serviceVouchers .table_service_voucherSec .packgesSecListView {  border-bottom: 1px solid #004963;}
+
+.bookDetails_serviceVouchers .multiple-items1 .tabPackageSecrCols:first-child .packTabSec { border-left: 1px solid #004963;}
+/* 04-04-23 booking vendor details page  */
+
+
+
+/* Responsive css booking pages 25-01-23*/
+@media screen and (min-width: 1400px) and (max-width:1430px) {
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps .stepWizard {   flex: auto;    max-width: 67%;   }
+    /* 01-04-23 */
+}
+
+@media screen and (min-width: 1300px) and (max-width:1399px) {
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps .stepWizard {   flex: auto;    max-width: 75%;   }
+    /* 01-04-23 */
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {
+    .booking_vendor_mainSec .rateTrandHome {
+        padding-left: 2px;
+    }
+    .booking_vendor_mainSec .card-trnd-loc-days .DealsheadingRed ,
+    .booking_vendor_mainSec .locationHeading  {
+        font-size: 12px;
+    }
+    .booking_vendor_mainSec .rate_Heading {
+        font-size: 9px;
+    }
+    .booking_vendor_mainSec .stepimgTitle_booking {
+        font-size: 21px;
+    }
+    .vendor_booking_rows .totalCols {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+   
+    .vendor_booking_rows .selectCityDropCols.statusCols {
+        flex: 0 0 29%;
+        max-width: 29%;
+    }  
+    .table_service_voucherSec .voucher_last_tabs .email_button_anch {
+        font-size: 11.5px;
+    }
+    .table_service_voucherSec .voucher_last_tabs .email_button_anch , .table_service_voucherSec .services_vendor_buttons .btn {
+        height: 37px;
+    }
+
+    .table_service_voucherSec .services_vendor_buttons .btn {
+        font-size: 13px;   padding: 4.5px 15px;     
+    }
+    .booking_vendor_steps_mainSec .paymnetsTabSec .multiple-items1 .tabPackageSecrCols {
+        flex: auto;
+    }
+    .booking_vendor_steps_mainSec .voucher_last_tabs {
+        flex: auto !important;
+    }
+    .booking_vendor_steps_mainSec .paymnetsTabSec .multiple-items1 .tabPackageSecrCols {
+        flex: 0;
+    }
+    .booking_vendor_steps_mainSec .upload_cols ,
+    .booking_vendor_steps_mainSec .email-chatCols {
+        gap: 5px;
+    }
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps .travelers-room-new .stepTemparateUL li .plan-content {    height: 60px;     }
+    .bookitinerary_Detailsteps .plan-content .titleCounter {   margin-left: 12px;     }
+    /* 01-04-23 */
+    
+    /* 03-04-23 */
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content .DaysItenarySec {
+        flex: 0 0 31%;
+    }
+    /* 03-04-23 */
+
+}
+
+@media screen and (min-width: 1200px) and (max-width:1299px) {
+      /* 01-04-23 */
+      .bookitinerary_Detailsteps .stepWizard {   flex: auto;    max-width: 80%;   }
+
+      .bookitinerary_Detailsteps .plan_trip_nationality .form-check, 
+      .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs .tab {   margin-right: 15px;    }
+
+      .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs .titleRoom {   padding-right: 15px;     }
+      /* 01-04-23 */
+}
+
+@media screen and (min-width:1200px) and (max-width:1220px) {
+    .booking_vendor_mainSec .card-trnd-loc-days .DealsheadingRed, .booking_vendor_mainSec .locationHeading {
+        font-size: 11px;
+    }
+    .booking_vendor_mainSec .rate_Heading {
+        font-size: 8.5px;
+    }
+}
+
+@media screen and (min-width: 545px) and (max-width: 1380px) {
+    .booking_vendor_mainSec .listing-page-WhiteBoxs .mobile-wd-half {
+        padding: 0 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 1199px)  {    
+    .vendor_booking_rows  .stepimgTitle {
+        margin-left: 0px;
+    }
+    .vendor_booking_rows .totalCols {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+   
+    .vendor_booking_rows .selectCityDropCols.statusCols {
+        flex: 0 0 29%;
+        max-width: 29%;
+    }
+    .booking_vendor_mainSec .locationHeading ,
+    .booking_vendor_mainSec .card-trnd-loc-days .DealsheadingRed {
+        font-size: 12px;
+    }
+    .booking_vendor_mainSec  .rate_Heading {
+        font-size: 9px;
+    }
+
+    .booking_vendor_steps_mainSec .secTitle h2 {
+        font-size: 16px;
+    }
+
+    .booking_vendor_steps_mainSec .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 44px;
+    }
+    .booking_vendor_steps_mainSec .stepimgUL {
+        flex-wrap: wrap;     justify-content: flex-start;
+    }
+    .booking_vendor_steps_mainSec .stepimgUL li {
+        flex-basis: auto;
+    }
+    .booking_vendor_steps_mainSec .stepimgUL img.img-fluid {
+        max-width: 70px;
+    }
+    .booking_vendor_steps_mainSec .scrollItineryDetilsSec, .booking_vendor_steps_mainSec .scrollPackDetilsSec {
+        overflow: scroll hidden;
+    }
+    .booking_vendor_steps_mainSec .upload_cols, 
+    .booking_vendor_steps_mainSec .email-chatCols {
+        flex-direction: column;
+    }
+    .booking_vendor_steps_mainSec .file_upload_red {
+        text-align: center;
+    }
+    .booking_vendor_steps_mainSec .voucher_last_tabs {
+        flex: auto !important; width: 100%;
+    }
+    .booking_vendor_steps_mainSec .paymnetsTabSec .multiple-items1 .tabPackageSecrCols {
+        flex: auto;
+    }
+    .booking_vendor_steps_mainSec  .hotel_stay_content, 
+    .booking_vendor_steps_mainSec  .hotel_stay_select_details {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content  .hotel_stay_content, 
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content  .hotel_stay_select_details {   flex-direction: row;    gap: 0px;   }
+    /* 29-3-23 */
+    .booking_vendor_mainSec .stepimgTitle_booking {    font-size: 21px;    }
+    /* 29-3-23 */
+     /* 01-04-23 booking vendor details page */
+     .bookitinerary_Detailsteps .form-control {    height: 40px !important;     }
+
+     .bookitinerary_Detailsteps .travelers-room-new .stepTemparateUL li .plan-content {   height: 55px;     }
+     /* 01-04-23 booking vendor details page */
+     /* 03-04-23 booking vendor details page */
+     .dash-add-product-step5 .termsContentSec h6 {     font-size: 15px;}
+     /* 03-04-23 booking vendor details page */
+     /* 04-04-23 booking vendor details page */
+     .bookDetails_serviceVouchers .services_vendor_btn_boxes .file_upload, .bookDetails_serviceVouchers .services_vendor_btn_boxes .email_button {
+        margin-left: 0;     margin-right: 0;     }
+     .bookDetails_serviceVouchers .email_button:last-child,
+     .bookDetails_serviceVouchers .file_upload_red  {   margin-top: 8px;    }
+
+    
+     /* 04-04-23 booking vendor details page */
+
+}
+
+@media screen and (min-width: 992px) and (max-width:1280px) {
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps .dragDropSec  .selectLabel .form-control {   line-height: inherit; height: 41px !important;   }
+    /* 01-04-23 */
+
+}
+
+@media screen and (min-width: 1025px) and (max-width:1199px) {
+    /* 03-04-23 */
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content .DaysItenarySec {  flex: 0 0 48%;}
+    /* 03-04-23 */
+}
+
+@media screen  and (max-width: 1024px) { 
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps .travelers-room-new .room-one-new {    padding: 7px 0 7px;    }
+    /* 01-04-23 */
+    /* 03-04-23 */
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content .DaysItenarySec {
+        flex: 0 0 32%;
+    }
+    /* 03-04-23 */
+    
+
+}
+
+@media screen  and (min-width:992px)    and (max-width: 1024px) {
+    /* 04-04-23 book details page  */
+    .bookDetails_serviceVouchers .upload_cols, 
+    .bookDetails_serviceVouchers .email-chatCols {     flex-direction: row;    } 
+    .bookDetails_serviceVouchers .email_button:last-child {        margin-top: 0;    }
+    .bookDetails_serviceVouchers .services_vendor_btn_boxes .file_upload, .bookDetails_serviceVouchers .services_vendor_btn_boxes .email_button {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .bookDetails_serviceVouchers .file_upload_red { margin-top: 8px;     text-align: left; }
+    /* 04-04-23 book details page  */
+}
+
+
+@media screen and (max-width: 991px)  {
+    .booking_vendor_mainSec  .slider_label_bestsellar {
+        top: 55px;     
+    }
+    .vendor_booking_rows .totalCols {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+   
+    .vendor_booking_rows .selectCityDropCols.statusCols {
+        flex: 0 0 29%;
+        max-width: 29%;
+    }
+    .booking_vendor_steps_mainSec .secTitle h2 {
+        font-size: 14px;
+    }
+    .booking_vendor_steps_mainSec .scrollItineryDetilsSec, .booking_vendor_steps_mainSec .scrollPackDetilsSec {
+        overflow: scroll hidden;
+    }
+    .table_service_voucherSec .voucher_last_tabs .email_button_anch ,
+    .services_vendor_buttons .btn {
+        font-size: 11.5px;
+    }
+    .booking_vendor_steps_mainSec .termsContentSec h6,
+    .booking_vendor_steps_mainSec .termsContentSec .termssubheading {
+        font-size: 12px;
+    }
+
+   
+
+    /* 01-04-23 booking vendor details page */
+    .bookitinerary_Detailsteps .input-group-text, 
+    .bookitinerary_Detailsteps select.form-control:not([size]):not([multiple]), 
+    .bookitinerary_Detailsteps .form-control:not(.form-control-sm):not(.form-control-lg) {
+        font-size: 13px;
+    }
+    .bookitinerary_Detailsteps  .plan_trip_nationality .form-check-label    {
+        font-size: 13px;
+    }
+    .bookitinerary_Detailsteps .secTitle h2 ,
+    .bookitinerary_Detailsteps .counterIncDec input[type="text"],
+    .bookitinerary_Detailsteps .threeStepCounter span {
+        font-size: 15px;
+    }
+
+    .bookitinerary_Detailsteps .titleCounter {
+        font-size: 14px;
+    }
+    .bookitinerary_Detailsteps .subheadingCounter {
+        font-size: 12px;
+    }
+    /* 01-04-23 booking vendor details page */
+    /* 03-04-23 booking vendor details page */
+    .bookitinerary_Detailsteps .destination_selection  .imgHeadingstep {
+        font-size: 12.5px;
+    }
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content .DaysItenarySec {
+        flex: 0 0 48%;
+    }
+      .dash-add-product-step5 .termsContentSec h6 {     font-size: 15px;}
+    /* 03-04-23 booking vendor details page */
+    /* 04-04-23 booking vendor details page */
+    .bookDetails_serviceVouchers .services_vendor_buttons .btn,
+    .bookDetails_serviceVouchers .table_service_voucherSec .voucher_last_tabs .email_button_anch { font-size: 13.5px;}
+    /* 04-04-23 booking vendor details page */
+}
+  
+
+@media screen and (min-width: 773px) and (max-width: 991px)  {
+    .booking_vendor_mainSec .card-trading-deals .travel_agent_details .img-fluid {
+        max-width: 29px;
+    }
+    .booking_vendor_mainSec  .slider_label_bestsellar {
+         right: 10px;
+    }
+}
+
+@media screen and (max-width: 772px)  {
+    .booking_vendor_mainSec .card-trading-deals .travel_agent_details .img-fluid {
+        max-width: 33px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px)  {
+    .booking_vendor_mainSec .card-trnd-loc-days .DealsheadingRed {
+        font-size: 12px;
+    }
+    .booking_vendor_mainSec  .slider_label_bestsellar {
+        top: 55px;    
+    }
+    .booking_vendor_mainSec .locationHeading {
+        text-align: left;
+    }
+    .vendor_booking_rows .totalCols {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+   
+    .vendor_booking_rows .selectCityDropCols.statusCols {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .booking_vendor_mainSec .vendor_booking_rows .stepimgTitle {
+        text-align: left;
+    }
+    .booking_vendor_mainSec .listingitinerarySec .stepimgUL {
+        justify-content: flex-start;
+    }
+    .booking_vendor_mainSec .stepimgTitle_booking {
+        font-size: 20px;
+    }
+    .booking_vendor_steps_mainSec .rooms_category_tabBlock .room_divblock1 {
+        gap: 10px;
+    }
+    .booking_vendor_steps_mainSec  .travelers-room-new .room-one-new {
+        padding: 0px 0 0px;
+    }
+    .booking_vendor_steps_mainSec .rooms_category_tabBlock .roomTabs .titleRoom {
+        padding-right: 10px;
+    }
+    .booking_vendor_steps_mainSec  .travelers-room-new .titleRoom {
+        font-size: 14.5px !important;
+    }
+    .booking_vendor_steps_mainSec  .itinenary_dayviseSec .hotel_stay_select a, 
+    .booking_vendor_steps_mainSec  .itinerary_transportation a.popup_itinenaryBtnAnchor, 
+    .booking_vendor_steps_mainSec  .transportation_popups a.popup_itinenaryBtnAnchor {
+               text-align: center;
+    }
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps  .rooms_category_tabBlock .room_divblock1 {    gap: 0;     }
+    .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs .tab {    margin-right: 10px;     }
+    /* 01-04-23 */
+    /* 03-04-23 */
+    .bookitinerary_Detailsteps .content .dragDropSec  .lableCityNight label,
+    .bookitinerary_Detailsteps .agent_booking_step_3  .FormStep1Div label,
+    .bookitinerary_Detailsteps .agent_booking_step_3  .StepimgSec .destination_dwn   {    font-size:14px;      font-weight: 600;  }
+    .dash-add-product-step5 .ulmeals ul {  margin: 0 2px;     }
+    .dash-add-product-step5  .styactdetalblock li:first-child {      font-size: 13px;    }
+    .dash-add-product-step5 .packagesdetailMeals .ulmeals {         justify-content: space-around !important;    }
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content .DaysItenarySec {
+        flex: 0 0 98%;
+    }
+    .bookitinerary_Detailsteps .agent_package_tab_itinerary_content .itinerary_Stay {
+        margin-bottom: 10px;
+    }
+    /* 03-04-23 */
+    /* 04-04-23 */
+    .bookDetails_serviceVouchers .table_service_voucherSec .tabitemTitle {  font-size: 13px; }
+    .bookDetails_serviceVouchers .table_service_voucherSec p, 
+    .bookDetails_serviceVouchers .table_service_voucherSec .email_button_anch,
+    .bookDetails_serviceVouchers .services_vendor_buttons .btn, 
+    .bookDetails_serviceVouchers .table_service_voucherSec .voucher_last_tabs .email_button_anch { font-size: 11.5px;}
+
+    .bookDetails_serviceVouchers  .services_vendor_buttons .btn  {   padding: 4.5px 5px;   } 
+    .bookDetails_serviceVouchers .table_service_voucherSec .voucher_last_tabs .email_button_anch {   padding: 9.5px 5px;   }
+
+    .bookDetails_serviceVouchers .file_upload_red {
+        margin-left: 0;
+    }
+    .bookDetails_serviceVouchers  .table_service_voucherSec .tabitemTitle, 
+    .bookDetails_serviceVouchers  .table_service_voucherSec .packgesSecListView {
+        padding: 8px;
+    }
+    .bookDetails_serviceVouchers .form-control {
+        height: 35px !important;
+    }
+    /* 04-04-23 */
+}
+
+
+
+@media screen and (max-width: 575px)  {
+    .booking_vendor_mainSec .card-trnd-loc-days .DealsheadingRed {
+        font-size: 12px;
+    }
+    .booking_vendor_mainSec .loadmoreItinarary {
+        width: 160px;
+        font-size: 12.5px;
+    }
+    .booking_vendor_mainSec  .stepimgTitleDp {
+        width: auto;
+        padding-right: 5px;
+        text-align: left;
+    }
+    .vendor_booking_rows .totalCols {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+   
+    .vendor_booking_rows .selectCityDropCols.statusCols {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .booking_vendor_mainSec .listingitinerarySec .stepimgUL {
+        justify-content: center;
+    }
+    .booking_vendor_steps_mainSec .secTitle h2 {
+        font-size: 12.5px;
+    }
+    .booking_vendor_steps_mainSec .plan_trip_nationality .form-check {
+        min-width: 125px;
+    }
+    .booking_vendor_steps_mainSec .plan_trip_nationality.Othersnationality .form-check-input {
+        left: 47px;
+    }
+
+    .booking_vendor_steps_mainSec  .travelers-room-new .room-one-new {
+        padding: 0px 0 0px;
+    }
+    .booking_vendor_steps_mainSec .rooms_category_tabBlock .roomTabs .titleRoom {
+        padding-right: 10px;
+    }
+
+    .booking_vendor_steps_mainSec  .rooms_category_tabBlock .room_divblock1 {
+        gap: 5px;
+    }
+    .booking_vendor_steps_mainSec .rooms_category_tabBlock .roomTabs.tab {
+        gap: 15px;
+    }
+    .booking_vendor_steps_mainSec .stepimgUL {
+      justify-content: center;
+    }
+    .booking_vendor_steps_mainSec .terms-paymentStep5 .terms3steps .nav-link {
+        font-size: 11.5px;
+    }
+    .booking_vendor_steps_mainSec .termsRightContent {
+        height: auto;
+    }
+    .booking_vendor_steps_mainSec .termsAddbtn {
+        margin-right: 0px;
+    }
+    .booking_vendor_steps_mainSec .Step4From form .listingTypeSec .stepTitle {
+        font-size: 15px;
+    }
+    .booking_vendor_steps_mainSec  .termsContentSec h6 {
+        font-size: 15px;
+    }
+    .booking_vendor_steps_mainSec  .itinenary_dayviseSec .hotel_stay_select a, 
+    .booking_vendor_steps_mainSec  .itinerary_transportation a.popup_itinenaryBtnAnchor, 
+    .booking_vendor_steps_mainSec  .transportation_popups a.popup_itinenaryBtnAnchor {
+               text-align: center;
+    }
+    /* 01-04-2023 */
+    .bookitinerary_Detailsteps  .step6form .form-label,
+    .bookitinerary_Detailsteps .secTitle h2 {    font-size: 14px;    }
+    
+    .bookitinerary_Detailsteps .tableLeadSec .table:not(.table-sm) thead th ,
+    .bookitinerary_Detailsteps .secTitle h2,
+    .bookitinerary_Detailsteps .counterIncDec input[type="text"],
+    .bookitinerary_Detailsteps .threeStepCounter span {    font-size: 14px;   }
+
+    .bookitinerary_Detailsteps .rooms_category_tabBlock .room_divblock1 {
+        gap: 0;
+    }
+    .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs.tab {
+        padding-bottom: 10px;     flex-direction: row;
+    } 
+    /* 01-04-2023 */
+    /* 04-04-23 */
+    /* 04-04-23 */
+    .bookDetails_serviceVouchers  .table_service_voucherSec .tabitemTitle, 
+    .bookDetails_serviceVouchers  .table_service_voucherSec .packgesSecListView {
+        padding: 5px; border-bottom: 1px solid #004963;
+    } 
+    .bookDetails_serviceVouchers .table_service_voucherSec p, .bookDetails_serviceVouchers .table_service_voucherSec .email_button_anch, .bookDetails_serviceVouchers .services_vendor_buttons .btn, .bookDetails_serviceVouchers .table_service_voucherSec .voucher_last_tabs .email_button_anch {
+        font-size: 11px;
+    }
+    .bookDetails_serviceVouchers .table_service_voucherSec .tabitemTitle {
+        font-size: 13px;
+    }
+    /* 04-04-23 */
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* 29-3-23 */
+    .tour_listing_page .booking_cols {     flex: 0 0 50%;        max-width: 50%;     }
+    .booking_itinearary_cols  .stepimgTitle {      text-align: left;     }
+    .listing-page-WhiteBoxs  .booking_cols .dealsHeading, 
+    .listing-page-WhiteBoxs  .booking_cols .dealsHeading a {    min-height: 45px;   font-size: 13.5px;    } 
+    /* 29-3-23 */
+    /* 01-04-23 */
+    .bookitinerary_Detailsteps .plan_trip_nationality .form-check {   min-width: 97px;     width: auto;   }
+    .bookitinerary_Detailsteps .plan_trip_nationality .form-check {     margin-right: 15px;     }
+    .bookitinerary_Detailsteps .plan_trip_nationality.Othersnationality .form-check-input {        left: 33px;    }
+
+    .bookitinerary_Detailsteps  .travelers-room-new .room-one-new img.deleteRoom {   margin-bottom: 1px;    }
+    /* 01-04-23 */
+
+}
+
+
+@media screen and (max-width: 480px)  {
+    /* 01-04-2023 */   
+    .bookitinerary_Detailsteps  .step6form .form-label,
+    .bookitinerary_Detailsteps .secTitle h2 {   text-align: center; }
+    .bookitinerary_Detailsteps .plan_trip_nationality .fixCheckboxsc {    justify-content: center;   }
+    .bookitinerary_Detailsteps .plan_trip_nationality .form-check:not(:last-child) {    margin-bottom: 30px;    }
+
+    .bookitinerary_Detailsteps .travelers-room-new ul li {  flex: auto;   width: 100%;   }
+    .bookitinerary_Detailsteps .travelers-room-new ul li:first-child {   margin-right: 0;     margin-bottom: 5px;  }
+    .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs.tab {  gap:0;   justify-content: center;  padding-bottom: 0;   }
+    .bookitinerary_Detailsteps .travelers-room-new .stepTemparateUL li .plan-content {      height: 50px;    }
+    .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs .tab {    margin-bottom: 10px;     }
+
+    .bookitinerary_Detailsteps .rooms_category_tabBlock .roomTabs.tab {     flex-direction: column;    }
+    /* 01-04-2023 */
+     /*  03-04-2023 */
+     .bookitinerary_Detailsteps .agent_booking_step_3  .FormStep1Div label.package_title_name,
+     .bookitinerary_Detailsteps .agent_booking_step_3  .StepimgSec .destination_dwn   { text-align: center;}
+
+     .bookitinerary_Detailsteps .StepimgSec .stepimgUL.destination_selection {  justify-content: center;  }
+     .dash-add-product-step5 .styactdetalblock li:first-child {     font-size: 9.5px;     }
+     .dash-add-product-step5.book_details_packStep5  .ulmeals ul {    flex: 100%;     }
+     .agent_terms_tab_step5 .termsAddbtn {    font-size: 13px;    }
+     .dash-add-product-step5 .termsContentSec h6 {
+        font-size: 14px;
+    }
+     /*  03-04-2023 */
+     /* 04-04-23 */
+     .bookDetails_serviceVouchers .services_vendor_buttons .btn, 
+     .bookDetails_serviceVouchers .table_service_voucherSec .voucher_last_tabs .email_button_anch {        width: 115px;     }
+     .bookDetails_serviceVouchers .multiple-items1 {
+        border: 0px solid #004963;
+        border-radius: 0px;
+        border-right: 0;
+    }
+    .bookDetails_serviceVouchers .table_service_voucherSec {
+        border: 1px solid #004963;     border-radius: 0;
+    }
+    .bookDetails_serviceVouchers .multiple-items1 .tabPackageSecrCols:first-child .packTabSec {
+        border-left: 0px solid #004963;
+    }
+     /* 04-04-23 */
+
+}
+
+
+@media screen and (max-width: 392px)  {
+     /*  03-04-2023 */
+     .book_details_packStep5 .book_details_terms .RefundableTermsCondition.listingTypeSec .listingTypedc .form-check {      
+        margin-bottom: 5px;
+    }
+     /*  03-04-2023 */
+}

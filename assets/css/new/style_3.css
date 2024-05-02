@@ -1,0 +1,4991 @@
+@media screen and (max-width:880px) {}
+@media screen and (min-width:768px) and (max-width:991px) {
+    .TrendingDeals_tabs .is-desktop {
+        gap: 15px;
+        flex-wrap: wrap;
+        grid-gap: 15px;
+    }
+    .TrendingDeals_tabs button.card-link {
+        font-size: 14.5px;
+    }
+    .TrendingDeals_tabs select {
+        font-size: 15px;
+    }
+    .TrendingDeals_tabs select {
+        background-color: #dfffde;
+    }
+    .TrendingDeals_tabs .tabcontent {
+        padding: 0;
+    }
+    .shopAboutSec .swiper-container {
+        min-height: auto;
+    }
+    .futureTravel_details {
+        margin-top: 20px;
+        padding-left: 0;
+    }
+    .futureTravel_details p {
+        margin-bottom: 15px;
+    }
+    a.text-capitalize.tourboxesBtn2 {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .TourboxsRightSec {
+        padding-top: 0;
+    }
+    .megamenuSec.header .mobile-menu-trigger {
+        margin-top: 6px;
+    }
+    .WeareDifferent .wecardbox {
+        min-height: 205px;
+    }
+    .greece_themeSec .titleSec,
+    .greece_themeSec .para,
+    .greece_themeSec .anchorSec {
+        text-align: center;
+    }
+    .priceViewDeals .iconWrapPrice .hydrated {
+        right: -97px;
+    }
+    .greeceToursSec {
+        position: relative;
+    }
+    .greeceToursSec .sortbyGreece {
+        position: absolute;
+        top: 75px;
+        left: 56.3%;
+        right: auto;
+    }
+    .shop_main_toursSec .greeceToursSec .sortbyGreece {
+        top: 0;
+        position: relative;
+        left: 0;
+    }
+    .sortbyGreece .select-box {
+        padding: 9px 11px;
+    }
+    .dealsHeading {
+        min-height: 45px;
+        font-size: 14px;
+        line-height: inherit;
+    }
+    .top_drop_jumbo .select-box__list {
+        width: 195px;
+        right: -15px;
+        left: auto;
+        border-radius: 0;
+    }
+    .ul_just_space_between {
+        justify-content: start;
+    }
+    .mobile-legal-follow-m {
+        margin-top: 35px;
+    }
+    .footerLogo {
+        margin-bottom: 10px;
+        width: 60%;
+    }
+    .flagLogo {
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+    .footerTitle {
+        margin-bottom: 15px;
+    }
+    .ftPlayStore_icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .ftPlayStore_icons a:first-child {
+        padding-right: 20px;
+        margin-bottom: 0;
+    }
+    .footerSocialIcon {
+        margin-bottom: 20px;
+    }
+    .cardTitle {
+        text-align: center;
+    }
+    .whatTraveloneLeft .cardTitle {
+        text-align: left;
+    }
+    .travelOneSec_travel.cardTitle {
+        margin-top: 15px;
+    }
+    .PlanTrip .img_content,
+    .PlanTrip .title_subtitle {
+        text-align: center;
+    }
+    .PlanTrip .img_content {
+        padding-top: 0px;
+    }
+    .tranding_dealsUL {
+        margin: 10px 0 0;
+    }
+    .mobile-navbarlight {
+        display: none;
+    }
+    .SliderSec p {
+        font-size: 15px;
+    }
+    .top-cart,
+    .top-cart a,
+    .top-wishlist,
+    .top-wishlist a {
+        justify-content: start;
+        margin-top: 0px;
+    }
+    .titleSec,
+    .travelOneSec {
+        font-size: 23px;
+        line-height: inherit;
+    }
+    .titleSec,
+    .title_subtitle {
+        margin-bottom: 15px;
+    }
+    .PlanTrip .title_subtitle {
+        margin-bottom: 15px;
+    }
+    .para,
+    .card_para {
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .trandsrelative .slick-list.draggable {
+        margin-bottom: 5px;
+    }
+    .card-trading-deals {
+        box-shadow: 1px 0 2px rgb(0 73 99 / 40%);
+    }
+    .slick-dots li {
+        width: 11px;
+        height: 11px;
+    }
+    .itsimple_para_bottom {
+        margin-bottom: 20px;
+    }
+    .ecoSubcontent {
+        font-size: 17px;
+        line-height: inherit;
+    }
+    .ecosystem_border {
+        min-height: 145px;
+        padding: 45px;
+    }
+    .bigText {
+        top: -8px;
+        font-size: 100px;
+    }
+    .ecosystem_border {
+        margin-bottom: 20px;
+    }
+    .itsSimpleSec.Section_common_padding {
+        padding-bottom: 10px;
+    }
+    .trndDestination .para {
+        margin-bottom: 20px;
+    }
+    .trndDestination ul.slick-dots {
+        margin-top: 10px;
+    }
+    .trndDestinationSec .trndDestination .para {
+        margin-bottom: 0;
+    }
+    .cardTitle {
+        font-size: 17px;
+    }
+    .WhyTravelOneSec.Section_common_padding {
+        padding-bottom: 5px;
+    }
+    .weCardSec .img-fluid {
+        width: 45px;
+    }
+    .wecardbox .cardTitle {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .wecardbox .card_para {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .title_ready_pay {
+        font-size: 23px;
+    }
+    .wecardbox {
+        min-height: 210px;
+    }
+    .weareimg {
+        margin-bottom: 15px;
+    }
+    .WeareDifferent .weAreimg_content .card_para {
+        font-size: 15px;
+        text-align: center;
+    }
+    .titleSec,
+    .travelOneSec {
+        margin-bottom: 5px;
+    }
+    .ecosystem_border {
+        border-radius: 50px 0 50px 0px;
+        padding: 20px;
+    }
+    .greece_themeSec .btn-custom {
+        padding: 8px 15px;
+    }
+    .greece_themeSec .slick-slide img {
+        display: block;
+        margin: 0 auto;
+    }
+    .slick-initialized .slick-list.draggable {
+        margin-top: 20px;
+    }
+    .greece_themeSec .slick-dots li.slick-active {
+        background: #004963;
+        border-color: #004963;
+    }
+    .greece_themeSec .slick-dots li {
+        width: 10px;
+        height: 10px;
+    }
+    .greece_themeSec .SliderSec p {
+        font-size: 12px;
+        line-height: inherit;
+    }
+    .greecetourHeading_main .toursResultSpan,
+    .filterHeading {
+        font-size: 13.5px;
+        line-height: 30px;
+    }
+    .greecetourHeading_main {
+        margin-bottom: 15px;
+    }
+    .filterTourLeft .img-fluid {
+        width: 17px;
+    }
+    .filterGreece {
+        padding: 4.5px 25px;
+    }
+    .filterTourLeft {
+        justify-content: flex-start;
+        margin-top: 0px
+    }
+    .toggleSwitchSec {
+        justify-content: center;
+        padding: 20px 0 5px;
+    }
+    .sortBy_togleSwtchSec label.form-check-label {
+        font-size: 13.5px;
+        padding-left: 3px;
+    }
+    .rate_Heading {
+        font-size: 12px;
+        line-height: inherit;
+    }
+    .card-trading-deals .country_days_agnt .img-fluid {
+        max-width: 100%;
+        height: auto;
+        width: 24px;
+    }
+    .card-trading-deals .slick-initialized .slick-list.draggable {
+        margin-top: 0px;
+    }
+    .priceViewDeals .wsh-list-agnt {
+        margin-right: 15px;
+    }
+    .iconWrap.iconWrapPrice {
+        line-height: 18px;
+    }
+    span.boldTextPrice {
+        font-size: 16px;
+    }
+    .listing_cols_data .card-trading-deals {
+        margin: 0 0px 25px;
+    }
+    .BstSellerDeals,
+    .RefundableTour,
+    .newsSellerDeals {
+        font-size: 9px;
+    }
+    .greeceReviewSec .titleSec {
+        margin-bottom: 0px;
+    }
+    .card-trading-deals {
+        padding: 12px;
+    }
+    .TrendingDeals_tabs .card-trading-deals {
+        padding: 12px;
+    }
+    .card-trading-deals::after {
+        bottom: 45px;
+    }
+    .btnFilteranchor {
+        justify-content: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .greeceReviewSec .slick-dots li {
+        width: 10px;
+        height: 10px;
+    }
+    .greeceReviewSec ul.slick-dots {
+        margin-top: 0;
+    }
+    .resetFilterAnch {
+        margin-top: 10px;
+    }
+    .btnFilteranchor.filetrHeaderResetApplyBtn {
+        justify-content: start;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+    }
+    .filetrHeaderResetApplyBtn .resetFilterAnch {
+        margin-top: 0;
+    }
+    .filterModal_Listing #fiterModalLabel {
+        font-size: 21px;
+    }
+    .filterModal_Listing .filterTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .filterModal_Listing .ShowMoreAnch a,
+    .filterModal_Listing label.form-check-label {
+        font-size: 13.5px;
+    }
+    .filterModal_Listing input.form-control {
+        font-size: 14px;
+    }
+    .filterModal_Listing .btn-close {
+        background-size: 65%;
+    }
+    .greeceToursSec .btn-custom {
+        font-size: 15px;
+    }
+    .greece_themeSec .anchorSec {
+        display: block;
+        margin-top: 10px;
+    }
+    .greece_themeSec button.slick-prev.slick-arrow {
+        right: 32px;
+    }
+    .greece_themeSec .slick-arrow {
+        bottom: -25px;
+        background-size: 50%;
+    }
+    .greece_themeSec {
+        padding-bottom: 15px;
+    }
+    .sortBy_togleSwtchSec .form-switch {
+        margin: 0 5px;
+    }
+    .listing_cols_data {
+        margin-top: 15px;
+    }
+    .Section_common_padding {
+        padding: 25px 0;
+    }
+    .mobile-d-flex-weaAre {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .WeareDifferent .weAreimg_content .card_para {
+        font-size: 13.5px;
+        line-height: inherit;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .filterbodyModal .toggleSwitchSec {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec .form-switch .form-check-input {
+        width: 37px;
+        height: 20px;
+        border-radius: 15px;
+        margin-top: 0px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec label.form-check-label {
+        font-size: 13.5px;
+        padding-left: 7px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec .form-switch {
+        margin: 0 0px 15px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec {
+        justify-content: start;
+    }
+    .filterModal_Listing .offcanvas-header {
+        padding-left: 20px;
+    }
+    .filterModal_Listing .filterbodyModal {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .tourMain {
+        min-height: 180px;
+    }
+    .support-HelpcenterSec .helpHeading {
+        font-size: 24px;
+        line-height: inherit;
+    }
+    .support-HelpcenterSec .chat-help-center a {
+        padding: 11px 26px;
+        font-size: 15px;
+        line-height: inherit;
+    }
+    .support-HelpcenterSec {
+        padding: 80px 0;
+    }
+    .support-HelpcenterSec .chat-help-center a img {
+        margin-right: 11px;
+        max-width: 21px;
+    }
+    .realTimeSupportSec .travelOneSec_travel.cardTitle {
+        margin-top: 0;
+        text-align: left;
+    }
+    .realTimeSupportSec .travelOneSec_travel.cardTitle br {
+        display: none;
+    }
+    .whyDevelopSec .aboutresultUL {
+        margin-top: 25px;
+    }
+    .about-page .contactTitle {
+        margin-bottom: 15px;
+    }
+    .aboutresultUL li {
+        flex-basis: auto;
+    }
+    .about-page .whatTraveloneSec .whatTraveloneCard {
+        flex-basis: 47%;
+    }
+    .about-page .whatTraveloneSec .whatTraveloneRight {
+        gap: 20px;
+        grid-gap: 20px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneRight .whatTraveloneCard .para {
+        min-height: 60px;
+    }
+    .travel_agency-page .resultOrintSec .result-orientLeft {
+        background: #ffbfbf;
+    }
+    .travel_agency-page .resultOrintSec .about-result-orientdSec {
+        background: #dffede;
+    }
+    .listing_details_padding .titleSec,
+    .listing_details_padding .travelOneSec,
+    .listing_details_padding .title_ready_pay {
+        font-size: 22px;
+    }
+    .listing_details_compare.details_tabPackageSec.tabPackageSec .tab button {
+        font-size: 17px;
+        margin-right: 10px;
+        padding: 0px 30px 0px 0;
+    }
+    .listing_details_compare .negoiate_button_right a {
+        font-size: 13.5px;
+    }
+    .listing_details_compare .listing_compare_negoiate {
+        flex-direction: column-reverse;
+        margin-top: 10px !important;
+    }
+    .tabPackageSec.details_tabPackageSec.listing_details_compare .tab {
+        margin-top: 20px;
+    }
+    .tabPackageSec.details_tabPackageSec.listing_details_compare .multiple-items button.slick-next.slick-arrow,
+    .tabPackageSec.details_tabPackageSec.listing_details_compare .multiple-items button.slick-prev.slick-arrow {
+        bottom: 2px;
+    }
+    .listing_details_compare .tabPackageSecrCols.packagesSecWidth1 {
+        left: 21px;
+    }
+    .listing_details_compare .multiple-items,
+    .listing_details_compare .taBItinerayrows {
+        left: 260px;
+    }
+    .listing_details_padding .greecetourHeading_main {
+        justify-content: center;
+    }
+    .mybookingDetailsSec a.text-capitalize.tourboxesBtn2 {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .mybookingDetailsSec .paymnetsTabSec .Pay_now_button {
+        padding: 6px 15px !important;
+    }
+}
+@media screen and (min-width:881px) and (max-width:1215px) {
+    .transportationTab.itemsTabContentCommon,
+    .transportationTab {
+        min-height: 142px;
+        overflow: hidden auto;
+    }
+}
+@media (min-width: 480px) and (max-width: 799px) {
+    #onetrust-consent-sdk #onetrust-banner-sdk #onetrust-group-container {
+        max-width: 100% !important;
+        -ms-flex: auto !important;
+        flex: auto !important;
+    }
+}
+@media screen and (min-width:768px) {
+    .mobile-view-tabs-contact {
+        display: none;
+    }
+    .desktop-view-tabs-contact {
+        display: block;
+    }
+}
+@media screen and (max-width:767px) {
+    .ul_just_space_between li {
+        margin: 0 5px;
+    }
+    .packTabSec .packgesSecListView .CheckmarkUL li {
+        text-align: left;
+        -moz-text-align-last: left;
+        text-align-last: left;
+    }
+    .UsdPersonSec .titleSec {
+        text-align: center;
+    }
+    .UsdPersonSec .para a {
+        display: block;
+    }
+    .sliderBanSec .carousel-control-next-icon,
+    .sliderBanSec .carousel-control-prev-icon {
+        background-size: 75%;
+
+    }
+    .sliderBanSec .carousel-control-prev,
+    .sliderBanSec .carousel-control-next {
+        opacity: 1;
+    }
+    .bg-dark-banner-rightBlock {
+        padding: 15px;
+    }
+    .explorerBlock {
+        display: flex;
+    }
+    .explorerTitle::after {
+        display: none;
+    }
+    .explorerBlock {
+        padding: 6px 15px;
+    }
+    .explorerTitle {
+        padding-bottom: 0;
+        padding-right: 15px;
+    }
+    .tourhightlightTitle {
+        font-size: 15px;
+    }
+    .bannerTourHighlightsUl li::before {
+        width: 5px;
+        height: 5px;
+        top: 7px;
+    }
+    .tourMain {
+        padding: 10px;
+    }
+    .tabPackageSec .tab {
+        font-size: 16px;
+    }
+    .tab-content.tabInnerSec {
+        flex-direction: column;
+    }
+    .tabviewFlex {
+        flex-direction: column;
+    }
+    .tabPackageSec .tabs-list li {
+        height: 70px;
+    }
+    .tab-content.tabInnerSec .tabs-list {
+        height: auto;
+    }
+    .bannerRightTourHighlights {
+        padding: 15px 0px 15px;
+    }
+    .itsWorldMidSec {
+        display: none;
+    }
+    .tourboxd-flex {
+        margin-top: 5px;
+    }
+    .TourboxsRightSec {
+        align-items: flex-start;
+    }
+    .tourboxesButtons {
+        margin-top: 0;
+    }
+    .tourHeadingPrice span {
+        font-size: 30px;
+    }
+    .tourHeadingPrice {
+        font-size: 13px;
+        line-height: 30px;
+    }
+    .tabPackageSec select {
+        background-color: #dfffde;
+        color: var(--text-color);
+        font-size: 14px;
+        border-radius: 4px;
+        outline: none;
+        font-weight: 500;
+        border: 1px solid rgb(0 73 99 / 64%);
+
+    }
+    .tabPackageSec .select:after {
+        width: 12px;
+        height: 12px;
+    }
+    .tabPackageSec .tabcontent {
+        padding: 15px 15px 50px;
+    }
+    .tabcontentBg3 .nav-pills {
+        width: auto;
+    }
+    .tabcontentBg3 .nav-pills,
+    .tabcontentBg3 div#v-pills-tabContent {
+        height: 555px;
+    }
+    .tab-nav {
+        padding: 0 15px;
+    }
+    .tab-nav {
+        margin-bottom: 15px;
+    }
+    .TrendingDeals_tabs .tab-nav {
+        margin-bottom: 0px;
+    }
+    .listing-review .imgSliderSec .slick-slider {
+        height: auto;
+    }
+    .tabcontentBg3 div#v-pills-tabContent {
+        overflow: scroll;
+    }
+    .listing-detail-page .tabcontentBg3 div#v-pills-tabContent {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .tabInnerSec .bannerRightTourHighlights {
+        padding: 15px 0px 15px 20px;
+    }
+    .tabInnerSec .terms-columntwo-tab.bannerRightTourHighlights {
+        padding: 15px 25px 15px 20px;
+    }
+    .tabViewInnerSec .tourhightlightTitle {
+        margin-bottom: 10px;
+    }
+    .tabviewFlex .bannerTourHighlightsUl li {
+        padding-bottom: 10px;
+    }
+    .itsWorldMidSec {
+        top: -20px;
+        width: 280px;
+    }
+    .titleSec_world br {
+        display: none;
+    }
+    .itsWorldMidSec::before {
+        top: 7px;
+        bottom: 0;
+        left: -130px;
+        background-size: 65%;
+    }
+    .itsWorldMidSec::after {
+        top: 100px;
+        bottom: 0;
+        left: 255px;
+        background-size: 80%;
+    }
+    .itsworldpara {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .itsdiscoverdflex {
+        justify-content: center;
+    }
+    .titleSec_world {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .itsworldpara.para {
+        font-size: 21px;
+        line-height: 18px;
+    }
+    .itsWorldLeftSec .para {
+        margin-top: 15px;
+        line-height: 26px;
+    }
+    .itsworldanchor {
+        display: block;
+    }
+    .mobile-dflex-itsdiscover {
+        display: flex;
+        align-items: center;
+    }
+    .TourboxsLeftSec {
+        display: block;
+    }
+    .tourMain {
+        display: block;
+        flex: none;
+        width: 30.33%;
+        min-height: 130px;
+        float: left;
+        margin: 0 5px;
+        margin-bottom: 5px;
+
+    }
+    .tourMain .card-body {
+        padding: 10px;
+    }
+    .TourboxsRightSec {
+        padding-top: 0px;
+    }
+    section.TourboxsSec {
+        padding: 15px;
+    }
+    .tourHeading {
+        font-size: 13px;
+    }
+    .tourMain img {
+        width: 30px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    .tourMain .img-tourmain {
+        width: 30px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .itsWorldLeftSec {
+        text-align: center;
+    }
+    .itsWorldLeftSec .para {
+        text-align: center;
+    }
+    .UsdPersonBtnSec {
+        justify-content: center;
+        display: flex;
+    }
+    .sortByNamefix {
+        display: none;
+    }
+    .greece_themeSec .btn-custom {
+        font-size: 11px;
+    }
+    .iconWrap .tooltip::before {
+        width: 8px;
+        height: 8px;
+        left: 70px;
+        top: 0;
+    }
+    .iconWrap .tooltip {
+        display: none;
+        width: auto;
+    }
+    .iconWrap .tooltip {
+        width: 130px;
+    }
+    .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        left: 0px;
+        top: 10px;
+    }
+    .iconWrap .tooltip p {
+        font-size: 11px;
+        margin-bottom: 0;
+    }
+    .iconWrapPrice .tooltip {
+        display: block;
+    }
+    .slick-dots li {
+        width: 10px;
+        height: 10px;
+    }
+    .SliderSec1 {
+        padding: 0 5px;
+    }
+    .card-trading-deals {
+        box-shadow: 1px 0 2px rgb(0 73 99 / 40%);
+    }
+    .mobilee-d-nnone {
+        display: none;
+    }
+    .top-cart .mobile-d-block-search {
+        display: flex;
+        position: absolute;
+        top: -9px;
+        left: auto;
+        right: 25px;
+    }
+    .head_scndblock {
+        margin: 15px 0 15px;
+        margin: 0;
+        padding: 15px 0;
+    }
+    .mobile-navbar .top-wishlist,
+    .mobile-navbar .top_drop_jumbo,
+    .mobile-navbar .mob-header-hide {
+        display: flex;
+        justify-content: flex-start;
+        margin: 15px 0;
+    }
+    .mobile-navbar.top_header_navbar.navbar-nav {
+        padding-left: 30px;
+    }
+    a.copyAnchor {
+        display: block;
+        margin: 0;
+    }
+    .copyrightTitle a {
+        margin-bottom: 0;
+    }
+    .copyrightTitle a br {
+        display: none;
+    }
+    .travelOneSec {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .itsimple_para_bottom {
+        margin-bottom: 20px;
+    }
+    .SliderSec p {
+        font-size: 14px;
+        text-transform: capitalize;
+        line-height: inherit;
+    }
+    .SliderSec {
+        padding: 0 10px;
+    }
+    .header .nav-link:hover,
+    .header .navbar-light .navbar-nav .nav-link:hover {
+        color: #20c593;
+    }
+    .trndDestination .para {
+        margin-bottom: 25px;
+    }
+    .trndDestinationSec .trndDestination .para {
+        margin-bottom: 0;
+    }
+    .trndDestination ul.slick-dots {
+        margin-top: 5px;
+    }
+    .WhyTravelOneSec.Section_common_padding {
+        padding: 20px 0 5px;
+    }
+    .img_content {
+        padding-top: 15px;
+    }
+    .Section_common_padding {
+        padding: 15px 0 20px;
+    }
+    .planTrip_img {
+        text-align: center;
+    }
+    .planTrip_img.img_bottom {
+        margin-top: 0px;
+    }
+    .planTrip_img.img_bottom {
+        margin-bottom: 25px;
+    }
+    .trandsrelative .slick-list.draggable {
+        margin-bottom: 0px;
+    }
+    .plan_img_relative {
+        top: 0;
+    }
+    .socialPlanIcons {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .titleSec {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .title_subtitle {
+        font-size: 16px;
+        line-height: inherit;
+        text-align: justify;
+    }
+    .btn-custom {
+        font-size: 13px;
+        line-height: inherit;
+    }
+    .footer li {
+        display: inline-flex;
+    }
+    .footerInfo ul li a {
+        padding-right: 10px;
+        border-right: 1px solid var(--text-color);
+    }
+    .footerInfo ul li:last-child a {
+        border-right: 0;
+    }
+    .footer li {
+        padding: 0 10px 0 0;
+    }
+    .footerTitle {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .footerInfo ul li a {
+        font-size: 13.5px;
+    }
+    .ul_just_space_between {
+        justify-content: start;
+    }
+    .footerInfo .ul_just_space_between li a {
+        padding-right: 0px;
+        border-right: 0;
+    }
+    .footer .ul_just_space_between li {
+        padding: 0;
+    }
+    .ftPlayStore_icons {
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+    .ftPlayStore_icons a:first-child {
+        padding-right: 20px;
+        margin-bottom: 0;
+    }
+    .copyrightTitle,
+    .copyrightTitle a {
+        color: var(--text-color);
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .copyrightTitle {
+        margin-bottom: 15px;
+    }
+    .paymentCartSec {
+        justify-content: center;
+    }
+    .copyRightSec {
+        padding: 15px;
+    }
+    .footerLogo {
+        width: 40%;
+        margin-top: 0;
+    }
+    .footer .para {
+        text-align: justify;
+    }
+    .flagLogo {
+        margin-bottom: 10px;
+    }
+    .title_ready_pay {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .ready_para {
+        font-size: 13.5px;
+        margin-bottom: 20px;
+    }
+    .WeareDifferentSec {
+        display: block;
+    }
+    .mobile-para-subheading {
+        display: none;
+    }
+    .travelOneSec_travel.cardTitle {
+        margin-bottom: 0;
+        margin-top: 0px;
+        text-align: center;
+        color: #fd4c44;
+    }
+    .whyTravelOneBottom {
+        margin-bottom: 15px;
+    }
+    .travelOneSec_travel.cardTitle {
+        font-size: 17px;
+    }
+    .cardSec img {
+        margin: 0 auto 15px;
+    }
+    .cardTitle {
+        font-size: 18px;
+        line-height: inherit;
+        margin-bottom: 10px;
+    }
+    .whyTravelCols {
+        width: 50%;
+    }
+    .cardSec {
+        min-height: 300px;
+    }
+    .ecosystem_border {
+        min-height: 135px;
+        padding: 15px;
+        margin: 0 0px 20px;
+        border-radius: 50px 0 50px 0px;
+    }
+    .itsSimpleSec.Section_common_padding {
+        padding-bottom: 5px;
+    }
+    .ecoSubcontent {
+        font-size: 16.5px;
+        line-height: inherit;
+    }
+    .bigText {
+        top: -7px;
+        font-size: 100px;
+    }
+    .itsSimpleSec br {
+        display: none;
+    }
+    .ecosystem_border {
+        position: relative;
+    }
+    .ecoSubcontent,
+    .bigText {
+        z-index: 9;
+    }
+    .PlanTrip .ul_just_space_between {
+        justify-content: center;
+    }
+    .PlanTrip .img_content,
+    .PlanTrip .title_subtitle {
+        text-align: center;
+    }
+    .PlanTrip .titleSpan {
+        display: block;
+    }
+    .PlanTrip .btn-custom {
+        background: #004963;
+        color: #FFF;
+    }
+    .topbar_ft,
+    .head_scndblock .anchorSec.mob-header-hide {
+        display: none;
+    }
+    header.header {
+        position: relative;
+    }
+    .mobile-span-bar {
+        position: absolute;
+    }
+    .navbar-light .navbar-toggler-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .navbar-toggler {
+        border: 0;
+        outline: none;
+        box-shadow: none;
+        padding-left: 0;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .head_scndblock .input-group {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .head_scndblock {
+        position: relative;
+    }
+    .navbar {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+    }
+    div#collapsibleNavbar {
+        background: #fff;
+        color: var(--text-color);
+        box-shadow: 2px 3px 5px rgb(0 0 0 / 10%)
+    }
+    .navbar li {
+        display: block;
+        border-bottom: 0px solid rgb(255 255 255 / 10%);
+    }
+    .header .nav-link,
+    .header .navbar-light .navbar-nav .nav-link {
+        text-align: left;
+        padding-left: 15px;
+        color: var(--text-color);
+        padding: 10px 15px 10px 30px;
+    }
+    .navbar-light.mobile-navbarlight {
+        display: block;
+    }
+    .navbar-light .navbar-toggler-icon {
+        background-image: inherit;
+    }
+    .mobile-span-bar .head-bar-nav {
+        font-size: 30px;
+        line-height: inherit;
+        color: #004963;
+        position: relative;
+        top: -3px;
+        left: 15px;
+    }
+    div#collapsibleNavbar {
+        position: absolute;
+        width: 310px;
+        top: -38px;
+        padding-bottom: 20px;
+        overflow: auto;
+        height: 100vh;
+    }
+    .anchorSec.mob-header-hide {
+        display: block;
+        margin-right: 30px;
+    }
+    .footerInfo ul li a {
+        line-height: 12px;
+        margin-bottom: 10px;
+    }
+    .viewAllDeals {
+        position: relative;
+        top: 0;
+        margin: 25px 0 0;
+        text-align: center;
+        display: block;
+    }
+    .dealsHeading {
+        min-height: 30px;
+        font-size: 14px;
+        line-height: inherit;
+    }
+    .TrendingDeals_tabs .dealsHeading {
+        min-height: 45px;
+    }
+    .slick-slider {
+        margin: 0;
+    }
+    .top_header_navbar {
+        display: block;
+    }
+    ul.tranding_dealsUL {
+        display: none;
+    }
+    .navDrop select {
+        display: block;
+        margin: 10px 0 0px;
+        width: 100%;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 5px;
+        outline: none;
+        color: #fd4c44;
+        font-size: 15px;
+        font-weight: 500;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url('../../img/down-arrow-topbar.png') white no-repeat 97.5%;
+        background-color: #f6f6f6;
+        background-size: 12px;
+    }
+    .navDrop select option {
+        color: var(--text-color);
+    }
+    .trandsrelative .titleSec,
+    .trandsrelative .para {
+        text-align: center;
+        line-height: inherit;
+    }
+    .para,
+    .card_para {
+        font-size: 13.5px;
+        line-height: inherit;
+    }
+    .trandsrelative .para br {
+        display: none;
+    }
+    .PlanTrip .title_subtitle {
+        font-size: 13px;
+        line-height: inherit;
+    }
+    .top_drop_jumbo .select-box__list {
+        width: max-content;
+        right: auto;
+        left: 0;
+        left: auto;
+        border-radius: 0;
+    }
+    .topRight_iconss .top_drop_jumbo .select-box__list {
+        right: -12px;
+        left: auto;
+    }
+    .plan_img_relative {
+        top: 45px;
+    }
+    .titleSec,
+    .title_subtitle {
+        margin-bottom: 5px;
+    }
+    .PlanTrip .title_subtitle {
+        margin-bottom: 15px;
+    }
+    .PlanTrip .titleSec {
+        font-size: 21px;
+    }
+    .greece_themeSec .para {
+        margin-bottom: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .greece_themeSec .btn-custom {
+        padding: 8px 20px;
+    }
+    .greece_themeSec .slick-slide img {
+        display: block;
+        margin: 0 auto;
+    }
+    .slick-initialized .slick-list.draggable {
+        margin-top: 15px;
+    }
+    .greece_themeSec .slick-dots li.slick-active {
+        background: #004963;
+        border-color: #004963;
+    }
+    .greece_themeSec .slick-dots li {
+        width: 10px;
+        height: 10px;
+    }
+    .greece_themeSec .SliderSec p {
+        font-size: 12px;
+        line-height: inherit;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+        text-align: center;
+    }
+    .greece_themeSec .anchorSec {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        padding-bottom: 20px;
+    }
+    .greece_themeSec {
+        padding-bottom: 75px;
+        position: relative;
+    }
+    .greece_themeSec ul.slick-dots {
+        display: flex;
+        justify-content: center;
+    }
+    .offcanvas-start.filterModal_Listing {
+        width: 320px;
+        z-index: 9999999;
+    }
+    .greece_themeSec .titleSec {
+        font-size: 21px;
+        text-align: center;
+        line-height: inherit;
+    }
+    .greecetourHeading_main .toursResultSpan,
+    .filterHeading {
+        font-size: 13.5px;
+        line-height: 30px;
+    }
+    .greecetourHeading_main {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .filterTourLeft .img-fluid {
+        width: 15px;
+    }
+    .filterGreece {
+        padding: 2px 25px;
+    }
+    .sortbyGreece .select-box__input-text,
+    .sortByNamefix {
+        font-size: 12px;
+    }
+    .sortbyGreece .select-box {
+        width: 225px;
+        padding: 8.5px 8px;
+    }
+    .sortbyGreece .select-box__icon {
+        right: 0;
+        width: 10px;
+        height: 10px;
+    }
+    .filterTourLeft {
+        justify-content: inherit;
+        flex-direction: column;
+        align-items: self-start;
+    }
+    .listing-page .greeceToursSec .filterTourLeft {
+        flex-direction: row;
+        align-items: center;
+        gap: 0px;
+        grid-gap: 0px;
+    }
+    .greeceToursSec {
+        position: relative;
+    }
+    .greeceToursSec .sortbyGreece {
+        position: absolute;
+        top: 61px;
+        left: 56%;
+        right: auto;
+    }
+    .shop_main_toursSec .greeceToursSec .sortbyGreece {
+        top: 0;
+        position: relative;
+        left: 0;
+    }
+    .sortbyGreece .select-box__option {
+        font-size: 12px;
+    }
+    .listing_cols_data {
+        margin-top: 5px;
+    }
+    .resetFiterGreece {
+        margin-left: 0;
+    }
+    .listing-page .resetFiterGreece {
+        margin-left: 15px;
+    }
+    .sortBy_togleSwtchSec {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .shop_main_toursSec .sortBy_togleSwtchSec {
+        justify-content: end;
+    }
+    .toggleSwitchSec {
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .filterbodyModal .toggleSwitchSec {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec .form-switch .form-check-input {
+        width: 37px;
+        height: 20px;
+        border-radius: 15px;
+        margin-top: 0px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec label.form-check-label {
+        font-size: 13.5px;
+        padding-left: 7px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec .form-switch {
+        margin: 0 0px 15px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec {
+        justify-content: start;
+    }
+    .filterModal_Listing .offcanvas-header {
+        padding-left: 20px;
+    }
+    .filterModal_Listing .filterbodyModal {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .card-trading-deals .country_days_agnt .img-fluid {
+        max-width: 100%;
+        height: auto;
+        width: 24px;
+    }
+    .card-trading-deals .slick-initialized .slick-list.draggable {
+        margin-top: 0px;
+    }
+    .card-trading-deals .dealsHeading {
+        margin: 10px 0;
+    }
+    .priceViewDeals .wsh-list-agnt {
+        margin-right: 10px;
+    }
+    .TrendingDeals_tabs .priceViewDeals .wsh-list-agnt {
+        margin-right: 5px;
+    }
+    .iconWrap.iconWrapPrice {
+        line-height: 18px;
+    }
+    .priceViewDeals .iconWrapPrice .hydrated {
+        right: -95px;
+    }
+    span.boldTextPrice {
+        font-size: 15px;
+    }
+    .listing_cols_data .card-trading-deals {
+        margin: 0 0px 25px;
+    }
+    .BstSellerDeals,
+    .RefundableTour,
+    .newsSellerDeals {
+        font-size: 9px;
+    }
+    .greeceReviewSec .titleSec {
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .card-trading-deals {
+        padding: 12px;
+    }
+    .card-trading-deals::after {
+        bottom: 45px;
+    }
+    .btnFilteranchor {
+        justify-content: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .greeceReviewSec .slick-dots li {
+        width: 10px;
+        height: 10px;
+    }
+    .greeceReviewSec ul.slick-dots {
+        margin-top: 0;
+    }
+    .resetFilterAnch {
+        margin-top: 10px;
+    }
+    .filterModal_Listing #fiterModalLabel {
+        font-size: 21px;
+    }
+    .filterModal_Listing .filterTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .filterModal_Listing .ShowMoreAnch a,
+    .filterModal_Listing label.form-check-label {
+        font-size: 13.5px;
+    }
+    .filterModal_Listing input.form-control {
+        font-size: 14px;
+    }
+    .filterModal_Listing .btn-close {
+        background-size: 65%;
+    }
+    .greeceToursSec .btn-custom {
+        font-size: 14px;
+    }
+    .itsSimpleCols {
+        width: 50%;
+    }
+    .form-control-input {
+        padding: 13px 15px;
+    }
+    .header-logo {
+        width: 150px;
+        margin-top: -4px;
+    }
+    .desktop-mobile-show-hide {
+        display: none;
+    }
+    .sortBy_togleSwtchSec .form-switch.desktop-mobile-show-hide {
+        display: none;
+    }
+    .mobile-d-flex-weaAre {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .WeareDifferent .weAreimg_content .card_para {
+        font-size: 13.5px;
+        line-height: inherit;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .filterbodyModal .sortBy_togleSwtchSec {
+        display: block;
+    }
+    .itsWorldRightSec {
+        margin-top: 15px;
+    }
+    .ItineraytabSec .taBItinerayCols.ItineraytabSecWidth {
+        margin: 0 5px;
+    }
+    .tabPackageSec .packgesSecListView ul li,
+    .tabPackageSec .packgesSecListView ul li a {
+        font-size: 12px;
+        align-items: center;
+    }
+    .tabPackageSec .packgesSecListView ul.CheckmarkUL li,
+    .tabPackageSec .packgesSecListView ul.CheckmarkUL li a {
+        display: inline;
+    }
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.img-fluid {
+        display: inline;
+    }
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.img-fluid.packStyleIcons1,
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsCancel {
+        width: 12px;
+        height: auto;
+    }
+    .tabPackageSec .packgesSecListView ul.CheckmarkUL li,
+    .tabPackageSec .packgesSecListView ul.CheckmarkUL li a {
+        line-height: inherit;
+    }
+    .packTotalSec {
+        margin-top: 30px;
+    }
+    .cartpageSec .moreTourBtn {
+        justify-content: center;
+    }
+    .closeiconCart .hydrated {
+        vertical-align: baseline;
+    }
+    .cartrightfstBlock {
+        justify-content: space-between;
+    }
+    .cartFormCoupon .inputGroup {
+        width: 100%;
+    }
+    .cartpageSec .spotTitle,
+    .cartpageSec .cartTitle,
+    .cartDateRangeTitle {
+        text-align: center;
+    }
+    .cartpageSec .cartsec1 ul {
+        align-items: center;
+        justify-content: center;
+    }
+    .cartDetailsSec .actplace {
+        flex-wrap: wrap;
+    }
+    .cartSec5 {
+        padding: 15px 15px 0;
+    }
+    .cartUlSec ul li:not(:last-child) a {
+        padding-right: 5px;
+    }
+    .cartUlSec ul {
+        justify-content: center;
+    }
+    .cartDetailsSec .DealsRating .pActivitys {
+        min-height: auto;
+    }
+    .cartpageSec .moreTourBtn a,
+    .cartFormCoupon .moreTourBtn button {
+        font-size: 12px;
+    }
+    .cartPackRightsec {
+        padding: 0px 15px 13px;
+    }
+    .packTotalSec .cartDateRangeTitle {
+        text-align: left;
+    }
+    .thanksBookingSec .thnksBookSec {
+        flex-direction: column;
+    }
+    .thanksBookingSec .thnkbookHeading {
+        padding-bottom: 15px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .thanksBookingSec .paraLi {
+        text-align: center;
+    }
+    .thanksBookingSec .thnksbookUl li {
+        align-items: self-start;
+        gap: 0px;
+        grid-gap: 0;
+    }
+    .thanksBookingSec .thnksbookUl li:not(:last-child) .paraLi {
+        padding-bottom: 10px;
+    }
+    .thanksBookingSec .iconCheckmark .IoiconCheckmark {
+        font-size: 50px;
+    }
+    .cartpageSec .cartTitle {
+        font-weight: bold;
+    }
+    .currencyConvertation .cartRightSecondBlock .cartDateRangeTitle {
+        text-align: left;
+    }
+    .cartpageSec .spotTitle {
+        padding: 10px 20px;
+    }
+    .paypalDebitUL {
+        justify-content: center;
+    }
+    .currencyConvertation .rateTitlecurrency {
+        padding-bottom: 5px;
+    }
+    .checkoutAccTitle {
+        font-size: 15px;
+    }
+    .cartFormCoupon .form-row {
+        flex-wrap: wrap;
+    }
+    .checkoutAccordian .commonInnerblock,
+    .fullwidthInnerblock {
+        flex-direction: column;
+    }
+    .debitHistory .cartFormCoupon {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+    .checkoutAccordian .accordion-button {
+        padding: 10px 10px 10px 0;
+    }
+    .checkoutAccordian .accordion-button::after {
+        width: 13px;
+        height: 13px;
+    }
+    .checkoutAccordian .accordion-button:not(.collapsed)::after {
+        top: -2px;
+    }
+    .checkoutAccordian .accordion-button::after {
+        top: 4px;
+    }
+    .checkoutpageSec .checkoutAgreebtn {
+        margin: 20px 0;
+    }
+    .checkoutAgreebtn .termsHeading {
+        font-size: 12.5px;
+    }
+    .checkoutpageSec .checkoutPaynowBtn.moreTourBtn a {
+        font-size: 15px;
+    }
+    .shopBrochuresUL li {
+        max-width: 32%;
+    }
+    .protocolsdflex {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .protocolsdflex {
+        flex-direction: column;
+    }
+    .UL-reviewsCustomerSec {
+        gap: 15px;
+        grid-gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .protocolsdflex {
+        align-items: center;
+    }
+    .UL-reviewsCustomerSec {
+        padding: 0 15px 0 0;
+    }
+    .protocolsdflex br {
+        display: none;
+    }
+    .reviewsCustomerSecCard {
+        flex-direction: column;
+    }
+    .reviewsCustomerSecCard .cardProfile {
+        justify-content: space-between;
+    }
+    .shopCustomerReviewSec .para,
+    .shopCustomerReviewSec .cardTitle,
+    .shopCustomerReviewSec .cardBottomheading {
+        text-align: left;
+    }
+    .shopCustomerReviewSec .rate_name {
+        text-align: right;
+    }
+    .shopBrochuresUL {
+        justify-content: center;
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .shopBrochuresSec .protocolsdflex {
+        align-items: center;
+    }
+    .futureTravel_details {
+        padding-left: 0;
+    }
+    .futureTravel_details {
+        margin-top: 20px;
+    }
+    .aboutLeftfixedsec {
+        border: 1px solid #004963;
+        border-right: 1px solid #004963;
+        width: 100%;
+        text-align: center;
+    }
+    .VerticalSliderAbout {
+        padding-top: 15px;
+    }
+    .aboutOwnerInfo ul li {
+        font-size: 14px;
+    }
+    .aboutLeftfixedsec {
+        padding-bottom: 15px;
+        text-align: left;
+    }
+    .futureTravel_details p.paraTitle {
+        font-size: 16px;
+    }
+    .futureTravel_details p.paraTitle {
+        margin-bottom: 10px;
+    }
+    .shopImgSec ul {
+        justify-content: center;
+    }
+    .shopImgSec ul {
+        gap: 2px;
+        grid-gap: 2px;
+    }
+    .protocolsLeftsec {
+        font-size: 15px;
+        display: block;
+        width: 100%;
+    }
+    .protocolsdflex {
+        align-items: flex-start;
+    }
+    .shopAboutSec .gallery-thumbs .swiper-wrapper {
+        gap: 20px;
+        grid-gap: 20px;
+    }
+    .shopAboutSec .pack_memberInfoSec {
+        gap: 15px;
+        grid-gap: 15px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .aboutLeftfixedsec .members_numbers_info {
+        margin-bottom: 0;
+    }
+    .TrendingDeals_tabs .SliderSec1 {
+        padding: 0 5px;
+    }
+    .TrendingDeals_tabs .card-trading-deals {
+        box-shadow: 1px 0 2px rgb(0 73 99 / 40%);
+    }
+    .TrendingDeals_tabs .tabcontent {
+        padding: 0;
+    }
+    .TrendingDeals_tabs .card-trading-deals {
+        padding: 12px;
+    }
+    .TrendingDeals_tabs .slick-slider {
+        margin: 0;
+    }
+    .btnFilteranchor.filetrHeaderResetApplyBtn {
+        justify-content: start;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+    }
+    .filetrHeaderResetApplyBtn .resetFilterAnch {
+        margin-top: 0;
+    }
+    .filterModal_Listing .filetrHeaderResetApplyBtn.commonFilterStyle {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+    .filterModal_Listing .filetrHeaderResetApplyBtn .resetFilterAnch,
+    .filterModal_Listing .filetrHeaderResetApplyBtn .applyFilterbtnAnch {
+        padding: 3px 15px;
+        font-size: 13px;
+    }
+    .itenrywdFullMobile ul {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .packItineryTitle ul li {
+        font-size: 16px;
+    }
+    .customize_tab4_sec {
+        visibility: visible;
+        opacity: 1;
+    }
+    .tab4Customize a,
+    .tab4Customize .hydrated {
+        color: #FFF;
+    }
+    .tab4Customize a:hover,
+    .tab4Customize a:hover .hydrated {
+        color: #004963;
+    }
+    .ItineraytabSec .cityBreakup,
+    .ItineraytabSec .stayItemTab,
+    .ItineraytabSec .mealsTab.itemsTabContentCommon,
+    .ItineraytabSec .mealsTab,
+    .ItineraytabSec .guestNationalityTab.itemsTabContentCommon,
+    .ItineraytabSec .guestNationalityTab,
+    .ItineraytabSec .transportationTab,
+    .ItineraytabSec .transportationTab.itemsTabContentCommon {
+        overflow: inherit;
+        overflow-wrap: anywhere;
+    }
+    .support-HelpcenterSec .helpHeading {
+        font-size: 20px;
+        line-height: inherit;
+        text-align: center;
+    }
+    .support-HelpcenterSec .chat-help-center a {
+        padding: 11px 26px;
+        font-size: 14px;
+        line-height: inherit;
+    }
+    .support-HelpcenterSec {
+        padding: 80px 0;
+    }
+    .support-HelpcenterSec .chat-help-center a img {
+        margin-right: 11px;
+        max-width: 20px;
+    }
+    .support-HelpcenterSec .healp-center-block-head {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .support-HelpcenterSec .chat-help-center {
+        margin-top: 20px;
+    }
+    .RightBannerContact {
+        position: relative;
+        align-items: flex-start;
+    }
+    .sales_partners.active .FormContactPage.contact_absolute_form {
+        width: 100%;
+        position: relative;
+        top: 15px;
+        left: 0;
+        right: 0;
+    }
+    .RightBannerContact {
+        flex-direction: column;
+    }
+    .RightBannerContact br {
+        display: block;
+    }
+    .sales_partners {
+        width: 100%;
+    }
+    .tabPackageSec.details_tabPackageSec {
+        margin-top: 15px;
+    }
+    .bannerRightSec .bannerRightTourHighlights {
+        padding: 10px 0px 5px 0px;
+    }
+    .joinusSocialSec ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        grid-gap: 10px;
+        justify-content: center;
+    }
+    .joinusSocialSec .contactTitle {
+        text-align: center;
+    }
+    .joinusSocialSec ul li a {
+        margin-bottom: 0;
+    }
+    .contactAddressSec {
+        padding: 50px 0;
+    }
+    .contactTitle,
+    .joinusSocialSec .contactTitle {
+        font-size: 23px;
+        margin-bottom: 15px;
+        line-height: inherit;
+    }
+    .addressSec {
+        gap: 30px;
+        grid-gap: 30px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        grid-column-gap: 60px;
+        justify-content: space-between;
+    }
+    .contactAddressSec .addressDetailssec:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    .addressSec address {
+        margin: 0;
+    }
+    .addressSec address br {
+        display: none;
+    }
+    .joinusSocialSec {
+        padding-top: 60px;
+    }
+    .contactTitle br {
+        display: none;
+    }
+    .FormContactPage.contact_absolute_form {
+        width: 100%;
+        position: relative;
+        top: 20px;
+        left: 0;
+        display: block !important;
+    }
+    .mobile-view-tabs-contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        grid-gap: 30px;
+    }
+    .mobile-view-tabs-contact {
+        display: flex;
+    }
+    .desktop-view-tabs-contact {
+        display: none;
+    }
+    .contactBannerSec {
+        padding: 30px 0 30px;
+    }
+    .shop_main_toursSec .customerReviewsShopRight .simple-pagination ul {
+        text-align: center;
+    }
+    .shop_main_toursSec .blogPage .btn-filter-products-mobile {
+        width: 245px !important;
+        font-size: 12px;
+        margin-left: 0;
+        height: 38px;
+    }
+    #btn-dropdown-shop.active .blogPage .product-filters {
+        display: block;
+    }
+    .shop_main_toursSec .mobileFilterClick {
+        margin-bottom: 20px;
+    }
+    .shop_main_toursSec .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        width: 120px;
+    }
+    .blogPage .profile-page-top .profile-buttons .social ul li {
+        margin-bottom: 5px;
+    }
+    .blogPage .profile-page-top {
+        margin-bottom: 30px;
+    }
+    .shop_main_toursSec .mobileFilterClick {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .whatTraveloneLeft .travelOneSec_travel.cardTitle,
+    .realTimeSupportRight .travelOneSec_travel.cardTitle {
+        color: #004963;
+        text-align: left;
+        margin-top: 0;
+    }
+    .whatTraveloneCard {
+        padding: 15px;
+    }
+    .whatTraveloneRight {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .realTimeSupportSec .travelOneSec_travel.cardTitle {
+        margin-top: 0;
+        text-align: left;
+    }
+    .realTimeSupportSec .travelOneSec_travel.cardTitle br {
+        display: none;
+    }
+    .whyDevelopSec .aboutresultUL {
+        margin-top: 25px;
+    }
+    .about-page .contactTitle {
+        margin-bottom: 15px;
+    }
+    .aboutresultUL li {
+        flex-basis: 48%;
+    }
+    .whyDevelopSecLeft {
+        padding: 15px 25px 15px 0;
+    }
+    .howTravelWorkSec .boxborderSec:not(last-child) {
+        margin-bottom: 5px;
+    }
+    .howTravelWorkSec .boxborderSec {
+        min-height: 310px;
+    }
+    .howTravelWorkSec .heading-beliesec {
+        font-size: 16px;
+    }
+    .howTravelWorkSec .para.text-center {
+        margin-bottom: 10px;
+    }
+    .howTravelWorkSec .para.text-center br {
+        display: none;
+    }
+    .realTimeSupportUl.aboutresultUL {
+        margin-top: 25px;
+    }
+    .realTimeSupportUl.aboutresultUL li {
+        flex: 48%;
+        align-items: baseline;
+    }
+    .realTimeSupportUl.aboutresultUL li .img-fluid {
+        width: 15px;
+    }
+    .realTimeSupportRight {
+        padding-left: 0;
+    }
+    .whyDevelopSec .realTimeSupportRight {
+        padding-left: 0px;
+    }
+    .customerTraveloneSec button.slick-next.slick-arrow {
+        right: 3px;
+        margin-top: -75px;
+    }
+    .customerTraveloneSec button.slick-prev.slick-arrow {
+        left: 3px;
+        z-index: 9;
+        margin-top: -75px;
+    }
+    .customerTraveloneSec .slick-slider .slick-arrow {
+        top: 95px;
+        width: 10px;
+    }
+    .customerTraveloneSec .slick-initialized .slick-slide {
+        align-items: center;
+        padding: 15px;
+    }
+    .customerTraveloneSec .para.customerPara {
+        margin-bottom: 5px;
+    }
+    .customerTraveloneSec .slick-track,
+    .customerTraveloneSec .slick-list {
+        display: flow-root;
+    }
+    .customerTraveloneSec .slick-initialized .slick-slide {
+        justify-content: center;
+        align-items: center;
+    }
+    .OurTeam_about .someofinvest-main {
+        justify-content: center;
+        column-gap: normal;
+        grid-column-gap: normal;
+        gap: 25px;
+        grid-gap: 25px;
+    }
+    .OurTeam_about .card-someinvest {
+        flex-basis: 30%;
+        justify-content: center;
+    }
+    .plnTripBtn.detail-travelagent-btn a {
+        flex: auto;
+        padding: 5px 10px;
+    }
+    .starTravel_agent {
+        justify-content: center;
+    }
+    .startSellingPlanOneSec .form-group .float-right {
+        float: left;
+        margin-top: 20px;
+    }
+    .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        width: 150px;
+    }
+    .listing_details_compare.tabPackageSec .tabcontent {
+        padding: 0 15px;
+    }
+    .select_listing_page.greeceToursSec .sortbyGreece {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .select_listing_page .sortBy_togleSwtchSec {
+        gap: 10px;
+        justify-content: end;
+        grid-gap: 10px;
+    }
+    .select_listing_page .compare_button a {
+        margin-right: 0;
+        padding: 9px 20px;
+    }
+    .select_listing_page .filterTourLeft {
+        margin-top: 0;
+    }
+    .select_listing_page .filterGreece {
+        padding: 4px 13px;
+    }
+    .select_listing_page .greecetourHeading_main {
+        margin-bottom: 20px;
+    }
+    .select_listing_page .sortbyGreece .select-box {
+        width: 153px;
+    }
+    .select_listing_page .titleSec {
+        font-size: 21px;
+    }
+    .packgesSecListView .cityBreakup {
+        align-items: flex-start !important;
+    }
+    .packgesSecListView .cityBreakup img.packStyleIcons {
+        margin-top: 7px !important;
+    }
+    .tabPackageSec .tabPackageSecrow img.packStyleIconsdinner {
+        width: auto !important;
+        margin-top: 1px !important;
+    }
+    .ItineraytabSec .packStyleIconsboat,
+    .ItineraytabSec .packgesSecListView img.packStyleIconsdinner,
+    .ItineraytabSec .packgesSecListView img.packStyleIcons1,
+    .ItineraytabSec .packgesSecListView img.packStyleIconsCancel {
+        margin-top: 1px !important;
+    }
+    .sortbyGreece .select-box {
+        width: 225px !important;
+    }
+    .listing-slider .imgHeadingstep {
+        font-size: 12px !important;
+    }
+    .greece_themeSec.sectionBgcolor {
+        height: 40vh !important;
+    }
+    .iconWrap .tooltip {
+        width: 150px !important;
+    }
+    .home-page .whyTravelCols:last-child .cardSec {
+        margin-bottom: 10px;
+    }
+    .home-page .PlanTripSec .img_content {
+        padding-top: 0;
+    }
+    .home-page .about-result-orientdSec {
+        display: block;
+    }
+    .home-page .result-orientRight {
+        display: block;
+        width: 100%;
+    }
+    .about-page .howTravelWorkSec .boxborderSec:not(last-child) {
+        margin-bottom: 0;
+    }
+    .about-page .howTravelWorkSec {
+        margin-bottom: 25px !important;
+    }
+    .about-page .howTravelWorkSec {
+        margin-bottom: 30px !important;
+    }
+    .travel_agency-page .OurvaluesbeliefsSec.Section_common_padding {
+        padding-bottom: 25px !important;
+        padding-top: 25px !important;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneFlex,
+    .about-page .whatTraveloneSec .whatTraveloneFlex {
+        flex-direction: column;
+        gap: 20px;
+        grid-gap: 20px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneRight,
+    .about-page .whatTraveloneSec .whatTraveloneRight {
+        gap: 20px;
+        margin-top: 0;
+        grid-gap: 20px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneCard,
+    .about-page .whatTraveloneSec .whatTraveloneCard {
+        min-height: 125px;
+        flex-basis: 35%;
+    }
+    .listing-page .greeceToursSec .toggleSwitchSec {
+        display: none;
+    }
+    .listing-page .greeceToursSec .sortbyGreece {
+        top: 0;
+    }
+    .listing-page .greeceToursSec .filterTourLeft {
+        align-items: center;
+    }
+    .listing-page .greeceToursSec .listing_cols_data {
+        margin-top: 15px;
+    }
+    .ot-sdk-row {
+        justify-content: center;
+    }
+    .wishlist_notification .otFlat.bottom.ot-wo-title .ot-sdk-columns .wishlist_popup_content {
+        font-size: 13px !important;
+        font-weight: bold !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: #004963 !important;
+    }
+    .megamenuSec .top-cart .mobile-d-block-search {
+        top: -30px;
+    }
+    .home-page .tabPackageSec .select:after {
+        z-index: 9;
+    }
+    .home-page .resultOrintSec .about-result-orientdSec .contactTitle,
+    .home-page .resultOrintSec .result-orientLeft .para {
+        margin-bottom: 25px;
+    }
+    .aboutresultUL {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .about-page .whyDevelopSec .realTimeSupportSec {
+        grid-template-columns: auto;
+    }
+    .about-page .whatTraveloneSec {
+        padding: 15px 0 15px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneFlex,
+    .about-page .whatTraveloneSec .whatTraveloneFlex {
+        display: grid;
+    }
+    .about-page .howTravelWorkSec .contactTitle {
+        margin-bottom: 5px !important;
+    }
+    .about-page .resultOrintSec .result-orientRight {
+        padding: 0 !important;
+    }
+    .about-page .whyDevelopSec .realTimeSupportRight .aboutresultUL {
+        justify-content: flex-start;
+    }
+    .travel_agency-page .realTimeSupportSec {
+        grid-template-columns: auto;
+    }
+    .travel_agency-page .howTravelWorkSec .itsSimpleCols:nth-child(1) .boxborderSec,
+    .travel_agency-page .howTravelWorkSec .itsSimpleCols:nth-child(2) .boxborderSec {
+        margin-bottom: 15px;
+    }
+    .travel_agency-page .howTravelWorkSec .itsSimpleCols:nth-child(3) .boxborderSec,
+    .travel_agency-page .howTravelWorkSec .itsSimpleCols:nth-child(4) .boxborderSec {
+        margin-bottom: 0px;
+    }
+    .travel_agency-page .aboutresultUL.realTimeSupportUl {
+        grid-template-columns: 1fr 1fr;
+    }
+    .travel_agency-page .aboutresultUL.realTimeSupportUl span {
+        margin-top: 1px;
+    }
+    .listing-detail-page .detail-travelagent-btn {
+        grid-template-columns: auto auto;
+    }
+    .profile_page .protocolsdflex {
+        grid-template-columns: auto;
+    }
+    .profile_page .protocolsLeftsec {
+        padding-right: 0;
+    }
+    .profile_page .shopallToursSec .protocolsLeftsec {
+        padding-right: 0;
+    }
+    .profile_page .profile-buttons .buttons {
+        margin-right: 0px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .plan_my_trip_tours_page .mob-wd-full-filter {
+        width: 100% !important;
+    }
+    .plan_my_trip_tours_page .select_listing_page .sortBy_togleSwtchSec {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 25px;
+    }
+    .plan_my_trip_tours_page .select_listing_page .compare_button {
+        display: grid;
+        margin: 0 !important;
+        width: 100%;
+    }
+    .listing_details_padding .titleSec,
+    .listing_details_padding .travelOneSec,
+    .listing_details_padding .title_ready_pay {
+        font-size: 22px;
+    }
+    .listing_details_compare.details_tabPackageSec.tabPackageSec .tab button {
+        font-size: 17px;
+        margin-right: 10px;
+        padding: 0px 30px 0px 0;
+    }
+    .listing_details_compare .negoiate_button_right a {
+        font-size: 13.5px;
+    }
+    .listing_details_compare .listing_compare_negoiate {
+        flex-direction: column-reverse;
+        margin-top: 10px !important;
+    }
+    .tabPackageSec.details_tabPackageSec.listing_details_compare .select {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .tabPackageSec.details_tabPackageSec.listing_details_compare .multiple-items button.slick-next.slick-arrow,
+    .tabPackageSec.details_tabPackageSec.listing_details_compare .multiple-items button.slick-prev.slick-arrow {
+        bottom: 2px;
+    }
+    .listing_details_padding .greecetourHeading_main {
+        justify-content: center;
+    }
+    .listing_details_compare .list_detailspacks_compare input {
+        left: 50%;
+        top: -23px;
+    }
+}
+@media screen and (max-width:699px) {}
+@media (min-width: 576px) {
+    .navbar .navbar-nav {
+        flex-wrap: wrap;
+    }
+    .videoSliderBannerPopup .modal-dialog {
+        max-width: 592px;
+    }
+    .exampleModal_changehotel .modal-dialog-scrollable {
+        max-width: 95%;
+        margin-top: 130px;
+
+    }
+}
+@media screen and (min-width: 576px) and (max-width:767px) {
+    .navbar .navbar-nav {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    .mobile-wd-half {
+        width: 50%;
+    }
+    .shop_main_toursSec .mobile-wd-half {
+        width: 50%;
+    }
+    .shopAboutSec .swiper-container-wrapper {
+        height: 225px;
+        overflow: hidden;
+    }
+    .SliderBannerSec .guestnationalitySec .fixCheckboxsc .form-check .form-check-label {
+        padding: 20px 15px 15px;
+        width: 125px;
+    }
+    .about-vertical-title {
+        font-size: 30px;
+        line-height: 22px;
+        top: 35%;
+    }
+    .travelOne_leadingTravelSec .banner-about-title {
+        font-size: 30px;
+        line-height: 30px;
+        padding-left: 30px;
+        letter-spacing: 0.10px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+    }
+    .travelOne_leadingTravelSec .about-travelonebnnr {
+        padding-top: 25px;
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner {
+        font-size: 17px;
+        padding: 16px 35px;
+        line-height: inherit;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner::before {
+        width: 265px;
+        height: 85px;
+    }
+    .listing-page .greeceToursSec .filterTourLeft {
+        align-items: center;
+        flex-direction: row;
+        gap: 0px;
+    }
+    .listing-page .greeceToursSec .filterGreece {
+        padding: 2.5px 30px;
+    }
+    .home-page .PlanTripSec .center-content-block .img_content .titleSec .titleSpan,
+    .home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p {
+        font-size: 17.5px !important;
+    }
+}
+@media screen and (max-width:575px) {
+    .blogPage .nav-tabs-profile .nav-item {
+        width: 100%;
+        margin-bottom: 5px;
+        display: list-item;
+    }
+    .blogPage .nav-tabs-profile .nav-item .nav-link {
+        border: 1px solid rgba(0, 0, 0, 0.06) !important;
+        margin-right: 0 !important;
+    }
+    .shopallToursSec .allToursDflex {
+        gap: 10px;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+    .protocolsRightsec {
+        flex: auto;
+        width: 100%;
+    }
+    .shopallToursSec .allToursUL {
+        flex: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .shopallToursSec .allToursUL li a {
+        line-height: 13px;
+    }
+    .shopallToursSec .allToursUL li:not(:last-child) a {
+        border-right: 1px solid #0f97c7;
+        padding-right: 10px;
+    }
+    .shopallToursSec .allToursTitle {
+        margin-bottom: 10px;
+    }
+    .shopImgSec ul li {
+        flex-basis: 49%;
+    }
+    .protocolsdflex {
+        align-items: self-start;
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    ul.shopNavMenuUL a,
+    .coupondetailsShop span,
+    .futureTravel_details p,
+    .protocolsRightsec p.paraTitle,
+    .readmore_anchor_btn,
+    .protocolsRightsec p,
+    .accordianShopmainSec .accordion-button:not(.collapsed),
+    .accordianShopmainSec .accordion-button,
+    .customerReviewsShopUL .custom_reviews_rate,
+    .shop_memberInfo,
+    .shop_lastSeenSec li,
+    .accordianShopmainSec ul li.para,
+    .accordianShopmainSec .para_accTitle {
+        line-height: inherit;
+    }
+    .accordianShopmainSec .para.para_accTitle,
+    .accordianShopmainSec ul li.para,
+    .accordianShopmainSec .para_accTitle {
+        text-align: left;
+    }
+    .accordianShopmainSec .accordion-button:not(.collapsed)::after,
+    .accordianShopmainSec .accordion-button::after {
+        background-size: 50%;
+    }
+    .shopBrochuresUL li {
+        max-width: 48%;
+    }
+    .taBItinerayfixCols {
+        width: 85px;
+        min-width: 85px;
+    }
+    .taBItinerayrows {
+        width: calc(100% - 85px);
+        left: 90px;
+    }
+    .packMobileStyle .packagesSecWidth1 {
+        width: 85px;
+        min-width: 85px;
+    }
+    .packMobileStyle .multiple-items {
+        width: calc(100% - 85px);
+        position: relative;
+        left: 90px;
+    }
+    .packMobileStyle .greenLightBg .itemsTabContentCommon.itemsTabContentBold {
+        min-height: 57.2px;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lastItemTab {
+        min-height: 282px;
+    }
+    .packMobileStyle .tabitemsContent .lastItemTab .itemsTabContentBold {
+        font-size: 12px;
+        line-height: inherit;
+    }
+    .packMobileStyle .btnpackages a {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .packMobileStyle .slick-initialized .slick-list.draggable {
+        margin-top: 0;
+    }
+    .TrendingDeals_tabs .packMobileStyle .slick-initialized .slick-list.draggable {
+        margin-top: 10px;
+    }
+    .TrendingDeals_tabs .BstSellerDeals,
+    .TrendingDeals_tabs .RefundableTour {
+        top: 20px;
+    }
+    .listing_details_compare .packagesSecWidth1 {
+        width: 85px;
+        min-width: 85px;
+    }
+    .listing_details_compare .multiple-items {
+        width: calc(100% - 85px);
+        position: relative;
+        left: 90px;
+    }
+    .listing_details_compare .greenLightBg .itemsTabContentCommon.itemsTabContentBold {
+        min-height: 57.2px;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .listing_details_compare .tabitemsContent .lastItemTab .itemsTabContentBold {
+        font-size: 12px;
+        line-height: inherit;
+    }
+    .listing_details_compare .btnpackages a {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .listing_details_compare .slick-initialized .slick-list.draggable {
+        margin-top: 0;
+    }
+    .listing_details_compare .slick-initialized .slick-list.draggable {
+        margin-top: 10px;
+    }
+    .tabPackageSec .tabcontent {
+        padding: 15px 15px 50px;
+    }
+    .TrendingDeals_tabs .tabcontent {
+        padding: 0;
+    }
+    .tabitemTitle {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .itemsTabContentCommon {
+        font-size: 11px;
+    }
+    .transportationTab.itemsTabContentCommon,
+    .transportationTab {
+        overflow-wrap: anywhere;
+    }
+    .mobile-wd-half {
+        width: 100%;
+    }
+    .listing_cols_data .card-trading-deals {
+        margin: 0 0px 20px;
+    }
+    .greeceToursSec .sortbyGreece {
+        position: absolute;
+        top: 91px;
+        left: auto;
+        right: 12px
+    }
+    .greecetourHeading_main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .offcanvas-start.filterModal_Listing {
+        width: 271px;
+    }
+    .filterModal_Listing input.form-control {
+        padding: 5px;
+    }
+    .filterModal_Listing .customtypePrice .input-group,
+    .toPriceFilt {
+        padding-right: 10px;
+    }
+    .tabitemsContent {
+        padding: 5px;
+    }
+    .packgesSecListView {
+        padding: 0px 5px 0px 5px;
+    }
+    .packTabContentDv {
+        padding-bottom: 5px;
+    }
+    .contactDflex {
+        flex-direction: column;
+    }
+    .joinusSocialSec ul li {
+        flex: 1;
+    }
+    .joinusSocialSec ul {
+        flex-direction: column;
+    }
+    .shop_main_toursSec .mobile-wd-half {
+        width: 100%;
+    }
+    .shop_main_toursSec .mobileFilterClick {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        grid-gap: 10px;
+        flex-direction: column-reverse;
+    }
+    .whatTraveloneFlex {
+        flex-direction: column;
+    }
+    .whatTraveloneCard {
+        flex-basis: 48%;
+    }
+    .whatTraveloneLeft {
+        padding-right: 0;
+    }
+    .whatTraveloneRight {
+        margin-top: 25px;
+    }
+    .realTimeSupportSec {
+        flex-direction: column;
+    }
+    .whyDevelopSecLeft {
+        padding: 15px;
+    }
+    .realTimeSupportSec .travelOneSec_travel.cardTitle,
+    .realTimeSupportSec .contactTitle,
+    .about-page .contactTitle,
+    .whatTraveloneLeft .travelOneSec_travel.cardTitle,
+    .realTimeSupportRight .travelOneSec_travel.cardTitle {
+        text-align: center;
+    }
+    .about-page .para {
+        text-align: center;
+    }
+    .whyDevelopSec .aboutresultUL {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-gap: 15px;
+    }
+    .aboutresultUL li {
+        flex-basis: auto;
+    }
+    .mobileTestimonialSec .slick-slider .slick-arrow {
+        top: 45%;
+    }
+    .listing-page .greeceToursSec .filterTourLeft a {
+        width: auto;
+    }
+    .listing-page .greeceToursSec .filterGreece {
+        text-align: center;
+    }
+    .listing-page .greece_themeSec {
+        padding-top: 15px;
+    }
+    .home-page .PlanTripSec .center-content-block .img_content .titleSec .titleSpan,
+    .home-page .PlanTripSec .PlanTrip .center-content-block .img_content .title_subtitle p {
+        font-size: 15.5px !important;
+    }
+    .result-orientLeft {
+        padding: 20px 15px 20px 15px;
+    }
+    .refund_request_page .refundBlock-button button {
+        float: none;
+        margin-bottom: 25px;
+    }
+    .listing_details_compare .custom_height_pack_lastTab.btnpackages {
+        margin-bottom: 5px;
+    }
+    .listing_details_compare .select_listing_page input,
+    .listing_details_compare .list_detailspacks_compare input {
+        width: 33px;
+        height: 33px;
+    }
+    .listing_details_padding .greecetourHeading_main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .listing_details_compare .negoiate_button_right {
+        flex-direction: column;
+    }
+    .listing_details_compare .negoiate_button_right a {
+        margin-right: 0;
+    }
+    .listing_details_compare .negoiate_button_right button {
+        margin-right: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+@media screen and (max-width:411px) {
+    .shoppageDflex {
+        flex-wrap: wrap;
+        align-items: self-start;
+        justify-content: start;
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .protocolsLeftsec {
+        font-size: 15px;
+    }
+    .lastItemTab {
+        min-height: 347px;
+    }
+    .packMobileStyle .sliderSpaceBlnk {
+        min-height: 270px;
+    }
+    .sightseeingTab.itemsTabContentCommon,
+    .sightseeingTab {
+        min-height: auto;
+        overflow: hidden auto;
+    }
+    .tabPackageSec .tabPackageSecrow .slick-slide img.packStyleIcons,
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIcons1,
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsCancel,
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIcons2,
+    .tabPackageSec .tabPackageSecrow .CheckmarkUL img.packStyleIconsboat,
+    .tabPackageSec .tabPackageSecrow img.packStyleIconsdinner,
+    .tabPackageSec .tabPackageSecrow img.packStyleIcons-bus {
+        height: auto !important;
+    }
+    .tabPackageSec .multiple-items button.slick-next.slick-arrow {
+        left: auto;
+        right: 0;
+    }
+    .tabPackageSec .multiple-items button.slick-prev.slick-arrow {
+        left: auto;
+        right: 35px;
+    }
+    .howTravelWorkSec .boxborderSec {
+        min-height: auto;
+    }
+    .itsSimpleCols {
+        width: 100%;
+    }
+    .OurvaluesbeliefsSec .ecosystem_border {
+        margin-bottom: 15px;
+        align-items: center;
+    }
+    .OurvaluesbeliefsSec .subheading-beliesec {
+        text-align: center;
+    }
+}
+@media screen and (min-width:501px) and (max-width:539px) {
+    .cardSec {
+        min-height: 318px;
+    }
+    .DealsRating .pActivitys {
+        min-height: 70px;
+    }
+}
+@media screen and (min-width:501px) and (max-width:767px) {}
+@media screen and (max-width:503px) {
+    .customerTraveloneSec .slick-initialized .slick-slide {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .customerTraveloneSec .slick-slider .slick-arrow {
+        top: 130px;
+        width: 13px;
+    }
+    .customerTraveloneSec .choosecardinner .para,
+    .choosecardinner .heading {
+        text-align: center;
+    }
+}
+@media screen and (max-width:500px) {
+    .ftPlayStore_icons {
+        width: 60%;
+    }
+    .btn-custom {
+        padding: 10px 30px;
+        display: inline-block;
+        text-align: center;
+    }
+    .form-control-input {
+        width: 100%;
+    }
+    .form-control-input {
+        padding: 12px 15px;
+    }
+    .btn-Subscribe {
+        padding: 9px 15px;
+    }
+    .footer .para {
+        line-height: inherit;
+        font-size: 13.5px;
+    }
+    .footerLogo {
+        margin-bottom: 15px;
+    }
+    .flagLogo {
+        margin-top: 15px;
+    }
+    .footer address {
+        margin-bottom: 0;
+    }
+    .footer address,
+    .ftCallMail a {
+        font-size: 13.5px;
+        line-height: inherit;
+    }
+    .footer .ul_just_space_between li {
+        margin-bottom: 5px;
+    }
+    .cardSec {
+        min-height: auto;
+    }
+    .whyTravelCols {
+        width: 100%;
+    }
+    .navbar-light .navbar-toggler-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .copyrightTitle br {
+        display: none;
+    }
+    .slick-dots li {
+        width: 10px;
+        height: 10px;
+        margin: 0 6px;
+    }
+    .cardSec {
+        margin-bottom: 15px;
+    }
+    .header-logo {
+        width: 145px;
+        margin-top: -4px;
+    }
+}
+@media screen and (max-width:525px) {
+    .weAreWidthMobile {
+        width: 100%;
+    }
+    .WeareDifferent .wecardbox {
+        margin-bottom: 15px;
+        min-height: auto;
+    }
+    .WeareDifferent .img-fluid {
+        width: 30px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width:575px) {
+    .shopAboutSec .swiper-container {
+        min-height: auto;
+    }
+    .shopAboutSec .swiper-container-wrapper {
+        height: 200px;
+        overflow: hidden;
+    }
+}
+@media (max-width: 479px) {
+    .shopAboutSec .swiper-container-wrapper {
+        height: auto;
+        overflow: hidden;
+    }
+    .shopAboutSec .gallery-thumbs .swiper-wrapper {
+        gap: 0px;
+        grid-gap: 0;
+    }
+    .shopAboutSec .pack_memberInfoSec {
+        flex-direction: column;
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    #onetrust-consent-sdk #onetrust-banner-sdk {
+        width: 95% !important;
+        padding: 6px !important;
+        margin-bottom: 10px;
+    }
+    #onetrust-consent-sdk #onetrust-banner-sdk #onetrust-policy-text {
+        padding: 0;
+    }
+    .about-page .whatTraveloneSec .contactTitle {
+        font-size: 20px;
+    }
+    .about-page .someofinvest-main {
+        grid-template-columns: auto;
+    }
+    .travel_agency-page .howTravelWorkSec .itsSimpleCols:nth-child(3) .boxborderSec {
+        margin-bottom: 15px;
+    }
+    .travel_agency-page .aboutresultUL.realTimeSupportUl {
+        grid-template-columns: auto;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneLeft .contactTitle {
+        font-size: 20px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneRight .para {
+        min-height: 35px !important;
+    }
+}
+@media screen and (max-width:499px) {
+    .TourboxsLeftSec {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+    .tourMain {
+        width: 100%;
+        min-height: auto;
+    }
+    .tab-nav {
+        margin-bottom: 15px;
+    }
+    .TourboxsRightSec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .itenrywdFullMobile {
+        width: 100%;
+        justify-content: center;
+    }
+    .itenrywdFullMobile ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px;
+        align-items: center;
+        gap: 2px;
+    }
+    .titleMarginPackIti {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+    .customize_tab4_sec .rightFlexProperty {
+        justify-content: center;
+    }
+    .packItineryTitle ul li {
+        font-size: 17px;
+    }
+    .packButtonTripSec {
+        justify-content: center;
+    }
+    .packButtonTripSec {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .itinerary_tab_Bg2 .packItineryTitle ul li {
+        display: initial;
+    }
+}
+@media screen and (max-width:470px) {
+    .top_dropdown_lang .select-box__list .img-fluid,
+    .top_dropdown_lang .select-box__value .select-box__input-text img {
+        width: 22px;
+    }
+    .top_dropdown_admin img {
+        width: 20px;
+    }
+    .top_drop_jumbo .select-box__input-text {
+        font-size: 12px;
+    }
+    .top_header_fonts .header_icon_down_arrows {
+        font-size: 11px;
+    }
+    .top-wishlist {
+        margin: 0 10px;
+    }
+    .top_drop_jumbo .select-box__icon {
+        right: -13px;
+    }
+    .top_drop_jumbo {
+        margin-right: 15px;
+    }
+    .top_drop_jumbo .select-box__list {
+        top: 20px;
+    }
+    .megamenuSec .top_drop_jumbo .select-box__option {
+        font-size: 11px;
+    }
+    .megamenuSec .top_drop_jumbo li label {
+        padding: 8px 15px;
+    }
+    .header-logo img {
+        margin-top: -7px;
+    }
+    .cartCounter {
+        width: 15px;
+        height: 15px;
+        font-size: 12px;
+        line-height: 15px;
+        top: -1px;
+        left: 17px;
+    }
+    .top-cart .mobile-d-block-search .search-icons-head.md.hydrated,
+    .topRight_iconss .top-cart a i,
+    .topRight_iconss .top-wishlist a i {
+        font-size: 22px;
+        top: 15px;
+    }
+    .topRight_iconss {
+        gap: 10px;
+        grid-gap: 10px;
+    }
+    .top-cart .mobile-d-block-search {
+        right: 15px;
+    }
+    .megamenuSec.header .mobile-menu-trigger {
+        width: 21px;
+    }
+    .mobile-fix-wd-dropdown {
+        width: 30%;
+    }
+    .header-logo {
+        width: 135px;
+        margin-top: 1px;
+        margin-left: 0;
+    }
+    .megamenuSec.header .menu {
+        width: 265px;
+    }
+    .UsdPersonBtnSec {
+        flex-direction: column;
+    }
+    .UsdPersonBtn1 {
+        margin-bottom: 10px;
+    }
+    .mobileSocialMediaFix .Social_shop_icons .img-fluid {
+        width: 12px;
+    }
+    .top-cart .mobile-d-block-search .search-icons-head.md.hydrated,
+    .topRight_iconss .top-cart a i,
+    .topRight_iconss .top-wishlist a i {
+        font-size: 22px;
+        top: 19px;
+        right: 5px;
+    }
+}
+@media screen and (max-width:439px) {
+    .explorerBlock {
+        flex-direction: column;
+    }
+    .cartSec4Inner .pActivitys,
+    .cartSec4Inner .pPlaces,
+    .cartSec4Inner .pActivitys2,
+    .cartRefundble,
+    .cartRefundbleDate,
+    .cartUlSec ul li a,
+    .fstCartTitleRight .pActivitys,
+    .cartRightSecondBlock .cartDateRangeTitle,
+    .cartpageSec span.DealsheadingRed.text-capitalize,
+    .cartRightDueSec .para,
+    .cartpageSec .cartsec1 li a,
+    .cartpageSec .cartsec1 li {
+        font-size: 12px;
+    }
+    .cartpageSec .cartTitle {
+        font-size: 15px;
+    }
+    .cartTravelTitle,
+    .cartTravelTitle2,
+    .totalCartT,
+    .cartDateRangeTitle,
+    .cartDisCoupon .inputGroup input {
+        font-size: 13px;
+    }
+    .cartDetailsSec .actplace {
+        flex-direction: column;
+        justify-content: start;
+        align-items: self-start;
+    }
+    .cartBoxShadows {
+        padding: 10px;
+    }
+    .cartpageSec .spotTitle,
+    .cartRightDisountBlock .cartTravelTitle,
+    .cartRightDueSec .cartTravelTitle {
+        font-size: 13px;
+    }
+    .cartSec4Inner {
+        padding: 8px 0px;
+    }
+    .cartRightDueSec .cartTravelTitleRed {
+        font-size: 17px;
+    }
+    .packTotalSec .cartDateRangeTitle {
+        text-align: left;
+    }
+    .cartRightDueSec .para {
+        justify-content: center;
+    }
+}
+@media screen and (max-width:415px) {
+    .UsdPersonSec .titleSec br,
+    .ItsDiscoverSec .titleSec_world br {
+        display: block;
+    }
+}
+@media screen and (min-width:281px) and (max-width:370px) {
+    .sortbyGreece .select-box {
+        width: 145px;
+    }
+    .checkoutpageSec .checkoutPaynowBtn.moreTourBtn a {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:350px) {
+    .header-logo {
+        width: 115px;
+        margin-top: 1px;
+        margin-left: -30px;
+    }
+    .greeceToursSec .titleSec {
+        font-size: 16px;
+    }
+    .greecetourHeading_main .toursResultSpan,
+    .filterHeading {
+        font-size: 12.5px;
+    }
+    ul.bannerSecUl {
+        padding: 10px 0px 10px 0;
+    }
+    .listing-detail-page .SliderBannerSec .detail-explorer-block1,
+    .listing-detail-page .SliderBannerSec .detail-explorer-block2 {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 407px) {
+    .ItineraytabSec .sightseeingTab,
+    .ItineraytabSec .sightseeingTab.itemsTabContentCommon,
+    .ItineraytabSec .transportationTab,
+    .ItineraytabSec .transportationTab.itemsTabContentCommon {
+        overflow: inherit;
+    }
+}
+@media screen and (max-width:317px) {}
+@media screen and (max-width:315px) {
+    .commonInnerblock2 {
+        flex-direction: column;
+    }
+    .checkoutpageSec .checkoutAgreebtn .inputGroup {
+        flex-wrap: nowrap;
+    }
+    .shopallToursSec .lengths_allTours .allToursUL {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:298px) {
+    .packMobileStyle .btnpackages a {
+        padding: 5px;
+    }
+    .packMobileStyle .greenLightBg .itemsTabContentCommon.itemsTabContentBold {
+        min-height: 58.2px;
+    }
+}
+@media screen and (max-width:295px) {
+    .filterGreece {
+        padding: 2px 20px;
+    }
+}
+@media screen and (max-width:280px) {
+    .form-control-input,
+    .btn-Subscribe {
+        width: 100%;
+    }
+    div#collapsibleNavbar {
+        top: -35px;
+    }
+    .mobile-span-bar .head-bar-nav {
+        font-size: 26px;
+        left: -4px;
+    }
+    .offcanvas-start.filterModal_Listing {
+        width: 265px;
+    }
+    .filterModal_Listing input.form-control {
+        padding: 5px;
+    }
+    .sortbyGreece .select-box {
+        width: 140px !important;
+        padding: 8.5px 8px;
+    }
+    .megamenuSec.header .menu {
+        width: 265px;
+    }
+    .btn-custom {
+        display: block;
+    }
+    .tabPackageSec .packMobileStyle .tabPackageSecrow .slick-slide img {
+        height: auto;
+    }
+    .packMobileStyle .sliderSpaceBlnk {
+        min-height: auto;
+    }
+    .stayItemTab.itemsTabContentCommon {
+        min-height: 100px;
+    }
+    .packMobileStyle .sightseeingTab.itemsTabContentCommon {
+        min-height: auto;
+    }
+    .packMobileStyle .transportationTab.itemsTabContentCommon {
+        min-height: auto;
+    }
+    .packMobileStyle .greenLightBg .itemsTabContentCommon.itemsTabContentBold {
+        min-height: auto;
+    }
+    .tabPackageSec .packMobileStyle .packgesSecListView ul li,
+    .tabPackageSec .packMobileStyle .packgesSecListView ul li a {
+        font-size: 11px;
+        align-items: center;
+    }
+    .sightseeingTab.itemsTabContentCommon,
+    .sightseeingTab {
+        min-height: auto;
+        overflow: hidden auto;
+    }
+    .transportationTab,
+    .transportationTab.itemsTabContentCommon {
+        height: auto;
+        overflow: hidden auto;
+    }
+    .whatTraveloneRight {
+        gap: 5px;
+        grid-gap: 5px;
+    }
+    .empowerworldSec .videoRightBlock iframe {
+        height: 150px;
+    }
+}
+.greece_themeSec .slick-arrow {
+    bottom: -40px;
+}
+.tour_related_theme_slider img.img-fluid {
+    border: 0px solid #e0ffdf;
+    border-radius: 50px 50px 0 0;
+}
+.related_viator_tags_slider img.img-fluid {
+    border: 0px solid #e0ffdf;
+    border-radius: 50px 50px 0 0;
+}
+.imgHeadingstep {
+    text-transform: capitalize;
+    text-align: center;
+    color: #004963;
+    letter-spacing: 0.10px;
+    font-weight: 600;
+    transition: 0.5s all ease-in-out;
+    font-size: 13.5px;
+    padding: 5px 0;
+    line-height: inherit;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.inputSearchHeader .search-results-ajax {
+    box-shadow: 0px 5px 8px rgb(0 73 99 / 61%);
+}
+@media screen and (max-width: 767px) {
+    .imgHeadingstep {
+        font-size: 12px;
+        -webkit-line-clamp: 4;
+    }
+    .greece_themeSec {
+        padding-bottom: 75px !important;
+    }
+    .greece_themeSec ul.slick-dots {
+        margin-top: 10px;
+    }
+    .contactBannerSec .submit_contact {
+        justify-content: center;
+        width: 100%;
+    }
+    .FormContactPage .title,
+    .termsContactPage {
+        text-align: center;
+    }
+    .FormContactPage .title {
+        font-size: 20px;
+    }
+    .shopMemberShipSec ul {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .shopMemberShipSec ul li:not(:last-child) a {
+        border-right: 0px;
+    }
+    .shoppageDflex {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: start;
+        gap: 10px;
+        grid-gap: 10px;
+        flex-direction: column;
+    }
+    .shopTravelOneContent .shopFolow_Ask_Social {
+        flex-direction: column;
+    }
+    .empowerworldSec iframe {
+        height: 331px;
+        padding: 22px 17px;
+    }
+    .empowerworldSec .videoRightBlock {
+        height: 335px;
+    }
+    .empowerworldSec .vdeoleftSecbk {
+        padding-right: 0;
+    }
+    .empowerworldSec .vdeoleftSecbk .para {
+        margin-bottom: 10px;
+    }
+    .about-result-orientdSec {
+        flex-direction: column;
+    }
+    .result-orientLeft::before {
+        width: 100%;
+    }
+    .about-result-orientdSec .contactTitle,
+    .result-orientLeft .para {
+        text-align: center;
+    }
+    .result-orientLeft .para {
+        margin-bottom: 15px;
+    }
+    .aboutresultUL li {
+        flex-basis: auto;
+    }
+    .result-orientLeft,
+    .result-orientRight {
+        flex-basis: auto;
+    }
+    .card-someinvest .imgSomeInvest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-page .cardTitle,
+    .card-someinvest .cardpara {
+        text-align: center;
+    }
+    .heading-beliesec.cardTitle {
+        text-align: left;
+    }
+    .about-page .cardTitle {
+        font-size: 15px;
+    }
+    .card-someinvest .cardpara {
+        font-size: 13px;
+    }
+    .someofinvest-main {
+        row-gap: normal;
+        column-gap: normal;
+        grid-row-gap: normal;
+        grid-column-gap: normal;
+        justify-content: center;
+        align-items: start;
+    }
+    .card-someinvest {
+        flex-basis: 30%;
+        padding: 10px;
+    }
+    .travelOne_leadingTravelSec .about-banner-bottom {
+        gap: 40px;
+        grid-gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 35px;
+        grid-row-gap: 35px;
+    }
+    .travelOne_leadingTravelSec .planTRip-btn {
+        padding: 40px 40px;
+    }
+    .travelOne_leadingTravelSec .aboutBannerRightpara {
+        top: 10px;
+        left: 40px;
+        right: 40px;
+        font-size: 12.5px;
+        text-align: left;
+    }
+    .travelOne_leadingTravelSec .change-face-travel {
+        flex: 1;
+    }
+    .travelOne_leadingTravelSec .bigtitle-banner {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    .travelOne_leadingTravelSec .change-face-travel .para {
+        text-align: left;
+    }
+    .mobileTestimonialSec .slick-slider .slick-arrow {
+        background-size: 65%;
+    }
+    .travel_agency-page .whatTraveloneSec .whatBorder1,
+    .travel_agency-page .whatTraveloneSec .whatBorder4,
+    .about-page .whatTraveloneSec .whatBorder1,
+    .about-page .whatTraveloneSec .whatBorder4 {
+        border-radius: 0 30px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatBorder2,
+    .travel_agency-page .whatTraveloneSec .whatBorder3,
+    .about-page .whatTraveloneSec .whatBorder2,
+    .about-page .whatTraveloneSec .whatBorder3 {
+        border-radius: 30px 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .greece_themeSec {
+        padding-bottom: 20px !important;
+    }
+    .shop_main_toursSec .priceViewDeals .iconWrapPrice.iconWrap .tooltip {
+        width: 140px;
+    }
+    .empowerworldSec iframe {
+        height: 293px;
+        padding: 20px 15px;
+    }
+    .OurTeam_about .someofinvest-main {
+        gap: 25px;
+        grid-gap: 25px;
+    }
+    .OurTeam_about .card-someinvest {
+        flex-basis: 30%;
+        justify-content: center;
+    }
+    .someofinvest-main {
+        row-gap: normal;
+        column-gap: normal;
+        grid-row-gap: normal;
+        grid-column-gap: normal;
+        justify-content: center;
+        align-items: start;
+    }
+    .card-someinvest {
+        padding: 10px;
+    }
+    .card-someinvest .cardpara {
+        font-size: 14px;
+        text-align: center;
+    }
+    .someofinvest-main .cardTitle {
+        font-size: 16px;
+    }
+    .result-orientLeft::before {
+        display: none;
+    }
+    .about-result-orientdSec {
+        gap: 0;
+        grid-gap: 0;
+        flex-direction: row;
+        align-items: center;
+        background: #ffbfbf;
+    }
+    .result-orientLeft .para {
+        margin-bottom: 15px;
+    }
+    .result-orientLeft {
+        background: #ffbfbf;
+    }
+    .customerTraveloneSec .slick-slider .slick-arrow {
+        top: 77px;
+    }
+    .customerTraveloneSec button.slick-next.slick-arrow {
+        right: -15px;
+    }
+    .customerTraveloneSec button.slick-prev.slick-arrow {
+        left: -15px;
+    }
+    .customerTraveloneSec .para.customerPara {
+        margin-bottom: 5px;
+    }
+    .result-orientLeft .travelOneSec_travel.cardTitle {
+        text-align: left;
+    }
+    .about-banner2 .banner-about-title.contactTitle {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .about-vertical-title {
+        font-size: 35px;
+        line-height: 30px;
+        top: 40.5%;
+    }
+    .aboutBannerRightpara {
+        left: 55px;
+        right: 55px;
+        top: 20px;
+        font-size: 14px;
+    }
+    .travelOne_leadingTravelSec .bigtitle-banner {
+        font-size: 18px;
+        line-height: inherit;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner::before {
+        width: 280px;
+        top: -28px;
+        left: 0px;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner br {
+        display: none;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner {
+        font-size: 17px;
+        padding: 0px 20px;
+        line-height: 20px;
+        flex: 1;
+        line-height: inherit;
+    }
+    .travelOne_leadingTravelSec .planTRip-btn {
+        padding: 35px 21px;
+    }
+    .travelOne_leadingTravelSec .change-face-travel .para br {
+        display: none;
+    }
+    .travelOne_leadingTravelSec .change-face-travel {
+        flex: 1;
+    }
+    .home-page .about-result-orientdSec .contactTitle {
+        margin-bottom: 15px;
+    }
+    .home-page .result-orientLeft .para {
+        margin-bottom: 23px;
+    }
+    .home-page .result-orientLeft .img-fluid {
+        width: 18.5px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatBorder1,
+    .travel_agency-page .whatTraveloneSec .whatBorder4,
+    .about-page .whatTraveloneSec .whatBorder1,
+    .about-page .whatTraveloneSec .whatBorder4 {
+        border-radius: 0 40px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatBorder2,
+    .travel_agency-page .whatTraveloneSec .whatBorder3,
+    .about-page .whatTraveloneSec .whatBorder2,
+    .about-page .whatTraveloneSec .whatBorder3 {
+        border-radius: 40px 0;
+    }
+    .about-page .whatTraveloneSec .travelOneSec_travel.cardTitle {
+        margin-top: 0;
+    }
+    .plan_my_trip_tours_page .greeceToursSec .sortbyGreece {
+        top: auto;
+        left: auto;
+        position: relative;
+    }
+    .plan_my_trip_tours_page .pActivitys,
+    .plan_my_trip_tours_page .pPlaces {
+        font-size: 11.9px;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .greece_themeSec .slick-slider .slick-arrow {
+        bottom: -35px;
+    }
+    .imgHeadingstep {
+        font-size: 13px;
+    }
+    .head_category,
+    .head_scndblock .form-control {
+        padding: 8.02px 30px 8px 10px;
+    }
+    .customerTraveloneSec button.slick-next.slick-arrow {
+        right: -15px;
+    }
+    .customerTraveloneSec button.slick-prev.slick-arrow {
+        left: -15px;
+    }
+    .customerTraveloneSec .slick-slider .slick-arrow {
+        width: 13px;
+    }
+}
+@media screen and (max-width:671px) {
+    .itinerary_tab_Bg2 .tabs-container {
+        width: 100%;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul {
+        padding: 0;
+    }
+    .itinerary_tab_Bg2 .tabs-container nav ul li {
+        width: 100%;
+        padding: 11px 15px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .greecetourHeading_main {
+        flex-direction: row;
+    }
+    .greeceToursSec .sortbyGreece {
+        top: 61px;
+    }
+    .SliderBannerSec .fixCheckboxsc {
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 0;
+        gap: 30px;
+        grid-gap: 30px;
+        justify-content: center;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check {
+        margin: 0px;
+        margin-right: 0px;
+    }
+    .SliderBannerSec .guestnationalitySec .form-check:not(:last-child) {
+        margin-right: 0;
+    }
+    .SliderBannerSec .tourboxesButtons1 {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 {
+        margin-top: 15px;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 {
+        justify-content: flex-start;
+    }
+    .details_tabPackageSec .ItineraytabSec .packTabSec .tabitemTitle {
+        padding: 10px;
+    }
+    .details_tabPackageSec .ItineraytabSec .packgesSecListView {
+        padding-top: 5px;
+    }
+    .SliderBannerSec .detail-explorer-block1 {
+        font-size: 13px;
+        gap: 20px;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+    }
+    .explorer-details-slider-right .detail-explorer-block1 li:not(:last-child)::after {
+        width: 12px;
+        top: 9px;
+        left: auto;
+        right: -16px;
+    }
+    .explorer-details-slider-right .detail-explorer-block2 li:not(:last-child)::after {
+        top: 6px;
+        right: -14px;
+    }
+    .SliderBannerSec .detail-explorer-title {
+        font-size: 18px;
+    }
+    .FormContactPage .title {
+        text-align: center;
+    }
+    .termsContactPage {
+        text-align: center;
+        font-size: 14px;
+    }
+    .contactBannerSec a {
+        font-size: 15px;
+    }
+    .empowerworldSec .videoRightBlock {
+        height: 355px;
+    }
+    .empowerworldSec iframe {
+        height: 300px;
+        padding: 0;
+    }
+    .empowerworldSec .videoRightBlock {
+        height: auto;
+    }
+    .empowerworldSec .videoRightBlock::before {
+        display: none;
+    }
+    .card-someinvest {
+        flex-basis: 50%;
+    }
+    .OurTeam_about .someofinvest-main {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .OurTeam_about .card-someinvest {
+        flex-basis: 47%;
+    }
+    .OurvaluesbeliefsSec .ecosystem_border {
+        align-items: center;
+    }
+    .travelOne_leadingTravelSec .banner-about-title {
+        font-size: 25px;
+        line-height: 20px;
+        padding-left: 15px;
+        letter-spacing: 1.1px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+        text-align: left;
+    }
+    .travelOne_leadingTravelSec .about-travelonebnnr {
+        padding-top: 25px;
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .about-vertical-title {
+        font-size: 25px;
+        line-height: 22px;
+        top: 30%;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner::before {
+        top: -2px;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        width: 315px;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner::before {
+        top: 0;
+        width: 215px;
+        height: 85px;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner {
+        font-size: 17px;
+        padding: 16px 35px;
+        line-height: inherit;
+    }
+    .mobileTestimonialSec button.slick-next.slick-arrow {
+        right: -8px;
+    }
+    .mobileTestimonialSec button.slick-prev.slick-arrow {
+        left: -8px;
+    }
+}
+@media screen and (max-width:480px) {
+    .travelOne_leadingTravelSec .change-face-travel {
+        flex: auto;
+    }
+    .travelOne_leadingTravelSec .about-banner-bottom {
+        flex-direction: column;
+        row-gap: 80px;
+        grid-row-gap: 80px;
+    }
+    .travelOne_leadingTravelSec .change-face-travel .para {
+        text-align: center;
+    }
+    .travelOne_leadingTravelSec .about-travelonebnnr {
+        gap: 25px;
+        grid-gap: 25px;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .travelOne_leadingTravelSec::before {
+        background-position: top center;
+        background-size: initial;
+    }
+    .travelOne_leadingTravelSec .aboutBannerRightpara {
+        top: 30px;
+        left: 80px;
+        right: 80px;
+    }
+    .travelOne_leadingTravelSec .leftBanner-about {
+        padding-right: 20px;
+    }
+    .about-vertical-title {
+        top: 15%;
+    }
+    .travelOne_leadingTravelSec .banner-about-title,
+    .travelOne_leadingTravelSec .about-vertical-title {
+        font-size: 21px;
+    }
+    .travelOne_leadingTravelSec .bigtitle-banner {
+        text-align: center;
+    }
+    .travelOne_leadingTravelSec .about-banner-bottom {
+        row-gap: 65px;
+        grid-row-gap: 65px;
+    }
+    .travelOne_leadingTravelSec .banner-about-title {
+        padding-left: 10px;
+        line-height: 25px;
+    }
+    .about-vertical-title {
+        top: 17.5%;
+    }
+    .mobileTestimonialSec .slick-slider .slick-arrow {
+        top: 50%;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneRight,
+    .about-page .whatTraveloneSec .whatTraveloneRight {
+        gap: 15px;
+        grid-gap: 15px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneCard,
+    .about-page .whatTraveloneSec .whatTraveloneCard {
+        min-height: 120px;
+        flex-basis: 45%;
+        height: auto;
+    }
+    .travel_agency-page .whatTraveloneSec .whatBorder1,
+    .about-page .whatTraveloneSec .whatBorder1,
+    .travel_agency-page .whatTraveloneSec .whatBorder4,
+    .about-page .whatTraveloneSec .whatBorder4 {
+        border-radius: 0 30px;
+    }
+    .travel_agency-page .whatTraveloneSec .whatBorder2,
+    .travel_agency-page .whatTraveloneSec .whatBorder3,
+    .about-page .whatTraveloneSec .whatBorder2,
+    .about-page .whatTraveloneSec .whatBorder3 {
+        border-radius: 30px 0;
+    }
+    .travel_agency-page .whatTraveloneSec .whatTraveloneRight .para {
+        font-size: 11.5px !important;
+        min-height: 51px;
+    }
+}
+@media screen and (max-width:395px) {
+    .travelOne_leadingTravelSec .aboutBannerRightpara {
+        top: 20px;
+        left: 60px;
+        right: 60px;
+    }
+}
+@media screen and (max-width:324px) {
+    .SliderBannerSec .detail-explorer-block1 {
+        gap: 15px;
+        grid-gap: 15px;
+        flex-wrap: nowrap;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+    .explorer-details-slider-right ul li {
+        text-align: center;
+    }
+    .SliderBannerSec .detail-explorer-block2 {
+        margin-top: 15px;
+    }
+    .explorer-details-slider-right .detail-explorer-block1 li:not(:last-child)::after {
+        width: 10px;
+        top: 4px;
+        right: -13px;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner {
+        font-size: 17px;
+        padding: 15px 30px;
+    }
+    .travelOne_leadingTravelSec .global-system-bnner::before {
+        top: 0;
+        width: 215px;
+        height: 85px;
+    }
+    .mob-wd-full-filter {
+        width: 100% !important;
+    }
+    .select_listing_page .filterTourLeft {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .select_listing_page .resetFiterGreece {
+        margin-left: 5px;
+    }
+    .select_listing_page .sortBy_togleSwtchSec {
+        gap: 8px;
+        grid-gap: 8px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .select_listing_page .listing_cols_data {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:287px) {
+    .about-banner2,
+    .about-banner1 {
+        width: 100%;
+    }
+    .about-banner2 {
+        padding-left: 50px;
+    }
+    .about-vertical-title {
+        top: 20%;
+    }
+}
+@media screen and (max-width:280px) {
+    .greenLightBg .itemsTabContentCommon {
+        padding: 25px 0 15px;
+    }
+    .tabcontentBg1 .custom_height_pack_lastTab {
+        height: 37px;
+    }
+    .header-logo {
+        width: 108px;
+    }
+    .aboutresultUL li {
+        flex-basis: auto;
+    }
+    .OurTeam_about .card-someinvest {
+        flex-basis: auto;
+    }
+}
+@media screen and (max-width: 575px) {
+    .greece_themeSec.sectionBgcolor {
+        height: 42vh !important;
+    }
+    .travel_agency_customerTraveloneSec {
+        background: transparent !important;
+        padding: 0 13px !important;
+        border: 0 !important;
+        margin-bottom: 12px;
+    }
+    .travel_agency_customerTraveloneSec .para {
+        border: 1px solid #FFF;
+        background: #FFF;
+        padding: 15px 10px;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: 115px;
+    }
+    .listing-detail-page .custom_height_pack_lastTab.btnpackages {
+        margin-bottom: 5px;
+    }
+}
+@media screen and (min-width:481px) and (max-width: 575px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 125px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: 140px !important;
+    }
+}
+@media screen and (min-width:450px) and (max-width: 480px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 125px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: 139px !important;
+    }
+}
+@media screen and (min-width:415px) and (max-width: 449px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 123px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: 127px !important;
+    }
+}
+@media screen and (min-width:400px) and (max-width: 414px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 119px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: 122px !important;
+    }
+}
+@media screen and (min-width:350px) and (max-width: 399px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 102px;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: auto !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        padding: 7px 21px !important;
+    }
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        left: 37%;
+    }
+}
+@media screen and (min-width:315px) and (max-width: 349px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 90px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: auto !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        padding: 7px 15px !important;
+    }
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        left: 37%;
+    }
+}
+@media screen and (min-width:300px) and (max-width: 314px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 85px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: auto !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        padding: 7px 13px !important;
+    }
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        left: 34%;
+    }
+}
+@media screen and (min-width:280px) and (max-width: 299px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        width: 79px !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesBtn1,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn2,
+    .listing-detail-page .SliderBannerSec .tourboxesBtn3 {
+        width: auto !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        padding: 7px 10px !important;
+    }
+}
+@media screen and (max-width: 330px) {
+    .profile_page .col-sidebar-products .product-filters {
+        width: 100%;
+    }
+    .profile_page .aboutLeftfixedsec {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 575px) and (min-width:280px) {
+    .listing-detail-page .SliderBannerSec .fixCheckboxsc {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width: 387px) and (min-width:300px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        top: -19px;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        font-size: 11px !important;
+    }
+}
+@media screen and (max-width: 387px) and (min-width:280px) {
+
+    .listing-detail-page .SliderBannerSec .tourHeadingPrice {
+        font-size: 13px;
+    }
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check {
+        border-radius: 22px 0 22px 0;
+    }
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        width: 33px;
+        height: 33px;
+    }
+}
+@media screen and (max-width: 331px) {
+    .listing-detail-page .SliderBannerSec .detail-explorer-block1,
+    .listing-detail-page .SliderBannerSec .detail-explorer-block2 {
+        grid-template-columns: auto auto auto;
+    }
+    .plan_my_trip_tours_page .select_listing_page .sortBy_togleSwtchSec {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 325px) {
+    .listing-page .greece_themeSec .listing-slider .imgHeadingstep {
+        font-size: 11px !important;
+    }
+}
+@media screen and (max-width:299px) {
+    .listing-detail-page .SliderBannerSec .guestnationalitySec .form-check-input[type=radio] {
+        top: -18px;
+        left: 33%;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        width: auto !important;
+    }
+    .listing-detail-page .SliderBannerSec .tourboxesButtons1 a {
+        font-size: 11px !important;
+        padding: 7px 10px !important;
+    }
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+    .form-control-input,
+    .btn-Subscribe {
+        border: 2px solid #6692a1;
+    }
+    .form-control-input,
+    .btn-Subscribe,
+    .form-control-input::placeholder {
+        color: #FFF !important;
+    }
+    .home-page .ecosystem_border {
+        border: 2px dashed #eead98;
+    }
+    .home-page .WhyTravelOneSec .cardSec,
+    .home-page .WhyTravelOneSec .whyTravelCols .para,
+    .home-page .WhyTravelOneSec .cardSec .cardTitle,
+    .home-page .WeareDifferentSec .WeareDifferent .wecardbox {
+        min-height: inherit !important;
+        height: auto !important;
+        max-height: inherit !important;
+    }
+    .home-page .wecardbox,
+    .home-page .weareimg {
+        border: 2px solid #86b6ad;
+    }
+    .footerInfo .ul_just_space_between li {
+        margin-right: 10px !important;
+    }
+    .footerInfo .ul_just_space_between li:last-child {
+        margin-right: 0px !important;
+    }
+    .home-page .TrendingDealsSec .tab button {
+        margin-right: 30px;
+    }
+    .home-page .TrendingDealsSec .tab button:last-child {
+        margin-right: 0px;
+    }
+    .megamenuSec .head_scndblock .top-cart {
+        margin-right: 15px;
+    }
+    .home-page .result-orientLeft {
+        padding-right: 25px !important;
+    }
+    .home-page .aboutresultUL span {
+        padding-left: 10px !important;
+        margin-top: -2px;
+    }
+    .home-page .result-orientLeft .aboutresultUL li {
+        margin-bottom: 30px !important;
+    }
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+    @media screen and (min-width:992px) {
+        
+        .about-page .whyDevelopSec .realTimeSupportRight {
+            padding-left: 30px;
+        }
+        
+    }
+    @media screen and (min-width:768px) {
+        
+        .about-page .realTimeSupportRight {
+            margin-top: 5px;
+        }
+        .about-page .whatTraveloneCard.whatBorder4,
+        .about-page .whatTraveloneCard.whatBorder2 {
+            margin-left: 10px;
+        }
+        .about-page .whatTraveloneCard.whatBorder1,
+        .about-page .whatTraveloneCard.whatBorder3 {
+            margin-right: 10px;
+        }
+        .about-page .whatTraveloneCard.whatBorder4,
+        .about-page .whatTraveloneCard.whatBorder3 {
+            margin-top: 10px;
+        }
+        .about-page .whatTraveloneCard.whatBorder2,
+        .about-page .whatTraveloneCard.whatBorder1 {
+            margin-bottom: 10px;
+        }
+        .about-page .aboutresultUL li {
+            margin-bottom: 15px !important;
+        }
+        
+        .about-page .howTravelWorkSec .boxborderSec {
+            border: 1px solid #014962;
+        }
+        
+        
+        .about-page .howTravelWorkSec .boxborderSec,
+        .about-page .howTravelWorkSec .heading-beliesec,
+        .about-page .howTravelWorkSec .subheading-beliesec.para {
+            min-height: inherit !important;
+        }
+        
+        
+    }
+    @media screen and (max-width:991px) {
+        .home-page .about-result-orientdSec {
+            display: block !important;
+        }
+        .home-page .resultOrintSec .result-orientLeft {
+            padding: 30px !important;
+            display: block !important;
+        }
+        .home-page .result-orientLeft,
+        .home-page .result-orientRight,
+        .home-page .about-result-orientdSec .aboutresultUL {
+            display: block !important;
+        }
+        .home-page .about-result-orientdSec .aboutresultUL li {
+            display: block !important;
+            flex: unset !important;
+        }
+        .home-page .aboutresultUL span {
+            padding-left: 5px !important;
+        }
+        .home-page .ecosystem_border {
+            border: 2px dashed #eead98;
+        }
+        .home-page .WhyTravelOneSec .cardSec,
+        .home-page .WhyTravelOneSec .whyTravelCols .para,
+        .home-page .WhyTravelOneSec .cardSec .cardTitle,
+        .home-page .WeareDifferentSec .WeareDifferent .wecardbox {
+            min-height: inherit !important;
+            height: auto !important;
+            max-height: inherit !important;
+        }
+        .home-page .wecardbox,
+        .home-page .weareimg {
+            border: 2px solid #86b6ad;
+        }
+        .home-page .TrendingDealsSec .tab button {
+            margin-right: 30px;
+        }
+        .home-page .TrendingDealsSec .tab button:last-child {
+            margin-right: 0px;
+        }
+        .footerInfo .ul_just_space_between li {
+            margin-right: 10px !important;
+        }
+        .footerInfo .ul_just_space_between li:last-child {
+            margin-right: 0px !important;
+        }
+        .megamenuSec .head_scndblock .top-cart {
+            margin-right: 15px;
+        }
+        .home-page .result-orientLeft .aboutresultUL li {
+            margin-bottom: 10px !important;
+        }
+        .home-page .about-result-orientdSec .aboutresultUL li:last-child {
+            margin-bottom: 0px;
+        }
+        .home-page .aboutresultUL span {
+            margin-top: 2px;
+        }
+    }
+    @media screen and (min-width:768px) and (max-width:991px) {
+        
+        
+        .about-page .resultOrintSec .result-orientLeft,
+        .about-page .realTimeSupportSec,
+        .about-page .resultOrintSec .about-page .resultOrintSec .result-orientRight,
+        .about-page .OurTeam_about {
+            display: block !important;
+        }
+        .about-page .resultOrintSec .about-result-orientdSec {
+            flex: none;
+            display: block;
+        }
+        .about-page .resultOrintSec .result-orientLeft,
+        .about-page .resultOrintSec .result-orientRight {
+            padding: 30px !important;
+        }
+        .about-page .resultOrintSec .about-result-orientdSec {
+            padding-bottom: 0px;
+        }
+    }
+}
+@media not all and (min-resolution:.001dpcm) {}
+@media not all and (min-resolution:.001dpcm) {
+    @media screen and (min-width:992px) {}
+}
+@media screen and (min-width: 351px) and (max-width: 365px) {
+    .listing-detail-page .SliderBannerSec .detail-explorer-block1,
+    .listing-detail-page .SliderBannerSec .detail-explorer-block2 {
+        grid-template-columns: auto auto auto;
+    }
+}
+.listing-page .card-trnd-loc-days a:focus,
+.card-trnd-loc-days a:visited {
+    text-decoration: underline !important;
+    color: inherit !important;
+}
+.PlanTripNewUi .center-content-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.PlanTripNewUi .img_content {
+    padding-left: 30px;
+}
+.bannerBgColor {
+    background: var(--bg-light-green);
+    padding: 0px;
+}
+.bannerNewUi,
+.bannerNewUi .bannerLeftimg {
+    position: relative;
+}
+.bannerNewUi .destination_name {
+    font-family: 'gothic' !important;
+    font-size: 55px;
+    line-height: inherit;
+    text-transform: capitalize;
+    color: #FFF;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 15px;
+}
+.smartravel_NewUI .weCardSec_position_rel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    top: 0;
+    margin-top: 20px;
+}
+.smartravel_NewUI .weCardSec .wecardbox:last-child,
+.smartravel_NewUI.WeareDifferentSec .wecardbox {
+    margin-bottom: 0;
+}
+.smartravel_NewUI.WeareDifferentSec {
+    padding-bottom: 50px;
+}
+.smartravel_NewUI .wecardbox {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+.smartravel_NewUI .wecardbox,
+.smartravel_NewUI .weareimg {
+    border: 2px solid rgb(0 73 99 / 80%);
+}
+.smartravel_NewUI .wecardbox .cardTitle {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+}
+.trndDestNewUi .slick-slide img {
+    margin: auto;
+    max-height: 85px;
+}
+.trndDestNewUi .border_rounds_shape {
+    border: 2px solid #004963;
+    border-radius: 50px 50px 0 0;
+    padding: 58px 15px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    margin-bottom: 5px;
+}
+.trndDestNewUi .SliderSec p {
+    padding: 5px 30px 0px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+.tourQuesNewUi .tourQuesNewUi_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.tourQuesNewUi .tourQuesNewUiRight,
+.tourQuesNewUi .tourbgImg {
+    position: relative;
+}
+.tourQuesNewUi .tourbgContent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tourQuesNewUi .tourbgContent,
+.tourQuesNewUi .tourbgContent a {
+    color: #FFF;
+}
+.tour_explore_h2,
+.tour_explore_h3,
+.tour_explore_a {
+    font-family: 'gothic' !important;
+    font-weight: 500;
+    line-height: inherit;
+    margin: 0;
+}
+.tour_explore_h2 {
+    font-size: 115px;
+    line-height: inherit;
+    text-transform: capitalize;
+    text-align: center;
+}
+.tour_explore_h3 {
+    font-size: 40px;
+    line-height: inherit;
+    text-transform: lowercase;
+    border-radius: 7px;
+    padding: 3px 15px;
+}
+.tour_explore_a {
+    font-size: 33px;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.tourQuesNewUi .tour_explore_a:hover {
+    color: #20c593;
+}
+.tourQuesNewUiLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tourForm_stepsNewui .font-normal {
+    color: #004963;
+    font-weight: normal;
+    font-size: 27px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.tourForm_stepsNewui .stepimgUL {
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.tourForm_stepsNewui .imgHeadingstep {
+    font-size: 21px !important;
+    font-weight: normal !important;
+    text-align: left;
+    padding: 15px 15px 16px 40px;
+}
+.tourForm_stepsNewui .stepimgUL input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+.tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+    -webkit-transition: ease-in 0.3s;
+    -o-transition: ease-in 0.3s;
+    transition: ease-in 0.3s;
+    outline: none;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 15%);
+    background-color: #cffbd7;
+    border-radius: 8px;
+    width: 105%;
+    margin: 0 -2.5%;
+}
+.tourForm_stepsNewui .stepimgUL a,
+.tourForm_stepsNewui .stepimgUL label {
+    width: 100%;
+}
+.tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+    padding-left: 50px;
+}
+.tourForm_stepsNewui .steps-buttons {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+
+}
+.tourForm_stepsNewui .steps-buttons button {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #004963;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    color: #004963;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: inherit;
+}
+.tourForm_stepsNewui .steps-buttons .button.prev-button {
+    margin-right: 10px;
+}
+.tourQuesBgColor .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+    background-color: #cffbd7;
+}
+.tourQuesBgColor .tourForm_stepsNewui .stepimgUL {
+    background: transparent;
+}
+.tourQuesBgColor .tourQuesNewUiLeft {
+    background-color: #dfffde;
+}
+.tourQuesBgColor .bgborderSteps {
+    border: 2px solid #20c593;
+    border-radius: 7px;
+    padding: 25px;
+}
+.tourQuesBgColor .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+    width: 100%;
+    margin: 0;
+    padding-left: 40px;
+}
+.tourQuesBgColor .tourForm_stepsNewui .stepimgUL {
+    padding: 0px 0;
+}
+.tourQuesBgColor .tourForm_stepsNewui .steps-buttons {
+    margin-top: 25px;
+}
+.tourQuesBgColor .tagsSelectItems {
+    background: #cffbd7;
+}
+.tourQuesBgColor .tagsSelectItems a {
+    background: rgb(32 197 147 / 8%);
+}
+.tour_explore_h3,
+.tour_explore_a {
+    text-shadow: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.tour_explore_h3 {
+    border: 0;
+    background-color: rgb(255 255 255 / 72%);
+    color: #004963;
+    box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 59%);
+}
+.tourbgContent .tour_explore_a {
+    background-color: rgb(0 73 99 / 72%);
+    color: #FFF;
+    padding: 2px 25px;
+}
+.tourQuesNewUiLeft {
+    padding: 15px 60px;
+}
+.tourForm_stepsNewui {
+    width: 100%;
+    position: relative;
+}
+.tagsSelectedSec {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 80px;
+}
+.tagsSelectedSec {
+    margin-top: 30px;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.tagsSelectedSec,
+.tagsSelectItems {
+    display: flex;
+    align-items: center;
+}
+.tagsSelectItems {
+    background: #f6f6f6;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.tagsSelectItems a,
+.tagsSelectName {
+    font-family: 'Open Sans', sans-serif !important;
+    letter-spacing: 0.4px;
+    color: #004963;
+    padding: 5px 8px;
+    font-size: 13px;
+}
+.tagsSelectItems a {
+    background: #e7e7e7;
+    text-decoration: none;
+    border-radius: 0 8px 8px 0;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+.tagsSelectName {
+    text-transform: capitalize;
+}
+.tagsSelectedSec .tagsSelectItems:last-child {
+    margin-right: 0;
+}
+.tourQuesNewUiRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    .tourQuesNewUiLeft {
+        padding: 15px 30px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .megamenuSec .login-menu-list .topRight_iconss .anchorSec.mob-header-hide a.text-capitalize.btn-custom.plan_your_trip_btn {
+        padding: 8px 10px !important;
+    }
+    .home-page .PlanTripSec .PlanTrip .title_subtitle {
+        margin-bottom: 10px !important;
+    }
+    .bannerNewUi .destination_name {
+        font-size: 50px;
+    }
+    .tourForm_stepsNewui .font-normal {
+        font-size: 22px;
+    }
+    .tourForm_stepsNewui .imgHeadingstep {
+        font-size: 17.5px !important;
+        padding: 10px 13px 10px 20px;
+    }
+    .tourQuesBgColor .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+        padding-left: 20px;
+    }
+    .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+        padding-left: 25px;
+    }
+    .tourForm_stepsNewui .steps-buttons {
+        margin-top: 15px;
+    }
+    .tour_explore_h2 {
+        font-size: 75px;
+        line-height: inherit;
+    }
+    .tour_explore_h3 {
+        font-size: 25px;
+        line-height: inherit;
+    }
+    .tour_explore_a {
+        font-size: 20px;
+    }
+    .tourQuesBgColor .bgborderSteps {
+        padding: 10px 20px;
+    }
+    .tourQuesBgColor .tourForm_stepsNewui .font-normal {
+        margin-bottom: 20px;
+    }
+    .tourQuesBgColor .tourForm_stepsNewui .steps-buttons {
+        margin-top: 10px;
+    }
+    .tourQuesNewUiLeft {
+        padding: 15px 30px;
+    }
+    .smartravel_NewUI .wecardbox {
+        padding: 30px;
+    }
+    .smartravel_NewUI .wecardbox .cardTitle {
+        font-size: 20px;
+        margin: 0;
+    }
+    .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+        width: 103%;
+        margin: 0 -1.5%;
+    }
+    .tourForm_stepsNewui .steps-buttons .button.prev-button {
+        margin-right: 7px;
+    }
+    .tagsSelectItems a,
+    .tagsSelectName {
+        padding: 5px 7px;
+        font-size: 12.5px;
+    }
+    .tagsSelectItems {
+        margin-right: 0;
+    }
+    .tagsSelectedSec {
+        right: 0;
+        position: relative;
+        margin-top: 15px;
+        grid-gap: 7px;
+    }
+}
+@media screen and (max-width:991px) {
+    .PlanTripNewUi {
+        padding: 30px 0px;
+    }
+    .PlanTripNewUi .center-content-block {
+        grid-template-columns: 1fr;
+    }
+    .PlanTripNewUi .img_content {
+        padding-left: 0;
+    }
+    .PlanTripNewUi .destination_name {
+        font-size: 45px;
+        bottom: 5px;
+    }
+    .smartravel_NewUI .weCardSec_position_rel {
+        grid-template-columns: 1fr 1fr;
+    }
+    .smartravel_NewUI .wecardbox {
+        padding: 25px;
+    }
+    .tourQuesNewUiLeft {
+        padding: 15px 30px;
+    }
+    .tourForm_stepsNewui {
+        width: 100%;
+    }
+    .tourForm_stepsNewui .font-normal {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+    .tourForm_stepsNewui .imgHeadingstep {
+        font-size: 17px !important;
+        padding: 8px 8px 8px 30px;
+    }
+    .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+        padding-left: 35px;
+    }
+    .tourForm_stepsNewui .steps-buttons {
+        margin-top: 8px;
+    }
+    .tourForm_stepsNewui .steps-buttons button {
+        width: 27px;
+        height: 27px;
+    }
+    .tour_explore_h2 {
+        font-size: 70px;
+    }
+    .tour_explore_h3 {
+        font-size: 24px;
+    }
+    .tour_explore_a {
+        font-size: 19px;
+    }
+    .tourQuesBgColor .bgborderSteps {
+        padding: 7px 10px;
+    }
+    .tourQuesBgColor .tourQuesNewUiLeft {
+        padding: 15px 15px;
+    }
+    .tourQuesBgColor .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+        padding-left: 30px;
+    }
+    .tourQuesBgColor .tourForm_stepsNewui .steps-buttons {
+        margin-top: 8px;
+    }
+    .trndDestNewUi .border_rounds_shape {
+        padding: 35px 15px;
+    }
+    .trndDestNewUi .slick-slide img {
+        max-height: 70px;
+    }
+    .smartravel_NewUI.WeareDifferentSec {
+        padding-bottom: 35px;
+    }
+    .smartravel_NewUI .wecardbox {
+        padding: 15px;
+    }
+    .smartravel_NewUI .wecardbox .cardTitle {
+        font-size: 18px;
+        margin: 0;
+    }
+    .tagsSelectItems a,
+    .tagsSelectName {
+        padding: 5px 7px;
+        font-size: 12.5px;
+    }
+    .tagsSelectItems {
+        margin-right: 0;
+    }
+    .tagsSelectedSec {
+        right: 0;
+        position: relative;
+        margin-top: 12px;
+        grid-gap: 7px;
+    }
+    .tourQuesNewUiRight {
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width:767px) {
+    .tourQuesNewUi .tourQuesNewUi_main {
+        grid-template-columns: auto;
+    }
+    .tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep {
+        width: 103%;
+        margin: 0 -1.5%;
+    }
+    .home-page2 .itsSimpleCols {
+        width: 33.33%;
+    }
+    .smartravel_NewUI .wecardbox .cardTitle {
+        font-size: 17px;
+    }
+    .tourQuesNewUiLeft,
+    .tourQuesBgColor .tourQuesNewUiLeft {
+        padding: 30px;
+    }
+    .tourForm_stepsNewui .steps-buttons,
+    .tourQuesBgColor .tourForm_stepsNewui .steps-buttons {
+        margin-top: 15px;
+    }
+    .tourQuesBgColor .bgborderSteps {
+        padding: 15px;
+    }
+    .trndDestNewUi .SliderSec p {
+        padding: 5px 10px 0px;
+    }
+    .tourForm_stepsNewui {
+        width: 75%;
+    }
+}
+@media screen and (max-width:575px) {
+    .smartravel_NewUI .weCardSec_position_rel {
+        grid-template-columns: 1fr;
+    }
+    .PlanTripNewUi .destination_name {
+        font-size: 33px;
+    }
+    .PlanTripNewUi {
+        padding: 20px 0px;
+    }
+    .home-page .PlanTripNewUi .img_content {
+        padding-top: 20px;
+    }
+    .tourForm_stepsNewui .font-normal {
+        font-size: 18px;
+    }
+    .tourForm_stepsNewui .imgHeadingstep {
+        font-size: 16px !important;
+    }
+    .tourForm_stepsNewui .steps-buttons button {
+        width: 24px;
+        height: 24px;
+        font-size: 15px;
+    }
+    .tour_explore_h2 {
+        font-size: 45px;
+    }
+    .tour_explore_h3 {
+        font-size: 20px;
+    }
+    .tour_explore_a {
+        font-size: 18px;
+    }
+    .trndDestNewUi .slick-slide img {
+        max-height: 55px;
+    }
+    .trndDestNewUi .border_rounds_shape {
+        padding: 50px 15px;
+    }
+    .trndDestNewUi .slick-slide img {
+        max-height: 85px;
+    }
+    .tourForm_stepsNewui {
+        width: 100%;
+    }
+}
+@media screen and (min-width:1200px) {
+    .tagsSelectItems a,
+    .tagsSelectName {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+    .tagsSelectItems {
+        margin-right: 0;
+    }
+    .tagsSelectedSec {
+        right: 0;
+        position: relative;
+        margin-top: 15px;
+        grid-gap: 7px;
+    }
+}
+.tourbgContent .tour_explore_a {
+    border-radius: 7px;
+}
+.tourForm_stepsNewui .font-normal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tourForm_stepsNewui .font-normal .banner_form_reset {
+    color: #20c593;
+    border: 2px solid #20c593;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    margin-left: 15px;
+    transition: 0.5s all ease-in-out;
+}
+.tourForm_stepsNewui .font-normal a.banner_form_reset:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+}
+.tourQuesNewUi .progress {
+    margin-bottom: 1px;
+}
+.tourQuesNewUi .tourbgImg {
+    height: 100%;
+}
+.tourQuesNewUi .tourbgImg .img-fluid {
+    object-fit: cover;
+    height: 100%;
+}
+.smartravel_NewUI.WeareDifferentSec {
+    padding-bottom: 50px !important;
+}
+.smartravel_NewUI .weCardSec .wecardbox:last-child,
+.smartravel_NewUI.WeareDifferentSec .wecardbox {
+    margin-bottom: 0 !important;
+}
+.smartravel_NewUI.WeareDifferentSec {
+    padding-bottom: 35px !important;
+}
+@media screen and (max-width: 991px) {
+    .tourForm_stepsNewui .font-normal .banner_form_reset {
+        padding: 7px 15px;
+    }
+    .smartravel_NewUI .wecardbox .cardTitle {
+        text-align: center !important;
+    }
+    .smartravel_NewUI .wecardbox .cardTitle p {
+        display: inline;
+    }
+}
+@media screen and (max-width: 767px) {
+    .tourQuesNewUi .tourQuesNewUi_main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .tourQuesBgColor.tourQuesNewUi .tourQuesNewUi_main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:575px) {
+    .tagsSelectItems a,
+    .tagsSelectName {
+        font-size: 11.5px;
+    }
+}
+.single_banner_form .banner_form_reset {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    font-weight: 600;
+}
+.tourForm_stepsNewui .stepimgUL {
+    padding: 15px;
+}
+.tourForm_stepsNewui .imgHeadingstep {
+    position: relative;
+}
+.tourForm_stepsNewui .imgHeadingstep::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: rgb(0 73 99 / 28%);
+    left: 10px;
+    top: auto;
+    bottom: 0;
+    right: 10px;
+}
+.tourForm_stepsNewui .stepimgUL input[type="radio"]:checked+.plan-content .imgHeadingstep::before {
+    background: transparent;
+}
+.tourForm_stepsNewui li:last-child .imgHeadingstep::before {
+    background: transparent;
+}
+.tourForm_stepsNewui .font-normal.font-normal2 {
+    justify-content: end;
+    align-items: flex-end;
+}
+.tourForm_stepsNewui .font-normal.font-normal2 .banner_form_reset {
+    margin-right: 15px;
+    margin-left: 0;
+    padding: 6px 20px;
+}
+@media screen and (max-width: 991px) {
+    .tourForm_stepsNewui .font-normal.font-normal2 .steps-buttons {
+        margin-top: 20px;
+    }
+    .tourForm_stepsNewui .font-normal.font-normal2 .steps-buttons button {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+.last_screen_btn {
+    background-color: #20c593;
+    border: 1px solid #20c593;
+    padding: 5px 25px;
+    border-radius: 7px;
+    color: #FFF;
+    font-size: 18px;
+}
+.last_screen_btn:hover {
+    background-color: #FFF;
+    color: #20c593;
+}
