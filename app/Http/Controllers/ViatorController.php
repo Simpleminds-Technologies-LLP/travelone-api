@@ -7,7 +7,7 @@ use DB;
 
 class ViatorController extends Controller
 {
-    // last modified since product
+    // Last modified since product
     public function last_modified_since_product()
     {
         // define array
@@ -80,7 +80,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    // last modified availability schedules
+    // Last modified availability schedules
     public function last_modified_availability_schedules(Request $request)
     {
         // define array
@@ -221,7 +221,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    // single product availability schedules
+    // Single product availability schedules
     public function single_product_availability_schedules(Request $request)
     {
         // define array
@@ -338,7 +338,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    // update activity availability schedules
+    // Update activity availability schedules
     public function update_activity_availability_schedules()
     {
         // define array
@@ -416,315 +416,183 @@ class ViatorController extends Controller
         return response()->json(['status' => true]);
     }
 
-    // fetch and sync product list
+    // Fetch and sync product list
     public function fetch_product_list(Request $request)
     {
         // define array
         $return_arr = [];
 
-        // get request header
-        $authorization_token = $request->header('authorization');
+        // get requested data
+        $filter_data = $request->filter_data;
 
-        // check authorization token is valid
-        if($authorization_token === 'lFiNZgpQfdOaCoTFovyo') {
-            // get requested data
-            $filter_data = $request->filter_data;
+        // fetch product list
+        $product_list = ViatorHelper::fetch_product_list($filter_data);
 
-            // fetch product list
-            $product_list = ViatorHelper::fetch_product_list($filter_data);
+        // check product is valid
+        if (is_array($product_list) && !empty($product_list['products']) && is_array($product_list['products'])) {
+            // fetch products
+            foreach ($product_list['products'] as $product) {
+                // get product data
+                $productCode    = $product['productCode'] ?? null;
+                $productflags   = $product['flags'] ?? null;
+                $duration       = $product['duration'] ?? null;
+                $pricingSummary = $product['pricing'] ?? null;
+                $productOptions = $product['productOptions'] ?? [];
 
-            // check product is valid
-            if (is_array($product_list) && !empty($product_list['products']) && is_array($product_list['products'])) {
-                // fetch products
-                foreach ($product_list['products'] as $product) {
-                    // get product data
-                    $productCode    = $product['productCode'] ?? null;
-                    $productflags   = $product['flags'] ?? null;
-                    $duration       = $product['duration'] ?? null;
-                    $pricingSummary = $product['pricing'] ?? null;
-                    $productOptions = $product['productOptions'] ?? [];
+                // fetch single product
+                $single_product = ViatorHelper::fetch_single_product($productCode);
 
-                    // fetch single product
-                    $single_product = ViatorHelper::fetch_single_product($productCode);
+                // check is valid response
+                if(is_array($single_product) && !empty($single_product) && $single_product['status'] == 'ACTIVE') {
+                    // define combile tour ID
+                    $is_common_tour_id = '';
 
-                    // check is valid response
-                    if(is_array($single_product) && !empty($single_product)) {
-                        // get single product data
-                        $title                       = trim($single_product['title'] ?? '');
-                        $description                 = $single_product['description'] ?? null;
-                        $productUrl                  = $single_product['productUrl'] ?? null;
-                        $ticketInfo                  = $single_product['ticketInfo'] ?? null;
-                        $pricingInfo                 = $single_product['pricingInfo'] ?? null;
-                        $logistics                   = $single_product['logistics'] ?? null;
-                        $timeZone                    = $single_product['timeZone'] ?? null;
-                        $inclusions                  = $single_product['inclusions'] ?? null;
-                        $exclusions                  = $single_product['exclusions'] ?? null;
-                        $additionalInfo              = $single_product['additionalInfo'] ?? null;
-                        $cancellationPolicy          = $single_product['cancellationPolicy'] ?? null;
-                        $bookingConfirmationSettings = $single_product['bookingConfirmationSettings'] ?? null;
-                        $bookingRequirements         = $single_product['bookingRequirements'] ?? null;
-                        $languageGuides              = $single_product['languageGuides'] ?? null;
-                        $bookingQuestions            = $single_product['bookingQuestions'] ?? null;
-                        $tags                        = $single_product['tags'] ?? null;
-                        $destinations                = $single_product['destinations'] ?? null;
-                        $itinerary                   = $single_product['itinerary'] ?? null;
-                        $productOptions              = $single_product['productOptions'] ?? null;
-                        $supplier                    = $single_product['supplier'] ?? null;
-                        $reviews                     = $single_product['reviews'] ?? null;
-                        $status                      = $single_product['status'] ?? null;
-                        $createdAt                   = $single_product['createdAt'] ?? null;
-                        $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
+                    // get single product data
+                    $title                       = trim($single_product['title'] ?? '');
+                    $description                 = $single_product['description'] ?? null;
+                    $productUrl                  = $single_product['productUrl'] ?? null;
+                    $ticketInfo                  = $single_product['ticketInfo'] ?? null;
+                    $pricingInfo                 = $single_product['pricingInfo'] ?? null;
+                    $logistics                   = $single_product['logistics'] ?? null;
+                    $timeZone                    = $single_product['timeZone'] ?? null;
+                    $inclusions                  = $single_product['inclusions'] ?? null;
+                    $exclusions                  = $single_product['exclusions'] ?? null;
+                    $additionalInfo              = $single_product['additionalInfo'] ?? null;
+                    $cancellationPolicy          = $single_product['cancellationPolicy'] ?? null;
+                    $bookingConfirmationSettings = $single_product['bookingConfirmationSettings'] ?? null;
+                    $bookingRequirements         = $single_product['bookingRequirements'] ?? null;
+                    $languageGuides              = $single_product['languageGuides'] ?? null;
+                    $bookingQuestions            = $single_product['bookingQuestions'] ?? null;
+                    $tags                        = $single_product['tags'] ?? null;
+                    $destinations                = $single_product['destinations'] ?? null;
+                    $itinerary                   = $single_product['itinerary'] ?? null;
+                    $productOptions              = $single_product['productOptions'] ?? null;
+                    $supplier                    = $single_product['supplier'] ?? null;
+                    $reviews                     = $single_product['reviews'] ?? null;
+                    $status                      = $single_product['status'] ?? null;
+                    $createdAt                   = $single_product['createdAt'] ?? null;
+                    $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
-                        // filter status
-                        $is_status = ($status === 'ACTIVE') ? 1 : 0;
+                    // Filter data
+                    $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
+                    $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary);
+                    $filter_duration         = ViatorHelper::filter_activity_duration($duration);
+                    $filter_destination      = ViatorHelper::find_destination_details($destinations);
+                    $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
+                    $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
+                    $filter_exclusions       = ViatorHelper::filter_product_exclusions($exclusions);
+                    $filter_additional_info  = ViatorHelper::filter_product_additional_info($additionalInfo);
+                    $booking_questions       = ViatorHelper::filter_booking_questions($bookingQuestions);
+                    $product_tags            = ViatorHelper::filter_product_tags($tags);
+                    $filter_logistics        = ViatorHelper::filter_product_logistics($logistics);
+                    $filter_itinerary        = ViatorHelper::filter_product_itinerary($itinerary);
+                    $filter_reiews           = ViatorHelper::filter_product_reviews($productCode);
+                    $filter_travelers_photos = ViatorHelper::filter_product_travelers_photos($filter_reiews);
+                    $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
 
-                        // filter special tags
-                        $filter_speical_badge = ViatorHelper::filter_activity_special_badge($productflags);
+                    // push other json data
+                    $extra_json_data = [
+                        'productCode'                 => $productCode,
+                        'status'                      => $status,
+                        'durationActivityTime'        => $duration,
+                        'filter_destination'          => $filter_destination,
+                        'ticketInfo'                  => $ticketInfo,
+                        'pricingSummary'              => $pricingSummary,
+                        'pricingInfo'                 => $pricingInfo,
+                        'logistics'                   => $filter_logistics,
+                        'itinerary'                   => $filter_itinerary,
+                        'timeZone'                    => $timeZone,
+                        'inclusions'                  => $inclusions,
+                        'exclusions'                  => $exclusions,
+                        'additionalInfo'              => $additionalInfo,
+                        'cancellationPolicy'          => $cancellationPolicy,
+                        'bookingQuestions'            => $booking_questions,
+                        'bookingConfirmationSettings' => $bookingConfirmationSettings,
+                        'bookingRequirements'         => $bookingRequirements,
+                        'product_tags'                => $product_tags,
+                        'languageGuides'              => $languageGuides,
+                        'productOptions'              => $productOptions,
+                        'productflags'                => $productflags,
+                        'supplier'                    => $supplier,
+                        'reviews'                     => $reviews,
+                        'filter_travelers_photos'     => $filter_travelers_photos,
+                        'createdAt'                   => $createdAt,
+                        'lastUpdatedAt'               => $lastUpdatedAt,
+                    ];
 
-                        // filter attraction
-                        $filter_attraction = ViatorHelper::filter_activity_attraction($itinerary);
+                    // Check if activity exists
+                    $is_exist = DB::table('to_tour_product')->select('id')->where('slug', ViatorHelper::str_slug($title))->get()->toArray();
 
-                        // filter time duration
-                        $filter_duration = ViatorHelper::filter_activity_duration($duration);
-
-                        // find destination list
-                        $filter_destination = ViatorHelper::find_destination_details($destinations);
-
-                        // filter product image
-                        $filter_product_images = ViatorHelper::filter_product_images($single_product['images']);
-
-                        // filter inclusions
-                        $filter_inclusions = ViatorHelper::filter_product_inclusions($inclusions);
-
-                        // filter exclusions
-                        $filter_exclusions = ViatorHelper::filter_product_exclusions($exclusions);
-
-                        // filter additional info
-                        $filter_additional_info = ViatorHelper::filter_product_additional_info($additionalInfo);
-
-                        // filter booking question
-                        $booking_questions = ViatorHelper::filter_booking_questions($bookingQuestions);
-
-                        // filter product tags
-                        $product_tags = ViatorHelper::filter_product_tags($tags);
-
-                        // filter logistics
-                        $filter_logistics = ViatorHelper::filter_product_logistics($logistics);
-
-                        // filter itinerary
-                        $filter_itinerary = ViatorHelper::filter_product_itinerary($itinerary);
-
-                        // filter product reviews
-                        $filter_reiews = ViatorHelper::filter_product_reviews($productCode);
-
-                        // filter travelers photos
-                        $filter_travelers_photos = ViatorHelper::filter_product_travelers_photos($filter_reiews);
-
-                        // fetch product reviews
-                        $all_product_reviews = ViatorHelper::fetch_single_product_reviews($productCode);
-
-                        // push other json data
-                        $extra_json_data = [
-                            'productCode'                 => $productCode,
-                            'status'                      => $status,
-                            'durationActivityTime'        => $duration,
-                            'filter_destination'          => $filter_destination,
-                            'ticketInfo'                  => $ticketInfo,
-                            'pricingSummary'              => $pricingSummary,
-                            'pricingInfo'                 => $pricingInfo,
-                            'logistics'                   => $filter_logistics,
-                            'itinerary'                   => $filter_itinerary,
-                            'timeZone'                    => $timeZone,
-                            'inclusions'                  => $inclusions,
-                            'exclusions'                  => $exclusions,
-                            'additionalInfo'              => $additionalInfo,
-                            'cancellationPolicy'          => $cancellationPolicy,
-                            'bookingQuestions'            => $booking_questions,
-                            'bookingConfirmationSettings' => $bookingConfirmationSettings,
-                            'bookingRequirements'         => $bookingRequirements,
-                            'product_tags'                => $product_tags,
-                            'languageGuides'              => $languageGuides,
-                            'productOptions'              => $productOptions,
-                            'productflags'                => $productflags,
-                            'supplier'                    => $supplier,
-                            'reviews'                     => $reviews,
-                            'filter_travelers_photos'     => $filter_travelers_photos,
-                            'createdAt'                   => $createdAt,
-                            'lastUpdatedAt'               => $lastUpdatedAt,
+                    // check item is exist
+                    if(!count($is_exist)) {
+                        // Prepare data for insertion
+                        $insertData = [
+                            'user_id'         => 1,
+                            'slug'            => ViatorHelper::str_slug($title),
+                            'sku'             => 'viator_api',
+                            'tour_name'       => $title,
+                            'listing_type'    => 'Instant Booking',
+                            'media_type'      => 'reference',
+                            'description'     => $description,
+                            'featured_image'  => $filter_product_images['cover_image'],
+                            'media_gallery'   => json_encode($filter_product_images['related_images']),
+                            'seo_title'       => $title,
+                            'tour_sync_type'  => 'viator',
+                            'extra_json_data' => json_encode($extra_json_data),
+                            'status'          => 1,
                         ];
 
-                        // Check if sightseeing exists
-                        $is_exist = DB::table('to_tour_product')->select('id')->where('slug', ViatorHelper::str_slug($title))->get()->toArray();
+                        // Insert data into the table and get the last inserted ID
+                        $is_common_tour_id = DB::table('to_tour_product')->insertGetId($insertData);
 
-                        // define combile tour ID
-                        $is_common_tour_id = '';
+                        // push response in array
+                        $return_arr['data'][] = [
+                            'action'       => 'created',
+                            'created_id'   => $is_common_tour_id,
+                            'product_code' => $productCode,
+                        ];
+                    } else {
+                        // get exist tour ID
+                        $is_common_tour_id = $is_exist[0]->id;
 
-                        // check item is exist
-                        if(!count($is_exist)) {
-                            // Prepare data for insertion
-                            $insertData = [
-                                'user_id'         => 1,
-                                'slug'            => ViatorHelper::str_slug($title),
-                                'sku'             => 'viator_api',
+                        // remove previous activity meta data
+                        DB::table('to_tour_viator_tag')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_destination')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_location')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_city_night')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_terms')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_viator_extra_data')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_viator_special_badge')->where('tour_id', $is_common_tour_id)->delete();
+                        DB::table('to_tour_viator_attraction')->where('tour_id', $is_common_tour_id)->delete();
+
+                        // push data in table
+                        $is_updated_tour = DB::table('to_tour_product')
+                            ->where('id', $is_common_tour_id)
+                            ->update([
                                 'tour_name'       => $title,
-                                'listing_type'    => 'Instant Booking',
-                                'media_type'      => 'reference',
                                 'description'     => $description,
                                 'featured_image'  => $filter_product_images['cover_image'],
                                 'media_gallery'   => json_encode($filter_product_images['related_images']),
                                 'seo_title'       => $title,
-                                'tour_sync_type'  => 'viator',
                                 'extra_json_data' => json_encode($extra_json_data),
-                                'status'          => $is_status,
-                            ];
+                                'status'          => 1,
+                                'updated_at'      => date('Y-m-d h:i:s'),
+                            ]
+                        );
+                        
+                        // push response in array
+                        $return_arr['data'][] = [
+                            'action'        => 'updated',
+                            'exist_tour_id' => $is_common_tour_id,
+                            'product_code'  => $productCode,
+                            'is_updated'    => ($is_updated_tour) ? true : false,
+                        ];
+                    }
 
-                            // Insert data into the table and get the last inserted ID
-                            $is_created_tour = DB::table('to_tour_product')->insertGetId($insertData);
-
-                            // check tour is created
-                            if(!empty($is_created_tour)) {
-                                // check and insert destination
-                                foreach ($filter_destination as $tour_dest) {
-                                    // filter destination name
-                                    $destination_name = trim(str_replace(['city'], '', $tour_dest['data']['destinationName']));
-
-                                    // find city data
-                                    $city_data = DB::table('location_cities')->select('*')->where('name', 'like', '%' . $destination_name . '%')->get()->first();
-
-                                    // check city data is valid
-                                    if(!empty($city_data)) {
-                                        // get first data
-                                        $city_nights    = $city_data->nights;
-                                        $city_id        = $city_data->id;
-                                        $destination_id = $city_data->destination_id;
-                                        $country_id     = $city_data->country_id;
-                                        $state_id       = $city_data->state_id;
-
-                                        // insert destination data
-                                        if($destination_id) {
-                                            DB::table('to_tour_destination')->insert([
-                                                'tour_id'        => $is_created_tour,
-                                                'destination_id' => $destination_id,
-                                            ]);
-                                        }
-
-                                        // insert city night
-                                        if($city_id && $city_nights) {
-                                            DB::table('to_tour_city_night')->insert([
-                                                'tour_id' => $is_created_tour,
-                                                'city_id' => $city_id,
-                                                'night'   => $city_nights,
-                                            ]);
-                                        }
-
-                                        // insert location data
-                                        DB::table('to_tour_location')->insert([
-                                            'tour_id'        => $is_created_tour,
-                                            'destination_id' => $destination_id,
-                                            'country_id'     => $country_id,
-                                            'state_id'       => $state_id,
-                                            'city_id'        => $city_id,
-                                        ]);
-                                    }
-                                }
-
-                                // insert viator tags
-                                if(count($product_tags)) {
-                                    // fetch product tags
-                                    foreach ($product_tags as $tag) {
-                                        DB::table('to_tour_viator_tag')->insert([
-                                            'tour_id'  => $is_created_tour,
-                                            'tag_name' => $tag['tag_name'],
-                                        ]);
-                                    }
-                                }
-
-                                // count badge data
-                                if(count($filter_speical_badge)) {
-                                    // fetch special badge
-                                    foreach ($filter_speical_badge as $badge_name) {
-                                        // insert badge data
-                                        DB::table('to_tour_viator_special_badge')->insert([
-                                            'tour_id'    => $is_created_tour,
-                                            'badge_name' => $badge_name,
-                                        ]);
-                                    }
-                                }
-
-                                // count attraction data
-                                if(count($filter_attraction)) {
-                                    // fetch attractions
-                                    foreach ($filter_attraction as $attraction_name) {
-                                        // insert attraction data
-                                        DB::table('to_tour_viator_attraction')->insert([
-                                            'tour_id'         => $is_created_tour,
-                                            'attraction_name' => $attraction_name,
-                                        ]);
-                                    }
-                                }
-
-                                // insert viator extra data
-                                DB::table('to_tour_viator_extra_data')->insert([
-                                    'tour_id'        => $is_created_tour,
-                                    'product_code'   => $productCode,
-                                    'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
-                                    'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
-                                    'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
-                                    'reviews'        => $reviews['combinedAverageRating'] ?? 0,
-                                ]);
-
-                                // insert terms data
-                                DB::table('to_tour_terms')->insert([
-                                    'tour_id'              => $is_created_tour,
-                                    'what_is_included'     => json_encode($filter_inclusions),
-                                    'what_is_not_included' => json_encode($filter_exclusions),
-                                    'important_notes'      => json_encode($filter_additional_info),
-                                ]);
-
-                                // push response in array
-                                $return_arr['data'][] = [
-                                    'action'       => 'created',
-                                    'created_id'   => $is_created_tour,
-                                    'product_code' => $productCode,
-                                    'is_status'    => $is_status,
-                                ];
-
-                                // update common tour ID
-                                $is_common_tour_id = $is_created_tour;
-                            }
-                        } else {
-                            // get exist tour ID
-                            $exist_tour_id = $is_exist[0]->id;
-
-                            // update common tour ID
-                            $is_common_tour_id = $exist_tour_id;
-
-                            // remove location data
-                            DB::table('to_tour_viator_tag')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_destination')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_location')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_city_night')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_terms')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_viator_extra_data')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_viator_special_badge')->where('tour_id', $exist_tour_id)->delete();
-                            DB::table('to_tour_viator_attraction')->where('tour_id', $exist_tour_id)->delete();
-
-                            // push data in table
-                            $is_updated_tour = DB::table('to_tour_product')
-                                ->where('id', $exist_tour_id)
-                                ->update([
-                                    'tour_name'       => $title,
-                                    'description'     => $description,
-                                    'featured_image'  => $filter_product_images['cover_image'],
-                                    'media_gallery'   => json_encode($filter_product_images['related_images']),
-                                    'seo_title'       => $title,
-                                    'extra_json_data' => json_encode($extra_json_data),
-                                    'status'          => $is_status,
-                                    'updated_at'      => date('Y-m-d h:i:s'),
-                                ]
-                            );
-
-                            // check and insert destination
+                    // check common tour ID is valid
+                    if(!empty($is_common_tour_id)) {
+                        // check and insert destination
+                        if(!empty($filter_destination)) {
                             foreach ($filter_destination as $tour_dest) {
                                 // filter destination name
                                 $destination_name = trim(str_replace(['city'], '', $tour_dest['data']['destinationName']));
@@ -744,7 +612,7 @@ class ViatorController extends Controller
                                     // insert destination data
                                     if($destination_id) {
                                         DB::table('to_tour_destination')->insert([
-                                            'tour_id'        => $exist_tour_id,
+                                            'tour_id'        => $is_common_tour_id,
                                             'destination_id' => $destination_id,
                                         ]);
                                     }
@@ -752,7 +620,7 @@ class ViatorController extends Controller
                                     // insert city night
                                     if($city_id && $city_nights) {
                                         DB::table('to_tour_city_night')->insert([
-                                            'tour_id' => $exist_tour_id,
+                                            'tour_id' => $is_common_tour_id,
                                             'city_id' => $city_id,
                                             'night'   => $city_nights,
                                         ]);
@@ -760,7 +628,7 @@ class ViatorController extends Controller
 
                                     // insert location data
                                     DB::table('to_tour_location')->insert([
-                                        'tour_id'        => $exist_tour_id,
+                                        'tour_id'        => $is_common_tour_id,
                                         'destination_id' => $destination_id,
                                         'country_id'     => $country_id,
                                         'state_id'       => $state_id,
@@ -768,72 +636,63 @@ class ViatorController extends Controller
                                     ]);
                                 }
                             }
-
-                            // insert viator tags
-                            if(count($product_tags)) {
-                                // fetch product tags
-                                foreach ($product_tags as $tag) {
-                                    DB::table('to_tour_viator_tag')->insert([
-                                        'tour_id'  => $exist_tour_id,
-                                        'tag_name' => $tag['tag_name'],
-                                    ]);
-                                }
-                            }
-
-                            // count badge data
-                            if(count($filter_speical_badge)) {
-                                // fetch special badge
-                                foreach ($filter_speical_badge as $badge_name) {
-                                    // insert badge data
-                                    DB::table('to_tour_viator_special_badge')->insert([
-                                        'tour_id'    => $exist_tour_id,
-                                        'badge_name' => $badge_name,
-                                    ]);
-                                }
-                            }
-
-                            // count attraction data
-                            if(count($filter_attraction)) {
-                                // fetch attractions
-                                foreach ($filter_attraction as $attraction_name) {
-                                    // insert attraction data
-                                    DB::table('to_tour_viator_attraction')->insert([
-                                        'tour_id'         => $exist_tour_id,
-                                        'attraction_name' => $attraction_name,
-                                    ]);
-                                }
-                            }
-
-                            // insert terms data
-                            DB::table('to_tour_terms')->insert([
-                                'tour_id'              => $exist_tour_id,
-                                'what_is_included'     => json_encode($filter_inclusions),
-                                'what_is_not_included' => json_encode($filter_exclusions),
-                                'important_notes'      => json_encode($filter_additional_info),
-                            ]);
-
-                            // insert viator extra data
-                            DB::table('to_tour_viator_extra_data')->insert([
-                                'tour_id'        => $exist_tour_id,
-                                'product_code'   => $productCode,
-                                'selling_price'  => (!empty($pricingSummary['summary']['fromPriceBeforeDiscount'])) ? $pricingSummary['summary']['fromPriceBeforeDiscount'] : 0,
-                                'discount_price' => (!empty($pricingSummary['summary']['fromPrice'])) ? $pricingSummary['summary']['fromPrice'] : 0,
-                                'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
-                                'reviews'        => (!empty($reviews['combinedAverageRating'])) ? $reviews['combinedAverageRating'] : 0,
-                            ]);
-
-                            // push response in array
-                            $return_arr['data'][] = [
-                                'action'        => 'updated',
-                                'exist_tour_id' => $exist_tour_id,
-                                'product_code'  => $productCode,
-                                'is_status'     => $is_status,
-                                'is_updated'    => ($is_updated_tour) ? true : false,
-                            ];
                         }
 
-                        // check common tour ID is valid
-                        if(!empty($is_common_tour_id) && !empty($all_product_reviews['filteredReviewsSummary']['totalReviews'])) {
+                        // insert viator tags
+                        if(count($product_tags)) {
+                            // fetch product tags
+                            foreach ($product_tags as $tag) {
+                                DB::table('to_tour_viator_tag')->insert([
+                                    'tour_id'  => $is_common_tour_id,
+                                    'tag_name' => $tag['tag_name'],
+                                ]);
+                            }
+                        }
+
+                        // count badge data
+                        if(count($filter_speical_badge)) {
+                            // fetch special badge
+                            foreach ($filter_speical_badge as $badge_name) {
+                                // insert badge data
+                                DB::table('to_tour_viator_special_badge')->insert([
+                                    'tour_id'    => $is_common_tour_id,
+                                    'badge_name' => $badge_name,
+                                ]);
+                            }
+                        }
+
+                        // count attraction data
+                        if(count($filter_attraction)) {
+                            // fetch attractions
+                            foreach ($filter_attraction as $attraction_name) {
+                                // insert attraction data
+                                DB::table('to_tour_viator_attraction')->insert([
+                                    'tour_id'         => $is_common_tour_id,
+                                    'attraction_name' => $attraction_name,
+                                ]);
+                            }
+                        }
+
+                        // insert terms data
+                        DB::table('to_tour_terms')->insert([
+                            'tour_id'              => $is_common_tour_id,
+                            'what_is_included'     => json_encode($filter_inclusions),
+                            'what_is_not_included' => json_encode($filter_exclusions),
+                            'important_notes'      => json_encode($filter_additional_info),
+                        ]);
+
+                        // insert viator extra data
+                        DB::table('to_tour_viator_extra_data')->insert([
+                            'tour_id'        => $is_common_tour_id,
+                            'product_code'   => $productCode,
+                            'selling_price'  => (int) $pricingSummary['summary']['fromPriceBeforeDiscount'],
+                            'discount_price' => (int) $pricingSummary['summary']['fromPrice'],
+                            'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
+                            'reviews'        => $reviews['combinedAverageRating'] ?? 0,
+                        ]);
+
+                        // Update filtered reviews
+                        if(!empty($all_product_reviews['filteredReviewsSummary']['totalReviews'])) {
                             // fetch reviews
                             foreach ($all_product_reviews['reviews'] as $review) {
                                 // get single review data
@@ -867,7 +726,6 @@ class ViatorController extends Controller
                                         'review_text'      => $text,
                                         'provider'         => $provider,
                                         'helpful_votes'    => $helpfulVotes,
-                                        // 'photos_info'      => json_encode($photosInfo),
                                         'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
                                         'synced_date'      => date('Y-m-d h:i:s'),
                                     ]);
@@ -876,22 +734,20 @@ class ViatorController extends Controller
                         }
                     }
                 }
-            } else {
-                // set response
-                $return_arr['status']  = 404;
-                $return_arr['message'] = 'Product list is not found';
             }
         } else {
             // set response
-            $return_arr['status']  = 500;
-            $return_arr['message'] = 'Authorization token is not valid';
+            $return_arr = [
+                'status'  => 404,
+                'message' => 'Product list is not found',
+            ];
         }
 
         // return response
         return response()->json($return_arr);
     }
 
-    // fetch single product
+    // Fetch single product
     public function single_fetch_product(Request $request)
     {
         // define array
@@ -934,53 +790,22 @@ class ViatorController extends Controller
             $createdAt                   = $single_product['createdAt'] ?? null;
             $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
-            // filter status
-            $is_status = ($status === 'ACTIVE') ? 1 : 0;
-
-            // filter special tags
-            $filter_speical_badge = ViatorHelper::filter_activity_special_badge($productflags);
-
-            // filter time duration
-            $filter_duration = ViatorHelper::filter_activity_duration($itinerary['duration']);
-
-            // find destination list
-            $filter_destination = ViatorHelper::find_destination_details($destinations);
-
-            // filter product image
-            $filter_product_images = ViatorHelper::filter_product_images($single_product['images']);
-
-            // filter inclusions
-            $filter_inclusions = ViatorHelper::filter_product_inclusions($inclusions);
-
-            // filter exclusions
-            $filter_exclusions = ViatorHelper::filter_product_exclusions($exclusions);
-
-            // filter additional info
-            $filter_additional_info = ViatorHelper::filter_product_additional_info($additionalInfo);
-
-            // filter booking question
-            $booking_questions = ViatorHelper::filter_booking_questions($bookingQuestions);
-
-            // filter product tags
-            $product_tags = ViatorHelper::filter_product_tags($tags);
-
-            // filter attraction
-            $filter_attraction = ViatorHelper::filter_activity_attraction($itinerary);
-
-            // filter logistics
-            $filter_logistics = ViatorHelper::filter_product_logistics($logistics);
-
-            // filter itinerary
-            $filter_itinerary = ViatorHelper::filter_product_itinerary($itinerary);
-
-            // filter product reviews
-            $filter_reiews = ViatorHelper::filter_product_reviews($productCode);
-
-            // filter travelers photos
+            // Filter data
+            $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
+            $filter_duration         = ViatorHelper::filter_activity_duration($itinerary['duration']);
+            $filter_destination      = ViatorHelper::find_destination_details($destinations);
+            $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
+            $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
+            $filter_exclusions       = ViatorHelper::filter_product_exclusions($exclusions);
+            $filter_additional_info  = ViatorHelper::filter_product_additional_info($additionalInfo);
+            $booking_questions       = ViatorHelper::filter_booking_questions($bookingQuestions);
+            $product_tags            = ViatorHelper::filter_product_tags($tags);
+            $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary);
+            $filter_logistics        = ViatorHelper::filter_product_logistics($logistics);
+            $filter_itinerary        = ViatorHelper::filter_product_itinerary($itinerary);
+            $filter_reiews           = ViatorHelper::filter_product_reviews($productCode);
             $filter_travelers_photos = ViatorHelper::filter_product_travelers_photos($filter_reiews);
-
-            // fetch product reviews
-            $all_product_reviews = ViatorHelper::fetch_single_product_reviews($productCode);
+            $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
 
             // push other json data
             $extra_json_data = [
@@ -1034,7 +859,7 @@ class ViatorController extends Controller
                     'seo_title'       => $title,
                     'tour_sync_type'  => 'viator',
                     'extra_json_data' => json_encode($extra_json_data),
-                    'status'          => $is_status,
+                    'status'          => 1,
                 ];
 
                 // Insert data into the table and get the last inserted ID
@@ -1145,7 +970,7 @@ class ViatorController extends Controller
                         'action'       => 'created',
                         'created_id'   => $is_created_tour,
                         'product_code' => $productCode,
-                        'is_status'    => $is_status,
+                        'is_status'    => 1,
                     ];
 
                     // update common tour ID
@@ -1178,7 +1003,7 @@ class ViatorController extends Controller
                         'media_gallery'   => json_encode($filter_product_images['related_images']),
                         'seo_title'       => $title,
                         'extra_json_data' => json_encode($extra_json_data),
-                        'status'          => $is_status,
+                        'status'          => 1,
                         'updated_at'      => date('Y-m-d h:i:s'),
                     ]
                 );
@@ -1286,7 +1111,7 @@ class ViatorController extends Controller
                     'action'        => 'updated',
                     'exist_tour_id' => $exist_tour_id,
                     'product_code'  => $productCode,
-                    'is_status'     => $is_status,
+                    'is_status'     => 1,
                     'is_updated'    => ($is_updated_tour) ? true : false,
                 ];
             }
@@ -1339,9 +1164,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * availability check
-     */
+    // Availability check
     public function availability_check(Request $request)
     {
         // define array
@@ -1371,9 +1194,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * bookings cart hold
-     */
+    // Bookings cart hold
     public function bookings_cart_hold(Request $request)
     {
         // define array
@@ -1403,9 +1224,7 @@ class ViatorController extends Controller
         return response()->json($return_arr);
     }
 
-    /**
-     * viator destinations
-     */
+    // Fetch destination list
     public function viator_destinations(Request $request)
     {
         // define array

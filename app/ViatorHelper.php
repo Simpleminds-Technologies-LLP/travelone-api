@@ -70,7 +70,7 @@ class ViatorHelper
         // fetch product search
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.viator.com/partner/products/search',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/search',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -80,7 +80,7 @@ class ViatorHelper
             CURLOPT_CUSTOMREQUEST  => 'POST',
             CURLOPT_POSTFIELDS     => json_encode($filter_data),
             CURLOPT_HTTPHEADER => array(
-                'exp-api-key: 4f200fc4-6128-45d0-b6e8-379284900a52',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json'
@@ -99,7 +99,7 @@ class ViatorHelper
         // fetch product search
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.viator.com/partner/products/' . $productCode,
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/' . $productCode,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -108,7 +108,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: 4f200fc4-6128-45d0-b6e8-379284900a52',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0'
             ),
@@ -125,7 +125,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.viator.com/partner/v1/taxonomy/destinations',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/v1/taxonomy/destinations',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -134,7 +134,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: 4f200fc4-6128-45d0-b6e8-379284900a52',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0'
             )
@@ -151,7 +151,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.viator.com/partner/products/tags',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/tags',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -160,7 +160,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: 4f200fc4-6128-45d0-b6e8-379284900a52',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0'
             )
@@ -177,7 +177,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/products/booking-questions',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/booking-questions',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -186,7 +186,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => [
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0'
             ]
@@ -203,7 +203,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/products/tags',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/tags',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -212,7 +212,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => [
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0'
             ]
@@ -229,7 +229,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/availability/check',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/availability/check',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -239,7 +239,7 @@ class ViatorHelper
             CURLOPT_CUSTOMREQUEST  => 'POST',
             CURLOPT_POSTFIELDS     => json_encode($filter_data),
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json'
             ),
@@ -256,7 +256,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/bookings/cart/hold',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/bookings/cart/hold',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -266,7 +266,7 @@ class ViatorHelper
             CURLOPT_CUSTOMREQUEST  => 'POST',
             CURLOPT_POSTFIELDS     => json_encode($body_request),
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json'
@@ -284,7 +284,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/locations/bulk',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/locations/bulk',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -294,7 +294,7 @@ class ViatorHelper
             CURLOPT_CUSTOMREQUEST  => 'POST',
             CURLOPT_POSTFIELDS     => '{"locations": ["' . $location_data . '"]}',
             CURLOPT_HTTPHEADER => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json',
@@ -312,7 +312,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/reviews/product',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/reviews/product',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -331,7 +331,7 @@ class ViatorHelper
                 "sortBy": "MOST_RECENT_PER_LOCALE"
             }',
             CURLOPT_HTTPHEADER => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json'
@@ -370,7 +370,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/reviews/product',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/reviews/product',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -389,7 +389,7 @@ class ViatorHelper
                 "sortBy": "MOST_RECENT_PER_LOCALE"
             }',
             CURLOPT_HTTPHEADER => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json'
@@ -407,7 +407,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/products/modified-since?modified-since=' . $body_payload['modified_since'] . '&count=' . $body_payload['count'] . '&cursor=' . ((!empty($body_payload['cursor'])) ? $body_payload['cursor'] : ''),
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/modified-since?modified-since=' . $body_payload['modified_since'] . '&count=' . $body_payload['count'] . '&cursor=' . ((!empty($body_payload['cursor'])) ? $body_payload['cursor'] : ''),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -416,7 +416,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
@@ -434,7 +434,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/availability/schedules/modified-since?modified-since=' . $body_payload['modified_since'] . '&count=' . $body_payload['count'] . '&cursor=' . ((!empty($body_payload['cursor'])) ? $body_payload['cursor'] : ''),
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/availability/schedules/modified-since?modified-since=' . $body_payload['modified_since'] . '&count=' . $body_payload['count'] . '&cursor=' . ((!empty($body_payload['cursor'])) ? $body_payload['cursor'] : ''),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -443,7 +443,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
@@ -461,7 +461,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/availability/schedules/' . $product_code,
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/availability/schedules/' . $product_code,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -470,7 +470,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
@@ -488,7 +488,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/v1/taxonomy/destinations',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/v1/taxonomy/destinations',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -497,7 +497,7 @@ class ViatorHelper
             CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST  => 'GET',
             CURLOPT_HTTPHEADER     => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
@@ -515,7 +515,7 @@ class ViatorHelper
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/locations/bulk',
+            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/locations/bulk',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -525,7 +525,7 @@ class ViatorHelper
             CURLOPT_CUSTOMREQUEST  => 'POST',
             CURLOPT_POSTFIELDS     => ($is_single) ? '{"locations": ["' . $location_ref . '"]}' : json_encode($location_ref),
             CURLOPT_HTTPHEADER => array(
-                'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0'
@@ -1005,7 +1005,7 @@ class ViatorHelper
                     // fetch single attraction data
                     $curl = curl_init();
                     curl_setopt_array($curl, array(
-                        CURLOPT_URL            => 'https://api.sandbox.viator.com/partner/v1/attraction?seoId=' . $att_id,
+                        CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/v1/attraction?seoId=' . $att_id,
                         CURLOPT_RETURNTRANSFER => true,
                         CURLOPT_ENCODING       => '',
                         CURLOPT_MAXREDIRS      => 10,
@@ -1014,7 +1014,7 @@ class ViatorHelper
                         CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
                         CURLOPT_CUSTOMREQUEST  => 'GET',
                         CURLOPT_HTTPHEADER     => array(
-                            'exp-api-key: e1f06e53-937b-44c7-b392-b141ce1d0b91',
+                            'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                             'Accept-Language: en',
                             'Content-Type: application/json',
                             'Accept: application/json;version=2.0',
