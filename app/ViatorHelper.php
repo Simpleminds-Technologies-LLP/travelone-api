@@ -1043,4 +1043,37 @@ class ViatorHelper
         // return response
         return $return_arr;
     }
+
+    /**
+     * send slack notification
+     */
+    public static function send_slack_notification($slack_message) {
+        // Create payload
+        $payload = json_encode([
+            "text" => $slack_message
+        ]);
+
+        // Set cURL options
+        $ch = curl_init('https://hooks.slack.com/services/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');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($payload)
+        ]);
+
+        // Execute cURL request
+        $result = curl_exec($ch);
+
+        // Check for errors
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        }
+
+        // Close cURL session
+        curl_close($ch);
+
+        return $result;
+    }
 }

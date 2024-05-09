@@ -67,6 +67,9 @@ class ViatorController extends Controller
                 $next_cursor = (!empty($last_modified_call['nextCursor'])) ? $last_modified_call['nextCursor'] : null;
             }
 
+            // Send slack notification
+            ViatorHelper::send_slack_notification('TravelOne :: Last modified since product was run successfully.');
+
             // set response
             $return_arr['status'] = 200;
             $return_arr['data']   = $modified_products;
@@ -202,6 +205,9 @@ class ViatorController extends Controller
                     // define next cursor
                     $next_cursor = (!empty($last_modified_call['nextCursor'])) ? $last_modified_call['nextCursor'] : null;
                 }
+
+                // Send slack notification
+                ViatorHelper::send_slack_notification('TravelOne :: Last modified availability schedules was run successfully.');
 
                 // set response
                 $return_arr['status'] = 200;
