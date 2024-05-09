@@ -546,26 +546,26 @@ class ViatorHelper
      */
     public static function find_destination_details($destination_ids = [])
     {
-        // fetch destination list
+        // Fetch destination list
         $destination_list = ViatorHelper::fetch_destination_list();
 
-        // map destinations by ID for quick lookup
+        // Map destinations by ID for quick lookup
         $mapped_destinations = [];
         foreach ($destination_list['data'] as $destination) {
             $mapped_destinations[$destination['destinationId']] = $destination;
         }
 
-        // fetch details for provided IDs
-        if(is_array($destination_ids) && count($destination_ids)) {
+        // Fetch details for provided IDs
+        if (is_array($destination_ids) && !empty($destination_ids)) {
             foreach ($destination_ids as &$destination) {
                 $destination_id = $destination['ref'];
 
-                // find destination details using the mapped array
+                // Find destination details using the mapped array
                 $destination['data'] = $mapped_destinations[$destination_id] ?? [];
             }
         }
 
-        // return response
+        // Return response
         return $destination_ids;
     }
 
@@ -593,21 +593,18 @@ class ViatorHelper
      */
     public static function filter_product_images($product_images = [])
     {
-        // Initialize variables
         $is_related_images = [];
         $is_cover_image = null;
 
-        // Check if the product_images array is not empty
+        // Check if the product_images array is not empty and is an array
         if (!empty($product_images) && is_array($product_images)) {
-            // Iterate over each image in the product_images array
             foreach ($product_images as $image) {
                 // Extract relevant data with default values
                 $is_cover = $image['isCover'] ?? false;
                 $variants = $image['variants'] ?? [];
 
                 // Check if variants is a non-empty array
-                if (is_array($variants) && !empty($variants)) {
-                    // Iterate over each variant
+                if (!empty($variants) && is_array($variants)) {
                     foreach ($variants as $variant) {
                         // Check if the variant has the required dimensions
                         if ($variant['height'] == 480 && $variant['width'] == 720) {
@@ -623,9 +620,8 @@ class ViatorHelper
             }
         }
 
-        // Return the final result
         return [
-            'cover_image'    => $is_cover_image,
+            'cover_image' => $is_cover_image,
             'related_images' => $is_related_images,
         ];
     }
@@ -676,25 +672,23 @@ class ViatorHelper
      */
     public static function filter_booking_questions($find_questions = [])
     {
-        // define array
         $return_arr = [];
 
-        // fetch product question list
+        // Fetch the original list of booking questions
         $original_list = ViatorHelper::fetch_product_booking_questions();
 
-        // check if $find_questions and $original_list are non-empty arrays
-        if (!empty($find_questions) && is_array($find_questions) && !empty($original_list['bookingQuestions']) && is_array($original_list['bookingQuestions'])) {
-            // iterate over each item in the original question list
+        // Check if both $find_questions and $original_list are non-empty arrays
+        if (!empty($find_questions) && is_array($find_questions) && 
+            !empty($original_list['bookingQuestions']) && is_array($original_list['bookingQuestions'])) {
+            
+            // Filter questions based on IDs
             foreach ($original_list['bookingQuestions'] as $row_question) {
-                // check if id is in $find_questions
                 if (in_array($row_question['id'], $find_questions)) {
-                    // push data in array
                     $return_arr[] = $row_question;
                 }
             }
         }
 
-        // return response
         return $return_arr;
     }
 
@@ -917,14 +911,10 @@ class ViatorHelper
 
         if (!empty($filterReviews['reviews'])) {
             foreach ($filterReviews['reviews'] as $review) {
-                if (!empty($review['photosInfo'])) {
-                    foreach ($review['photosInfo'] as $photo) {
-                        if (!empty($photo['photoVersions'])) {
-                            foreach ($photo['photoVersions'] as $version) {
-                                if ($version['height'] == '733' && $version['width'] == '550') {
-                                    $travelersPhotos[] = $version['url'];
-                                }
-                            }
+                foreach ($review['photosInfo'] ?? [] as $photo) {
+                    foreach ($photo['photoVersions'] ?? [] as $version) {
+                        if ($version['height'] == '733' && $version['width'] == '550') {
+                            $travelersPhotos[] = $version['url'];
                         }
                     }
                 }
@@ -939,21 +929,20 @@ class ViatorHelper
      */
     public static function filter_google_location_data($google_location = [])
     {
-        // define array
         $return_location = [];
 
-        // count reviews
-        if(count($google_location)) {
+        // Check if Google location data is not empty
+        if (!empty($google_location)) {
             $return_location['provider'] = 'GOOGLE';
-            $return_location['name']     = (!empty($google_location['name'])) ? $google_location['name'] : 'N/A';
-            $return_location['address']  = explode(', ', $google_location['formatted_address']);
-            $return_location['center']   = [
-                'latitude'  => $google_location['geometry']['location']['lat'],
-                'longitude' => $google_location['geometry']['location']['lng'],
+            $return_location['name'] = $google_location['name'] ?? 'N/A';
+            $return_location['address'] = isset($google_location['formatted_address']) ? explode(', ', $google_location['formatted_address']) : [];
+            $return_location['center'] = [
+                'latitude' => $google_location['geometry']['location']['lat'] ?? null,
+                'longitude' => $google_location['geometry']['location']['lng'] ?? null,
             ];
         }
 
-        // return response
+        // Return filtered location data
         return $return_location;
     }
 
@@ -968,7 +957,11 @@ class ViatorHelper
         // fetch loop
         foreach ($product_flags as $badge_name) {
             // check condition and set flag name
-            $filter_flag_name = ($badge_name == 'NEW_ON_VIATOR') ? 'New On TravelOne' : ucwords(strtolower(str_replace('_', ' ', $badge_name)));
+            if ($badge_name === 'NEW_ON_VIATOR') {
+                $filter_flag_name = 'New On TravelOne';
+            } else {
+                $filter_flag_name = ucwords(strtolower(str_replace('_', ' ', $badge_name)));
+            }
 
             // push data in array
             $filter_badge[] = $filter_flag_name;
@@ -981,58 +974,51 @@ class ViatorHelper
     // filter activity attraction
     public static function filter_activity_attraction($itinerary = [])
     {
-        // define array
-        $attraction_ids = $attraction_list = [];
+        $attraction_list = [];
 
-        // fetch loop
-        if(!empty($itinerary['itineraryItems']) && is_array($itinerary['itineraryItems']) && count($itinerary['itineraryItems'])) {
-            foreach ($itinerary['itineraryItems'] as $item) {
-                // get attraction id
-                $attraction_id = (!empty($item['pointOfInterestLocation']['attractionId'])) ? $item['pointOfInterestLocation']['attractionId'] : '';
+        // Check if itinerary items exist and is an array
+        if (!empty($itinerary['itineraryItems']) && is_array($itinerary['itineraryItems'])) {
+            // Extract attraction ids
+            $attraction_ids = array_map(function($item) {
+                return $item['pointOfInterestLocation']['attractionId'] ?? '';
+            }, $itinerary['itineraryItems']);
 
-                // push data in array
-                if(!empty($attraction_id)) {
-                    $attraction_ids[] = $attraction_id;
-                }
-            }
+            // Remove empty values and duplicates
+            $attraction_ids = array_unique(array_filter($attraction_ids));
 
-            // unique array item
-            $array_unique = array_unique($attraction_ids);
+            // Fetch attraction data
+            foreach ($attraction_ids as $att_id) {
+                // Initialize curl
+                $curl = curl_init();
+                curl_setopt_array($curl, [
+                    CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/v1/attraction?seoId=' . $att_id,
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING       => '',
+                    CURLOPT_MAXREDIRS      => 10,
+                    CURLOPT_TIMEOUT        => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST  => 'GET',
+                    CURLOPT_HTTPHEADER     => [
+                        'exp-api-key: ' . env('VIATOR_API_TOKEN'),
+                        'Accept-Language: en',
+                        'Content-Type: application/json',
+                        'Accept: application/json;version=2.0',
+                    ]
+                ]);
 
-            // check attraction ids
-            if(count($array_unique)) {
-                foreach ($array_unique as $att_id) {
-                    // fetch single attraction data
-                    $curl = curl_init();
-                    curl_setopt_array($curl, array(
-                        CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/v1/attraction?seoId=' . $att_id,
-                        CURLOPT_RETURNTRANSFER => true,
-                        CURLOPT_ENCODING       => '',
-                        CURLOPT_MAXREDIRS      => 10,
-                        CURLOPT_TIMEOUT        => 0,
-                        CURLOPT_FOLLOWLOCATION => true,
-                        CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
-                        CURLOPT_CUSTOMREQUEST  => 'GET',
-                        CURLOPT_HTTPHEADER     => array(
-                            'exp-api-key: ' . env('VIATOR_API_TOKEN'),
-                            'Accept-Language: en',
-                            'Content-Type: application/json',
-                            'Accept: application/json;version=2.0',
-                        )
-                    ));
-                    $response = json_decode(curl_exec($curl), true);
-                    curl_close($curl);
+                // Execute curl and decode response
+                $response = json_decode(curl_exec($curl), true);
+                curl_close($curl);
 
-                    // check is valid
-                    if(!empty($response['data']['pageTitle'])) {
-                        // push data in array
-                        $attraction_list[] = $response['data']['pageTitle'];
-                    }
+                // Check if response contains valid data
+                if (!empty($response['data']['pageTitle'])) {
+                    $attraction_list[] = $response['data']['pageTitle'];
                 }
             }
         }
 
-        // return response
+        // Return attraction list
         return $attraction_list;
     }
 
