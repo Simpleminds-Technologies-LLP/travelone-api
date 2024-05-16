@@ -19,7 +19,7 @@ Route::post('/viator/last_updated_availability_schedules', 'App\Http\Controllers
 Route::post('/viator/single_availability_schedules', 'App\Http\Controllers\ViatorController@single_product_availability_schedules');
 
 // product search
-Route::post('/viator/product_search', 'App\Http\Controllers\ViatorController@fetch_product_list');
+Route::get('/viator/product_search/{country_id}', 'App\Http\Controllers\ViatorController@fetch_product_list');
 
 // single product sync
 Route::post('/viator/single_product_search', 'App\Http\Controllers\ViatorController@single_fetch_product');
@@ -35,3 +35,29 @@ Route::post('/viator/destinations', 'App\Http\Controllers\ViatorController@viato
 
 // set daily cron job
 Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers\ViatorController@update_activity_availability_schedules');
+
+
+
+/**
+
+	// VIATOR COUNTRY SYNCED DATA
+
+	USA - 77
+	Canada - 
+	France - 
+	Spain - 
+	Mexico - 
+	Australia - 
+	New Zealand - 
+	Italy - 
+	Japan - 
+	Indonesia - 
+	Singapore - 
+	Malaysia - 
+	Thailand - 
+	UAE - 
+	Cambodia - 
+	Vietnam - 
+	South Africa - 
+
+ */
