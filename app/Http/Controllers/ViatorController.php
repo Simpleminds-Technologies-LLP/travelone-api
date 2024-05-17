@@ -574,7 +574,7 @@ class ViatorController extends Controller
                             ];
                         } else {
                             // get exist tour ID
-                            $is_common_tour_id = $is_exist[0]->id;
+                            /*$is_common_tour_id = $is_exist[0]->id;
 
                             // remove previous activity meta data
                             DB::table('to_tour_viator_tag')->where('tour_id', $is_common_tour_id)->delete();
@@ -607,7 +607,7 @@ class ViatorController extends Controller
                                 'exist_tour_id' => $is_common_tour_id,
                                 'product_code'  => $productCode,
                                 'is_updated'    => ($is_updated_tour) ? true : false,
-                            ];
+                            ];*/
                         }
 
                         // check common tour ID is valid
