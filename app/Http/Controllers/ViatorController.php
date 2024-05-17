@@ -431,17 +431,17 @@ class ViatorController extends Controller
         // define array
         $return_arr = [];
         $synced_page = 0;
-        $count_add = 20;
+        $count_add = 10;
 
         // Define specific country data
-        while ($synced_page <= 2000) {
+        while ($synced_page <= 5000) {
             // Define static body
             $filter_data = [
                 "filtering" => [
                     "destination" => $request->country_id
                 ],
                 "pagination" => [
-                    "start" => $synced_page,
+                    "start" => $synced_page + 1,
                     "count" => $count_add
                 ],
                 "currency" => "USD"
@@ -763,6 +763,7 @@ class ViatorController extends Controller
                     'status'  => 404,
                     'message' => 'Product list is not found',
                 ];
+                exit();
             }
 
             // Update synced count
