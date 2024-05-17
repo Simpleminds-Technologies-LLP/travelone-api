@@ -431,6 +431,7 @@ class ViatorController extends Controller
         // define array
         $return_arr = [];
         $synced_page = 0;
+        $count_add = 20;
 
         // Define specific country data
         while ($synced_page <= 2000) {
@@ -441,7 +442,7 @@ class ViatorController extends Controller
                 ],
                 "pagination" => [
                     "start" => $synced_page,
-                    "count" => 20
+                    "count" => $count_add
                 ],
                 "currency" => "USD"
             ];
@@ -765,7 +766,7 @@ class ViatorController extends Controller
             }
 
             // Update synced count
-            $synced_page += 10;
+            $synced_page += $count_add;
         }
 
         die;
