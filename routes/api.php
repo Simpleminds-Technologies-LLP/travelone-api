@@ -38,26 +38,21 @@ Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers
 
 
 
-/**
-
-	// VIATOR COUNTRY SYNCED DATA
-
-	USA - 77
-	Canada - 
-	France - 
-	Spain - 
-	Mexico - 
-	Australia - 
-	New Zealand - 
-	Italy - 
-	Japan - 
-	Indonesia - 
-	Singapore - 
-	Malaysia - 
-	Thailand - 
-	UAE - 
-	Cambodia - 
-	Vietnam - 
-	South Africa - 
-
- */
+// VIATOR COUNTRY SYNCED DATA
+// USA - 77
+// Canada - 75
+// France - 51
+// Spain - 67
+// Mexico - 76
+// Australia - 22
+// New Zealand - 24
+// Italy - 57
+// Japan - 16
+// Indonesia - 15
+// Singapore - 18
+// Malaysia - 17
+// Thailand - 20
+// UAE - 743
+// Cambodia - 12
+// Vietnam - 21
+// South Africa - 11
