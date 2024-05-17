@@ -57,21 +57,7 @@ Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers
 // Vietnam      => 21
 // South Africa => 11
 
-# Sync Viator Major Country
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/77"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/51"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/67"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/76"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/22"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/24"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/57"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/16"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/15"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/18"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/17"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/20"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/743"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/12"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/21"
-// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/11"
+// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/0"
+// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/31"
+// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/61"
+// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/91"
