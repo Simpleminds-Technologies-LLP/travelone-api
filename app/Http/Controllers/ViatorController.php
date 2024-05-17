@@ -425,16 +425,13 @@ class ViatorController extends Controller
     // Fetch and sync product list
     public function fetch_product_list(Request $request)
     {
-        // get requested data
-        // $filter_data = $request->filter_data;
-
         // define array
         $return_arr = [];
         $synced_page = 0;
-        $count_add = 10;
+        $count_add = 50;
 
         // Define specific country data
-        while ($synced_page <= 5000) {
+        while ($synced_page <= 3400) {
             // Define static body
             $filter_data = [
                 "filtering" => [
@@ -575,7 +572,7 @@ class ViatorController extends Controller
                             ];
                         } else {
                             // get exist tour ID
-                            /*$is_common_tour_id = $is_exist[0]->id;
+                            $is_common_tour_id = $is_exist[0]->id;
 
                             // remove previous activity meta data
                             DB::table('to_tour_viator_tag')->where('tour_id', $is_common_tour_id)->delete();
@@ -608,7 +605,7 @@ class ViatorController extends Controller
                                 'exist_tour_id' => $is_common_tour_id,
                                 'product_code'  => $productCode,
                                 'is_updated'    => ($is_updated_tour) ? true : false,
-                            ];*/
+                            ];
                         }
 
                         // check common tour ID is valid
@@ -757,19 +754,11 @@ class ViatorController extends Controller
                         }
                     }
                 }
-            } else {
-                // set response
-                $return_arr = [
-                    'status'  => 404,
-                    'message' => 'Product list is not found',
-                ];
             }
 
             // Update synced count
             $synced_page += $count_add;
         }
-
-        echo "<pre>"; print_r($return_arr); echo "</pre>"; die;
     }
 
     // Fetch single product
