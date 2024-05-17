@@ -19,7 +19,7 @@ Route::post('/viator/last_updated_availability_schedules', 'App\Http\Controllers
 Route::post('/viator/single_availability_schedules', 'App\Http\Controllers\ViatorController@single_product_availability_schedules');
 
 // product search
-Route::get('/viator/product_search/{country_id}', 'App\Http\Controllers\ViatorController@fetch_product_list');
+Route::get('/viator/product_search/{country_id}/{start}', 'App\Http\Controllers\ViatorController@fetch_product_list');
 
 // single product sync
 Route::post('/viator/single_product_search', 'App\Http\Controllers\ViatorController@single_fetch_product');
@@ -39,20 +39,39 @@ Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers
 
 
 // VIATOR COUNTRY SYNCED DATA
-// USA - 77
-// Canada - 75
-// France - 51
-// Spain - 67
-// Mexico - 76
-// Australia - 22
-// New Zealand - 24
-// Italy - 57
-// Japan - 16
-// Indonesia - 15
-// Singapore - 18
-// Malaysia - 17
-// Thailand - 20
-// UAE - 743
-// Cambodia - 12
-// Vietnam - 21
-// South Africa - 11
+// Canada       => 75
+// USA          => 77
+// France       => 51
+// Spain        => 67
+// Mexico       => 76
+// Australia    => 22
+// New Zealand  => 24
+// Italy        => 57
+// Japan        => 16
+// Indonesia    => 15
+// Singapore    => 18
+// Malaysia     => 17
+// Thailand     => 20
+// UAE          => 743
+// Cambodia     => 12
+// Vietnam      => 21
+// South Africa => 11
+
+# Sync Viator Major Country
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/77"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/51"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/67"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/76"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/22"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/24"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/57"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/16"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/15"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/18"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/17"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/20"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/743"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/12"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/21"
+// */5 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/11"
