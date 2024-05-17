@@ -594,7 +594,7 @@ class ViatorController extends Controller
                                 'seo_title'       => $title,
                                 'extra_json_data' => json_encode($extra_json_data),
                                 'status'          => 1,
-                                'isCronRequest'   => $req_country_id . '/' . $req_start_position . '/' . $default_limit
+                                'isCronRequest'   => $req_country_id . '/' . $req_start_position . '/' . $default_limit,
                                 'updated_at'      => date('Y-m-d h:i:s'),
                             ]
                         );
