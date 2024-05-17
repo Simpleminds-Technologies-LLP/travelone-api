@@ -763,18 +763,13 @@ class ViatorController extends Controller
                     'status'  => 404,
                     'message' => 'Product list is not found',
                 ];
-                exit();
             }
 
             // Update synced count
             $synced_page += $count_add;
         }
 
-        die;
-
-
-        // return response
-        return response()->json($return_arr);
+        echo "<pre>"; print_r($return_arr); echo "</pre>"; die;
     }
 
     // Fetch single product
