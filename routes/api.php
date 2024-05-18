@@ -18,9 +18,6 @@ Route::post('/viator/last_updated_availability_schedules', 'App\Http\Controllers
 // single product availability schedules
 Route::post('/viator/single_availability_schedules', 'App\Http\Controllers\ViatorController@single_product_availability_schedules');
 
-// product search
-Route::get('/viator/product_search/{country_id}/{start}', 'App\Http\Controllers\ViatorController@fetch_product_list');
-
 // single product sync
 Route::post('/viator/single_product_search', 'App\Http\Controllers\ViatorController@single_fetch_product');
 
@@ -35,6 +32,9 @@ Route::post('/viator/destinations', 'App\Http\Controllers\ViatorController@viato
 
 // set daily cron job
 Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers\ViatorController@update_activity_availability_schedules');
+
+// product search
+Route::get('/viator/sync/{country_id}/{start}', 'App\Http\Controllers\SyncController@sync_viator_product_list');
 
 
 
