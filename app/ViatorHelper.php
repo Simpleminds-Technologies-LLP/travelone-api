@@ -587,10 +587,10 @@ class ViatorHelper
     /**
      * find destination details by ID
      */
-    public static function find_destination_details($destination_ids = [])
+    public static function find_destination_details($destination_list, $destination_ids = [])
     {
         // Fetch destination list
-        $destination_list = ViatorHelper::fetch_destination_list();
+        // $destination_list = ViatorHelper::fetch_destination_list();
 
         // Map destinations by ID for quick lookup
         $mapped_destinations = [];
@@ -713,12 +713,12 @@ class ViatorHelper
     /**
      * filter booking questions
      */
-    public static function filter_booking_questions($find_questions = [])
+    public static function filter_booking_questions($original_list, $find_questions = [])
     {
         $return_arr = [];
 
         // Fetch the original list of booking questions
-        $original_list = ViatorHelper::fetch_product_booking_questions();
+        // $original_list = ViatorHelper::fetch_product_booking_questions();
 
         // Check if both $find_questions and $original_list are non-empty arrays
         if (!empty($find_questions) && is_array($find_questions) && 
@@ -738,10 +738,10 @@ class ViatorHelper
     /**
      * filter product tags
      */
-    public static function filter_product_tags($find_tags = [])
+    public static function filter_product_tags($original_list, $find_tags = [])
     {
         // fetch product product tags
-        $original_list = ViatorHelper::fetch_product_tags();
+        // $original_list = ViatorHelper::fetch_product_tags();
 
         // check array length
         if(!empty($original_list['tags']) && !count($original_list['tags'])) {
