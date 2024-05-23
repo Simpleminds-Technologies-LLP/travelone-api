@@ -87,7 +87,6 @@ class SyncController extends Controller
 
             // fetch single product
             $single_product = ViatorHelper::fetch_single_product($productCode);
-            echo "<pre>"; print_r($single_product); echo "</pre>"; die;
 
             // check is valid response
             if(is_array($single_product) && !empty($single_product) && $single_product['status'] == 'ACTIVE') {
