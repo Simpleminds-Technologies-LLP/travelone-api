@@ -955,16 +955,18 @@ class ViatorHelper
         $filter_badge = [];
 
         // fetch loop
-        foreach ($product_flags as $badge_name) {
-            // check condition and set flag name
-            if ($badge_name === 'NEW_ON_VIATOR') {
-                $filter_flag_name = 'New On TravelOne';
-            } else {
-                $filter_flag_name = ucwords(strtolower(str_replace('_', ' ', $badge_name)));
-            }
+        if(!empty($product_flags)) {
+            foreach ($product_flags as $badge_name) {
+                // check condition and set flag name
+                if ($badge_name === 'NEW_ON_VIATOR') {
+                    $filter_flag_name = 'New On TravelOne';
+                } else {
+                    $filter_flag_name = ucwords(strtolower(str_replace('_', ' ', $badge_name)));
+                }
 
-            // push data in array
-            $filter_badge[] = $filter_flag_name;
+                // push data in array
+                $filter_badge[] = $filter_flag_name;
+            }
         }
 
         // return response

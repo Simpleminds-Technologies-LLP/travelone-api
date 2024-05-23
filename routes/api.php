@@ -35,6 +35,7 @@ Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers
 
 // Sync viator products in TravelOne
 Route::get('/viator/sync/{country_id}/{start}', 'App\Http\Controllers\SyncController@sync_viator_product_list');
+Route::get('/viator/single_sync', 'App\Http\Controllers\SyncController@viator_single_sync');
 
 
 
