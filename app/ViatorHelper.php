@@ -83,7 +83,10 @@ class ViatorHelper
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
-                'Content-Type: application/json'
+                'Content-Type: application/json',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $product_response = curl_exec($curl);
@@ -138,7 +141,10 @@ class ViatorHelper
             CURLOPT_HTTPHEADER     => array(
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
-                'Accept: application/json;version=2.0'
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             )
         ));
         $response = curl_exec($curl);
@@ -164,7 +170,10 @@ class ViatorHelper
             CURLOPT_HTTPHEADER     => array(
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
-                'Accept: application/json;version=2.0'
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             )
         ));
         $response = curl_exec($curl);
@@ -190,7 +199,10 @@ class ViatorHelper
             CURLOPT_HTTPHEADER     => [
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
-                'Accept: application/json;version=2.0'
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ]
         ));
         $response = curl_exec($curl);
@@ -216,7 +228,10 @@ class ViatorHelper
             CURLOPT_HTTPHEADER     => [
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
-                'Accept: application/json;version=2.0'
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ]
         ));
         $response = curl_exec($curl);
@@ -243,7 +258,10 @@ class ViatorHelper
             CURLOPT_HTTPHEADER     => array(
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept: application/json;version=2.0',
-                'Content-Type: application/json'
+                'Content-Type: application/json',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = curl_exec($curl);
@@ -271,7 +289,10 @@ class ViatorHelper
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Accept: application/json;version=2.0',
-                'Content-Type: application/json'
+                'Content-Type: application/json',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = curl_exec($curl);
@@ -300,6 +321,9 @@ class ViatorHelper
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
                 'Content-Type: application/json',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = curl_exec($curl);
@@ -334,7 +358,10 @@ class ViatorHelper
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
-                'Content-Type: application/json'
+                'Content-Type: application/json',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             )
         ));
         $response = curl_exec($curl);
@@ -390,7 +417,10 @@ class ViatorHelper
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
                 'Accept: application/json;version=2.0',
-                'Content-Type: application/json'
+                'Content-Type: application/json',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = curl_exec($curl);
@@ -418,6 +448,9 @@ class ViatorHelper
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = json_decode(curl_exec($curl), true);
@@ -445,6 +478,9 @@ class ViatorHelper
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = json_decode(curl_exec($curl), true);
@@ -472,6 +508,9 @@ class ViatorHelper
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = json_decode(curl_exec($curl), true);
@@ -499,6 +538,9 @@ class ViatorHelper
                 'Accept-Language: en',
                 'Content-Type: application/json',
                 'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             ),
         ));
         $response = json_decode(curl_exec($curl), true);
@@ -526,7 +568,10 @@ class ViatorHelper
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en',
                 'Content-Type: application/json',
-                'Accept: application/json;version=2.0'
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
             )
         ));
         $response = curl_exec($curl);
@@ -1014,6 +1059,9 @@ class ViatorHelper
                         'Accept-Language: en',
                         'Content-Type: application/json',
                         'Accept: application/json;version=2.0',
+                        'RateLimit-Limit: ',
+                        'RateLimit-Remaining: ',
+                        'RateLimit-Reset: ',
                     ]
                 ]);
 
