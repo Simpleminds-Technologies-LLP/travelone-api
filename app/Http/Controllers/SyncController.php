@@ -67,6 +67,24 @@ class SyncController extends Controller
     // Fetch and sync product list
     public function viator_single_sync(Request $request)
     {
+        // Get destination data
+        $json_destination_list = file_get_contents('https://api.travelone.io/destination.json');
+        $json_destination_list = json_decode($json_destination_list, true);
+
+        // Get booking questions data
+        $json_booking_questions = file_get_contents('https://api.travelone.io/booking_questions.json');
+        $json_booking_questions = json_decode($json_booking_questions, true);
+
+        // Get tags data
+        $json_tags = file_get_contents('https://api.travelone.io/tags.json');
+        $json_tags = json_decode($json_tags, true);
+
+        // Define default data
+        $default_destination_id = 38;
+        $default_country_id     = 38;
+        $default_state_id       = 541;
+        $default_city_id        = 20426;
+
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 0)->limit(1)->get();
         $viator_product = (!empty($viator_product)) ? (array) $viator_product[0] : null;
@@ -128,13 +146,13 @@ class SyncController extends Controller
                     $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary); // API
                     $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
                     $filter_duration         = ViatorHelper::filter_activity_duration($duration);
-                    $booking_questions       = ViatorHelper::filter_booking_questions($bookingQuestions); // API
-                    $filter_destination      = ViatorHelper::find_destination_details($destinations);
+                    $booking_questions       = ViatorHelper::filter_booking_questions($json_booking_questions, $bookingQuestions);
+                    $filter_destination      = ViatorHelper::find_destination_details($json_destination_list, $destinations);
                     $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
-                    $product_tags            = ViatorHelper::filter_product_tags($tags); // API
+                    $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
+                    $product_tags            = ViatorHelper::filter_product_tags($json_tags, $tags);
                     $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
                     $filter_exclusions       = ViatorHelper::filter_product_exclusions($exclusions);
-                    $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
                     $filter_additional_info  = ViatorHelper::filter_product_additional_info($additionalInfo);
                     $filter_itinerary        = ViatorHelper::filter_product_itinerary($itinerary); // API
                     // $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
@@ -232,6 +250,32 @@ class SyncController extends Controller
                                         'country_id'     => $country_id,
                                         'state_id'       => $state_id,
                                         'city_id'        => $city_id,
+                                    ]);
+                                } else {
+                                    // insert destination data
+                                    if($destination_id) {
+                                        DB::table('to_tour_destination')->insert([
+                                            'tour_id'        => $is_common_tour_id,
+                                            'destination_id' => $default_destination_id,
+                                        ]);
+                                    }
+
+                                    // insert city night
+                                    if($city_id && $city_nights) {
+                                        DB::table('to_tour_city_night')->insert([
+                                            'tour_id' => $is_common_tour_id,
+                                            'city_id' => $city_id,
+                                            'night'   => 0,
+                                        ]);
+                                    }
+
+                                    // insert location data
+                                    DB::table('to_tour_location')->insert([
+                                        'tour_id'        => $is_common_tour_id,
+                                        'destination_id' => $default_destination_id,
+                                        'country_id'     => $default_country_id,
+                                        'state_id'       => $default_state_id,
+                                        'city_id'        => $default_city_id,
                                     ]);
                                 }
                             }
