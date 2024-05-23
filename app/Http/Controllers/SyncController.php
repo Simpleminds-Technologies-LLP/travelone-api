@@ -11,14 +11,14 @@ class SyncController extends Controller
     public function sync_viator_product_list(Request $request)
     {
         // Get requested data
-        $req_country_id     = $request->country_id;
+        $req_country_id     = 75;
         $req_start_position = $request->start;
         $default_limit      = 40;
 
         // Define static body
         $filter_data = [
             "filtering" => [
-                "destination" => $request->country_id
+                "destination" => $req_country_id
             ],
             "pagination" => [
                 "start" => $req_start_position,
@@ -48,7 +48,7 @@ class SyncController extends Controller
                 if(is_array($isActivityExist) && !count($isActivityExist)) {
                     // insert terms data
                     DB::table('to_viator')->insert([
-                        'viator_country_id' => $request->country_id,
+                        'viator_country_id' => $req_country_id,
                         'product_code'      => $productCode,
                         'extra_json'        => json_encode([
                             'productflags'   => $productflags,
