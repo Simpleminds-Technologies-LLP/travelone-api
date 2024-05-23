@@ -96,7 +96,6 @@ class ViatorHelper
      */
     public static function fetch_single_product($productCode)
     {
-        // fetch product search
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/' . $productCode,
@@ -113,7 +112,7 @@ class ViatorHelper
                 'Accept: application/json;version=2.0',
                 'RateLimit-Limit: ',
                 'RateLimit-Remaining: ',
-                'RateLimit-Reset: '
+                'RateLimit-Reset: ',
             ),
         ));
         $response = curl_exec($curl);
