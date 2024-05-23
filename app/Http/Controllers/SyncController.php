@@ -87,6 +87,7 @@ class SyncController extends Controller
 
             // fetch single product
             $single_product = ViatorHelper::fetch_single_product($productCode);
+            echo "<pre>"; print_r($single_product); echo "</pre>"; die;
 
             // check is valid response
             if(is_array($single_product) && !empty($single_product) && $single_product['status'] == 'ACTIVE') {
@@ -120,21 +121,19 @@ class SyncController extends Controller
                 $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
                 // Filter data
+                $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary); // API
                 $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
-                $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary);
                 $filter_duration         = ViatorHelper::filter_activity_duration($duration);
+                $booking_questions       = ViatorHelper::filter_booking_questions($bookingQuestions); // API
                 $filter_destination      = ViatorHelper::find_destination_details($destinations);
                 $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
+                $product_tags            = ViatorHelper::filter_product_tags($tags); // API
                 $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
                 $filter_exclusions       = ViatorHelper::filter_product_exclusions($exclusions);
+                $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
                 $filter_additional_info  = ViatorHelper::filter_product_additional_info($additionalInfo);
-                $booking_questions       = ViatorHelper::filter_booking_questions($bookingQuestions);
-                $product_tags            = ViatorHelper::filter_product_tags($tags);
-                $filter_logistics        = ViatorHelper::filter_product_logistics($logistics);
-                $filter_itinerary        = ViatorHelper::filter_product_itinerary($itinerary);
-                $filter_reiews           = ViatorHelper::filter_product_reviews($productCode);
-                $filter_travelers_photos = ViatorHelper::filter_product_travelers_photos($filter_reiews);
-                $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
+                $filter_itinerary        = ViatorHelper::filter_product_itinerary($itinerary); // API
+                // $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
 
                 // push other json data
                 $extra_json_data = [
@@ -161,7 +160,6 @@ class SyncController extends Controller
                     'productflags'                => $productflags,
                     'supplier'                    => $supplier,
                     'reviews'                     => $reviews,
-                    'filter_travelers_photos'     => $filter_travelers_photos,
                     'createdAt'                   => $createdAt,
                     'lastUpdatedAt'               => $lastUpdatedAt,
                 ];
@@ -289,7 +287,7 @@ class SyncController extends Controller
                     ]);
 
                     // Update filtered reviews
-                    if(!empty($all_product_reviews['filteredReviewsSummary']['totalReviews'])) {
+                    /*if(!empty($all_product_reviews['filteredReviewsSummary']['totalReviews'])) {
                         // fetch reviews
                         foreach ($all_product_reviews['reviews'] as $review) {
                             // get single review data
@@ -328,18 +326,18 @@ class SyncController extends Controller
                                 ]);
                             }
                         }
-                    }
+                    }*/
 
                     // Publish created tour
                     DB::table('to_tour_product')->where('id', $is_common_tour_id)->update(['status' => 1]);
                 }
-            }
 
-            // Update sync status
-            DB::table('to_viator')->where('id', $viator_product['id'])->update([
-                'status'     => 1,
-                'updated_at' => date('Y-m-d h:i:s')
-            ]);
+                // Update sync status
+                DB::table('to_viator')->where('id', $viator_product['id'])->update([
+                    'status'     => 1,
+                    'updated_at' => date('Y-m-d h:i:s')
+                ]);
+            }
         }
 
         echo true;
