@@ -110,7 +110,10 @@ class ViatorHelper
             CURLOPT_HTTPHEADER     => array(
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
-                'Accept: application/json;version=2.0'
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: '
             ),
         ));
         $response = curl_exec($curl);
@@ -325,8 +328,6 @@ class ViatorHelper
                 "provider": "ALL",
                 "count": 500,
                 "start": 1,
-                "showMachineTranslated": true,
-                "reviewsForNonPrimaryLocale": true,
                 "ratings": [1,2,3,4,5],
                 "sortBy": "MOST_RECENT_PER_LOCALE"
             }',
@@ -383,8 +384,6 @@ class ViatorHelper
                 "provider": "ALL",
                 "count": 500,
                 "start": 1,
-                "showMachineTranslated": true,
-                "reviewsForNonPrimaryLocale": true,
                 "ratings": [1, 2, 3, 4, 5],
                 "sortBy": "MOST_RECENT_PER_LOCALE"
             }',
@@ -744,6 +743,8 @@ class ViatorHelper
                             ];
                         }
                     }
+
+                    sleep(10);
                 }
             }
         }
@@ -796,6 +797,8 @@ class ViatorHelper
                             ];
                         }
                     }
+
+                    sleep(10);
                 }
             }
 
@@ -816,6 +819,8 @@ class ViatorHelper
                             ];
                         }
                     }
+
+                    sleep(10);
                 }
             }
 
@@ -836,6 +841,8 @@ class ViatorHelper
                             ];
                         }
                     }
+
+                    sleep(10);
                 }
             }
 
@@ -868,6 +875,8 @@ class ViatorHelper
                     } else {
                         $itineraryArr['itineraryItems'][$itineraryKey]['pointOfInterestLocation'] = $locationData;
                     }
+
+                    sleep(10);
                 }
             }
         }
@@ -1017,6 +1026,8 @@ class ViatorHelper
                 if (!empty($response['data']['pageTitle'])) {
                     $attraction_list[] = $response['data']['pageTitle'];
                 }
+
+                sleep(10);
             }
         }
 
