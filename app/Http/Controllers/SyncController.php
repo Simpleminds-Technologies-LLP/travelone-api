@@ -261,7 +261,7 @@ class SyncController extends Controller
                                     // insert city night
                                     DB::table('to_tour_city_night')->insert([
                                         'tour_id' => $is_common_tour_id,
-                                        'city_id' => $city_id,
+                                        'city_id' => $default_city_id,
                                         'night'   => 0,
                                     ]);
 
