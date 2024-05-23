@@ -252,6 +252,15 @@ class SyncController extends Controller
                                         'city_id'        => $city_id,
                                     ]);
                                 } else {
+                                    // Create new city
+                                    $created_city = DB::table('location_cities')->insert([
+                                        'name'           => $tour_dest['data']['destinationName'],
+                                        'slug'           => str_replace(" ", "_", strtolower($tour_dest['data']['destinationName'])),
+                                        'destination_id' => $default_destination_id,
+                                        'country_id'     => $default_country_id,
+                                        'state_id'       => 0,
+                                    ]);
+
                                     // insert destination data
                                     DB::table('to_tour_destination')->insert([
                                         'tour_id'        => $is_common_tour_id,
@@ -261,7 +270,7 @@ class SyncController extends Controller
                                     // insert city night
                                     DB::table('to_tour_city_night')->insert([
                                         'tour_id' => $is_common_tour_id,
-                                        'city_id' => $default_city_id,
+                                        'city_id' => $created_city->id,
                                         'night'   => 0,
                                     ]);
 
@@ -271,7 +280,7 @@ class SyncController extends Controller
                                         'destination_id' => $default_destination_id,
                                         'country_id'     => $default_country_id,
                                         'state_id'       => $default_state_id,
-                                        'city_id'        => $default_city_id,
+                                        'city_id'        => $created_city->id,
                                     ]);
                                 }
                             }
