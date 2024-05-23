@@ -253,21 +253,17 @@ class SyncController extends Controller
                                     ]);
                                 } else {
                                     // insert destination data
-                                    if($destination_id) {
-                                        DB::table('to_tour_destination')->insert([
-                                            'tour_id'        => $is_common_tour_id,
-                                            'destination_id' => $default_destination_id,
-                                        ]);
-                                    }
+                                    DB::table('to_tour_destination')->insert([
+                                        'tour_id'        => $is_common_tour_id,
+                                        'destination_id' => $default_destination_id,
+                                    ]);
 
                                     // insert city night
-                                    if($city_id && $city_nights) {
-                                        DB::table('to_tour_city_night')->insert([
-                                            'tour_id' => $is_common_tour_id,
-                                            'city_id' => $city_id,
-                                            'night'   => 0,
-                                        ]);
-                                    }
+                                    DB::table('to_tour_city_night')->insert([
+                                        'tour_id' => $is_common_tour_id,
+                                        'city_id' => $city_id,
+                                        'night'   => 0,
+                                    ]);
 
                                     // insert location data
                                     DB::table('to_tour_location')->insert([
