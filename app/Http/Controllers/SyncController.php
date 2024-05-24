@@ -424,6 +424,12 @@ class SyncController extends Controller
                     // Publish created tour
                     DB::table('to_tour_product')->where('id', $is_common_tour_id)->update(['status' => 1]);
                 }
+            } else {
+                // Update sync status
+                DB::table('to_viator')->where('id', $viator_product['id'])->update([
+                    'status'     => 2,
+                    'updated_at' => date('Y-m-d h:i:s')
+                ]);
             }
 
             echo json_encode($single_product);
