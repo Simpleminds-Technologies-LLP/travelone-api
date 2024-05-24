@@ -18,6 +18,10 @@ class ViatorHelper
 
         // Replace spaces with hyphens
         $string = str_replace(' ', '-', $string);
+        $string = str_replace('--', '-', $string);
+        $string = str_replace('---', '-', $string);
+        $string = str_replace('----', '-', $string);
+        $string = str_replace('-----', '-', $string);
 
         // Remove leading and trailing hyphens
         $string = trim($string, '-');
@@ -787,8 +791,6 @@ class ViatorHelper
                             ];
                         }
                     }
-
-                    sleep(10);
                 }
             }
         }
@@ -800,29 +802,29 @@ class ViatorHelper
 
             // fetch hotel location ids
             $hotel_location_ids = array_map(function ($location) {
-                if ($location['pickupType'] === 'HOTEL') {
+                if (!empty($location['location']['ref']) && $location['pickupType'] === 'HOTEL') {
                     return $location['location']['ref'];
                 }
             }, $logistics['travelerPickup']['locations']);
 
             // fetch airport location ids
             $airport_location_ids = array_map(function ($location) {
-                if ($location['pickupType'] === 'AIRPORT') {
+                if (!empty($location['location']['ref']) && $location['pickupType'] === 'AIRPORT') {
                     return $location['location']['ref'];
                 }
             }, $logistics['travelerPickup']['locations']);
 
             // fetch port location ids
             $port_location_ids = array_map(function ($location) {
-                if ($location['pickupType'] === 'PORT') {
+                if (!empty($location['location']['ref']) && $location['pickupType'] === 'PORT') {
                     return $location['location']['ref'];
                 }
             }, $logistics['travelerPickup']['locations']);
 
             // chunk array
-            $chunk_hotel_location = array_chunk($hotel_location_ids, 500);
+            $chunk_hotel_location   = array_chunk($hotel_location_ids, 500);
             $chunk_airport_location = array_chunk($airport_location_ids, 500);
-            $chunk_port_location = array_chunk($port_location_ids, 500);
+            $chunk_port_location    = array_chunk($port_location_ids, 500);
 
             // Fetch hotel locations
             if(count($chunk_hotel_location)) {
@@ -841,10 +843,10 @@ class ViatorHelper
                             ];
                         }
                     }
-
-                    sleep(10);
                 }
             }
+
+            sleep(4);
 
             // Fetch airport locations
             if(count($chunk_airport_location)) {
@@ -863,10 +865,10 @@ class ViatorHelper
                             ];
                         }
                     }
-
-                    sleep(10);
                 }
             }
+
+            sleep(4);
 
             // Fetch port locations
             if(count($chunk_port_location)) {
@@ -885,8 +887,6 @@ class ViatorHelper
                             ];
                         }
                     }
-
-                    sleep(10);
                 }
             }
 
@@ -920,7 +920,7 @@ class ViatorHelper
                         $itineraryArr['itineraryItems'][$itineraryKey]['pointOfInterestLocation'] = $locationData;
                     }
 
-                    sleep(10);
+                    sleep(5);
                 }
             }
         }
