@@ -438,33 +438,3 @@ class SyncController extends Controller
         echo true;
     }
 }
-
-
-// get exist tour ID
-/*$is_common_tour_id = $is_exist[0]->id;
-
-// remove previous activity meta data
-DB::table('to_tour_viator_tag')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_destination')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_location')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_city_night')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_terms')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_viator_extra_data')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_viator_special_badge')->where('tour_id', $is_common_tour_id)->delete();
-DB::table('to_tour_viator_attraction')->where('tour_id', $is_common_tour_id)->delete();
-
-// push data in table
-$is_updated_tour = DB::table('to_tour_product')
-    ->where('id', $is_common_tour_id)
-    ->update([
-        'tour_name'       => $title,
-        'description'     => $description,
-        'featured_image'  => $filter_product_images['cover_image'],
-        'media_gallery'   => json_encode($filter_product_images['related_images']),
-        'seo_title'       => $title,
-        'extra_json_data' => json_encode($extra_json_data),
-        'status'          => 1,
-        'isCronRequest'   => $req_country_id . '/' . $req_start_position . '/' . $default_limit,
-        'updated_at'      => date('Y-m-d h:i:s'),
-    ]
-);*/
