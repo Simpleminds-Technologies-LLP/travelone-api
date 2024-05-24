@@ -294,8 +294,8 @@ class SyncController extends Controller
                             } else {
                                 // Create new city
                                 $created_city = DB::table('location_cities')->insert([
-                                    'name'           => $tour_dest['data']['destinationName'],
-                                    'slug'           => str_replace(" ", "_", strtolower($tour_dest['data']['destinationName'])),
+                                    'name'           => $destination_name,
+                                    'slug'           => str_replace(" ", "_", strtolower($destination_name)),
                                     'destination_id' => $default_destination_id,
                                     'country_id'     => $default_country_id,
                                     'state_id'       => 0,
@@ -425,6 +425,8 @@ class SyncController extends Controller
                     DB::table('to_tour_product')->where('id', $is_common_tour_id)->update(['status' => 1]);
                 }
             }
+
+            echo json_encode($single_product);
         }
 
         echo true;
