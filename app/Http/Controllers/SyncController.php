@@ -45,7 +45,7 @@ class SyncController extends Controller
                 $isActivityExist = DB::table('to_viator')->select('id')->where('product_code', $productCode)->get()->toArray();
 
                 // check item is exist
-                if(is_array($isActivityExist) && !count($isActivityExist)) {
+                if(!count($isActivityExist)) {
                     // insert terms data
                     DB::table('to_viator')->insert([
                         'viator_country_id' => $req_country_id,
@@ -82,8 +82,6 @@ class SyncController extends Controller
         // Define default data
         $default_destination_id = 38;
         $default_country_id     = 38;
-        $default_state_id       = 541;
-        $default_city_id        = 20426;
 
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 0)->limit(1)->get();
@@ -142,11 +140,11 @@ class SyncController extends Controller
                 // $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
 
                 // Filter data
+                $filter_destination      = ViatorHelper::find_destination_details($json_destination_list, $destinations);
                 $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
                 $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
                 $filter_duration         = ViatorHelper::filter_activity_duration($duration);
                 $booking_questions       = ViatorHelper::filter_booking_questions($json_booking_questions, $bookingQuestions);
-                $filter_destination      = ViatorHelper::find_destination_details($json_destination_list, $destinations);
                 $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
                 $product_tags            = ViatorHelper::filter_product_tags($json_tags, $tags);
                 $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
@@ -287,7 +285,7 @@ class SyncController extends Controller
                                 DB::table('to_tour_location')->insert([
                                     'tour_id'        => $is_common_tour_id,
                                     'destination_id' => $destination_id,
-                                    'country_id'     => $country_id,
+                                    'country_id'     => $default_country_id,
                                     'state_id'       => $state_id,
                                     'city_id'        => $city_id,
                                 ]);
@@ -310,7 +308,7 @@ class SyncController extends Controller
                                 // insert city night
                                 DB::table('to_tour_city_night')->insert([
                                     'tour_id' => $is_common_tour_id,
-                                    'city_id' => $created_city->id ?? $default_city_id,
+                                    'city_id' => $created_city->id,
                                     'night'   => 0,
                                 ]);
 
@@ -319,8 +317,8 @@ class SyncController extends Controller
                                     'tour_id'        => $is_common_tour_id,
                                     'destination_id' => $default_destination_id,
                                     'country_id'     => $default_country_id,
-                                    'state_id'       => $default_state_id,
-                                    'city_id'        => $created_city->id ?? $default_city_id,
+                                    'state_id'       => 0,
+                                    'city_id'        => $created_city->id,
                                 ]);
                             }
                         }
