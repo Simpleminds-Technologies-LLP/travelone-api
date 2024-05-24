@@ -304,11 +304,11 @@ class SyncController extends Controller
                                 ]);
 
                                 // insert city night
-                                DB::table('to_tour_city_night')->insert([
+                                /*DB::table('to_tour_city_night')->insert([
                                     'tour_id' => $is_common_tour_id,
                                     'city_id' => $created_city->id,
                                     'night'   => 0,
-                                ]);
+                                ]);*/
 
                                 // insert location data
                                 DB::table('to_tour_location')->insert([
