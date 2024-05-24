@@ -265,26 +265,24 @@ class SyncController extends Controller
                                 $state_id       = $city_data->state_id;
 
                                 // insert destination data
-                                if($destination_id) {
-                                    DB::table('to_tour_destination')->insert([
-                                        'tour_id'        => $is_common_tour_id,
-                                        'destination_id' => $destination_id,
-                                    ]);
-                                }
+                                DB::table('to_tour_destination')->insert([
+                                    'tour_id'        => $is_common_tour_id,
+                                    'destination_id' => $default_destination_id,
+                                ]);
 
                                 // insert city night
-                                if($city_id && $city_nights) {
+                                /*if($city_id && $city_nights) {
                                     DB::table('to_tour_city_night')->insert([
                                         'tour_id' => $is_common_tour_id,
                                         'city_id' => $city_id,
                                         'night'   => $city_nights,
                                     ]);
-                                }
+                                }*/
 
                                 // insert location data
                                 DB::table('to_tour_location')->insert([
                                     'tour_id'        => $is_common_tour_id,
-                                    'destination_id' => $destination_id,
+                                    'destination_id' => $default_destination_id,
                                     'country_id'     => $default_country_id,
                                     'state_id'       => $state_id,
                                     'city_id'        => $city_id,
