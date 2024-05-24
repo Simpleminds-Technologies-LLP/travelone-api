@@ -137,20 +137,22 @@ class SyncController extends Controller
                 $createdAt                   = $single_product['createdAt'] ?? null;
                 $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
+                // Disable filter API
+                // $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary); // API
+                // $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
+
                 // Filter data
-                $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary); // API
+                $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
                 $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
                 $filter_duration         = ViatorHelper::filter_activity_duration($duration);
                 $booking_questions       = ViatorHelper::filter_booking_questions($json_booking_questions, $bookingQuestions);
                 $filter_destination      = ViatorHelper::find_destination_details($json_destination_list, $destinations);
                 $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
-                $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
                 $product_tags            = ViatorHelper::filter_product_tags($json_tags, $tags);
                 $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
                 $filter_exclusions       = ViatorHelper::filter_product_exclusions($exclusions);
                 $filter_additional_info  = ViatorHelper::filter_product_additional_info($additionalInfo);
                 $filter_itinerary        = ViatorHelper::filter_product_itinerary($itinerary); // API
-                // $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
 
                 // push other json data
                 $extra_json_data = [
@@ -233,7 +235,6 @@ class SyncController extends Controller
                             'seo_title'       => $title,
                             'extra_json_data' => json_encode($extra_json_data),
                             'status'          => 1,
-                            'isCronRequest'   => $req_country_id . '/' . $req_start_position . '/' . $default_limit,
                             'updated_at'      => date('Y-m-d h:i:s'),
                         ]
                     );
@@ -349,7 +350,7 @@ class SyncController extends Controller
                     }
 
                     // count attraction data
-                    if(count($filter_attraction)) {
+                    /*if(count($filter_attraction)) {
                         // fetch attractions
                         foreach ($filter_attraction as $attraction_name) {
                             // insert attraction data
@@ -358,7 +359,7 @@ class SyncController extends Controller
                                 'attraction_name' => $attraction_name,
                             ]);
                         }
-                    }
+                    }*/
 
                     // insert terms data
                     DB::table('to_tour_terms')->insert([
