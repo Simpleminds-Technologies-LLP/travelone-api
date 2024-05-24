@@ -919,8 +919,6 @@ class ViatorHelper
                     } else {
                         $itineraryArr['itineraryItems'][$itineraryKey]['pointOfInterestLocation'] = $locationData;
                     }
-
-                    sleep(5);
                 }
             }
         }
