@@ -11,9 +11,9 @@ class SyncController extends Controller
     public function sync_viator_product_list(Request $request)
     {
         // Get requested data
-        $req_country_id     = 75;
+        $req_country_id     = $request->country_id;
         $req_start_position = $request->start;
-        $default_limit      = 40;
+        $default_limit      = $request->limit;
 
         // Define static body
         $filter_data = [
@@ -61,7 +61,7 @@ class SyncController extends Controller
             }
         }
 
-        echo 'Success! Synced up to ' . ($req_start_position + $default_limit) . '. Next will be ' . ($req_start_position + $default_limit + 1) . '.'; die;
+        echo "<pre>"; print_r($product_list); echo "</pre>"; die;
     }
 
     // Fetch and sync product list
