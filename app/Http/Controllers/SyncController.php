@@ -65,7 +65,7 @@ class SyncController extends Controller
     }
 
     // Fetch and sync product list
-    public function viator_single_sync(Request $request)
+    public function sync_viator_single_product(Request $request)
     {
         // Get destination data
         $json_destination_list = file_get_contents('https://api.travelone.io/destination.json');
