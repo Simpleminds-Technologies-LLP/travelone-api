@@ -446,9 +446,9 @@ class SyncController extends Controller
         // Check is valid activity
         if(!empty($viator_product)) {
             // Fetch tours
-            foreach ($viator_product as $row) {
+            foreach ($viator_product as $product) {
                 // get product data
-                $product_code = $row->product_code;
+                $product_code = $product->product_code;
 
                 // fetch availability schedule
                 $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
@@ -535,6 +535,11 @@ class SyncController extends Controller
                         'unavailable_dates' => (count($unavailable_dates)) ? implode(', ', $unavailable_dates) : null
                     ]
                 );
+
+                // Update sync status
+                DB::table('to_viator')->where('id', $product->id)->update([
+                    'availability_status' => 1
+                ]);
                 
                 // set response
                 $return_arr[] = [
