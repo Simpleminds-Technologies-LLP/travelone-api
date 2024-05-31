@@ -433,4 +433,120 @@ class SyncController extends Controller
 
         echo true;
     }
+
+    // Fetch single product availability schedules
+    public function sync_viator_availability_schedules(Request $request)
+    {
+        // define array
+        $return_arr = $unavailable_dates = $package_seasons_dates = [];
+
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('availability_status', 0)->limit(5)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $row) {
+                // get product data
+                $product_code = $row->product_code;
+
+                // fetch availability schedule
+                $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
+
+                // check is valid array
+                if(count($availability_data['bookableItems'])) {
+                    // fetch bookable items
+                    foreach ($availability_data['bookableItems'] as $item) {
+                        // define array
+                        $pricing_details = $timed_entries = [];
+
+                        // get start and end date
+                        $package_start_date = (!empty($item['seasons'][0]['startDate'])) ? $item['seasons'][0]['startDate'] : '';
+                        $package_end_date   = (!empty($item['seasons'][0]['endDate'])) ? $item['seasons'][0]['endDate'] : '';
+
+                        // check date is exist in array
+                        if(!empty($package_start_date) && !empty($package_end_date) && !in_array($package_start_date . '@' . $package_end_date, $package_seasons_dates)) {
+                            $package_seasons_dates[] = $package_start_date . '@' . $package_end_date;
+                        }
+
+                        // fetch pricing details
+                        if(!empty($item['seasons'][0]['pricingRecords'][0]['pricingDetails']) && count($item['seasons'][0]['pricingRecords'][0]['pricingDetails'])) {
+                            foreach ($item['seasons'][0]['pricingRecords'][0]['pricingDetails'] as $row) {
+                                // push data in array
+                                if(count($row)) {
+                                    $pricing_details[$row['ageBand']] = $row['price']['original']['recommendedRetailPrice'];
+                                }
+                            }
+                        }
+
+                        // fetch pricing details
+                        if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'])) {
+                            foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'] as $row) {
+                                // push data in array
+                                if(count($row)) {
+                                    $timed_entries[] = $row['startTime'];
+                                }
+                            }
+                        }
+
+                        // fetch unavailable dates
+                        if(!empty($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates']) && count($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'])) {
+                            foreach ($item['seasons'][0]['pricingRecords'][0]['timedEntries'][0]['unavailableDates'] as $row) {
+                                // push data in array
+                                $unavailable_dates[] = $row['date'];
+                            }
+                        }
+                    }
+                }
+
+                // check start date is exist
+                if(count($package_seasons_dates)) {
+                    // define start and end date
+                    $year_start_date = date('Y-m-d', time());
+                    $year_end_date   = date('Y-m-d', strtotime('+1 year'));
+
+                    // fetch dates
+                    foreach ($package_seasons_dates as $row) {
+                        // explode dates
+                        $explode_dates = explode('@', $row);
+
+                        // set start and end date
+                        $start_date = $explode_dates[0];
+                        $end_date   = $explode_dates[1];
+
+                        // generate dates
+                        $start_generated_dates = ViatorHelper::generate_dates($year_start_date, $start_date);
+                        $end_generated_dates   = ViatorHelper::generate_dates($end_date, $year_end_date);
+
+                        // marge array
+                        $unavailable_dates = array_merge($unavailable_dates, $start_generated_dates);
+                        $unavailable_dates = array_merge($unavailable_dates, $end_generated_dates);
+                    }
+                }
+
+                // sort array
+                sort($unavailable_dates);
+                array_unique($unavailable_dates);
+
+                // update activity values
+                DB::table('to_tour_viator_extra_data')
+                    ->where('product_code', $product_code)
+                    ->update([
+                        'unavailable_dates' => (count($unavailable_dates)) ? implode(', ', $unavailable_dates) : null
+                    ]
+                );
+                
+                // set response
+                $return_arr[] = [
+                    'product_code' => $product_code,
+                    'unavailable_dates' => $unavailable_dates
+                ];
+
+                sleep(5);
+            }
+        }
+
+        // Return response
+        echo json_encode($return_arr);
+    }
 }
