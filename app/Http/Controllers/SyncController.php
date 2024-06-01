@@ -454,7 +454,7 @@ class SyncController extends Controller
                 $availability_data = ViatorHelper::single_product_availability_schedule($product_code);
 
                 // check is valid array
-                if(count($availability_data['bookableItems'])) {
+                if(!empty($availability_data['bookableItems']) && count($availability_data['bookableItems'])) {
                     // fetch bookable items
                     foreach ($availability_data['bookableItems'] as $item) {
                         // define array
