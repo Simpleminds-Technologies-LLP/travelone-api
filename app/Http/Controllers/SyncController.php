@@ -540,7 +540,7 @@ class SyncController extends Controller
                 DB::table('to_viator')->where('id', $product->id)->update([
                     'availability_status' => 1
                 ]);
-                
+
                 // set response
                 $return_arr[] = [
                     'product_code' => $product_code,
