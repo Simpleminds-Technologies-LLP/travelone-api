@@ -441,7 +441,7 @@ class SyncController extends Controller
         $return_arr = $unavailable_dates = $package_seasons_dates = [];
 
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('availability_status', 0)->limit(5)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('availability_status', 0)->limit(5)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
