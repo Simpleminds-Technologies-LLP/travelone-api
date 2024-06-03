@@ -37,6 +37,7 @@ Route::get('/cron/update_activity_availability_schedules', 'App\Http\Controllers
 Route::post('/viator/sync/country_list', 'App\Http\Controllers\SyncController@sync_viator_product_list');
 Route::get('/viator/sync/single_tour', 'App\Http\Controllers\SyncController@sync_viator_single_product');
 Route::get('/viator/sync/availability_schedules', 'App\Http\Controllers\SyncController@sync_viator_availability_schedules');
+Route::get('/viator/sync/categories_tag', 'App\Http\Controllers\SyncController@sync_viator_categories_tag');
 
 
 

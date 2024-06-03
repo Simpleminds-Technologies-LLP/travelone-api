@@ -744,9 +744,6 @@ class ViatorHelper
      */
     public static function filter_product_tags($original_list, $find_tags = [])
     {
-        // fetch product product tags
-        // $original_list = ViatorHelper::fetch_product_tags();
-
         // check array length
         if(!empty($original_list['tags']) && !count($original_list['tags'])) {
             return [];
@@ -760,9 +757,10 @@ class ViatorHelper
         // use array_map to transform the filtered tags into the desired format
         return array_map(function ($row_tag) {
             return [
-                'tag_id'   => $row_tag['tagId'],
-                'tag_name' => $row_tag['allNamesByLocale']['en'],
-                'tag_slug' => ViatorHelper::str_slug($row_tag['allNamesByLocale']['en']),
+                'tag_id'        => $row_tag['tagId'],
+                'parent_tag_id' => (!empty($row_tag['parentTagIds'])) ? $row_tag['parentTagIds'] : [],
+                'tag_name'      => $row_tag['allNamesByLocale']['en'],
+                'tag_slug'      => ViatorHelper::str_slug($row_tag['allNamesByLocale']['en']),
             ];
         }, $filtered_tags);
     }

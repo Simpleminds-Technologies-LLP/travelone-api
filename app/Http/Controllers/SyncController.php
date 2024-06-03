@@ -212,7 +212,7 @@ class SyncController extends Controller
                     // Assign updated tour ID
                     $is_common_tour_id = $is_exist[0]->id;
 
-                    // remove previous activity meta data
+                    // Remove previous activity meta data
                     DB::table('to_tour_viator_tag')->where('tour_id', $is_common_tour_id)->delete();
                     DB::table('to_tour_destination')->where('tour_id', $is_common_tour_id)->delete();
                     DB::table('to_tour_location')->where('tour_id', $is_common_tour_id)->delete();
@@ -548,6 +548,97 @@ class SyncController extends Controller
                 ];
 
                 sleep(5);
+            }
+        }
+
+        // Return response
+        echo json_encode($return_arr);
+    }
+
+    // Fetch viator categories tag
+    public function sync_viator_categories_tag(Request $request)
+    {
+        // Define array
+        $return_arr = [];
+
+        // Get tags data
+        $json_tags = file_get_contents('https://api.travelone.io/tags.json');
+        $json_tags = json_decode($json_tags, true);
+
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('tag_status', 0)->limit(5)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // fetch single product
+                $single_product = ViatorHelper::fetch_single_product($product_code);
+
+                // check is valid response
+                if(is_array($single_product) && !empty($single_product)) {
+                    // Fetch single product data
+                    $tags = $single_product['tags'] ?? null;
+
+                    // Filter tags data
+                    $product_tags = ViatorHelper::filter_product_tags($json_tags, $tags);
+
+                    // Check is valid tags array
+                    if(is_array($product_tags) && count($product_tags)) {
+                        foreach ($product_tags as $tag_key => $tags) {
+                            if(count($tags['parent_tag_id'])) {
+                                $product_tags[$tag_key]['parent_tag_id'] = ViatorHelper::filter_product_tags($json_tags, $tags['parent_tag_id']);
+                            }
+                        }
+                    }
+
+                    // Check if sightseeing exists
+                    $tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                    // Check tour data is valid
+                    if(is_array($tour_data) && count($tour_data)) {
+                        // Assign updated tour ID
+                        $is_common_tour_id = $tour_data[0]->tour_id;
+
+                        // Check tags is valid
+                        if($is_common_tour_id && count($product_tags)) {
+                            // remove previous activity meta data
+                            DB::table('to_tour_viator_tag')->where('tour_id', $is_common_tour_id)->delete();
+
+                            // fetch product tags
+                            foreach ($product_tags as $tag) {
+                                DB::table('to_tour_viator_tag')->insert([
+                                    'tour_id'         => $is_common_tour_id,
+                                    'parent_tag_id'   => (count($tag['parent_tag_id'])) ? end($tag['parent_tag_id'])['tag_id'] : null,
+                                    'parent_tag_name' => (count($tag['parent_tag_id'])) ? end($tag['parent_tag_id'])['tag_name'] : null,
+                                    'tag_id'          => $tag['tag_id'],
+                                    'tag_name'        => $tag['tag_name'],
+                                ]);
+                            }
+                        }
+
+                        // Update sync status
+                        DB::table('to_viator')->where('id', $product->id)->update([
+                            'tag_status' => 1
+                        ]);
+                    } else {
+                        // Update sync status
+                        DB::table('to_viator')->where('id', $product->id)->update([
+                            'tag_status' => 2,
+                        ]);
+                    }
+                } else {
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'tag_status' => 3,
+                    ]);
+                }
+
+                // Hold for 10 seconds
+                sleep(10);
             }
         }
 
