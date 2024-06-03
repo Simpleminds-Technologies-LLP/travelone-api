@@ -566,7 +566,7 @@ class SyncController extends Controller
         $json_tags = json_decode($json_tags, true);
 
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('tag_status', 0)->limit(5)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->orderBy('id', 'DESC')->where('tag_status', 0)->limit(5)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
