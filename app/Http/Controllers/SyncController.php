@@ -130,6 +130,7 @@ class SyncController extends Controller
                 $itinerary                   = $single_product['itinerary'] ?? null;
                 $productOptions              = $single_product['productOptions'] ?? null;
                 $supplier                    = $single_product['supplier'] ?? null;
+                $images                      = $single_product['images'] ?? null;
                 $reviews                     = $single_product['reviews'] ?? null;
                 $status                      = $single_product['status'] ?? null;
                 $createdAt                   = $single_product['createdAt'] ?? null;
@@ -145,7 +146,7 @@ class SyncController extends Controller
                 $filter_speical_badge    = ViatorHelper::filter_activity_special_badge($productflags);
                 $filter_duration         = ViatorHelper::filter_activity_duration($duration);
                 $booking_questions       = ViatorHelper::filter_booking_questions($json_booking_questions, $bookingQuestions);
-                $filter_product_images   = ViatorHelper::filter_product_images($single_product['images']);
+                $filter_product_images   = ViatorHelper::filter_product_images($images);
                 $product_tags            = ViatorHelper::filter_product_tags($json_tags, $tags);
                 $filter_inclusions       = ViatorHelper::filter_product_inclusions($inclusions);
                 $filter_exclusions       = ViatorHelper::filter_product_exclusions($exclusions);
