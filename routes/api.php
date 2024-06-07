@@ -42,7 +42,7 @@ Route::get('/viator/sync/categories_tag', 'App\Http\Controllers\SyncController@s
 
 
 // VIATOR COUNTRY SYNCED DATA
-// Canada       => 75
+// Canada       => 75 - Done
 // USA          => 77
 // France       => 51
 // Spain        => 67
@@ -50,8 +50,8 @@ Route::get('/viator/sync/categories_tag', 'App\Http\Controllers\SyncController@s
 // Australia    => 22
 // New Zealand  => 24
 // Italy        => 57
-// Japan        => 16
-// Indonesia    => 15
+// Japan        => 16 - Done
+// Indonesia    => 15 - Next
 // Singapore    => 18
 // Malaysia     => 17
 // Thailand     => 20
