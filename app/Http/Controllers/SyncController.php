@@ -79,10 +79,6 @@ class SyncController extends Controller
         $json_tags = file_get_contents('https://api.travelone.io/tags.json');
         $json_tags = json_decode($json_tags, true);
 
-        // Define default data
-        $default_destination_id = 38;
-        $default_country_id     = 38;
-
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 0)->limit(5)->get();
 
@@ -91,7 +87,9 @@ class SyncController extends Controller
             // Fetch tours
             foreach ($viator_product as $row) {
                 // get product data
-                $productCode = $row->product_code;
+                $productCode       = $row->product_code;
+                $to_destination_id = $row->to_destination_id;
+                $to_country_id     = $row->to_country_id;
 
                 // Convert extra json
                 $json_data = json_decode($row->extra_json, true);
@@ -269,7 +267,7 @@ class SyncController extends Controller
                                     // insert destination data
                                     DB::table('to_tour_destination')->insert([
                                         'tour_id'        => $is_common_tour_id,
-                                        'destination_id' => $default_destination_id,
+                                        'destination_id' => $to_destination_id,
                                     ]);
 
                                     // insert city night
@@ -284,8 +282,8 @@ class SyncController extends Controller
                                     // insert location data
                                     DB::table('to_tour_location')->insert([
                                         'tour_id'        => $is_common_tour_id,
-                                        'destination_id' => $default_destination_id,
-                                        'country_id'     => $default_country_id,
+                                        'destination_id' => $to_destination_id,
+                                        'country_id'     => $to_country_id,
                                         'state_id'       => $state_id,
                                         'city_id'        => $city_id,
                                     ]);
@@ -294,15 +292,15 @@ class SyncController extends Controller
                                     $created_city = DB::table('location_cities')->insert([
                                         'name'           => $destination_name,
                                         'slug'           => str_replace(" ", "_", strtolower($destination_name)),
-                                        'destination_id' => $default_destination_id,
-                                        'country_id'     => $default_country_id,
+                                        'destination_id' => $to_destination_id,
+                                        'country_id'     => $to_country_id,
                                         'state_id'       => 0,
                                     ]);
 
                                     // insert destination data
                                     DB::table('to_tour_destination')->insert([
                                         'tour_id'        => $is_common_tour_id,
-                                        'destination_id' => $default_destination_id,
+                                        'destination_id' => $to_destination_id,
                                     ]);
 
                                     // insert city night
@@ -315,8 +313,8 @@ class SyncController extends Controller
                                     // insert location data
                                     DB::table('to_tour_location')->insert([
                                         'tour_id'        => $is_common_tour_id,
-                                        'destination_id' => $default_destination_id,
-                                        'country_id'     => $default_country_id,
+                                        'destination_id' => $to_destination_id,
+                                        'country_id'     => $to_country_id,
                                         'state_id'       => 0,
                                         'city_id'        => $created_city->id,
                                     ]);
