@@ -596,7 +596,7 @@ class SyncController extends Controller
         $return_arr = [];
 
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('review_status', 0)->orderBy('id', 'DESC')->limit(4)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('review_status', 0)->orderBy('id', 'ASC')->limit(4)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
