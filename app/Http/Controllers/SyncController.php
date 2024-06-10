@@ -136,8 +136,7 @@ class SyncController extends Controller
                     $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
                     // Disable filter API
-                    // $filter_attraction       = ViatorHelper::filter_activity_attraction($itinerary); // API
-                    // $all_product_reviews     = ViatorHelper::fetch_single_product_reviews($productCode);
+                    // $filter_attraction = ViatorHelper::filter_activity_attraction($itinerary); // API
 
                     // Filter data
                     $filter_destination      = ViatorHelper::find_destination_details($json_destination_list, $destinations);
@@ -270,15 +269,6 @@ class SyncController extends Controller
                                         'destination_id' => $to_destination_id,
                                     ]);
 
-                                    // insert city night
-                                    /*if($city_id && $city_nights) {
-                                        DB::table('to_tour_city_night')->insert([
-                                            'tour_id' => $is_common_tour_id,
-                                            'city_id' => $city_id,
-                                            'night'   => $city_nights,
-                                        ]);
-                                    }*/
-
                                     // insert location data
                                     DB::table('to_tour_location')->insert([
                                         'tour_id'        => $is_common_tour_id,
@@ -302,13 +292,6 @@ class SyncController extends Controller
                                         'tour_id'        => $is_common_tour_id,
                                         'destination_id' => $to_destination_id,
                                     ]);
-
-                                    // insert city night
-                                    /*DB::table('to_tour_city_night')->insert([
-                                        'tour_id' => $is_common_tour_id,
-                                        'city_id' => $created_city->id,
-                                        'night'   => 0,
-                                    ]);*/
 
                                     // insert location data
                                     DB::table('to_tour_location')->insert([
@@ -374,48 +357,6 @@ class SyncController extends Controller
                             'time_duration'  => (!empty($filter_duration)) ? $filter_duration : 0,
                             'reviews'        => $reviews['combinedAverageRating'] ?? 0,
                         ]);
-
-                        // Update filtered reviews
-                        /*if(!empty($all_product_reviews['filteredReviewsSummary']['totalReviews'])) {
-                            // fetch reviews
-                            foreach ($all_product_reviews['reviews'] as $review) {
-                                // get single review data
-                                $reviewReference = $review['reviewReference'];
-                                $userName        = $review['userName'];
-                                $rating          = $review['rating'];
-                                $text            = $review['text'];
-                                $title           = $review['title'];
-                                $provider        = $review['provider'];
-                                $helpfulVotes    = $review['helpfulVotes'];
-                                $photosInfo      = $review['photosInfo'] ?? [];
-                                $publishedDate   = $review['publishedDate'];
-
-                                // check sightseeing is exist
-                                $is_exist_review = DB::table('to_tour_viator_reviews')->select('id')->where('tour_id', $is_common_tour_id)->where('product_code', $productCode)->where('review_reference', $reviewReference)->get()->toArray();
-
-                                // check emoji is exist in review
-                                $is_emoji_title = ViatorHelper::is_emoji_exist($title);
-                                $is_emoji_text  = ViatorHelper::is_emoji_exist($text);
-
-                                // check is exist
-                                if(empty($is_exist_review) && !$is_emoji_title && !$is_emoji_text) {
-                                    // insert terms data
-                                    DB::table('to_tour_viator_reviews')->insert([
-                                        'tour_id'          => $is_common_tour_id,
-                                        'product_code'     => $productCode,
-                                        'review_reference' => $reviewReference,
-                                        'username'         => $userName,
-                                        'title'            => $title,
-                                        'rating'           => (int) $rating,
-                                        'review_text'      => $text,
-                                        'provider'         => $provider,
-                                        'helpful_votes'    => $helpfulVotes,
-                                        'published_date'   => date('Y-m-d h:i:s', strtotime($publishedDate)),
-                                        'synced_date'      => date('Y-m-d h:i:s'),
-                                    ]);
-                                }
-                            }
-                        }*/
 
                         // Publish created tour
                         DB::table('to_tour_product')->where('id', $is_common_tour_id)->update(['status' => 1]);
@@ -647,5 +588,122 @@ class SyncController extends Controller
 
         // Return response
         echo json_encode($return_arr);
+    }
+
+    // Fetch viator reviews
+    public function sync_viator_reviews(Request $request)
+    {
+        $return_arr = [];
+
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('review_status', 0)->orderBy('id', 'DESC')->limit(4)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                // Check if tour is created
+                if(is_array($to_tour_data) && count($to_tour_data)) {
+                    // Assign updated tour ID
+                    $is_common_tour_id = $to_tour_data[0]->tour_id;
+
+                    // Fetch product reviews
+                    $product_reviews = ViatorHelper::fetch_single_product_reviews($product_code, 500);
+
+                    // Check reviews is valid
+                    if($is_common_tour_id && !empty($product_reviews['reviews']) && count($product_reviews['reviews'])) {
+                        // fetch reviews
+                        foreach ($product_reviews['reviews'] as $review) {
+                            // get single review data
+                            $review_reference = $review['reviewReference'];
+                            $language         = $review['language'];
+                            $user_name        = $review['userName'] ?? 'Unknow';
+                            $rating           = $review['rating'];
+                            $text             = $review['text'];
+                            $title            = $review['title'];
+                            $provider         = $review['provider'] ?? 'VIATOR';
+                            $helpful_votes    = $review['helpfulVotes'] ?? false;
+                            $traveler_photos  = $review['photosInfo'] ?? [];
+                            $published_date   = $review['publishedDate'];
+
+                            // Check is review in english only
+                            if($language === 'en') {
+                                // check sightseeing is exist
+                                $is_exist_review = DB::table('to_tour_viator_reviews')->select('id')->where('tour_id', $is_common_tour_id)->where('product_code', $product_code)->where('review_reference', $review_reference)->get()->toArray();
+
+                                // check emoji is exist in review
+                                $is_emoji_title = ViatorHelper::is_emoji_exist($title);
+                                $is_emoji_text  = ViatorHelper::is_emoji_exist($text);
+
+                                // check is exist
+                                if(!count($is_exist_review) && !$is_emoji_title && !$is_emoji_text) {
+                                    // insert terms data
+                                    DB::table('to_tour_viator_reviews')->insert([
+                                        'tour_id'          => $is_common_tour_id,
+                                        'product_code'     => $product_code,
+                                        'review_reference' => $review_reference,
+                                        'username'         => $user_name,
+                                        'title'            => $title,
+                                        'rating'           => (int) $rating,
+                                        'review_text'      => $text,
+                                        'provider'         => $provider,
+                                        'helpful_votes'    => $helpful_votes,
+                                        'published_date'   => date('Y-m-d h:i:s', strtotime($published_date)),
+                                        'synced_date'      => date('Y-m-d h:i:s'),
+                                    ]);
+
+                                    // Check traveler photos is valid
+                                    if(!empty($traveler_photos) && count($traveler_photos)) {
+                                        // Fetch photos
+                                        foreach ($traveler_photos as $row) {
+                                            // Check photo versions
+                                            if(!empty($row['photoVersions']) && count($row['photoVersions'])) {
+                                                // Fetch sizes of photo
+                                                foreach ($row['photoVersions'] as $photo) {
+                                                    // Check required image size ()
+                                                    if(600 <= $photo['height'] && $photo['height'] <= 1000) {
+                                                        // Insert record
+                                                        DB::table('to_tour_viator_traveler_photo')->insert([
+                                                            'tour_id'      => $is_common_tour_id,
+                                                            'product_code' => $product_code,
+                                                            'provider'     => $provider,
+                                                            'image_path'   => $photo['url'],
+                                                            'image_alt'    => $user_name,
+                                                        ]);
+                                                        continue;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'review_status' => 1,
+                    ]);
+                } else {
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'review_status' => 2,
+                    ]);
+                }
+
+                // Hold for 10 seconds
+                sleep(10);
+            }
+        }
+
+        // Return response
+        echo true;
     }
 }

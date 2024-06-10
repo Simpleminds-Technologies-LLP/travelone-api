@@ -397,7 +397,7 @@ class ViatorHelper
     /**
      * fetch single product reviews
      */
-    public static function fetch_single_product_reviews($product_code)
+    public static function fetch_single_product_reviews($product_code, $limit = 500)
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -411,11 +411,12 @@ class ViatorHelper
             CURLOPT_CUSTOMREQUEST  => 'POST',
             CURLOPT_POSTFIELDS     => '{
                 "productCode": "' . $product_code . '",
-                "provider": "ALL",
-                "count": 500,
+                "count": ' . $limit . ',
                 "start": 1,
+                "provider": "ALL",
                 "ratings": [1, 2, 3, 4, 5],
-                "sortBy": "MOST_RECENT_PER_LOCALE"
+                "sortBy": "MOST_RECENT",
+                "showMachineTranslated": "false"
             }',
             CURLOPT_HTTPHEADER => array(
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
