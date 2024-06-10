@@ -655,7 +655,6 @@ class SyncController extends Controller
                                         'provider'         => $provider,
                                         'helpful_votes'    => $helpful_votes,
                                         'published_date'   => date('Y-m-d h:i:s', strtotime($published_date)),
-                                        'synced_date'      => date('Y-m-d h:i:s'),
                                     ]);
 
                                     // Check traveler photos is valid
