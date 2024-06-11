@@ -11,7 +11,7 @@ class SyncController extends Controller
     public function sync_viator_product_list(Request $request)
     {
         // Get requested data
-        $viator_country_id  = $request->country_id;
+        $viator_country_id  = $request->viator_country_id;
         $to_destination_id  = $request->to_destination_id;
         $to_country_id      = $request->to_country_id;
         $req_start_position = $request->start;
