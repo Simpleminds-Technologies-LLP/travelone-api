@@ -52,7 +52,7 @@ Route::get('/viator/sync/reviews', 'App\Http\Controllers\SyncController@sync_via
 // New Zealand  => 24
 // Italy        => 57
 // Japan        => 16 - Done
-// Indonesia    => 15 - Next
+// Indonesia    => 15 - Working
 // Singapore    => 18
 // Malaysia     => 17
 // Thailand     => 20
