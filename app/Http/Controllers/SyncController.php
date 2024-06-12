@@ -139,9 +139,6 @@ class SyncController extends Controller
                     $createdAt                   = $single_product['createdAt'] ?? null;
                     $lastUpdatedAt               = $single_product['lastUpdatedAt'] ?? null;
 
-                    // Disable filter API
-                    // $filter_attraction = ViatorHelper::filter_activity_attraction($itinerary); // API
-
                     // Filter data
                     $filter_destination      = ViatorHelper::find_destination_details($json_destination_list, $destinations);
                     $filter_logistics        = ViatorHelper::filter_product_logistics($logistics); // API
@@ -223,7 +220,6 @@ class SyncController extends Controller
                         DB::table('to_tour_terms')->where('tour_id', $is_common_tour_id)->delete();
                         DB::table('to_tour_viator_extra_data')->where('tour_id', $is_common_tour_id)->delete();
                         DB::table('to_tour_viator_special_badge')->where('tour_id', $is_common_tour_id)->delete();
-                        DB::table('to_tour_viator_attraction')->where('tour_id', $is_common_tour_id)->delete();
 
                         // push data in table
                         $is_updated_tour = DB::table('to_tour_product')
@@ -331,18 +327,6 @@ class SyncController extends Controller
                                 ]);
                             }
                         }
-
-                        // count attraction data
-                        /*if(count($filter_attraction)) {
-                            // fetch attractions
-                            foreach ($filter_attraction as $attraction_name) {
-                                // insert attraction data
-                                DB::table('to_tour_viator_attraction')->insert([
-                                    'tour_id'         => $is_common_tour_id,
-                                    'attraction_name' => $attraction_name,
-                                ]);
-                            }
-                        }*/
 
                         // insert terms data
                         DB::table('to_tour_terms')->insert([
@@ -708,6 +692,70 @@ class SyncController extends Controller
         }
 
         // Return response
+        echo true;
+    }
+
+    // Sync viator attraction
+    public function sync_viator_attraction(Request $request)
+    {
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('attraction_status', 0)->orderBy('id', 'ASC')->limit(3)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                // Check if tour is created
+                if(is_array($to_tour_data) && count($to_tour_data)) {
+                    // Assign updated tour ID
+                    $is_common_tour_id = $to_tour_data[0]->tour_id;
+
+                    // fetch single product
+                    $single_product = ViatorHelper::fetch_single_product($product_code);
+
+                    // Get single itinerary
+                    $itinerary = $single_product['itinerary'] ?? null;
+
+                    // Filter attraction
+                    $filter_attraction = ViatorHelper::filter_activity_attraction($itinerary);
+
+                    // Check filter attraction is valid
+                    if(count($filter_attraction)) {
+                        // Remove previous data
+                        DB::table('to_tour_viator_attraction')->where('tour_id', $is_common_tour_id)->delete();
+
+                        // fetch attractions
+                        foreach ($filter_attraction as $attraction_name) {
+                            // insert attraction data
+                            DB::table('to_tour_viator_attraction')->insert([
+                                'tour_id'         => $is_common_tour_id,
+                                'attraction_name' => $attraction_name,
+                            ]);
+                        }
+                    }
+
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'attraction_status' => 1,
+                    ]);
+                } else {
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'attraction_status' => 2,
+                    ]);
+                }
+
+                // Hold for 10 seconds
+                sleep(10);
+            }
+        }
+
         echo true;
     }
 }

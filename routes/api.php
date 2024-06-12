@@ -39,6 +39,7 @@ Route::get('/viator/sync/single_tour', 'App\Http\Controllers\SyncController@sync
 Route::get('/viator/sync/availability_schedules', 'App\Http\Controllers\SyncController@sync_viator_availability_schedules');
 Route::get('/viator/sync/categories_tag', 'App\Http\Controllers\SyncController@sync_viator_categories_tag');
 Route::get('/viator/sync/reviews', 'App\Http\Controllers\SyncController@sync_viator_reviews');
+Route::get('/viator/sync/attraction', 'App\Http\Controllers\SyncController@sync_viator_attraction');
 
 
 

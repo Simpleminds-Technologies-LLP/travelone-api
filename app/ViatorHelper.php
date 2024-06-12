@@ -1071,6 +1071,7 @@ class ViatorHelper
                     $attraction_list[] = $response['data']['pageTitle'];
                 }
 
+                // Sleep for 10 seconds
                 sleep(10);
             }
         }
