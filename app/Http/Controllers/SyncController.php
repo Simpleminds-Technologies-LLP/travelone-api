@@ -84,7 +84,7 @@ class SyncController extends Controller
         $json_tags = json_decode($json_tags, true);
 
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 0)->limit(5)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 0)->limit(6)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
@@ -357,8 +357,8 @@ class SyncController extends Controller
                     ]);
                 }
 
-                // Sleep for 20 seconds
-                sleep(20);
+                // Sleep for 18 seconds
+                sleep(18);
             }
         }
 
