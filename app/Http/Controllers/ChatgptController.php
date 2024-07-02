@@ -26,8 +26,6 @@ class ChatgptController extends Controller
             ->get()
             ->toArray();
 
-        echo "<pre>"; print_r($product_list); echo "</pre>"; die;
-
         // Check is valid list
         if(!empty($product_list)) {
             // Fetch list
