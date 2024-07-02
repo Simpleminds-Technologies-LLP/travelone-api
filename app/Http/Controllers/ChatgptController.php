@@ -117,6 +117,7 @@ class ChatgptController extends Controller
                             'request_json'  => $prompt_text ?? null,
                             'response_json' => (!empty($gpt_response)) ? json_encode($gpt_response) : null,
                             'status'        => 1,
+                            'created_at'    => date('Y-m-d h:i:s'),
                         ]);
                     }
                 }
