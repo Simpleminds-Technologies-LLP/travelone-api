@@ -182,7 +182,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'ViatorHelper' => App\Helpers\ViatorHelper::class
+        'ViatorHelper' => App\Helpers\ViatorHelper::class,
+        'GptHelper' => App\Helpers\GptHelper::class
     ])->toArray(),
 
 ];

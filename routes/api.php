@@ -41,28 +41,29 @@ Route::get('/viator/sync/categories_tag', 'App\Http\Controllers\SyncController@s
 Route::get('/viator/sync/reviews', 'App\Http\Controllers\SyncController@sync_viator_reviews');
 Route::get('/viator/sync/attraction', 'App\Http\Controllers\SyncController@sync_viator_attraction');
 
+// Sync using chatgpt
+Route::get('/chatgpt', 'App\Http\Controllers\ChatgptController@sync_product_tag');
 
 
 // VIATOR COUNTRY SYNCED DATA
-// Canada       => 75 - Done
-// USA          => 77
-// France       => 51
-// Spain        => 67
-// Mexico       => 76
-// Australia    => 22
-// New Zealand  => 24
-// Italy        => 57
-// Japan        => 16 - Done
-// Indonesia    => 15 - Working
-// Singapore    => 18
-// Malaysia     => 17
-// Thailand     => 20
-// UAE          => 743
-// Cambodia     => 12
-// Vietnam      => 21
-// South Africa => 11
-
-// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/0"
-// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/31"
-// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/61"
-// */60 * * * * wget -q -O /dev/null "http://api.travelone.io/api/viator/product_search/75/91"
+// Japan					=> 16 => Done
+// Indonesia				=> 15 => Done
+// Antigua					=> 27 => Done
+// St Lucia					=> 38 => Done
+// Cuba						=> Not in Viator
+// The Bahamas				=> 29 => Done
+// Dominican Republic		=> 32 => 40 => 59 => Done
+// Puerto Rico				=> 36 => 40 => 177 => Done
+// Jamaica					=> 34 => 40 => 108 => Done
+// Mexico					=> 76 => 41 => 140 => Done
+// Portugal					=> 63 => 35 => 176 => Working
+// France					=> 51 => 35 => 72 => Pending
+// Greece 					=> 53 => 35 => 83 => Pending
+// Spain					=> 67 => 
+// Italy					=> 57 => 
+// Turkey					=> 70 => 
+// Thailand					=> 20 => 
+// United Arab Emirates 	=> 743 => Pending
+// Germany 					=> 52 => Pending
+// United Kingdom 			=> 60457 => Pending
+// United States of America	=>
