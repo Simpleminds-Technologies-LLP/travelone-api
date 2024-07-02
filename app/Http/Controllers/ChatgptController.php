@@ -12,6 +12,8 @@ class ChatgptController extends Controller
     {
         // Get api token
         $gpt_token = (!empty($_GET['token'])) ? $_GET['token'] : '';
+        $limit     = (!empty($_GET['limit'])) ? $_GET['limit'] : 30;
+        $offset    = (!empty($_GET['limit'])) ? $_GET['limit'] : 0;
 
         // Modify SQL Mode
         DB::statement("SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''))");
@@ -25,7 +27,8 @@ class ChatgptController extends Controller
             ->where('tour_location.country_id', 109)
             ->groupBy('tour_location.tour_id')
             ->orderBy('tour.id', 'DESC')
-            ->limit(30)
+            ->limit($limit)
+            ->offset($offset)
             ->get()
             ->toArray();
 
