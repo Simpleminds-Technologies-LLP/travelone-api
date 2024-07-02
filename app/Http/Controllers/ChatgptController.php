@@ -14,6 +14,7 @@ class ChatgptController extends Controller
         $gpt_token = (!empty($_GET['token'])) ? $_GET['token'] : '';
         $limit     = (!empty($_GET['limit'])) ? $_GET['limit'] : 30;
         $offset    = (!empty($_GET['limit'])) ? $_GET['limit'] : 0;
+        $is_dev    = (!empty($_GET['isTest'])) ? 1 : 0;
 
         // Modify SQL Mode
         DB::statement("SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''))");
@@ -31,6 +32,10 @@ class ChatgptController extends Controller
             ->offset($offset)
             ->get()
             ->toArray();
+
+        if($is_dev) {
+            echo "<pre>"; print_r($product_list); echo "</pre>"; die;
+        }
 
         // Check is valid list
         if(!empty($product_list)) {
