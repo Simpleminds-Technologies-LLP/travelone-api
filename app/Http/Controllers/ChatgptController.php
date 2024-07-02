@@ -28,8 +28,8 @@ class ChatgptController extends Controller
             ->where('tour_location.country_id', 109)
             ->groupBy('tour_location.tour_id')
             ->orderBy('tour.id', 'DESC')
-            ->skip($offset)
-            ->take($limit)
+            ->offset($offset)
+            ->limit($limit)
             ->get()
             ->toArray();
 
