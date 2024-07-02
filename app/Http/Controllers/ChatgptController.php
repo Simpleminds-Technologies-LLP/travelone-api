@@ -13,7 +13,7 @@ class ChatgptController extends Controller
         // Get api token
         $gpt_token = (!empty($_GET['token'])) ? $_GET['token'] : '';
         $limit     = (!empty($_GET['limit'])) ? $_GET['limit'] : 30;
-        $offset    = (!empty($_GET['limit'])) ? $_GET['limit'] : 0;
+        $offset    = (!empty($_GET['offset'])) ? $_GET['offset'] : 1;
         $is_dev    = (!empty($_GET['isTest'])) ? 1 : 0;
 
         // Modify SQL Mode
