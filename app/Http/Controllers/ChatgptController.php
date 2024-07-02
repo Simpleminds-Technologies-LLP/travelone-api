@@ -14,7 +14,7 @@ class ChatgptController extends Controller
         $gpt_token = (!empty($_GET['token'])) ? $_GET['token'] : '';
         $limit     = (!empty($_GET['limit'])) ? $_GET['limit'] : 30;
         $offset    = (!empty($_GET['offset'])) ? $_GET['offset'] : 1;
-        $is_dev    = (!empty($_GET['isTest'])) ? 1 : 0;
+        $is_dev    = (!empty($_GET['dev'])) ? 1 : 0;
 
         // Modify SQL Mode
         DB::statement("SET sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''))");
@@ -28,8 +28,8 @@ class ChatgptController extends Controller
             ->where('tour_location.country_id', 109)
             ->groupBy('tour_location.tour_id')
             ->orderBy('tour.id', 'DESC')
-            ->limit($limit)
-            ->offset($offset)
+            ->skip($offset)
+            ->take($limit)
             ->get()
             ->toArray();
 
@@ -56,9 +56,6 @@ class ChatgptController extends Controller
                     if(!empty($single_tour)) {
                         // Define array
                         $cities = [];
-
-                        // Define sync status
-                        $sync_status = 0;
 
                         // Get single tour data
                         $tour_name = $single_tour->tour_name;
@@ -110,14 +107,8 @@ class ChatgptController extends Controller
                                         'seo_description' => (!empty($filter_result[2])) ? $filter_result[2] : null,
                                         'seo_keyword'     => (!empty($filter_result[3])) ? implode(', ', $filter_result[3]) : 'travelone',
                                     ]);
-
-                                    // update status
-                                    $sync_status = 1;
                                 }
                             }
-                        } else {
-                            // Define sync status
-                            $sync_status = 2;
                         }
 
                         // Create record
@@ -125,7 +116,7 @@ class ChatgptController extends Controller
                             'tour_id'       => $tour_id,
                             'request_json'  => $prompt_text ?? null,
                             'response_json' => (!empty($gpt_response)) ? json_encode($gpt_response) : null,
-                            'status'        => $sync_status,
+                            'status'        => 1,
                         ]);
                     }
                 }
