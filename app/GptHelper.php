@@ -6,7 +6,7 @@ use DB;
 class GptHelper
 {
     // Run prompt
-    public static function run_prompt($prompt_command)
+    public static function run_prompt($prompt_command, $gpt_token)
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -39,7 +39,7 @@ class GptHelper
             }',
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
-                'Authorization: Bearer ' . env('CHATGPT_API_TOKEN')
+                'Authorization: Bearer ' . $gpt_token
             ]
         ));
         $response = curl_exec($curl);
