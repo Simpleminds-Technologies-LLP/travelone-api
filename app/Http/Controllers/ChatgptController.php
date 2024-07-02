@@ -100,7 +100,7 @@ class ChatgptController extends Controller
                                         'seo_title'       => (!empty($filter_result[0])) ? $filter_result[0] : null,
                                         'tags'            => (!empty($filter_result[1])) ? json_encode($filter_result[1]) : null,
                                         'seo_description' => (!empty($filter_result[2])) ? $filter_result[2] : null,
-                                        'seo_keyword'     => (!empty($filter_result[1])) ? implode(', ', $filter_result[1]) : 'travelone',
+                                        'seo_keyword'     => (!empty($filter_result[3])) ? implode(', ', $filter_result[3]) : 'travelone',
                                     ]);
 
                                     // update status
