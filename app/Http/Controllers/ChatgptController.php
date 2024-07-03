@@ -10,6 +10,9 @@ class ChatgptController extends Controller
     // Sync product seo meta data
     public function chatgpt_sync_tour_seometa(Request $request)
     {
+        // Get request parameters
+        $gpt_token = !empty($_GET['gpt_token']) ? $_GET['gpt_token'] : '';
+
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('chatgpt_status', 0)->limit(1)->get();
 
@@ -67,7 +70,7 @@ class ChatgptController extends Controller
                                 $prompt_text = 'Tour Name - ' . $tour_name . '\nCities: ' . $implode_cities . '\n\nI need SEO-related information for the above tour \n\n1. Title with TravelOne brand name at the end with a pipe (50 to 60 Characters) for example - make a proper tile tag for perfect SEO and Google results \n2. Searchable Tags (4 to 5 Tags for website search to find this tour with theme)\n3. SEO Description (155 to 160 Characters)\n4. SEO Keywords (8 to 10 keywords)';
 
                                 // fetch product list
-                                $gpt_response = ''; // GptHelper::run_prompt($prompt_text, $gpt_token);
+                                $gpt_response = GptHelper::run_prompt($prompt_text, $gpt_token);
 
                                 // Check response is valid
                                 if(!empty($gpt_response['id'])) {
