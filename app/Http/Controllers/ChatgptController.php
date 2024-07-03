@@ -13,8 +13,6 @@ class ChatgptController extends Controller
         // Get request parameters
         $gpt_token = !empty($token) ? $token : '';
 
-        echo "<pre>"; print_r($gpt_token); echo "</pre>"; die;
-
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('chatgpt_status', 0)->limit(1)->get();
 
