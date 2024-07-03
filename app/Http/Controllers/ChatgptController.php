@@ -82,6 +82,11 @@ class ChatgptController extends Controller
 
                                     // Check is valid result output
                                     if(is_array($filter_result)) {
+                                        // Update sync status
+                                        DB::table('to_viator')->where('id', $product->id)->update([
+                                            'chatgpt_status' => 1
+                                        ]);
+
                                         // Update record
                                         DB::table('to_tour_product')
                                         ->where('id', $tour_id)
@@ -90,11 +95,6 @@ class ChatgptController extends Controller
                                             'tags'            => (!empty($filter_result[1])) ? json_encode($filter_result[1]) : null,
                                             'seo_description' => (!empty($filter_result[2])) ? $filter_result[2] : null,
                                             'seo_keyword'     => (!empty($filter_result[3])) ? implode(', ', $filter_result[3]) : 'travelone',
-                                        ]);
-
-                                        // Update sync status
-                                        DB::table('to_viator')->where('id', $product->id)->update([
-                                            'chatgpt_status' => 1
                                         ]);
                                     }
                                 }
