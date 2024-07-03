@@ -42,7 +42,7 @@ Route::get('/viator/sync/reviews', 'App\Http\Controllers\SyncController@sync_via
 Route::get('/viator/sync/attraction', 'App\Http\Controllers\SyncController@sync_viator_attraction');
 
 // Sync using chatgpt
-Route::get('/chatgpt/sync/seometa', 'App\Http\Controllers\ChatgptController@chatgpt_sync_tour_seometa');
+Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptController@chatgpt_sync_tour_seometa/$1');
 
 
 // VIATOR COUNTRY SYNCED DATA
