@@ -14,7 +14,7 @@ class ChatgptController extends Controller
         $gpt_token = !empty($token) ? $token : '';
 
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('chatgpt_status', 0)->limit(1)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('chatgpt_status', 0)->limit(30)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
@@ -134,6 +134,7 @@ class ChatgptController extends Controller
             }
         }
 
+        // Return response
         echo true;
     }
 }
