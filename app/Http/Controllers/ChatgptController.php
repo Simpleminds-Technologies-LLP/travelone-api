@@ -8,10 +8,12 @@ use DB;
 class ChatgptController extends Controller
 {
     // Sync product seo meta data
-    public function chatgpt_sync_tour_seometa(Request $request)
+    public function chatgpt_sync_tour_seometa($token, Request $request)
     {
         // Get request parameters
-        $gpt_token = !empty($_GET['token']) ? $_GET['token'] : '';
+        $gpt_token = !empty($token) ? $token : '';
+
+        echo "<pre>"; print_r($gpt_token); echo "</pre>"; die;
 
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('chatgpt_status', 0)->limit(1)->get();
