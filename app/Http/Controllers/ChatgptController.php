@@ -7,7 +7,7 @@ use DB;
 
 class ChatgptController extends Controller
 {
-    // Sync product tag
+    // Sync product seo meta data
     public function chatgpt_sync_tour_seometa(Request $request)
     {
         // Check if activity exists
