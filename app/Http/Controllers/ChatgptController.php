@@ -122,7 +122,7 @@ class ChatgptController extends Controller
                     } else {
                         // Update sync status
                         DB::table('to_viator')->where('id', $product->id)->update([
-                            'chatgpt_status' => 2
+                            'chatgpt_status' => 1
                         ]);
                     }
                 } else {
