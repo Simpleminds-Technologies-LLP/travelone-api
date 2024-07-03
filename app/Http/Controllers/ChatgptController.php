@@ -11,7 +11,7 @@ class ChatgptController extends Controller
     public function chatgpt_sync_tour_seometa(Request $request)
     {
         // Get request parameters
-        $gpt_token = !empty($_GET['gpt_token']) ? $_GET['gpt_token'] : '';
+        $gpt_token = !empty($_GET['token']) ? $_GET['token'] : '';
 
         // Check if activity exists
         $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('chatgpt_status', 0)->limit(1)->get();
