@@ -99,6 +99,11 @@ class ChatgptController extends Controller
                                             'seo_keyword'     => (!empty($filter_result[3])) ? implode(', ', $filter_result[3]) : 'travelone',
                                         ]);
                                     }
+                                } else {
+                                    // Update sync status
+                                    DB::table('to_viator')->where('id', $product->id)->update([
+                                        'chatgpt_status' => 3
+                                    ]);
                                 }
                             } else {
                                 // Update sync status
