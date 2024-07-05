@@ -57,7 +57,9 @@ class ChatgptController extends Controller
                                     $single_city = DB::table('location_cities')->select('*')->where('id', $city->city_id)->first();
 
                                     // Push data in array
-                                    $cities_list[] = $single_city->name;
+                                    if(!empty($single_city->name)) {
+                                        $cities_list[] = $single_city->name;
+                                    }
                                 }
                             }
 
