@@ -75,7 +75,7 @@ class SyncController extends Controller
                 sleep($waiting_time);
 
                 // Push item in array
-                $return[] = count($product_list['products']) ?? 0;
+                $return[] = $product_list;
             }
         }
 
