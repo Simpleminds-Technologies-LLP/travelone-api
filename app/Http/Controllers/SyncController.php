@@ -71,14 +71,14 @@ class SyncController extends Controller
                     }
                 }
 
-                // Sleep for
-                sleep($waiting_time);
-
                 // Push item in array
                 $return[] = [
                     'count' => count($product_list['products']) ?? 0,
                     'limit' => $product_list['totalCount'],
                 ];
+
+                // Sleep for
+                sleep($waiting_time);
             }
         }
 
