@@ -58,8 +58,8 @@ Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptControl
 // Jamaica					=> 34 => 40 => 108 => Done
 // Mexico					=> 76 => 41 => 140 => Done
 // Portugal					=> 63 => 35 => 176 => Done
-// France					=> 51 => 35 => 72 => Working
-// Greece 					=> 53 => 35 => 83 => Pending
+// France					=> 51 => 35 => 72 => Done
+// Greece 					=> 53 => 35 => 83 => Working
 // Spain					=> 67 => 
 // Italy					=> 57 => 
 // Turkey					=> 70 => 
