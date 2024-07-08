@@ -44,6 +44,7 @@ Route::get('/viator/sync/attraction', 'App\Http\Controllers\SyncController@sync_
 // Sync using chatgpt
 Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptController@chatgpt_sync_tour_seometa');
 
+// Local sync
 
 // VIATOR COUNTRY SYNCED DATA
 // Japan					=> 16 => Done
@@ -56,8 +57,8 @@ Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptControl
 // Puerto Rico				=> 36 => 40 => 177 => Done
 // Jamaica					=> 34 => 40 => 108 => Done
 // Mexico					=> 76 => 41 => 140 => Done
-// Portugal					=> 63 => 35 => 176 => Working
-// France					=> 51 => 35 => 72 => Pending
+// Portugal					=> 63 => 35 => 176 => Done
+// France					=> 51 => 35 => 72 => Working
 // Greece 					=> 53 => 35 => 83 => Pending
 // Spain					=> 67 => 
 // Italy					=> 57 => 
