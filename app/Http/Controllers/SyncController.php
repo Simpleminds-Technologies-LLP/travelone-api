@@ -10,62 +10,76 @@ class SyncController extends Controller
     // Sync single viator activity
     public function sync_viator_product_list(Request $request)
     {
+        // Define array
+        $return = [];
+
         // Get requested data
         $viator_country_id  = $request->viator_country_id;
         $to_destination_id  = $request->to_destination_id;
         $to_country_id      = $request->to_country_id;
         $req_start_position = $request->start;
-        $default_limit      = $request->limit;
+        $req_end_position   = $request->end;
+        $default_limit      = $request->limit ?? 40;
+        $waiting_time       = $request->waiting_time ?? 10; // In seconds
 
-        // Define static body
-        $filter_data = [
-            "filtering" => [
-                "destination" => $viator_country_id
-            ],
-            "pagination" => [
-                "start" => $req_start_position,
-                "count" => $default_limit
-            ],
-            "currency" => "USD"
-        ];
+        // Init loop
+        for ($position = $req_start_position; $position <= $req_end_position; $position+=$default_limit) { 
+            // Define static body
+            $filter_data = [
+                "filtering" => [
+                    "destination" => $viator_country_id
+                ],
+                "pagination" => [
+                    "start" => $position,
+                    "count" => $default_limit
+                ],
+                "currency" => "USD"
+            ];
 
-        // fetch product list
-        $product_list = ViatorHelper::fetch_product_list($filter_data);
+            // fetch product list
+            $product_list = ViatorHelper::fetch_product_list($filter_data);
 
-        // check product is valid
-        if (is_array($product_list) && !empty($product_list['products']) && is_array($product_list['products'])) {
-            // fetch products
-            foreach ($product_list['products'] as $product) {
-                // get product data
-                $productCode    = $product['productCode'] ?? null;
-                $productflags   = $product['flags'] ?? null;
-                $duration       = $product['duration'] ?? null;
-                $pricingSummary = $product['pricing'] ?? null;
-                $productOptions = $product['productOptions'] ?? [];
+            // check product is valid
+            if (is_array($product_list) && !empty($product_list['products']) && is_array($product_list['products'])) {
+                // fetch products
+                foreach ($product_list['products'] as $product) {
+                    // get product data
+                    $productCode    = $product['productCode'] ?? null;
+                    $productflags   = $product['flags'] ?? null;
+                    $duration       = $product['duration'] ?? null;
+                    $pricingSummary = $product['pricing'] ?? null;
+                    $productOptions = $product['productOptions'] ?? [];
 
-                // Check if activity exists
-                $isActivityExist = DB::table('to_viator')->select('id')->where('product_code', $productCode)->get()->toArray();
+                    // Check if activity exists
+                    $isActivityExist = DB::table('to_viator')->select('id')->where('product_code', $productCode)->get()->toArray();
 
-                // check item is exist
-                if(!count($isActivityExist)) {
-                    // insert terms data
-                    DB::table('to_viator')->insert([
-                        'viator_country_id' => $viator_country_id,
-                        'to_destination_id' => $to_destination_id,
-                        'to_country_id'     => $to_country_id,
-                        'product_code'      => $productCode,
-                        'extra_json'        => json_encode([
-                            'productflags'   => $productflags,
-                            'duration'       => $duration,
-                            'pricingSummary' => $pricingSummary,
-                            'productOptions' => $productOptions,
-                        ])
-                    ]);
+                    // check item is exist
+                    if(!count($isActivityExist)) {
+                        // insert terms data
+                        DB::table('to_viator')->insert([
+                            'viator_country_id' => $viator_country_id,
+                            'to_destination_id' => $to_destination_id,
+                            'to_country_id'     => $to_country_id,
+                            'product_code'      => $productCode,
+                            'extra_json'        => json_encode([
+                                'productflags'   => $productflags,
+                                'duration'       => $duration,
+                                'pricingSummary' => $pricingSummary,
+                                'productOptions' => $productOptions,
+                            ])
+                        ]);
+                    }
+
+                    // Sleep for
+                    sleep($waiting_time);
                 }
+
+                // Push item in array
+                $return[] = count($product_list['products']) ?? 0;
             }
         }
 
-        echo "<pre>"; print_r($product_list); echo "</pre>"; die;
+        echo "<pre>"; print_r($return); echo "</pre>"; die;
     }
 
     // Fetch and sync product list
