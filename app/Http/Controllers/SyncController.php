@@ -515,7 +515,7 @@ class SyncController extends Controller
         $json_tags = json_decode($json_tags, true);
 
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->orderBy('id', 'DESC')->where('tag_status', 0)->limit(5)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('tag_status', 0)->orderBy('id', 'DESC')->limit(5)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
@@ -770,6 +770,91 @@ class SyncController extends Controller
 
                 // Hold for 10 seconds
                 sleep(10);
+            }
+        }
+
+        echo true;
+    }
+
+    // Sync local theme from tags
+    public function sync_local_theme_from_tags(Request $request)
+    {
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('theme_status', 0)->orderBy('id', 'ASC')->limit(1)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                // Check if tour is created
+                if(is_array($to_tour_data) && count($to_tour_data)) {
+                    // Assign updated tour ID
+                    $is_common_tour_id = $to_tour_data[0]->tour_id;
+
+                    // fetch single product
+                    $single_product = DB::table('to_tour_product')->select('*')->where('id', $is_common_tour_id)->first();
+
+                    // Get tour tags
+                    $tour_tags = (!empty($single_product->tags)) ? json_decode($single_product->tags, true) : [];
+
+                    // Check tags is valid
+                    if(!empty($tour_tags)) {
+                        // Fetch tags
+                        foreach ($tour_tags as $tag_key => $tag) {
+                            // Check theme is exist
+                            $single_theme = DB::table('to_theme')->select('*')->where('name', $tag)->first();
+
+                            // Check if theme is empty
+                            if(empty($single_theme)) {
+                                // Create new theme record
+                                $is_theme_created = DB::table('to_theme')->insert([
+                                    'slug'            => strtolower(str_replace(' ', '-', $tag)),
+                                    'name'            => $tag,
+                                    'seo_title'       => $tag,
+                                    'seo_description' => $tag,
+                                    'seo_keyword'     => $tag,
+                                    'status'          => 1
+                                ]);
+
+                                // Push original data in array
+                                $tour_tags[$tag_key] = DB::getPdo()->lastInsertId();
+                            } else {
+                                // Push original data in array
+                                $tour_tags[$tag_key] = $single_theme->id;
+                            }
+                        }
+                    }
+
+                    // Check tags is valid
+                    if(count($tour_tags)) {
+                        // Remove exist tags
+                        DB::table('to_tour_theme')->where('tour_id', $is_common_tour_id)->delete();
+
+                        // Assign theme to tour
+                        foreach ($tour_tags as $theme_id) {
+                            DB::table('to_tour_theme')->insert([
+                                'tour_id'  => $is_common_tour_id,
+                                'theme_id' => $theme_id,
+                            ]);
+                        }
+                    }
+
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'theme_status' => 1,
+                    ]);
+                } else {
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'theme_status' => 2,
+                    ]);
+                }
             }
         }
 
