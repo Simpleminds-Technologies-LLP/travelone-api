@@ -45,6 +45,7 @@ Route::get('/viator/sync/attraction', 'App\Http\Controllers\SyncController@sync_
 Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptController@chatgpt_sync_tour_seometa');
 
 // Local sync
+Route::get('/local/sync/themes', 'App\Http\Controllers\SyncController@sync_local_theme_from_tags');
 
 // VIATOR COUNTRY SYNCED DATA
 // Japan					=> 16 => Done
