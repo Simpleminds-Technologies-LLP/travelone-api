@@ -374,8 +374,8 @@ class SyncController extends Controller
                     ]);
                 }
 
-                // Sleep for 18 seconds
-                sleep(18);
+                // Sleep for 15 seconds
+                sleep(15);
             }
         }
 
