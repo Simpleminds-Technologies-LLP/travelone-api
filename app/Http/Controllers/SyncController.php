@@ -780,7 +780,7 @@ class SyncController extends Controller
     public function sync_local_theme_from_tags(Request $request)
     {
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('theme_status', 0)->orderBy('id', 'ASC')->limit(100)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('theme_status', 0)->orderBy('id', 'ASC')->limit(300)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
