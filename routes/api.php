@@ -60,12 +60,12 @@ Route::get('/local/sync/themes', 'App\Http\Controllers\SyncController@sync_local
 // Mexico					=> 76 => 41 => 140 => Done
 // Portugal					=> 63 => 35 => 176 => Done
 // France					=> 51 => 35 => 72 => Done
-// Greece 					=> 53 => 35 => 83 => Working
-// Spain					=> 67 => 
-// Italy					=> 57 => 
-// Turkey					=> 70 => 
-// Thailand					=> 20 => 
-// United Arab Emirates 	=> 743 => Pending
-// Germany 					=> 52 => Pending
-// United Kingdom 			=> 60457 => Pending
+// Greece 					=> 53 => 35 => 83 => Done
+// Spain					=> 67 => 35 => 202 => Done
+// Italy					=> 57 => 35 => 106 => Working
+// Thailand					=> 20 => 42 => 216 => Pending
+// Turkey					=> 70 => 35 => 222 => Pending
+// United Arab Emirates 	=> 743 => 
+// Germany 					=> 52 => 
+// United Kingdom 			=> 60457 => 
 // United States of America	=>

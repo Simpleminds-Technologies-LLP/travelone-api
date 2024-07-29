@@ -316,7 +316,7 @@ class SyncController extends Controller
                                         'destination_id' => $to_destination_id,
                                         'country_id'     => $to_country_id,
                                         'state_id'       => 0,
-                                        'city_id'        => $created_city->id,
+                                        'city_id'        => (!empty($created_city->id)) ? $created_city->id : null,
                                     ]);
                                 }
                             }
