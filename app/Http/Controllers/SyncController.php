@@ -11,12 +11,13 @@ class SyncController extends Controller
     public function verify_sync_process(Request $request)
     {
         // Check if activity exists
-        $verify_tags_product = DB::table('to_viator')->select('*')->where('tag_status', 2)->get();
+        $verify_tags_product_2 = DB::table('to_viator')->select('*')->where('tag_status', 2)->get();
+        $verify_tags_product_3 = DB::table('to_viator')->select('*')->where('tag_status', 3)->get();
 
         // Check is valid activity
-        if(!empty($verify_tags_product)) {
+        if(!empty($verify_tags_product_2)) {
             // Fetch tours
-            foreach ($verify_tags_product as $product) {
+            foreach ($verify_tags_product_2 as $product) {
                 // Re-sync product
                 DB::table('to_viator')->where('id', $product->id)->update([
                     'status'              => 0,
@@ -29,6 +30,64 @@ class SyncController extends Controller
                     'review_count_status' => 0,
                     'updated_at'          => NULL,
                 ]);
+            }
+        }
+
+        // Check is valid activity
+        if(!empty($verify_tags_product_3)) {
+            // Fetch tours
+            foreach ($verify_tags_product_3 as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                // Check if tour is created
+                if(is_array($to_tour_data) && count($to_tour_data)) {
+                    // Assign updated tour ID
+                    $is_common_tour_id = $to_tour_data[0]->tour_id;
+
+                    // fetch single product
+                    $single_product = DB::table('to_tour_product')->select('*')->where('id', $is_common_tour_id)->first();
+
+                    // Check is tour exist
+                    if(!empty($single_product->id)) {
+                        // Re-sync tags
+                        DB::table('to_viator')->where('id', $product->id)->update([
+                            'tag_status' => 0
+                        ]);
+                    } else {
+                        // Delete viator extra table data
+                        DB::table('to_tour_viator_extra_data')->where('product_code', $product_code)->delete();
+
+                        // Re-sync product
+                        DB::table('to_viator')->where('id', $product->id)->update([
+                            'status'              => 0,
+                            'availability_status' => 0,
+                            'tag_status'          => 0,
+                            'review_status'       => 0,
+                            'attraction_status'   => 0,
+                            'chatgpt_status'      => 0,
+                            'theme_status'        => 0,
+                            'review_count_status' => 0,
+                            'updated_at'          => NULL,
+                        ]);
+                    }
+                } else {
+                    // Re-sync product
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'status'              => 0,
+                        'availability_status' => 0,
+                        'tag_status'          => 0,
+                        'review_status'       => 0,
+                        'attraction_status'   => 0,
+                        'chatgpt_status'      => 0,
+                        'theme_status'        => 0,
+                        'review_count_status' => 0,
+                        'updated_at'          => NULL,
+                    ]);
+                }
             }
         }
 
