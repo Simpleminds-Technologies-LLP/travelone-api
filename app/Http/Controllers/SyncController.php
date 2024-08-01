@@ -1139,10 +1139,10 @@ class SyncController extends Controller
                 $tour_id = $tour->id;
 
                 // Get created tour data
-                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('tour_id', $tour_id)->get()->toArray();
+                $extra_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('tour_id', $tour_id)->get()->toArray();
 
                 // Count total meta exist
-                $total_meta = (is_array($to_tour_data)) ? count($to_tour_data) : 0;
+                $total_meta = (is_array($extra_data)) ? count($extra_data) : 0;
 
                 // Check if no meta exist
                 if($total_meta == 0) {
