@@ -1070,7 +1070,7 @@ class SyncController extends Controller
     public function sync_local_tours_reviews(Request $request)
     {
         // Check if activity exists
-        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->orderBy('id', 'ASC')->limit(50)->get();
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('review_count_status', 0)->orderBy('id', 'ASC')->limit(30)->get();
 
         // Check is valid activity
         if(!empty($viator_product)) {
