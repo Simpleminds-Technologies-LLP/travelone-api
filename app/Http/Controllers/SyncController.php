@@ -11,13 +11,13 @@ class SyncController extends Controller
     public function verify_sync_process(Request $request)
     {
         // Check if activity exists
-        $verify_main_product_2 = DB::table('to_viator')->select('*')->where('status', 2)->get();
-        $verify_tags_product_2 = DB::table('to_viator')->select('*')->where('tag_status', 2)->get();
-        $verify_tags_product_3 = DB::table('to_viator')->select('*')->where('tag_status', 3)->get();
-        $verify_review_product_2 = DB::table('to_viator')->select('*')->where('review_status', 2)->get();
-        $verify_attraction_product_2 = DB::table('to_viator')->select('*')->where('attraction_status', 2)->get();
-        $verify_chatgpt_product_2 = DB::table('to_viator')->select('*')->where('chatgpt_status', 2)->get();
-        $verify_theme_product_2 = DB::table('to_viator')->select('*')->where('theme_status', 2)->get();
+        $verify_main_product_2         = DB::table('to_viator')->select('*')->where('status', 2)->get();
+        $verify_tags_product_2         = DB::table('to_viator')->select('*')->where('tag_status', 2)->get();
+        $verify_tags_product_3         = DB::table('to_viator')->select('*')->where('tag_status', 3)->get();
+        $verify_review_product_2       = DB::table('to_viator')->select('*')->where('review_status', 2)->get();
+        $verify_attraction_product_2   = DB::table('to_viator')->select('*')->where('attraction_status', 2)->get();
+        $verify_chatgpt_product_2      = DB::table('to_viator')->select('*')->where('chatgpt_status', 2)->get();
+        $verify_theme_product_2        = DB::table('to_viator')->select('*')->where('theme_status', 2)->get();
         $verify_review_count_product_2 = DB::table('to_viator')->select('*')->where('review_count_status', 2)->get();
 
         // Check is valid activity

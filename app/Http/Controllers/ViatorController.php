@@ -622,6 +622,9 @@ class ViatorController extends Controller
                         }
                     }
 
+                    // Delete previous data
+                    DB::table('to_tour_viator_extra_data')->where('product_code', $productCode)->delete();
+
                     // insert viator extra data
                     DB::table('to_tour_viator_extra_data')->insert([
                         'tour_id'        => $is_created_tour,
@@ -659,12 +662,14 @@ class ViatorController extends Controller
                 $is_common_tour_id = $exist_tour_id;
 
                 // remove location data
+
+                // Delete previous data
+                DB::table('to_tour_viator_extra_data')->where('product_code', $productCode)->delete();
                 DB::table('to_tour_viator_tag')->where('tour_id', $exist_tour_id)->delete();
                 DB::table('to_tour_destination')->where('tour_id', $exist_tour_id)->delete();
                 DB::table('to_tour_location')->where('tour_id', $exist_tour_id)->delete();
                 DB::table('to_tour_city_night')->where('tour_id', $exist_tour_id)->delete();
                 DB::table('to_tour_terms')->where('tour_id', $exist_tour_id)->delete();
-                DB::table('to_tour_viator_extra_data')->where('tour_id', $exist_tour_id)->delete();
                 DB::table('to_tour_viator_special_badge')->where('tour_id', $exist_tour_id)->delete();
                 DB::table('to_tour_viator_attraction')->where('tour_id', $exist_tour_id)->delete();
 
