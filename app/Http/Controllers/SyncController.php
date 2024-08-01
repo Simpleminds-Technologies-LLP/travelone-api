@@ -16,6 +16,7 @@ class SyncController extends Controller
         $verify_tags_product_3 = DB::table('to_viator')->select('*')->where('tag_status', 3)->get();
         $verify_review_product_2 = DB::table('to_viator')->select('*')->where('review_status', 2)->get();
         $verify_attraction_product_2 = DB::table('to_viator')->select('*')->where('attraction_status', 2)->get();
+        $verify_chatgpt_product_2 = DB::table('to_viator')->select('*')->where('chatgpt_status', 2)->get();
 
         // Check is valid activity
         if(!empty($verify_main_product_2)) {
@@ -38,6 +39,25 @@ class SyncController extends Controller
         if(!empty($verify_review_product_2)) {
             // Fetch tours
             foreach ($verify_review_product_2 as $product) {
+                // Deactive product
+                DB::table('to_viator')->where('id', $product->id)->update([
+                    'status'              => 0,
+                    'availability_status' => 0,
+                    'tag_status'          => 0,
+                    'review_status'       => 0,
+                    'attraction_status'   => 0,
+                    'chatgpt_status'      => 0,
+                    'theme_status'        => 0,
+                    'review_count_status' => 0,
+                    'updated_at'          => NULL,
+                ]);
+            }
+        }
+
+        // Check is valid activity
+        if(!empty($verify_chatgpt_product_2)) {
+            // Fetch tours
+            foreach ($verify_chatgpt_product_2 as $product) {
                 // Deactive product
                 DB::table('to_viator')->where('id', $product->id)->update([
                     'status'              => 0,
