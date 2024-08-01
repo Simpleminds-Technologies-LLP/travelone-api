@@ -7,6 +7,34 @@ use DB;
 
 class SyncController extends Controller
 {
+    // Verify sync process
+    public function verify_sync_process(Request $request)
+    {
+        // Check if activity exists
+        $verify_tags_product = DB::table('to_viator')->select('*')->where('tag_status', 2)->get();
+
+        // Check is valid activity
+        if(!empty($verify_tags_product)) {
+            // Fetch tours
+            foreach ($verify_tags_product as $product) {
+                // Re-sync product
+                DB::table('to_viator')->where('id', $product->id)->update([
+                    'status'              => 0,
+                    'availability_status' => 0,
+                    'tag_status'          => 0,
+                    'review_status'       => 0,
+                    'attraction_status'   => 0,
+                    'chatgpt_status'      => 0,
+                    'theme_status'        => 0,
+                    'review_count_status' => 0,
+                    'updated_at'          => NULL,
+                ]);
+            }
+        }
+
+        echo true;
+    }
+
     // Sync single viator activity
     public function sync_viator_product_list(Request $request)
     {
