@@ -1150,6 +1150,10 @@ class SyncController extends Controller
                         're_verify' => 1,
                         'status' => 0,
                     ]);
+                } else if($total_meta == 1) {
+                    DB::table('to_tour_product')->where('id', $tour_id)->update([
+                        're_verify' => 1
+                    ]);
                 } else if($total_meta > 1) {
                     DB::table('to_tour_product')->where('id', $tour_id)->update([
                         're_verify' => 2,
