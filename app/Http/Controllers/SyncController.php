@@ -1131,8 +1131,6 @@ class SyncController extends Controller
         // Check if activity exists
         $viator_product = DB::table('to_tour_product')->select('*')->where('re_verify', 0)->where('tour_sync_type', 'viator')->where('status', 1)->limit(20)->get();
 
-        echo "<pre>"; print_r($viator_product); echo "</pre>"; die;
-
         // Check is valid activity
         if(!empty($viator_product)) {
             // Fetch tours
