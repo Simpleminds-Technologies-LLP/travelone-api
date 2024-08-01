@@ -860,4 +860,55 @@ class SyncController extends Controller
 
         echo true;
     }
+
+    // Sync local tours reviews
+    public function sync_local_tours_reviews(Request $request)
+    {
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('review_status', 1)->orderBy('id', 'ASC')->limit(50)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                // Check if tour is created
+                if(is_array($to_tour_data) && count($to_tour_data)) {
+                    // Assign updated tour ID
+                    $is_common_tour_id = $to_tour_data[0]->tour_id;
+
+                    // fetch single product
+                    $single_product = DB::table('to_tour_product')->select('*')->where('id', $is_common_tour_id)->first();
+
+                    // Get viator json data
+                    $viator_json = json_decode($single_product->extra_json_data, true);
+
+                    // Get total reviews count
+                    $total_reviews = (!empty($viator_json['reviews']['totalReviews'])) ? $viator_json['reviews']['totalReviews'] : 0;
+
+                    // Update query
+                    DB::table('to_tour_viator_extra_data')->where('tour_id', $is_common_tour_id)->update([
+                        'total_reviews' => $total_reviews
+                    ]);
+
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'review_count_status' => 1,
+                    ]);
+                } else {
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'review_count_status' => 2,
+                    ]);
+                }
+            }
+        }
+
+        echo true;
+    }
 }
