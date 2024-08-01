@@ -11,8 +11,26 @@ class SyncController extends Controller
     public function verify_sync_process(Request $request)
     {
         // Check if activity exists
+        $verify_main_product_2 = DB::table('to_viator')->select('*')->where('status', 2)->get();
         $verify_tags_product_2 = DB::table('to_viator')->select('*')->where('tag_status', 2)->get();
         $verify_tags_product_3 = DB::table('to_viator')->select('*')->where('tag_status', 3)->get();
+
+        // Check is valid activity
+        if(!empty($verify_main_product_2)) {
+            // Fetch tours
+            foreach ($verify_main_product_2 as $product) {
+                // Deactive product
+                DB::table('to_viator')->where('id', $product->id)->update([
+                    'availability_status' => 2,
+                    'tag_status'          => 2,
+                    'review_status'       => 2,
+                    'attraction_status'   => 2,
+                    'chatgpt_status'      => 2,
+                    'theme_status'        => 2,
+                    'review_count_status' => 2,
+                ]);
+            }
+        }
 
         // Check is valid activity
         if(!empty($verify_tags_product_2)) {
