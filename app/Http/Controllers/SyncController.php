@@ -1124,4 +1124,41 @@ class SyncController extends Controller
 
         echo true;
     }
+
+    // Deactive tour missing extra data
+    public function deactive_tour_missing_extra_data(Request $request)
+    {
+        // Check if activity exists
+        $viator_product = DB::table('to_tour_product')->select('*')->where('re_verify', 0)->where('tour_sync_type', 'viator')->where('status', 1)->limit(20)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $tour) {
+                // get product data
+                $tour_id = $tour->id;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('tour_id', $tour_id)->get()->toArray();
+
+                // Count total meta exist
+                $total_meta = (is_array($to_tour_data)) ? count($to_tour_data) : 0;
+
+                // Check if no meta exist
+                if($total_meta == 0) {
+                    DB::table('to_tour_product')->where('id', $tour_id)->update([
+                        're_verify' => 1,
+                        'status' => 0,
+                    ]);
+                } else if($total_meta > 1) {
+                    DB::table('to_tour_product')->where('id', $tour_id)->update([
+                        're_verify' => 2,
+                        'status' => 0
+                    ]);
+                }
+            }
+        }
+
+        echo true;
+    }
 }
