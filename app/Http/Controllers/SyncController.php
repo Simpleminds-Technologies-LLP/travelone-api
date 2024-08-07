@@ -218,14 +218,22 @@ class SyncController extends Controller
         // Define array
         $return = [];
 
+        // Get parameters
+        $viator_country_id = (!empty($request->viator_country_id)) ? $request->viator_country_id : '';
+        $to_destination_id = (!empty($request->to_destination_id)) ? $request->to_destination_id : '';
+        $to_country_id     = (!empty($request->to_country_id)) ? $request->to_country_id : '';
+        $start             = (!empty($request->start)) ? $request->start : '';
+        $end               = (!empty($request->end)) ? $request->end : '';
+        $limit             = (!empty($request->limit)) ? $request->limit : 40;
+
         // Get requested data
-        $viator_country_id  = $request->viator_country_id;
-        $to_destination_id  = $request->to_destination_id;
-        $to_country_id      = $request->to_country_id;
-        $req_start_position = $request->start;
-        $req_end_position   = $request->end;
-        $default_limit      = $request->limit ?? 40;
-        $waiting_time       = $request->waiting_time ?? 10; // In seconds
+        $viator_country_id  = (!empty($_GET['viator_country_id'])) ? $_GET['viator_country_id'] : $viator_country_id;
+        $to_destination_id  = (!empty($_GET['to_destination_id'])) ? $_GET['to_destination_id'] : $to_destination_id;
+        $to_country_id      = (!empty($_GET['to_country_id'])) ? $_GET['to_country_id'] : $to_country_id;
+        $req_start_position = (!empty($_GET['start'])) ? $_GET['start'] : $start;
+        $req_end_position   = (!empty($_GET['end'])) ? $_GET['end'] : $end;
+        $default_limit      = (!empty($_GET['limit'])) ? $_GET['limit'] : $limit;
+        $waiting_time       = (!empty($request->waiting_time)) ? $request->waiting_time : 5;
 
         // Init loop
         for ($position = $req_start_position; $position <= $req_end_position; $position+=$default_limit) { 
