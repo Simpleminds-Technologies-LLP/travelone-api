@@ -71,8 +71,11 @@ Route::get('/local/deactive_tour', 'App\Http\Controllers\SyncController@deactive
 // Spain					=> 67 => 35 => 202 => Done
 // Italy					=> 57 => 35 => 106 => Working
 // Thailand					=> 20 => 42 => 216 => Pending
+// Maldives					=> 
+// Costa Rica 				=> 
+// Vietnam 					=> 
+// Taiwan 					=> 
+// United Arab Emirates		=> 743 => 
 // Turkey					=> 70 => 35 => 222 => Pending
-// United Arab Emirates 	=> 743 => 
-// Germany 					=> 52 => 
-// United Kingdom 			=> 60457 => 
-// United States of America	=>
+// United States of America
+// United Kingdom			=> 60457 => 
