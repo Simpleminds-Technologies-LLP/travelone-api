@@ -69,8 +69,8 @@ Route::get('/local/deactive_tour', 'App\Http\Controllers\SyncController@deactive
 // France					=> 51 => 35 => 72 => Done
 // Greece 					=> 53 => 35 => 83 => Done
 // Spain					=> 67 => 35 => 202 => Done
-// Italy					=> 57 => 35 => 106 => Working
-// Thailand					=> 20 => 42 => 216 => Pending
+// Italy					=> 57 => 35 => 106 => Working // 10000 done (pagination error)
+// Thailand					=> 20 => 42 => 216 => Working
 // Maldives					=> 
 // Costa Rica 				=> 
 // Vietnam 					=> 
