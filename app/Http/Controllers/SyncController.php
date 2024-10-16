@@ -1125,6 +1125,67 @@ class SyncController extends Controller
         echo true;
     }
 
+    // Sync local tours price
+    public function sync_local_tours_price(Request $request)
+    {
+        // Check if activity exists
+        $viator_product = DB::table('to_viator')->select('*')->where('status', 1)->where('float_price', 0)->orderBy('id', 'ASC')->limit(50)->get();
+
+        // Check is valid activity
+        if(!empty($viator_product)) {
+            // Fetch tours
+            foreach ($viator_product as $product) {
+                // get product data
+                $product_code = $product->product_code;
+
+                // Get created tour data
+                $to_tour_data = DB::table('to_tour_viator_extra_data')->select('tour_id')->where('product_code', $product_code)->get()->toArray();
+
+                // Check if tour is created
+                if(is_array($to_tour_data) && count($to_tour_data)) {
+                    // Assign updated tour ID
+                    $is_common_tour_id = $to_tour_data[0]->tour_id;
+
+                    // fetch single product
+                    $single_product = DB::table('to_tour_product')->select('*')->where('id', $is_common_tour_id)->first();
+
+                    // Check json is valid
+                    if(!empty($single_product->extra_json_data)) {
+                        // Get viator json data
+                        $viator_json = json_decode($single_product->extra_json_data, true);
+
+                        // Get price
+                        $selling_price = (!empty($viator_json['pricingSummary']['summary']['fromPriceBeforeDiscount'])) ? $viator_json['pricingSummary']['summary']['fromPriceBeforeDiscount'] : 0;
+                        $discount_price = (!empty($viator_json['pricingSummary']['summary']['fromPrice'])) ? $viator_json['pricingSummary']['summary']['fromPrice'] : 0;
+
+                        // Update query
+                        DB::table('to_tour_viator_extra_data')->where('tour_id', $is_common_tour_id)->update([
+                            'selling_price' => $selling_price,
+                            'discount_price' => $discount_price,
+                        ]);
+
+                        // Update sync status
+                        DB::table('to_viator')->where('id', $product->id)->update([
+                            'float_price' => 1,
+                        ]);
+                    } else {
+                        // Update sync status
+                        DB::table('to_viator')->where('id', $product->id)->update([
+                            'float_price' => 3,
+                        ]);
+                    }
+                } else {
+                    // Update sync status
+                    DB::table('to_viator')->where('id', $product->id)->update([
+                        'float_price' => 2,
+                    ]);
+                }
+            }
+        }
+
+        echo true;
+    }
+
     // Deactive tour missing extra data
     public function deactive_tour_missing_extra_data(Request $request)
     {

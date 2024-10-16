@@ -47,6 +47,7 @@ Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptControl
 // Local sync
 Route::get('/local/sync/themes', 'App\Http\Controllers\SyncController@sync_local_theme_from_tags');
 Route::get('/local/sync/total_reviews', 'App\Http\Controllers\SyncController@sync_local_tours_reviews');
+Route::get('/local/sync/tour_price', 'App\Http\Controllers\SyncController@sync_local_tours_price');
 
 // Verify sync process
 Route::get('/local/verify_sync', 'App\Http\Controllers\SyncController@verify_sync_process');
@@ -70,12 +71,12 @@ Route::get('/local/deactive_tour', 'App\Http\Controllers\SyncController@deactive
 // Greece 					=> 53 => 35 => 83 => Done
 // Spain					=> 67 => 35 => 202 => Done
 // Italy					=> 57 => 35 => 106 => Working // 10000 done (pagination error)
-// Thailand					=> 20 => 42 => 216 => Working
-// Maldives					=> 
-// Costa Rica 				=> 
-// Vietnam 					=> 
-// Taiwan 					=> 
-// United Arab Emirates		=> 743 => 
-// Turkey					=> 70 => 35 => 222 => Pending
-// United States of America
-// United Kingdom			=> 60457 => 
+// Thailand					=> 20 => 42 => 216 => Done
+// Maldives					=> 4673 => 42 => 132 => Done
+// Costa Rica 				=> 747 => 40 => 51 => Done
+// Vietnam 					=> 21 => 42 => 237 => Working // 10000 done (pagination error)
+// Taiwan 					=> 778 => 42 => 213 => Done
+// United Arab Emirates		=> 743 => 44 => 228 => Done
+// Turkey					=> 70 => 35 => 222 => Done
+// United States of America => Working
+// United Kingdom			=> 60457 => 35 => 229 => Working
