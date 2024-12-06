@@ -40,6 +40,7 @@ Route::get('/viator/sync/availability_schedules', 'App\Http\Controllers\SyncCont
 Route::get('/viator/sync/categories_tag', 'App\Http\Controllers\SyncController@sync_viator_categories_tag');
 Route::get('/viator/sync/reviews', 'App\Http\Controllers\SyncController@sync_viator_reviews');
 Route::get('/viator/sync/attraction', 'App\Http\Controllers\SyncController@sync_viator_attraction');
+Route::get('/viator/sync/modified_since', 'App\Http\Controllers\SyncController@viator_tour_modified_since');
 
 // Sync using chatgpt
 Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptController@chatgpt_sync_tour_seometa');
@@ -48,6 +49,7 @@ Route::get('/chatgpt/sync/seometa/{token}', 'App\Http\Controllers\ChatgptControl
 Route::get('/local/sync/themes', 'App\Http\Controllers\SyncController@sync_local_theme_from_tags');
 Route::get('/local/sync/total_reviews', 'App\Http\Controllers\SyncController@sync_local_tours_reviews');
 Route::get('/local/sync/tour_price', 'App\Http\Controllers\SyncController@sync_local_tours_price');
+Route::get('/local/sync/need_modified_tour', 'App\Http\Controllers\SyncController@sync_local_need_modified_tour');
 
 // Verify sync process
 Route::get('/local/verify_sync', 'App\Http\Controllers\SyncController@verify_sync_process');
@@ -58,25 +60,28 @@ Route::get('/local/deactive_tour', 'App\Http\Controllers\SyncController@deactive
 // VIATOR COUNTRY SYNCED DATA
 // Japan					=> 16 => Done
 // Indonesia				=> 15 => Done
-// Antigua					=> 27 => Done
-// St Lucia					=> 38 => Done
-// Cuba						=> Not in Viator
-// The Bahamas				=> 29 => Done
-// Dominican Republic		=> 32 => 40 => 59 => Done
-// Puerto Rico				=> 36 => 40 => 177 => Done
-// Jamaica					=> 34 => 40 => 108 => Done
-// Mexico					=> 76 => 41 => 140 => Done
-// Portugal					=> 63 => 35 => 176 => Done
-// France					=> 51 => 35 => 72 => Done
-// Greece 					=> 53 => 35 => 83 => Done
-// Spain					=> 67 => 35 => 202 => Done
-// Italy					=> 57 => 35 => 106 => Working // 10000 done (pagination error)
-// Thailand					=> 20 => 42 => 216 => Done
-// Maldives					=> 4673 => 42 => 132 => Done
-// Costa Rica 				=> 747 => 40 => 51 => Done
-// Vietnam 					=> 21 => 42 => 237 => Working // 10000 done (pagination error)
-// Taiwan 					=> 778 => 42 => 213 => Done
-// United Arab Emirates		=> 743 => 44 => 228 => Done
-// Turkey					=> 70 => 35 => 222 => Done
-// United States of America => Working
-// United Kingdom			=> 60457 => 35 => 229 => Working
+// Antigua					=> 27 => 
+// St Lucia					=> 38 => 
+// Cuba						=> 
+// The Bahamas				=> 29 => 
+// Dominican Republic		=> 32 => 40 => 59 => 
+// Puerto Rico				=> 36 => 40 => 177 => 
+// Jamaica					=> 34 => 40 => 108 => 
+// Mexico					=> 76 => 41 => 140 => 
+// Portugal					=> 63 => 35 => 176 => 
+// France					=> 51 => 35 => 72 => 
+// Greece 					=> 53 => 35 => 83 => 
+// Spain					=> 67 => 35 => 202 => 
+// Italy					=> 57 => 35 => 106
+// Thailand					=> 20 => 42 => 216 => 
+// Maldives					=> 4673 => 42 => 132 => 
+// Costa Rica 				=> 747 => 40 => 51 => 
+// Vietnam 					=> 21 => 42 => 237 =>
+// Taiwan 					=> 778 => 42 => 213 => 
+// United Arab Emirates		=> 743 => 44 => 228 => 
+// Turkey					=> 70 => 35 => 222 => 
+// United States of America => 
+// United Kingdom			=> 60457 => 35 => 229 =>
+
+
+// */30 * * * * wget -q -O /dev/null "http://sync.travelone.io/api/local/sync/need_modified_tour"
