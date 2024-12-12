@@ -618,6 +618,7 @@ class ViatorController extends Controller
                             DB::table('to_tour_viator_attraction')->insert([
                                 'tour_id'         => $is_created_tour,
                                 'attraction_name' => $attraction_name,
+                                'attraction_slug' => ViatorHelper::str_slug($attraction_name),
                             ]);
                         }
                     }
@@ -764,6 +765,7 @@ class ViatorController extends Controller
                         DB::table('to_tour_viator_attraction')->insert([
                             'tour_id'         => $exist_tour_id,
                             'attraction_name' => $attraction_name,
+                            'attraction_slug' => ViatorHelper::str_slug($attraction_name),
                         ]);
                     }
                 }

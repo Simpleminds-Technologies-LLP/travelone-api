@@ -57,17 +57,29 @@ Route::get('/local/verify_sync', 'App\Http\Controllers\SyncController@verify_syn
 // Deactive product if extra data is missing
 Route::get('/local/deactive_tour', 'App\Http\Controllers\SyncController@deactive_tour_missing_extra_data');
 
+// Search keyword
+Route::get('/search/destination', 'App\Http\Controllers\SearchController@destination_table');
+Route::get('/search/country', 'App\Http\Controllers\SearchController@country_table');
+Route::get('/search/city', 'App\Http\Controllers\SearchController@city_table');
+Route::get('/search/theme', 'App\Http\Controllers\SearchController@theme_table');
+Route::get('/search/attraction', 'App\Http\Controllers\SearchController@attraction_table');
+Route::get('/search/tour', 'App\Http\Controllers\SearchController@tour_table');
+Route::get('/search/remove_duplicate', 'App\Http\Controllers\SearchController@remove_duplicate_search');
+
+// For temp
+Route::get('/temp/update_attraction_slug', 'App\Http\Controllers\SearchController@update_attraction_slug');
+
 // VIATOR COUNTRY SYNCED DATA
 // Japan					=> 16 => Done
 // Indonesia				=> 15 => Done
-// Antigua					=> 27 => 
-// St Lucia					=> 38 => 
+// Antigua					=> 27 => Done
+// St Lucia					=> 38 => Done
 // Cuba						=> 
-// The Bahamas				=> 29 => 
-// Dominican Republic		=> 32 => 40 => 59 => 
-// Puerto Rico				=> 36 => 40 => 177 => 
-// Jamaica					=> 34 => 40 => 108 => 
-// Mexico					=> 76 => 41 => 140 => 
+// The Bahamas				=> 29 => Done
+// Dominican Republic		=> 32 => 40 => 59 => Done
+// Puerto Rico				=> 36 => 40 => 177 => Done
+// Jamaica					=> 34 => 40 => 108 => Done
+// Mexico					=> 76 => 41 => 140 => Working On
 // Portugal					=> 63 => 35 => 176 => 
 // France					=> 51 => 35 => 72 => 
 // Greece 					=> 53 => 35 => 83 => 
@@ -84,4 +96,4 @@ Route::get('/local/deactive_tour', 'App\Http\Controllers\SyncController@deactive
 // United Kingdom			=> 60457 => 35 => 229 =>
 
 
-// */30 * * * * wget -q -O /dev/null "http://sync.travelone.io/api/local/sync/need_modified_tour"
+// 0 * * * * wget -q -O /dev/null "http://sync.travelone.io/api/search/tour"

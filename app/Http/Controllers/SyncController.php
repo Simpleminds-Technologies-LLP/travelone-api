@@ -294,15 +294,15 @@ class SyncController extends Controller
     public function sync_viator_single_product(Request $request)
     {
         // Get destination data
-        $json_destination_list = file_get_contents('https://api.travelone.io/destination.json');
+        $json_destination_list = file_get_contents('http://sync.travelone.io/destination.json');
         $json_destination_list = json_decode($json_destination_list, true);
 
         // Get booking questions data
-        $json_booking_questions = file_get_contents('https://api.travelone.io/booking_questions.json');
+        $json_booking_questions = file_get_contents('http://sync.travelone.io/booking_questions.json');
         $json_booking_questions = json_decode($json_booking_questions, true);
 
         // Get tags data
-        $json_tags = file_get_contents('https://api.travelone.io/tags.json');
+        $json_tags = file_get_contents('http://sync.travelone.io/tags.json');
         $json_tags = json_decode($json_tags, true);
 
         // Check if activity exists
@@ -716,7 +716,7 @@ class SyncController extends Controller
         $return_arr = [];
 
         // Get tags data
-        $json_tags = file_get_contents('https://api.travelone.io/tags.json');
+        $json_tags = file_get_contents('http://sync.travelone.io/tags.json');
         $json_tags = json_decode($json_tags, true);
 
         // Check if activity exists
@@ -958,6 +958,7 @@ class SyncController extends Controller
                             DB::table('to_tour_viator_attraction')->insert([
                                 'tour_id'         => $is_common_tour_id,
                                 'attraction_name' => $attraction_name,
+                                'attraction_slug' => ViatorHelper::str_slug($attraction_name),
                             ]);
                         }
                     }
