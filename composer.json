@@ -28,7 +28,8 @@
         },
         "files": [
             "app/ViatorHelper.php",
-            "app/GptHelper.php"
+            "app/GptHelper.php",
+            "app/DuffelHelper.php"
         ]
     },
     "autoload-dev": {

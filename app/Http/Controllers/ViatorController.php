@@ -593,7 +593,7 @@ class ViatorController extends Controller
                         foreach ($product_tags as $tag) {
                             DB::table('to_tour_viator_tag')->insert([
                                 'tour_id'  => $is_created_tour,
-                                'tag_name' => $tag['tag_name'],
+                                'tag_name' => trim($tag['tag_name'])
                             ]);
                         }
                     }
@@ -740,7 +740,7 @@ class ViatorController extends Controller
                     foreach ($product_tags as $tag) {
                         DB::table('to_tour_viator_tag')->insert([
                             'tour_id'  => $exist_tour_id,
-                            'tag_name' => $tag['tag_name'],
+                            'tag_name' => trim($tag['tag_name'])
                         ]);
                     }
                 }

@@ -2,12 +2,11 @@
 
 namespace App\Helpers;
 use DB;
+use DateTime;
 
 class ViatorHelper
 {
-    /**
-     * convert string to slug
-     */
+    // Fonvert string to slug
     public static function str_slug($string)
     {
         // Convert to lowercase
@@ -30,9 +29,7 @@ class ViatorHelper
         return $string;
     }
 
-    /**
-     * generate between two dates
-     */
+    // Generate between two dates
     public static function generate_dates($start_date, $end_date)
     {
         // define array
@@ -56,9 +53,103 @@ class ViatorHelper
         return $dates;
     }
 
-    /**
-     * is emoji exist in string
-     */
+    // Filter season dates
+    public static function filter_season_dates($season_dates)
+    {
+        // Define dates
+        $lowestStartDate = date('Y-m-d');
+        $highestEndDate = date('Y-m-d', strtotime('+1 year', time()));
+
+        // Check start dates
+        if(!empty($season_dates['start'])) {
+            // Filter unique dates
+            $season_dates['start'] = array_unique($season_dates['start']);
+
+            // Find the lowest start date
+            $lowestStartDate = min($season_dates['start']);
+            $lowestStartDate = (time() < strtotime($lowestStartDate)) ? $lowestStartDate : date('Y-m-d');
+        }
+
+        // Check end dates
+        if(!empty($season_dates['end'])) {
+            // Filter unique dates
+            $season_dates['end'] = array_unique($season_dates['end']);
+
+            // Find the highest end date
+            $highestEndDate = max($season_dates['end']);
+            $highestEndDate = (date('Y-m-d', strtotime('+1 year', time())) < strtotime($highestEndDate)) ? $highestEndDate : date('Y-m-d', strtotime('+1 year', time()));
+        }
+
+        // Return response
+        return [
+            'start' => $lowestStartDate,
+            'end' => $highestEndDate,
+        ];
+    }
+
+    // Get unavailable dates
+    public static function getUnavailableDates($dateRanges, $blockedDates, $allowedWeekDays)
+    {
+        // Initialize an array for unavailable dates
+        $unavailableDates = [];
+
+        // Get today's date and calculate the "one year later" date
+        $today = new DateTime('today');
+        $oneYearLater = (clone $today)->modify('+1 year');
+
+        // Get the start and end dates from the range
+        $startDate = new DateTime($dateRanges['start']);
+        $endDate = new DateTime($dateRanges['end']);
+
+        // Ensure weekdays are in uppercase for consistent comparison
+        $allowedWeekDays = array_map('strtoupper', $allowedWeekDays);
+
+        // Clone process date
+        $processDate = new DateTime($dateRanges['start']);
+
+        // Iterate over each date in the range
+        while ($processDate <= $endDate) {
+            // Format date
+            $formattedDate = $processDate->format('Y-m-d');
+            $currentWeekDay = strtoupper($processDate->format('l'));
+
+            // Check if the current date is within one year from today
+            if ($processDate > $oneYearLater) {
+                break;
+            }
+
+            // Check if the date is NOT allowed based on weekdays or is explicitly blocked
+            if (!in_array($currentWeekDay, $allowedWeekDays) || in_array($formattedDate, $blockedDates)) {
+                $unavailableDates[] = $formattedDate;
+            }
+
+            // Move to the next date
+            $processDate->modify('+1 day');
+        }
+
+        // Check if calendar end date is within the range
+        if ($startDate > $today) {
+            $today->modify('+1 day');
+            while ($today < $startDate) {
+                $unavailableDates[] = $today->format('Y-m-d');
+                $today->modify('+1 day');
+            }
+        }
+
+        // Check if calendar end date is within the range
+        if ($endDate <= $oneYearLater) {
+            $endDate->modify('+1 day');
+            while ($endDate <= $oneYearLater) {
+                $unavailableDates[] = $endDate->format('Y-m-d');
+                $endDate->modify('+1 day');
+            }
+        }
+
+        // Return the filtered unavailable dates
+        return $unavailableDates;
+    }
+
+    // Is emoji exist in string
     public static function is_emoji_exist($string)
     {
         $encstr   = rawurlencode($string);
@@ -66,23 +157,21 @@ class ViatorHelper
         return $is_emoji;
     }
 
-    /**
-     * fetch product list
-     */
+    // Fetch product list
     public static function fetch_product_list($filter_data)
     {
         // fetch product search
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/products/search',
+            CURLOPT_URL => env('VIATOR_API_ENDPOINT') . '/partner/products/search',
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING       => '',
-            CURLOPT_MAXREDIRS      => 10,
-            CURLOPT_TIMEOUT        => 0,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
             CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST  => 'POST',
-            CURLOPT_POSTFIELDS     => json_encode($filter_data),
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => json_encode($filter_data),
             CURLOPT_HTTPHEADER => array(
                 'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                 'Accept-Language: en-US',
@@ -98,9 +187,7 @@ class ViatorHelper
         return json_decode($product_response, true);
     }
 
-    /**
-     * fetch single product
-     */
+    // Fetch single product
     public static function fetch_single_product($productCode)
     {
         $curl = curl_init();
@@ -127,9 +214,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch destination list
-     */
+    // Fetch destination list
     public static function fetch_destination_list()
     {
         $curl = curl_init();
@@ -156,9 +241,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch tags list
-     */
+    // Fetch tags list
     public static function fetch_tags_list()
     {
         $curl = curl_init();
@@ -185,9 +268,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch booking questions
-     */
+    // Fetch booking questions
     public static function fetch_product_booking_questions()
     {
         $curl = curl_init();
@@ -214,9 +295,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch product tags
-     */
+    // Fetch product tags
     public static function fetch_product_tags()
     {
         $curl = curl_init();
@@ -243,9 +322,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * availability check
-     */
+    // Fvailability check
     public static function availability_check($filter_data)
     {
         $curl = curl_init();
@@ -273,9 +350,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * bookings cart hold
-     */
+    // Fookings cart hold
     public static function bookings_cart_hold($body_request)
     {
         $curl = curl_init();
@@ -304,9 +379,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch single location data
-     */
+    // Fetch single location data
     public static function viator_single_location_data($location_data)
     {
         $curl = curl_init();
@@ -335,9 +408,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch single product reviews
-     */
+    // Fetch single product reviews
     public static function viator_single_product_reviews($product_code)
     {
         $curl = curl_init();
@@ -373,14 +444,12 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch google map location data
-     */
+    // Fetch google map location data
     public static function find_google_map_location_data($place_id)
     {
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL            => 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' . $place_id . '&key=AIzaSyA8BejM71PdF4k_7uSk585MW0MDtHHCW1c',
+            CURLOPT_URL            => 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' . $place_id . '&key=AIzaSyCzxiUknqymFyxooRhNyQbzt2fa_lKXJJg',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING       => '',
             CURLOPT_MAXREDIRS      => 10,
@@ -394,9 +463,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch single product reviews
-     */
+    // Fetch single product reviews
     public static function fetch_single_product_reviews($product_code, $limit = 500)
     {
         $curl = curl_init();
@@ -433,9 +500,7 @@ class ViatorHelper
         return json_decode($response, true);
     }
 
-    /**
-     * fetch last modified since
-     */
+    // Fetch last modified since
     public static function last_modified_since_product($body_payload)
     {
         $curl = curl_init();
@@ -463,9 +528,7 @@ class ViatorHelper
         return $response;
     }
 
-    /**
-     * fetch last modified since availability
-     */
+    // Fetch last modified since availability
     public static function last_modified_since_availability($body_payload)
     {
         $curl = curl_init();
@@ -493,9 +556,7 @@ class ViatorHelper
         return $response;
     }
 
-    /**
-     * fetch single product availability schedule
-     */
+    // Fetch single product availability schedule
     public static function single_product_availability_schedule($product_code)
     {
         $curl = curl_init();
@@ -523,9 +584,7 @@ class ViatorHelper
         return $response;
     }
 
-    /**
-     * fetch viator destinations
-     */
+    // Fetch viator destinations
     public static function viator_destinations()
     {
         $curl = curl_init();
@@ -553,9 +612,7 @@ class ViatorHelper
         return $response;
     }
 
-    /**
-     * find google place id from ref number
-     */
+    // Find google place id from ref number
     public static function find_google_place_id_from_ref_number($location_ref, $is_single = false)
     {
         $curl = curl_init();
@@ -589,16 +646,55 @@ class ViatorHelper
         }
     }
 
-    /**
-     * find destination details by ID
-     */
+    // Batch find google place ids
+    public static function batch_find_google_place_ids($locations)
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => env('VIATOR_API_ENDPOINT') . '/partner/locations/bulk',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => json_encode([
+                "locations" => $locations
+            ]),
+            CURLOPT_HTTPHEADER => array(
+                'exp-api-key: ' . env('VIATOR_API_TOKEN'),
+                'Accept-Language: en',
+                'Content-Type: application/json',
+                'Accept: application/json;version=2.0',
+                'RateLimit-Limit: ',
+                'RateLimit-Remaining: ',
+                'RateLimit-Reset: ',
+            )
+        ));
+        $response = curl_exec($curl);
+        curl_close($curl);
+        $response = json_decode($response, true);
+
+        // Define array
+        $transformedData = [];
+
+        // Fetch locations
+        foreach ($response['locations'] as $item) {
+            $transformedData[$item['reference']] = $item;
+        }
+
+        // Return response
+        return $transformedData;
+    }
+
+    // Find destination details by ID
     public static function find_destination_details($destination_list, $destination_ids = [])
     {
-        // Fetch destination list
-        // $destination_list = ViatorHelper::fetch_destination_list();
+        // Define array
+        $mapped_destinations = [];
 
         // Map destinations by ID for quick lookup
-        $mapped_destinations = [];
         foreach ($destination_list['data'] as $destination) {
             $mapped_destinations[$destination['destinationId']] = $destination;
         }
@@ -617,9 +713,7 @@ class ViatorHelper
         return $destination_ids;
     }
 
-    /**
-     * filter activity duration
-     */
+    // Filter activity duration
     public static function filter_activity_duration($duration = [])
     {
         // Check duration types in priority order
@@ -636,9 +730,7 @@ class ViatorHelper
         return 0;
     }
 
-    /**
-     * filter product images
-     */
+    // Filter product images
     public static function filter_product_images($product_images = [])
     {
         $is_related_images = [];
@@ -674,9 +766,7 @@ class ViatorHelper
         ];
     }
 
-    /**
-     * filter product inclusions
-     */
+    // Filter product inclusions
     public static function filter_product_inclusions($inclusions = [])
     {
         // Use array_column to extract 'otherDescription' values
@@ -687,9 +777,7 @@ class ViatorHelper
         }
     }
 
-    /**
-     * filter product exclusions
-     */
+    // Filter product exclusions
     public static function filter_product_exclusions($exclusions = [])
     {
         // Use array_column to extract 'otherDescription' values
@@ -700,9 +788,7 @@ class ViatorHelper
         }
     }
 
-    /**
-     * filter product additional info
-     */
+    // Filter product additional info
     public static function filter_product_additional_info($additional_info = [])
     {
         // use array_filter to remove elements with empty descriptions
@@ -715,9 +801,7 @@ class ViatorHelper
         }
     }
 
-    /**
-     * filter booking questions
-     */
+    // Filter booking questions
     public static function filter_booking_questions($original_list, $find_questions = [])
     {
         $return_arr = [];
@@ -740,9 +824,7 @@ class ViatorHelper
         return $return_arr;
     }
 
-    /**
-     * filter product tags
-     */
+    // Filter product tags
     public static function filter_product_tags($original_list, $find_tags = [])
     {
         // check array length
@@ -758,46 +840,135 @@ class ViatorHelper
         // use array_map to transform the filtered tags into the desired format
         return array_map(function ($row_tag) {
             return [
-                'tag_id'        => $row_tag['tagId'],
+                'tag_id' => $row_tag['tagId'],
                 'parent_tag_id' => (!empty($row_tag['parentTagIds'])) ? $row_tag['parentTagIds'] : [],
-                'tag_name'      => $row_tag['allNamesByLocale']['en'],
-                'tag_slug'      => ViatorHelper::str_slug($row_tag['allNamesByLocale']['en']),
+                'tag_name' => $row_tag['allNamesByLocale']['en'],
+                'tag_slug' => ViatorHelper::str_slug($row_tag['allNamesByLocale']['en']),
             ];
         }, $filtered_tags);
     }
 
-    /**
-     * filter product logistics
-     */
+    // Filter product logistics
     public static function filter_product_logistics($logistics = [])
     {
-        foreach (['start', 'end'] as $locationType) {
-            if(!empty($logistics[$locationType]) && count($logistics[$locationType])) {
-                foreach ($logistics[$locationType] as $row_key => $row) {
-                    $location_ref = $row['location']['ref'];
-                    $google_place_id = ViatorHelper::find_google_place_id_from_ref_number($location_ref, true);
+        // Define flag
+        $start_point = '';
+        $end_point = '';
 
-                    if (!empty($google_place_id) && $google_place_id['provider'] == 'GOOGLE') {
-                        $googleLocation = self::find_google_map_location_data($google_place_id['providerReference']);
+        // Fetch start and end location
+        foreach (['start', 'end'] as $locationType) {
+            // Fetch location type
+            if(!empty($logistics[$locationType]) && count($logistics[$locationType])) {
+                // Fetch start and end points
+                foreach ($logistics[$locationType] as $row_key => $row) {
+                    // Get row data
+                    $location_ref = $row['location']['ref'];
+                    $description = (!empty($row['description'])) ? $row['description'] : '';
+
+                    // Check if same point
+                    if($locationType == 'start' && $row_key == 0) {
+                        $start_point = $location_ref;
+                    } else if($locationType == 'end' && $row_key == 0) {
+                        $end_point = $location_ref;
+                    }
+
+                    // Get location data
+                    $place_data = ViatorHelper::find_google_place_id_from_ref_number($location_ref, true);
+
+                    // Check if provider is Google
+                    if (!empty($place_data) && $place_data['provider'] == 'GOOGLE') {
+                        // Get google palce data
+                        $googleLocation = self::find_google_map_location_data($place_data['providerReference']);
+
+                        // Unset key from array
                         unset($logistics[$locationType][$row_key]['location']);
 
+                        // Check result is not empty
                         if(!empty($googleLocation['result'])) {
+                            // Push location in array
                             $logistics[$locationType][$row_key] = [
-                                'ref'     => $location_ref,
-                                'name'    => $googleLocation['result']['name'],
+                                'ref' => $location_ref,
+                                'name' => $googleLocation['result']['name'],
                                 'address' => $googleLocation['result']['formatted_address'],
-                                'url'     => $googleLocation['result']['url'],
+                                'url' => $googleLocation['result']['url'],
+                                'description' => $description ?? '',
                             ];
                         }
+                    } else if (!empty($place_data) && $place_data['provider'] == 'TRIPADVISOR') {
+                        // Push location in array
+                        $logistics[$locationType][$row_key] = [
+                            'ref' => $place_data['reference'] ?? '',
+                            'name' => $place_data['name'] ?? '',
+                            'address' => (!empty($place_data['address'])) ? implode(', ', array_filter($place_data['address'])) : '',
+                            'url' => null,
+                            'center' => $place_data['center'] ?? [],
+                            'description' => $description ?? '',
+                        ];
                     }
                 }
             }
+        }
+
+        // Update flag
+        $logistics['is_meeting_point'] = ($start_point && $end_point) ?? false;
+        $logistics['is_pickup_point'] = false;
+        $logistics['is_start_end_same_point'] = ($start_point === $end_point) ?? false;
+
+        // Fetch if different location
+        if (!empty($logistics['redemption']['locations'])) {
+            // define array
+            $different_location = [];
+
+            // Fetch redemption locations
+            foreach ($logistics['redemption']['locations'] as $row) {
+                // Fetch place data
+                $place_data = ViatorHelper::find_google_place_id_from_ref_number($row['ref'], true);
+
+                // Check if provider is Google
+                if (!empty($place_data) && $place_data['provider'] == 'GOOGLE') {
+                    // Fetch google place data
+                    $google_place_data = self::find_google_map_location_data($place_data['providerReference']);
+
+                    // Check result is not empty
+                    if(!empty($google_place_data['result'])) {
+                        // Push location in array
+                        $different_location[] = [
+                            'ref' => $place_data['reference'],
+                            'name' => $google_place_data['result']['name'],
+                            'address' => $google_place_data['result']['formatted_address'],
+                            'url' => $google_place_data['result']['url'],
+                        ];
+                    }
+                } else if (!empty($place_data) && $place_data['provider'] == 'TRIPADVISOR') {
+                    // Push location in array
+                    $different_location[] = [
+                        'ref' => $place_data['reference'] ?? '',
+                        'name' => $place_data['name'] ?? '',
+                        'address' => (!empty($place_data['address'])) ? implode(', ', array_filter($place_data['address'])) : '',
+                        'url' => null,
+                        'center' => $place_data['center'] ?? [],
+                    ];
+                }
+            }
+
+            // Append location
+            $logistics['redemption']['locations'] = $different_location;
         }
 
         // fetch pickup locations
         if (!empty($logistics['travelerPickup']['locations']) && count($logistics['travelerPickup']['locations'])) {
             // define array
             $viator_pickup_location = [];
+
+            // Update flag
+            $logistics['is_pickup_point'] = true;
+
+            // fetch hotel location ids
+            $others_location_ids = array_map(function ($location) {
+                if (!empty($location['location']['ref']) && $location['pickupType'] === 'OTHER') {
+                    return $location['location']['ref'];
+                }
+            }, $logistics['travelerPickup']['locations']);
 
             // fetch hotel location ids
             $hotel_location_ids = array_map(function ($location) {
@@ -821,9 +992,9 @@ class ViatorHelper
             }, $logistics['travelerPickup']['locations']);
 
             // chunk array
-            $chunk_hotel_location   = array_chunk($hotel_location_ids, 500);
-            $chunk_airport_location = array_chunk($airport_location_ids, 500);
-            $chunk_port_location    = array_chunk($port_location_ids, 500);
+            $chunk_hotel_location = array_chunk(array_filter($hotel_location_ids), 500);
+            $chunk_airport_location = array_chunk(array_filter($airport_location_ids), 500);
+            $chunk_port_location = array_chunk(array_filter($port_location_ids), 500);
 
             // Fetch hotel locations
             if(count($chunk_hotel_location)) {
@@ -834,18 +1005,17 @@ class ViatorHelper
                     // fetch chunk locations
                     if(count($viator_place_data)) {
                         foreach ($viator_place_data as $row) {
-                            $viator_pickup_location['hotel'][] = [
+                            $viator_pickup_location[] = [
+                                'location_type' => 'hotel',
                                 'provider' => $row['provider'],
-                                'ref'      => $row['reference'] ?? null,
-                                'name'     => $row['name'] ?? null,
-                                'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                                'ref' => $row['reference'] ?? null,
+                                'name' => $row['name'] ?? null,
+                                'address' => (!empty($row['address'])) ? implode(', ', array_filter($row['address'])) : '',
                             ];
                         }
                     }
                 }
             }
-
-            sleep(4);
 
             // Fetch airport locations
             if(count($chunk_airport_location)) {
@@ -856,18 +1026,17 @@ class ViatorHelper
                     // fetch chunk locations
                     if(count($viator_place_data)) {
                         foreach ($viator_place_data as $row) {
-                            $viator_pickup_location['airport'][] = [
+                            $viator_pickup_location[] = [
+                                'location_type' => 'airport',
                                 'provider' => $row['provider'],
-                                'ref'      => $row['reference'] ?? null,
-                                'name'     => $row['name'] ?? null,
-                                'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                                'ref' => $row['reference'] ?? null,
+                                'name' => $row['name'] ?? null,
+                                'address' => (!empty($row['address'])) ? implode(', ', array_filter($row['address'])) : '',
                             ];
                         }
                     }
                 }
             }
-
-            sleep(4);
 
             // Fetch port locations
             if(count($chunk_port_location)) {
@@ -878,56 +1047,164 @@ class ViatorHelper
                     // fetch chunk locations
                     if(count($viator_place_data)) {
                         foreach ($viator_place_data as $row) {
-                            $viator_pickup_location['port'][] = [
+                            $viator_pickup_location[] = [
+                                'location_type' => 'port',
                                 'provider' => $row['provider'],
-                                'ref'      => $row['reference'] ?? null,
-                                'name'     => $row['name'] ?? null,
-                                'address'  => (!empty($row['address'])) ? implode(', ', $row['address']) : '',
+                                'ref' => $row['reference'] ?? null,
+                                'name' => $row['name'] ?? null,
+                                'address' => (!empty($row['address'])) ? implode(', ', array_filter($row['address'])) : '',
                             ];
                         }
                     }
                 }
             }
 
+            // Sort by name
+            usort($viator_pickup_location, function($a, $b) {
+                return strcmp($a['name'], $b['name']);
+            });
+
             // update values in array
             $logistics['travelerPickup']['locations'] = $viator_pickup_location;
         }
 
+        // Return response
         return $logistics;
     }
 
-    /**
-     * filter product itinerary
-     */
-    public static function filter_product_itinerary($itineraryArr = [])
+    // Filter product itinerary
+    public static function filter_product_itinerary($itinerary = [])
     {
-        if (!empty($itineraryArr['itineraryItems'])) {
-            foreach ($itineraryArr['itineraryItems'] as $itineraryKey => $itineraryRow) {
-                if (!empty($itineraryRow['pointOfInterestLocation']['location']['ref'])) {
-                    $locationList = ViatorHelper::viator_single_location_data($itineraryRow['pointOfInterestLocation']['location']['ref']);
-                    $locationData = (!empty($locationList['locations'])) ? $locationList['locations'][0] : [];
+        // Check and process activity location
+        if (!empty($itinerary['activityInfo']['location'])) {
+            $itinerary['activityInfo']['location'] = self::process_single_location($itinerary['activityInfo']['location']);
+        }
 
-                    if (!empty($locationData['provider']) && $locationData['provider'] == 'GOOGLE') {
-                        $googlePlaceId = $locationData['providerReference'];
-                        $googleLocation = self::find_google_map_location_data($googlePlaceId);
+        // Check and process itinerary items
+        if (!empty($itinerary['itineraryItems'])) {
+            $locations = [];
+            $processed_locations = [];
 
-                        if ($googleLocation['status'] == 'OK') {
-                            $filterGoogleLocation = self::filter_google_location_data($googleLocation['result']);
-                            $itineraryArr['itineraryItems'][$itineraryKey]['pointOfInterestLocation'] = $filterGoogleLocation;
-                        }
-                    } else {
-                        $itineraryArr['itineraryItems'][$itineraryKey]['pointOfInterestLocation'] = $locationData;
-                    }
+            // Collect all reference numbers to minimize individual calls
+            foreach ($itinerary['itineraryItems'] as $row) {
+                $ref = $row['pointOfInterestLocation']['location']['ref'] ?? null;
+                if ($ref) {
+                    $locations[] = $ref;
                 }
+            }
+
+            // Fetch all place data in a single call
+            $batch_place_data = ViatorHelper::batch_find_google_place_ids($locations);
+
+            // Process each itinerary item
+            foreach ($itinerary['itineraryItems'] as $itinerary_key => $row) {
+                // Get reference number
+                $ref = $row['pointOfInterestLocation']['location']['ref'] ?? null;
+
+                // Check batch location
+                if ($ref && isset($batch_place_data[$ref])) {
+                    // Use pre-fetched data to process the location
+                    $place_data = $batch_place_data[$ref];
+                    $itinerary['itineraryItems'][$itinerary_key]['pointOfInterestLocation'] = self::format_location($place_data);
+                }
+            }
+
+            // Process `filterItineraryItems`
+            $itinerary['filterItineraryItems'] = self::process_itinerary_items($itinerary['itineraryItems']);
+        }
+
+        // Return response
+        return $itinerary;
+    }
+
+    // Process a single location and fetch relevant details.
+    private static function process_single_location($location)
+    {
+        // Fetch place data
+        $place_data = ViatorHelper::find_google_place_id_from_ref_number($location['ref'], true);
+
+        // Check place data
+        if (!empty($place_data)) {
+            if ($place_data['provider'] === 'GOOGLE') {
+                $google_place_data = self::find_google_map_location_data($place_data['providerReference']);
+                if (!empty($google_place_data['result'])) {
+                    return [
+                        'ref' => $place_data['reference'],
+                        'name' => $google_place_data['result']['name'],
+                        'address' => $google_place_data['result']['formatted_address'],
+                        'url' => $google_place_data['result']['url'],
+                    ];
+                }
+            } elseif ($place_data['provider'] === 'TRIPADVISOR') {
+                return [
+                    'ref' => $place_data['reference'] ?? '',
+                    'name' => $place_data['name'] ?? '',
+                    'address' => !empty($place_data['address']) ? implode(', ', array_filter($place_data['address'])) : '',
+                    'url' => null,
+                    'center' => $place_data['center'] ?? [],
+                ];
             }
         }
 
-        return $itineraryArr;
+        // Return original if no updates
+        return $location; 
     }
 
-    /**
-     * filter product itinerary
-     */
+    // Format location data into a consistent structure.
+    private static function format_location($place_data)
+    {
+        if ($place_data['provider'] === 'GOOGLE') {
+            $google_place_data = self::find_google_map_location_data($place_data['providerReference']);
+            if (!empty($google_place_data['result'])) {
+                return [
+                    'ref' => $place_data['reference'],
+                    'name' => $google_place_data['result']['name'],
+                    'address' => $google_place_data['result']['formatted_address'],
+                    'url' => $google_place_data['result']['url'],
+                ];
+            }
+        } elseif ($place_data['provider'] === 'TRIPADVISOR') {
+            return [
+                'ref' => $place_data['reference'] ?? '',
+                'name' => $place_data['name'] ?? '',
+                'address' => !empty($place_data['address']) ? implode(', ', array_filter($place_data['address'])) : '',
+                'center' => $place_data['center'] ?? [],
+            ];
+        } else {
+            return [];
+        }
+    }
+
+    // Process and filter itinerary items.
+    private static function process_itinerary_items($itinerary_items)
+    {
+        $filter_items = [];
+        $item_no = 1;
+
+        foreach ($itinerary_items as $row) {
+            if ($row['passByWithoutStopping']) {
+                $filter_items[] = [
+                    'pass_by' => true,
+                    'name' => $row['pointOfInterestLocation']['name'] ?? 'N/A',
+                    'description' => $row['description'],
+                    'duration' => ViatorHelper::convert_duration_into_timeline($row['duration'] ?? []),
+                ];
+            } else {
+                $filter_items[] = [
+                    'no' => $item_no,
+                    'pass_by' => false,
+                    'name' => $row['pointOfInterestLocation']['name'] ?? 'N/A',
+                    'description' => $row['description'],
+                    'duration' => ViatorHelper::convert_duration_into_timeline($row['duration'] ?? []),
+                ];
+                $item_no++;
+            }
+        }
+
+        return $filter_items;
+    }
+
+    // Filter product itinerary
     public static function filter_product_reviews($productCode)
     {
         $returnArr = [];
@@ -952,9 +1229,7 @@ class ViatorHelper
         return $returnArr;
     }
 
-    /**
-     * filter product travelers photos
-     */
+    // Filter product travelers photos
     public static function filter_product_travelers_photos($filterReviews = [])
     {
         $travelersPhotos = [];
@@ -974,9 +1249,7 @@ class ViatorHelper
         return $travelersPhotos;
     }
 
-    /**
-     * filter google location data
-     */
+    // Filter google location data
     public static function filter_google_location_data($google_location = [])
     {
         $return_location = [];
@@ -996,9 +1269,7 @@ class ViatorHelper
         return $return_location;
     }
 
-    /**
-     * filter activity special badge
-     */
+    // Filter activity special badge
     public static function filter_activity_special_badge($product_flags = [])
     {
         // define array
@@ -1026,6 +1297,7 @@ class ViatorHelper
     // filter activity attraction
     public static function filter_activity_attraction($itinerary = [])
     {
+        // Define array
         $attraction_list = [];
 
         // Check if itinerary items exist and is an array
@@ -1040,39 +1312,41 @@ class ViatorHelper
 
             // Fetch attraction data
             foreach ($attraction_ids as $att_id) {
-                // Initialize curl
+                // Find single attraction
                 $curl = curl_init();
-                curl_setopt_array($curl, [
-                    CURLOPT_URL            => env('VIATOR_API_ENDPOINT') . '/partner/v1/attraction?seoId=' . $att_id,
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => env('VIATOR_API_ENDPOINT') . '/partner/attractions/' . $att_id,
                     CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING       => '',
-                    CURLOPT_MAXREDIRS      => 10,
-                    CURLOPT_TIMEOUT        => 0,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
                     CURLOPT_FOLLOWLOCATION => true,
-                    CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST  => 'GET',
-                    CURLOPT_HTTPHEADER     => [
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'GET',
+                    CURLOPT_HTTPHEADER => array(
                         'exp-api-key: ' . env('VIATOR_API_TOKEN'),
                         'Accept-Language: en',
                         'Content-Type: application/json',
                         'Accept: application/json;version=2.0',
                         'RateLimit-Limit: ',
                         'RateLimit-Remaining: ',
-                        'RateLimit-Reset: ',
-                    ]
-                ]);
-
-                // Execute curl and decode response
+                        'RateLimit-Reset: '
+                    )
+                ));
                 $response = json_decode(curl_exec($curl), true);
                 curl_close($curl);
 
                 // Check if response contains valid data
-                if (!empty($response['data']['pageTitle'])) {
-                    $attraction_list[] = $response['data']['pageTitle'];
+                if (!empty($response['attractionId'])) {
+                    $attraction_list[] = [
+                        'id' => $response['attractionId'],
+                        'title' => $response['name'],
+                        'image' => (!empty($response['images'][1]['url'])) ? $response['images'][1]['url'] : '',
+                    ];
                 }
 
-                // Sleep for 10 seconds
-                sleep(10);
+                // Sleep for 3 seconds
+                sleep(3);
             }
         }
 
@@ -1080,9 +1354,7 @@ class ViatorHelper
         return $attraction_list;
     }
 
-    /**
-     * mapping viator and travelone city
-     */
+    // Fapping viator and travelone city
     public static function mapping_viator_and_system_city()
     {
         // define array
@@ -1102,9 +1374,7 @@ class ViatorHelper
         return $return_arr;
     }
 
-    /**
-     * send slack notification
-     */
+    // Fend slack notification
     public static function send_slack_notification($slack_message) {
         // Create payload
         $payload = json_encode([
@@ -1133,5 +1403,131 @@ class ViatorHelper
         curl_close($ch);
 
         return $result;
+    }
+
+    // Single tour available next date
+    public static function single_tour_available_next_date($tour_id)
+    {
+        // Define flag
+        $is_matched = false;
+
+        // Define default date
+        $is_date = date('Y-m-d', strtotime('+1 day'));
+
+        // Fetch unavailable date of tour
+        $extra_data = DB::table('to_tour_viator_extra_data')->select('unavailable_dates')->where('tour_id', $tour_id)->first();
+
+        // Check extra data valid
+        if(!empty($extra_data)) {
+            // Convert string to array
+            $unavailable_dates = (!empty($extra_data->unavailable_dates)) ? explode(', ', $extra_data->unavailable_dates) : [];
+
+            // Loop while date matched
+            if(count($unavailable_dates) < 360) {
+                while (!$is_matched) {
+                    // Check not in array
+                    if(!in_array($is_date, $unavailable_dates)) {
+                        // Update flag
+                        $is_matched = true;
+                        break;
+                    } else {
+                        // Change date + 1 day
+                        $is_date = date('Y-m-d', strtotime($is_date . ' +1 day'));
+                    }
+                }
+            }
+        }
+
+        // Return response
+        return $is_date;
+    }
+
+    // Viator filter package options
+    public static function viator_filter_package_options($json_data, $bookable_items = [])
+    {
+        // Define array
+        $return_arr = [];
+
+        // Fetch items
+        foreach ($bookable_items as $row) {
+            // Get option data
+            $option_name = $row['productOptionCode'] ?? 'TG1';
+            $start_time = (!empty($row['startTime'])) ? $row['startTime'] : '';
+            $price = (!empty($row['totalPrice']['price']['recommendedRetailPrice'])) ? $row['totalPrice']['price']['recommendedRetailPrice'] : '';
+
+            // Find package options
+            $find_option = ViatorHelper::find_product_options($json_data['productOptions'], $option_name);
+
+            // Push data in array
+            if(!empty($find_option)) {
+                $return_arr[$option_name]['title'] = $find_option['title'] ?? $option_name;
+                $return_arr[$option_name]['description'] = $find_option['description'];
+                $return_arr[$option_name]['price'] = $price;
+                if(!empty($start_time)) {
+                    $return_arr[$option_name]['time'][] = $start_time;
+                }
+            }
+        }
+
+        // Return response
+        return $return_arr;
+    }
+
+    // Find product options
+    public static function find_product_options($array, $option_code)
+    {
+        // Define flag
+        $return = [];
+
+        // Loop through each item in the array and extract productOptionCode
+        foreach ($array as $item) {
+            // Check if productOptionCode exists in the current item
+            if (!empty($item['productOptionCode']) && $item['productOptionCode'] == $option_code) {
+                $return = $item;
+            }
+        }
+
+        // Return response
+        return $return;
+    }
+
+    // Convert duration into timeline
+    public static function convert_duration_into_timeline($timeframe) {
+        // Define default value
+        $isTimeline = '';
+
+        // Check for fixed duration
+        if (isset($timeframe['fixedDurationInMinutes']) && !empty($timeframe['fixedDurationInMinutes'])) {
+            $isTimeline = ViatorHelper::convert_minutes_to_hours($timeframe['fixedDurationInMinutes']);
+        }
+
+        // Check for variable duration
+        if (isset($timeframe['variableDurationFromMinutes']) && isset($timeframe['variableDurationToMinutes'])) {
+            $isTimeline = ViatorHelper::convert_minutes_to_hours($timeframe['variableDurationFromMinutes']) . " to " . ViatorHelper::convert_minutes_to_hours($timeframe['variableDurationToMinutes']);
+        }
+
+        // Check unstructured duration
+        if(isset($timeframe['unstructuredDuration'])) {
+            $isTimeline = $timeframe['unstructuredDuration'];
+        }
+
+        // Return response
+        return $isTimeline;
+    }
+
+    // Convert minutes to hours
+    public static function convert_minutes_to_hours($minutes)
+    {
+        $final_string = '';
+        $hours = floor($minutes / 60);
+        $remain_minutes = $minutes % 60;
+
+        if ($hours) {
+            $final_string .= $hours . (($hours == 1) ? ' hour' : ' hours');
+        }
+        if ($remain_minutes) {
+            $final_string .= ' ' . $remain_minutes . (($remain_minutes == 1) ? ' minute' : ' minutes');
+        }
+        return trim($final_string);
     }
 }
