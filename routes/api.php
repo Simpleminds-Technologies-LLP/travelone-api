@@ -94,35 +94,34 @@ Route::get('/image/attraction', 'App\Http\Controllers\ImageController@attraction
 // Mauritius				=> 4463 => 46 => 138 => Done
 // Hungary 					=> 54 => 35 => 97 => Done
 // Sweden					=> 68 => 35 => 210 => Done
-// Cyprus					=> 47 => 35 => 54 => Working
-// Iceland 
-// Germany 
-// Denmark 
-// Turkey 
-// Norway 
-// Greenland 
-// Finland 
-// Czech Republic
-// Singapore				=> 18 => 42 => 194 => 
-// Malaysia 
-// Australia				=> 22 => 43 => 13 => 
-// New Zealand 
-// Fiji 
-// Netherland 
-// Egypt					=> 722 => 44 => 62 => 
-// Kenya 
-// South Africa 
-// Morocco 
-// Vietnam 
-// South Korea
-// China 
-// Brazil 
-// Colombia 
-// Peru 
-// Ireland
-// Scotland 
-// Austria 
-// India 
+// Cyprus					=> 47 => 35 => 54 => Done
+// Egypt					=> 722 => 44 => 62 => Done
+// Singapore				=> 18 => 42 => 194 => Done
+// Australia				=> 22 => 43 => 13 => Done
+// Iceland 					=> 55 => 35 => 98 => Done
+// Germany 					=> 52 => 35 => 80 => Done
+// Denmark 					=> 49 => 35 => 56 => Done
+// Norway 					=> 61 => 35 => 164 => Done
+// Greenland 				=> 4492 => 35 => 84 => Done
+// Finland 					=> 50 => 35 => 71 => Done
+// Czech Republic			=> 48 => 35 => 55 => Working
+// Malaysia 				=> **
+// New Zealand 				=> **
+// Fiji 					=> **
+// Netherland 				=> **
+// Kenya 					=> **
+// South Africa 			=> **
+// Morocco 					=> **
+// Vietnam 					=> **
+// South Korea				=> **
+// China 					=> **
+// Brazil 					=> **
+// Colombia 				=> **
+// Peru 					=> **
+// Switzerland				=> **
+// Scotland 				=> **
+// Austria 					=> **
+// India 					=> **
 
 
 // */2 * * * * wget -q -O /dev/null "http://sync.travelone.io/api/local/tag_slug"
